@@ -26,7 +26,7 @@ public final class ApiConfig {
     // GitHub 项目文件路径
     public static final String GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/";
     // 版本号
-    public static final String DEV_VERSION = "1.7.5";
+    public static final String DEV_VERSION = "1.7.6";
 
     // = Map =
     // 包名目录注释

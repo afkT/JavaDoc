@@ -85,6 +85,9 @@ final class READMEMain {
         buffer.append("- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/" + ApiConfig.DEV_VERSION + "/javadoc/)");
 
         buffer.append("\n\n");
+        buffer.append("- [检测代码规范、注释内容排版, API 文档生成](https://github.com/afkT/JavaDoc)");
+
+        buffer.append("\n\n");
         buffer.append("## API");
 
         buffer.append("\n\n");
