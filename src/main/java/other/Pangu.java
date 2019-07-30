@@ -1,4 +1,4 @@
-package other.utils;
+package other;
 
 
 import java.io.*;

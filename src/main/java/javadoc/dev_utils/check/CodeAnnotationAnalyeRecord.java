@@ -1,7 +1,7 @@
 package javadoc.dev_utils.check;
 
 import javadoc.Utils;
-import other.utils.Pangu;
+import other.Pangu;
 
 import java.io.File;
 import java.util.ArrayList;

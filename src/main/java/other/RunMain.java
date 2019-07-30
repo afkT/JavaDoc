@@ -1,4 +1,4 @@
-package other.utils;
+package other;
 
 public class RunMain {
 
