@@ -98,6 +98,21 @@ final class CodeAnalyeConfig {
                 "handleMessage", "dispatchMessage"));
         sIgnoreAnnotateMap.put("ToastUtils.SafeHandler", Utils.asList(
                 "handleMessage", "dispatchMessage"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomBulletSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomDynamicDrawableSpan", Utils.asList(
+                "getDrawable", "getSize", "draw", "getCachedDrawable"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomImageSpan", Utils.asList("getDrawable"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomLineHeightSpan", Utils.asList(
+                "chooseHeight"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomQuoteSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.CustomTypefaceSpan", Utils.asList(
+                "updateDrawState", "updateMeasureState", "apply"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.ShaderSpan", Utils.asList("updateDrawState"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.ShadowSpan", Utils.asList("updateDrawState"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.SpaceSpan", Utils.asList("getSize", "draw"));
+        sIgnoreAnnotateMap.put("SpannableStringUtils.VerticalAlignSpan", Utils.asList("getSize", "draw"));
         sIgnoreAnnotateMap.put("WifiVo", Utils.asList("describeContents", "writeToParcel"));
 
         // ==========
@@ -161,6 +176,7 @@ final class CodeAnalyeConfig {
                 "setTextSize", "setTextMaxLines", "setTextEllipsize", "setTextTypeface", "setTextPadding",
                 "setActionGravity", "setActionColor", "setActionSize", "setActionPadding",
                 "setActionCornerRadius", "setActionBackgroundTintColor", "setActionBackground"));
+        sIgnoreFinalMap.put("SpannableStringUtils.VerticalAlignSpan", Utils.asList("getSize", "draw"));
         sIgnoreFinalMap.put("ToastFactory.BaseToast", Utils.asList("setView", "setText"));
         sIgnoreFinalMap.put("ToastFactory.SafeToast.SafeHandler", Utils.asList(
                 "handleMessage", "dispatchMessage"));
@@ -349,6 +365,27 @@ final class CodeAnalyeConfig {
                 "getActionSize", "setActionSize", "getActionPadding", "setActionPadding",
                 "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor",
                 "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"));
+        sIgnoreStaticMap.put("SpannableStringUtils", Utils.asList("setFlag", "setForegroundColor",
+                "setBackgroundColor", "setLineHeight", "setLineHeight", "setQuoteColor", "setQuoteColor",
+                "setLeadingMargin", "setBullet", "setBullet", "setFontSize", "setFontSize", "setFontProportion",
+                "setFontXProportion", "setStrikethrough", "setUnderline", "setSuperscript", "setSubscript",
+                "setBold", "setItalic", "setBoldItalic", "setFontFamily", "setTypeface", "setHorizontalAlign",
+                "setVerticalAlign", "setClickSpan", "setUrl", "setBlur", "setShader", "setShadow", "setSpans",
+                "append", "appendLine", "appendLine", "appendImage", "appendImage", "appendImage", "appendImage",
+                "appendImage", "appendImage", "appendSpace", "appendSpace", "get", "create", "apply", "applyLast",
+                "updateCharCharSequence", "updateImage", "updateSpace", "setDefault"));
+        sIgnoreStaticMap.put("SpannableStringUtils.CustomBulletSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreStaticMap.put("SpannableStringUtils.CustomImageSpan", Utils.asList("getDrawable"));
+        sIgnoreStaticMap.put("SpannableStringUtils.CustomLineHeightSpan", Utils.asList("chooseHeight"));
+        sIgnoreStaticMap.put("SpannableStringUtils.CustomQuoteSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreStaticMap.put("SpannableStringUtils.CustomTypefaceSpan", Utils.asList(
+                "updateDrawState", "updateMeasureState", "apply"));
+        sIgnoreStaticMap.put("SpannableStringUtils.ShaderSpan", Utils.asList("updateDrawState"));
+        sIgnoreStaticMap.put("SpannableStringUtils.ShadowSpan", Utils.asList("updateDrawState"));
+        sIgnoreStaticMap.put("SpannableStringUtils.SpaceSpan", Utils.asList("getSize", "draw"));
+        sIgnoreStaticMap.put("SpannableStringUtils.VerticalAlignSpan", Utils.asList("getSize", "draw"));
         sIgnoreStaticMap.put("TimerManager.TimerTask", Utils.asList("start", "close",
                 "startTimer", "closeTimer", "isRunTimer", "getTriggerNumber", "getTriggerLimit",
                 "isTriggerEnd", "isInfinite", "setHandler", "setNotifyWhat", "setNotifyObject",
@@ -468,6 +505,18 @@ final class CodeAnalyeConfig {
                 "handleMessage", "dispatchMessage"));
         sIgnoreParamMap.put("ToastUtils.SafeHandler", Utils.asList(
                 "handleMessage", "dispatchMessage"));
+        sIgnoreParamMap.put("SpannableStringUtils.CustomBulletSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreParamMap.put("SpannableStringUtils.CustomDynamicDrawableSpan", Utils.asList("getSize", "draw"));
+        sIgnoreParamMap.put("SpannableStringUtils.CustomLineHeightSpan", Utils.asList("chooseHeight"));
+        sIgnoreParamMap.put("SpannableStringUtils.CustomQuoteSpan", Utils.asList(
+                "getLeadingMargin", "drawLeadingMargin"));
+        sIgnoreParamMap.put("SpannableStringUtils.CustomTypefaceSpan", Utils.asList(
+                "updateDrawState", "updateMeasureState", "apply"));
+        sIgnoreParamMap.put("SpannableStringUtils.ShaderSpan", Utils.asList("updateDrawState"));
+        sIgnoreParamMap.put("SpannableStringUtils.ShadowSpan", Utils.asList("updateDrawState"));
+        sIgnoreParamMap.put("SpannableStringUtils.SpaceSpan", Utils.asList("getSize", "draw"));
+        sIgnoreParamMap.put("SpannableStringUtils.VerticalAlignSpan", Utils.asList("getSize", "draw"));
         sIgnoreParamMap.put("WifiVo", Utils.asList("writeToParcel"));
 
         // ==========
@@ -656,6 +705,10 @@ final class CodeAnalyeConfig {
         sIgnoreUnPublicMap.put("SnackbarUtils", Utils.asList("priShow",
                 "clearLocations", "setSnackbarLocation", "getScreenHeight", "measureView",
                 "getMeasuredHeight", "getFormatString", "getFormatRes", "setBackground"));
+        sIgnoreUnPublicMap.put("SpannableStringUtils", Utils.asList("apply", "applyLast",
+                "updateCharCharSequence", "updateImage", "updateSpace", "setDefault", "getContext"));
+        sIgnoreUnPublicMap.put("SpannableStringUtils.CustomDynamicDrawableSpan", Utils.asList("getCachedDrawable"));
+        sIgnoreUnPublicMap.put("SpannableStringUtils.CustomTypefaceSpan", Utils.asList("apply"));
         sIgnoreUnPublicMap.put("TimerManager.TimerTask", Utils.asList("start", "close"));
         sIgnoreUnPublicMap.put("ToastFactory.BaseToast", Utils.asList("findTextView"));
         sIgnoreUnPublicMap.put("ToastFactory.ToastHelper", Utils.asList("show", "cancel"));
