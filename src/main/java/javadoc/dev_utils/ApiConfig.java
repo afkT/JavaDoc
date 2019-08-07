@@ -18,13 +18,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String PACKAGE = "dev.utils";
     // 文件整理路径
-    public static final String PATH = LOCAL_PATH + "/DevUtils/DevLibUtils/src/main/java/dev/utils/";
+    public static final String PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/utils/";
     // Dev 目录路径
-    public static final String DEV_PATH = LOCAL_PATH + "/DevUtils/DevLibUtils/src/main/java/dev/";
+    public static final String DEV_PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
     // 作者 Github 地址
     public static final String GITHUB_AUTHOR_URL = "https://github.com/afkT";
     // GitHub 项目文件路径
-    public static final String GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/DevLibUtils/src/main/java/dev/utils/";
+    public static final String GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // 版本号
     public static final String DEV_VERSION = "1.7.6";
 

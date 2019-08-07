@@ -42,7 +42,7 @@ final class READMEMain {
         buffer.append("## 事项");
 
         buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类(工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/logger/DevLogger.md)");
+        buffer.append("- 内部存在两个日志工具类(工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
 
         buffer.append("\n\n");
         buffer.append("```java");
@@ -76,7 +76,7 @@ final class READMEMain {
         buffer.append("```");
 
         buffer.append("\n\n");
-        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/utils_readme/USE_CONFIG.md)");
+        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
 
         buffer.append("\n\n");
         buffer.append("- 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`");

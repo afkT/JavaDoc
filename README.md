@@ -5,7 +5,7 @@
 
 > 编写该项目主要是提高效率, 方便自己工具类项目生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
 
-- 生成效果示范 [DevUtils - API](https://github.com/afkT/DevUtils/blob/master/DevLibUtils/README.md)
+- 生成效果示范 [DevUtils - API](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md)
 
 
 
