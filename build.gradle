@@ -12,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     // 加载 libs 文件夹全部 jar
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Gson 解析
