@@ -571,6 +571,7 @@ final class CodeAnalyeConfig {
                 "onForeground", "onBackground"));
         sIgnoreUnPublicMap.put("JCLogUtils", Utils.asList("isEmpty",
                 "printLog", "createMessage", "splitErrorMessage"));
+        sIgnoreUnPublicMap.put("JCLogUtils.Print", Utils.asList("printLog"));
         sIgnoreUnPublicMap.put("LogPrintUtils", Utils.asList("isEmpty",
                 "printLog", "createMessage", "splitErrorMessage"));
 
