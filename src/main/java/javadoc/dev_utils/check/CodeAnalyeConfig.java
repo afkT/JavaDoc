@@ -668,7 +668,7 @@ final class CodeAnalyeConfig {
         sIgnoreUnPublicMap.put("InactivityTimerAssist", Utils.asList("start", "cancel"));
         sIgnoreUnPublicMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList(
                 "doInBackground"));
-        sIgnoreUnPublicMap.put("IntentUtils", Utils.asList("getFileByPath"));
+        sIgnoreUnPublicMap.put("IntentUtils", Utils.asList("getFileByPath", "getUriForFile"));
         sIgnoreUnPublicMap.put("KeyBoardUtils", Utils.asList("getContentViewInvisibleHeight"));
         sIgnoreUnPublicMap.put("KeyBoardUtils.OnSoftInputChangedListener", Utils.asList(
                 "onSoftInputChanged"));
