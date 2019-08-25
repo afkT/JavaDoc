@@ -27,10 +27,14 @@ final class DevApp_READMEMain {
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
                                          final HashMap<String, String> mapCatelog) {
         buffer.append("\n");
-        buffer.append("## 使用");
+        buffer.append("## Gradle");
 
         buffer.append("\n\n");
-        buffer.append("> ##### 只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行");
+        buffer.append("```java");
+        buffer.append("\n");
+        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_VERSION + "'");
+        buffer.append("\n");
+        buffer.append("```");
 
         buffer.append("\n\n");
         buffer.append("## 目录结构");
@@ -40,10 +44,16 @@ final class DevApp_READMEMain {
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
 
         buffer.append("\n\n");
+        buffer.append("## 使用");
+
+        buffer.append("\n\n");
+        buffer.append("> ##### 只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行");
+
+        buffer.append("\n\n");
         buffer.append("## 事项");
 
         buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类(工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
+        buffer.append("- 内部存在两个日志工具类 (工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
 
         buffer.append("\n\n");
         buffer.append("```java");
@@ -51,7 +61,7 @@ final class DevApp_READMEMain {
         buffer.append("// 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关");
         buffer.append("\n");
         buffer.append("\n");
-        buffer.append("// dev.utils.app - APP 打印日志工具类");
+        buffer.append("// dev.utils.app - APP 日志打印工具类");
         buffer.append("\n");
         buffer.append("LogPrintUtils");
         buffer.append("\n");
@@ -62,7 +72,7 @@ final class DevApp_READMEMain {
         buffer.append("```");
         buffer.append("\n\n");
 
-        buffer.append("- 需要开启日志，单独调用");
+        buffer.append("- 开启日志");
         buffer.append("\n");
         buffer.append("```java");
         buffer.append("\n");
@@ -80,10 +90,7 @@ final class DevApp_READMEMain {
         buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
 
         buffer.append("\n\n");
-        buffer.append("- 部分 api 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [JavaDoc - API](https://javadoc.jitpack.io/com/github/afkT/DevUtils/" + ApiConfig.DEV_VERSION + "/javadoc/)");
+        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
 
         buffer.append("\n\n");
         buffer.append("- [检测代码规范、注释内容排版, API 文档生成](https://github.com/afkT/JavaDoc)");

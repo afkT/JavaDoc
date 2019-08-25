@@ -1,6 +1,7 @@
 package javadoc;
 
 import com.google.gson.GsonBuilder;
+import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
 import dev.utils.common.StringUtils;
 
@@ -14,6 +15,15 @@ import java.util.*;
 public final class Utils {
 
     private Utils() {
+    }
+
+    static {
+        JCLogUtils.setPrint(new JCLogUtils.Print() {
+            @Override
+            public void printLog(int logType, String tag, String message) {
+                System.out.println(tag + " : " + message);
+            }
+        });
     }
 
     /**
