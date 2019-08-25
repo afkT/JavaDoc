@@ -18,12 +18,14 @@ public final class Utils {
     }
 
     static {
-        JCLogUtils.setPrint(new JCLogUtils.Print() {
-            @Override
-            public void printLog(int logType, String tag, String message) {
-                System.out.println(tag + " : " + message);
-            }
-        });
+        JCLogUtils.setPrintLog(true);
+        JCLogUtils.setControlPrintLog(true);
+//        JCLogUtils.setPrint(new JCLogUtils.Print() {
+//            @Override
+//            public void printLog(int logType, String tag, String message) {
+//                System.out.println(tag + " : " + message);
+//            }
+//        });
     }
 
     /**
