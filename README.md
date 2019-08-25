@@ -39,4 +39,6 @@
 
 - API 生成配置信息（[API Config](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/ApiConfig.java)）：配置生成 API 相关信息, 以及忽略指定类、方法的配置等
 
-- DevApp API README 生成执行方法（[DevApp API README](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevApp_READMEMain.java)）：通过执行该类 Main 方法, 按 API Config 信息生成 API 文档
+- DevApp API README 生成执行方法（[DevApp API README](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevApp_READMEMain.java)）：按 API Config 信息生成 API 文档
+
+- DevJava API README 生成执行方法（[DevJava API README](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevJava_READMEMain.java)）：按 API Config 信息生成 API 文档

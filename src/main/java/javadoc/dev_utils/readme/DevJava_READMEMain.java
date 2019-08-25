@@ -12,9 +12,9 @@ import java.util.HashMap;
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class DevApp_READMEMain {
+final class DevJava_READMEMain {
 
-    private DevApp_READMEMain() {
+    private DevJava_READMEMain() {
     }
 
     /**
@@ -32,7 +32,7 @@ final class DevApp_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_APP_VERSION + "'");
+        buffer.append("implementation 'com.afkt:DevJava:" + ApiConfig.DEV_JAVA_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -44,50 +44,29 @@ final class DevApp_READMEMain {
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
 
         buffer.append("\n\n");
-        buffer.append("## 使用");
-
-        buffer.append("\n\n");
-        buffer.append("> ##### 只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行");
-
-        buffer.append("\n\n");
         buffer.append("## 事项");
 
         buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类 (工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
+        buffer.append("- 该工具类不依赖 android api, 属于 Java 工具类库");
 
         buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关");
-        buffer.append("\n");
-        buffer.append("\n");
-        buffer.append("// dev.utils.app - APP 日志打印工具类");
-        buffer.append("\n");
-        buffer.append("LogPrintUtils");
-        buffer.append("\n");
-        buffer.append("// dev.utils.common - Java Common 日志打印工具类");
-        buffer.append("\n");
-        buffer.append("JCLogUtils");
-        buffer.append("\n");
-        buffer.append("```");
-        buffer.append("\n\n");
-
         buffer.append("- 开启日志");
         buffer.append("\n");
         buffer.append("```java");
         buffer.append("\n");
         buffer.append("// 打开 lib 内部日志 - 线上(release)环境, 不调用方法就行");
         buffer.append("\n");
-        buffer.append("DevUtils.openLog();");
+        buffer.append("JCLogUtils.setPrintLog(true);");
         buffer.append("\n");
-        buffer.append("// 标示 debug 模式");
+        buffer.append("// 控制台打印日志");
         buffer.append("\n");
-        buffer.append("DevUtils.openDebug();");
+        buffer.append("JCLogUtils.setControlPrintLog(true);");
+        buffer.append("\n");
+        buffer.append("// 设置 Java 模块日志信息监听");
+        buffer.append("\n");
+        buffer.append("JCLogUtils.setPrint(new JCLogUtils.Print() {});");
         buffer.append("\n");
         buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
 
         buffer.append("\n\n");
         buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
@@ -110,11 +89,11 @@ final class DevApp_READMEMain {
      */
     public static void createREADME() {
         // 本地文件路径
-        final String path = ApiConfig.DEV_APP_UTILS_PATH;
+        final String path = ApiConfig.DEV_JAVA_UTILS_PATH;
         // 包名
         final String packageName = ApiConfig.DEV_PACKAGE;
         // Github 链接地址
-        final String githubUrl = ApiConfig.DEV_APP_GITHUB_URL;
+        final String githubUrl = ApiConfig.DEV_JAVA_GITHUB_URL;
 
         // 方法名匹配存储 Map<类名, ArrayList<方法名>>
         final HashMap<String, ArrayList<String>> methodNameMatchesMap = new HashMap<>();
@@ -134,29 +113,22 @@ final class DevApp_READMEMain {
         // 添加头部信息
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap);
 
-        // 生成 dev.utils.app 包下 dev.utils
-        String appAPI = APIGenerate.apiGenerate("app", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
-
         // 生成 dev.utils.common 包下 dev.utils
         String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
                 ApiConfig.sFilterClassMap, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
-        buffer.append(appAPI);
-        buffer.append("\n\n");
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
 
 //        // 方法名重复记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
 //        // 方法没有注释记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuffer.toString());
 //        // 类不存在方法记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuffer.toString());
 
         StringBuffer resultBuffer = new StringBuffer();
         resultBuffer.append("\n\n");
@@ -165,12 +137,12 @@ final class DevApp_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_APP_API_FILE_SAVE_PATH + "readme_api.md");
+        resultBuffer.append("保存地址: " + ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH + "readme_api.md");
         resultBuffer.append("\n");
         System.out.println(resultBuffer.toString());
     }
 
     public static void main(String[] args) {
-        DevApp_READMEMain.createREADME();
+        DevJava_READMEMain.createREADME();
     }
 }
