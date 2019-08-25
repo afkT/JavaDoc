@@ -17,9 +17,9 @@ public class CodeAnalyeMain {
 
     public static void main(String[] args) {
         // 本地文件路径
-        String path = ApiConfig.DEV_PATH;
+        String path = ApiConfig.DEV_APP_PATH;
         // 本地文件路径
-        path = ApiConfig.DEV_PATH + "utils/";
+        path = ApiConfig.DEV_APP_PATH + "utils/";
 
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;

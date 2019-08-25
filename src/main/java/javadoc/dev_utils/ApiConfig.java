@@ -16,17 +16,31 @@ public final class ApiConfig {
     // 本地路径
     public static final String LOCAL_PATH = "F:/Android/IDE/ASPro";
     // 包目录名
-    public static final String PACKAGE = "dev.utils";
-    // 文件整理路径
-    public static final String PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/utils/";
-    // Dev 目录路径
-    public static final String DEV_PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
+    public static final String DEV_PACKAGE = "dev.utils";
     // 作者 Github 地址
     public static final String GITHUB_AUTHOR_URL = "https://github.com/afkT";
-    // GitHub 项目文件路径
-    public static final String GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
-    // 版本号
-    public static final String DEV_VERSION = "1.7.7";
+
+    // ==========
+    // = DevApp =
+    // ==========
+
+    // DevApp 文件路径
+    public static final String DEV_APP_PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
+    // DevApp Utils 文件路径
+    public static final String DEV_APP_UTILS_PATH = DEV_APP_PATH + "utils/";
+    // DevApp GitHub 项目文件路径
+    public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
+    // DevApp 版本号
+    public static final String DEV_APP_VERSION = "1.7.7";
+
+    // ===========
+    // = DevJava =
+    // ===========
+
+
+    // ========
+    // = 其他 =
+    // ========
 
     // = Map =
     // 包名目录注释

@@ -32,7 +32,7 @@ final class DevApp_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_VERSION + "'");
+        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_APP_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -110,11 +110,11 @@ final class DevApp_READMEMain {
      */
     public static void createREADME() {
         // 本地文件路径
-        final String path = ApiConfig.PATH;
+        final String path = ApiConfig.DEV_APP_UTILS_PATH;
         // 包名
-        final String packageName = ApiConfig.PACKAGE;
+        final String packageName = ApiConfig.DEV_PACKAGE;
         // Github 链接地址
-        final String githubUrl = ApiConfig.GITHUB_URL;
+        final String githubUrl = ApiConfig.DEV_APP_GITHUB_URL;
 
         // 方法名匹配存储 Map<类名, ArrayList<方法名>>
         final HashMap<String, ArrayList<String>> methodNameMatchesMap = new HashMap<>();
@@ -149,7 +149,7 @@ final class DevApp_READMEMain {
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.FILE_SAVE_PATH, "dev_app_readme_api.md", buffer.toString());
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
@@ -165,7 +165,7 @@ final class DevApp_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.FILE_SAVE_PATH + "readme_api.md");
+        resultBuffer.append("保存地址: " + ApiConfig.FILE_SAVE_PATH + "dev_app_readme_api.md");
         resultBuffer.append("\n");
         System.out.println(resultBuffer.toString());
     }
