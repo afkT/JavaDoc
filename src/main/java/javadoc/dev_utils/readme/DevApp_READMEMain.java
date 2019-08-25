@@ -1,6 +1,7 @@
-package javadoc.dev_utils;
+package javadoc.dev_utils.readme;
 
 import javadoc.Utils;
+import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
 
@@ -11,9 +12,9 @@ import java.util.HashMap;
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class READMEMain {
+final class DevApp_READMEMain {
 
-    private READMEMain() {
+    private DevApp_READMEMain() {
     }
 
     /**
@@ -163,6 +164,6 @@ final class READMEMain {
     }
 
     public static void main(String[] args) {
-        READMEMain.createREADME();
+        DevApp_READMEMain.createREADME();
     }
 }
