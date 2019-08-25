@@ -4,6 +4,8 @@ import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.RootDoc;
 import com.sun.tools.javac.tree.JCTree;
+import dev.utils.common.*;
+import dev.utils.common.validator.ValidatorUtils;
 import javadoc.Utils;
 import javadoc.api.JavaDocReader;
 
@@ -160,7 +162,7 @@ final class CodeAnalyeReader {
                     // 类标记
                     String classTag = "";
                     // 反射获取 tree 变量
-                    JCTree.JCClassDecl jcClassDecl = (JCTree.JCClassDecl) Utils.getDeclaredFieldParentObj(classDoc, "tree");
+                    JCTree.JCClassDecl jcClassDecl = (JCTree.JCClassDecl) Reflect2Utils.getPropertyByParent(classDoc, "tree");
                     JCTree.JCModifiers jcModifiers = jcClassDecl.getModifiers();
                     if (jcModifiers != null) {
                         // 属于接口的则跳过
@@ -181,9 +183,9 @@ final class CodeAnalyeReader {
                         String[] splits = jcClassDeclStrings.split("\r\n");
                         // 进行判断处理
                         for (String str : splits) {
-                            if (!Utils.isSpace(str)) {
-                                if (Utils.match("[ ]*[A-Za-z0-9\\<\\>\\[\\]]+ [A-Za-z0-9]+;", str)) {
-                                    Utils.putToList(sNoModifierVariableMap, className, str);
+                            if (!StringUtils.isSpace(str)) {
+                                if (ValidatorUtils.match("[ ]*[A-Za-z0-9\\<\\>\\[\\]]+ [A-Za-z0-9]+;", str)) {
+                                    MapUtils.putToList(sNoModifierVariableMap, className, str);
                                 }
                             }
                         }
@@ -205,11 +207,11 @@ final class CodeAnalyeReader {
                         String methodAnnotate = methodDoc.commentText();
 
                         // 反射获取 tree 变量
-                        JCTree.JCMethodDecl jcMethodDecl = (JCTree.JCMethodDecl) Utils.getDeclaredFieldParentObj(methodDoc, "tree");
+                        JCTree.JCMethodDecl jcMethodDecl = (JCTree.JCMethodDecl) Reflect2Utils.getPropertyByParent(methodDoc, "tree");
                         // 反射获取方法参数
-                        List<JCTree.JCVariableDecl> listJCVariableDecls = (List<JCTree.JCVariableDecl>) Utils.getDeclaredFieldParentObj(jcMethodDecl, "params");
+                        List<JCTree.JCVariableDecl> listJCVariableDecls = (List<JCTree.JCVariableDecl>) Reflect2Utils.getPropertyByParent(jcMethodDecl, "params");
                         // 获取方法全部注释 (含 @param)
-                        String methodDocumentation = (String) Utils.getDeclaredFieldParentObj(methodDoc, "documentation");
+                        String methodDocumentation = (String) Reflect2Utils.getPropertyByParent(methodDoc, "documentation");
 
                         // 获取方法代码
                         String methodCode = jcMethodDecl.toString();
@@ -229,7 +231,7 @@ final class CodeAnalyeReader {
                         }
                         // 不属于 public 修饰符则记录
                         if (!isPublic) {
-                            Utils.putToList(sMethodUnPublicMap, className, methodName);
+                            MapUtils.putToList(sMethodUnPublicMap, className, methodName);
                         }
 
                         //  专门用于判断方法是否 static 修饰
@@ -240,7 +242,7 @@ final class CodeAnalyeReader {
                             if (jcMethodDecl != null) {
                                 // 不存在则保存
                                 if (jcMethodDecl.toString().indexOf("static ") == -1) {
-                                    Utils.putToList(sMethodUnStaticMap, className + classTag, methodName);
+                                    MapUtils.putToList(sMethodUnStaticMap, className + classTag, methodName);
                                 }
                             }
                         }
@@ -251,14 +253,14 @@ final class CodeAnalyeReader {
                         // 不忽略才处理进行方法参数判断
                         if (!isIgnoreClass) {
                             // 防止为 null
-                            if (!Utils.isEmpty(listJCVariableDecls)) {
+                            if (!CollectionUtils.isEmpty(listJCVariableDecls)) {
                                 for (JCTree.JCVariableDecl jcVariableDecl : listJCVariableDecls) {
                                     jcModifiers = jcVariableDecl.getModifiers();
                                     if (jcModifiers != null) {
                                         if (jcModifiers.toString().endsWith("final ")) {
                                             // 存在 final 修饰
                                         } else {
-                                            Utils.putToList(sParamUnFinalMap, className + classTag, methodName);
+                                            MapUtils.putToList(sParamUnFinalMap, className + classTag, methodName);
                                             break;
                                         }
                                     }
@@ -269,8 +271,8 @@ final class CodeAnalyeReader {
 
                         // 判断是否添加到 无注释 Map 中
                         boolean isUnAnnotate = false;
-                        if (Utils.isEmpty(methodAnnotate)) {
-                            Utils.putToList(sMethodUnAnnotateMap, className, methodName);
+                        if (StringUtils.isEmpty(methodAnnotate)) {
+                            MapUtils.putToList(sMethodUnAnnotateMap, className, methodName);
                             // 表示已经添加到 Map 中
                             isUnAnnotate = true;
                         }
@@ -278,44 +280,44 @@ final class CodeAnalyeReader {
                         // 专门用于判断方法参数是否都加了 @param、@return
                         // ========================
                         // 判断注释是否为 null
-                        if (Utils.isEmpty(methodDocumentation)) { // 为 null, 表示没有注释, 需要特殊处理
+                        if (StringUtils.isEmpty(methodDocumentation)) { // 为 null, 表示没有注释, 需要特殊处理
                             // 没有添加, 才进行添加, 防止多次保存
                             if (!isUnAnnotate) {
-                                Utils.putToList(sMethodUnAnnotateMap, className, methodName);
+                                MapUtils.putToList(sMethodUnAnnotateMap, className, methodName);
                             }
                         } else {
                             // 不存在 void, 表示有返回值
                             if (jcMethodDecl.toString().indexOf("void ") == -1) {
                                 // 判断是否存在 @return, 不存在则记录
                                 if (methodDocumentation.indexOf("@return") == -1) {
-                                    Utils.putToList(sMethodLackReturnMap, className, methodName);
+                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName);
                                 } else { // 存在则判断数量
                                     // 判断存在的数量
-                                    int returnNumber = Utils.countMatches(methodDocumentation, "@return");
+                                    int returnNumber = StringUtils.countMatches(methodDocumentation, "@return");
                                     if (returnNumber >= 2) {
-                                        Utils.putToList(sMethodLackReturnMap, className, methodName + " - 多个 @return");
+                                        MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多个 @return");
                                     } else {
                                         String[] splitReturn = methodDocumentation.replaceAll("\r\n", "").split("@return ");
                                         if (splitReturn.length == 1) {
-                                            Utils.putToList(sMethodUnAnnotateReturnMap, className, methodName);
+                                            MapUtils.putToList(sMethodUnAnnotateReturnMap, className, methodName);
                                         }
                                     }
                                 }
                             } else { // 无返回值
                                 // 判断是否存在 @return, 存在则记录 => 属于 void 并不需要增加 @return
                                 if (methodDocumentation.indexOf("@return") != -1) {
-                                    Utils.putToList(sMethodLackReturnMap, className, methodName + " - 多余 @return");
+                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多余 @return");
                                 }
                             }
                         }
                         // =
                         // 获取参数数量
-                        int paramNumber = Utils.length(listJCVariableDecls);
+                        int paramNumber = CollectionUtils.length(listJCVariableDecls);
                         // 判断注释是否为 null
-                        if (Utils.isEmpty(methodDocumentation)) {
+                        if (StringUtils.isEmpty(methodDocumentation)) {
                             // 如果数量不为 0, 表示有参数
                             if (paramNumber != 0) {
-                                Utils.putToList(sMethodLackParamMap, className, methodName);
+                                MapUtils.putToList(sMethodLackParamMap, className, methodName);
                             }
                         } else {
                             // 参数校验处理
@@ -369,7 +371,7 @@ final class CodeAnalyeReader {
         if (methodCode.startsWith("\r\n@")) {
             String[] mods = jcMethodDecl.getModifiers().toString().split("\r\n");
             for (String mod : mods) {
-                if (!Utils.isEmpty(mod) && mod.startsWith("@")) {
+                if (!StringUtils.isEmpty(mod) && mod.startsWith("@")) {
                     methodCode = methodCode.replace(mod, "");
                 }
             }
@@ -393,10 +395,10 @@ final class CodeAnalyeReader {
             genericityTypes = typeStr.split(",");
 
             // 防止泛型 extend 等处理
-            for (int i = 0, len = Utils.length(genericityTypes); i < len; i++) {
+            for (int i = 0, len = ArrayUtils.length(genericityTypes); i < len; i++) {
                 String genericity = genericityTypes[i];
                 // 清空空格
-                genericity = Utils.toClearSpaceTrim(genericity);
+                genericity = StringUtils.toClearSpaceTrim(genericity);
                 // 进行空格拆分
                 String[] genericityArys = genericity.split(" ");
                 // 保存新的内容
@@ -416,7 +418,7 @@ final class CodeAnalyeReader {
         // 参数处理
         // ========================
         // 获取参数数量
-        int paramNumber = Utils.length(listJCVariableDecls);
+        int paramNumber = CollectionUtils.length(listJCVariableDecls);
         // 防止数据为 null
         if (paramNumber != 0) {
             // 创建对应的数组
@@ -426,12 +428,12 @@ final class CodeAnalyeReader {
                 // 获取拆分后的数据
                 String[] splits = listJCVariableDecls.get(i).toString().split(" ");
                 // 获取最后一位
-                paramNames[i] = splits[Utils.length(splits) - 1];
+                paramNames[i] = splits[ArrayUtils.length(splits) - 1];
             }
         }
 
         // 处理泛型参数
-        for (int i = 0, len = Utils.length(genericityTypes); i < len; i++) {
+        for (int i = 0, len = ArrayUtils.length(genericityTypes); i < len; i++) {
             genericityTypes[i] = "<" + genericityTypes[i] + ">";
         }
 
@@ -440,11 +442,11 @@ final class CodeAnalyeReader {
 
         StringBuffer buffer = new StringBuffer();
         // 合并参数
-        ArrayList<String> lists = Utils.arraycopy(paramNames, genericityTypes);
-        if (lists != null) {
+        String[] arrays = ArrayUtils.arraycopy(paramNames, genericityTypes);
+        if (arrays != null) {
             // 循环拼接
-            for (String param : lists) {
-                if (!Utils.isEmpty(param)) {
+            for (String param : arrays) {
+                if (!StringUtils.isEmpty(param)) {
                     buffer.append("@param " + param + " ");
                 }
             }
@@ -473,14 +475,14 @@ final class CodeAnalyeReader {
                 // 数据一样, 才检测是否注释
                 if (!subparamToCheckAnnotate(documentation)) {
                     // @param 不存在注释则保存
-                    Utils.putToList(sMethodUnAnnotateParamMap, className, methodName);
+                    MapUtils.putToList(sMethodUnAnnotateParamMap, className, methodName);
                 }
             } else {
-                Utils.putToList(map, className, methodName);
+                MapUtils.putToList(map, className, methodName);
             }
         } else { // 不存在注释, 那么参数也不存在才正常
             if (paramNumber != 0) { // 存在参数, 但没有注释
-                Utils.putToList(map, className, methodName);
+                MapUtils.putToList(map, className, methodName);
             }
         }
     }
@@ -498,7 +500,7 @@ final class CodeAnalyeReader {
         boolean isAdd = false;
         // 进行循环处理
         for (String str : splits) {
-            if (!Utils.isEmpty(str)) {
+            if (!StringUtils.isEmpty(str)) {
                 if (str.equals("@param")) {
                     builder.append("@param ");
                     isAdd = true;
@@ -532,7 +534,7 @@ final class CodeAnalyeReader {
         boolean isCheck = false;
         // 进行循环处理
         for (String str : splits) {
-            if (!Utils.isEmpty(str)) {
+            if (!StringUtils.isEmpty(str)) {
                 if (str.equals("@param")) {
                     builder.append("@param ");
                     isAdd = true;

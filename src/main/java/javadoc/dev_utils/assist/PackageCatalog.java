@@ -1,6 +1,6 @@
 package javadoc.dev_utils.assist;
 
-import javadoc.Utils;
+import dev.utils.common.StringUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -176,14 +176,14 @@ public final class PackageCatalog {
         StringBuffer buffer = new StringBuffer();
         if (isAnchor) {
             // 添加空格
-            buffer.append(Utils.appendSpace(lineNumber * 3));
+            buffer.append(StringUtils.appendSpace(lineNumber * 3));
             // 打印目录
             buffer.append("- [" + name + "]");
             // 增加锚
             buffer.append("(#" + (packageName + linkTag).replaceAll("\\.", "") + ")");
         } else {
             // 添加空格
-            buffer.append(Utils.appendSpace(lineNumber * 3));
+            buffer.append(StringUtils.appendSpace(lineNumber * 3));
             // 打印目录
             buffer.append("- " + name);
         }
@@ -207,7 +207,7 @@ public final class PackageCatalog {
         // 添加目录
         buffer.append(createCatelog(isAnchor, packageName, name, lineNumber, linkTag));
         // 设置间隔长度
-        buffer.append(Utils.appendSpace(sMaxLength - buffer.toString().length()));
+        buffer.append(StringUtils.appendSpace(sMaxLength - buffer.toString().length()));
         // 添加 间隔 |
         buffer.append("| " + mapCatelog.get(linkTag));
         // 返回处理后的目录行
@@ -281,7 +281,7 @@ public final class PackageCatalog {
             buffer.append("```\n");
         }
         // 增加根目录
-        buffer.append(head + Utils.appendSpace(sMaxLength - head.length()) + "| " + mapCatelog.get(packageName));
+        buffer.append(head + StringUtils.appendSpace(sMaxLength - head.length()) + "| " + mapCatelog.get(packageName));
         // 递归循环目录
         forCatelog(buffer, lists, isAnchor, packageName, 1, "", mapCatelog);
         // 判断是否增加锚链接处理

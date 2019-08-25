@@ -1,5 +1,9 @@
 package javadoc.dev_utils.check;
 
+import dev.utils.common.FileIOUtils;
+import dev.utils.common.FileUtils;
+import dev.utils.common.MapUtils;
+import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import other.Pangu;
 
@@ -70,7 +74,7 @@ final class CodeAnnotationAnalyeRecord {
             } else {
                 // = 慎用, 需要仔细对比部分代码差异化, 如 " " 会被替换成 "" 等 =
                 // 读取文件内容
-                String text = Utils.readFileToString(file, null);
+                String text = FileIOUtils.readFileToString(file, null);
                 // 处理后的代码
                 String newText = sPangu.spacingText(text);
                 newText = sPangu.spacingText(newText); // 多次处理
@@ -79,7 +83,7 @@ final class CodeAnnotationAnalyeRecord {
                     sAnnotationSpaceMap.put(file.getName(), newText);
                     // 不一样才覆盖
                     if (sCoverText){
-                        Utils.saveFile(file.getParent(), file.getName(), newText);
+                        FileUtils.saveFile(file.getParent(), file.getName(), newText);
                     }
                 }
                 // =
@@ -96,7 +100,7 @@ final class CodeAnnotationAnalyeRecord {
      */
     private static void readFile(final File file) {
         // 读取文件内容
-        List<String> lists = Utils.readFileToList(file, 0, Integer.MAX_VALUE);
+        List<String> lists = FileIOUtils.readFileToList(file, 0, Integer.MAX_VALUE);
 
         // 判断是否需要判断 重复出现情况
         boolean repeat = false;
@@ -105,13 +109,13 @@ final class CodeAnnotationAnalyeRecord {
             // 获取每一行代码
             String code = lists.get(i);
             // 判断是否 null
-            boolean isSpace = Utils.isSpace(code);
+            boolean isSpace = StringUtils.isSpace(code);
             // 防止为 null
             if (!isSpace) {
                 repeat = false; // 不需要判断重复
             } else {
                 if (code != null && repeat) {
-                    Utils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
+                    MapUtils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
                 }
                 // 表示需要检测重复
                 repeat = true;

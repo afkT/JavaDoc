@@ -3,7 +3,9 @@ package javadoc.dev_utils.assist;
 import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.RootDoc;
-import javadoc.Utils;
+import dev.utils.common.ArrayUtils;
+import dev.utils.common.StringUtils;
+import dev.utils.common.validator.ValidatorUtils;
 import javadoc.api.JavaDocReader;
 
 import java.util.ArrayList;
@@ -126,7 +128,7 @@ public final class APIReader implements JavaDocReader.CallBack {
             // 进行拆分处理
             classAnnotate = classAnnotate.substring("detail:".length(), ln == -1 ? classAnnotate.length() : ln);
             // 去掉前后空格
-            classAnnotate = Utils.toClearSpaceTrim(classAnnotate);
+            classAnnotate = StringUtils.toClearSpaceTrim(classAnnotate);
         } catch (Exception e) {
         }
         // 格式化标题 - 替换 %s 为类注释
@@ -158,13 +160,13 @@ public final class APIReader implements JavaDocReader.CallBack {
                 String methodAnnotate = method.commentText();
 
                 // 如果方法没有注释, 则进行记录
-                if (Utils.isEmpty(methodAnnotate)) {
+                if (StringUtils.isEmpty(methodAnnotate)) {
                     mMethodNotAnnotateBuffer.append("\n" + className + " - " + methodName);
                 }
 
                 // ========================
                 // 方法名正则表达式匹配处理
-                if (Utils.match(mMethodNameRegex, methodName)) {
+                if (ValidatorUtils.match(mMethodNameRegex, methodName)) {
                     ArrayList<String> listMatchs = mMethodNameMatchesMap.get(className);
                     if (listMatchs == null) {
                         listMatchs = new ArrayList<>();
@@ -179,12 +181,12 @@ public final class APIReader implements JavaDocReader.CallBack {
                 // 判断是否过滤方法
                 boolean isFilterMethod = false;
                 // 获取过滤方法数组长度
-                int filterMethodAryLength = Utils.length(filterMethods, 0);
+                int filterMethodAryLength = ArrayUtils.length(filterMethods, 0);
                 // 判断是否过滤
                 if (filterMethodAryLength != 0) {
                     for (int index = 0; index < filterMethodAryLength; index++) {
                         // 进行判断处理
-                        if (Utils.equals(filterMethods[index], methodName)) {
+                        if (ArrayUtils.equals(filterMethods[index], methodName)) {
                             // 表示需要过滤
                             isFilterMethod = true;
                             break;
@@ -198,7 +200,7 @@ public final class APIReader implements JavaDocReader.CallBack {
                 if (!isFilterMethod) {
                     if (methodNameMap.get(methodName) == null) {
                         // 如果注释为 null, 则设置方法名为注释
-                        if (Utils.isEmpty(methodAnnotate)) {
+                        if (StringUtils.isEmpty(methodAnnotate)) {
                             methodAnnotate = methodName;
                         } else {
                             // 判断方法注释是否存在换行

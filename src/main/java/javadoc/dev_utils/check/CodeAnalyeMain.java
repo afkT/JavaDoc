@@ -1,5 +1,6 @@
 package javadoc.dev_utils.check;
 
+import dev.utils.common.MapUtils;
 import javadoc.Utils;
 import javadoc.dev_utils.ApiConfig;
 
@@ -23,7 +24,7 @@ public class CodeAnalyeMain {
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;
         // 判断是否覆盖文件内容
-        boolean coverText = true;
+        boolean coverText = false;
 
         // =
 
@@ -94,7 +95,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnAnnotateMap, CodeAnalyeConfig.sIgnoreAnnotateMap);
+        MapUtils.removeToMap(sMethodUnAnnotateMap, CodeAnalyeConfig.sIgnoreAnnotateMap);
         // 转换 JSON 数据 - 缺少注释的方法
         String unAnnotateJSON = Utils.toJsonFormat(sMethodUnAnnotateMap, true);
         // 转换 Map 字符串
@@ -103,7 +104,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sParamUnFinalMap, CodeAnalyeConfig.sIgnoreFinalMap);
+        MapUtils.removeToMap(sParamUnFinalMap, CodeAnalyeConfig.sIgnoreFinalMap);
         // 转换 JSON 数据 - 缺少 final 修饰的方法(参数)
         String unFinalJSON = Utils.toJsonFormat(sParamUnFinalMap, true);
         // 转换 Map 字符串
@@ -112,7 +113,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnStaticMap, CodeAnalyeConfig.sIgnoreStaticMap);
+        MapUtils.removeToMap(sMethodUnStaticMap, CodeAnalyeConfig.sIgnoreStaticMap);
         // 转换 JSON 数据 - 缺少 static 修饰的方法
         String unStaticJSON = Utils.toJsonFormat(sMethodUnStaticMap, true);
         // 转换 Map 字符串
@@ -121,7 +122,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodLackParamMap, CodeAnalyeConfig.sIgnoreParamMap);
+        MapUtils.removeToMap(sMethodLackParamMap, CodeAnalyeConfig.sIgnoreParamMap);
         // 转换 JSON 数据 - 缺少 @param 的方法
         String lackParamJSON = Utils.toJsonFormat(sMethodLackParamMap, true);
         // 转换 Map 字符串
@@ -130,7 +131,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodLackReturnMap, CodeAnalyeConfig.sIgnoreReturnMap);
+        MapUtils.removeToMap(sMethodLackReturnMap, CodeAnalyeConfig.sIgnoreReturnMap);
         // 转换 JSON 数据 - 缺少 @return 的方法
         String lackReturnJSON = Utils.toJsonFormat(sMethodLackReturnMap, true);
         // 转换 Map 字符串
@@ -141,13 +142,15 @@ public class CodeAnalyeMain {
         // 转换 JSON 数据 - 存在 @param 但缺少注释的方法
         String unAnnotateParamJSON = Utils.toJsonFormat(sMethodUnAnnotateParamMap, true);
 
+        // =
+
         // 转换 JSON 数据 - 存在 @return 但缺少注释的方法
         String unAnnotateReturnJSON = Utils.toJsonFormat(sMethodUnAnnotateReturnMap, true);
 
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnPublicMap, CodeAnalyeConfig.sIgnoreUnPublicMap);
+        MapUtils.removeToMap(sMethodUnPublicMap, CodeAnalyeConfig.sIgnoreUnPublicMap);
         // 转换 JSON 数据 - 非 public 方法记录
         String methodUnPublicJSON = Utils.toJsonFormat(sMethodUnPublicMap, true);
         // 转换 Map 字符串
@@ -156,7 +159,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sNoModifierVariableMap, CodeAnalyeConfig.sIgnoreModifierVariableMap);
+        MapUtils.removeToMap(sNoModifierVariableMap, CodeAnalyeConfig.sIgnoreModifierVariableMap);
         // 转换 JSON 数据 - 无修饰符变量 记录
         String noModifierVariableJSON = Utils.toJsonFormat(sNoModifierVariableMap, true);
         // 转换 Map 字符串

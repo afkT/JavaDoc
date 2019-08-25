@@ -1,6 +1,6 @@
 package javadoc.dev_utils.readme;
 
-import javadoc.Utils;
+import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
@@ -142,7 +142,7 @@ final class DevApp_READMEMain {
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        Utils.saveFile(ApiConfig.FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.FILE_SAVE_PATH, "readme_api.md", buffer.toString());
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());

@@ -119,9 +119,10 @@ final class CodeAnalyeConfig {
         // = Common =
         // ==========
 
-        sIgnoreAnnotateMap.put("Base64.Coder", null);
-        sIgnoreAnnotateMap.put("Base64.Encoder", null);
-        sIgnoreAnnotateMap.put("Base64.Decoder", null);
+        sIgnoreAnnotateMap.put("Base64.Coder", Utils.asList("maxOutputSize"));
+        sIgnoreAnnotateMap.put("Base64.Decoder", Utils.asList("maxOutputSize"));
+        sIgnoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+
     }
 
     // =
@@ -192,10 +193,12 @@ final class CodeAnalyeConfig {
         // = Common =
         // ==========
 
-        sIgnoreFinalMap.put("Base64", null);
-        sIgnoreFinalMap.put("Base64.Encoder", null);
-        sIgnoreFinalMap.put("Base64.Decoder", null);
-        sIgnoreFinalMap.put("Base64Cipher", null);
+        sIgnoreFinalMap.put("Base64", Utils.asList("decode", "decode", "decode", "encodeToString",
+                "encodeToString", "encode", "encode"));
+        sIgnoreFinalMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreFinalMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreFinalMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
+
     }
 
     // =
@@ -434,8 +437,8 @@ final class CodeAnalyeConfig {
 
         sIgnoreStaticMap.put("AliasMethod", Utils.asList("next"));
         sIgnoreStaticMap.put("Averager", Utils.asList("add", "clear", "size", "getAverage", "print"));
-        sIgnoreStaticMap.put("Base64.Decoder", null);
-        sIgnoreStaticMap.put("Base64.Encoder", null);
+        sIgnoreStaticMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreStaticMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreStaticMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
         sIgnoreStaticMap.put("DevThreadPool", Utils.asList("getThreads",
                 "getCalcThreads", "execute", "execute", "execute", "shutdown", "shutdownNow",
@@ -523,9 +526,10 @@ final class CodeAnalyeConfig {
         // = Common =
         // ==========
 
-        sIgnoreParamMap.put("Base64.Coder", null);
-        sIgnoreParamMap.put("Base64.Decoder", null);
-        sIgnoreParamMap.put("Base64.Encoder", null);
+        sIgnoreParamMap.put("Base64.Coder", Utils.asList("process", "maxOutputSize"));
+        sIgnoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+
     }
 
     /**
@@ -541,7 +545,9 @@ final class CodeAnalyeConfig {
         // = Common =
         // ==========
 
-        sIgnoreReturnMap.put("Base64", null);
+        sIgnoreReturnMap.put("Base64", Utils.asList("decode", "decode", "decode",
+                "encodeToString", "encodeToString", "encode", "encode"));
+
     }
 
     /**
@@ -812,8 +818,8 @@ final class CodeAnalyeConfig {
         // = Common =
         // ==========
 
-        sIgnoreModifierVariableMap.put("Base64", null);
-        sIgnoreModifierVariableMap.put("Base64.Encoder", null);
+        sIgnoreModifierVariableMap.put("Base64", Utils.asList("        int tailLen;"));
+        sIgnoreModifierVariableMap.put("Base64.Encoder", Utils.asList("    int tailLen;"));
     }
 
     /**
