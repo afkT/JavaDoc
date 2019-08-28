@@ -1,4 +1,4 @@
-package javadoc.dev_utils.check;
+package javadoc.dev_utils.check.dev_app;
 
 import javadoc.Utils;
 
@@ -9,9 +9,9 @@ import java.util.HashMap;
  * detail: 代码检测分析配置
  * @author Ttt
  */
-final class CodeAnalyeConfig {
+final class DevAppConfig {
 
-    private CodeAnalyeConfig() {
+    private DevAppConfig() {
     }
 
     // 忽略指定方法 @param 处理

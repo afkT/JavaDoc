@@ -18,7 +18,7 @@ import java.util.List;
  * detail: 代码读取检测分析
  * @author Ttt
  */
-final class CodeAnalyeReader {
+public final class CodeAnalyeReader {
 
     private CodeAnalyeReader() {
     }

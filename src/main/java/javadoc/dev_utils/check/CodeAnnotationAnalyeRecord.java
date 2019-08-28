@@ -16,7 +16,7 @@ import java.util.List;
  * detail: 代码注释读取检测分析
  * @author Ttt
  */
-final class CodeAnnotationAnalyeRecord {
+public final class CodeAnnotationAnalyeRecord {
 
     private CodeAnnotationAnalyeRecord() {
     }

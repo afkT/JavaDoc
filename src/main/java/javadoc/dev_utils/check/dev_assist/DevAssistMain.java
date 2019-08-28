@@ -1,8 +1,10 @@
-package javadoc.dev_utils.check;
+package javadoc.dev_utils.check.dev_assist;
 
 import dev.utils.common.MapUtils;
 import javadoc.Utils;
 import javadoc.dev_utils.ApiConfig;
+import javadoc.dev_utils.check.CodeAnalyeReader;
+import javadoc.dev_utils.check.CodeAnnotationAnalyeRecord;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,13 +15,11 @@ import java.util.LinkedHashMap;
  * detail: 代码读取检测分析 Main 方法
  * @author Ttt
  */
-public class CodeAnalyeMain {
+class DevAssistMain {
 
     public static void main(String[] args) {
         // 本地文件路径
-        String path = ApiConfig.DEV_APP_PATH;
-        // 本地文件路径
-        path = ApiConfig.DEV_APP_PATH + "utils/";
+        String path = ApiConfig.DEV_ASSIST_PATH;
 
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;
@@ -35,13 +35,6 @@ public class CodeAnalyeMain {
 
         if (isLists) {
             final ArrayList<File> listFiles = new ArrayList<>();
-//            // 根目录三个工具类
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "DevUtils.java"));
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "utils/JCLogUtils.java"));
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "utils/LogPrintUtils.java"));
-
-//            listFiles.add(new File(path + "AppUtils.java"));
-
             // 检测代码规范
             lists = CodeAnalyeReader.codeAnalye(listFiles);
             // 代码注释间距检测记录
@@ -61,7 +54,7 @@ public class CodeAnalyeMain {
         final HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = CodeAnnotationAnalyeRecord.getAnnotationRepeatLineMap();
 
         // 忽略处理
-        CodeAnalyeConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
+        DevAssistConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
 
         // 转换 JSON 数据 - 代码注释间距检测记录
         String annotationSpaceJSON = Utils.toJsonFormat(sAnnotationSpaceMap, true);
@@ -95,7 +88,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnAnnotateMap, CodeAnalyeConfig.sIgnoreAnnotateMap);
+        MapUtils.removeToMap(sMethodUnAnnotateMap, DevAssistConfig.sIgnoreAnnotateMap);
         // 转换 JSON 数据 - 缺少注释的方法
         String unAnnotateJSON = Utils.toJsonFormat(sMethodUnAnnotateMap, true);
         // 转换 Map 字符串
@@ -104,7 +97,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sParamUnFinalMap, CodeAnalyeConfig.sIgnoreFinalMap);
+        MapUtils.removeToMap(sParamUnFinalMap, DevAssistConfig.sIgnoreFinalMap);
         // 转换 JSON 数据 - 缺少 final 修饰的方法(参数)
         String unFinalJSON = Utils.toJsonFormat(sParamUnFinalMap, true);
         // 转换 Map 字符串
@@ -113,7 +106,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnStaticMap, CodeAnalyeConfig.sIgnoreStaticMap);
+        MapUtils.removeToMap(sMethodUnStaticMap, DevAssistConfig.sIgnoreStaticMap);
         // 转换 JSON 数据 - 缺少 static 修饰的方法
         String unStaticJSON = Utils.toJsonFormat(sMethodUnStaticMap, true);
         // 转换 Map 字符串
@@ -122,7 +115,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodLackParamMap, CodeAnalyeConfig.sIgnoreParamMap);
+        MapUtils.removeToMap(sMethodLackParamMap, DevAssistConfig.sIgnoreParamMap);
         // 转换 JSON 数据 - 缺少 @param 的方法
         String lackParamJSON = Utils.toJsonFormat(sMethodLackParamMap, true);
         // 转换 Map 字符串
@@ -131,7 +124,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodLackReturnMap, CodeAnalyeConfig.sIgnoreReturnMap);
+        MapUtils.removeToMap(sMethodLackReturnMap, DevAssistConfig.sIgnoreReturnMap);
         // 转换 JSON 数据 - 缺少 @return 的方法
         String lackReturnJSON = Utils.toJsonFormat(sMethodLackReturnMap, true);
         // 转换 Map 字符串
@@ -150,7 +143,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnPublicMap, CodeAnalyeConfig.sIgnoreUnPublicMap);
+        MapUtils.removeToMap(sMethodUnPublicMap, DevAssistConfig.sIgnoreUnPublicMap);
         // 转换 JSON 数据 - 非 public 方法记录
         String methodUnPublicJSON = Utils.toJsonFormat(sMethodUnPublicMap, true);
         // 转换 Map 字符串
@@ -159,7 +152,7 @@ public class CodeAnalyeMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sNoModifierVariableMap, CodeAnalyeConfig.sIgnoreModifierVariableMap);
+        MapUtils.removeToMap(sNoModifierVariableMap, DevAssistConfig.sIgnoreModifierVariableMap);
         // 转换 JSON 数据 - 无修饰符变量 记录
         String noModifierVariableJSON = Utils.toJsonFormat(sNoModifierVariableMap, true);
         // 转换 Map 字符串
