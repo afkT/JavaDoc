@@ -65,6 +65,12 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
+        sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
+        sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
+                "onClick", "onLongClick", "onClick", "onLongClick"));
+        sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter", "isFilter", "isFilter", "compare", "compare"));
+        sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick", "onItemLongClick",
+                "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
     }
 
     // =
@@ -80,12 +86,11 @@ final class DevAssistConfig {
      */
     private static void initIgnoreParamMap() {
         sIgnoreParamMap.put("DevBaseEntry", Utils.asList("setEntryKey", "setEntryValue"));
-        sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr",
-                "setValue", "setObject"));
-        sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariable",
-                "putVariable", "removeVariable"));
+        sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr", "setValue", "setObject"));
+        sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariables", "removeVariableValue",
+                "removeVariableValueAll", "putVariable", "putVariable", "removeVariable", "toggle"));
         sIgnoreParamMap.put("DevExResultCallback", Utils.asList("setExpandResult"));
-
+        sIgnoreParamMap.put("RequestStatusAssist", Utils.asList("setRequestType", "setRequestStatus"));
     }
 
     /**
