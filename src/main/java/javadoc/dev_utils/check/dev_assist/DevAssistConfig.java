@@ -1,5 +1,7 @@
 package javadoc.dev_utils.check.dev_assist;
 
+import javadoc.Utils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -77,6 +79,13 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法 @param 处理
      */
     private static void initIgnoreParamMap() {
+        sIgnoreParamMap.put("DevBaseEntry", Utils.asList("setEntryKey", "setEntryValue"));
+        sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr",
+                "setValue", "setObject"));
+        sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariable",
+                "putVariable", "removeVariable"));
+        sIgnoreParamMap.put("DevExResultCallback", Utils.asList("setExpandResult"));
+
     }
 
     /**
@@ -89,6 +98,7 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法非 public 处理
      */
     private static void initIgnoreUnPublicMap() {
+        sIgnoreUnPublicMap.put("DevBaseModel", Utils.asList("isCorrect"));
     }
 
     // =

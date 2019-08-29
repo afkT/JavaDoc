@@ -24,7 +24,7 @@ class DevAssistMain {
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;
         // 判断是否覆盖文件内容
-        boolean coverText = false;
+        boolean coverText = true;
 
         // =
 
@@ -159,6 +159,13 @@ class DevAssistMain {
         String noModifierVariableGenerateMapString = Utils.generateMapString(sNoModifierVariableMap, "sIgnoreModifierVariableMap");
 
         // =
+
+        // ============
+        // = 特殊处理 =
+        // ============
+
+        // 非工具类无需判断 static
+        sMethodUnStaticMap.clear();
 
         // 统一拼接打印数据
         LinkedHashMap<String, HashMap<String, ArrayList<String>>> printMap = new LinkedHashMap<>();
