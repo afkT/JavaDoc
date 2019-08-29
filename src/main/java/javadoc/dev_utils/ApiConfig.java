@@ -50,6 +50,19 @@ public final class ApiConfig {
     // DevJava 版本号
     public static final String DEV_JAVA_VERSION = "1.0.0";
 
+    // =============
+    // = DevAssist =
+    // =============
+
+    // DevAssist API 文件保存路径
+    public static final String DEV_ASSIST_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevAssist/";
+    // DevAssist 文件路径
+    public static final String DEV_ASSIST_PATH = LOCAL_PATH + "/DevUtils/lib/DevAssist/src/main/java/dev/";
+    // DevAssist GitHub 项目文件路径
+    public static final String DEV_ASSIST_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
+    // DevAssist 版本号
+    public static final String DEV_ASSIST_VERSION = "1.0.0";
+
 
     // ========
     // = 其他 =
