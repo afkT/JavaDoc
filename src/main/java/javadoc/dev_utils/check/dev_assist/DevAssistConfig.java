@@ -65,6 +65,8 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
+        sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber", "setMaxNumber",
+                "setCurrentNumber", "setResetNumber"));
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
         sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
                 "onClick", "onLongClick", "onClick", "onLongClick"));
@@ -90,7 +92,9 @@ final class DevAssistConfig {
         sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariables", "removeVariableValue",
                 "removeVariableValueAll", "putVariable", "putVariable", "removeVariable", "toggle"));
         sIgnoreParamMap.put("DevExResultCallback", Utils.asList("setExpandResult"));
+        sIgnoreParamMap.put("PageAssist", Utils.asList("setPageNum", "setPageNumReady", "setPageSize", "setTotalRow", "setLastPage"));
         sIgnoreParamMap.put("RequestStatusAssist", Utils.asList("setRequestType", "setRequestStatus"));
+
     }
 
     /**
@@ -103,6 +107,15 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法非 public 处理
      */
     private static void initIgnoreUnPublicMap() {
+        sIgnoreUnPublicMap.put("NumberControlAssist", Utils.asList("checkUpdate"));
+        sIgnoreUnPublicMap.put("NumberControlAssist.INumberListener", Utils.asList(
+                "onPrepareChanged", "onNumberChanged"));
+        sIgnoreUnPublicMap.put("NumberControlAssist.INumberOperate", Utils.asList("isMinNumber",
+                "isMinNumber", "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber",
+                "isLessThanMaxNumber", "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber",
+                "setMinNumber", "getMaxNumber", "setMaxNumber", "setMinMaxNumber", "getCurrentNumber",
+                "setCurrentNumber", "setCurrentNumber", "getResetNumber", "setResetNumber", "isAllowNegative",
+                "setAllowNegative", "numberChange", "addNumber", "subtractionNumber", "getNumberListener", "setNumberListener"));
         sIgnoreUnPublicMap.put("DevBaseModel", Utils.asList("isCorrect"));
     }
 
