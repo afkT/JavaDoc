@@ -65,15 +65,22 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
-        sIgnoreFinalMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
-        sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber", "setMaxNumber",
-                "setCurrentNumber", "setResetNumber"));
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
-        sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
-                "onClick", "onLongClick", "onClick", "onLongClick"));
-        sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter", "isFilter", "isFilter", "compare", "compare"));
+        sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick", "onClick",
+                "onLongClick", "onClick", "onLongClick"));
+        sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter", "isFilter",
+                "isFilter", "compare", "compare"));
         sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick", "onItemLongClick",
                 "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
+        sIgnoreFinalMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
+        sIgnoreFinalMap.put("MultiSelectListAssist", Utils.asList("putSelects", "putSelects",
+                "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "select", "select", "select",
+                "unselect", "unselect", "toggle", "getSelectValue", "getSelectValueToPosition"));
+        sIgnoreFinalMap.put("MultiSelectMapAssist", Utils.asList("putSelects", "putSelects",
+                "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "isSelectKey", "select",
+                "select", "unselect", "toggle", "getSelectValue", "getSelectKey"));
+        sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber", "setMaxNumber",
+                "setCurrentNumber", "setResetNumber"));
     }
 
     // =
@@ -109,18 +116,25 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法非 public 处理
      */
     private static void initIgnoreUnPublicMap() {
+        sIgnoreUnPublicMap.put("DevBaseModel", Utils.asList("isCorrect"));
         sIgnoreUnPublicMap.put("EditTextWatcherAssist", Utils.asList("focusChange"));
         sIgnoreUnPublicMap.put("EditTextWatcherAssist.InputListener", Utils.asList("onTextChanged"));
+        sIgnoreUnPublicMap.put("IBaseMultiSelect", Utils.asList("clearSelects", "getSelectSize",
+                "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue", "unselectValue", "unselectValueAll"));
+        sIgnoreUnPublicMap.put("IMultiSelectToList", Utils.asList("isSelect", "select", "select",
+                "select", "unselect", "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse",
+                "getSelectValue", "getSelectValueToPosition"));
+        sIgnoreUnPublicMap.put("IMultiSelectToMap", Utils.asList("isSelect", "isSelectKey", "select",
+                "select", "unselect", "toggle", "getSelectValue", "getSelectValues", "getSelectValuesToReverse",
+                "getSelectKey", "getSelectKeys", "getSelectKeysToReverse"));
         sIgnoreUnPublicMap.put("NumberControlAssist", Utils.asList("checkUpdate"));
-        sIgnoreUnPublicMap.put("NumberControlAssist.INumberListener", Utils.asList(
-                "onPrepareChanged", "onNumberChanged"));
-        sIgnoreUnPublicMap.put("NumberControlAssist.INumberOperate", Utils.asList("isMinNumber",
-                "isMinNumber", "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber",
-                "isLessThanMaxNumber", "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber",
-                "setMinNumber", "getMaxNumber", "setMaxNumber", "setMinMaxNumber", "getCurrentNumber",
-                "setCurrentNumber", "setCurrentNumber", "getResetNumber", "setResetNumber", "isAllowNegative",
-                "setAllowNegative", "numberChange", "addNumber", "subtractionNumber", "getNumberListener", "setNumberListener"));
-        sIgnoreUnPublicMap.put("DevBaseModel", Utils.asList("isCorrect"));
+        sIgnoreUnPublicMap.put("NumberControlAssist.INumberListener", Utils.asList("onPrepareChanged", "onNumberChanged"));
+        sIgnoreUnPublicMap.put("NumberControlAssist.INumberOperate", Utils.asList("isMinNumber", "isMinNumber",
+                "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber", "isLessThanMaxNumber",
+                "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber", "setMinNumber", "getMaxNumber",
+                "setMaxNumber", "setMinMaxNumber", "getCurrentNumber", "setCurrentNumber", "setCurrentNumber", "getResetNumber",
+                "setResetNumber", "isAllowNegative", "setAllowNegative", "numberChange", "addNumber", "subtractionNumber",
+                "getNumberListener", "setNumberListener"));
     }
 
     // =
