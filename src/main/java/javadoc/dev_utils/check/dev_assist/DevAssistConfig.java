@@ -56,7 +56,7 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法注释处理
      */
     private static void initIgnoreAnnotateMap() {
-
+        sIgnoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
     }
 
     // =
@@ -65,6 +65,7 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
+        sIgnoreFinalMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
         sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber", "setMaxNumber",
                 "setCurrentNumber", "setResetNumber"));
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
@@ -87,6 +88,7 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法 @param 处理
      */
     private static void initIgnoreParamMap() {
+        sIgnoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
         sIgnoreParamMap.put("DevBaseEntry", Utils.asList("setEntryKey", "setEntryValue"));
         sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr", "setValue", "setObject"));
         sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariables", "removeVariableValue",
@@ -107,6 +109,8 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法非 public 处理
      */
     private static void initIgnoreUnPublicMap() {
+        sIgnoreUnPublicMap.put("EditTextWatcherAssist", Utils.asList("focusChange"));
+        sIgnoreUnPublicMap.put("EditTextWatcherAssist.InputListener", Utils.asList("onTextChanged"));
         sIgnoreUnPublicMap.put("NumberControlAssist", Utils.asList("checkUpdate"));
         sIgnoreUnPublicMap.put("NumberControlAssist.INumberListener", Utils.asList(
                 "onPrepareChanged", "onNumberChanged"));
