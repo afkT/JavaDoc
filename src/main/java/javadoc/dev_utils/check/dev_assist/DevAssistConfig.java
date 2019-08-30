@@ -121,6 +121,8 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("EditTextWatcherAssist.InputListener", Utils.asList("onTextChanged"));
         sIgnoreUnPublicMap.put("IBaseMultiSelect", Utils.asList("clearSelects", "getSelectSize",
                 "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue", "unselectValue", "unselectValueAll"));
+        sIgnoreUnPublicMap.put("IMultiSelectEdit", Utils.asList("isEditStatus", "setEditStatus",
+                "toggleEditStatus", "selectAll", "clearSelectAll", "inverseSelect", "isSelectAll", "isSelect", "isNotSelect"));
         sIgnoreUnPublicMap.put("IMultiSelectToList", Utils.asList("isSelect", "select", "select",
                 "select", "unselect", "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse",
                 "getSelectValue", "getSelectValueToPosition"));
