@@ -57,6 +57,10 @@ final class DevAssistConfig {
      */
     private static void initIgnoreAnnotateMap() {
         sIgnoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
+        sIgnoreAnnotateMap.put("IImageEngine.BitmapCallBack", Utils.asList(
+                "getTranscodeType", "onResponse", "onFailure"));
+        sIgnoreAnnotateMap.put("IImageEngine.DrawableCallBack", Utils.asList(
+                "getTranscodeType", "onResponse", "onFailure"));
     }
 
     // =
@@ -66,21 +70,27 @@ final class DevAssistConfig {
      */
     private static void initIgnoreFinalMap() {
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
-        sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick", "onClick",
-                "onLongClick", "onClick", "onLongClick"));
-        sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter", "isFilter",
-                "isFilter", "compare", "compare"));
-        sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick", "onItemLongClick",
-                "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
+        sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
+                "onClick", "onLongClick", "onClick", "onLongClick"));
+        sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter",
+                "isFilter", "isFilter", "compare", "compare"));
+        sIgnoreFinalMap.put("DevHttpEngine", Utils.asList("initEngine", "newCall"));
+        sIgnoreFinalMap.put("DevImageEngine", Utils.asList("initEngine", "displayImage",
+                "displayImage", "displayImage", "displayImage", "loadImage", "loadImage"));
+        sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick",
+                "onItemLongClick", "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
+        sIgnoreFinalMap.put("DevLogEngine", Utils.asList("initEngine", "d", "e",
+                "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
+                "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
         sIgnoreFinalMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
         sIgnoreFinalMap.put("MultiSelectListAssist", Utils.asList("putSelects", "putSelects",
-                "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "select", "select", "select",
-                "unselect", "unselect", "toggle", "getSelectValue", "getSelectValueToPosition"));
-        sIgnoreFinalMap.put("MultiSelectMapAssist", Utils.asList("putSelects", "putSelects",
-                "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "isSelectKey", "select",
-                "select", "unselect", "toggle", "getSelectValue", "getSelectKey"));
-        sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber", "setMaxNumber",
-                "setCurrentNumber", "setResetNumber"));
+                "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "select", "select",
+                "select", "unselect", "unselect", "toggle", "getSelectValue", "getSelectValueToPosition"));
+        sIgnoreFinalMap.put("MultiSelectMapAssist", Utils.asList("putSelects",
+                "putSelects", "isSelectValue", "unselectValue", "unselectValueAll", "isSelect",
+                "isSelectKey", "select", "select", "unselect", "toggle", "getSelectValue", "getSelectKey"));
+        sIgnoreFinalMap.put("NumberControlAssist", Utils.asList("setMinNumber",
+                "setMaxNumber", "setCurrentNumber", "setResetNumber"));
     }
 
     // =
@@ -95,15 +105,18 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法 @param 处理
      */
     private static void initIgnoreParamMap() {
-        sIgnoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
         sIgnoreParamMap.put("DevBaseEntry", Utils.asList("setEntryKey", "setEntryValue"));
         sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr", "setValue", "setObject"));
-        sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariables", "removeVariableValue",
-                "removeVariableValueAll", "putVariable", "putVariable", "removeVariable", "toggle"));
+        sIgnoreParamMap.put("DevBaseVariable", Utils.asList("putVariables",
+                "removeVariableValue", "removeVariableValueAll", "putVariable",
+                "putVariable", "removeVariable", "toggle"));
         sIgnoreParamMap.put("DevExResultCallback", Utils.asList("setExpandResult"));
-        sIgnoreParamMap.put("PageAssist", Utils.asList("setPageNum", "setPageNumReady", "setPageSize", "setTotalRow", "setLastPage"));
+        sIgnoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
+        sIgnoreParamMap.put("IImageEngine.BitmapCallBack", Utils.asList("onResponse", "onFailure"));
+        sIgnoreParamMap.put("IImageEngine.DrawableCallBack", Utils.asList("onResponse", "onFailure"));
+        sIgnoreParamMap.put("PageAssist", Utils.asList("setPageNum", "setPageNumReady",
+                "setPageSize", "setTotalRow", "setLastPage"));
         sIgnoreParamMap.put("RequestStatusAssist", Utils.asList("setRequestType", "setRequestStatus"));
-
     }
 
     /**
@@ -120,23 +133,33 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("EditTextWatcherAssist", Utils.asList("focusChange"));
         sIgnoreUnPublicMap.put("EditTextWatcherAssist.InputListener", Utils.asList("onTextChanged"));
         sIgnoreUnPublicMap.put("IBaseMultiSelect", Utils.asList("clearSelects", "getSelectSize",
-                "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue", "unselectValue", "unselectValueAll"));
+                "getSelects", "putSelects", "putSelects", "isSelect",
+                "isSelectValue", "unselectValue", "unselectValueAll"));
+        sIgnoreUnPublicMap.put("IHttpEngine", Utils.asList("newCall"));
+        sIgnoreUnPublicMap.put("IHttpEngine.Call", Utils.asList("getRequest", "isCanceled",
+                "isExecuted", "isEnd", "cancel", "start", "startAync"));
+        sIgnoreUnPublicMap.put("IImageEngine", Utils.asList("displayImage", "displayImage",
+                "displayImage", "displayImage", "loadImage", "loadImage", "clearDiskCache", "clearMemoryCache"));
+        sIgnoreUnPublicMap.put("IImageEngine.ImageCallBack", Utils.asList("getTranscodeType", "onResponse", "onFailure"));
+        sIgnoreUnPublicMap.put("ILogEngine", Utils.asList("isPrintLog", "d", "e",
+                "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
+                "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
         sIgnoreUnPublicMap.put("IMultiSelectEdit", Utils.asList("isEditStatus", "setEditStatus",
                 "toggleEditStatus", "selectAll", "clearSelectAll", "inverseSelect", "isSelectAll", "isSelect", "isNotSelect"));
-        sIgnoreUnPublicMap.put("IMultiSelectToList", Utils.asList("isSelect", "select", "select",
-                "select", "unselect", "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse",
+        sIgnoreUnPublicMap.put("IMultiSelectToList", Utils.asList("isSelect", "select",
+                "select", "select", "unselect", "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse",
                 "getSelectValue", "getSelectValueToPosition"));
-        sIgnoreUnPublicMap.put("IMultiSelectToMap", Utils.asList("isSelect", "isSelectKey", "select",
-                "select", "unselect", "toggle", "getSelectValue", "getSelectValues", "getSelectValuesToReverse",
+        sIgnoreUnPublicMap.put("IMultiSelectToMap", Utils.asList("isSelect", "isSelectKey",
+                "select", "select", "unselect", "toggle", "getSelectValue", "getSelectValues", "getSelectValuesToReverse",
                 "getSelectKey", "getSelectKeys", "getSelectKeysToReverse"));
         sIgnoreUnPublicMap.put("NumberControlAssist", Utils.asList("checkUpdate"));
         sIgnoreUnPublicMap.put("NumberControlAssist.INumberListener", Utils.asList("onPrepareChanged", "onNumberChanged"));
-        sIgnoreUnPublicMap.put("NumberControlAssist.INumberOperate", Utils.asList("isMinNumber", "isMinNumber",
-                "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber", "isLessThanMaxNumber",
-                "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber", "setMinNumber", "getMaxNumber",
-                "setMaxNumber", "setMinMaxNumber", "getCurrentNumber", "setCurrentNumber", "setCurrentNumber", "getResetNumber",
-                "setResetNumber", "isAllowNegative", "setAllowNegative", "numberChange", "addNumber", "subtractionNumber",
-                "getNumberListener", "setNumberListener"));
+        sIgnoreUnPublicMap.put("NumberControlAssist.INumberOperate", Utils.asList("isMinNumber",
+                "isMinNumber", "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber",
+                "isLessThanMaxNumber", "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber",
+                "setMinNumber", "getMaxNumber", "setMaxNumber", "setMinMaxNumber", "getCurrentNumber",
+                "setCurrentNumber", "setCurrentNumber", "getResetNumber", "setResetNumber", "isAllowNegative",
+                "setAllowNegative", "numberChange", "addNumber", "subtractionNumber", "getNumberListener", "setNumberListener"));
     }
 
     // =
