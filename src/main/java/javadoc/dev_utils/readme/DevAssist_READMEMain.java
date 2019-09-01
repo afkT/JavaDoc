@@ -92,11 +92,11 @@ final class DevAssist_READMEMain {
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Assist);
 
         // 生成 dev 包下
-        String commonAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
+        String assistAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
                 ApiConfig.sFilterClassMap_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
-        buffer.append(commonAPI);
+        buffer.append(assistAPI);
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());

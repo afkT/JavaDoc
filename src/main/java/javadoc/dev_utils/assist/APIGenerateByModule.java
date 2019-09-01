@@ -148,7 +148,7 @@ final class APIGenerateByModule {
             // 判断是否存在子文件夹
             if (subnode.getListSubs().size() != 0) {
                 forSubnode(buffer, subnode.getListSubs(),
-                        path + "/" + name, packageName + "." + name, githubUrl + name,
+                        path + "/" + name, packageName + "." + name, githubUrl + "/" + name,
                         filterClassMap, filterMethodMap, methodNameRegex, methodNameMatchesMap,
                         methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
             }
