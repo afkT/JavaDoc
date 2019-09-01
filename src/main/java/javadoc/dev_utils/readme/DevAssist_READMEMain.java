@@ -12,9 +12,9 @@ import java.util.HashMap;
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class DevJava_READMEMain {
+final class DevAssist_READMEMain {
 
-    private DevJava_READMEMain() {
+    private DevAssist_READMEMain() {
     }
 
     /**
@@ -26,15 +26,15 @@ final class DevJava_READMEMain {
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
                                          final HashMap<String, String> mapCatelog) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevJava:" + ApiConfig.DEV_JAVA_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
+//        buffer.append("\n");
+//        buffer.append("## Gradle");
+//
+//        buffer.append("\n\n");
+//        buffer.append("```java");
+//        buffer.append("\n");
+//        buffer.append("implementation 'com.afkt:DevAssist:" + ApiConfig.DEV_ASSIST_VERSION + "'");
+//        buffer.append("\n");
+//        buffer.append("```");
 
         buffer.append("\n\n");
         buffer.append("## 目录结构");
@@ -45,28 +45,6 @@ final class DevJava_READMEMain {
 
         buffer.append("\n\n");
         buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 该工具类不依赖 android api, 属于 Java 工具类库");
-
-        buffer.append("\n\n");
-        buffer.append("- 开启日志");
-        buffer.append("\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上(release)环境, 不调用方法就行");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setPrintLog(true);");
-        buffer.append("\n");
-        buffer.append("// 控制台打印日志");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setControlPrintLog(true);");
-        buffer.append("\n");
-        buffer.append("// 设置 Java 模块日志信息监听");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setPrint(new JCLogUtils.Print() {});");
-        buffer.append("\n");
-        buffer.append("```");
 
         buffer.append("\n\n");
         buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
@@ -89,11 +67,11 @@ final class DevJava_READMEMain {
      */
     public static void createREADME() {
         // 包名
-        final String packageName = ApiConfig.DEV_PACKAGE;
+        final String packageName = ApiConfig.DEV_ASSIST_PACKAGE;
         // 本地文件路径
-        final String path = ApiConfig.DEV_JAVA_UTILS_PATH;
+        final String path = ApiConfig.DEV_ASSIST_PATH;
         // Github 链接地址
-        final String githubUrl = ApiConfig.DEV_JAVA_GITHUB_URL;
+        final String githubUrl = ApiConfig.DEV_ASSIST_GITHUB_URL;
 
         // 方法名匹配存储 Map<类名, ArrayList<方法名>>
         final HashMap<String, ArrayList<String>> methodNameMatchesMap = new HashMap<>();
@@ -111,24 +89,24 @@ final class DevJava_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Assist);
 
-        // 生成 dev.utils.common 包下 dev.utils
-        String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
+        // 生成 dev 包下
+        String commonAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
+                ApiConfig.sFilterClassMap_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
 
 //        // 方法名重复记录存储
-//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
 //        // 方法没有注释记录存储
-//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuffer.toString());
 //        // 类不存在方法记录存储
-//        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuffer.toString());
+//        Utils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuffer.toString());
 
         StringBuffer resultBuffer = new StringBuffer();
         resultBuffer.append("\n\n");
@@ -137,12 +115,12 @@ final class DevJava_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH + "readme_api.md");
+        resultBuffer.append("保存地址: " + ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH + "readme_api.md");
         resultBuffer.append("\n");
         System.out.println(resultBuffer.toString());
     }
 
     public static void main(String[] args) {
-        DevJava_READMEMain.createREADME();
+        DevAssist_READMEMain.createREADME();
     }
 }

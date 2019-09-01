@@ -54,6 +54,8 @@ public final class ApiConfig {
     // = DevAssist =
     // =============
 
+    // 包目录名
+    public static final String DEV_ASSIST_PACKAGE = "dev";
     // DevAssist API 文件保存路径
     public static final String DEV_ASSIST_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevAssist/";
     // DevAssist 文件路径
@@ -68,7 +70,14 @@ public final class ApiConfig {
     // = 其他 =
     // ========
 
-    // = Map =
+    // = Regex =
+    // 方法名规则
+    public static final String sMethodNameRegex = "[A-Za-z]+[2][A-Za-z][A-Za-z0-9]+";
+
+    // ===================
+    // = DevApp、DevJava =
+    // ===================
+
     // 包名目录注释
     public static final HashMap<String, String> sCatelogMap = new HashMap<>();
     // 忽略不保存的类
@@ -76,9 +85,16 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap = new HashMap<>();
 
-    // = Regex =
-    // 方法名规则
-    public static final String sMethodNameRegex = "[A-Za-z]+[2][A-Za-z][A-Za-z0-9]+";
+    // =============
+    // = DevAssist =
+    // =============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatelogMap_Assist = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashMap<String, String> sFilterClassMap_Assist = new HashMap<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
 
     static {
         // 初始化 包名目录注释 Map
@@ -99,6 +115,11 @@ public final class ApiConfig {
      * 初始化 包名目录注释 Map
      */
     private static void initCatelogMap() {
+
+        // ===================
+        // = DevApp、DevJava =
+        // ===================
+
         sCatelogMap.put("dev.utils", "根目录");
 
         // ============
@@ -137,12 +158,34 @@ public final class ApiConfig {
         sCatelogMap.put(".common.random", "随机概率算法工具类");
         sCatelogMap.put(".common.thread", "线程相关");
         sCatelogMap.put(".common.validator", "数据校验工具类");
+
+        // =============
+        // = DevAssist =
+        // =============
+
+        sCatelogMap_Assist.put("dev", "根目录");
+        sCatelogMap_Assist.put(".assist", "快捷功能辅助类");
+        sCatelogMap_Assist.put(".assist.multiselect", "多选模块");
+        sCatelogMap_Assist.put(".assist.multiselect.edit", "多选编辑方法");
+        sCatelogMap_Assist.put(".base", "基类相关");
+        sCatelogMap_Assist.put(".callback", "回调相关");
+        sCatelogMap_Assist.put(".callback.click", "点击回调");
+        sCatelogMap_Assist.put(".callback.common", "通用回调");
+        sCatelogMap_Assist.put(".callback.result", "操作结果回调");
+        sCatelogMap_Assist.put(".engine", "兼容 Engine");
+        sCatelogMap_Assist.put(".engine.http", "Http Engine");
+        sCatelogMap_Assist.put(".engine.image", "Image Engine");
+        sCatelogMap_Assist.put(".engine.log", "Log Engine");
     }
 
     /**
      * 初始化 忽略不保存的类 Map
      */
     private static void initFilterClassMap() {
+
+        // ===================
+        // = DevApp、DevJava =
+        // ===================
 
         // =======
         // = APP =
@@ -161,12 +204,20 @@ public final class ApiConfig {
         sFilterClassMap.put("Cipher.java", "");
         sFilterClassMap.put("Decrypt.java", "");
         sFilterClassMap.put("Encrypt.java", "");
+
+        // =============
+        // = DevAssist =
+        // =============
     }
 
     /**
      * 初始化 忽略不保存的方法 Map
      */
     private static void initFilterMethodMap() {
+
+        // ===================
+        // = DevApp、DevJava =
+        // ===================
 
         // =======
         // = APP =
@@ -247,6 +298,13 @@ public final class ApiConfig {
                 new String[]{"onResponse", "onFail"});
 
         sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
+
+        // =============
+        // = DevAssist =
+        // =============
+
+        sFilterMethodMap_Assist.put("EditTextWatcherAssist.java", new String[]{"onTextChanged"});
+        sFilterMethodMap_Assist.put("NumberControlAssist.java", new String[]{"onPrepareChanged", "onNumberChanged"});
     }
 
     /**

@@ -113,10 +113,10 @@ final class DevApp_READMEMain {
      * 创建 REAMDE 文件
      */
     public static void createREADME() {
-        // 本地文件路径
-        final String path = ApiConfig.DEV_APP_UTILS_PATH;
         // 包名
         final String packageName = ApiConfig.DEV_PACKAGE;
+        // 本地文件路径
+        final String path = ApiConfig.DEV_APP_UTILS_PATH;
         // Github 链接地址
         final String githubUrl = ApiConfig.DEV_APP_GITHUB_URL;
 

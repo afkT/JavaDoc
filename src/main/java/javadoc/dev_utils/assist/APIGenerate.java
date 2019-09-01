@@ -1,5 +1,6 @@
 package javadoc.dev_utils.assist;
 
+import dev.utils.common.StringUtils;
 import javadoc.Utils;
 
 import java.io.File;
@@ -41,6 +42,11 @@ public class APIGenerate {
         String apiPackageName = packageName + "." + module;
         // Github 链接地址
         String apiGitHubUrl = githubUrl + module + "/";
+
+        // 特殊处理
+        if (StringUtils.isEmpty(module)) {
+            apiPackageName = packageName;
+        }
 
         // 拼接对象
         StringBuffer buffer = new StringBuffer();
