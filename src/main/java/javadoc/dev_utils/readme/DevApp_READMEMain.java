@@ -111,8 +111,9 @@ final class DevApp_READMEMain {
 
     /**
      * 创建 REAMDE 文件
+     * @return Create Result
      */
-    public static void createREADME() {
+    public static String createREADME() {
         // 包名
         final String packageName = ApiConfig.DEV_PACKAGE;
         // 本地文件路径
@@ -171,10 +172,10 @@ final class DevApp_READMEMain {
         resultBuffer.append("\n");
         resultBuffer.append("保存地址: " + ApiConfig.DEV_APP_API_FILE_SAVE_PATH + "readme_api.md");
         resultBuffer.append("\n");
-        System.out.println(resultBuffer.toString());
+        return resultBuffer.toString();
     }
 
     public static void main(String[] args) {
-        DevApp_READMEMain.createREADME();
+        System.out.println(DevApp_READMEMain.createREADME());
     }
 }

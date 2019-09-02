@@ -26,15 +26,15 @@ final class DevAssist_READMEMain {
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
                                          final HashMap<String, String> mapCatelog) {
-//        buffer.append("\n");
-//        buffer.append("## Gradle");
-//
-//        buffer.append("\n\n");
-//        buffer.append("```java");
-//        buffer.append("\n");
-//        buffer.append("implementation 'com.afkt:DevAssist:" + ApiConfig.DEV_ASSIST_VERSION + "'");
-//        buffer.append("\n");
-//        buffer.append("```");
+        buffer.append("\n");
+        buffer.append("## Gradle");
+
+        buffer.append("\n\n");
+        buffer.append("```java");
+        buffer.append("\n");
+        buffer.append("implementation 'com.afkt:DevAssist:" + ApiConfig.DEV_ASSIST_VERSION + "'");
+        buffer.append("\n");
+        buffer.append("```");
 
         buffer.append("\n\n");
         buffer.append("## 目录结构");
@@ -64,8 +64,9 @@ final class DevAssist_READMEMain {
 
     /**
      * 创建 REAMDE 文件
+     * @return Create Result
      */
-    public static void createREADME() {
+    public static String createREADME() {
         // 包名
         final String packageName = ApiConfig.DEV_ASSIST_PACKAGE;
         // 本地文件路径
@@ -117,10 +118,10 @@ final class DevAssist_READMEMain {
         resultBuffer.append("\n");
         resultBuffer.append("保存地址: " + ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH + "readme_api.md");
         resultBuffer.append("\n");
-        System.out.println(resultBuffer.toString());
+        return resultBuffer.toString();
     }
 
     public static void main(String[] args) {
-        DevAssist_READMEMain.createREADME();
+        System.out.println(DevAssist_READMEMain.createREADME());
     }
 }
