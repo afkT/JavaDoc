@@ -50,7 +50,7 @@ final class DevAssist_READMEMain {
         buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
 
         buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版, API 文档生成](https://github.com/afkT/JavaDoc)");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
         buffer.append("## API");

@@ -62,7 +62,7 @@ final class DevApp_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// 整个工具类内部日志信息, 都通过以下两个工具类输出打印, 并且通过 DevUtils.openLog() 控制开关");
+        buffer.append("// 整个工具类内部日志信息，都通过以下两个工具类输出打印，并且通过 DevUtils.openLog() 控制开关");
         buffer.append("\n");
         buffer.append("\n");
         buffer.append("// dev.utils.app - APP 日志打印工具类");
@@ -80,7 +80,7 @@ final class DevApp_READMEMain {
         buffer.append("\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上(release)环境, 不调用方法就行");
+        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法就行");
         buffer.append("\n");
         buffer.append("DevUtils.openLog();");
         buffer.append("\n");
@@ -97,7 +97,7 @@ final class DevApp_READMEMain {
         buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
 
         buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版, API 文档生成](https://github.com/afkT/JavaDoc)");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
         buffer.append("## API");

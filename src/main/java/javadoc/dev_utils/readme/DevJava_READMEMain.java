@@ -47,14 +47,14 @@ final class DevJava_READMEMain {
         buffer.append("## 事项");
 
         buffer.append("\n\n");
-        buffer.append("- 该工具类不依赖 android api, 属于 Java 工具类库");
+        buffer.append("- 该工具类不依赖 android api，属于 Java 工具类库");
 
         buffer.append("\n\n");
         buffer.append("- 开启日志");
         buffer.append("\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上(release)环境, 不调用方法就行");
+        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法就行");
         buffer.append("\n");
         buffer.append("JCLogUtils.setPrintLog(true);");
         buffer.append("\n");
@@ -72,7 +72,7 @@ final class DevJava_READMEMain {
         buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
 
         buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版, API 文档生成](https://github.com/afkT/JavaDoc)");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
         buffer.append("## API");
