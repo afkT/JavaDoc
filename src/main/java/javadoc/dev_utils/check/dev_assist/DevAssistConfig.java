@@ -74,7 +74,8 @@ final class DevAssistConfig {
                 "onClick", "onLongClick", "onClick", "onLongClick"));
         sIgnoreFinalMap.put("DevFilterCallback", Utils.asList("filter", "filter",
                 "isFilter", "isFilter", "compare", "compare"));
-        sIgnoreFinalMap.put("DevHttpEngine", Utils.asList("initEngine", "newCall"));
+        sIgnoreFinalMap.put("DevHttpEngine", Utils.asList("initEngine", "newCall",
+                "cancelCall", "cancelUrl", "cancelTag"));
         sIgnoreFinalMap.put("DevImageEngine", Utils.asList("initEngine", "displayImage",
                 "displayImage", "displayImage", "displayImage", "loadImage", "loadImage"));
         sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick",
@@ -135,7 +136,7 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("IBaseMultiSelect", Utils.asList("clearSelects", "getSelectSize",
                 "getSelects", "putSelects", "putSelects", "isSelect",
                 "isSelectValue", "unselectValue", "unselectValueAll"));
-        sIgnoreUnPublicMap.put("IHttpEngine", Utils.asList("newCall"));
+        sIgnoreUnPublicMap.put("IHttpEngine", Utils.asList("newCall", "cancelAll", "cancelCall", "cancelUrl", "cancelTag"));
         sIgnoreUnPublicMap.put("IHttpEngine.Call", Utils.asList("getRequest", "isCanceled",
                 "isExecuted", "isEnd", "cancel", "start", "startAync"));
         sIgnoreUnPublicMap.put("IImageEngine", Utils.asList("displayImage", "displayImage",
