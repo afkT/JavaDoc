@@ -175,6 +175,7 @@ public final class ApiConfig {
         sCatelogMap_Assist.put(".engine", "兼容 Engine");
         sCatelogMap_Assist.put(".engine.http", "Http Engine");
         sCatelogMap_Assist.put(".engine.image", "Image Engine");
+        sCatelogMap_Assist.put(".engine.json", "JSON Engine");
         sCatelogMap_Assist.put(".engine.log", "Log Engine");
     }
 
