@@ -80,6 +80,9 @@ final class DevAssistConfig {
                 "displayImage", "displayImage", "displayImage", "loadImage", "loadImage"));
         sIgnoreFinalMap.put("DevItemClickCallBack", Utils.asList("onItemClick",
                 "onItemLongClick", "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
+        sIgnoreFinalMap.put("DevJSONEngine", Utils.asList("initEngine", "toJson",
+                "toJson", "fromJson", "fromJson", "fromJson", "fromJson", "isJSON", "toJsonIndent",
+                "toJsonIndent", "toJsonIndent", "toJsonIndent"));
         sIgnoreFinalMap.put("DevLogEngine", Utils.asList("initEngine", "d", "e",
                 "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
                 "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
@@ -142,6 +145,8 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("IImageEngine", Utils.asList("displayImage", "displayImage",
                 "displayImage", "displayImage", "loadImage", "loadImage", "clearDiskCache", "clearMemoryCache"));
         sIgnoreUnPublicMap.put("IImageEngine.ImageCallBack", Utils.asList("getTranscodeType", "onResponse", "onFailure"));
+        sIgnoreUnPublicMap.put("IJSONEngine", Utils.asList("toJson", "toJson", "fromJson",
+                "fromJson", "fromJson", "fromJson", "isJSON", "toJsonIndent", "toJsonIndent", "toJsonIndent", "toJsonIndent"));
         sIgnoreUnPublicMap.put("ILogEngine", Utils.asList("isPrintLog", "d", "e",
                 "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
                 "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
