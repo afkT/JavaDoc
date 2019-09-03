@@ -71,7 +71,7 @@ final class DevAssistConfig {
     private static void initIgnoreFinalMap() {
         sIgnoreFinalMap.put("AdapterDataAssist", Utils.asList("getDataItem", "getDataItemPosition",
                 "isFirstItem", "isLastItem", "isLastItem", "clearDataList", "addData", "addData", "addAllData",
-                "addAllData", "removeData", "removeData", "removeData", "setDataList", "setDataList"));
+                "addAllData", "removeData", "removeData", "removeData", "setAdapterNotify", "setDataList", "setDataList"));
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
         sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
                 "onClick", "onLongClick", "onClick", "onLongClick"));
