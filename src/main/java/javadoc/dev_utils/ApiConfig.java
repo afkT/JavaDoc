@@ -165,6 +165,7 @@ public final class ApiConfig {
 
         sCatelogMap_Assist.put("dev", "根目录");
         sCatelogMap_Assist.put(".assist", "快捷功能辅助类");
+        sCatelogMap_Assist.put(".assist.adapter", "Adapter 相关");
         sCatelogMap_Assist.put(".assist.multiselect", "多选模块");
         sCatelogMap_Assist.put(".assist.multiselect.edit", "多选编辑方法");
         sCatelogMap_Assist.put(".base", "基类相关");
