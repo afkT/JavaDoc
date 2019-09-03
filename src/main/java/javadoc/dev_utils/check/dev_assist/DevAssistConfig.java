@@ -69,6 +69,9 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
+        sIgnoreFinalMap.put("AdapterDataAssist", Utils.asList("getDataItem", "getDataItemPosition",
+                "isFirstItem", "isLastItem", "isLastItem", "clearDataList", "addData", "addData", "addAllData",
+                "addAllData", "removeData", "removeData", "removeData", "setDataList", "setDataList"));
         sIgnoreFinalMap.put("DevCallBack", Utils.asList("callback", "callback", "callback"));
         sIgnoreFinalMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick",
                 "onClick", "onLongClick", "onClick", "onLongClick"));
@@ -136,6 +139,11 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("DevBaseModel", Utils.asList("isCorrect"));
         sIgnoreUnPublicMap.put("EditTextWatcherAssist", Utils.asList("focusChange"));
         sIgnoreUnPublicMap.put("EditTextWatcherAssist.InputListener", Utils.asList("onTextChanged"));
+        sIgnoreUnPublicMap.put("IAdapterData", Utils.asList("getDataList", "getDataArrayList", "getDataCount",
+                "getDataItem", "getDataItemPosition", "getDataFirstItem", "getDataLastItem", "isFirstItem", "isLastItem",
+                "isLastItem", "clearDataList", "clearDataList", "addData", "addData", "addAllData", "addAllData",
+                "removeData", "removeData", "removeData", "setDataList", "setDataList"));
+        sIgnoreUnPublicMap.put("IAdapterNotify", Utils.asList("adapterNotifyDataSetChanged"));
         sIgnoreUnPublicMap.put("IBaseMultiSelect", Utils.asList("clearSelects", "getSelectSize",
                 "getSelects", "putSelects", "putSelects", "isSelect",
                 "isSelectValue", "unselectValue", "unselectValueAll"));
