@@ -106,6 +106,57 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法 static 修饰符
      */
     private static void initIgnoreStaticMap() {
+        sIgnoreStaticMap.put("AdapterDataAssist", Utils.asList("setAdapterNotify",
+                "getDataList", "getDataArrayList", "getDataCount", "getDataItem", "getDataItemPosition",
+                "getDataFirstItem", "getDataLastItem", "isFirstItem", "isLastItem", "isLastItem", "clearDataList",
+                "clearDataList", "addData", "addData", "addAllData", "addAllData", "removeData", "removeData",
+                "removeData", "setDataList", "setDataList", "adapterNotifyDataSetChanged"));
+        sIgnoreStaticMap.put("DevBaseEntry", Utils.asList("getEntryKey", "setEntryKey",
+                "getEntryValue", "setEntryValue", "isCorrect"));
+        sIgnoreStaticMap.put("DevBaseEvent", Utils.asList("getCode", "setCode", "getCodeStr",
+                "setCodeStr", "getValue", "setValue", "getObject", "setObject",
+                "equalsCode", "equalsCode", "equalsValue", "equalsObject"));
+        sIgnoreStaticMap.put("DevBaseVariable", Utils.asList("getVariables",
+                "clearVariables", "putVariables", "getVariablesSize", "isVariables", "isVariableValue",
+                "removeVariableValue", "removeVariableValueAll", "isVariable", "isVariable", "putVariable",
+                "putVariable", "removeVariable", "toggle", "getVariableValue", "getVariableValueConvert",
+                "getVariableValues", "getVariableValuesToReverse", "getVariableKey", "getVariableKeys", "getVariableKeysToReverse"));
+        sIgnoreStaticMap.put("DevCallBack", Utils.asList("callback", "callback", "callback", "callback"));
+        sIgnoreStaticMap.put("DevClickCallBack", Utils.asList("onClick", "onLongClick", "onClick",
+                "onLongClick", "onClick", "onLongClick", "onClick", "onLongClick"));
+        sIgnoreStaticMap.put("DevDialogCallBack", Utils.asList("onDialogNotify", "onDialogShow",
+                "onDialogDismiss", "onDialogStart", "onDialogResume", "onDialogPause", "onDialogStop", "onDialogDestroy"));
+        sIgnoreStaticMap.put("DevFilterCallback", Utils.asList("filter", "filter", "isFilter", "isFilter", "compare", "compare"));
+        sIgnoreStaticMap.put("DevItemClickCallBack", Utils.asList("onItemClick",
+                "onItemLongClick", "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick", "onItemClick", "onItemLongClick"));
+        sIgnoreStaticMap.put("EditTextWatcherAssist", Utils.asList("bindListener", "bindListener", "focusChange"));
+        sIgnoreStaticMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
+        sIgnoreStaticMap.put("IHttpEngine.Response", Utils.asList("getRequest", "getSentRequestAtMillis", "getReceivedResponseAtMillis"));
+        sIgnoreStaticMap.put("MultiSelectListAssist", Utils.asList("clearSelects",
+                "getSelectSize", "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue",
+                "unselectValue", "unselectValueAll", "isSelect", "select", "select", "select", "unselect",
+                "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse", "getSelectValue", "getSelectValueToPosition"));
+        sIgnoreStaticMap.put("MultiSelectMapAssist", Utils.asList("clearSelects",
+                "getSelectSize", "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue", "unselectValue",
+                "unselectValueAll", "isSelect", "isSelectKey", "select", "select", "unselect", "toggle", "getSelectValue",
+                "getSelectValues", "getSelectValuesToReverse", "getSelectKey", "getSelectKeys", "getSelectKeysToReverse"));
+        sIgnoreStaticMap.put("NumberControlAssist", Utils.asList("isMinNumber", "isMinNumber",
+                "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber", "isLessThanMaxNumber",
+                "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber", "setMinNumber",
+                "getMaxNumber", "setMaxNumber", "setMinMaxNumber", "getCurrentNumber", "setCurrentNumber",
+                "setCurrentNumber", "getResetNumber", "setResetNumber", "isAllowNegative", "setAllowNegative",
+                "numberChange", "addNumber", "subtractionNumber", "checkUpdate", "getNumberListener", "setNumberListener"));
+        sIgnoreStaticMap.put("PageAssist", Utils.asList("getPageNum", "getPageNum", "setPageNum",
+                "getPageNumReady", "getPageNumReady", "setPageNumReady", "getPageSize", "getPageSize",
+                "setPageSize", "getTotalRow", "getTotalRow", "setTotalRow", "isLastPage", "isLastPage",
+                "setLastPage", "isFirstPage", "isFirstPage", "isAllowNextPage", "getNextPage", "nextPage",
+                "getNextPageReady", "nextPageReady", "isLessThanPageSize", "reset"));
+        sIgnoreStaticMap.put("RequestStatusAssist", Utils.asList("getRequestType", "getRequestType",
+                "setRequestType", "equalsRequestType", "getRequestHashCode", "getRequestHashCodeRandom",
+                "equalsHashCode", "getRequestStatus", "getRequestStatus", "setRequestStatus", "isRequestNormal",
+                "isRequestNever", "isRequestIng", "isRequestSuccess", "isRequestFail", "isRequestError",
+                "setRequestNormal", "setRequestNever", "setRequestIng", "setRequestSuccess", "setRequestFail", "setRequestError"));
+        sIgnoreStaticMap.put("VariableAssist", Utils.asList("getBooleanVariable", "getObjectVariable"));
     }
 
     /**

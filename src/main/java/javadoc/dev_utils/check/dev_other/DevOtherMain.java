@@ -1,4 +1,4 @@
-package javadoc.dev_utils.check.dev_assist;
+package javadoc.dev_utils.check.dev_other;
 
 import dev.utils.common.MapUtils;
 import javadoc.Utils;
@@ -15,11 +15,11 @@ import java.util.LinkedHashMap;
  * detail: 代码读取检测分析 Main 方法
  * @author Ttt
  */
-class DevAssistMain {
+class DevOtherMain {
 
     public static void main(String[] args) {
         // 本地文件路径
-        String path = ApiConfig.DEV_ASSIST_PATH;
+        String path = ApiConfig.DEV_OTHER_PATH;
 
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;
@@ -54,7 +54,7 @@ class DevAssistMain {
         final HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = CodeAnnotationAnalyeRecord.getAnnotationRepeatLineMap();
 
         // 忽略处理
-        DevAssistConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
+        DevOtherConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
 
         // 转换 JSON 数据 - 代码注释间距检测记录
         String annotationSpaceJSON = Utils.toJsonFormat(sAnnotationSpaceMap, true);
@@ -88,7 +88,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnAnnotateMap, DevAssistConfig.sIgnoreAnnotateMap);
+        MapUtils.removeToMap(sMethodUnAnnotateMap, DevOtherConfig.sIgnoreAnnotateMap);
         // 转换 JSON 数据 - 缺少注释的方法
         String unAnnotateJSON = Utils.toJsonFormat(sMethodUnAnnotateMap, true);
         // 转换 Map 字符串
@@ -97,7 +97,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sParamUnFinalMap, DevAssistConfig.sIgnoreFinalMap);
+        MapUtils.removeToMap(sParamUnFinalMap, DevOtherConfig.sIgnoreFinalMap);
         // 转换 JSON 数据 - 缺少 final 修饰的方法(参数)
         String unFinalJSON = Utils.toJsonFormat(sParamUnFinalMap, true);
         // 转换 Map 字符串
@@ -106,7 +106,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnStaticMap, DevAssistConfig.sIgnoreStaticMap);
+        MapUtils.removeToMap(sMethodUnStaticMap, DevOtherConfig.sIgnoreStaticMap);
         // 转换 JSON 数据 - 缺少 static 修饰的方法
         String unStaticJSON = Utils.toJsonFormat(sMethodUnStaticMap, true);
         // 转换 Map 字符串
@@ -115,7 +115,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodLackParamMap, DevAssistConfig.sIgnoreParamMap);
+        MapUtils.removeToMap(sMethodLackParamMap, DevOtherConfig.sIgnoreParamMap);
         // 转换 JSON 数据 - 缺少 @param 的方法
         String lackParamJSON = Utils.toJsonFormat(sMethodLackParamMap, true);
         // 转换 Map 字符串
@@ -124,7 +124,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodLackReturnMap, DevAssistConfig.sIgnoreReturnMap);
+        MapUtils.removeToMap(sMethodLackReturnMap, DevOtherConfig.sIgnoreReturnMap);
         // 转换 JSON 数据 - 缺少 @return 的方法
         String lackReturnJSON = Utils.toJsonFormat(sMethodLackReturnMap, true);
         // 转换 Map 字符串
@@ -143,7 +143,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sMethodUnPublicMap, DevAssistConfig.sIgnoreUnPublicMap);
+        MapUtils.removeToMap(sMethodUnPublicMap, DevOtherConfig.sIgnoreUnPublicMap);
         // 转换 JSON 数据 - 非 public 方法记录
         String methodUnPublicJSON = Utils.toJsonFormat(sMethodUnPublicMap, true);
         // 转换 Map 字符串
@@ -152,7 +152,7 @@ class DevAssistMain {
         // =
 
         // 忽略处理
-        MapUtils.removeToMap(sNoModifierVariableMap, DevAssistConfig.sIgnoreModifierVariableMap);
+        MapUtils.removeToMap(sNoModifierVariableMap, DevOtherConfig.sIgnoreModifierVariableMap);
         // 转换 JSON 数据 - 无修饰符变量 记录
         String noModifierVariableJSON = Utils.toJsonFormat(sNoModifierVariableMap, true);
         // 转换 Map 字符串
