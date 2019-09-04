@@ -65,6 +65,21 @@ public final class ApiConfig {
     // DevAssist 版本号
     public static final String DEV_ASSIST_VERSION = "1.0.0";
 
+    // =============
+    // = DevOther =
+    // =============
+
+    // 包目录名
+    public static final String DEV_OTHER_PACKAGE = "dev";
+    // DevOther API 文件保存路径
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevOther/";
+    // DevOther 文件路径
+    public static final String DEV_OTHER_PATH = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/dev/";
+    // DevOther GitHub 项目文件路径
+    public static final String DEV_OTHER_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/dev";
+    // DevOther 版本号
+    public static final String DEV_OTHER_VERSION = "1.0.0";
+
 
     // ========
     // = 其他 =
