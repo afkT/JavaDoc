@@ -53,9 +53,6 @@ class DevAssistMain {
         // 代码注释重复换行记录
         final HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = CodeAnnotationAnalyeRecord.getAnnotationRepeatLineMap();
 
-        // 忽略处理
-        DevAssistConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
-
         // 转换 JSON 数据 - 代码注释间距检测记录
         String annotationSpaceJSON = Utils.toJsonFormat(sAnnotationSpaceMap, true);
 
