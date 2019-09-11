@@ -26,7 +26,7 @@ class DevAppMain {
         // 判断是否使用 ArrayList<File>
         boolean isLists = false;
         // 判断是否覆盖文件内容
-        boolean coverText = false;
+        boolean coverText = true;
 
         // =
 
