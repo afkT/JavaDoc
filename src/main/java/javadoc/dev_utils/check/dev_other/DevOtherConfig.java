@@ -57,20 +57,20 @@ final class DevOtherConfig {
      */
     private static void initIgnoreAnnotateMap() {
         sIgnoreAnnotateMap.put("AccessibilityListenerService", Utils.asList(
-                "onCreate","onDestroy"));
+                "onCreate", "onDestroy"));
         sIgnoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop","updateDiskCacheKey"));
+                "transform", "circleCrop", "updateDiskCacheKey"));
         sIgnoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop","updateDiskCacheKey"));
+                "transform", "roundCrop", "updateDiskCacheKey"));
         sIgnoreAnnotateMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreAnnotateMap.put("GlideUtils", Utils.asList(
-                "with","with","with","with","with","with"));
+                "with", "with", "with", "with", "with", "with"));
         sIgnoreAnnotateMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         sIgnoreAnnotateMap.put("NotificationService", Utils.asList(
-                "onCreate","onDestroy","onStartCommand"));
+                "onCreate", "onDestroy", "onStartCommand"));
         sIgnoreAnnotateMap.put("PhoneReceiver", Utils.asList("onReceive"));
         sIgnoreAnnotateMap.put("ScreenReceiver", Utils.asList("onReceive"));
         sIgnoreAnnotateMap.put("SmsReceiver", Utils.asList("onReceive"));
@@ -87,18 +87,18 @@ final class DevOtherConfig {
         sIgnoreFinalMap.put("AccessibilityListenerService", Utils.asList(
                 "onAccessibilityEvent"));
         sIgnoreFinalMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
-                "transform","updateDiskCacheKey","blurBitmap"));
+                "transform", "updateDiskCacheKey", "blurBitmap"));
         sIgnoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop","updateDiskCacheKey"));
+                "transform", "circleCrop", "updateDiskCacheKey"));
         sIgnoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop","updateDiskCacheKey"));
+                "transform", "roundCrop", "updateDiskCacheKey"));
         sIgnoreFinalMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreFinalMap.put("GlideUtils", Utils.asList(
-                "with","with","with","with","with","with"));
+                "with", "with", "with", "with", "with", "with"));
         sIgnoreFinalMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         sIgnoreFinalMap.put("NotificationService", Utils.asList(
-                "onNotificationPosted","onNotificationRemoved","onStartCommand"));
+                "onNotificationPosted", "onNotificationRemoved", "onStartCommand"));
         sIgnoreFinalMap.put("PhoneReceiver", Utils.asList("onReceive"));
         sIgnoreFinalMap.put("ScreenReceiver", Utils.asList("onReceive"));
         sIgnoreFinalMap.put("SmsReceiver", Utils.asList("onReceive"));
@@ -113,23 +113,23 @@ final class DevOtherConfig {
      */
     private static void initIgnoreStaticMap() {
         sIgnoreStaticMap.put("AccessibilityListenerService", Utils.asList(
-                "onAccessibilityEvent","onInterrupt","onServiceConnected","onCreate","onDestroy"));
+                "onAccessibilityEvent", "onInterrupt", "onServiceConnected", "onCreate", "onDestroy"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
-                "transform","updateDiskCacheKey","blurBitmap"));
+                "transform", "updateDiskCacheKey", "blurBitmap"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop","updateDiskCacheKey"));
+                "transform", "circleCrop", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop","updateDiskCacheKey"));
+                "transform", "roundCrop", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList(
-                "preload","preload","displayImage","displayImage","displayImageToGif",
-                "displayImageToGif","loadImageBitmap","loadImageBitmap","loadImageDrawable",
-                "loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif",
-                "cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
+                "preload", "preload", "displayImage", "displayImage", "displayImageToGif",
+                "displayImageToGif", "loadImageBitmap", "loadImageBitmap", "loadImageDrawable",
+                "loadImageDrawable", "loadImageFile", "loadImageFile", "loadImageGif", "loadImageGif",
+                "cancelDisplayTask", "cancelDisplayTask", "destroy", "pause", "resume", "stop", "start"));
         sIgnoreStaticMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("NotificationService", Utils.asList(
-                "onNotificationPosted","onNotificationRemoved","onCreate","onDestroy","onStartCommand","cancelNotification"));
+                "onNotificationPosted", "onNotificationRemoved", "onCreate", "onDestroy", "onStartCommand", "cancelNotification"));
         sIgnoreStaticMap.put("PhoneReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
@@ -142,15 +142,15 @@ final class DevOtherConfig {
      */
     private static void initIgnoreParamMap() {
         sIgnoreParamMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
-                "transform","updateDiskCacheKey","blurBitmap"));
+                "transform", "updateDiskCacheKey", "blurBitmap"));
         sIgnoreParamMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop","updateDiskCacheKey"));
+                "transform", "circleCrop", "updateDiskCacheKey"));
         sIgnoreParamMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop","updateDiskCacheKey"));
+                "transform", "roundCrop", "updateDiskCacheKey"));
         sIgnoreParamMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreParamMap.put("GlideUtils", Utils.asList(
-                "with","with","with","with","with","with"));
+                "with", "with", "with", "with", "with", "with"));
         sIgnoreParamMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         sIgnoreParamMap.put("NotificationService", Utils.asList("onStartCommand"));
         sIgnoreParamMap.put("PhoneReceiver", Utils.asList("onReceive"));
@@ -175,22 +175,22 @@ final class DevOtherConfig {
         sIgnoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
                 "transform"));
         sIgnoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop"));
+                "transform", "circleCrop"));
         sIgnoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop"));
+                "transform", "roundCrop"));
         sIgnoreUnPublicMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
                 "transform"));
         sIgnoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList(
                 "onNetworkState"));
         sIgnoreUnPublicMap.put("NotificationService.NotificationListener", Utils.asList(
-                "onServiceCreated","onServiceDestroy","onStartCommand",
-                "onNotificationPosted","onNotificationRemoved"));
+                "onServiceCreated", "onServiceDestroy", "onStartCommand",
+                "onNotificationPosted", "onNotificationRemoved"));
         sIgnoreUnPublicMap.put("PhoneReceiver.PhoneListener", Utils.asList(
                 "onPhoneStateChanged"));
         sIgnoreUnPublicMap.put("ScreenReceiver.ScreenListener", Utils.asList(
-                "screenOn","screenOff","userPresent"));
+                "screenOn", "screenOff", "userPresent"));
         sIgnoreUnPublicMap.put("TimeReceiver.TimeListener", Utils.asList(
-                "onTimeZoneChanged","onTimeChanged","onTimeTick"));
+                "onTimeZoneChanged", "onTimeChanged", "onTimeTick"));
     }
 
     // =

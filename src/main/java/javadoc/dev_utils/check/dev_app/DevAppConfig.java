@@ -304,6 +304,7 @@ final class DevAppConfig {
                 "getToastStyle", "initStyle", "initToastFilter", "setView", "show",
                 "show", "show", "show", "cancel", "filter", "handlerContent", "getThreadToastStyle",
                 "createView", "priShowToastText", "newToastText", "priShowToastView", "newToastView"));
+        sIgnoreStaticMap.put("ImageUtils.ImageType", Utils.asList("getValue"));
         sIgnoreStaticMap.put("InactivityTimerAssist", Utils.asList("onPause",
                 "onResume", "onDestroy", "start", "cancel"));
         sIgnoreStaticMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
