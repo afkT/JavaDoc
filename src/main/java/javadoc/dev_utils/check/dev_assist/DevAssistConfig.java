@@ -156,18 +156,29 @@ final class DevAssistConfig {
      * 初始化 忽略指定方法 @param 处理
      */
     private static void initIgnoreParamMap() {
-        sIgnoreParamMap.put("DevBaseEntry", Utils.asList("setEntryKey", "setEntryValue"));
-        sIgnoreParamMap.put("DevBaseEvent", Utils.asList("setCode", "setCodeStr", "setValue", "setObject"));
+        sIgnoreParamMap.put("AbstractCallBack", Utils.asList(
+                "setTag", "setValue", "setObject"));
+        sIgnoreParamMap.put("AdapterDataAssist", Utils.asList(
+                "setAdapterNotify"));
+        sIgnoreParamMap.put("DevBaseEntry", Utils.asList(
+                "setEntryKey", "setEntryValue"));
+        sIgnoreParamMap.put("DevBaseEvent", Utils.asList(
+                "setCode", "setCodeStr", "setValue", "setObject"));
         sIgnoreParamMap.put("DevBaseVariable", Utils.asList(
-                "putVariables", "removeVariableValue", "removeVariableValueAll",
-                "putVariable", "putVariable", "removeVariable", "toggle"));
-        sIgnoreParamMap.put("DevExResultCallback", Utils.asList("setExpandResult"));
-        sIgnoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
-        sIgnoreParamMap.put("IImageEngine.BitmapCallBack", Utils.asList("onResponse", "onFailure"));
-        sIgnoreParamMap.put("IImageEngine.DrawableCallBack", Utils.asList("onResponse", "onFailure"));
+                "putVariables", "removeVariableValue", "removeVariableValueAll", "putVariable",
+                "putVariable", "removeVariable", "toggle"));
+        sIgnoreParamMap.put("DevExResultCallback", Utils.asList(
+                "setExpandResult"));
+        sIgnoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList(
+                "onFocusChange"));
+        sIgnoreParamMap.put("IImageEngine.BitmapCallBack", Utils.asList(
+                "onResponse", "onFailure"));
+        sIgnoreParamMap.put("IImageEngine.DrawableCallBack", Utils.asList(
+                "onResponse", "onFailure"));
         sIgnoreParamMap.put("PageAssist", Utils.asList(
                 "setPageNum", "setPageNumReady", "setPageSize", "setTotalRow", "setLastPage"));
-        sIgnoreParamMap.put("RequestStatusAssist", Utils.asList("setRequestType", "setRequestStatus"));
+        sIgnoreParamMap.put("RequestStatusAssist", Utils.asList(
+                "setRequestType", "setRequestStatus"));
     }
 
     /**
