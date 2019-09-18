@@ -33,7 +33,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.7.8";
+    public static final String DEV_APP_VERSION = "1.7.9";
 
     // ===========
     // = DevJava =
@@ -48,7 +48,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.0.1";
+    public static final String DEV_JAVA_VERSION = "1.0.2";
 
     // =============
     // = DevAssist =
@@ -63,7 +63,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION = "1.0.1";
+    public static final String DEV_ASSIST_VERSION = "1.0.2";
 
     // =============
     // = DevOther =
@@ -77,8 +77,6 @@ public final class ApiConfig {
     public static final String DEV_OTHER_PATH = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/dev/";
     // DevOther GitHub 项目文件路径
     public static final String DEV_OTHER_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/dev";
-    // DevOther 版本号
-    public static final String DEV_OTHER_VERSION = "1.0.0";
 
 
     // ========
