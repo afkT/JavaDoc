@@ -26,19 +26,19 @@ final class DevOther_READMEMain {
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
                                          final HashMap<String, String> mapCatelog) {
-        buffer.append("\n");
-        buffer.append("## Use");
-
-        buffer.append("\n\n");
-        buffer.append("> 直接 copy 所需要的类到项目中使用");
-        buffer.append("\n");
-
         buffer.append("\n\n");
         buffer.append("## 目录结构");
 
         buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
+
+        buffer.append("\n\n");
+        buffer.append("## Use");
+
+        buffer.append("\n\n");
+        buffer.append("> 直接 copy 所需要的类到项目中使用");
+        buffer.append("\n");
 
         buffer.append("\n\n");
         buffer.append("## API");
