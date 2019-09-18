@@ -109,6 +109,17 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
 
+    // ============
+    // = DevOther =
+    // ============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatelogMap_Other = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashMap<String, String> sFilterClassMap_Other = new HashMap<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
+
     static {
         // 初始化 包名目录注释 Map
         initCatelogMap();
@@ -191,6 +202,15 @@ public final class ApiConfig {
         sCatelogMap_Assist.put(".engine.image", "Image Engine");
         sCatelogMap_Assist.put(".engine.json", "JSON Engine");
         sCatelogMap_Assist.put(".engine.log", "Log Engine");
+
+        // ============
+        // = DevOther =
+        // ============
+
+        sCatelogMap_Other.put("dev", "根目录");
+        sCatelogMap_Other.put(".other", "第三方库封装工具类");
+        sCatelogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
+        sCatelogMap_Other.put(".service", "Service 相关");
     }
 
     /**
