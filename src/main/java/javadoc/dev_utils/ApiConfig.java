@@ -285,6 +285,8 @@ public final class ApiConfig {
         sFilterMethodMap.put("CameraAssist.java", new String[]{"stopPreviewNotify",
                 "startPreviewNotify"});
 
+        sFilterMethodMap.put("ImageUtils.java", new String[]{"getValue"});
+
         sFilterMethodMap.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
 
         sFilterMethodMap.put("AsyncExecutor.java", new String[]{"doInBackground",
