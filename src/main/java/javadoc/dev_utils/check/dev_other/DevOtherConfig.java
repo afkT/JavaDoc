@@ -135,7 +135,34 @@ final class DevOtherConfig {
         sIgnoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("ViewHelper", Utils.asList(
+
+        sIgnoreStaticMap.put("DevHelper", Utils.asList("viewHelper", "devHelper",
+                "postRunnable", "postRunnable", "postRunnable", "postRunnable", "removeRunnable",
+                "startTimer", "closeTimer", "recycle", "saveBitmapToSDCardJPEG", "saveBitmapToSDCardJPEG",
+                "saveBitmapToSDCardJPEG", "saveBitmapToSDCardJPEG", "saveBitmapToSDCardPNG",
+                "saveBitmapToSDCardPNG", "saveBitmapToSDCardPNG", "saveBitmapToSDCardPNG",
+                "saveBitmapToSDCardWEBP", "saveBitmapToSDCardWEBP", "saveBitmapToSDCardWEBP",
+                "saveBitmapToSDCardWEBP", "saveBitmapToSDCard", "saveBitmapToSDCard", "addTextChangedListener",
+                "removeTextChangedListener", "setKeyListener", "setKeyListener", "setKeyListener",
+                "record", "cleanInternalCache", "cleanInternalFiles", "cleanInternalDbs", "cleanInternalDbByName",
+                "cleanInternalSp", "cleanExternalCache", "cleanCustomDir", "cleanCustomDir",
+                "cleanApplicationData", "copyText", "copyUri", "copyIntent", "notifyMediaStore",
+                "insertImageIntoMediaStore", "insertVideoIntoMediaStore", "insertIntoMediaStore",
+                "showDialog", "closeDialog", "closeDialogs", "closeDialog", "closeDialogs", "closePopupWindow",
+                "closePopupWindows", "autoCloseDialog", "autoCloseDialog", "autoClosePopupWindow",
+                "openKeyboard", "openKeyboard", "openKeyboard", "openKeyboard", "openKeyboard",
+                "openKeyboard", "closeKeyboard", "closeKeyboard", "closeKeyboard", "closeKeyboard",
+                "closeKeyBoardSpecial", "closeKeyBoardSpecial", "closeKeyBoardSpecial", "closeKeyboard",
+                "closeKeyboard", "closeKeyboard", "closeKeyboard", "closeKeyboard", "closeKeyboard",
+                "closeKeyboard", "closeKeyboard", "judgeView", "registerSoftInputChangedListener",
+                "registerSoftInputChangedListener2", "applyLanguage", "applyLanguage", "setOnClicks",
+                "setOnLongClicks", "addTouchArea", "addTouchArea", "cancelAllNotification", "cancelNotification",
+                "cancelNotification", "notifyNotification", "notifyNotification", "saveAssetsFormFile",
+                "saveRawFormFile", "setWindowSecure", "setFullScreen", "setLandscape", "setPortrait",
+                "toggleScreenOrientation", "forceGetViewSize", "vibrate", "vibrate", "cancel", "closeIO",
+                "closeIOQuietly", "getNetTime", "getNetTime", "waitForEndAsyn", "waitForEnd"));
+
+        sIgnoreStaticMap.put("ViewHelper", Utils.asList("viewHelper", "devHelper",
                 "setText", "setTexts", "setHtmlText", "setHtmlTexts", "setTextColor",
                 "setTextColors", "setTypeface", "setTextSizeByPx", "setTextSizeBySp", "setTextSizeByDp",
                 "setTextSizeByIn", "setTextSize", "setTextSizes", "clearFlags", "setBold", "setBold",
