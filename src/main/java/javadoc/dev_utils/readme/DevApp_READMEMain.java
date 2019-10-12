@@ -100,6 +100,9 @@ final class DevApp_READMEMain {
         buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
+        buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevOther/src/main/java/dev/ViewHelper.java)");
+
+        buffer.append("\n\n");
         buffer.append("## API");
 
         buffer.append("\n\n");
@@ -154,7 +157,7 @@ final class DevApp_READMEMain {
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, ApiConfig.API_FILE_NAME, buffer.toString());
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
@@ -170,7 +173,7 @@ final class DevApp_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_APP_API_FILE_SAVE_PATH + "readme_api.md");
+        resultBuffer.append("保存地址: " + ApiConfig.DEV_APP_API_FILE_SAVE_PATH + ApiConfig.API_FILE_NAME);
         resultBuffer.append("\n");
         return resultBuffer.toString();
     }

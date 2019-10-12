@@ -113,48 +113,60 @@ final class DevOtherConfig {
      */
     private static void initIgnoreStaticMap() {
         sIgnoreStaticMap.put("AccessibilityListenerService", Utils.asList(
-                "onAccessibilityEvent","onInterrupt","onServiceConnected","onCreate","onDestroy"));
+                "onAccessibilityEvent", "onInterrupt", "onServiceConnected", "onCreate", "onDestroy"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList(
-                "transform","updateDiskCacheKey","blurBitmap"));
+                "transform", "updateDiskCacheKey", "blurBitmap"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList(
-                "transform","circleCrop","updateDiskCacheKey"));
+                "transform", "circleCrop", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList(
-                "transform","roundCrop","updateDiskCacheKey"));
+                "transform", "roundCrop", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideTransformUtils.RotateTransformation", Utils.asList(
-                "transform","updateDiskCacheKey"));
+                "transform", "updateDiskCacheKey"));
         sIgnoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList(
-                "preload","preload","displayImage","displayImage","displayImageToGif",
-                "displayImageToGif","loadImageBitmap","loadImageBitmap","loadImageDrawable",
-                "loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif",
-                "cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
+                "preload", "preload", "displayImage", "displayImage", "displayImageToGif",
+                "displayImageToGif", "loadImageBitmap", "loadImageBitmap", "loadImageDrawable",
+                "loadImageDrawable", "loadImageFile", "loadImageFile", "loadImageGif", "loadImageGif",
+                "cancelDisplayTask", "cancelDisplayTask", "destroy", "pause", "resume", "stop", "start"));
         sIgnoreStaticMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("NotificationService", Utils.asList(
-                "onNotificationPosted","onNotificationRemoved","onCreate","onDestroy",
-                "onStartCommand","cancelNotification"));
+                "onNotificationPosted", "onNotificationRemoved", "onCreate", "onDestroy",
+                "onStartCommand", "cancelNotification"));
         sIgnoreStaticMap.put("PhoneReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("ViewHelper", Utils.asList(
-                "setText","setTexts","setHtmlText","setHtmlTexts","setTextColor",
-                "setTextColors","setTypeface","setTextSizeByPx","setTextSizeBySp","setTextSizeByDp",
-                "setTextSizeByIn","setTextSize","setTextSizes","clearFlags","setBold","setBold",
-                "setUnderlineText","setUnderlineText","setStrikeThruText","setStrikeThruText",
-                "setLetterSpacing","setLineSpacing","setLineSpacingAndMultiplier","setTextScaleX",
-                "setIncludeFontPadding","setText","setText","insert","insert","setMaxLength",
-                "setMaxLengthAndText","setCursorVisible","setSelectionToTop","setSelectionToBottom",
-                "setSelection","setKeyListener","setKeyListener","setKeyListener","setBackground",
-                "setBackgroundColor","setBackgroundResource","setBackgroundTintList",
-                "setBackgroundTintMode","setForeground","setForegroundGravity",
-                "setForegroundTintList","setForegroundTintMode","setImageBitmap","setImageDrawable",
-                "setImageResource","setImageMatrix","setImageTintList","setImageTintMode","setScaleType",
-                "setColorFilter","setColorFilter","setColorFilter","setColorFilter","setBackgroundResources",
-                "setBackgroundResources","setImageResources","setImageResources","setImageBitmaps","setImageBitmaps",
-                "setImageDrawables","setImageDrawables","setScaleTypes","setScaleTypes","setTag",
-                "setLayoutParams","setFocusable","setSelected","setEnabled","setClickable","setLongClickable",
-                "setVisibility","setVisibility","setVisibilitys","setVisibilitys","toggleVisibilitys",
-                "toggleVisibilitys","toggleVisibilitys","reverseVisibilitys","reverseVisibilitys",
-                "reverseVisibilitys","reverseVisibilitys","removeSelfFromParent","setLayoutGravity","setMarginLeft","setMarginLeft","setMarginTop","setMarginTop","setMarginRight","setMarginRight","setMarginBottom","setMarginBottom","setMargin","setMargin","setMargin","setMargin","setMargin","setMargin","setPaddingLeft","setPaddingLeft","setPaddingTop","setPaddingTop","setPaddingRight","setPaddingRight","setPaddingBottom","setPaddingBottom","setPadding","setPadding","setPadding","setPadding","setPadding","setPadding","setCompoundDrawablesByLeft","setCompoundDrawablesByTop","setCompoundDrawablesByRight","setCompoundDrawablesByBottom","setCompoundDrawables","setCompoundDrawablesWithIntrinsicBoundsByLeft","setCompoundDrawablesWithIntrinsicBoundsByTop","setCompoundDrawablesWithIntrinsicBoundsByRight","setCompoundDrawablesWithIntrinsicBoundsByBottom","setCompoundDrawablesWithIntrinsicBounds","setOnClicks","setOnLongClicks","addTouchArea","addTouchArea"));
+                "setText", "setTexts", "setHtmlText", "setHtmlTexts", "setTextColor",
+                "setTextColors", "setTypeface", "setTextSizeByPx", "setTextSizeBySp", "setTextSizeByDp",
+                "setTextSizeByIn", "setTextSize", "setTextSizes", "clearFlags", "setBold", "setBold",
+                "setUnderlineText", "setUnderlineText", "setStrikeThruText", "setStrikeThruText",
+                "setLetterSpacing", "setLineSpacing", "setLineSpacingAndMultiplier", "setTextScaleX",
+                "setIncludeFontPadding", "setText", "setText", "insert", "insert", "setMaxLength",
+                "setMaxLengthAndText", "setCursorVisible", "setSelectionToTop", "setSelectionToBottom",
+                "setSelection", "setKeyListener", "setKeyListener", "setKeyListener", "setBackground",
+                "setBackgroundColor", "setBackgroundResource", "setBackgroundTintList",
+                "setBackgroundTintMode", "setForeground", "setForegroundGravity",
+                "setForegroundTintList", "setForegroundTintMode", "setImageBitmap", "setImageDrawable",
+                "setImageResource", "setImageMatrix", "setImageTintList", "setImageTintMode", "setScaleType",
+                "setColorFilter", "setColorFilter", "setColorFilter", "setColorFilter", "setBackgroundResources",
+                "setBackgroundResources", "setImageResources", "setImageResources", "setImageBitmaps", "setImageBitmaps",
+                "setImageDrawables", "setImageDrawables", "setScaleTypes", "setScaleTypes", "setTag",
+                "setLayoutParams", "setFocusable", "setSelected", "setEnabled", "setClickable", "setLongClickable",
+                "setVisibility", "setVisibility", "setVisibilitys", "setVisibilitys", "toggleVisibilitys",
+                "toggleVisibilitys", "toggleVisibilitys", "reverseVisibilitys", "reverseVisibilitys",
+                "reverseVisibilitys", "reverseVisibilitys", "removeSelfFromParent", "setLayoutGravity",
+                "setMarginLeft", "setMarginLeft", "setMarginTop", "setMarginTop", "setMarginRight", "setMarginRight",
+                "setMarginBottom", "setMarginBottom", "setMargin", "setMargin", "setMargin", "setMargin", "setMargin",
+                "setMargin", "setPaddingLeft", "setPaddingLeft", "setPaddingTop", "setPaddingTop", "setPaddingRight",
+                "setPaddingRight", "setPaddingBottom", "setPaddingBottom", "setPadding", "setPadding", "setPadding",
+                "setPadding", "setPadding", "setPadding", "setCompoundDrawablesByLeft", "setCompoundDrawablesByTop",
+                "setCompoundDrawablesByRight", "setCompoundDrawablesByBottom", "setCompoundDrawables",
+                "setCompoundDrawablesWithIntrinsicBoundsByLeft", "setCompoundDrawablesWithIntrinsicBoundsByTop",
+                "setCompoundDrawablesWithIntrinsicBoundsByRight", "setCompoundDrawablesWithIntrinsicBoundsByBottom",
+                "setCompoundDrawablesWithIntrinsicBounds", "setOnClicks", "setOnLongClicks", "addTouchArea", "addTouchArea",
+                "setHint", "setHintTextColor", "setHintTextColor", "setHintTextColors", "setHintTextColors", "setLines", "setMaxLines",
+                "setEllipsize", "setAutoLinkMask", "setTextGravity", "addTextChangedListener", "removeTextChangedListener",
+                "postRunnable", "postRunnable", "postRunnable", "postRunnable", "removeRunnable"));
         sIgnoreStaticMap.put("WifiReceiver", Utils.asList("onReceive"));
     }
 

@@ -122,7 +122,7 @@ final class DevJava_READMEMain {
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_api.md", buffer.toString());
+        FileUtils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, ApiConfig.API_FILE_NAME, buffer.toString());
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());
@@ -138,7 +138,7 @@ final class DevJava_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH + "readme_api.md");
+        resultBuffer.append("保存地址: " + ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH + ApiConfig.API_FILE_NAME);
         resultBuffer.append("\n");
         return resultBuffer.toString();
     }

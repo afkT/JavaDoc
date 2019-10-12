@@ -19,6 +19,8 @@ public final class ApiConfig {
     public static final String DEV_PACKAGE = "dev.utils";
     // 作者 Github 地址
     public static final String GITHUB_AUTHOR_URL = "https://github.com/afkT";
+    // 保存文件名
+    public static final String API_FILE_NAME = "README.md";
 
     // ==========
     // = DevApp =
