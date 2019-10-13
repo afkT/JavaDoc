@@ -179,6 +179,7 @@ final class DevOtherConfig {
                 "setBackgroundResources", "setImageResources", "setImageResources", "setImageBitmaps", "setImageBitmaps",
                 "setImageDrawables", "setImageDrawables", "setScaleTypes", "setScaleTypes", "setTag",
                 "setLayoutParams", "setFocusable", "setSelected", "setEnabled", "setClickable", "setLongClickable",
+                "setAdjustViewBounds", "setMaxHeight", "setMaxWidth", "setMinimumHeight", "setMinimumWidth",
                 "setVisibility", "setVisibility", "setVisibilitys", "setVisibilitys", "toggleVisibilitys",
                 "toggleVisibilitys", "toggleVisibilitys", "reverseVisibilitys", "reverseVisibilitys",
                 "reverseVisibilitys", "reverseVisibilitys", "removeSelfFromParent", "setLayoutGravity",
