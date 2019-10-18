@@ -100,6 +100,9 @@ final class DevApp_READMEMain {
         buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
+
+        buffer.append("\n\n");
         buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevOther/src/main/java/dev/ViewHelper.java)");
 
         buffer.append("\n\n");
