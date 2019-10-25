@@ -744,6 +744,10 @@ final class DevAppConfig {
                 "setGateway", "setIpAddress", "setStaticIpConfig", "getField", "getDeclaredField",
                 "setEnumField", "setValueField"));
 
+        sIgnoreUnPublicMap.put("CapturePictureUtils", Utils.asList(
+                "getScreenWidthHeight", "getStatusBarHeight", "getMultiple"));
+        sIgnoreUnPublicMap.put("ViewUtils", Utils.asList("getMultiple"));
+
         // ==========
         // = Common =
         // ==========

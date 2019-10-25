@@ -260,9 +260,6 @@ final class DevOtherConfig {
                 "screenOn", "screenOff", "userPresent"));
         sIgnoreUnPublicMap.put("TimeReceiver.TimeListener", Utils.asList(
                 "onTimeZoneChanged", "onTimeChanged", "onTimeTick"));
-        sIgnoreUnPublicMap.put("CapturePictureUtils", Utils.asList(
-                "getScreenWidthHeight", "getStatusBarHeight", "getMultiple"));
-        sIgnoreUnPublicMap.put("ViewUtils", Utils.asList("getMultiple"));
     }
 
     // =
