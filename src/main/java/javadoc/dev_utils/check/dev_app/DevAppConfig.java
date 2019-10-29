@@ -620,6 +620,11 @@ final class DevAppConfig {
                 "stopPreviewNotify", "startPreviewNotify"));
         sIgnoreUnPublicMap.put("CameraSizeAssist", Utils.asList(
                 "calcPreviewSize", "calcPictureSize", "calcVideoSize"));
+        sIgnoreUnPublicMap.put("CapturePictureUtils", Utils.asList(
+                "getScreenWidthHeight", "getStatusBarHeight", "getMultiple",
+                "snapshotByRecyclerView_GridLayoutManager", "snapshotByRecyclerView_LinearLayoutManager",
+                "snapshotByRecyclerView_StaggeredGridLayoutManager", "canvasBitmap",
+                "getMinimumIndex", "getMaximumIndex", "measureView", "measureView"));
         sIgnoreUnPublicMap.put("CleanUtils", Utils.asList(
                 "deleteFilesInDir", "deleteDir", "getFileByPath", "isSDCardEnable"));
         sIgnoreUnPublicMap.put("DBUtils", Utils.asList("isSDCardEnable"));
@@ -736,6 +741,7 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("Utils", Utils.asList("handlerDeviceInfo",
                 "saveFile", "getFileByPath", "createFolder", "createFolder", "getThrowableStackTrace",
                 "getDateNow", "getDeviceInfo", "handlerDeviceInfo", "getAppVersion"));
+        sIgnoreUnPublicMap.put("ViewUtils", Utils.asList("getMultiple"));
         sIgnoreUnPublicMap.put("WifiHotUtils", Utils.asList("intToString"));
         sIgnoreUnPublicMap.put("WifiHotUtils.OnWifiAPListener", Utils.asList("onStarted",
                 "onStopped", "onFailed"));
@@ -743,10 +749,6 @@ final class DevAppConfig {
                 "setStaticWifiConfig", "setStaticWifiConfig", "inetAddressToInt", "setDNS",
                 "setGateway", "setIpAddress", "setStaticIpConfig", "getField", "getDeclaredField",
                 "setEnumField", "setValueField"));
-
-        sIgnoreUnPublicMap.put("CapturePictureUtils", Utils.asList(
-                "getScreenWidthHeight", "getStatusBarHeight", "getMultiple"));
-        sIgnoreUnPublicMap.put("ViewUtils", Utils.asList("getMultiple"));
 
         // ==========
         // = Common =
