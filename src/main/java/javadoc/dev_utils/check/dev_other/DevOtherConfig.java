@@ -202,7 +202,7 @@ final class DevOtherConfig {
                 "setCompoundDrawablesWithIntrinsicBoundsByRight", "setCompoundDrawablesWithIntrinsicBoundsByBottom",
                 "setCompoundDrawablesWithIntrinsicBounds", "setWidthHeight", "setWidth", "setHeight", "addRule",
                 "addRule", "removeRule", "addRules", "addRules", "removeRules", "setOnClicks", "setOnLongClicks",
-                "addTouchArea", "addTouchArea"));
+                "addTouchArea", "addTouchArea", "setAnimation", "clearAnimation", "startAnimation"));
         sIgnoreStaticMap.put("WifiReceiver", Utils.asList("onReceive"));
     }
 
