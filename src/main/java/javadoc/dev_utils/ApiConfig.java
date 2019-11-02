@@ -160,6 +160,7 @@ public final class ApiConfig {
 
         sCatelogMap.put(".app.cache", "缓存工具类");
         sCatelogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
+        sCatelogMap.put(".app.helper", "功能 Helper 辅助类");
         sCatelogMap.put(".app.image", "图片相关处理");
         sCatelogMap.put(".app.info", "APP 信息、PackageInfo 等");
         sCatelogMap.put(".app.logger", "日志库 DevLogger");
