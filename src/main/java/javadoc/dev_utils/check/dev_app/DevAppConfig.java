@@ -443,7 +443,8 @@ final class DevAppConfig {
                 "cancelNotification", "cancelNotification", "notifyNotification", "notifyNotification",
                 "saveAssetsFormFile", "saveRawFormFile", "setWindowSecure", "setFullScreen", "setLandscape",
                 "setPortrait", "toggleScreenOrientation", "forceGetViewSize", "vibrate", "vibrate",
-                "cancel", "closeIO", "closeIOQuietly", "getNetTime", "getNetTime", "waitForEndAsyn", "waitForEnd"));
+                "cancel", "closeIO", "closeIOQuietly", "getNetTime", "getNetTime", "waitForEndAsyn",
+                "waitForEnd", "setAnimationListener"));
         sIgnoreStaticMap.put("ViewHelper", Utils.asList("viewHelper", "devHelper",
                 "postRunnable", "postRunnable", "postRunnable", "postRunnable", "removeRunnable",
                 "setHint", "setText", "setTexts", "setHtmlText", "setHtmlTexts", "setHintTextColor",
@@ -484,7 +485,8 @@ final class DevAppConfig {
                 "setCompoundDrawablesWithIntrinsicBoundsByRight", "setCompoundDrawablesWithIntrinsicBoundsByBottom",
                 "setCompoundDrawablesWithIntrinsicBounds", "setWidthHeight", "setWidth", "setHeight", "addRule",
                 "addRule", "removeRule", "addRules", "addRules", "removeRules", "setOnClicks", "setOnLongClicks",
-                "addTouchArea", "addTouchArea", "setAnimation", "clearAnimation", "startAnimation"));
+                "addTouchArea", "addTouchArea", "setAnimation", "clearAnimation", "startAnimation",
+                "requestLayout", "requestFocus", "clearFocus", "requestLayoutParent", "setFocusableInTouchMode"));
         sIgnoreStaticMap.put("WifiHotUtils", Utils.asList("stratWifiAp", "closeWifiAp",
                 "getWifiApState", "getWifiApConfiguration", "setWifiApConfiguration",
                 "isOpenWifiAp", "closeWifiApCheck", "isConnectHot", "getHotspotServiceIp",
