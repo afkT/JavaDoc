@@ -487,7 +487,11 @@ final class DevAppConfig {
                 "addRule", "removeRule", "addRules", "addRules", "removeRules", "setOnClicks", "setOnLongClicks",
                 "addTouchArea", "addTouchArea", "setAnimation", "clearAnimation", "startAnimation",
                 "requestLayout", "requestFocus", "clearFocus", "requestLayoutParent", "setFocusableInTouchMode",
-                "setTransformationMethod", "setTransformationMethod", "setTransformationMethod", "scrollTo", "scrollBy"));
+                "setTransformationMethod", "setTransformationMethod", "setTransformationMethod", "scrollTo", "scrollBy",
+                "setDescendantFocusability", "setOverScrollMode", "setHorizontalScrollBarEnabled",
+                "setVerticalScrollBarEnabled", "smoothScrollToPosition", "scrollToPosition", "smoothScrollToTop",
+                "scrollToTop", "smoothScrollToBottom", "scrollToBottom", "smoothScrollTo", "smoothScrollBy", "fullScroll"));
+
         sIgnoreStaticMap.put("WifiHotUtils", Utils.asList("stratWifiAp", "closeWifiAp",
                 "getWifiApState", "getWifiApConfiguration", "setWifiApConfiguration",
                 "isOpenWifiAp", "closeWifiApCheck", "isConnectHot", "getHotspotServiceIp",
