@@ -486,7 +486,8 @@ final class DevAppConfig {
                 "setCompoundDrawablesWithIntrinsicBounds", "setWidthHeight", "setWidth", "setHeight", "addRule",
                 "addRule", "removeRule", "addRules", "addRules", "removeRules", "setOnClicks", "setOnLongClicks",
                 "addTouchArea", "addTouchArea", "setAnimation", "clearAnimation", "startAnimation",
-                "requestLayout", "requestFocus", "clearFocus", "requestLayoutParent", "setFocusableInTouchMode"));
+                "requestLayout", "requestFocus", "clearFocus", "requestLayoutParent", "setFocusableInTouchMode",
+                "setTransformationMethod", "setTransformationMethod", "setTransformationMethod", "scrollTo", "scrollBy"));
         sIgnoreStaticMap.put("WifiHotUtils", Utils.asList("stratWifiAp", "closeWifiAp",
                 "getWifiApState", "getWifiApConfiguration", "setWifiApConfiguration",
                 "isOpenWifiAp", "closeWifiApCheck", "isConnectHot", "getHotspotServiceIp",
