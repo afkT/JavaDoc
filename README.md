@@ -13,7 +13,7 @@
 
 #### 使用演示类 [JavaDocMain](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api/JavaDocMain.java) 介绍了使用方法，以及可获取信息
 
-#### 项目类结构 - [包目录](https://github.com/afkT/JavaDoc/tree/master/src/main/java/javadoc/api)
+#### 项目类结构 - [包目录](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api)
 
 - Class 信息读取类（[JavaDocReader](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api/JavaDocReader.java)）：核心类，Class 信息都通过该类 API 读取
 
@@ -31,11 +31,11 @@
 
 # DevUtils API 生成
 
-#### 项目类结构 - [包目录](https://github.com/afkT/JavaDoc/tree/master/src/main/java/javadoc/dev_utils)
+#### 项目类结构 - [包目录](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils)
 
-- DevUtils API 生成实现代码（[API Generate](https://github.com/afkT/JavaDoc/tree/master/src/main/java/javadoc/dev_utils/assist)）：该包下的类，有各自的作用主要用于生成 DevUtils API 文档
+- DevUtils API 生成实现代码（[API Generate](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/assist)）：该包下的类，有各自的作用主要用于生成 DevUtils API 文档
 
-- DevUtils 代码规范检测（[Code Checker](https://github.com/afkT/JavaDoc/tree/master/src/main/java/javadoc/dev_utils/check)）：该包下的类，主要检测是否缺少注释、@param、@return、重复换行等代码，并且支持注释间距检测覆盖操作
+- DevUtils 代码规范检测（[Code Checker](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/check)）：该包下的类，主要检测是否缺少注释、@param、@return、重复换行等代码，并且支持注释间距检测覆盖操作
 
 - API 生成配置信息（[API Config](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/ApiConfig.java)）：配置生成 API 相关信息，以及忽略指定类、方法的配置等
 
