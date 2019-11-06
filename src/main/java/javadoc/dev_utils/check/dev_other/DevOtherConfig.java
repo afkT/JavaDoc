@@ -136,6 +136,15 @@ final class DevOtherConfig {
         sIgnoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
         sIgnoreStaticMap.put("WifiReceiver", Utils.asList("onReceive"));
+        sIgnoreStaticMap.put("PictureSelectorUtils", Utils.asList("openGallery", "openGallery"));
+        sIgnoreStaticMap.put("PictureSelectorUtils.PicConfig", Utils.asList(
+                "getMimeType", "setMimeType", "getSelectionMode", "setSelectionMode",
+                "isCamera", "setCamera", "isCrop", "setCrop", "isCircleCrop", "setCircleCrop",
+                "isCompress", "setCompress", "getMinimumCompressSize", "setMinimumCompressSize",
+                "getWithAspectRatio", "setWithAspectRatio", "isGif", "setGif", "getImageSpanCount",
+                "setImageSpanCount", "getMinSelectNum", "setMinSelectNum", "getMaxSelectNum",
+                "setMaxSelectNum", "getLocalMedia", "setLocalMedia", "getCameraSavePath",
+                "setCameraSavePath", "getCompressSavePath", "setCompressSavePath", "clone", "set"));
     }
 
     /**
