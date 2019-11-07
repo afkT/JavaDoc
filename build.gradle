@@ -22,5 +22,5 @@ dependencies {
     // Gson 解析
     compile 'com.google.code.gson:gson:2.8.2'
     // DevJava
-    compile 'com.afkt:DevJava:1.0.0'
+    compile 'com.afkt:DevJava:1.0.5'
 }
