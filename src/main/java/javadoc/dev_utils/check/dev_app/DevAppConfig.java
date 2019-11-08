@@ -69,6 +69,7 @@ final class DevAppConfig {
                 Utils.asList("onActivityCreated", "onActivityStarted",
                         "onActivityResumed", "onActivityPaused", "onActivityStopped",
                         "onActivitySaveInstanceState", "onActivityDestroyed"));
+        sIgnoreAnnotateMap.put("DevUtils.FileProviderDevApp", Utils.asList("onCreate"));
         sIgnoreAnnotateMap.put("JCLogUtils", Utils.asList("d", "e", "e", "e",
                 "i", "xml", "dTag", "eTag", "eTag", "eTag", "iTag", "xmlTag"));
         sIgnoreAnnotateMap.put("LogPrintUtils", Utils.asList("d", "e", "e",
@@ -221,6 +222,7 @@ final class DevAppConfig {
                 "removeAllOnAppStatusChangedListener", "addOnActivityDestroyedListener",
                 "removeOnActivityDestroyedListener", "removeAllOnActivityDestroyedListener",
                 "postStatus", "consumeOnActivityDestroyedListener"));
+        sIgnoreStaticMap.put("DevUtils.FileProviderDevApp", Utils.asList("onCreate"));
 
         // =======
         // = APP =
