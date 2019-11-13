@@ -539,6 +539,10 @@ final class DevAppConfig {
         sIgnoreStaticMap.put("TimeCounter", Utils.asList("start",
                 "durationRestart", "duration", "getStartTime"));
         sIgnoreStaticMap.put("TimeKeeper", Utils.asList("waitForEndAsyn", "waitForEnd"));
+        sIgnoreStaticMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList(
+                "put","get","create","newInstance","newInstance"));
+        sIgnoreStaticMap.put("MapUtils.ArrayWithTypeToken", Utils.asList(
+                "put","get","create","newInstance","newInstance"));
     }
 
     /**
@@ -879,6 +883,13 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("ValidatorUtils", Utils.asList("isEmpty"));
         sIgnoreUnPublicMap.put("ZipUtils", Utils.asList("zipFile", "unzipChildFile",
                 "closeIOQuietly", "getFileByPath", "createOrExistsDir", "createOrExistsFile", "isSpace"));
+        sIgnoreUnPublicMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList(
+                "newInstance","newInstance"));
+        sIgnoreUnPublicMap.put("FieldUtils", Utils.asList("getClass"));
+        sIgnoreUnPublicMap.put("MapUtils", Utils.asList("toArrayT"));
+        sIgnoreUnPublicMap.put("MapUtils.ArrayWithTypeToken", Utils.asList(
+                "newInstance","newInstance"));
+
 
     }
 
