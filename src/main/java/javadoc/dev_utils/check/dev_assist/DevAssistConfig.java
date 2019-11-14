@@ -28,6 +28,8 @@ final class DevAssistConfig {
     protected static final HashMap<String, ArrayList<String>> sIgnoreUnPublicMap = new HashMap<>();
     // 忽略无修饰符变量 处理
     protected static final HashMap<String, ArrayList<String>> sIgnoreModifierVariableMap = new HashMap<>();
+    // 忽略指定方法 return void 处理
+    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnVoidMap = new HashMap<>();
 
     // ==========
     // = 初始化 =
@@ -48,6 +50,8 @@ final class DevAssistConfig {
         initIgnoreUnPublicMap();
         // 初始化 忽略无修饰符变量 处理
         initIgnoreModifierVariableMap();
+        // 初始化 忽略指定方法 return void 处理
+        initIgnoreReturnVoidMap();
     }
 
     // =
@@ -244,5 +248,13 @@ final class DevAssistConfig {
      * 初始化 忽略无修饰符变量 处理
      */
     private static void initIgnoreModifierVariableMap() {
+    }
+
+    // =
+
+    /**
+     * 初始化 忽略指定方法 return void 处理
+     */
+    private static void initIgnoreReturnVoidMap() {
     }
 }

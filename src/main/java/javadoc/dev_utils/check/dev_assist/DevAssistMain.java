@@ -159,6 +159,15 @@ class DevAssistMain {
 
         // =
 
+        // 忽略处理
+        MapUtils.removeToMap(sMethodReturnVoidMap, DevAssistConfig.sIgnoreReturnVoidMap);
+        // 转换 JSON 数据 - 方法返回值 void 记录
+        String methodReturnVoidJSON = Utils.toJsonFormat(sMethodReturnVoidMap, true);
+        // 转换 Map 字符串
+        String methodReturnVoidGenerateMapString = Utils.generateMapString(sMethodReturnVoidMap, "sIgnoreReturnVoidMap");
+
+        // =
+
         // ============
         // = 特殊处理 =
         // ============
@@ -175,6 +184,7 @@ class DevAssistMain {
         printMap.put("8.非 public 方法记录", sMethodUnPublicMap);
         printMap.put("8.无修饰符变量记录", sNoModifierVariableMap);
         printMap.put("9.代码注释重复换行记录", sAnnotationRepeatLineMap);
+//        printMap.put("10.方法返回值 void 记录", sMethodReturnVoidMap);
 
         // 转换 JSON 数据
         String mapJSON = Utils.toJsonFormat(printMap, true);

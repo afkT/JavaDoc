@@ -169,6 +169,15 @@ class DevAppMain {
 
         // =
 
+        // 忽略处理
+        MapUtils.removeToMap(sMethodReturnVoidMap, DevAppConfig.sIgnoreReturnVoidMap);
+        // 转换 JSON 数据 - 方法返回值 void 记录
+        String methodReturnVoidJSON = Utils.toJsonFormat(sMethodReturnVoidMap, true);
+        // 转换 Map 字符串
+        String methodReturnVoidGenerateMapString = Utils.generateMapString(sMethodReturnVoidMap, "sIgnoreReturnVoidMap");
+
+        // =
+
         // 统一拼接打印数据
         LinkedHashMap<String, HashMap<String, ArrayList<String>>> printMap = new LinkedHashMap<>();
         printMap.put("1.缺少注释的方法", sMethodUnAnnotateMap);
@@ -181,6 +190,7 @@ class DevAppMain {
         printMap.put("8.非 public 方法记录", sMethodUnPublicMap);
         printMap.put("8.无修饰符变量记录", sNoModifierVariableMap);
         printMap.put("9.代码注释重复换行记录", sAnnotationRepeatLineMap);
+//        printMap.put("10.方法返回值 void 记录", sMethodReturnVoidMap);
 
         // 转换 JSON 数据
         String mapJSON = Utils.toJsonFormat(printMap, true);

@@ -28,6 +28,8 @@ final class DevAppConfig {
     protected static final HashMap<String, ArrayList<String>> sIgnoreUnPublicMap = new HashMap<>();
     // 忽略无修饰符变量 处理
     protected static final HashMap<String, ArrayList<String>> sIgnoreModifierVariableMap = new HashMap<>();
+    // 忽略指定方法 return void 处理
+    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnVoidMap = new HashMap<>();
 
     // ==========
     // = 初始化 =
@@ -48,6 +50,8 @@ final class DevAppConfig {
         initIgnoreUnPublicMap();
         // 初始化 忽略无修饰符变量 处理
         initIgnoreModifierVariableMap();
+        // 初始化 忽略指定方法 return void 处理
+        initIgnoreReturnVoidMap();
     }
 
     // =
@@ -924,5 +928,13 @@ final class DevAppConfig {
         // 以下类无需处理, 直接移除
         map.remove("AliasMethod.java");
         map.remove("Base64.java");
+    }
+
+    // =
+
+    /**
+     * 初始化 忽略指定方法 return void 处理
+     */
+    private static void initIgnoreReturnVoidMap() {
     }
 }
