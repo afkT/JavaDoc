@@ -38,11 +38,9 @@ class DevAppMain {
         if (isLists) {
             final ArrayList<File> listFiles = new ArrayList<>();
 //            // 根目录三个工具类
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "DevUtils.java"));
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "utils/JCLogUtils.java"));
-//            listFiles.add(new File(ApiConfig.DEV_PATH + "utils/LogPrintUtils.java"));
-
-//            listFiles.add(new File(path + "AppUtils.java"));
+//            listFiles.add(new File(ApiConfig.DEV_APP_PATH + "DevUtils.java"));
+//            listFiles.add(new File(ApiConfig.DEV_APP_PATH + "utils/JCLogUtils.java"));
+//            listFiles.add(new File(ApiConfig.DEV_APP_PATH + "utils/LogPrintUtils.java"));
 
             // 检测代码规范
             lists = CodeAnalyeReader.codeAnalye(listFiles);

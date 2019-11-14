@@ -307,6 +307,8 @@ public final class CodeAnalyeReader {
                                 // 判断是否存在 @return, 存在则记录 => 属于 void 并不需要增加 @return
                                 if (methodDocumentation.indexOf("@return") != -1) {
                                     MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多余 @return");
+                                } else { // 方法为 void
+//                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - void");
                                 }
                             }
                         }
