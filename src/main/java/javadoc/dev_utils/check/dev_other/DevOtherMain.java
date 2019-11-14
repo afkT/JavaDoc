@@ -81,6 +81,8 @@ class DevOtherMain {
         final HashMap<String, ArrayList<String>> sMethodUnPublicMap = lists.get(7);
         // 无修饰符变量 记录
         final HashMap<String, ArrayList<String>> sNoModifierVariableMap = lists.get(8);
+        // 方法返回值 void 记录
+        final HashMap<String, ArrayList<String>> sMethodReturnVoidMap = lists.get(9);
 
         // =
 

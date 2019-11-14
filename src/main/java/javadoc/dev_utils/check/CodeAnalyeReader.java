@@ -58,6 +58,9 @@ public final class CodeAnalyeReader {
     // 无修饰符变量 记录
     private static final HashMap<String, ArrayList<String>> sNoModifierVariableMap = new HashMap<>();
 
+    // 方法返回值 void 记录
+    private static final HashMap<String, ArrayList<String>> sMethodReturnVoidMap = new HashMap<>();
+
     /**
      * 代码分析检测
      * @param path 文件夹路径
@@ -86,6 +89,7 @@ public final class CodeAnalyeReader {
         lists.add(sMethodUnAnnotateReturnMap); // 方法存在 @return 但缺少注释记录
         lists.add(sMethodUnPublicMap); // 非 public 方法记录
         lists.add(sNoModifierVariableMap); // 无修饰符变量 记录
+        lists.add(sMethodReturnVoidMap); // 方法返回值 void 记录
         return lists;
     }
 
@@ -308,7 +312,7 @@ public final class CodeAnalyeReader {
                                 if (methodDocumentation.indexOf("@return") != -1) {
                                     MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多余 @return");
                                 } else { // 方法为 void
-//                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - void");
+                                    MapUtils.putToList(sMethodReturnVoidMap, className, methodName + " - void");
                                 }
                             }
                         }
