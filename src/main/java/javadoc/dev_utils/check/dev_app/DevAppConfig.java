@@ -678,6 +678,7 @@ final class DevAppConfig {
                 "getFileByPath", "getFilePathCreateFolder", "createFolder", "createFolder",
                 "getThrowableStackTrace", "getDateNow", "getDeviceInfo", "handlerDeviceInfo",
                 "getAppVersion"));
+        sIgnoreUnPublicMap.put("AnalysisRecordUtils.CallBack", Utils.asList("callback"));
         sIgnoreUnPublicMap.put("AppCommonUtils", Utils.asList("getDeviceInfo",
                 "getDeviceInfo", "handlerDeviceInfo", "getAppVersion", "getPackageName"));
         sIgnoreUnPublicMap.put("ApkInfoItem", Utils.asList("obtain"));
