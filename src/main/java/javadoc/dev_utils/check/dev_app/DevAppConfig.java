@@ -678,6 +678,8 @@ final class DevAppConfig {
                 "getFileByPath", "getFilePathCreateFolder", "createFolder", "createFolder",
                 "getThrowableStackTrace", "getDateNow", "getDeviceInfo", "handlerDeviceInfo",
                 "getAppVersion"));
+        sIgnoreUnPublicMap.put("AppCommonUtils", Utils.asList("getDeviceInfo",
+                "getDeviceInfo", "handlerDeviceInfo", "getAppVersion", "getPackageName"));
         sIgnoreUnPublicMap.put("ApkInfoItem", Utils.asList("obtain"));
         sIgnoreUnPublicMap.put("AppInfoBean", Utils.asList("obtain"));
         sIgnoreUnPublicMap.put("AppInfoItem", Utils.asList("obtain"));
@@ -728,10 +730,6 @@ final class DevAppConfig {
                 "getMacAddressByNetworkInterface", "getMacAddressByInetAddress",
                 "getInetAddress", "getMacAddressByFile"));
         sIgnoreUnPublicMap.put("DialogUtils", Utils.asList("isEmpty"));
-        sIgnoreUnPublicMap.put("FileRecordUtils", Utils.asList("handlerDeviceInfo",
-                "saveFile", "getFileByPath", "createFolder", "createFolder",
-                "getThrowableStackTrace", "getDateNow", "getDeviceInfo",
-                "handlerDeviceInfo", "getAppVersion"));
         sIgnoreUnPublicMap.put("HandlerUtils.OnEndListener", Utils.asList("onEnd"));
         sIgnoreUnPublicMap.put("HtmlUtils", Utils.asList("isEmpty", "replaceStr"));
         sIgnoreUnPublicMap.put("IPreference", Utils.asList("put",
@@ -890,6 +888,10 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList(
                 "newInstance","newInstance"));
         sIgnoreUnPublicMap.put("FieldUtils", Utils.asList("getClass"));
+        sIgnoreUnPublicMap.put("FileRecordUtils", Utils.asList("isEmpty",
+                "saveFile", "getFileByPath", "createFolder", "createFolder",
+                "getThrowableStackTrace", "getDateNow"));
+        sIgnoreUnPublicMap.put("FileRecordUtils.CallBack", Utils.asList("callback"));
         sIgnoreUnPublicMap.put("MapUtils", Utils.asList("toArrayT"));
         sIgnoreUnPublicMap.put("MapUtils.ArrayWithTypeToken", Utils.asList(
                 "newInstance","newInstance"));

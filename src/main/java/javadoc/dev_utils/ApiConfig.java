@@ -334,6 +334,7 @@ public final class ApiConfig {
                 new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
 
         sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace"});
+        sFilterMethodMap.put("FileRecordUtils.java", new String[]{"callback"});
 
         sFilterMethodMap.put("HttpURLConnectionUtils.java",
                 new String[]{"onResponse", "onFail"});
