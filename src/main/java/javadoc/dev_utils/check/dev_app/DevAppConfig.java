@@ -65,20 +65,21 @@ final class DevAppConfig {
         // = 根目录三个工具类 =
         // ====================
 
-        sIgnoreAnnotateMap.put("DevUtils.AbstractActivityLifecycle",
-                Utils.asList("onActivityCreated", "onActivityStarted",
-                        "onActivityResumed", "onActivityPaused", "onActivityStopped",
-                        "onActivitySaveInstanceState", "onActivityDestroyed"));
-        sIgnoreAnnotateMap.put("DevUtils.ActivityLifecycleImpl",
-                Utils.asList("onActivityCreated", "onActivityStarted",
-                        "onActivityResumed", "onActivityPaused", "onActivityStopped",
-                        "onActivitySaveInstanceState", "onActivityDestroyed"));
-        sIgnoreAnnotateMap.put("DevUtils.FileProviderDevApp", Utils.asList("onCreate"));
-        sIgnoreAnnotateMap.put("JCLogUtils", Utils.asList("d", "e", "e", "e",
-                "i", "xml", "dTag", "eTag", "eTag", "eTag", "iTag", "xmlTag"));
-        sIgnoreAnnotateMap.put("LogPrintUtils", Utils.asList("d", "e", "e",
-                "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
-                "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
+        sIgnoreAnnotateMap.put("DevUtils.AbstractActivityLifecycle", Utils.asList(
+                "onActivityCreated", "onActivityStarted", "onActivityResumed",
+                "onActivityPaused", "onActivityStopped", "onActivitySaveInstanceState",
+                "onActivityDestroyed"));
+        sIgnoreAnnotateMap.put("DevUtils.ActivityLifecycleImpl", Utils.asList(
+                "onActivityCreated", "onActivityStarted", "onActivityResumed",
+                "onActivityPaused", "onActivityStopped", "onActivitySaveInstanceState",
+                "onActivityDestroyed"));
+        sIgnoreAnnotateMap.put("DevUtils.FileProviderDevApp", Utils.asList(
+                "onCreate"));
+        sIgnoreAnnotateMap.put("JCLogUtils", Utils.asList(
+                "d", "e", "e", "e", "i", "xml", "dTag", "eTag", "eTag", "eTag", "iTag", "xmlTag"));
+        sIgnoreAnnotateMap.put("LogPrintUtils", Utils.asList(
+                "d", "e", "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag",
+                "eTag", "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
 
         // =======
         // = APP =
@@ -141,10 +142,10 @@ final class DevAppConfig {
         // = 根目录三个工具类 =
         // ====================
 
-        sIgnoreFinalMap.put("DevUtils.ActivityLifecycleImpl",
-                Utils.asList("onActivityCreated", "onActivityStarted",
-                        "onActivityResumed", "onActivityPaused", "onActivityStopped",
-                        "onActivitySaveInstanceState", "onActivityDestroyed"));
+        sIgnoreFinalMap.put("DevUtils.ActivityLifecycleImpl", Utils.asList(
+                "onActivityCreated", "onActivityStarted", "onActivityResumed",
+                "onActivityPaused", "onActivityStopped", "onActivitySaveInstanceState",
+                "onActivityDestroyed"));
 
         // =======
         // = APP =
@@ -222,11 +223,13 @@ final class DevAppConfig {
                 "onActivityPaused", "onActivityStopped", "onActivitySaveInstanceState",
                 "onActivityDestroyed", "setTopActivity", "getTopActivityByReflect",
                 "getTopActivity", "isTopActivity", "isTopActivity", "isBackground",
-                "getActivityCount", "addOnAppStatusChangedListener", "removeOnAppStatusChangedListener",
-                "removeAllOnAppStatusChangedListener", "addOnActivityDestroyedListener",
-                "removeOnActivityDestroyedListener", "removeAllOnActivityDestroyedListener",
-                "postStatus", "consumeOnActivityDestroyedListener"));
-        sIgnoreStaticMap.put("DevUtils.FileProviderDevApp", Utils.asList("onCreate"));
+                "getActivityCount", "addOnAppStatusChangedListener",
+                "removeOnAppStatusChangedListener", "removeAllOnAppStatusChangedListener",
+                "addOnActivityDestroyedListener", "removeOnActivityDestroyedListener",
+                "removeAllOnActivityDestroyedListener", "postStatus",
+                "consumeOnActivityDestroyedListener"));
+        sIgnoreStaticMap.put("DevUtils.FileProviderDevApp", Utils.asList(
+                "onCreate"));
 
         // =======
         // = APP =
@@ -544,9 +547,9 @@ final class DevAppConfig {
                 "durationRestart", "duration", "getStartTime"));
         sIgnoreStaticMap.put("TimeKeeper", Utils.asList("waitForEndAsyn", "waitForEnd"));
         sIgnoreStaticMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList(
-                "put","get","create","newInstance","newInstance"));
+                "put", "get", "create", "newInstance", "newInstance"));
         sIgnoreStaticMap.put("MapUtils.ArrayWithTypeToken", Utils.asList(
-                "put","get","create","newInstance","newInstance"));
+                "put", "get", "create", "newInstance", "newInstance"));
     }
 
     /**
@@ -566,11 +569,11 @@ final class DevAppConfig {
                 "onActivityCreated", "onActivityStarted", "onActivityResumed",
                 "onActivityPaused", "onActivityStopped", "onActivitySaveInstanceState",
                 "onActivityDestroyed"));
-        sIgnoreParamMap.put("JCLogUtils", Utils.asList("d", "e", "e", "e", "i",
-                "xml", "dTag", "eTag", "eTag", "eTag", "iTag", "xmlTag"));
-        sIgnoreParamMap.put("LogPrintUtils", Utils.asList("d", "e", "e", "e",
-                "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag", "wTag",
-                "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
+        sIgnoreParamMap.put("JCLogUtils", Utils.asList("d", "e", "e", "e",
+                "i", "xml", "dTag", "eTag", "eTag", "eTag", "iTag", "xmlTag"));
+        sIgnoreParamMap.put("LogPrintUtils", Utils.asList("d", "e", "e",
+                "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag",
+                "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
 
         // =======
         // = APP =
@@ -644,14 +647,17 @@ final class DevAppConfig {
         // = 根目录三个工具类 =
         // ====================
 
-        sIgnoreUnPublicMap.put("DevUtils", Utils.asList("initContext",
-                "initApplication", "getApplicationByReflect", "registerActivityLifecycleCallbacks",
-                "unregisterActivityLifecycleCallbacks"));
-        sIgnoreUnPublicMap.put("DevUtils.ActivityLifecycleFilter", Utils.asList("filter"));
+        sIgnoreUnPublicMap.put("DevUtils", Utils.asList(
+                "initContext", "initApplication", "getApplicationByReflect",
+                "registerActivityLifecycleCallbacks", "unregisterActivityLifecycleCallbacks"));
+        sIgnoreUnPublicMap.put("DevUtils.ActivityLifecycleFilter", Utils.asList(
+                "filter"));
         sIgnoreUnPublicMap.put("DevUtils.ActivityLifecycleGet", Utils.asList(
-                "getTopActivity", "isTopActivity", "isTopActivity", "isBackground", "getActivityCount"));
+                "getTopActivity", "isTopActivity", "isTopActivity",
+                "isBackground", "getActivityCount"));
         sIgnoreUnPublicMap.put("DevUtils.ActivityLifecycleImpl", Utils.asList(
-                "setTopActivity", "getTopActivityByReflect", "postStatus", "consumeOnActivityDestroyedListener"));
+                "setTopActivity", "getTopActivityByReflect", "postStatus",
+                "consumeOnActivityDestroyedListener"));
         sIgnoreUnPublicMap.put("DevUtils.ActivityLifecycleNotify", Utils.asList(
                 "addOnAppStatusChangedListener", "removeOnAppStatusChangedListener",
                 "removeAllOnAppStatusChangedListener", "addOnActivityDestroyedListener",
@@ -660,11 +666,12 @@ final class DevAppConfig {
                 "onActivityDestroyed"));
         sIgnoreUnPublicMap.put("DevUtils.OnAppStatusChangedListener", Utils.asList(
                 "onForeground", "onBackground"));
-        sIgnoreUnPublicMap.put("JCLogUtils", Utils.asList("isEmpty",
-                "printLog", "createMessage", "splitErrorMessage"));
-        sIgnoreUnPublicMap.put("JCLogUtils.Print", Utils.asList("printLog"));
-        sIgnoreUnPublicMap.put("LogPrintUtils", Utils.asList("isEmpty",
-                "printLog", "createMessage", "splitErrorMessage"));
+        sIgnoreUnPublicMap.put("JCLogUtils", Utils.asList(
+                "isEmpty", "printLog", "createMessage", "splitErrorMessage"));
+        sIgnoreUnPublicMap.put("JCLogUtils.Print", Utils.asList(
+                "printLog"));
+        sIgnoreUnPublicMap.put("LogPrintUtils", Utils.asList(
+                "isEmpty", "printLog", "createMessage", "splitErrorMessage"));
 
         // =======
         // = APP =
@@ -887,7 +894,7 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("ZipUtils", Utils.asList("zipFile", "unzipChildFile",
                 "closeIOQuietly", "getFileByPath", "createOrExistsDir", "createOrExistsFile", "isSpace"));
         sIgnoreUnPublicMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList(
-                "newInstance","newInstance"));
+                "newInstance", "newInstance"));
         sIgnoreUnPublicMap.put("FieldUtils", Utils.asList("getClass"));
         sIgnoreUnPublicMap.put("FileRecordUtils", Utils.asList("isEmpty",
                 "saveFile", "getFileByPath", "createFolder", "createFolder",
@@ -895,9 +902,7 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("FileRecordUtils.CallBack", Utils.asList("callback"));
         sIgnoreUnPublicMap.put("MapUtils", Utils.asList("toArrayT"));
         sIgnoreUnPublicMap.put("MapUtils.ArrayWithTypeToken", Utils.asList(
-                "newInstance","newInstance"));
-
-
+                "newInstance", "newInstance"));
     }
 
     // =
