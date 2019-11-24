@@ -35,7 +35,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.8.4";
+    public static final String DEV_APP_VERSION = "1.8.5";
 
     // ===========
     // = DevJava =
@@ -50,7 +50,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.0.5";
+    public static final String DEV_JAVA_VERSION = "1.0.6";
 
     // =============
     // = DevAssist =
@@ -293,6 +293,8 @@ public final class ApiConfig {
 
         sFilterMethodMap.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
 
+        sFilterMethodMap.put("AnalysisRecordUtils.java", new String[]{"callback"});
+
         sFilterMethodMap.put("AsyncExecutor.java", new String[]{"doInBackground",
                 "onPostExecute", "onCanceled", "abort"});
 
@@ -340,6 +342,8 @@ public final class ApiConfig {
                 new String[]{"onResponse", "onFail"});
 
         sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
+
+        sFilterMethodMap.put("CollectionUtils.java", new String[]{"put", "create"});
 
         // =============
         // = DevAssist =
