@@ -40,7 +40,7 @@ public class PanguAnalyeMain {
                 if (absolutePath.indexOf("\\.git") == -1
                         && absolutePath.indexOf("\\.idea") == -1
                         && absolutePath.indexOf("\\.gradlew") == -1
-                        && absolutePath.indexOf("\\gradle") == -1
+                        && absolutePath.indexOf("\\wrapper") == -1
                         && absolutePath.indexOf("\\.gradle") == -1
                         && absolutePath.indexOf("\\build") == -1
                         && !FileUtils.isAudioFormats(file)
