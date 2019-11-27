@@ -29,7 +29,7 @@ public class PanguAnalyeMain {
     private static HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     public static void main(String[] args) {
-        String path = ApiConfig.LOCAL_PATH + "/DevUtils/";
+        String path = ApiConfig.LOCAL_PROJECT_PATH;
 
         ArrayList<File> lists = Utils.getFileCatalogLists(path);
         forReader(lists, new Filter() {

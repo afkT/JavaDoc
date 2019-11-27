@@ -11,10 +11,14 @@ public final class ApiConfig {
     private ApiConfig() {
     }
 
+    // 项目名
+    public static final String PROJECT_NAME = "DevUtils";
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
     public static final String LOCAL_PATH = "F:/Android/IDE/ASPro";
+    // 本地项目路径
+    public static final String LOCAL_PROJECT_PATH = LOCAL_PATH + "/" + PROJECT_NAME;
     // 包目录名
     public static final String DEV_PACKAGE = "dev.utils";
     // 作者 Github 地址
