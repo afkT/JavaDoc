@@ -217,7 +217,8 @@ final class DevAssistConfig {
         sIgnoreUnPublicMap.put("IImageEngine.ImageCallBack", Utils.asList("getTranscodeType", "onResponse", "onFailure"));
         sIgnoreUnPublicMap.put("IJSONEngine", Utils.asList(
                 "toJson", "toJson", "fromJson", "fromJson", "fromJson", "fromJson",
-                "isJSON", "toJsonIndent", "toJsonIndent", "toJsonIndent", "toJsonIndent"));
+                "isJSON", "isJSONObject", "isJSONArray", "toJsonIndent", "toJsonIndent",
+                "toJsonIndent", "toJsonIndent"));
         sIgnoreUnPublicMap.put("ILogEngine", Utils.asList(
                 "isPrintLog", "d", "e", "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag",
                 "eTag", "eTag", "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
