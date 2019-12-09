@@ -205,6 +205,8 @@ final class DevOtherConfig {
                 "screenOn", "screenOff", "userPresent"));
         sIgnoreUnPublicMap.put("TimeReceiver.TimeListener", Utils.asList(
                 "onTimeZoneChanged", "onTimeChanged", "onTimeTick"));
+        sIgnoreUnPublicMap.put("ZXingQRCodeUtils.QRScanCallBack", Utils.asList("onResult"));
+        sIgnoreUnPublicMap.put("ZXingQRCodeUtils.QRResultCallBack", Utils.asList("onResult"));
     }
 
     // =
