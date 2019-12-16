@@ -152,6 +152,17 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
 
+    // =============
+    // = DevWidget =
+    // =============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatelogMap_Widget = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashMap<String, String> sFilterClassMap_Widget = new HashMap<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Widget = new HashMap<>();
+
     static {
         // 初始化 包名目录注释 Map
         initCatelogMap();
