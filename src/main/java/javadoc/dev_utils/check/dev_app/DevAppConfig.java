@@ -54,8 +54,6 @@ final class DevAppConfig {
         initIgnoreReturnVoidMap();
     }
 
-    // =
-
     /**
      * 初始化 忽略指定方法注释处理
      */
@@ -110,8 +108,6 @@ final class DevAppConfig {
         sIgnoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
     }
 
-    // =
-
     /**
      * 初始化 忽略指定方法参数 final 修饰符
      */
@@ -164,8 +160,6 @@ final class DevAppConfig {
         sIgnoreFinalMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreFinalMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
     }
-
-    // =
 
     /**
      * 初始化 忽略指定方法 static 修饰符
@@ -467,8 +461,6 @@ final class DevAppConfig {
         sIgnoreUnPublicMap.put("ZipUtils", Utils.asList("zipFile", "unzipChildFile"));
     }
 
-    // =
-
     /**
      * 初始化 忽略无修饰符变量 处理
      */
@@ -499,8 +491,6 @@ final class DevAppConfig {
         map.remove("AliasMethod.java");
         map.remove("Base64.java");
     }
-
-    // =
 
     /**
      * 初始化 忽略指定方法 return void 处理
