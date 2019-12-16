@@ -260,15 +260,15 @@ public class ColorMain {
             @Override
             public int compare(ColorUtils.ColorInfo c1, ColorUtils.ColorInfo c2) {
 
-                float[] hsbvals1 = new float[3];
-                Color.RGBtoHSB(c1.getRed(), c1.getGreen(), c1.getBlue(), hsbvals1);
+//                float[] hsbvals1 = new float[3];
+//                Color.RGBtoHSB(c1.getRed(), c1.getGreen(), c1.getBlue(), hsbvals1);
+//
+//                float[] hsbvals2 = new float[3];
+//                Color.RGBtoHSB(c2.getRed(), c2.getGreen(), c2.getBlue(), hsbvals2);
 
-                float[] hsbvals2 = new float[3];
-                Color.RGBtoHSB(c2.getRed(), c2.getGreen(), c2.getBlue(), hsbvals2);
-
-                float diff = hsbvals1[0] - hsbvals2[0];
-                if (hsbvals1[0] == 0){
-                    diff = hsbvals1[1] - hsbvals2[1];
+                float diff = c1.getHue() - c2.getHue();
+                if (c1.getHue() == 0){
+                    diff = c1.getSaturation() - c2.getSaturation();
                 }
 //                diff = hsbvals1[2] - hsbvals2[2];
 
@@ -283,7 +283,7 @@ public class ColorMain {
 
 //        sortGray(sListColors);
 
-        String xmlPath = "D:\\Android\\ASPro\\YouShi\\app\\src\\main\\res\\values\\colors.xml";
+        String xmlPath = ApiConfig.LOCAL_PROJECT_PATH + "\\app\\src\\main\\res\\values\\colors.xml";
 
         StringBuilder builder = new StringBuilder("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
         builder.append(StringUtils.NEW_LINE_STR);
@@ -300,28 +300,7 @@ public class ColorMain {
         System.out.println("保存结果: " + result);
     }
 
-
-
     // ============
     // = 颜色排序 =
     // ============
-
-    /**
-     * 以灰色值排序
-     * @param lists 待排序颜色集合
-     */
-    public static void sortGray(final List<ColorUtils.ColorInfo> lists) {
-        Collections.sort(lists, new Comparator<ColorUtils.ColorInfo>() {
-            @Override
-            public int compare(ColorUtils.ColorInfo c1, ColorUtils.ColorInfo c2) {
-                long diff = c1.getGrayLevel() - c2.getGrayLevel();
-                if (diff < 0) {
-                    return 1;
-                } else if (diff > 0) {
-                    return -1;
-                }
-                return 0;
-            }
-        });
-    }
 }

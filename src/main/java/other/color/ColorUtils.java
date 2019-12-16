@@ -1,6 +1,9 @@
 package other.color;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 import dev.utils.JCLogUtils;
@@ -10,6 +13,12 @@ import dev.utils.common.StringUtils;
 /**
  * detail: 颜色工具类 ( 包括常用的色值 )
  * @author Ttt
+ * <pre>
+ *     颜色信息和转换工具
+ *     @see <a href="https://zh.spycolor.com"/>
+ *     RGB 颜色空间、色调、饱和度、亮度、HSV 颜色空间详解
+ *     @see <a href="https://blog.csdn.net/bjbz_cxy/article/details/79701006"/>
+ * </pre>
  */
 public final class ColorUtils {
 
@@ -704,12 +713,15 @@ public final class ColorUtils {
     // = 颜色信息 =
     // ============
 
+    // 内部解析器
+    private static ColorInfo.Parser sParser;
+
     /**
      * 设置 Color 解析器
      * @param parser {@link ColorInfo.Parser}
      */
     public static void setParser(final ColorInfo.Parser parser) {
-        ColorInfo.sParser = parser;
+        ColorUtils.sParser = parser;
     }
 
     /**
@@ -730,6 +742,8 @@ public final class ColorUtils {
         private int alpha = 255, red = 0, green = 0, blue = 0;
         // 灰度值
         private int grayLevel;
+        // H、S、B ( V )
+        private float hue, saturation, brightness;
 
         /**
          * 构造函数
@@ -823,6 +837,30 @@ public final class ColorUtils {
             return grayLevel;
         }
 
+        /**
+         * 获取颜色色调
+         * @return 颜色色调
+         */
+        public float getHue() {
+            return hue;
+        }
+
+        /**
+         * 获取颜色饱和度
+         * @return 颜色饱和度
+         */
+        public float getSaturation() {
+            return saturation;
+        }
+
+        /**
+         * 获取颜色亮度
+         * @return 颜色亮度
+         */
+        public float getBrightness() {
+            return brightness;
+        }
+
         @Override
         public String toString() {
             StringBuilder builder = new StringBuilder();
@@ -867,6 +905,11 @@ public final class ColorUtils {
             blue = argb[3];
             // 获取灰度值
             grayLevel = (int) (argb[1] * 0.299f + argb[2] * 0.587f + argb[3] * 0.114f);
+            // 获取 HSB
+            float[] hsbvals = RGBtoHSB(red, green, blue, null);
+            hue = hsbvals[0]; // 色调
+            saturation = hsbvals[1]; // 饱和度
+            brightness = hsbvals[2]; // 亮度
         }
 
         // ==============
@@ -913,15 +956,103 @@ public final class ColorUtils {
             }
         }
 
-        // 内部解析器
-        private static Parser sParser;
+        // ============
+        // = 转换处理 =
+        // ============
 
         /**
-         * 设置 Color 解析器
-         * @param parser {@link Parser}
+         * RGB 转换 HSB
+         * <pre>
+         *     HSB 等于 HSV, 不同的叫法
+         *     java.awt.Color#RGBtoHSB
+         *     android.graphics.Color#RGBToHSV
+         * </pre>
+         * @param r       红色值 [0-255]
+         * @param g       绿色值 [0-255]
+         * @param b       蓝色值 [0-255]
+         * @param hsbvals HSB 数组
+         * @return [] { hue, saturation, brightness }
          */
-        public static void setParser(final Parser parser) {
-            ColorInfo.sParser = parser;
+        private static float[] RGBtoHSB(int r, int g, int b, float[] hsbvals) {
+            float hue, saturation, brightness;
+            if (hsbvals == null) {
+                hsbvals = new float[3];
+            }
+            int cmax = (r > g) ? r : g;
+            if (b > cmax) cmax = b;
+            int cmin = (r < g) ? r : g;
+            if (b < cmin) cmin = b;
+
+            brightness = ((float) cmax) / 255.0f;
+            if (cmax != 0)
+                saturation = ((float) (cmax - cmin)) / ((float) cmax);
+            else
+                saturation = 0;
+            if (saturation == 0)
+                hue = 0;
+            else {
+                float redc = ((float) (cmax - r)) / ((float) (cmax - cmin));
+                float greenc = ((float) (cmax - g)) / ((float) (cmax - cmin));
+                float bluec = ((float) (cmax - b)) / ((float) (cmax - cmin));
+                if (r == cmax)
+                    hue = bluec - greenc;
+                else if (g == cmax)
+                    hue = 2.0f + redc - bluec;
+                else
+                    hue = 4.0f + greenc - redc;
+                hue = hue / 6.0f;
+                if (hue < 0)
+                    hue = hue + 1.0f;
+            }
+            hsbvals[0] = hue;
+            hsbvals[1] = saturation;
+            hsbvals[2] = brightness;
+            return hsbvals;
         }
+    }
+
+    // ============
+    // = 颜色排序 =
+    // ============
+
+    /**
+     * 灰度值排序
+     * @param lists 待排序颜色集合
+     */
+    public static void sortGray(final List<ColorInfo> lists) {
+        Collections.sort(lists, new Comparator<ColorInfo>() {
+            @Override
+            public int compare(ColorInfo c1, ColorInfo c2) {
+                long diff = c1.getGrayLevel() - c2.getGrayLevel();
+                if (diff < 0) {
+                    return 1;
+                } else if (diff > 0) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
+    }
+
+    /**
+     * HSB ( HSV) 排序
+     * @param lists 待排序颜色集合
+     */
+    public static void sortHSB(final List<ColorInfo> lists) {
+        Collections.sort(lists, new Comparator<ColorInfo>() {
+            @Override
+            public int compare(ColorInfo c1, ColorInfo c2) {
+                float diff = c1.getHue() - c2.getHue();
+                if (c1.getHue() == 0) {
+                    diff = c1.getSaturation() - c2.getSaturation();
+                }
+                if (diff > 0) {
+                    return 1;
+                } else if (diff < 0) {
+                    return -1;
+                }
+                return 0;
+            }
+        });
     }
 }
