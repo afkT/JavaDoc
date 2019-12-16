@@ -256,6 +256,13 @@ public final class ApiConfig {
         sCatelogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
         sCatelogMap_Other.put(".service", "Service 相关");
         sCatelogMap_Other.put(".temp", "临时快捷调用工具类");
+
+        // =============
+        // = DevWidget =
+        // =============
+
+        sCatelogMap_Widget.put("dev", "根目录");
+        sCatelogMap_Widget.put(".widget", "自定义 View 包目录");
     }
 
     /**
