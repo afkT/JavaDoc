@@ -13,7 +13,7 @@ import java.util.List;
 final class XMLUtils {
 
     // 数据实体类
-    private static List<ColorInfo> sListColors = new ArrayList<>();
+    private static List<ColorUtils.ColorInfo> sListColors = new ArrayList<>();
 
     public static void main(String[] args) {
         try {
@@ -22,7 +22,7 @@ final class XMLUtils {
             e.printStackTrace();
         }
 
-        for (ColorInfo colorInfo : sListColors) {
+        for (ColorUtils.ColorInfo colorInfo : sListColors) {
             System.out.println(String.format("sListColors.add(new ColorInfo(\"%s\", \"%s\"));", colorInfo.getKey(), colorInfo.getValue()));
         }
     }
@@ -70,7 +70,7 @@ final class XMLUtils {
             super.endElement(uri, localName, qName);
             if (qName.equals("color")) {
                 // 遍历结束
-                sListColors.add(new ColorInfo(colorKey, colorValue));
+                sListColors.add(new ColorUtils.ColorInfo(colorKey, colorValue));
             }
         }
 
