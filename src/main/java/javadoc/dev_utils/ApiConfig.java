@@ -97,6 +97,19 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
 
+    // =============
+    // = DevBase =
+    // =============
+
+    // 包目录名
+    public static final String DEV_BASE_PACKAGE = "dev";
+    // DevBase API 文件保存路径
+    public static final String DEV_BASE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBase/";
+    // DevBase 文件路径
+    public static final String DEV_BASE_PATH = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/";
+    // DevBase GitHub 项目文件路径
+    public static final String DEV_BASE_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev";
+
 
     // ========
     // = 其他 =
