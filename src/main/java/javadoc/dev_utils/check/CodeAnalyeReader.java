@@ -223,11 +223,11 @@ public final class CodeAnalyeReader {
                         boolean isPublic = methodCode.startsWith("public ");
 
                         // 如果方法名存在换行(注解)
-                        if (methodCode.indexOf("\r\n") != -1){
+                        if (methodCode.indexOf("\r\n") != -1) {
                             String[] methodCodeSplit = methodCode.split("\r\n");
-                            for (String methodCodeStr : methodCodeSplit){
-                                if (methodCodeStr.indexOf(methodName) != -1){
-                                    if (methodCodeStr.startsWith("public ")){
+                            for (String methodCodeStr : methodCodeSplit) {
+                                if (methodCodeStr.indexOf(methodName) != -1) {
+                                    if (methodCodeStr.startsWith("public ")) {
                                         isPublic = true;
                                     }
                                 }

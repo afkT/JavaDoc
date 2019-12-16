@@ -106,6 +106,8 @@ final class DevAppConfig {
         sIgnoreAnnotateMap.put("Base64.Coder", Utils.asList("maxOutputSize"));
         sIgnoreAnnotateMap.put("Base64.Decoder", Utils.asList("maxOutputSize"));
         sIgnoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreAnnotateMap.put("ColorUtils.ColorInfo", Utils.asList("toString"));
+        sIgnoreAnnotateMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
     }
 
     /**
@@ -159,6 +161,8 @@ final class DevAppConfig {
         sIgnoreFinalMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreFinalMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreFinalMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
+        sIgnoreFinalMap.put("ColorUtils.ColorInfo", Utils.asList("RGBtoHSB"));
+        sIgnoreFinalMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
     }
 
     /**
@@ -264,6 +268,8 @@ final class DevAppConfig {
         sIgnoreStaticMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreStaticMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
         sIgnoreStaticMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList("put", "get", "create", "newInstance", "newInstance"));
+        sIgnoreStaticMap.put("ColorUtils.ColorInfo", Utils.asList("getKey", "getValue", "getValueParser", "getValueColor", "getAlpha", "getRed", "getGreen", "getBlue", "getGrayLevel", "getHue", "getSaturation", "getBrightness", "toString", "priConvert"));
+        sIgnoreStaticMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
         sIgnoreStaticMap.put("DevThreadPool", Utils.asList("getThreads", "getCalcThreads", "execute", "execute", "execute", "shutdown", "shutdownNow", "isShutdown", "isTerminated", "awaitTermination", "submit", "submit", "submit", "invokeAll", "invokeAll", "invokeAny", "invokeAny", "schedule", "schedule", "scheduleWithFixedRate", "scheduleWithFixedDelay"));
         sIgnoreStaticMap.put("FileBreadthFirstSearchUtils", Utils.asList("setSearchHandler", "getQueueSameTimeNumber", "setQueueSameTimeNumber", "isRunning", "stop", "isStop", "getStartTime", "getEndTime", "getDelayTime", "setDelayTime", "query", "queryFile", "whileQueue"));
         sIgnoreStaticMap.put("FileBreadthFirstSearchUtils.FileItem", Utils.asList("put"));
@@ -321,6 +327,7 @@ final class DevAppConfig {
         sIgnoreParamMap.put("Base64.Coder", Utils.asList("process", "maxOutputSize"));
         sIgnoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         sIgnoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+        sIgnoreParamMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
     }
 
     /**
@@ -438,6 +445,8 @@ final class DevAppConfig {
 
         sIgnoreUnPublicMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList("newInstance", "newInstance"));
         sIgnoreUnPublicMap.put("ColorUtils", Utils.asList("priParseColor"));
+        sIgnoreUnPublicMap.put("ColorUtils.ColorInfo", Utils.asList("priConvert", "RGBtoHSB"));
+        sIgnoreUnPublicMap.put("ColorUtils.ColorInfo.Parser", Utils.asList("handleColor"));
         sIgnoreUnPublicMap.put("ConvertUtils", Utils.asList("toDigit", "toHexChars", "toHexString"));
         sIgnoreUnPublicMap.put("CoordinateUtils", Utils.asList("transformLat", "transformLng"));
         sIgnoreUnPublicMap.put("Decrypt", Utils.asList("decrypt"));

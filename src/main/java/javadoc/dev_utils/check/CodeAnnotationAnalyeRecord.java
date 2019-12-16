@@ -38,7 +38,7 @@ public final class CodeAnnotationAnalyeRecord {
 
     /**
      * 代码分析检测
-     * @param path 文件夹路径
+     * @param path      文件夹路径
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
@@ -79,10 +79,10 @@ public final class CodeAnnotationAnalyeRecord {
                 String newText = sPangu.spacingText(text);
                 newText = sPangu.spacingText(newText); // 多次处理
                 // 判断一样
-                if (!newText.equals(text)){
+                if (!newText.equals(text)) {
                     sAnnotationSpaceMap.put(file.getName(), newText);
                     // 不一样才覆盖
-                    if (sCoverText){
+                    if (sCoverText) {
                         FileUtils.saveFile(file.getParent(), file.getName(), newText);
                     }
                 }

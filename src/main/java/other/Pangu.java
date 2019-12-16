@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
  * add whitespace between English and Chinese characters also have relationship problem. Almost 70 percent of them
  * will get married to the one they don't love, the rest only can left the heritage to their cat. Indeed,
  * love and writing need some space in good time.
- *
  * @author Vinta Chen
  * @since 1.0.0
  */
@@ -28,7 +27,6 @@ public class Pangu {
 
     /*
      * Some capturing group patterns for convenience.
-     *
      * CJK: Chinese, Japanese, Korean
      * ANS: Alphabet, Number, Symbol
      */
@@ -79,7 +77,6 @@ public class Pangu {
 
     /**
      * Performs a paranoid text spacing on {@code text}.
-     *
      * @param text the string you want to process, must not be {@code null}.
      * @return a comfortable and readable version of {@code text} for paranoiac.
      */
@@ -132,7 +129,6 @@ public class Pangu {
 
     /**
      * Performs a paranoid text spacing on {@code inputFile} and generate a new file {@code outputFile}.
-     *
      * @param inputFile  an existing file to process, must not be {@code null}.
      * @param outputFile the processed file, must not be {@code null}.
      * @throws IOException if an error occurs.
