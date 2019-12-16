@@ -84,6 +84,19 @@ public final class ApiConfig {
     // DevOther GitHub 项目文件路径
     public static final String DEV_OTHER_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/dev";
 
+    // =============
+    // = DevWidget =
+    // =============
+
+    // 包目录名
+    public static final String DEV_WIDGET_PACKAGE = "dev";
+    // DevWidget API 文件保存路径
+    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
+    // DevWidget 文件路径
+    public static final String DEV_WIDGET_PATH = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
+    // DevWidget GitHub 项目文件路径
+    public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
+
 
     // ========
     // = 其他 =
