@@ -1,7 +1,11 @@
 package other.color;
 
 import dev.utils.common.ColorUtils;
+import dev.utils.common.FileUtils;
+import dev.utils.common.StringUtils;
+import javadoc.dev_utils.ApiConfig;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -266,20 +270,21 @@ public class ColorMain {
             }
         });
 
+        String xmlPath = ApiConfig.LOCAL_PROJECT_PATH + "/app/src/main/res/values/colors.xml";
 
-//        StringBuilder builder = new StringBuilder("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-//        builder.append(StringUtils.NEW_LINE_STR);
-//        builder.append("<resources>");
-//        for (ColorBean colorBean : sListColors) {
-//            builder.append(StringUtils.NEW_LINE_STR);
-//            String colorStr = "<color name=\"%s\">%s</color>";
-//            builder.append(String.format(colorStr, colorBean.key, colorBean.value));
-//        }
-//        builder.append(StringUtils.NEW_LINE_STR);
-//        builder.append("</resources>");
-//
-//        System.out.println(builder.toString());
+        StringBuilder builder = new StringBuilder("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+        builder.append(StringUtils.NEW_LINE_STR);
+        builder.append("<resources>");
+        for (ColorInfo colorInfo : sListColors) {
+            builder.append(StringUtils.NEW_LINE_STR);
+            String colorStr = "\t<color name=\"%s\">%s</color>";
+            builder.append(String.format(colorStr, colorInfo.getKey(), colorInfo.getValue()));
+        }
+        builder.append(StringUtils.NEW_LINE_STR);
+        builder.append("</resources>");
 
+        boolean result = FileUtils.saveFile(new File(xmlPath), builder.toString().getBytes());
+        System.out.println("保存结果: " + result);
     }
 
 
