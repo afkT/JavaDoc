@@ -19,6 +19,9 @@ public final class ApiConfig {
     public static final String LOCAL_PATH = "F:/Android/IDE/ASPro";
     // 本地项目路径
     public static final String LOCAL_PROJECT_PATH = LOCAL_PATH + "/" + PROJECT_NAME;
+    // Java 本地路径
+    public static final String JAVA_LOCAL_PATH = "F:/JetBrains/IdeaProjects";
+
     // 包目录名
     public static final String DEV_PACKAGE = "dev.utils";
     // 作者 Github 地址
