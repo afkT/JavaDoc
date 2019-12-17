@@ -1,129 +1,136 @@
 package javadoc.dev_utils.check.dev_base;
 
 import javadoc.Utils;
+import javadoc.dev_utils.check.dev.ICheckConfig;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * detail: 代码检测分析配置
  * @author Ttt
  */
-final class DevBaseConfig {
+final class DevBaseConfig implements ICheckConfig {
 
-    private DevBaseConfig() {
-    }
-
-    // 忽略指定方法 @param 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreAnnotateMap = new HashMap<>();
-    // 忽略指定方法参数 final 修饰符
-    protected static final HashMap<String, ArrayList<String>> sIgnoreFinalMap = new HashMap<>();
-    // 忽略指定方法 static 修饰符
-    protected static final HashMap<String, ArrayList<String>> sIgnoreStaticMap = new HashMap<>();
-    // 忽略指定方法 @param 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreParamMap = new HashMap<>();
-    // 忽略指定方法 @return 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnMap = new HashMap<>();
-    // 忽略指定方法非 public 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreUnPublicMap = new HashMap<>();
-    // 忽略无修饰符变量 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreModifierVariableMap = new HashMap<>();
-    // 忽略指定方法 return void 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnVoidMap = new HashMap<>();
-
-    // ==========
-    // = 初始化 =
-    // ==========
-
-    static {
-        // 初始化 忽略指定方法注释处理
-        initIgnoreAnnotateMap();
-        // 初始化 忽略指定方法参数 final 修饰符
-        initIgnoreFinalMap();
-        // 初始化 忽略指定方法 static 修饰符
-        initIgnoreStaticMap();
-        // 初始化 忽略指定方法 @param 处理
-        initIgnoreParamMap();
-        // 初始化 忽略指定方法 @return 处理
-        initIgnoreReturnMap();
-        // 初始化 忽略指定方法非 public 处理
-        initIgnoreUnPublicMap();
-        // 初始化 忽略无修饰符变量 处理
-        initIgnoreModifierVariableMap();
-        // 初始化 忽略指定方法 return void 处理
-        initIgnoreReturnVoidMap();
+    /**
+     * 获取忽略指定方法注释配置
+     * @return 忽略配置 Map
+     */
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreAnnotateMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
+        ignoreAnnotateMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onDetach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","onStart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
+        ignoreAnnotateMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
+        ignoreAnnotateMap.put("DevBaseActivity", Utils.asList("onClick"));
+        ignoreAnnotateMap.put("DevBaseFragment", Utils.asList("onClick"));
+        ignoreAnnotateMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy"));
+        ignoreAnnotateMap.put("DevBaseMVPFragment", Utils.asList("onCreateView","onDestroy"));
+        ignoreAnnotateMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+        return ignoreAnnotateMap;
     }
 
     /**
-     * 初始化 忽略指定方法注释处理
+     * 获取忽略指定方法参数 final 修饰符配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreAnnotateMap() {
-        sIgnoreAnnotateMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onDetach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","onStart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
-        sIgnoreAnnotateMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
-        sIgnoreAnnotateMap.put("DevBaseActivity", Utils.asList("onClick"));
-        sIgnoreAnnotateMap.put("DevBaseFragment", Utils.asList("onClick"));
-        sIgnoreAnnotateMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy"));
-        sIgnoreAnnotateMap.put("DevBaseMVPFragment", Utils.asList("onCreateView","onDestroy"));
-        sIgnoreAnnotateMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreFinalMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreFinalMap = new HashMap<>();
+        ignoreFinalMap.put("MVP.Presenter", Utils.asList("attachView"));
+        return ignoreFinalMap;
     }
 
     /**
-     * 初始化 忽略指定方法参数 final 修饰符
+     * 获取忽略指定方法 static 修饰符配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreFinalMap() {
-        sIgnoreFinalMap.put("MVP.Presenter", Utils.asList("attachView"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreStaticMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
+        ignoreStaticMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+        return ignoreStaticMap;
     }
 
     /**
-     * 初始化 忽略指定方法 static 修饰符
+     * 获取忽略指定方法 @param 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreStaticMap() {
-        sIgnoreStaticMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreParamMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
+        ignoreParamMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
+        ignoreParamMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
+        ignoreParamMap.put("DevBaseActivity", Utils.asList("onClick"));
+        ignoreParamMap.put("DevBaseFragment", Utils.asList("onClick"));
+        ignoreParamMap.put("DevBaseMVPActivity", Utils.asList("onCreate"));
+        ignoreParamMap.put("DevBaseMVPFragment", Utils.asList("onCreateView"));
+        ignoreParamMap.put("IDevBaseUIOperation", Utils.asList("setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
+        ignoreParamMap.put("MVP.Presenter", Utils.asList("attachView"));
+        return ignoreParamMap;
     }
 
     /**
-     * 初始化 忽略指定方法 @param 处理
+     * 获取忽略指定方法 @return 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreParamMap() {
-        sIgnoreParamMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
-        sIgnoreParamMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
-        sIgnoreParamMap.put("DevBaseActivity", Utils.asList("onClick"));
-        sIgnoreParamMap.put("DevBaseFragment", Utils.asList("onClick"));
-        sIgnoreParamMap.put("DevBaseMVPActivity", Utils.asList("onCreate"));
-        sIgnoreParamMap.put("DevBaseMVPFragment", Utils.asList("onCreateView"));
-        sIgnoreParamMap.put("IDevBaseUIOperation", Utils.asList("setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
-        sIgnoreParamMap.put("MVP.Presenter", Utils.asList("attachView"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreReturnMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreReturnMap = new HashMap<>();
+        return ignoreReturnMap;
     }
 
     /**
-     * 初始化 忽略指定方法 @return 处理
+     * 获取忽略指定方法非 public 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreReturnMap() {
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreUnPublicMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
+        ignoreUnPublicMap.put("AbstractDevBaseFragment", Utils.asList("printLogPri","printLogPri","layoutInit","isFragmentVisible","onInit"));
+        ignoreUnPublicMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","printLogPri","printLogPri","layoutInit","isActivityVisible"));
+        ignoreUnPublicMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy","createPresenter","presenter"));
+        ignoreUnPublicMap.put("DevBaseMVPFragment", Utils.asList("createPresenter","presenter"));
+        ignoreUnPublicMap.put("IDevBaseMethod", Utils.asList("initMethodOrder","initViews","initValues","initListeners","initOtherOperate"));
+        ignoreUnPublicMap.put("IDevBaseUIOperation", Utils.asList("showToast","showToast","getPopupWindow","setPopupWindow","setPopupWindow","getDialog","setDialog","setDialog","getDialogFragment","setDialogFragment","setDialogFragment"));
+        ignoreUnPublicMap.put("IDevBaseViewOperation", Utils.asList("getContentView","contentId","contentView"));
+        ignoreUnPublicMap.put("MVP.IPresenter", Utils.asList("attachView","detachView"));
+        return ignoreUnPublicMap;
     }
 
     /**
-     * 初始化 忽略指定方法非 public 处理
+     * 获取忽略无修饰符变量处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreUnPublicMap() {
-        sIgnoreUnPublicMap.put("AbstractDevBaseFragment", Utils.asList("printLogPri","printLogPri","layoutInit","isFragmentVisible","onInit"));
-        sIgnoreUnPublicMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","printLogPri","printLogPri","layoutInit","isActivityVisible"));
-        sIgnoreUnPublicMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy","createPresenter","presenter"));
-        sIgnoreUnPublicMap.put("DevBaseMVPFragment", Utils.asList("createPresenter","presenter"));
-        sIgnoreUnPublicMap.put("IDevBaseMethod", Utils.asList("initMethodOrder","initViews","initValues","initListeners","initOtherOperate"));
-        sIgnoreUnPublicMap.put("IDevBaseUIOperation", Utils.asList("showToast","showToast","getPopupWindow","setPopupWindow","setPopupWindow","getDialog","setDialog","setDialog","getDialogFragment","setDialogFragment","setDialogFragment"));
-        sIgnoreUnPublicMap.put("IDevBaseViewOperation", Utils.asList("getContentView","contentId","contentView"));
-        sIgnoreUnPublicMap.put("MVP.IPresenter", Utils.asList("attachView","detachView"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreModifierVariableMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreModifierVariableMap = new HashMap<>();
+        return ignoreModifierVariableMap;
     }
 
     /**
-     * 初始化 忽略无修饰符变量 处理
+     * 获取忽略指定方法 return void 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreModifierVariableMap() {
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreReturnVoidMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreReturnVoidMap = new HashMap<>();
+        return ignoreReturnVoidMap;
     }
 
     /**
-     * 初始化 忽略指定方法 return void 处理
+     * 忽略注释间距异常文件
+     * @param map {@link HashMap}
      */
-    private static void initIgnoreReturnVoidMap() {
+    @Override
+    public void ignoreAnnotationSpaceMap(Map<String, String> map) {
     }
 }

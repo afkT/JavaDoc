@@ -1,178 +1,185 @@
 package javadoc.dev_utils.check.dev_other;
 
 import javadoc.Utils;
+import javadoc.dev_utils.check.dev.ICheckConfig;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * detail: 代码检测分析配置
  * @author Ttt
  */
-final class DevOtherConfig {
+final class DevOtherConfig implements ICheckConfig {
 
-    private DevOtherConfig() {
-    }
-
-    // 忽略指定方法 @param 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreAnnotateMap = new HashMap<>();
-    // 忽略指定方法参数 final 修饰符
-    protected static final HashMap<String, ArrayList<String>> sIgnoreFinalMap = new HashMap<>();
-    // 忽略指定方法 static 修饰符
-    protected static final HashMap<String, ArrayList<String>> sIgnoreStaticMap = new HashMap<>();
-    // 忽略指定方法 @param 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreParamMap = new HashMap<>();
-    // 忽略指定方法 @return 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnMap = new HashMap<>();
-    // 忽略指定方法非 public 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreUnPublicMap = new HashMap<>();
-    // 忽略无修饰符变量 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreModifierVariableMap = new HashMap<>();
-    // 忽略指定方法 return void 处理
-    protected static final HashMap<String, ArrayList<String>> sIgnoreReturnVoidMap = new HashMap<>();
-
-    // ==========
-    // = 初始化 =
-    // ==========
-
-    static {
-        // 初始化 忽略指定方法注释处理
-        initIgnoreAnnotateMap();
-        // 初始化 忽略指定方法参数 final 修饰符
-        initIgnoreFinalMap();
-        // 初始化 忽略指定方法 static 修饰符
-        initIgnoreStaticMap();
-        // 初始化 忽略指定方法 @param 处理
-        initIgnoreParamMap();
-        // 初始化 忽略指定方法 @return 处理
-        initIgnoreReturnMap();
-        // 初始化 忽略指定方法非 public 处理
-        initIgnoreUnPublicMap();
-        // 初始化 忽略无修饰符变量 处理
-        initIgnoreModifierVariableMap();
-        // 初始化 忽略指定方法 return void 处理
-        initIgnoreReturnVoidMap();
+    /**
+     * 获取忽略指定方法注释配置
+     * @return 忽略配置 Map
+     */
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreAnnotateMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
+        ignoreAnnotateMap.put("AccessibilityListenerService", Utils.asList("onCreate", "onDestroy"));
+        ignoreAnnotateMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey"));
+        ignoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
+        ignoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
+        ignoreAnnotateMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
+        ignoreAnnotateMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
+        ignoreAnnotateMap.put("NetWorkReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("NotificationService", Utils.asList("onCreate", "onDestroy", "onStartCommand"));
+        ignoreAnnotateMap.put("PhoneReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("ScreenReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("SmsReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("TimeReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("WifiReceiver", Utils.asList("onReceive"));
+        return ignoreAnnotateMap;
     }
 
     /**
-     * 初始化 忽略指定方法注释处理
+     * 获取忽略指定方法参数 final 修饰符配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreAnnotateMap() {
-        sIgnoreAnnotateMap.put("AccessibilityListenerService", Utils.asList("onCreate", "onDestroy"));
-        sIgnoreAnnotateMap.put("AppStatusReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("BatteryReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey"));
-        sIgnoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
-        sIgnoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
-        sIgnoreAnnotateMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
-        sIgnoreAnnotateMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
-        sIgnoreAnnotateMap.put("NetWorkReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("NotificationService", Utils.asList("onCreate", "onDestroy", "onStartCommand"));
-        sIgnoreAnnotateMap.put("PhoneReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("ScreenReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("SmsReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("TimeReceiver", Utils.asList("onReceive"));
-        sIgnoreAnnotateMap.put("WifiReceiver", Utils.asList("onReceive"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreFinalMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreFinalMap = new HashMap<>();
+        ignoreFinalMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent"));
+        ignoreFinalMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
+        ignoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
+        ignoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
+        ignoreFinalMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
+        ignoreFinalMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
+        ignoreFinalMap.put("NetWorkReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("NotificationService", Utils.asList("onNotificationPosted", "onNotificationRemoved", "onStartCommand"));
+        ignoreFinalMap.put("PhoneReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("ScreenReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("SmsReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("TimeReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("WifiReceiver", Utils.asList("onReceive"));
+        return ignoreFinalMap;
     }
 
     /**
-     * 初始化 忽略指定方法参数 final 修饰符
+     * 获取忽略指定方法 static 修饰符配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreFinalMap() {
-        sIgnoreFinalMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent"));
-        sIgnoreFinalMap.put("AppStatusReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("BatteryReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
-        sIgnoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
-        sIgnoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
-        sIgnoreFinalMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
-        sIgnoreFinalMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
-        sIgnoreFinalMap.put("NetWorkReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("NotificationService", Utils.asList("onNotificationPosted", "onNotificationRemoved", "onStartCommand"));
-        sIgnoreFinalMap.put("PhoneReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("ScreenReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("SmsReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("TimeReceiver", Utils.asList("onReceive"));
-        sIgnoreFinalMap.put("WifiReceiver", Utils.asList("onReceive"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreStaticMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
+        ignoreStaticMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent", "onInterrupt", "onServiceConnected", "onCreate", "onDestroy"));
+        ignoreStaticMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
+        ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
+        ignoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
+        ignoreStaticMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
+        ignoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList("preload", "preload", "displayImage", "displayImage", "displayImageToGif", "displayImageToGif", "loadImageBitmap", "loadImageBitmap", "loadImageDrawable", "loadImageDrawable", "loadImageFile", "loadImageFile", "loadImageGif", "loadImageGif", "cancelDisplayTask", "cancelDisplayTask", "destroy", "pause", "resume", "stop", "start"));
+        ignoreStaticMap.put("NetWorkReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("NotificationService", Utils.asList("onNotificationPosted", "onNotificationRemoved", "onCreate", "onDestroy", "onStartCommand", "cancelNotification"));
+        ignoreStaticMap.put("PhoneReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("PictureSelectorUtils.PicConfig", Utils.asList("getMimeType", "setMimeType", "getSelectionMode", "setSelectionMode", "isCamera", "setCamera", "isCrop", "setCrop", "isCircleCrop", "setCircleCrop", "isCompress", "setCompress", "getMinimumCompressSize", "setMinimumCompressSize", "getWithAspectRatio", "setWithAspectRatio", "isGif", "setGif", "getImageSpanCount", "setImageSpanCount", "getMinSelectNum", "setMinSelectNum", "getMaxSelectNum", "setMaxSelectNum", "getLocalMedia", "setLocalMedia", "getCameraSavePath", "setCameraSavePath", "getCompressSavePath", "setCompressSavePath", "clone", "set"));
+        ignoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("WifiReceiver", Utils.asList("onReceive"));
+        return ignoreStaticMap;
     }
 
     /**
-     * 初始化 忽略指定方法 static 修饰符
+     * 获取忽略指定方法 @param 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreStaticMap() {
-        sIgnoreStaticMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent", "onInterrupt", "onServiceConnected", "onCreate", "onDestroy"));
-        sIgnoreStaticMap.put("AppStatusReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("BatteryReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
-        sIgnoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
-        sIgnoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
-        sIgnoreStaticMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
-        sIgnoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList("preload", "preload", "displayImage", "displayImage", "displayImageToGif", "displayImageToGif", "loadImageBitmap", "loadImageBitmap", "loadImageDrawable", "loadImageDrawable", "loadImageFile", "loadImageFile", "loadImageGif", "loadImageGif", "cancelDisplayTask", "cancelDisplayTask", "destroy", "pause", "resume", "stop", "start"));
-        sIgnoreStaticMap.put("NetWorkReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("NotificationService", Utils.asList("onNotificationPosted", "onNotificationRemoved", "onCreate", "onDestroy", "onStartCommand", "cancelNotification"));
-        sIgnoreStaticMap.put("PhoneReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("PictureSelectorUtils.PicConfig", Utils.asList("getMimeType", "setMimeType", "getSelectionMode", "setSelectionMode", "isCamera", "setCamera", "isCrop", "setCrop", "isCircleCrop", "setCircleCrop", "isCompress", "setCompress", "getMinimumCompressSize", "setMinimumCompressSize", "getWithAspectRatio", "setWithAspectRatio", "isGif", "setGif", "getImageSpanCount", "setImageSpanCount", "getMinSelectNum", "setMinSelectNum", "getMaxSelectNum", "setMaxSelectNum", "getLocalMedia", "setLocalMedia", "getCameraSavePath", "setCameraSavePath", "getCompressSavePath", "setCompressSavePath", "clone", "set"));
-        sIgnoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
-        sIgnoreStaticMap.put("WifiReceiver", Utils.asList("onReceive"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreParamMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
+        ignoreParamMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
+        ignoreParamMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
+        ignoreParamMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
+        ignoreParamMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
+        ignoreParamMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
+        ignoreParamMap.put("NetWorkReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("NotificationService", Utils.asList("onStartCommand"));
+        ignoreParamMap.put("PhoneReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("ScreenReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("SmsReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("TimeReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("WifiReceiver", Utils.asList("onReceive"));
+        return ignoreParamMap;
     }
 
     /**
-     * 初始化 忽略指定方法 @param 处理
+     * 获取忽略指定方法 @return 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreParamMap() {
-        sIgnoreParamMap.put("AppStatusReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("BatteryReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
-        sIgnoreParamMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
-        sIgnoreParamMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop", "updateDiskCacheKey"));
-        sIgnoreParamMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform", "updateDiskCacheKey"));
-        sIgnoreParamMap.put("GlideUtils", Utils.asList("with", "with", "with", "with", "with", "with"));
-        sIgnoreParamMap.put("NetWorkReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("NotificationService", Utils.asList("onStartCommand"));
-        sIgnoreParamMap.put("PhoneReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("ScreenReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("SmsReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("TimeReceiver", Utils.asList("onReceive"));
-        sIgnoreParamMap.put("WifiReceiver", Utils.asList("onReceive"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreReturnMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreReturnMap = new HashMap<>();
+        return ignoreReturnMap;
     }
 
     /**
-     * 初始化 忽略指定方法 @return 处理
+     * 获取忽略指定方法非 public 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreReturnMap() {
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreUnPublicMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
+        ignoreUnPublicMap.put("AccessibilityListenerService", Utils.asList("onServiceConnected"));
+        ignoreUnPublicMap.put("AppStatusReceiver.AppStatusListener", Utils.asList("onAdded", "onReplaced", "onRemoved"));
+        ignoreUnPublicMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged", "onBatteryLow", "onBatteryOkay", "onPowerConnected", "onPowerUsageSummary"));
+        ignoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform"));
+        ignoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop"));
+        ignoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop"));
+        ignoreUnPublicMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform"));
+        ignoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState"));
+        ignoreUnPublicMap.put("NotificationService.NotificationListener", Utils.asList("onServiceCreated", "onServiceDestroy", "onStartCommand", "onNotificationPosted", "onNotificationRemoved"));
+        ignoreUnPublicMap.put("PhoneReceiver.PhoneListener", Utils.asList("onPhoneStateChanged"));
+        ignoreUnPublicMap.put("ScreenReceiver.ScreenListener", Utils.asList("screenOn", "screenOff", "userPresent"));
+        ignoreUnPublicMap.put("TimeReceiver.TimeListener", Utils.asList("onTimeZoneChanged", "onTimeChanged", "onTimeTick"));
+        ignoreUnPublicMap.put("ZXingQRCodeUtils.QRResultCallBack", Utils.asList("onResult"));
+        ignoreUnPublicMap.put("ZXingQRCodeUtils.QRScanCallBack", Utils.asList("onResult"));
+        return ignoreUnPublicMap;
     }
 
     /**
-     * 初始化 忽略指定方法非 public 处理
+     * 获取忽略无修饰符变量处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreUnPublicMap() {
-        sIgnoreUnPublicMap.put("AccessibilityListenerService", Utils.asList("onServiceConnected"));
-        sIgnoreUnPublicMap.put("AppStatusReceiver.AppStatusListener", Utils.asList("onAdded", "onReplaced", "onRemoved"));
-        sIgnoreUnPublicMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged", "onBatteryLow", "onBatteryOkay", "onPowerConnected", "onPowerUsageSummary"));
-        sIgnoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform"));
-        sIgnoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop"));
-        sIgnoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform", "roundCrop"));
-        sIgnoreUnPublicMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform"));
-        sIgnoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState"));
-        sIgnoreUnPublicMap.put("NotificationService.NotificationListener", Utils.asList("onServiceCreated", "onServiceDestroy", "onStartCommand", "onNotificationPosted", "onNotificationRemoved"));
-        sIgnoreUnPublicMap.put("PhoneReceiver.PhoneListener", Utils.asList("onPhoneStateChanged"));
-        sIgnoreUnPublicMap.put("ScreenReceiver.ScreenListener", Utils.asList("screenOn", "screenOff", "userPresent"));
-        sIgnoreUnPublicMap.put("TimeReceiver.TimeListener", Utils.asList("onTimeZoneChanged", "onTimeChanged", "onTimeTick"));
-        sIgnoreUnPublicMap.put("ZXingQRCodeUtils.QRResultCallBack", Utils.asList("onResult"));
-        sIgnoreUnPublicMap.put("ZXingQRCodeUtils.QRScanCallBack", Utils.asList("onResult"));
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreModifierVariableMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreModifierVariableMap = new HashMap<>();
+        return ignoreModifierVariableMap;
     }
 
     /**
-     * 初始化 忽略无修饰符变量 处理
+     * 获取忽略指定方法 return void 处理配置
+     * @return 忽略配置 Map
      */
-    private static void initIgnoreModifierVariableMap() {
+    @Override
+    public Map<String, ArrayList<String>> getIgnoreReturnVoidMap() {
+        // 忽略配置
+        Map<String, ArrayList<String>> ignoreReturnVoidMap = new HashMap<>();
+        return ignoreReturnVoidMap;
     }
 
     /**
-     * 初始化 忽略指定方法 return void 处理
+     * 忽略注释间距异常文件
+     * @param map {@link HashMap}
      */
-    private static void initIgnoreReturnVoidMap() {
+    @Override
+    public void ignoreAnnotationSpaceMap(Map<String, String> map) {
     }
 }

@@ -507,6 +507,7 @@ final class DevAppConfig implements ICheckConfig {
      * 忽略注释间距异常文件
      * @param map {@link HashMap}
      */
+    @Override
     public void ignoreAnnotationSpaceMap(final Map<String, String> map) {
         // 以下类无需处理, 直接移除
         map.remove("AliasMethod.java");
