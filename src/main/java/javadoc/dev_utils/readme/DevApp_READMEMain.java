@@ -51,7 +51,7 @@ final class DevApp_READMEMain {
         buffer.append("## 使用");
 
         buffer.append("\n\n");
-        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行~~ , 在 DevUtils FileProviderDevApp 中已初始化");
+        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用");
 
         buffer.append("\n\n");
         buffer.append("## 事项");
