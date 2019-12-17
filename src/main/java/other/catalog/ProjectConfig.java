@@ -101,6 +101,7 @@ final class ProjectConfig {
         sDevUtilsCatelogMap.put(".DevBase", "Base ( Activity、Fragment )、MVP 基类等");
         sDevUtilsCatelogMap.put(".DevJava", "Java 工具类库 ( 不依赖 android api )");
         sDevUtilsCatelogMap.put(".DevOther", "第三方库封装、以及部分特殊工具类等, 方便 copy 封装类使用");
+        sDevUtilsCatelogMap.put(".DevStandard", "项目规范统一检测、生成替换等");
         sDevUtilsCatelogMap.put(".DevWidget", "部分自定义 View 功能、效果");
     }
 }
