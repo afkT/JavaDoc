@@ -58,24 +58,32 @@ final class DevStandardConfig {
      * 初始化 忽略指定方法注释处理
      */
     private static void initIgnoreAnnotateMap() {
+        sIgnoreAnnotateMap.put("ColorSortMain", Utils.asList("main"));
+        sIgnoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
     }
 
     /**
      * 初始化 忽略指定方法参数 final 修饰符
      */
     private static void initIgnoreFinalMap() {
+        sIgnoreFinalMap.put("ColorSortMain", Utils.asList("main"));
+        sIgnoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
     }
 
     /**
      * 初始化 忽略指定方法 static 修饰符
      */
     private static void initIgnoreStaticMap() {
+        sIgnoreStaticMap.put("ColorSortMain.SAXXml", Utils.asList("analysisColorsXml"));
+        sIgnoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
     }
 
     /**
      * 初始化 忽略指定方法 @param 处理
      */
     private static void initIgnoreParamMap() {
+        sIgnoreParamMap.put("ColorSortMain", Utils.asList("main"));
+        sIgnoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
     }
 
     /**
@@ -88,6 +96,7 @@ final class DevStandardConfig {
      * 初始化 忽略指定方法非 public 处理
      */
     private static void initIgnoreUnPublicMap() {
+        sIgnoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asList("OnEnd"));
     }
 
     /**
