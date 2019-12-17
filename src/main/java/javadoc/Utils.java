@@ -92,18 +92,18 @@ public final class Utils {
 
     /**
      * 生成 Map 字符串
-     * @param map {@link HashMap}
+     * @param map     {@link HashMap}
      * @param mapName map 变量名
      * @return 生成指定格式字符串
      */
-    public static String generateMapString(final HashMap<String, ArrayList<String>> map, final String mapName){
+    public static String generateMapString(final HashMap<String, ArrayList<String>> map, final String mapName) {
         StringBuilder builder = new StringBuilder();
         // HashMap 排序
         Map<String, ArrayList<String>> sortHashMap = sortHashMap(map);
         // 格式化字符串
         String format = "%s.put(\"%s\", Utils.asList(%s));";
         // 循环处理
-        for (String className : sortHashMap.keySet()){
+        for (String className : sortHashMap.keySet()) {
             ArrayList<String> lists = sortHashMap.get(className);
             // 格式化追加
             builder.append(String.format(format, mapName, className,

@@ -21,13 +21,13 @@ final class DevBaseConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreAnnotateMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
-        ignoreAnnotateMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onDetach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","onStart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
-        ignoreAnnotateMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","getContentView","contentId","contentView"));
+        ignoreAnnotateMap.put("AbstractDevBaseFragment", Utils.asList("onAttach", "onDetach", "onCreate", "onCreateView", "onHiddenChanged", "setUserVisibleHint", "onStart", "onResume", "onPause", "onStop", "onDestroy", "getContentView", "contentId", "contentView"));
+        ignoreAnnotateMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate", "onStart", "onRestart", "onResume", "onPause", "onStop", "onDestroy", "getContentView", "contentId", "contentView"));
         ignoreAnnotateMap.put("DevBaseActivity", Utils.asList("onClick"));
         ignoreAnnotateMap.put("DevBaseFragment", Utils.asList("onClick"));
-        ignoreAnnotateMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy"));
-        ignoreAnnotateMap.put("DevBaseMVPFragment", Utils.asList("onCreateView","onDestroy"));
-        ignoreAnnotateMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+        ignoreAnnotateMap.put("DevBaseMVPActivity", Utils.asList("onCreate", "onDestroy"));
+        ignoreAnnotateMap.put("DevBaseMVPFragment", Utils.asList("onCreateView", "onDestroy"));
+        ignoreAnnotateMap.put("MVP.Presenter", Utils.asList("attachView", "detachView"));
         return ignoreAnnotateMap;
     }
 
@@ -51,7 +51,7 @@ final class DevBaseConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreStaticMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
-        ignoreStaticMap.put("MVP.Presenter", Utils.asList("attachView","detachView"));
+        ignoreStaticMap.put("MVP.Presenter", Utils.asList("attachView", "detachView"));
         return ignoreStaticMap;
     }
 
@@ -63,13 +63,13 @@ final class DevBaseConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreParamMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
-        ignoreParamMap.put("AbstractDevBaseFragment", Utils.asList("onAttach","onCreate","onCreateView","onHiddenChanged","setUserVisibleHint","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
-        ignoreParamMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
+        ignoreParamMap.put("AbstractDevBaseFragment", Utils.asList("onAttach", "onCreate", "onCreateView", "onHiddenChanged", "setUserVisibleHint", "setPopupWindow", "setPopupWindow", "setDialog", "setDialog", "setDialogFragment", "setDialogFragment"));
+        ignoreParamMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate", "setPopupWindow", "setPopupWindow", "setDialog", "setDialog", "setDialogFragment", "setDialogFragment"));
         ignoreParamMap.put("DevBaseActivity", Utils.asList("onClick"));
         ignoreParamMap.put("DevBaseFragment", Utils.asList("onClick"));
         ignoreParamMap.put("DevBaseMVPActivity", Utils.asList("onCreate"));
         ignoreParamMap.put("DevBaseMVPFragment", Utils.asList("onCreateView"));
-        ignoreParamMap.put("IDevBaseUIOperation", Utils.asList("setPopupWindow","setPopupWindow","setDialog","setDialog","setDialogFragment","setDialogFragment"));
+        ignoreParamMap.put("IDevBaseUIOperation", Utils.asList("setPopupWindow", "setPopupWindow", "setDialog", "setDialog", "setDialogFragment", "setDialogFragment"));
         ignoreParamMap.put("MVP.Presenter", Utils.asList("attachView"));
         return ignoreParamMap;
     }
@@ -93,14 +93,14 @@ final class DevBaseConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreUnPublicMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
-        ignoreUnPublicMap.put("AbstractDevBaseFragment", Utils.asList("printLogPri","printLogPri","layoutInit","isFragmentVisible","onInit"));
-        ignoreUnPublicMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate","onStart","onRestart","onResume","onPause","onStop","onDestroy","printLogPri","printLogPri","layoutInit","isActivityVisible"));
-        ignoreUnPublicMap.put("DevBaseMVPActivity", Utils.asList("onCreate","onDestroy","createPresenter","presenter"));
-        ignoreUnPublicMap.put("DevBaseMVPFragment", Utils.asList("createPresenter","presenter"));
-        ignoreUnPublicMap.put("IDevBaseMethod", Utils.asList("initMethodOrder","initViews","initValues","initListeners","initOtherOperate"));
-        ignoreUnPublicMap.put("IDevBaseUIOperation", Utils.asList("showToast","showToast","getPopupWindow","setPopupWindow","setPopupWindow","getDialog","setDialog","setDialog","getDialogFragment","setDialogFragment","setDialogFragment"));
-        ignoreUnPublicMap.put("IDevBaseViewOperation", Utils.asList("getContentView","contentId","contentView"));
-        ignoreUnPublicMap.put("MVP.IPresenter", Utils.asList("attachView","detachView"));
+        ignoreUnPublicMap.put("AbstractDevBaseFragment", Utils.asList("printLogPri", "printLogPri", "layoutInit", "isFragmentVisible", "onInit"));
+        ignoreUnPublicMap.put("AbstractbsDevBaseActivity", Utils.asList("onCreate", "onStart", "onRestart", "onResume", "onPause", "onStop", "onDestroy", "printLogPri", "printLogPri", "layoutInit", "isActivityVisible"));
+        ignoreUnPublicMap.put("DevBaseMVPActivity", Utils.asList("onCreate", "onDestroy", "createPresenter", "presenter"));
+        ignoreUnPublicMap.put("DevBaseMVPFragment", Utils.asList("createPresenter", "presenter"));
+        ignoreUnPublicMap.put("IDevBaseMethod", Utils.asList("initMethodOrder", "initViews", "initValues", "initListeners", "initOtherOperate"));
+        ignoreUnPublicMap.put("IDevBaseUIOperation", Utils.asList("showToast", "showToast", "getPopupWindow", "setPopupWindow", "setPopupWindow", "getDialog", "setDialog", "setDialog", "getDialogFragment", "setDialogFragment", "setDialogFragment"));
+        ignoreUnPublicMap.put("IDevBaseViewOperation", Utils.asList("getContentView", "contentId", "contentView"));
+        ignoreUnPublicMap.put("MVP.IPresenter", Utils.asList("attachView", "detachView"));
         return ignoreUnPublicMap;
     }
 

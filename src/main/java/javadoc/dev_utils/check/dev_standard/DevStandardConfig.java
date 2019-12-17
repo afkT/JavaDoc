@@ -22,7 +22,7 @@ final class DevStandardConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("ColorSortMain", Utils.asList("main"));
-        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument", "endDocument", "startElement", "endElement", "characters"));
         return ignoreAnnotateMap;
     }
 
@@ -35,7 +35,7 @@ final class DevStandardConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("ColorSortMain", Utils.asList("main"));
-        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
+        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement", "endElement", "characters"));
         return ignoreFinalMap;
     }
 
@@ -48,7 +48,7 @@ final class DevStandardConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("ColorSortMain.SAXXml", Utils.asList("analysisColorsXml"));
-        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument", "endDocument", "startElement", "endElement", "characters"));
         return ignoreStaticMap;
     }
 
@@ -61,7 +61,7 @@ final class DevStandardConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("ColorSortMain", Utils.asList("main"));
-        ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
+        ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement", "endElement", "characters"));
         return ignoreParamMap;
     }
 

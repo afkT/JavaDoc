@@ -8,11 +8,11 @@ import java.util.HashMap;
 
 /**
  * detail: 包目录结构生成
- * @author Ttt
  * <pre>
  *     特殊差异化, 相对 {@link javadoc.dev_utils.assist.PackageCatalog#getFolderLists} 方法
  *     多了个参数 {@link PackageCatalog#getFolderLists} final int layer
  * </pre>
+ * @author Ttt
  */
 final class PackageCatalog {
 

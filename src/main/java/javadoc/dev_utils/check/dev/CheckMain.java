@@ -16,7 +16,7 @@ import java.util.LinkedHashMap;
  */
 public final class CheckMain {
 
-    private CheckMain(){
+    private CheckMain() {
     }
 
     /**
