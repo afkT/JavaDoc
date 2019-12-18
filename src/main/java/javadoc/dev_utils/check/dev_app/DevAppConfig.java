@@ -37,6 +37,9 @@ final class DevAppConfig implements ICheckConfig {
         // =======
 
         ignoreAnnotateMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
+        ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
+        ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
+        ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreAnnotateMap.put("DevCache.xFileOutputStream", Utils.asList("close"));
         ignoreAnnotateMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
         ignoreAnnotateMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
@@ -100,6 +103,9 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("CameraSizeAssist", Utils.asList("setPreviewSize", "setPictureSize", "calcPreviewSize", "calcPictureSize", "calcVideoSize"));
         ignoreFinalMap.put("CameraUtils", Utils.asList("initCamera", "open"));
         ignoreFinalMap.put("CrashUtils", Utils.asList("init", "uncaughtException", "handleException"));
+        ignoreFinalMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
+        ignoreFinalMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
+        ignoreFinalMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreFinalMap.put("DevMediaManager", Utils.asList("onError", "onVideoSizeChanged", "onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete"));
         ignoreFinalMap.put("DevVideoPlayerControl", Utils.asList("surfaceChanged", "surfaceCreated", "surfaceDestroyed", "onBufferingUpdate", "onError", "onVideoSizeChanged"));
         ignoreFinalMap.put("IToastImpl", Utils.asList("filter", "handlerContent"));
@@ -169,6 +175,9 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("CameraSizeAssist", Utils.asList("getCamera", "setPreviewSize", "setPreviewSize", "getPreviewSize", "getPreviewSize", "getPreviewSize", "getPreviewSize", "setPictureSize", "setPictureSize", "getPictureSize", "getPictureSize", "getPictureSize", "getPictureSize", "getPictureSize", "getPictureSize", "getVideoSize", "getVideoSize", "getVideoSize", "getVideoSize", "getVideoSize", "getVideoSize", "calcPreviewSize", "calcPictureSize", "calcVideoSize"));
         ignoreStaticMap.put("ClickUtils.ClickAssist", Utils.asList("isFastDoubleClick", "isFastDoubleClick", "isFastDoubleClick", "isFastDoubleClick", "isFastDoubleClick", "initConfig", "putConfig", "removeConfig", "getConfigTime", "removeRecord", "clearRecord", "setIntervalTime", "reset"));
         ignoreStaticMap.put("CrashUtils", Utils.asList("init", "uncaughtException", "handleException"));
+        ignoreStaticMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
+        ignoreStaticMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
+        ignoreStaticMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreStaticMap.put("DefaultToastStyle", Utils.asList("getGravity", "getXOffset", "getYOffset", "getHorizontalMargin", "getVerticalMargin", "getZ", "getCornerRadius", "getBackgroundTintColor", "getBackground", "getTextColor", "getTextSize", "getMaxLines", "getEllipsize", "getTypeface", "getPadding"));
         ignoreStaticMap.put("DevCache", Utils.asList("put", "put", "getAsString", "put", "put", "getAsJSONObject", "put", "put", "getAsJSONArray", "put", "get", "getAsBinary", "getAsObject", "put", "put", "getAsBitmap", "put", "put", "getAsDrawable", "file", "remove", "clear"));
         ignoreStaticMap.put("DevCache.xFileOutputStream", Utils.asList("close"));
@@ -280,6 +289,9 @@ final class DevAppConfig implements ICheckConfig {
         // =======
 
         ignoreParamMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
+        ignoreParamMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
+        ignoreParamMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
+        ignoreParamMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreParamMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
         ignoreParamMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", Utils.asList("compare"));
