@@ -267,6 +267,7 @@ public final class ApiConfig {
         // ============
 
         sCatelogMap_Other.put("dev", "根目录");
+        sCatelogMap_Other.put(".assist", "常用辅助类封装");
         sCatelogMap_Other.put(".other", "第三方库封装工具类");
         sCatelogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
         sCatelogMap_Other.put(".service", "Service 相关");
