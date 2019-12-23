@@ -251,6 +251,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         ignoreStaticMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         ignoreStaticMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
+        ignoreStaticMap.put("CoordinateUtils.Direction", Utils.asList("getValue"));
         ignoreStaticMap.put("CollectionUtils.ArrayWithTypeToken", Utils.asList("put", "get", "create", "newInstance", "newInstance"));
         ignoreStaticMap.put("ColorUtils.ColorInfo", Utils.asList("getKey", "getValue", "getValueParser", "getValueColor", "getAlpha", "getRed", "getGreen", "getBlue", "getGrayLevel", "getHue", "getSaturation", "getBrightness", "toString", "priConvert"));
         ignoreStaticMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
@@ -453,7 +454,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ColorUtils.ColorInfo", Utils.asList("priConvert", "RGBtoHSB"));
         ignoreUnPublicMap.put("ColorUtils.ColorInfo.Parser", Utils.asList("handleColor"));
         ignoreUnPublicMap.put("ConvertUtils", Utils.asList("toDigit", "toHexChars", "toHexString"));
-        ignoreUnPublicMap.put("CoordinateUtils", Utils.asList("transformLat", "transformLng"));
+        ignoreUnPublicMap.put("CoordinateUtils", Utils.asList("transformLat", "transformLng", "rad"));
         ignoreUnPublicMap.put("Decrypt", Utils.asList("decrypt"));
         ignoreUnPublicMap.put("Encrypt", Utils.asList("encrypt"));
         ignoreUnPublicMap.put("EncryptUtils", Utils.asList("base64Encode", "base64Decode"));
