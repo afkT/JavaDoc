@@ -67,7 +67,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("MultiSelectMapAssist", Utils.asList("clearSelects", "getSelectSize", "getSelects", "putSelects", "putSelects", "isSelect", "isSelectValue", "unselectValue", "unselectValueAll", "isSelect", "isSelectKey", "select", "select", "unselect", "toggle", "getSelectValue", "getSelectValues", "getSelectValuesToReverse", "getSelectKey", "getSelectKeys", "getSelectKeysToReverse"));
         ignoreStaticMap.put("NumberControlAssist", Utils.asList("isMinNumber", "isMinNumber", "isLessThanMinNumber", "isGreaterThanMinNumber", "isMaxNumber", "isMaxNumber", "isLessThanMaxNumber", "isGreaterThanMaxNumber", "getObject", "setObject", "getMinNumber", "setMinNumber", "getMaxNumber", "setMaxNumber", "setMinMaxNumber", "getCurrentNumber", "setCurrentNumber", "setCurrentNumber", "getResetNumber", "setResetNumber", "isAllowNegative", "setAllowNegative", "numberChange", "addNumber", "subtractionNumber", "checkUpdate", "getNumberListener", "setNumberListener"));
         ignoreStaticMap.put("PageAssist", Utils.asList("getPageNum", "getPageNum", "setPageNum", "getPageNumReady", "getPageNumReady", "setPageNumReady", "getPageSize", "getPageSize", "setPageSize", "getTotalRow", "getTotalRow", "setTotalRow", "isLastPage", "isLastPage", "setLastPage", "isFirstPage", "isFirstPage", "isAllowNextPage", "getNextPage", "nextPage", "getNextPageReady", "nextPageReady", "isLessThanPageSize", "reset"));
-        ignoreStaticMap.put("RequestStatusAssist", Utils.asList("getRequestType", "getRequestType", "setRequestType", "equalsRequestType", "getRequestHashCode", "getRequestHashCodeRandom", "equalsHashCode", "getRequestStatus", "getRequestStatus", "setRequestStatus", "isRequestNormal", "isRequestNever", "isRequestIng", "isRequestSuccess", "isRequestFail", "isRequestError", "setRequestNormal", "setRequestNever", "setRequestIng", "setRequestSuccess", "setRequestFail", "setRequestError"));
+        ignoreStaticMap.put("RequestStateAssist", Utils.asList("getRequestType", "getRequestType", "setRequestType", "equalsRequestType", "getRequestHashCode", "getRequestHashCodeRandom", "equalsHashCode", "getRequestState", "getRequestState", "setRequestState", "isRequestNormal", "isRequestNever", "isRequestIng", "isRequestSuccess", "isRequestFail", "isRequestError", "setRequestNormal", "setRequestNever", "setRequestIng", "setRequestSuccess", "setRequestFail", "setRequestError"));
         ignoreStaticMap.put("VariableAssist", Utils.asList("getBooleanVariable", "getObjectVariable"));
         return ignoreStaticMap;
     }
@@ -90,7 +90,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("IImageEngine.BitmapCallBack", Utils.asList("onResponse", "onFailure"));
         ignoreParamMap.put("IImageEngine.DrawableCallBack", Utils.asList("onResponse", "onFailure"));
         ignoreParamMap.put("PageAssist", Utils.asList("setPageNum", "setPageNumReady", "setPageSize", "setTotalRow", "setLastPage"));
-        ignoreParamMap.put("RequestStatusAssist", Utils.asList("setRequestType", "setRequestStatus"));
+        ignoreParamMap.put("RequestStateAssist", Utils.asList("setRequestType", "setRequestState"));
         return ignoreParamMap;
     }
 
@@ -125,7 +125,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IImageEngine.ImageCallBack", Utils.asList("getTranscodeType", "onResponse", "onFailure"));
         ignoreUnPublicMap.put("IJSONEngine", Utils.asList("toJson", "toJson", "fromJson", "fromJson", "fromJson", "fromJson", "isJSON", "isJSONObject", "isJSONArray", "toJsonIndent", "toJsonIndent", "toJsonIndent", "toJsonIndent"));
         ignoreUnPublicMap.put("ILogEngine", Utils.asList("isPrintLog", "d", "e", "e", "e", "w", "i", "v", "wtf", "json", "xml", "dTag", "eTag", "eTag", "eTag", "wTag", "iTag", "vTag", "wtfTag", "jsonTag", "xmlTag"));
-        ignoreUnPublicMap.put("IMultiSelectEdit", Utils.asList("isEditStatus", "setEditStatus", "toggleEditStatus", "selectAll", "clearSelectAll", "inverseSelect", "isSelectAll", "isSelect", "isNotSelect"));
+        ignoreUnPublicMap.put("IMultiSelectEdit", Utils.asList("isEditState", "setEditState", "toggleEditState", "selectAll", "clearSelectAll", "inverseSelect", "isSelectAll", "isSelect", "isNotSelect", "getSelectSize", "getDataCount"));
         ignoreUnPublicMap.put("IMultiSelectToList", Utils.asList("isSelect", "select", "select", "select", "unselect", "unselect", "toggle", "getSelectValues", "getSelectValuesToReverse", "getSelectValue", "getSelectValueToPosition"));
         ignoreUnPublicMap.put("IMultiSelectToMap", Utils.asList("isSelect", "isSelectKey", "select", "select", "unselect", "toggle", "getSelectValue", "getSelectValues", "getSelectValuesToReverse", "getSelectKey", "getSelectKeys", "getSelectKeysToReverse"));
         ignoreUnPublicMap.put("NumberControlAssist", Utils.asList("checkUpdate"));

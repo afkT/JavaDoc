@@ -22,7 +22,7 @@ final class DevOtherConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("AccessibilityListenerService", Utils.asList("onCreate", "onDestroy"));
-        ignoreAnnotateMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
@@ -48,7 +48,7 @@ final class DevOtherConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent"));
-        ignoreFinalMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
         ignoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
@@ -74,7 +74,7 @@ final class DevOtherConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent", "onInterrupt", "onServiceConnected", "onCreate", "onDestroy"));
-        ignoreStaticMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
         ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
@@ -102,7 +102,7 @@ final class DevOtherConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreParamMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
-        ignoreParamMap.put("AppStatusReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform", "updateDiskCacheKey", "blurBitmap"));
         ignoreParamMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop", "updateDiskCacheKey"));
@@ -139,7 +139,7 @@ final class DevOtherConfig implements ICheckConfig {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("AccessibilityListenerService", Utils.asList("onServiceConnected"));
-        ignoreUnPublicMap.put("AppStatusReceiver.AppStatusListener", Utils.asList("onAdded", "onReplaced", "onRemoved"));
+        ignoreUnPublicMap.put("AppStateReceiver.AppStateListener", Utils.asList("onAdded", "onReplaced", "onRemoved"));
         ignoreUnPublicMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged", "onBatteryLow", "onBatteryOkay", "onPowerConnected", "onPowerUsageSummary"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform", "circleCrop"));

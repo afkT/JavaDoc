@@ -42,7 +42,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreAnnotateMap.put("DevCache.xFileOutputStream", Utils.asList("close"));
         ignoreAnnotateMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
-        ignoreAnnotateMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("InactivityTimerAssist.PowerStateReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("KeyValueBean", Utils.asList("toString"));
         ignoreAnnotateMap.put("PreferenceImpl.ComparatorImpl", Utils.asList("compare"));
         ignoreAnnotateMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged", "onSensorChanged"));
@@ -74,7 +74,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo", Utils.asList("toString"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
-
         return ignoreAnnotateMap;
     }
 
@@ -110,7 +109,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("DevVideoPlayerControl", Utils.asList("surfaceChanged", "surfaceCreated", "surfaceDestroyed", "onBufferingUpdate", "onError", "onVideoSizeChanged"));
         ignoreFinalMap.put("IToastImpl", Utils.asList("filter", "handlerContent"));
         ignoreFinalMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
-        ignoreFinalMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("InactivityTimerAssist.PowerStateReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("LocationUtils.CustomLocationListener", Utils.asList("onLocationChanged", "onStatusChanged", "onProviderEnabled", "onProviderDisabled"));
         ignoreFinalMap.put("LoggerPrinter", Utils.asList("logHeaderContent"));
         ignoreFinalMap.put("NetWorkUtils", Utils.asList("isAvailableByPing"));
@@ -138,7 +137,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
         ignoreFinalMap.put("ColorUtils.ColorInfo", Utils.asList("RGBtoHSB"));
         ignoreFinalMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
-
         return ignoreFinalMap;
     }
 
@@ -190,7 +188,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ImageUtils.ImageType", Utils.asList("getValue"));
         ignoreStaticMap.put("InactivityTimerAssist", Utils.asList("onPause", "onResume", "onDestroy", "start", "cancel"));
         ignoreStaticMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
-        ignoreStaticMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("InactivityTimerAssist.PowerStateReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("KeyValueBean", Utils.asList("getKey", "getValue", "toString"));
         ignoreStaticMap.put("KeyguardUtils", Utils.asList("isKeyguardLocked", "isKeyguardSecure", "inKeyguardRestrictedInputMode", "getKeyguardManager", "setKeyguardManager", "disableKeyguard", "reenableKeyguard", "release", "getKeyguardLock", "setKeyguardLock"));
         ignoreStaticMap.put("LocationUtils.CustomLocationListener", Utils.asList("onLocationChanged", "onStatusChanged", "onProviderEnabled", "onProviderDisabled"));
@@ -263,7 +261,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("TimeAverager", Utils.asList("start", "end", "endAndRestart", "average", "print", "clear"));
         ignoreStaticMap.put("TimeCounter", Utils.asList("start", "durationRestart", "duration", "getStartTime"));
         ignoreStaticMap.put("TimeKeeper", Utils.asList("waitForEndAsyn", "waitForEnd"));
-
         return ignoreStaticMap;
     }
 
@@ -294,7 +291,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryUri", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreParamMap.put("InactivityTimerAssist.InactivityAsyncTask", Utils.asList("doInBackground"));
-        ignoreParamMap.put("InactivityTimerAssist.PowerStatusReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("InactivityTimerAssist.PowerStateReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", Utils.asList("compare"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged", "onSensorChanged"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorListener", Utils.asList("onAccuracyChanged", "onSensorChanged"));
@@ -322,7 +319,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         ignoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         ignoreParamMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
-
         return ignoreParamMap;
     }
 
@@ -344,7 +340,6 @@ final class DevAppConfig implements ICheckConfig {
         // ==========
 
         ignoreReturnMap.put("Base64", Utils.asList("decode", "decode", "decode", "encodeToString", "encodeToString", "encode", "encode"));
-
         return ignoreReturnMap;
     }
 
@@ -474,7 +469,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ReflectUtils", Utils.asList("forName", "forName", "getArgsType", "sortConstructors", "newInstance", "getField", "getAccessibleField", "unwrap", "method", "exactMethod", "similarMethod", "sortMethods", "isSimilarSignature", "match", "accessible", "property", "wrapper"));
         ignoreUnPublicMap.put("TimeKeeper.OnEndCallback", Utils.asList("onEnd"));
         ignoreUnPublicMap.put("ZipUtils", Utils.asList("zipFile", "unzipChildFile"));
-
         return ignoreUnPublicMap;
     }
 
@@ -501,7 +495,6 @@ final class DevAppConfig implements ICheckConfig {
 
         ignoreModifierVariableMap.put("Base64", Utils.asList("        int tailLen;"));
         ignoreModifierVariableMap.put("Base64.Encoder", Utils.asList("    int tailLen;"));
-
         return ignoreModifierVariableMap;
     }
 
