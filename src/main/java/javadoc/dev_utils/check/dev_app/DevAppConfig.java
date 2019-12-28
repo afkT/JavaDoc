@@ -36,6 +36,7 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
+        ignoreAnnotateMap.put("ActivityUtils.ResultActivity", Utils.asList("onCreate", "onActivityResult", "onDestroy"));
         ignoreAnnotateMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
@@ -96,6 +97,7 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
+        ignoreFinalMap.put("ActivityUtils.ResultActivity", Utils.asList("onCreate", "onActivityResult"));
         ignoreFinalMap.put("AutoFocusAssist", Utils.asList("onAutoFocus"));
         ignoreFinalMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
         ignoreFinalMap.put("BitmapUtils", Utils.asList("combineToCenter", "combineToSameSize", "combineToSameSize"));
@@ -161,6 +163,7 @@ final class DevAppConfig implements ICheckConfig {
         // =======
 
         ignoreStaticMap.put("ActivityUtils", Utils.asList("getActivityStacks", "addActivity", "removeActivity", "removeActivity", "currentActivity", "finishActivity", "existActivitys", "finishActivity", "finishActivity", "finishAllActivityToIgnore", "finishAllActivityToIgnore", "finishAllActivity", "appExit", "restartApplication"));
+        ignoreStaticMap.put("ActivityUtils.ResultActivity", Utils.asList("onCreate", "onActivityResult", "onDestroy"));
         ignoreStaticMap.put("AnalysisRecordUtils.FileInfo", Utils.asList("getStoragePath", "getFileName", "getFileFunction", "getFileIntervalTime", "getFolderName", "isHandler", "setHandler", "getLogPath", "getIntervalTimeFolder"));
         ignoreStaticMap.put("ApkInfoItem", Utils.asList("getAppInfoBean", "getListKeyValues", "getAppMD5", "getAppSHA1", "getAppSHA256", "getMinSdkVersion", "getTargetSdkVersion", "getApkLength", "getX509Certificate", "getNotBefore", "getNotAfter", "isEffective", "getCertPrincipal", "getCertVersion", "getCertSigalgname", "getCertSigalgoid", "getCertSerialnumber", "getCertDercode"));
         ignoreStaticMap.put("AppInfoBean", Utils.asList("getAppPackName", "getAppName", "getAppIcon", "getAppType", "getVersionCode", "getVersionName", "getFirstInstallTime", "getLastUpdateTime", "getSourceDir", "getApkSize"));
@@ -286,6 +289,7 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
+        ignoreParamMap.put("ActivityUtils.ResultActivity", Utils.asList("onCreate", "onActivityResult"));
         ignoreParamMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfo", Utils.asList("getResult", "getProjection", "getSelection", "getSelectionArgs"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfoUri", Utils.asList("getSelection", "getSelectionArgs"));
@@ -371,6 +375,8 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
+        ignoreUnPublicMap.put("ActivityUtils.ResultActivity", Utils.asList("start", "onCreate", "onActivityResult", "onDestroy"));
+        ignoreUnPublicMap.put("ActivityUtils.ResultCallback", Utils.asList("onStartActivityForResult", "onActivityResult"));
         ignoreUnPublicMap.put("AnalysisRecordUtils", Utils.asList("saveLogRecord", "splitLog", "handlerDeviceInfo"));
         ignoreUnPublicMap.put("AnalysisRecordUtils.CallBack", Utils.asList("callback"));
         ignoreUnPublicMap.put("ApkInfoItem", Utils.asList("obtain"));
