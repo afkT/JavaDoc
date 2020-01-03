@@ -162,7 +162,7 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
-        ignoreStaticMap.put("ActivityUtils", Utils.asList("getActivityStacks", "addActivity", "removeActivity", "removeActivity", "currentActivity", "finishActivity", "existActivitys", "finishActivity", "finishActivity", "finishAllActivityToIgnore", "finishAllActivityToIgnore", "finishAllActivity", "appExit", "restartApplication"));
+        ignoreStaticMap.put("ActivityUtils", Utils.asList("getActivityStacks", "addActivity", "removeActivity", "removeActivity", "currentActivity", "finishActivity", "existActivitys", "finishActivity", "finishActivity", "finishAllActivityToIgnore", "finishAllActivityToIgnore", "finishAllActivity", "exitApplication", "restartApplication"));
         ignoreStaticMap.put("ActivityUtils.ResultActivity", Utils.asList("onCreate", "onActivityResult", "onDestroy"));
         ignoreStaticMap.put("AnalysisRecordUtils.FileInfo", Utils.asList("getStoragePath", "getFileName", "getFileFunction", "getFileIntervalTime", "getFolderName", "isHandler", "setHandler", "getLogPath", "getIntervalTimeFolder"));
         ignoreStaticMap.put("ApkInfoItem", Utils.asList("getAppInfoBean", "getListKeyValues", "getAppMD5", "getAppSHA1", "getAppSHA256", "getMinSdkVersion", "getTargetSdkVersion", "getApkLength", "getX509Certificate", "getNotBefore", "getNotAfter", "isEffective", "getCertPrincipal", "getCertVersion", "getCertSigalgname", "getCertSigalgoid", "getCertSerialnumber", "getCertDercode"));
