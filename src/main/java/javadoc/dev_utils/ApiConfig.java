@@ -42,7 +42,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.8.6";
+    public static final String DEV_APP_VERSION = "1.8.7";
 
     // ===========
     // = DevJava =
@@ -325,6 +325,9 @@ public final class ApiConfig {
         // =======
         // = APP =
         // =======
+
+        sFilterMethodMap.put("ActivityUtils.java", new String[]{"onStartActivityForResult",
+                "onActivityResult", "start", "onCreate", "onDestroy"});
 
         sFilterMethodMap.put("PermissionUtils.java", new String[]{"start",
                 "onCreate", "onGranted", "onDenied"});
