@@ -260,6 +260,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("FileBreadthFirstSearchUtils", Utils.asList("setSearchHandler", "getQueueSameTimeNumber", "setQueueSameTimeNumber", "isRunning", "stop", "isStop", "getStartTime", "getEndTime", "getDelayTime", "setDelayTime", "query", "queryFile", "whileQueue"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils.FileItem", Utils.asList("put"));
         ignoreStaticMap.put("FileDepthFirstSearchUtils", Utils.asList("setSearchHandler", "isRunning", "stop", "isStop", "getStartTime", "getEndTime", "query", "queryFile"));
+        ignoreStaticMap.put("FileUtils.FileList", Utils.asList("getFile", "getSubFiles"));
         ignoreStaticMap.put("ReflectUtils", Utils.asList("newInstance", "newInstance", "getArgsType", "sortConstructors", "newInstance", "field", "field", "getField", "getAccessibleField", "unwrap", "setEnumVal", "method", "method", "method", "exactMethod", "similarMethod", "sortMethods", "isSimilarSignature", "match", "accessible", "proxy", "property", "type", "wrapper", "get", "hashCode", "equals", "toString"));
         ignoreStaticMap.put("TimeAverager", Utils.asList("start", "end", "endAndRestart", "average", "print", "clear"));
         ignoreStaticMap.put("TimeCounter", Utils.asList("start", "durationRestart", "duration", "getStartTime"));
