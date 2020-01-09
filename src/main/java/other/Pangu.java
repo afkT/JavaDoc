@@ -106,7 +106,7 @@ public class Pangu {
             text = bcMatcher.replaceAll("$1 $2");
         }
 
-        // 不处理括号空格
+//        // 不处理括号空格
 //        Matcher fixBracketMatcher = FIX_BRACKET.matcher(text);
 //        text = fixBracketMatcher.replaceAll("$1$3$5");
 
