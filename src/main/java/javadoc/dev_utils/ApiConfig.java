@@ -42,7 +42,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.8.7";
+    public static final String DEV_APP_VERSION = "1.8.8";
 
     // ===========
     // = DevJava =
@@ -57,7 +57,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.0.7";
+    public static final String DEV_JAVA_VERSION = "1.0.8";
 
     // =============
     // = DevAssist =
@@ -402,7 +402,7 @@ public final class ApiConfig {
         sFilterMethodMap.put("FileDepthFirstSearchUtils.java",
                 new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
 
-        sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace"});
+        sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace", "getSubFiles"});
         sFilterMethodMap.put("FileRecordUtils.java", new String[]{"callback"});
 
         sFilterMethodMap.put("HttpURLConnectionUtils.java",
