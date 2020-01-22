@@ -42,7 +42,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.8.8";
+    public static final String DEV_APP_VERSION = "1.8.9";
 
     // ===========
     // = DevJava =
@@ -57,7 +57,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.0.8";
+    public static final String DEV_JAVA_VERSION = "1.0.9";
 
     // =============
     // = DevAssist =
@@ -74,9 +74,9 @@ public final class ApiConfig {
     // DevAssist 版本号
     public static final String DEV_ASSIST_VERSION = "1.0.3";
 
-    // =============
+    // ============
     // = DevOther =
-    // =============
+    // ============
 
     // 包目录名
     public static final String DEV_OTHER_PACKAGE = "dev";
@@ -100,9 +100,9 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
 
-    // =============
+    // ===========
     // = DevBase =
-    // =============
+    // ===========
 
     // 包目录名
     public static final String DEV_BASE_PACKAGE = "dev";
@@ -113,9 +113,9 @@ public final class ApiConfig {
     // DevBase GitHub 项目文件路径
     public static final String DEV_BASE_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev";
 
-    // =============
+    // ===============
     // = DevStandard =
-    // =============
+    // ===============
 
     // 包目录名
     public static final String DEV_STANDARD_PACKAGE = "dev";
