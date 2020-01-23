@@ -75,6 +75,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo", Utils.asList("toString"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
+        ignoreAnnotateMap.put("TypeUtils.ParameterizedTypeImpl", Utils.asList("getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"));
         return ignoreAnnotateMap;
     }
 
@@ -139,6 +140,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("Base64Cipher", Utils.asList("decrypt", "encrypt"));
         ignoreFinalMap.put("ColorUtils.ColorInfo", Utils.asList("RGBtoHSB"));
         ignoreFinalMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
+        ignoreFinalMap.put("TypeUtils.ParameterizedTypeImpl", Utils.asList("equals"));
         return ignoreFinalMap;
     }
 
@@ -265,6 +267,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("TimeAverager", Utils.asList("start", "end", "endAndRestart", "average", "print", "clear"));
         ignoreStaticMap.put("TimeCounter", Utils.asList("start", "durationRestart", "duration", "getStartTime"));
         ignoreStaticMap.put("TimeKeeper", Utils.asList("waitForEndAsyn", "waitForEnd"));
+        ignoreStaticMap.put("TypeUtils.ParameterizedTypeImpl", Utils.asList("getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"));
         return ignoreStaticMap;
     }
 
@@ -324,6 +327,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         ignoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
         ignoreParamMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
+        ignoreParamMap.put("TypeUtils.ParameterizedTypeImpl", Utils.asList("equals"));
         return ignoreParamMap;
     }
 
