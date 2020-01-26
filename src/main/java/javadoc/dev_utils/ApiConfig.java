@@ -410,6 +410,8 @@ public final class ApiConfig {
 
         sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
 
+        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
+
         sFilterMethodMap.put("CollectionUtils.java", new String[]{"put", "create"});
 
         // =============
