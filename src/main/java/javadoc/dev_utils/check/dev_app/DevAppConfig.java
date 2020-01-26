@@ -326,6 +326,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Base64.Coder", Utils.asList("process", "maxOutputSize"));
         ignoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize", "process"));
         ignoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize", "process"));
+        ignoreParamMap.put("ClassUtils", Utils.asList("getClass", "getClass"));
         ignoreParamMap.put("ColorUtils.ColorInfo.ColorParser", Utils.asList("handleColor"));
         ignoreParamMap.put("TypeUtils.ParameterizedTypeImpl", Utils.asList("equals"));
         return ignoreParamMap;
