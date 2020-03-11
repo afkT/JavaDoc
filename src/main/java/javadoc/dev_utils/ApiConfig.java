@@ -42,7 +42,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.9.0";
+    public static final String DEV_APP_VERSION = "1.9.1";
 
     // ===========
     // = DevJava =
@@ -57,7 +57,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.1.0";
+    public static final String DEV_JAVA_VERSION = "1.1.1";
 
     // =============
     // = DevAssist =
@@ -94,11 +94,11 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_WIDGET_PACKAGE = "dev";
     // DevWidget API 文件保存路径
-    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
+    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "Widget/DevWidget/";
     // DevWidget 文件路径
-    public static final String DEV_WIDGET_PATH = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
+    public static final String DEV_WIDGET_PATH = LOCAL_PATH + "/DevUtils/lib/Widget/DevWidget/src/main/java/dev/";
     // DevWidget GitHub 项目文件路径
-    public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
+    public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/Widget/DevWidget/src/main/java/dev";
 
     // ===========
     // = DevBase =
@@ -278,7 +278,9 @@ public final class ApiConfig {
         // =============
 
         sCatelogMap_Widget.put("dev", "根目录");
-        sCatelogMap_Widget.put(".widget", "自定义 View 包目录");
+        sCatelogMap_Widget.put(".widget", "自定义 View 根目录");
+        sCatelogMap_Widget.put(".widget.adjust", "自动调节高度 View");
+        sCatelogMap_Widget.put(".widget.custom", "自定义 View");
     }
 
     /**
@@ -420,6 +422,11 @@ public final class ApiConfig {
 
         sFilterMethodMap_Assist.put("EditTextWatcherAssist.java", new String[]{"onTextChanged"});
         sFilterMethodMap_Assist.put("NumberControlAssist.java", new String[]{"onPrepareChanged", "onNumberChanged"});
+
+        // =============
+        // = DevWidget =
+        // =============
+
     }
 
     /**
