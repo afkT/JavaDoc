@@ -99,6 +99,8 @@ public final class ApiConfig {
     public static final String DEV_WIDGET_PATH = LOCAL_PATH + "/DevUtils/lib/Widget/DevWidget/src/main/java/dev/";
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/Widget/DevWidget/src/main/java/dev";
+    // DevWidget 版本号
+    public static final String DEV_WIDGET_VERSION = "1.0.0";
 
     // ===========
     // = DevBase =

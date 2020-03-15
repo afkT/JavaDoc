@@ -25,22 +25,22 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreAnnotateMap.put("AdjustHeightListView", Utils.asList("onMeasure"));
         ignoreAnnotateMap.put("AdjustHeightRecyclerView", Utils.asList("onMeasure"));
         ignoreAnnotateMap.put("AdjustHeightWebView", Utils.asList("onMeasure"));
-        ignoreAnnotateMap.put("ControlSlideGallery", Utils.asList("onFling", "onTouchEvent"));
-        ignoreAnnotateMap.put("ControlSlideViewPager", Utils.asList("onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("ControlSlideViewPager.OnDirectionListener", Utils.asList("onPageScrolled", "onPageScrollStateChanged"));
-        ignoreAnnotateMap.put("CustomHorizontalScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("CustomNestedScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("CustomProgressBar", Utils.asList("onDraw"));
-        ignoreAnnotateMap.put("CustomRecyclerView", Utils.asList("onScrolled", "onScrollStateChanged", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("CustomScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("CustomWebView", Utils.asList("onScrollChanged", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreAnnotateMap.put("LineTextView", Utils.asList("onMeasure", "onDraw"));
-        ignoreAnnotateMap.put("MaxHeightScrollView", Utils.asList("onMeasure"));
-        ignoreAnnotateMap.put("RightClearEditText", Utils.asList("setCompoundDrawables", "onTouchEvent", "finalize"));
+        ignoreAnnotateMap.put("CustomGallery", Utils.asList("onMeasure","onFling","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomHorizontalScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomNestedScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomRecyclerView", Utils.asList("onMeasure","onScrolled","onScrollStateChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomViewPager", Utils.asList("onMeasure","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("CustomViewPager.OnDirectionListener", Utils.asList("onPageScrolled","onPageScrollStateChanged"));
+        ignoreAnnotateMap.put("CustomWebView", Utils.asList("onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("LimitLayout", Utils.asList("onMeasure"));
+        ignoreAnnotateMap.put("LineTextView", Utils.asList("onDraw"));
+        ignoreAnnotateMap.put("LoadProgressBar", Utils.asList("onDraw"));
+        ignoreAnnotateMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","finalize"));
         ignoreAnnotateMap.put("ScanShapeView", Utils.asList("onDraw"));
         ignoreAnnotateMap.put("ScanShapeView.CornerEffect", Utils.asList("getRadius"));
-        ignoreAnnotateMap.put("SignView", Utils.asList("onDraw", "onTouchEvent"));
-        ignoreAnnotateMap.put("WrapView", Utils.asList("onMeasure", "onLayout"));
+        ignoreAnnotateMap.put("SignView", Utils.asList("onDraw","onTouchEvent"));
+        ignoreAnnotateMap.put("WrapView", Utils.asList("onMeasure","onLayout"));
         return ignoreAnnotateMap;
     }
 
@@ -56,23 +56,20 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("AdjustHeightListView", Utils.asList("onMeasure"));
         ignoreFinalMap.put("AdjustHeightRecyclerView", Utils.asList("onMeasure"));
         ignoreFinalMap.put("AdjustHeightWebView", Utils.asList("onMeasure"));
-        ignoreFinalMap.put("ControlSlideGallery", Utils.asList("onFling", "onTouchEvent", "isScrollingLeft", "setSlide"));
-        ignoreFinalMap.put("ControlSlideViewPager", Utils.asList("onTouchEvent", "onInterceptTouchEvent", "setSlide"));
-        ignoreFinalMap.put("CustomHorizontalScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "setSlide", "setSlideListener", "setScrollCallBack"));
-        ignoreFinalMap.put("CustomNestedScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "setSlide", "setSlideListener", "setScrollCallBack"));
-        ignoreFinalMap.put("CustomProgressBar", Utils.asList("onDraw", "drawProgressText", "drawProgressText", "calcTextSizeToWidth", "setMax", "setProgress", "setProgressStyle", "setProgressColor", "setOuterRingColor", "setInsideCircleWidth", "setOuterRingWidth", "setCanvasNumber", "setNumberTextSize", "setNumberTextColor"));
-        ignoreFinalMap.put("CustomRecyclerView", Utils.asList("onScrolled", "onScrollStateChanged", "onTouchEvent", "onInterceptTouchEvent", "setSlide", "setSlideListener", "setScrollCallBack"));
-        ignoreFinalMap.put("CustomScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "setSlide", "setSlideListener", "setScrollCallBack"));
-        ignoreFinalMap.put("CustomWebView", Utils.asList("onScrollChanged", "onTouchEvent", "onInterceptTouchEvent", "setSlide", "setSlideListener", "setScrollCallBack"));
-        ignoreFinalMap.put("LineTextView", Utils.asList("onMeasure", "onDraw", "setNewLineCallBack"));
-        ignoreFinalMap.put("MaxHeightScrollView", Utils.asList("onMeasure", "setMaxHeight"));
-        ignoreFinalMap.put("RightClearEditText", Utils.asList("setCompoundDrawables", "onTouchEvent", "setDrawRightIcon", "setRightDrawable", "setTextWatcher", "beforeTextChanged", "onTextChanged", "afterTextChanged"));
-        ignoreFinalMap.put("ScanShapeView", Utils.asList("onDraw", "setShapeType", "setCornerEffect", "setRegion", "setRegion", "setRegion", "getRegion", "setBorderMargin", "setBorderColor", "setBorderWidth", "setDrawBorder", "setDrawBackground", "setBGColor", "setDrawAnim", "setAutoAnim", "setBorderToSquare", "setBorderWidthToSquare", "setTriAngleLength", "setSpecialToSquare", "setLineDurationToSquare", "setBitmapToSquare", "setLineMarginTopToSquare", "setLineMarginLeftToSquare", "setLineColorToSquare", "setLineWidthToHexagon", "setLineMarginToHexagon", "setLineAnimDirection", "setLineColorToHexagon", "setBitmapToAnnulus", "setLineColorToAnnulus", "setLineOffsetSpeedToAnnulus", "setAnnulusDraws", "setAnnulusColors", "setAnnulusLengths", "setAnnulusWidths", "setAnnulusMargins", "sin", "calcShapeRegion", "makeShape", "makeBackground", "makeAnim", "drawAnim", "resetAnim", "animSwitch"));
-        ignoreFinalMap.put("SignView", Utils.asList("onDraw", "onTouchEvent", "setPaint"));
-        ignoreFinalMap.put("StateLayout", Utils.asList("setSize", "setType", "setState", "setState", "toggleStateView", "getView", "insert", "insert", "remove", "setOnStateChanged", "setBuilder", "insertView", "insertView", "removeView"));
-        ignoreFinalMap.put("StateLayout.GlobalBuilder", Utils.asList("insert", "insert", "remove"));
-        ignoreFinalMap.put("StateLayout.State", Utils.asList("getState"));
-        ignoreFinalMap.put("WrapView", Utils.asList("onMeasure", "onLayout", "setMaxLine", "setRowTopMargin", "setViewLeftMargin", "setRowFristLeftMargin", "setRowViewMargin"));
+        ignoreFinalMap.put("CustomGallery", Utils.asList("initAttrs","onMeasure","onFling","onTouchEvent","onInterceptTouchEvent","isScrollingLeft","setMaxWidth","setMaxHeight","setSlide"));
+        ignoreFinalMap.put("CustomHorizontalScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallBack"));
+        ignoreFinalMap.put("CustomNestedScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallBack"));
+        ignoreFinalMap.put("CustomRecyclerView", Utils.asList("initAttrs","onMeasure","onScrolled","onScrollStateChanged","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallBack"));
+        ignoreFinalMap.put("CustomScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallBack"));
+        ignoreFinalMap.put("CustomViewPager", Utils.asList("initAttrs","onMeasure","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide"));
+        ignoreFinalMap.put("CustomWebView", Utils.asList("initAttrs","onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallBack"));
+        ignoreFinalMap.put("LimitLayout", Utils.asList("initAttrs","onMeasure","setMaxWidth","setMaxHeight"));
+        ignoreFinalMap.put("LineTextView", Utils.asList("onDraw","setNewLineCallBack"));
+        ignoreFinalMap.put("LoadProgressBar", Utils.asList("initAttrs","onDraw","drawProgressText","drawProgressText","setMax","setProgress","setProgressColor","setOuterRingColor","setInsideCircleWidth","setOuterRingWidth","setCanvasNumber","setNumberTextSize","setNumberTextColor","setProgressStyle"));
+        ignoreFinalMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","setRangeMultiple","setDrawRightIcon","setRightIcon","setTextWatcher","init"));
+        ignoreFinalMap.put("ScanShapeView", Utils.asList("onDraw","setShapeType","setCornerEffect","setRegion","setRegion","setRegion","getRegion","setBorderMargin","setBorderColor","setBorderWidth","setDrawBorder","setDrawBackground","setBGColor","setDrawAnim","setAutoAnim","setBorderToSquare","setBorderWidthToSquare","setTriAngleLength","setSpecialToSquare","setLineDurationToSquare","setBitmapToSquare","setLineMarginTopToSquare","setLineMarginLeftToSquare","setLineColorToSquare","setLineWidthToHexagon","setLineMarginToHexagon","setLineAnimDirection","setLineColorToHexagon","setBitmapToAnnulus","setLineColorToAnnulus","setLineOffsetSpeedToAnnulus","setAnnulusDraws","setAnnulusColors","setAnnulusLengths","setAnnulusWidths","setAnnulusMargins","sin","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","animSwitch"));
+        ignoreFinalMap.put("SignView", Utils.asList("onDraw","onTouchEvent","_resetCanvas","setPath","setPaint","setDrawCallBack"));
+        ignoreFinalMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","setMaxLine","setRowTopMargin","setViewLeftMargin","setRowFristLeftMargin","setRowViewMargin"));
         return ignoreFinalMap;
     }
 
@@ -88,24 +85,21 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("AdjustHeightListView", Utils.asList("onMeasure"));
         ignoreStaticMap.put("AdjustHeightRecyclerView", Utils.asList("onMeasure"));
         ignoreStaticMap.put("AdjustHeightWebView", Utils.asList("onMeasure"));
-        ignoreStaticMap.put("ControlSlideGallery", Utils.asList("onFling", "onTouchEvent", "isScrollingLeft", "isSlide", "setSlide", "toggleSlide"));
-        ignoreStaticMap.put("ControlSlideViewPager", Utils.asList("onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide"));
-        ignoreStaticMap.put("CustomHorizontalScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide", "isSlideListener", "setSlideListener", "setScrollCallBack"));
-        ignoreStaticMap.put("CustomNestedScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide", "isSlideListener", "setSlideListener", "setScrollCallBack"));
-        ignoreStaticMap.put("CustomProgressBar", Utils.asList("init", "onDraw", "drawProgressText", "drawProgressText", "calcTextSizeToWidth", "reset", "getMax", "setMax", "getProgress", "setProgress", "getProgressStyle", "setProgressStyle", "getProgressColor", "setProgressColor", "getOuterRingColor", "setOuterRingColor", "getInsideCircleWidth", "setInsideCircleWidth", "getOuterRingWidth", "setOuterRingWidth", "isCanvasNumber", "setCanvasNumber", "getNumberTextSize", "setNumberTextSize", "getNumberTextColor", "setNumberTextColor"));
-        ignoreStaticMap.put("CustomRecyclerView", Utils.asList("onScrolled", "onScrollStateChanged", "onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide", "isSlideListener", "setSlideListener", "setScrollCallBack"));
-        ignoreStaticMap.put("CustomScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide", "isSlideListener", "setSlideListener", "setScrollCallBack"));
-        ignoreStaticMap.put("CustomWebView", Utils.asList("onScrollChanged", "onTouchEvent", "onInterceptTouchEvent", "isSlide", "setSlide", "toggleSlide", "isSlideListener", "setSlideListener", "setScrollCallBack"));
-        ignoreStaticMap.put("LineTextView", Utils.asList("onMeasure", "onDraw", "isNewLine", "setNewLineCallBack"));
-        ignoreStaticMap.put("MaxHeightScrollView", Utils.asList("onMeasure", "getMaxHeight", "setMaxHeight"));
-        ignoreStaticMap.put("RightClearEditText", Utils.asList("init", "drawableOperate", "setCompoundDrawables", "onTouchEvent", "finalize", "isDrawRightIcon", "setDrawRightIcon", "setRightDrawable", "setTextWatcher", "beforeTextChanged", "onTextChanged", "afterTextChanged"));
-        ignoreStaticMap.put("ScanShapeView", Utils.asList("init", "handlerCornerPathEffect", "onDraw", "destroy", "getShapeType", "setShapeType", "getCornerRadius", "setCornerEffect", "setRegion", "setRegion", "setRegion", "getRegionLeft", "getRegionTop", "getRegionWidth", "getRegionHeight", "getRegion", "getRegion", "getRegionParent", "getBorderMargin", "setBorderMargin", "getBorderColor", "setBorderColor", "getBorderWidth", "setBorderWidth", "isDrawBorder", "setDrawBorder", "isDrawBackground", "setDrawBackground", "getBGColor", "setBGColor", "isDrawAnim", "setDrawAnim", "isAutoAnim", "setAutoAnim", "getBorderToSquare", "setBorderToSquare", "getBorderWidthToSquare", "setBorderWidthToSquare", "getTriAngleLength", "setTriAngleLength", "isSpecialToSquare", "setSpecialToSquare", "getLineDurationToSquare", "setLineDurationToSquare", "getBitmapToSquare", "setBitmapToSquare", "getLineMarginTopToSquare", "setLineMarginTopToSquare", "getLineMarginLeftToSquare", "setLineMarginLeftToSquare", "getLineColorToSquare", "setLineColorToSquare", "getLineWidthToHexagon", "setLineWidthToHexagon", "getLineMarginToHexagon", "setLineMarginToHexagon", "isLineAnimDirection", "setLineAnimDirection", "getLineColorToHexagon", "setLineColorToHexagon", "getBitmapToAnnulus", "setBitmapToAnnulus", "getLineColorToAnnulus", "setLineColorToAnnulus", "getLineOffsetSpeedToAnnulus", "setLineOffsetSpeedToAnnulus", "getAnnulusDraws", "setAnnulusDraws", "getAnnulusColors", "setAnnulusColors", "getAnnulusLengths", "setAnnulusLengths", "getAnnulusWidths", "setAnnulusWidths", "getAnnulusMargins", "setAnnulusMargins", "refPaintToAnnulus", "sin", "getRegionMarginLeft", "getRegionMarginTop", "calcShapeRegion", "calcShapeRegion", "makeShape", "makeBackground", "makeAnim", "drawAnim", "resetAnim", "startAnim", "stopAnim", "animSwitch", "isAnimRunning", "refLineColorToSquare", "refLineColorToHexagon", "refLineColorToAnnulus", "initAnim"));
+        ignoreStaticMap.put("CustomGallery", Utils.asList("initAttrs","onMeasure","onFling","onTouchEvent","onInterceptTouchEvent","isScrollingLeft","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
+        ignoreStaticMap.put("CustomHorizontalScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallBack"));
+        ignoreStaticMap.put("CustomNestedScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallBack"));
+        ignoreStaticMap.put("CustomRecyclerView", Utils.asList("initAttrs","onMeasure","onScrolled","onScrollStateChanged","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallBack"));
+        ignoreStaticMap.put("CustomScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallBack"));
+        ignoreStaticMap.put("CustomViewPager", Utils.asList("initAttrs","onMeasure","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
+        ignoreStaticMap.put("CustomWebView", Utils.asList("initAttrs","onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallBack"));
+        ignoreStaticMap.put("LimitLayout", Utils.asList("initAttrs","onMeasure","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight"));
+        ignoreStaticMap.put("LineTextView", Utils.asList("onDraw","isNewLine","setNewLineCallBack"));
+        ignoreStaticMap.put("LoadProgressBar", Utils.asList("initAttrs","init","onDraw","drawProgressText","drawProgressText","reset","getMax","setMax","getProgress","setProgress","getProgressColor","setProgressColor","getOuterRingColor","setOuterRingColor","getInsideCircleWidth","setInsideCircleWidth","getOuterRingWidth","setOuterRingWidth","isCanvasNumber","setCanvasNumber","getNumberTextSize","setNumberTextSize","getNumberTextColor","setNumberTextColor","getProgressStyle","setProgressStyle"));
+        ignoreStaticMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","finalize","getRangeMultiple","setRangeMultiple","isDrawRightIcon","setDrawRightIcon","getRightIcon","setRightIcon","setTextWatcher","init","drawOperate"));
+        ignoreStaticMap.put("ScanShapeView", Utils.asList("init","handlerCornerPathEffect","onDraw","destroy","getShapeType","setShapeType","getCornerRadius","setCornerEffect","setRegion","setRegion","setRegion","getRegionLeft","getRegionTop","getRegionWidth","getRegionHeight","getRegion","getRegion","getRegionParent","getBorderMargin","setBorderMargin","getBorderColor","setBorderColor","getBorderWidth","setBorderWidth","isDrawBorder","setDrawBorder","isDrawBackground","setDrawBackground","getBGColor","setBGColor","isDrawAnim","setDrawAnim","isAutoAnim","setAutoAnim","getBorderToSquare","setBorderToSquare","getBorderWidthToSquare","setBorderWidthToSquare","getTriAngleLength","setTriAngleLength","isSpecialToSquare","setSpecialToSquare","getLineDurationToSquare","setLineDurationToSquare","getBitmapToSquare","setBitmapToSquare","getLineMarginTopToSquare","setLineMarginTopToSquare","getLineMarginLeftToSquare","setLineMarginLeftToSquare","getLineColorToSquare","setLineColorToSquare","getLineWidthToHexagon","setLineWidthToHexagon","getLineMarginToHexagon","setLineMarginToHexagon","isLineAnimDirection","setLineAnimDirection","getLineColorToHexagon","setLineColorToHexagon","getBitmapToAnnulus","setBitmapToAnnulus","getLineColorToAnnulus","setLineColorToAnnulus","getLineOffsetSpeedToAnnulus","setLineOffsetSpeedToAnnulus","getAnnulusDraws","setAnnulusDraws","getAnnulusColors","setAnnulusColors","getAnnulusLengths","setAnnulusLengths","getAnnulusWidths","setAnnulusWidths","getAnnulusMargins","setAnnulusMargins","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","startAnim","stopAnim","animSwitch","isAnimRunning","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
         ignoreStaticMap.put("ScanShapeView.CornerEffect", Utils.asList("getRadius"));
-        ignoreStaticMap.put("SignView", Utils.asList("onDraw", "onTouchEvent", "setPaint"));
-        ignoreStaticMap.put("StateLayout", Utils.asList("getSize", "setSize", "getType", "setType", "getState", "setState", "setState", "toggleStateView", "getView", "insert", "insert", "remove", "getStateChanged", "setOnStateChanged", "reset", "init", "insertView", "insertView", "removeView"));
-        ignoreStaticMap.put("StateLayout.GlobalBuilder", Utils.asList("insert", "insert", "remove"));
-        ignoreStaticMap.put("StateLayout.State", Utils.asList("getValue"));
-        ignoreStaticMap.put("WrapView", Utils.asList("onMeasure", "onLayout", "calc", "refreshDraw", "getRowLine", "getMaxLine", "setMaxLine", "setRowTopMargin", "setViewLeftMargin", "setRowFristLeftMargin", "setRowViewMargin"));
+        ignoreStaticMap.put("SignView", Utils.asList("onDraw","onTouchEvent","_resetCanvas","clearCanvas","snapshotByView","getPath","setPath","getPaint","setPaint","setDrawCallBack"));
+        ignoreStaticMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","calc","refreshDraw","getRowLine","getMaxLine","setMaxLine","getRowTopMargin","setRowTopMargin","getViewLeftMargin","setViewLeftMargin","getRowFristLeftMargin","setRowFristLeftMargin","setRowViewMargin"));
         return ignoreStaticMap;
     }
 
@@ -121,21 +115,21 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreParamMap.put("AdjustHeightListView", Utils.asList("onMeasure"));
         ignoreParamMap.put("AdjustHeightRecyclerView", Utils.asList("onMeasure"));
         ignoreParamMap.put("AdjustHeightWebView", Utils.asList("onMeasure"));
-        ignoreParamMap.put("ControlSlideGallery", Utils.asList("onFling", "onTouchEvent"));
-        ignoreParamMap.put("ControlSlideViewPager", Utils.asList("onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("ControlSlideViewPager.OnDirectionListener", Utils.asList("onPageScrolled", "onPageScrollStateChanged"));
-        ignoreParamMap.put("CustomHorizontalScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("CustomNestedScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("CustomProgressBar", Utils.asList("onDraw"));
-        ignoreParamMap.put("CustomRecyclerView", Utils.asList("onScrolled", "onScrollStateChanged", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("CustomScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("CustomWebView", Utils.asList("onScrollChanged", "onTouchEvent", "onInterceptTouchEvent"));
-        ignoreParamMap.put("LineTextView", Utils.asList("onMeasure", "onDraw"));
-        ignoreParamMap.put("MaxHeightScrollView", Utils.asList("onMeasure"));
-        ignoreParamMap.put("RightClearEditText", Utils.asList("setCompoundDrawables", "onTouchEvent"));
+        ignoreParamMap.put("CustomGallery", Utils.asList("onMeasure","onFling","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomHorizontalScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomNestedScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomRecyclerView", Utils.asList("onMeasure","onScrolled","onScrollStateChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomScrollView", Utils.asList("onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomViewPager", Utils.asList("onMeasure","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("CustomViewPager.OnDirectionListener", Utils.asList("onPageScrolled","onPageScrollStateChanged"));
+        ignoreParamMap.put("CustomWebView", Utils.asList("onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("LimitLayout", Utils.asList("onMeasure"));
+        ignoreParamMap.put("LineTextView", Utils.asList("onDraw"));
+        ignoreParamMap.put("LoadProgressBar", Utils.asList("onDraw"));
+        ignoreParamMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent"));
         ignoreParamMap.put("ScanShapeView", Utils.asList("onDraw"));
-        ignoreParamMap.put("SignView", Utils.asList("onDraw", "onTouchEvent"));
-        ignoreParamMap.put("WrapView", Utils.asList("onMeasure", "onLayout"));
+        ignoreParamMap.put("SignView", Utils.asList("onDraw","onTouchEvent"));
+        ignoreParamMap.put("WrapView", Utils.asList("onMeasure","onLayout"));
         return ignoreParamMap;
     }
 
@@ -162,26 +156,26 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreUnPublicMap.put("AdjustHeightListView", Utils.asList("onMeasure"));
         ignoreUnPublicMap.put("AdjustHeightRecyclerView", Utils.asList("onMeasure"));
         ignoreUnPublicMap.put("AdjustHeightWebView", Utils.asList("onMeasure"));
-        ignoreUnPublicMap.put("ControlSlideGallery", Utils.asList("isScrollingLeft"));
-        ignoreUnPublicMap.put("CustomHorizontalScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen"));
+        ignoreUnPublicMap.put("CustomGallery", Utils.asList("initAttrs","onMeasure","isScrollingLeft"));
+        ignoreUnPublicMap.put("CustomHorizontalScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen"));
         ignoreUnPublicMap.put("CustomHorizontalScrollView.ScrollCallBack", Utils.asList("onScrollChanged"));
-        ignoreUnPublicMap.put("CustomNestedScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen"));
+        ignoreUnPublicMap.put("CustomNestedScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen"));
         ignoreUnPublicMap.put("CustomNestedScrollView.ScrollCallBack", Utils.asList("onScrollChanged"));
-        ignoreUnPublicMap.put("CustomProgressBar", Utils.asList("init", "onDraw", "drawProgressText", "drawProgressText", "calcTextSizeToWidth"));
-        ignoreUnPublicMap.put("CustomRecyclerView.ScrollCallBack", Utils.asList("onScrollStateChanged", "onScrollChanged"));
-        ignoreUnPublicMap.put("CustomScrollView", Utils.asList("onScrollChanged", "computeScrollDeltaToGetChildRectOnScreen"));
+        ignoreUnPublicMap.put("CustomRecyclerView", Utils.asList("initAttrs","onMeasure"));
+        ignoreUnPublicMap.put("CustomRecyclerView.ScrollCallBack", Utils.asList("onScrollStateChanged","onScrollChanged"));
+        ignoreUnPublicMap.put("CustomScrollView", Utils.asList("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen"));
         ignoreUnPublicMap.put("CustomScrollView.ScrollCallBack", Utils.asList("onScrollChanged"));
-        ignoreUnPublicMap.put("CustomWebView", Utils.asList("onScrollChanged"));
+        ignoreUnPublicMap.put("CustomViewPager", Utils.asList("initAttrs","onMeasure"));
+        ignoreUnPublicMap.put("CustomWebView", Utils.asList("initAttrs","onMeasure","onScrollChanged"));
         ignoreUnPublicMap.put("CustomWebView.ScrollCallBack", Utils.asList("onScrollChanged"));
-        ignoreUnPublicMap.put("LineTextView", Utils.asList("onMeasure", "onDraw"));
+        ignoreUnPublicMap.put("LimitLayout", Utils.asList("initAttrs","onMeasure"));
+        ignoreUnPublicMap.put("LineTextView", Utils.asList("onDraw"));
         ignoreUnPublicMap.put("LineTextView.OnNewLineCallBack", Utils.asList("onNewLine"));
-        ignoreUnPublicMap.put("MaxHeightScrollView", Utils.asList("onMeasure"));
-        ignoreUnPublicMap.put("RightClearEditText", Utils.asList("init", "drawableOperate", "finalize"));
-        ignoreUnPublicMap.put("ScanShapeView", Utils.asList("init", "handlerCornerPathEffect", "onDraw", "refPaintToAnnulus", "sin", "getRegionMarginLeft", "getRegionMarginTop", "calcShapeRegion", "calcShapeRegion", "makeShape", "makeBackground", "makeAnim", "drawAnim", "resetAnim", "animSwitch", "refLineColorToSquare", "refLineColorToHexagon", "refLineColorToAnnulus", "initAnim"));
-        ignoreUnPublicMap.put("SignView", Utils.asList("onDraw"));
-        ignoreUnPublicMap.put("StateLayout", Utils.asList("init", "insertView", "insertView", "removeView"));
-        ignoreUnPublicMap.put("StateLayout.OnStateChanged", Utils.asList("OnChanged"));
-        ignoreUnPublicMap.put("WrapView", Utils.asList("onMeasure", "onLayout", "calc"));
+        ignoreUnPublicMap.put("LoadProgressBar", Utils.asList("initAttrs","init","onDraw","drawProgressText","drawProgressText"));
+        ignoreUnPublicMap.put("RightIconEditText", Utils.asList("finalize","init","drawOperate"));
+        ignoreUnPublicMap.put("ScanShapeView", Utils.asList("init","handlerCornerPathEffect","onDraw","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","animSwitch","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
+        ignoreUnPublicMap.put("SignView", Utils.asList("onDraw","_resetCanvas"));
+        ignoreUnPublicMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","calc"));
         return ignoreUnPublicMap;
     }
 
@@ -193,8 +187,6 @@ final class DevWidgetConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreModifierVariableMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreModifierVariableMap = new HashMap<>();
-        ignoreModifierVariableMap.put("StateLayout", Utils.asList("        int value;"));
-        ignoreModifierVariableMap.put("StateLayout.State", Utils.asList("    int value;"));
         return ignoreModifierVariableMap;
     }
 
@@ -206,6 +198,26 @@ final class DevWidgetConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreReturnVoidMap() {
         // 忽略配置
         Map<String, ArrayList<String>> ignoreReturnVoidMap = new HashMap<>();
+        ignoreReturnVoidMap.put("CustomGallery", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomHorizontalScrollView", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomHorizontalScrollView.ScrollCallBack", Utils.asList("onScrollChanged - void"));
+        ignoreReturnVoidMap.put("CustomNestedScrollView", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomNestedScrollView.ScrollCallBack", Utils.asList("onScrollChanged - void"));
+        ignoreReturnVoidMap.put("CustomRecyclerView", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomRecyclerView.ScrollCallBack", Utils.asList("onScrollStateChanged - void","onScrollChanged - void"));
+        ignoreReturnVoidMap.put("CustomScrollView", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomScrollView.ScrollCallBack", Utils.asList("onScrollChanged - void"));
+        ignoreReturnVoidMap.put("CustomViewPager", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomViewPager.OnDirectionListener", Utils.asList("onSlideDirection - void"));
+        ignoreReturnVoidMap.put("CustomWebView", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("CustomWebView.ScrollCallBack", Utils.asList("onScrollChanged - void"));
+        ignoreReturnVoidMap.put("LimitLayout", Utils.asList("initAttrs - void"));
+        ignoreReturnVoidMap.put("LineTextView.OnNewLineCallBack", Utils.asList("onNewLine - void"));
+        ignoreReturnVoidMap.put("LoadProgressBar", Utils.asList("initAttrs - void","drawProgressText - void","drawProgressText - void"));
+        ignoreReturnVoidMap.put("RightIconEditText", Utils.asList("init - void","drawOperate - void"));
+        ignoreReturnVoidMap.put("ScanShapeView", Utils.asList("init - void","handlerCornerPathEffect - void","destroy - void","refPaintToAnnulus - void","makeBackground - void","makeAnim - void","drawAnim - void","resetAnim - void","startAnim - void","stopAnim - void","animSwitch - void","refLineColorToSquare - void","refLineColorToHexagon - void","refLineColorToAnnulus - void","initAnim - void"));
+        ignoreReturnVoidMap.put("SignView", Utils.asList("_resetCanvas - void"));
+        ignoreReturnVoidMap.put("WrapView", Utils.asList("initAttrs - void","refreshDraw - void"));
         return ignoreReturnVoidMap;
     }
 
