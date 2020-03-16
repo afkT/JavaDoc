@@ -26,6 +26,20 @@ final class DevWidget_READMEMain {
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
                                          final HashMap<String, String> mapCatelog) {
+        buffer.append("\n");
+        buffer.append("## Gradle");
+
+        buffer.append("\n\n");
+        buffer.append("```java");
+        buffer.append("\n");
+        buffer.append("implementation 'com.afkt:DevWidget:" + ApiConfig.DEV_WIDGET_VERSION + "'");
+        buffer.append("\n\n");
+        buffer.append("// AndroidX");
+        buffer.append("\n");
+        buffer.append("implementation 'com.afkt:DevWidgetX:" + ApiConfig.DEV_WIDGET_VERSION + "'");
+        buffer.append("\n");
+        buffer.append("```");
+
         buffer.append("\n\n");
         buffer.append("## 目录结构");
 
@@ -34,10 +48,12 @@ final class DevWidget_READMEMain {
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
 
         buffer.append("\n\n");
-        buffer.append("## Use");
+        buffer.append("## README");
 
         buffer.append("\n\n");
-        buffer.append("> 直接 copy 所需要的类到项目中使用");
+        buffer.append("[Preview README](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/README.md)");
+        buffer.append("\n\n");
+        buffer.append("[Change Log](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/CHANGELOG.md)");
         buffer.append("\n");
 
         buffer.append("\n\n");
