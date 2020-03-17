@@ -53,9 +53,11 @@ final class DevWidget_READMEMain {
         buffer.append("\n\n");
         buffer.append("- 效果可运行 DevUtils 项目点击 DevWidget UI 库查看");
         buffer.append("\n\n");
-        buffer.append("[Preview README](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/README.md)");
+        buffer.append("- 该库依赖 [DevApp](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md) 开发，需引用 DevApp 库");
         buffer.append("\n\n");
-        buffer.append("[Change Log](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/CHANGELOG.md)");
+        buffer.append("- [Preview README](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/README.md)");
+        buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/Widget/DevWidget/CHANGELOG.md)");
         buffer.append("\n");
 
         buffer.append("\n\n");
