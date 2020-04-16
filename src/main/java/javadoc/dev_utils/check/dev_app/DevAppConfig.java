@@ -345,6 +345,8 @@ final class DevAppConfig implements ICheckConfig {
         // = APP =
         // =======
 
+        ignoreReturnMap.put("BarUtils", Utils.asList("setStatusBarColor", "setStatusBarColor", "setStatusBarColor", "setStatusBarColor"));
+
         // ==========
         // = Common =
         // ==========
@@ -392,7 +394,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("AsyncExecutor.Worker", Utils.asList("doInBackground", "onPostExecute", "onCanceled", "abort"));
         ignoreUnPublicMap.put("AutoFocusAssist", Utils.asList("autoFocusAgainLater", "cancelOutstandingTask"));
         ignoreUnPublicMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
-        ignoreUnPublicMap.put("BarUtils", Utils.asList("addMarginTopEqualStatusBarHeight", "subtractMarginTopEqualStatusBarHeight", "addStatusBarColor", "addStatusBarAlpha", "hideColorView", "hideAlphaView", "hideColorView", "hideAlphaView", "showColorView", "showAlphaView", "getStatusBarColor", "createColorStatusBarView", "createAlphaStatusBarView", "transparentStatusBar", "invokePanels"));
+        ignoreUnPublicMap.put("BarUtils", Utils.asList("addMarginTopEqualStatusBarHeight", "subtractMarginTopEqualStatusBarHeight", "applyStatusBarColor", "applyStatusBarColor", "hideStatusBarView", "hideStatusBarView", "showStatusBarView", "createStatusBarView"));
         ignoreUnPublicMap.put("BeepVibrateAssist", Utils.asList("shouldBeep", "streamUpdate"));
         ignoreUnPublicMap.put("CameraAssist", Utils.asList("freeCameraResource"));
         ignoreUnPublicMap.put("CameraAssist.PreviewNotify", Utils.asList("stopPreviewNotify", "startPreviewNotify"));
