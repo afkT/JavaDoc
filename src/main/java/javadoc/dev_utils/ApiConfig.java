@@ -59,7 +59,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.1.1";
+    public static final String DEV_JAVA_VERSION = "1.1.2";
 
     // =============
     // = DevAssist =
@@ -102,7 +102,7 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/Widget/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION = "1.0.0";
+    public static final String DEV_WIDGET_VERSION = "1.0.1";
 
     // ===========
     // = DevBase =
