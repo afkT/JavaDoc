@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * detail: 代码读取检测分析 Main 方法
  * @author Ttt
  */
-class DevStandardMain {
+public class DevStandardMain {
 
     public static void main(String[] args) {
         // 检测路径
@@ -22,7 +22,7 @@ class DevStandardMain {
         // 代码检测分析配置接口
         ICheckConfig iCheckConfig = new DevStandardConfig();
         // 是否覆盖文件内容
-        boolean coverText = true;
+        boolean coverText = ConvertUtils.toBoolean(ArrayUtils.get(args, 0), true);
         // 是否使用 ArrayList<File>
         boolean isLists = false;
         // 检测指定文件集合
@@ -30,7 +30,7 @@ class DevStandardMain {
         // 是否打印方法返回值 void 记录
         boolean isPrintVoid = false;
         // 是否需要生成 Config
-        boolean generateConfig = ConvertUtils.toBoolean(ArrayUtils.get(args, 0));
+        boolean generateConfig = ConvertUtils.toBoolean(ArrayUtils.get(args, 1));
 
         // 执行检测
         CheckMain.execute(DevStandardMain.class, new CheckInfo(path, iCheckConfig)
