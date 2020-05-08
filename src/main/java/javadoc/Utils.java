@@ -91,6 +91,21 @@ public final class Utils {
     }
 
     /**
+     * HashSet 排序
+     * @param set {@link Set}
+     * @return 排序后的 Set
+     */
+    public static Set<String> sortHashSet(final Set<String> set) {
+        List<String> list = new ArrayList<>();
+        Iterator<String> item = set.iterator();
+        while (item.hasNext()) {
+            list.add(item.next());
+        }
+        Collections.sort(list);
+        return new HashSet<>(list);
+    }
+
+    /**
      * 生成 Map 字符串
      * @param map     {@link HashMap}
      * @param mapName map 变量名
@@ -100,8 +115,10 @@ public final class Utils {
         StringBuilder builder = new StringBuilder();
         // HashMap 排序
         Map<String, ArrayList<String>> sortHashMap = sortHashMap(map);
+        // 空格前缀
+        String space = "        ";
         // 格式化字符串
-        String format = "%s.put(\"%s\", Utils.asList(%s));";
+        String format = space + "%s.put(\"%s\", Utils.asList(%s));";
         // 循环处理
         for (String className : sortHashMap.keySet()) {
             ArrayList<String> lists = sortHashMap.get(className);
@@ -110,6 +127,33 @@ public final class Utils {
                     ArrayUtils.appendToString(lists.toArray(new String[]{}))));
             builder.append(StringUtils.NEW_LINE_STR);
         }
+        // 用于生成 Config 特殊处理
+        builder.delete(0, space.length());
+        return builder.toString();
+    }
+
+    /**
+     * 生成 Set 字符串
+     * @param set     {@link HashSet}
+     * @param mapName map 变量名
+     * @return 生成指定格式字符串
+     */
+    public static String generateSetString(final Set<String> set, final String mapName) {
+        StringBuilder builder = new StringBuilder();
+        // HashMap 排序
+        Set<String> sortHashMap = sortHashSet(set);
+        // 空格前缀
+        String space = "        ";
+        // 格式化字符串
+        String format = space + "%s.remove(\"%s\");";
+        // 循环处理
+        for (String className : sortHashMap) {
+            // 格式化追加
+            builder.append(String.format(format, mapName, className));
+            builder.append(StringUtils.NEW_LINE_STR);
+        }
+        // 用于生成 Config 特殊处理
+        builder.delete(0, space.length());
         return builder.toString();
     }
 
@@ -146,7 +190,7 @@ public final class Utils {
 
     /**
      * 转换 JSON 格式数据, 并且格式化
-     * @param data 待转换对象
+     * @param data         待转换对象
      * @param includeNulls 是否序列化null值
      * @return 格式化 JSON 数据
      */

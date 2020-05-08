@@ -1,7 +1,11 @@
 package javadoc.dev_utils.check.dev;
 
+import dev.utils.common.ArrayUtils;
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * detail: 检测信息实体类
@@ -21,6 +25,10 @@ public final class CheckInfo {
     public ArrayList<File> mListFiles;
     // 是否打印方法返回值 void 记录
     public boolean mIsPrintVoid = false;
+    // 是否需要生成 Config
+    public boolean isGenerateConfig;
+    // 忽略注释间距异常文件
+    public Set<String> ignoreAnnotationSpaceSet = new HashSet<>();
 
     public CheckInfo(String path, ICheckConfig iCheckConfig) {
         this.mPath = path;
@@ -88,6 +96,39 @@ public final class CheckInfo {
      */
     public CheckInfo setPrintVoid(boolean printVoid) {
         this.mIsPrintVoid = printVoid;
+        return this;
+    }
+
+    /**
+     * 设置是否需要生成 Config
+     * @param generateConfig {@code true} yes, {@code false} no
+     * @return {@link CheckInfo}
+     */
+    public CheckInfo setGenerateConfig(boolean generateConfig) {
+        this.isGenerateConfig = generateConfig;
+        if (this.isGenerateConfig) {
+            mICheckConfig = new BlankCheckConfig();
+        }
+        return this;
+    }
+
+    /**
+     * 设置忽略注释间距异常文件 Set
+     * @param ignoreAnnotationSpaceSet 忽略注释间距异常文件 Set
+     * @return {@link CheckInfo}
+     */
+    public CheckInfo setIgnoreAnnotationSpaceSet(Set<String> ignoreAnnotationSpaceSet) {
+        this.ignoreAnnotationSpaceSet.addAll(ignoreAnnotationSpaceSet);
+        return this;
+    }
+
+    /**
+     * 设置忽略注释间距异常文件 Set
+     * @param strs 忽略注释间距异常文件配置
+     * @return {@link CheckInfo}
+     */
+    public CheckInfo setIgnoreAnnotationSpaceSet(String... strs) {
+        this.ignoreAnnotationSpaceSet.addAll(ArrayUtils.asList(strs));
         return this;
     }
 }

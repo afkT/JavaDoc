@@ -1,5 +1,7 @@
 package javadoc.dev_utils.check.dev_widget;
 
+import dev.utils.common.ArrayUtils;
+import dev.utils.common.ConvertUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.check.dev.CheckInfo;
 import javadoc.dev_utils.check.dev.CheckMain;
@@ -27,6 +29,8 @@ class DevWidgetMain {
         ArrayList<File> listFiles = new ArrayList<>();
         // 是否打印方法返回值 void 记录
         boolean isPrintVoid = false;
+        // 是否需要生成 Config
+        boolean generateConfig = ConvertUtils.toBoolean(ArrayUtils.get(args, 0));
 
         // 执行检测
         CheckMain.execute(DevWidgetMain.class, new CheckInfo(path, iCheckConfig)
@@ -34,6 +38,7 @@ class DevWidgetMain {
                 .setLists(isLists)
                 .setListFiles(listFiles)
                 .setPrintVoid(isPrintVoid)
+                .setGenerateConfig(generateConfig)
         );
     }
 }

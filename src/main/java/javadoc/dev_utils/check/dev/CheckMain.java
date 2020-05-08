@@ -198,6 +198,20 @@ public final class CheckMain {
         // 转换 JSON 数据
         String mapJSON = Utils.toJsonFormat(printMap, true);
         System.out.println(mapJSON);
+
+        // 判断是否需要生成 Config 文件
+        if (checkInfo.isGenerateConfig) {
+            CheckConfigGenerate.format(clazz, new String[] {
+                    unAnnotateGenerateMapString,
+                    unFinalGenerateMapString,
+                    unStaticGenerateMapString,
+                    lackParamGenerateMapString,
+                    lackReturnGenerateMapString,
+                    methodUnPublicGenerateMapString,
+                    noModifierVariableGenerateMapString,
+                    methodReturnVoidGenerateMapString,
+            }, checkInfo.ignoreAnnotationSpaceSet);
+        }
         return mapJSON;
     }
 }
