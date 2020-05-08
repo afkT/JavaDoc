@@ -102,7 +102,7 @@ public final class Utils {
             list.add(item.next());
         }
         Collections.sort(list);
-        return new HashSet<>(list);
+        return new LinkedHashSet<>(list);
     }
 
     /**
