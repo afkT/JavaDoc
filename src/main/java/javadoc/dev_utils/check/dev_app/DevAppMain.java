@@ -29,7 +29,7 @@ class DevAppMain {
         boolean isPrintVoid = false;
 
         // 执行检测
-        CheckMain.execute(new CheckInfo(path, iCheckConfig)
+        CheckMain.execute(DevAppMain.class, new CheckInfo(path, iCheckConfig)
                 .setCoverText(coverText)
                 .setLists(isLists)
                 .setListFiles(listFiles)

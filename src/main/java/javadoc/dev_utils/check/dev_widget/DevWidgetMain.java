@@ -29,7 +29,7 @@ class DevWidgetMain {
         boolean isPrintVoid = false;
 
         // 执行检测
-        CheckMain.execute(new CheckInfo(path, iCheckConfig)
+        CheckMain.execute(DevWidgetMain.class, new CheckInfo(path, iCheckConfig)
                 .setCoverText(coverText)
                 .setLists(isLists)
                 .setListFiles(listFiles)

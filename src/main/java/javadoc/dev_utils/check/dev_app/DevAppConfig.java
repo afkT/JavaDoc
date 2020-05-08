@@ -528,7 +528,7 @@ final class DevAppConfig implements ICheckConfig {
      * @param map {@link HashMap}
      */
     @Override
-    public void ignoreAnnotationSpaceMap(final Map<String, String> map) {
+    public void ignoreAnnotationSpaceMap(Map<String, String> map) {
         // 以下类无需处理, 直接移除
         map.remove("AliasMethod.java");
         map.remove("Base64.java");
