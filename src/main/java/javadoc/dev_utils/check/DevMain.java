@@ -9,7 +9,6 @@ import javadoc.dev_utils.check.dev_widget.DevWidgetMain;
 
 /**
  * detail: 统一检测 Dev 模块
- *
  * @author Ttt
  */
 public class DevMain {
