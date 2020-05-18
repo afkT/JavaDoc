@@ -27,39 +27,46 @@ public final class CodeAnalyeReader {
     // = Map<类名, ArrayList<方法名>> =
     // ================================
 
-    // 方法注释缺少注释记录
-    private static final HashMap<String, ArrayList<String>> sMethodUnAnnotateMap = new HashMap<>();
+    /**
+     * detail: Map 配置
+     * @author Ttt
+     */
+    public static class MapConfig {
 
-    // 方法中参数未添加 final 记录
-    private static final HashMap<String, ArrayList<String>> sParamUnFinalMap = new HashMap<>();
+        // 方法注释缺少注释记录
+        public final HashMap<String, ArrayList<String>> sMethodUnAnnotateMap = new HashMap<>();
 
-    // 方法非 static 记录
-    private static final HashMap<String, ArrayList<String>> sMethodUnStaticMap = new HashMap<>();
+        // 方法中参数未添加 final 记录
+        public final HashMap<String, ArrayList<String>> sParamUnFinalMap = new HashMap<>();
 
-    // 方法注释缺少 @param 记录
-    private static final HashMap<String, ArrayList<String>> sMethodLackParamMap = new HashMap<>();
+        // 方法非 static 记录
+        public final HashMap<String, ArrayList<String>> sMethodUnStaticMap = new HashMap<>();
 
-    // 方法注释缺少 @return 记录
-    private static final HashMap<String, ArrayList<String>> sMethodLackReturnMap = new HashMap<>();
+        // 方法注释缺少 @param 记录
+        public final HashMap<String, ArrayList<String>> sMethodLackParamMap = new HashMap<>();
 
-    // =
+        // 方法注释缺少 @return 记录
+        public final HashMap<String, ArrayList<String>> sMethodLackReturnMap = new HashMap<>();
 
-    // 方法存在 @param 但缺少注释记录
-    private static final HashMap<String, ArrayList<String>> sMethodUnAnnotateParamMap = new HashMap<>();
+        // =
 
-    // 方法存在 @return 但缺少注释记录
-    private static final HashMap<String, ArrayList<String>> sMethodUnAnnotateReturnMap = new HashMap<>();
+        // 方法存在 @param 但缺少注释记录
+        public final HashMap<String, ArrayList<String>> sMethodUnAnnotateParamMap = new HashMap<>();
 
-    // =
+        // 方法存在 @return 但缺少注释记录
+        public final HashMap<String, ArrayList<String>> sMethodUnAnnotateReturnMap = new HashMap<>();
 
-    // 非 public 方法记录
-    private static final HashMap<String, ArrayList<String>> sMethodUnPublicMap = new HashMap<>();
+        // =
 
-    // 无修饰符变量 记录
-    private static final HashMap<String, ArrayList<String>> sNoModifierVariableMap = new HashMap<>();
+        // 非 public 方法记录
+        public final HashMap<String, ArrayList<String>> sMethodUnPublicMap = new HashMap<>();
 
-    // 方法返回值 void 记录
-    private static final HashMap<String, ArrayList<String>> sMethodReturnVoidMap = new HashMap<>();
+        // 无修饰符变量 记录
+        public final HashMap<String, ArrayList<String>> sNoModifierVariableMap = new HashMap<>();
+
+        // 方法返回值 void 记录
+        public final HashMap<String, ArrayList<String>> sMethodReturnVoidMap = new HashMap<>();
+    }
 
     /**
      * 代码分析检测
@@ -76,20 +83,21 @@ public final class CodeAnalyeReader {
      * @return 返回分析检测后的记录 Map 集合
      */
     public static ArrayList<HashMap<String, ArrayList<String>>> codeAnalye(final ArrayList<File> listFiles) {
+        MapConfig mapConfig = new MapConfig();
         // 循环读取
-        forReader(listFiles);
+        forReader(listFiles, mapConfig);
         // 返回结果
         ArrayList<HashMap<String, ArrayList<String>>> lists = new ArrayList<>();
-        lists.add(sMethodUnAnnotateMap); // 方法注释缺少注释记录
-        lists.add(sParamUnFinalMap); // 方法中参数未添加 final 记录
-        lists.add(sMethodUnStaticMap); // 方法非 static 记录
-        lists.add(sMethodLackParamMap); // 方法注释缺少 @param 记录
-        lists.add(sMethodLackReturnMap); // 方法注释缺少 @return 记录
-        lists.add(sMethodUnAnnotateParamMap); // 方法存在 @param 但缺少注释记录
-        lists.add(sMethodUnAnnotateReturnMap); // 方法存在 @return 但缺少注释记录
-        lists.add(sMethodUnPublicMap); // 非 public 方法记录
-        lists.add(sNoModifierVariableMap); // 无修饰符变量 记录
-        lists.add(sMethodReturnVoidMap); // 方法返回值 void 记录
+        lists.add(mapConfig.sMethodUnAnnotateMap); // 方法注释缺少注释记录
+        lists.add(mapConfig.sParamUnFinalMap); // 方法中参数未添加 final 记录
+        lists.add(mapConfig.sMethodUnStaticMap); // 方法非 static 记录
+        lists.add(mapConfig.sMethodLackParamMap); // 方法注释缺少 @param 记录
+        lists.add(mapConfig.sMethodLackReturnMap); // 方法注释缺少 @return 记录
+        lists.add(mapConfig.sMethodUnAnnotateParamMap); // 方法存在 @param 但缺少注释记录
+        lists.add(mapConfig.sMethodUnAnnotateReturnMap); // 方法存在 @return 但缺少注释记录
+        lists.add(mapConfig.sMethodUnPublicMap); // 非 public 方法记录
+        lists.add(mapConfig.sNoModifierVariableMap); // 无修饰符变量 记录
+        lists.add(mapConfig.sMethodReturnVoidMap); // 方法返回值 void 记录
         return lists;
     }
 
@@ -99,15 +107,16 @@ public final class CodeAnalyeReader {
 
     /**
      * 循环读取处理
-     * @param lists 文件列表
+     * @param lists     文件列表
+     * @param mapConfig Map 配置
      */
-    private static void forReader(final ArrayList<File> lists) {
+    private static void forReader(final ArrayList<File> lists, final MapConfig mapConfig) {
         // 循环子文件
         for (File file : lists) {
             if (file.isDirectory()) {
-                forReader(Utils.getFileCatalogLists(file.getAbsolutePath() + "/"));
+                forReader(Utils.getFileCatalogLists(file.getAbsolutePath() + "/"), mapConfig);
             } else {
-                CodeReader.readDoc(file.getAbsolutePath(), "");
+                CodeReader.readDoc(file.getAbsolutePath(), "", mapConfig);
             }
         }
     }
@@ -122,6 +131,12 @@ public final class CodeAnalyeReader {
      */
     private static class CodeReader implements JavaDocReader.CallBack {
 
+        MapConfig mapConfig;
+
+        public CodeReader(MapConfig mapConfig) {
+            this.mapConfig = mapConfig;
+        }
+
         // ================
         // = 对外公开方法 =
         // ================
@@ -130,13 +145,14 @@ public final class CodeAnalyeReader {
          * 读取文档处理
          * @param path      文件路径
          * @param className 文件名 ( 类名 )
+         * @param mapConfig Map 配置
          * @return 处理后的文档信息
          */
-        public static String readDoc(final String path, final String className) {
+        public static String readDoc(final String path, final String className, final MapConfig mapConfig) {
             // 执行参数, 生成 API readAll 设置为 false, 不读取 private、protected 等修饰符方法
             String[] executeParams = JavaDocReader.getExecuteParams(true, path, className);
             // 读取 class javaDoc 并返回文档信息
-            return JavaDocReader.readDoc(new CodeReader(), path, className, executeParams);
+            return JavaDocReader.readDoc(new CodeReader(mapConfig), path, className, executeParams);
         }
 
         // ==========================
@@ -189,7 +205,7 @@ public final class CodeAnalyeReader {
                         for (String str : splits) {
                             if (!StringUtils.isSpace(str)) {
                                 if (ValidatorUtils.match("[ ]*[A-Za-z0-9\\<\\>\\[\\]]+ [A-Za-z0-9]+;", str)) {
-                                    MapUtils.putToList(sNoModifierVariableMap, className, str);
+                                    MapUtils.putToList(mapConfig.sNoModifierVariableMap, className, str);
                                 }
                             }
                         }
@@ -235,7 +251,7 @@ public final class CodeAnalyeReader {
                         }
                         // 不属于 public 修饰符则记录
                         if (!isPublic) {
-                            MapUtils.putToList(sMethodUnPublicMap, className, methodName);
+                            MapUtils.putToList(mapConfig.sMethodUnPublicMap, className, methodName);
                         }
 
                         //  专门用于判断方法是否 static 修饰
@@ -246,7 +262,7 @@ public final class CodeAnalyeReader {
                             if (jcMethodDecl != null) {
                                 // 不存在则保存
                                 if (jcMethodDecl.toString().indexOf("static ") == -1) {
-                                    MapUtils.putToList(sMethodUnStaticMap, className + classTag, methodName);
+                                    MapUtils.putToList(mapConfig.sMethodUnStaticMap, className + classTag, methodName);
                                 }
                             }
                         }
@@ -264,7 +280,7 @@ public final class CodeAnalyeReader {
                                         if (jcModifiers.toString().endsWith("final ")) {
                                             // 存在 final 修饰
                                         } else {
-                                            MapUtils.putToList(sParamUnFinalMap, className + classTag, methodName);
+                                            MapUtils.putToList(mapConfig.sParamUnFinalMap, className + classTag, methodName);
                                             break;
                                         }
                                     }
@@ -276,7 +292,7 @@ public final class CodeAnalyeReader {
                         // 判断是否添加到 无注释 Map 中
                         boolean isUnAnnotate = false;
                         if (StringUtils.isEmpty(methodAnnotate)) {
-                            MapUtils.putToList(sMethodUnAnnotateMap, className, methodName);
+                            MapUtils.putToList(mapConfig.sMethodUnAnnotateMap, className, methodName);
                             // 表示已经添加到 Map 中
                             isUnAnnotate = true;
                         }
@@ -287,32 +303,32 @@ public final class CodeAnalyeReader {
                         if (StringUtils.isEmpty(methodDocumentation)) { // 为 null, 表示没有注释, 需要特殊处理
                             // 没有添加, 才进行添加, 防止多次保存
                             if (!isUnAnnotate) {
-                                MapUtils.putToList(sMethodUnAnnotateMap, className, methodName);
+                                MapUtils.putToList(mapConfig.sMethodUnAnnotateMap, className, methodName);
                             }
                         } else {
                             // 不存在 void, 表示有返回值
                             if (jcMethodDecl.toString().indexOf("void ") == -1) {
                                 // 判断是否存在 @return, 不存在则记录
                                 if (methodDocumentation.indexOf("@return") == -1) {
-                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName);
+                                    MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName);
                                 } else { // 存在则判断数量
                                     // 判断存在的数量
                                     int returnNumber = StringUtils.countMatches(methodDocumentation, "@return");
                                     if (returnNumber >= 2) {
-                                        MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多个 @return");
+                                        MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName + " - 多个 @return");
                                     } else {
                                         String[] splitReturn = methodDocumentation.replaceAll("\r\n", "").split("@return ");
                                         if (splitReturn.length == 1) {
-                                            MapUtils.putToList(sMethodUnAnnotateReturnMap, className, methodName);
+                                            MapUtils.putToList(mapConfig.sMethodUnAnnotateReturnMap, className, methodName);
                                         }
                                     }
                                 }
                             } else { // 无返回值
                                 // 判断是否存在 @return, 存在则记录 => 属于 void 并不需要增加 @return
                                 if (methodDocumentation.indexOf("@return") != -1) {
-                                    MapUtils.putToList(sMethodLackReturnMap, className, methodName + " - 多余 @return");
+                                    MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName + " - 多余 @return");
                                 } else { // 方法为 void
-                                    MapUtils.putToList(sMethodReturnVoidMap, className, methodName + " - void");
+                                    MapUtils.putToList(mapConfig.sMethodReturnVoidMap, className, methodName + " - void");
                                 }
                             }
                         }
@@ -323,12 +339,12 @@ public final class CodeAnalyeReader {
                         if (StringUtils.isEmpty(methodDocumentation)) {
                             // 如果数量不为 0, 表示有参数
                             if (paramNumber != 0) {
-                                MapUtils.putToList(sMethodLackParamMap, className, methodName);
+                                MapUtils.putToList(mapConfig.sMethodLackParamMap, className, methodName);
                             }
                         } else {
                             // 参数校验处理
-                            paramCheckHandler(sMethodLackParamMap, methodDocumentation,
-                                    className, methodName, jcMethodDecl, listJCVariableDecls);
+                            paramCheckHandler(mapConfig.sMethodLackParamMap, methodDocumentation,
+                                    className, methodName, jcMethodDecl, listJCVariableDecls, mapConfig);
                         }
                         // ========================
                     }
@@ -359,13 +375,15 @@ public final class CodeAnalyeReader {
      * @param methodName          方法名
      * @param jcMethodDecl        方法信息实体类
      * @param listJCVariableDecls 方法参数 List
+     * @param mapConfig           Map 配置
      */
     private static void paramCheckHandler(final HashMap<String, ArrayList<String>> map,
                                           final String methodDocumentation,
                                           final String className,
                                           final String methodName,
                                           final JCTree.JCMethodDecl jcMethodDecl,
-                                          final List<JCTree.JCVariableDecl> listJCVariableDecls) {
+                                          final List<JCTree.JCVariableDecl> listJCVariableDecls,
+                                          final MapConfig mapConfig) {
         // 泛型类型数组
         String[] genericityTypes = null;
         // 参数名
@@ -481,7 +499,7 @@ public final class CodeAnalyeReader {
                 // 数据一样, 才检测是否注释
                 if (!subparamToCheckAnnotate(documentation)) {
                     // @param 不存在注释则保存
-                    MapUtils.putToList(sMethodUnAnnotateParamMap, className, methodName);
+                    MapUtils.putToList(mapConfig.sMethodUnAnnotateParamMap, className, methodName);
                 }
             } else {
                 MapUtils.putToList(map, className, methodName);
