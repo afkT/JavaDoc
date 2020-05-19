@@ -32,7 +32,9 @@ final class DevApp_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_APP_VERSION + "'");
+        buffer.append("// Android ( 1.9.4 以后只更新 AndroidX )");
+        buffer.append("\n");
+        buffer.append("//implementation 'com.afkt:DevApp:1.9.4'");
         buffer.append("\n\n");
         buffer.append("// AndroidX");
         buffer.append("\n");

@@ -32,10 +32,6 @@ final class DevWidget_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevApp:" + ApiConfig.DEV_APP_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevWidget:" + ApiConfig.DEV_WIDGET_VERSION + "'");
-        buffer.append("\n\n");
         buffer.append("// AndroidX");
         buffer.append("\n");
         buffer.append("implementation 'com.afkt:DevAppX:" + ApiConfig.DEV_APP_VERSION + "'");
