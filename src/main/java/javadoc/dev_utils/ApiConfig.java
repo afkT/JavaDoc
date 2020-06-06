@@ -16,11 +16,7 @@ public final class ApiConfig {
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
-    public static final String LOCAL_PATH = "F:/Android/IDE/ASPro";
-    // 本地项目路径
-    public static final String LOCAL_PROJECT_PATH = LOCAL_PATH + "/" + PROJECT_NAME;
-    // Java 本地路径
-    public static final String JAVA_LOCAL_PATH = "F:/JetBrains/IdeaProjects";
+    public static final String LOCAL_PATH = "F:/Project/Android";
 
     // 包目录名
     public static final String DEV_PACKAGE = "dev.utils";
@@ -44,7 +40,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "1.9.4";
+    public static final String DEV_APP_VERSION = "1.9.5";
 
     // ===========
     // = DevJava =
@@ -102,7 +98,7 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/Widget/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION = "1.0.1";
+    public static final String DEV_WIDGET_VERSION = "1.0.2";
 
     // ===========
     // = DevBase =
