@@ -281,6 +281,7 @@ public final class ApiConfig {
         sCatelogMap_Widget.put("dev", "根目录");
         sCatelogMap_Widget.put(".widget", "自定义 View 根目录");
         sCatelogMap_Widget.put(".widget.adjust", "自动调节高度 View");
+        sCatelogMap_Widget.put(".widget.assist", "View 辅助类");
         sCatelogMap_Widget.put(".widget.custom", "自定义 View");
         sCatelogMap_Widget.put(".widget.function", "需求功能 View");
         sCatelogMap_Widget.put(".widget.ui", "UI View");
