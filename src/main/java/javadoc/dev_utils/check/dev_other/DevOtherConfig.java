@@ -28,6 +28,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideUtils", Utils.asList("with","with","with","with","with","with"));
+        ignoreAnnotateMap.put("HttpLoggingInterceptor", Utils.asList("intercept","isPlaintext","bodyEncoded"));
         ignoreAnnotateMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("NotificationService", Utils.asList("onCreate","onDestroy","onStartCommand"));
         ignoreAnnotateMap.put("OkGoResponse.Builder", Utils.asList("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
@@ -55,6 +56,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
         ignoreFinalMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreFinalMap.put("GlideUtils", Utils.asList("with","with","with","with","with","with"));
+        ignoreFinalMap.put("HttpLoggingInterceptor", Utils.asList("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreFinalMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("NotificationService", Utils.asList("onNotificationPosted","onNotificationRemoved","onStartCommand"));
         ignoreFinalMap.put("OkGoDemo", Utils.asList("getUserInfo","getUserList","uploadImage","uploadImages"));
@@ -83,7 +85,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
         ignoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
         ignoreStaticMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
-        ignoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList("preload","preload","displayImage","displayImage","displayImageToGif","displayImageToGif","loadImageBitmap","loadImageBitmap","loadImageDrawable","loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif","cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
+        ignoreStaticMap.put("GlideUtils.GlideLoader", Utils.asList("preload","preload","displayImage","displayImage","displayImage","displayImage","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToFile","displayImageToFile","displayImageToFile","displayImageToFile","loadImageBitmap","loadImageBitmap","loadImageDrawable","loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif","cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
+        ignoreStaticMap.put("HttpLoggingInterceptor", Utils.asList("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreStaticMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("NotificationService", Utils.asList("onNotificationPosted","onNotificationRemoved","onCreate","onDestroy","onStartCommand","cancelNotification"));
         ignoreStaticMap.put("OkGoResponse", Utils.asList("getDataString"));
@@ -114,6 +117,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
         ignoreParamMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreParamMap.put("GlideUtils", Utils.asList("with","with","with","with","with","with"));
+        ignoreParamMap.put("HttpLoggingInterceptor", Utils.asList("intercept","isPlaintext","bodyEncoded"));
         ignoreParamMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("NotificationService", Utils.asList("onStartCommand"));
         ignoreParamMap.put("OkGoCallback", Utils.asList("onStart","uploadProgress","downloadProgress","onCacheSuccess","onError","onSuccess","convertResponse"));
@@ -153,6 +157,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop"));
         ignoreUnPublicMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform"));
+        ignoreUnPublicMap.put("HttpLoggingInterceptor", Utils.asList("_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState"));
         ignoreUnPublicMap.put("NotificationService.NotificationListener", Utils.asList("onServiceCreated","onServiceDestroy","onStartCommand","onNotificationPosted","onNotificationRemoved"));
         ignoreUnPublicMap.put("OkGoCallback", Utils.asList("_response","isSuccess"));
@@ -194,7 +199,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged - void","onBatteryLow - void","onBatteryOkay - void","onPowerConnected - void","onPowerUsageSummary - void"));
         ignoreReturnVoidMap.put("EventBusUtils", Utils.asList("register - void","unregister - void","post - void","cancelEventDelivery - void","postSticky - void","removeStickyEvent - void","removeAllStickyEvents - void"));
         ignoreReturnVoidMap.put("GlideUtils", Utils.asList("init - void","clearDiskCache - void","clearMemoryCache - void","onLowMemory - void"));
-        ignoreReturnVoidMap.put("GlideUtils.GlideLoader", Utils.asList("preload - void","preload - void","displayImage - void","displayImage - void","displayImageToGif - void","displayImageToGif - void","loadImageBitmap - void","loadImageBitmap - void","loadImageDrawable - void","loadImageDrawable - void","loadImageFile - void","loadImageFile - void","loadImageGif - void","loadImageGif - void","cancelDisplayTask - void","cancelDisplayTask - void","destroy - void","pause - void","resume - void","stop - void","start - void"));
+        ignoreReturnVoidMap.put("GlideUtils.GlideLoader", Utils.asList("preload - void","preload - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","loadImageBitmap - void","loadImageBitmap - void","loadImageDrawable - void","loadImageDrawable - void","loadImageFile - void","loadImageFile - void","loadImageGif - void","loadImageGif - void","cancelDisplayTask - void","cancelDisplayTask - void","destroy - void","pause - void","resume - void","stop - void","start - void"));
+        ignoreReturnVoidMap.put("HttpLoggingInterceptor", Utils.asList("_finalPrintLog - void"));
         ignoreReturnVoidMap.put("ImageLoaderUtils", Utils.asList("init - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","clearDiskCache - void","clearMemoryCache - void","handleSlowNetwork - void","denyNetworkDownloads - void","cancelDisplayTask - void","setDefaultLoadingListener - void","destroy - void","pause - void","resume - void","stop - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState - void"));
