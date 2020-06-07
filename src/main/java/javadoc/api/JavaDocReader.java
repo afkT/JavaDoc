@@ -129,14 +129,12 @@ public final class JavaDocReader {
     public static String[] getExecuteParams(final boolean readAll, final String path, final String className) {
         if (readAll) {
             return new String[]{
-                    "-private", "-doclet", Doclet.class.getName(),
-                    "-encoding", "utf-8",
-                    "-classpath", "", path + className};
+                    "-private", "-encoding", "utf-8",
+                    "-doclet", Doclet.class.getName(), path + className};
         } else {
             return new String[]{
-                    "-doclet", Doclet.class.getName(),
                     "-encoding", "utf-8",
-                    "-classpath", "", path + className};
+                    "-doclet", Doclet.class.getName(), path + className};
         }
     }
 }

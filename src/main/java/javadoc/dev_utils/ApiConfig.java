@@ -433,6 +433,10 @@ public final class ApiConfig {
         // = DevWidget =
         // =============
 
+        sFilterMethodMap_Widget.put("ViewAssist.java", new String[]{"onRemove", "onNotFound", "onChange",
+                "onCreateView", "onBindView"});
+        sFilterMethodMap_Widget.put("StateLayout.java", new String[]{"onRemove", "onNotFound", "onChange",
+                "onCreateView", "onBindView"});
     }
 
     /**
