@@ -23,4 +23,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
     // DevJava
     compile 'com.afkt:DevJava:1.0.7'
+
+    // tools.jar 的依赖
+    compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)
 }
