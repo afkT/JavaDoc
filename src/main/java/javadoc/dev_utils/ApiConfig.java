@@ -270,6 +270,9 @@ public final class ApiConfig {
         sCatelogMap_Other.put(".assist", "常用辅助类封装");
         sCatelogMap_Other.put(".other", "第三方库封装工具类");
         sCatelogMap_Other.put(".other.okgo", "OkGo 网络请求");
+        sCatelogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
+        sCatelogMap_Other.put(".other.retrofit.response", "请求响应解析");
+        sCatelogMap_Other.put(".other.retrofit.subscriber", "请求响应处理");
         sCatelogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
         sCatelogMap_Other.put(".service", "Service 相关");
         sCatelogMap_Other.put(".temp", "临时快捷调用工具类");
