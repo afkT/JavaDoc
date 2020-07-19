@@ -5,6 +5,7 @@ import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -122,7 +123,8 @@ final class DevJava_READMEMain {
         buffer.append(commonAPI);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME, buffer.toString());
+        FileUtils.saveFile(new File(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
+                buffer.toString().getBytes());
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.DEV_JAVA_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuffer.toString());

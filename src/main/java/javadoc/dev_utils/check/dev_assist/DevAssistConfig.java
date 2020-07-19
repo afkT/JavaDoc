@@ -65,7 +65,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("MultiSelectListAssist", Utils.asList("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","select","select","select","unselect","unselect","toggle","getSelectValues","getSelectValuesToReverse","getSelectValue","getSelectValueToPosition"));
         ignoreStaticMap.put("MultiSelectMapAssist", Utils.asList("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","isSelectKey","select","select","unselect","toggle","getSelectValue","getSelectValues","getSelectValuesToReverse","getSelectKey","getSelectKeys","getSelectKeysToReverse"));
         ignoreStaticMap.put("NumberControlAssist", Utils.asList("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getObject","setObject","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","checkUpdate","getNumberListener","setNumberListener"));
-        ignoreStaticMap.put("PageAssist", Utils.asList("getPageNum","getPageNum","setPageNum","getPageNumReady","getPageNumReady","setPageNumReady","getPageSize","getPageSize","setPageSize","getTotalRow","getTotalRow","setTotalRow","isLastPage","isLastPage","setLastPage","isFirstPage","isFirstPage","isAllowNextPage","getNextPage","nextPage","getNextPageReady","nextPageReady","isLessThanPageSize","reset"));
+        ignoreStaticMap.put("PageAssist", Utils.asList("getPageNum","getPageNum","setPageNum","getPageSize","getPageSize","setPageSize","getTotalRow","getTotalRow","setTotalRow","isLastPage","isLastPage","setLastPage","isFirstPage","isFirstPage","isAllowNextPage","getNextPage","nextPage","isLessThanPageSize","reset"));
         ignoreStaticMap.put("RequestStateAssist", Utils.asList("getRequestType","getRequestType","setRequestType","equalsRequestType","getRequestHashCode","getRequestHashCodeRandom","equalsHashCode","getRequestState","getRequestState","setRequestState","isRequestNormal","isRequestNever","isRequestIng","isRequestSuccess","isRequestFail","isRequestError","setRequestNormal","setRequestNever","setRequestIng","setRequestSuccess","setRequestFail","setRequestError"));
         ignoreStaticMap.put("VariableAssist", Utils.asList("getBooleanVariable","getObjectVariable"));
 
@@ -88,7 +88,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("EditTextWatcherAssist.FocusListener", Utils.asList("onFocusChange"));
         ignoreParamMap.put("IImageEngine.BitmapCallBack", Utils.asList("onResponse","onFailure"));
         ignoreParamMap.put("IImageEngine.DrawableCallBack", Utils.asList("onResponse","onFailure"));
-        ignoreParamMap.put("PageAssist", Utils.asList("setPageNum","setPageNumReady","setPageSize","setTotalRow","setLastPage"));
+        ignoreParamMap.put("PageAssist", Utils.asList("setPageNum","setPageSize","setTotalRow","setLastPage"));
         ignoreParamMap.put("RequestStateAssist", Utils.asList("setRequestType","setRequestState"));
 
         return ignoreParamMap;

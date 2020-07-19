@@ -83,7 +83,7 @@ public final class CodeAnnotationAnalyeRecord {
                     sAnnotationSpaceMap.put(file.getName(), newText);
                     // 不一样才覆盖
                     if (sCoverText) {
-                        FileUtils.saveFile(file.getParent(), file.getName(), newText);
+                        FileUtils.saveFile(file.getAbsolutePath(), newText.getBytes());
                     }
                 }
                 // =

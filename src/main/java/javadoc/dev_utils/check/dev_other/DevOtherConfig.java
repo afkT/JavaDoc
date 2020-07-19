@@ -22,6 +22,9 @@ final class DevOtherConfig implements ICheckConfig {
         Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("AccessibilityListenerService", Utils.asList("onCreate","onDestroy"));
         ignoreAnnotateMap.put("AppStateReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("BaseBeanSubscriber", Utils.asList("onNext","onError","onStart","onComplete"));
+        ignoreAnnotateMap.put("BaseResponse", Utils.asList("getOriginal"));
+        ignoreAnnotateMap.put("BaseResponseSubscriber", Utils.asList("onNext","onError","onStart","onComplete"));
         ignoreAnnotateMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
@@ -33,6 +36,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("NotificationService", Utils.asList("onCreate","onDestroy","onStartCommand"));
         ignoreAnnotateMap.put("OkGoResponse.Builder", Utils.asList("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreAnnotateMap.put("PhoneReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("RetrofitManager", Utils.asList("getInstance"));
+        ignoreAnnotateMap.put("RxJavaManager", Utils.asList("getInstance"));
         ignoreAnnotateMap.put("ScreenReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("SmsReceiver", Utils.asList("onReceive"));
         ignoreAnnotateMap.put("TimeReceiver", Utils.asList("onReceive"));
@@ -57,6 +62,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreFinalMap.put("GlideUtils", Utils.asList("with","with","with","with","with","with"));
         ignoreFinalMap.put("HttpLoggingInterceptor", Utils.asList("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
+        ignoreFinalMap.put("LubanUtils", Utils.asList("compress","compress","compress","compress","compress","compress","compress"));
         ignoreFinalMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("NotificationService", Utils.asList("onNotificationPosted","onNotificationRemoved","onStartCommand"));
         ignoreFinalMap.put("OkGoDemo", Utils.asList("getUserInfo","getUserList","uploadImage","uploadImages"));
@@ -80,6 +86,7 @@ final class DevOtherConfig implements ICheckConfig {
         Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent","onInterrupt","onServiceConnected","onCreate","onDestroy"));
         ignoreStaticMap.put("AppStateReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("BaseResponse", Utils.asList("getOriginal"));
         ignoreStaticMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey","blurBitmap"));
         ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
@@ -93,6 +100,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("OkGoResponse.Builder", Utils.asList("build","setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreStaticMap.put("PhoneReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("PictureSelectorUtils.PicConfig", Utils.asList("getMimeType","setMimeType","getSelectionMode","setSelectionMode","isCamera","setCamera","isCrop","setCrop","isCircleCrop","setCircleCrop","isCompress","setCompress","getMinimumCompressSize","setMinimumCompressSize","getWithAspectRatio","setWithAspectRatio","isGif","setGif","getImageSpanCount","setImageSpanCount","getMinSelectNum","setMinSelectNum","getMaxSelectNum","setMaxSelectNum","getLocalMedia","setLocalMedia","getCameraSavePath","setCameraSavePath","getCompressSavePath","setCompressSavePath","clone","set"));
+        ignoreStaticMap.put("RetrofitManager", Utils.asList("get","put","remove","contains","getRetrofitMap","create"));
+        ignoreStaticMap.put("RxJavaManager", Utils.asList("add","remove","contains","getManagerMap"));
         ignoreStaticMap.put("ScreenReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("SmsReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("TimeReceiver", Utils.asList("onReceive"));
@@ -111,6 +120,8 @@ final class DevOtherConfig implements ICheckConfig {
     public Map<String, ArrayList<String>> getIgnoreParamMap() {
         Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("AppStateReceiver", Utils.asList("onReceive"));
+        ignoreParamMap.put("BaseBeanSubscriber", Utils.asList("onNext","onError"));
+        ignoreParamMap.put("BaseResponseSubscriber", Utils.asList("onNext","onError"));
         ignoreParamMap.put("BatteryReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey","blurBitmap"));
         ignoreParamMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
@@ -118,6 +129,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreParamMap.put("GlideUtils", Utils.asList("with","with","with","with","with","with"));
         ignoreParamMap.put("HttpLoggingInterceptor", Utils.asList("intercept","isPlaintext","bodyEncoded"));
+        ignoreParamMap.put("LubanUtils", Utils.asList("compress","compress","compress","compress","compress","compress","compress"));
         ignoreParamMap.put("NetWorkReceiver", Utils.asList("onReceive"));
         ignoreParamMap.put("NotificationService", Utils.asList("onStartCommand"));
         ignoreParamMap.put("OkGoCallback", Utils.asList("onStart","uploadProgress","downloadProgress","onCacheSuccess","onError","onSuccess","convertResponse"));
@@ -152,12 +164,16 @@ final class DevOtherConfig implements ICheckConfig {
         Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("AccessibilityListenerService", Utils.asList("onServiceConnected"));
         ignoreUnPublicMap.put("AppStateReceiver.AppStateListener", Utils.asList("onAdded","onReplaced","onRemoved"));
+        ignoreUnPublicMap.put("BaseBeanSubscriber", Utils.asList("onStart","getErrorMessage"));
+        ignoreUnPublicMap.put("BaseResponseSubscriber", Utils.asList("onStart","getErrorMessage","isSuccess"));
         ignoreUnPublicMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged","onBatteryLow","onBatteryOkay","onPowerConnected","onPowerUsageSummary"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop"));
         ignoreUnPublicMap.put("GlideTransformUtils.RotateTransformation", Utils.asList("transform"));
         ignoreUnPublicMap.put("HttpLoggingInterceptor", Utils.asList("_finalPrintLog","isPlaintext","bodyEncoded"));
+        ignoreUnPublicMap.put("LubanUtils", Utils.asList("getContext"));
+        ignoreUnPublicMap.put("LubanUtils.OnCompressListener", Utils.asList("onStart","onSuccess","onError","onComplete"));
         ignoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState"));
         ignoreUnPublicMap.put("NotificationService.NotificationListener", Utils.asList("onServiceCreated","onServiceDestroy","onStartCommand","onNotificationPosted","onNotificationRemoved"));
         ignoreUnPublicMap.put("OkGoCallback", Utils.asList("_response","isSuccess"));
@@ -195,6 +211,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("AccessibilityListenerService.AccessibilityListener", Utils.asList("onAccessibilityEvent - void","onInterrupt - void","onServiceCreated - void","onServiceDestroy - void"));
         ignoreReturnVoidMap.put("AppStateReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("AppStateReceiver.AppStateListener", Utils.asList("onAdded - void","onReplaced - void","onRemoved - void"));
+        ignoreReturnVoidMap.put("BaseBeanSubscriber", Utils.asList("onSuccessResponse - void","onErrorResponse - void"));
+        ignoreReturnVoidMap.put("BaseResponseSubscriber", Utils.asList("onSuccessResponse - void","onErrorResponse - void"));
         ignoreReturnVoidMap.put("BatteryReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged - void","onBatteryLow - void","onBatteryOkay - void","onPowerConnected - void","onPowerUsageSummary - void"));
         ignoreReturnVoidMap.put("EventBusUtils", Utils.asList("register - void","unregister - void","post - void","cancelEventDelivery - void","postSticky - void","removeStickyEvent - void","removeAllStickyEvents - void"));
@@ -202,6 +220,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("GlideUtils.GlideLoader", Utils.asList("preload - void","preload - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","loadImageBitmap - void","loadImageBitmap - void","loadImageDrawable - void","loadImageDrawable - void","loadImageFile - void","loadImageFile - void","loadImageGif - void","loadImageGif - void","cancelDisplayTask - void","cancelDisplayTask - void","destroy - void","pause - void","resume - void","stop - void","start - void"));
         ignoreReturnVoidMap.put("HttpLoggingInterceptor", Utils.asList("_finalPrintLog - void"));
         ignoreReturnVoidMap.put("ImageLoaderUtils", Utils.asList("init - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","clearDiskCache - void","clearMemoryCache - void","handleSlowNetwork - void","denyNetworkDownloads - void","cancelDisplayTask - void","setDefaultLoadingListener - void","destroy - void","pause - void","resume - void","stop - void"));
+        ignoreReturnVoidMap.put("LubanUtils", Utils.asList("setConfig - void"));
+        ignoreReturnVoidMap.put("LubanUtils.OnCompressListener", Utils.asList("onStart - void","onSuccess - void","onError - void","onComplete - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver.NetwordStateListener", Utils.asList("onNetworkState - void"));
         ignoreReturnVoidMap.put("NotificationService", Utils.asList("onNotificationPosted - void","onNotificationRemoved - void","startService - void","stopService - void","startNotificationListenSettings - void","cancelNotification - void","setNotificationListener - void"));
@@ -212,6 +232,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("PhoneReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("PhoneReceiver.PhoneListener", Utils.asList("onPhoneStateChanged - void"));
         ignoreReturnVoidMap.put("PictureSelectorUtils", Utils.asList("setPicConfig - void","setSavePath - void","setMinimumCompressSize - void","deleteCacheDirFile - void"));
+        ignoreReturnVoidMap.put("RxJavaManager", Utils.asList("add - void","remove - void"));
         ignoreReturnVoidMap.put("ScreenReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("ScreenReceiver.ScreenListener", Utils.asList("screenOn - void","screenOff - void","userPresent - void"));
         ignoreReturnVoidMap.put("SmsReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));

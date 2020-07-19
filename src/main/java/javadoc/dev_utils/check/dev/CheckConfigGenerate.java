@@ -5,6 +5,7 @@ import dev.utils.common.FileUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -63,7 +64,7 @@ public class CheckConfigGenerate {
         lists.add(Utils.generateSetString(ignoreAnnotationSpaceSet, "map"));
         String format = StringUtils.getFormatString(FORMAT_STR, lists.toArray());
         // 生成 Config
-        FileUtils.saveFile(PAGE_DIP + "\\" + packageName,
-                className + "Config.java", format);
+        FileUtils.saveFile(new File(PAGE_DIP + "\\" + packageName,
+                className + "Config.java").getAbsolutePath(), format.getBytes());
     }
 }
