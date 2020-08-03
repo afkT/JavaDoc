@@ -288,6 +288,7 @@ public final class ApiConfig {
         sCatelogMap_Widget.put(".widget.custom", "自定义 View");
         sCatelogMap_Widget.put(".widget.function", "需求功能 View");
         sCatelogMap_Widget.put(".widget.ui", "UI View");
+        sCatelogMap_Widget.put(".widget.utils", "工具类目录");
     }
 
     /**
