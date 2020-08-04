@@ -40,6 +40,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreAnnotateMap.put("LimitLayout", Utils.asList("onMeasure"));
         ignoreAnnotateMap.put("LineTextView", Utils.asList("onDraw"));
         ignoreAnnotateMap.put("LoadProgressBar", Utils.asList("onDraw"));
+        ignoreAnnotateMap.put("RadiusUtils", Utils.asList("onSaveInstanceState","onRestoreInstanceState"));
+        ignoreAnnotateMap.put("RadiusView", Utils.asList("onSizeChanged","draw","onSaveInstanceState","onRestoreInstanceState"));
         ignoreAnnotateMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","finalize"));
         ignoreAnnotateMap.put("ScanShapeView", Utils.asList("onDraw"));
         ignoreAnnotateMap.put("ScanShapeView.CornerEffect", Utils.asList("getRadius"));
@@ -82,6 +84,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("LimitLayout", Utils.asList("initAttrs","onMeasure","setMaxWidth","setMaxHeight"));
         ignoreFinalMap.put("LineTextView", Utils.asList("onDraw","setNewLineCallBack"));
         ignoreFinalMap.put("LoadProgressBar", Utils.asList("initAttrs","onDraw","drawProgressText","drawProgressText","setMax","setProgress","setProgressColor","setOuterRingColor","setInsideCircleWidth","setOuterRingWidth","setCanvasNumber","setNumberTextSize","setNumberTextColor","setProgressStyle"));
+        ignoreFinalMap.put("RadiusUtils", Utils.asList("onSizeChanged","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","onSaveInstanceState","onRestoreInstanceState"));
+        ignoreFinalMap.put("RadiusView", Utils.asList("initAttrs","onSizeChanged","draw","onRestoreInstanceState","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom"));
         ignoreFinalMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","setRangeMultiple","setDrawRightIcon","setRightIcon","setTextWatcher","init"));
         ignoreFinalMap.put("ScanShapeView", Utils.asList("onDraw","setShapeType","setCornerEffect","setRegion","setRegion","setRegion","getRegion","setBorderMargin","setBorderColor","setBorderWidth","setDrawBorder","setDrawBackground","setBGColor","setDrawAnim","setAutoAnim","setBorderToSquare","setBorderWidthToSquare","setTriAngleLength","setSpecialToSquare","setLineDurationToSquare","setBitmapToSquare","setLineMarginTopToSquare","setLineMarginLeftToSquare","setLineColorToSquare","setLineWidthToHexagon","setLineMarginToHexagon","setLineAnimDirection","setLineColorToHexagon","setBitmapToAnnulus","setLineColorToAnnulus","setLineOffsetSpeedToAnnulus","setAnnulusDraws","setAnnulusColors","setAnnulusLengths","setAnnulusWidths","setAnnulusMargins","sin","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","animSwitch"));
         ignoreFinalMap.put("SignView", Utils.asList("onDraw","onTouchEvent","_resetCanvas","setPath","setPaint","setDrawCallBack"));
@@ -89,7 +93,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("StateLayout.Global", Utils.asList("register","unregister"));
         ignoreFinalMap.put("StateLayout.TypeAdapter", Utils.asList("onCreateView","onBindView"));
         ignoreFinalMap.put("ViewAssist", Utils.asList("wrap","wrap","showType","register","unregister","unregister","setTag","setData","getData","setData","getAdapter","getView","setListener"));
-        ignoreFinalMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","setMaxLine","setRowTopMargin","setViewLeftMargin","setRowFristLeftMargin","setRowViewMargin"));
+        ignoreFinalMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","setMaxLine","setRowTopMargin","setViewLeftMargin","setRowViewMargin"));
 
         return ignoreFinalMap;
     }
@@ -121,6 +125,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("LimitLayout", Utils.asList("initAttrs","onMeasure","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight"));
         ignoreStaticMap.put("LineTextView", Utils.asList("onDraw","isNewLine","setNewLineCallBack"));
         ignoreStaticMap.put("LoadProgressBar", Utils.asList("initAttrs","init","onDraw","drawProgressText","drawProgressText","reset","getMax","setMax","getProgress","setProgress","getProgressColor","setProgressColor","getOuterRingColor","setOuterRingColor","getInsideCircleWidth","setInsideCircleWidth","getOuterRingWidth","setOuterRingWidth","isCanvasNumber","setCanvasNumber","getNumberTextSize","setNumberTextSize","getNumberTextColor","setNumberTextColor","getProgressStyle","setProgressStyle"));
+        ignoreStaticMap.put("RadiusUtils", Utils.asList("resetRadius","onSizeChanged","getPath","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","getRadius","getRadiusLeftTop","getRadiusLeftBottom","getRadiusRightTop","getRadiusRightBottom","onSaveInstanceState","onRestoreInstanceState"));
+        ignoreStaticMap.put("RadiusView", Utils.asList("initAttrs","onSizeChanged","draw","onSaveInstanceState","onRestoreInstanceState","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","getRadius","getRadiusLeftTop","getRadiusLeftBottom","getRadiusRightTop","getRadiusRightBottom"));
         ignoreStaticMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent","finalize","getRangeMultiple","setRangeMultiple","isDrawRightIcon","setDrawRightIcon","getRightIcon","setRightIcon","setTextWatcher","init","drawOperate"));
         ignoreStaticMap.put("ScanShapeView", Utils.asList("init","handlerCornerPathEffect","onDraw","destroy","getShapeType","setShapeType","getCornerRadius","setCornerEffect","setRegion","setRegion","setRegion","getRegionLeft","getRegionTop","getRegionWidth","getRegionHeight","getRegion","getRegion","getRegionParent","getBorderMargin","setBorderMargin","getBorderColor","setBorderColor","getBorderWidth","setBorderWidth","isDrawBorder","setDrawBorder","isDrawBackground","setDrawBackground","getBGColor","setBGColor","isDrawAnim","setDrawAnim","isAutoAnim","setAutoAnim","getBorderToSquare","setBorderToSquare","getBorderWidthToSquare","setBorderWidthToSquare","getTriAngleLength","setTriAngleLength","isSpecialToSquare","setSpecialToSquare","getLineDurationToSquare","setLineDurationToSquare","getBitmapToSquare","setBitmapToSquare","getLineMarginTopToSquare","setLineMarginTopToSquare","getLineMarginLeftToSquare","setLineMarginLeftToSquare","getLineColorToSquare","setLineColorToSquare","getLineWidthToHexagon","setLineWidthToHexagon","getLineMarginToHexagon","setLineMarginToHexagon","isLineAnimDirection","setLineAnimDirection","getLineColorToHexagon","setLineColorToHexagon","getBitmapToAnnulus","setBitmapToAnnulus","getLineColorToAnnulus","setLineColorToAnnulus","getLineOffsetSpeedToAnnulus","setLineOffsetSpeedToAnnulus","getAnnulusDraws","setAnnulusDraws","getAnnulusColors","setAnnulusColors","getAnnulusLengths","setAnnulusLengths","getAnnulusWidths","setAnnulusWidths","getAnnulusMargins","setAnnulusMargins","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","startAnim","stopAnim","animSwitch","isAnimRunning","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
         ignoreStaticMap.put("ScanShapeView.CornerEffect", Utils.asList("getRadius"));
@@ -129,7 +135,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("StateLayout.Global", Utils.asList("register","unregister"));
         ignoreStaticMap.put("StateLayout.TypeAdapter", Utils.asList("onCreateView","onBindView"));
         ignoreStaticMap.put("ViewAssist", Utils.asList("showIng","showFailed","showSuccess","showEmptyData","showType","notifyDataSetChanged","gone","visible","register","unregister","unregister","reset","getWrapper","getTag","setTag","getData","setData","getData","setData","getAdapter","getView","getCurrentType","getCurrentView","setListener"));
-        ignoreStaticMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","calc","refreshDraw","getRowLine","getMaxLine","setMaxLine","getRowTopMargin","setRowTopMargin","getViewLeftMargin","setViewLeftMargin","getRowFristLeftMargin","setRowFristLeftMargin","setRowViewMargin"));
+        ignoreStaticMap.put("WrapView", Utils.asList("initAttrs","onMeasure","onLayout","calc","refreshDraw","getRowLine","getMaxLine","setMaxLine","getRowTopMargin","setRowTopMargin","getViewLeftMargin","setViewLeftMargin","setRowViewMargin"));
 
         return ignoreStaticMap;
     }
@@ -161,6 +167,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreParamMap.put("LimitLayout", Utils.asList("onMeasure"));
         ignoreParamMap.put("LineTextView", Utils.asList("onDraw"));
         ignoreParamMap.put("LoadProgressBar", Utils.asList("onDraw"));
+        ignoreParamMap.put("RadiusUtils", Utils.asList("onSaveInstanceState","onRestoreInstanceState"));
+        ignoreParamMap.put("RadiusView", Utils.asList("onSizeChanged","draw","onRestoreInstanceState"));
         ignoreParamMap.put("RightIconEditText", Utils.asList("setCompoundDrawables","onTouchEvent"));
         ignoreParamMap.put("ScanShapeView", Utils.asList("onDraw"));
         ignoreParamMap.put("SignView", Utils.asList("onDraw","onTouchEvent"));
@@ -216,6 +224,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LineTextView", Utils.asList("onDraw"));
         ignoreUnPublicMap.put("LineTextView.OnNewLineCallBack", Utils.asList("onNewLine"));
         ignoreUnPublicMap.put("LoadProgressBar", Utils.asList("initAttrs","init","onDraw","drawProgressText","drawProgressText"));
+        ignoreUnPublicMap.put("RadiusUtils", Utils.asList("resetRadius"));
+        ignoreUnPublicMap.put("RadiusView", Utils.asList("initAttrs","onSizeChanged","onSaveInstanceState","onRestoreInstanceState"));
         ignoreUnPublicMap.put("RightIconEditText", Utils.asList("finalize","init","drawOperate"));
         ignoreUnPublicMap.put("ScanShapeView", Utils.asList("init","handlerCornerPathEffect","onDraw","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","animSwitch","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
         ignoreUnPublicMap.put("SignView", Utils.asList("onDraw","_resetCanvas"));
@@ -265,6 +275,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("LimitLayout", Utils.asList("initAttrs - void"));
         ignoreReturnVoidMap.put("LineTextView.OnNewLineCallBack", Utils.asList("onNewLine - void"));
         ignoreReturnVoidMap.put("LoadProgressBar", Utils.asList("initAttrs - void","drawProgressText - void","drawProgressText - void"));
+        ignoreReturnVoidMap.put("RadiusUtils", Utils.asList("resetRadius - void","onSizeChanged - void","setRadius - void","setRadiusLeftTop - void","setRadiusLeftBottom - void","setRadiusRightTop - void","setRadiusRightBottom - void","setRadiusLeft - void","setRadiusRight - void","setRadiusTop - void","setRadiusBottom - void"));
+        ignoreReturnVoidMap.put("RadiusView", Utils.asList("initAttrs - void"));
         ignoreReturnVoidMap.put("RightIconEditText", Utils.asList("init - void","drawOperate - void"));
         ignoreReturnVoidMap.put("ScanShapeView", Utils.asList("init - void","handlerCornerPathEffect - void","destroy - void","refPaintToAnnulus - void","makeBackground - void","makeAnim - void","drawAnim - void","resetAnim - void","startAnim - void","stopAnim - void","animSwitch - void","refLineColorToSquare - void","refLineColorToHexagon - void","refLineColorToAnnulus - void","initAnim - void"));
         ignoreReturnVoidMap.put("SignView", Utils.asList("_resetCanvas - void"));
