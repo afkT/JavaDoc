@@ -26,6 +26,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("BaseResponse", Utils.asList("getOriginal"));
         ignoreAnnotateMap.put("BaseResponseSubscriber", Utils.asList("onNext","onError","onStart","onComplete"));
         ignoreAnnotateMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreAnnotateMap.put("GlideEngine", Utils.asList("createGlideEngine"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
@@ -56,6 +57,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("AccessibilityListenerService", Utils.asList("onAccessibilityEvent"));
         ignoreFinalMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreFinalMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreFinalMap.put("GlideEngine", Utils.asList("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
         ignoreFinalMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey","blurBitmap"));
         ignoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
         ignoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
@@ -88,6 +90,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("AppStateReceiver", Utils.asList("onReceive"));
         ignoreStaticMap.put("BaseResponse", Utils.asList("getOriginal"));
         ignoreStaticMap.put("BatteryReceiver", Utils.asList("onReceive"));
+        ignoreStaticMap.put("GlideEngine", Utils.asList("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
         ignoreStaticMap.put("GlideTransformUtils.GlideBlurformation", Utils.asList("transform","updateDiskCacheKey","blurBitmap"));
         ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", Utils.asList("transform","circleCrop","updateDiskCacheKey"));
         ignoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", Utils.asList("transform","roundCrop","updateDiskCacheKey"));
@@ -216,6 +219,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("BatteryReceiver", Utils.asList("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("BatteryReceiver.BatteryListener", Utils.asList("onBatteryChanged - void","onBatteryLow - void","onBatteryOkay - void","onPowerConnected - void","onPowerUsageSummary - void"));
         ignoreReturnVoidMap.put("EventBusUtils", Utils.asList("register - void","unregister - void","post - void","cancelEventDelivery - void","postSticky - void","removeStickyEvent - void","removeAllStickyEvents - void"));
+        ignoreReturnVoidMap.put("GlideEngine", Utils.asList("loadImage - void","loadImage - void","loadImage - void","loadFolderImage - void","loadAsGifImage - void","loadGridImage - void"));
         ignoreReturnVoidMap.put("GlideUtils", Utils.asList("init - void","clearDiskCache - void","clearMemoryCache - void","onLowMemory - void"));
         ignoreReturnVoidMap.put("GlideUtils.GlideLoader", Utils.asList("preload - void","preload - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","loadImageBitmap - void","loadImageBitmap - void","loadImageDrawable - void","loadImageDrawable - void","loadImageFile - void","loadImageFile - void","loadImageGif - void","loadImageGif - void","cancelDisplayTask - void","cancelDisplayTask - void","destroy - void","pause - void","resume - void","stop - void","start - void"));
         ignoreReturnVoidMap.put("HttpLoggingInterceptor", Utils.asList("_finalPrintLog - void"));
