@@ -54,13 +54,13 @@ final class DevApp_READMEMain {
         buffer.append("## 使用");
 
         buffer.append("\n\n");
-        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化就行~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用");
+        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用");
 
         buffer.append("\n\n");
         buffer.append("## 事项");
 
         buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类 (工具类内部调用)，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
+        buffer.append("- 内部存在两个日志工具类 ( 工具类内部调用 )，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
 
         buffer.append("\n\n");
         buffer.append("```java");
