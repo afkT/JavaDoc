@@ -55,7 +55,7 @@ final class DevJava_READMEMain {
         buffer.append("\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法就行");
+        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法");
         buffer.append("\n");
         buffer.append("JCLogUtils.setPrintLog(true);");
         buffer.append("\n");
