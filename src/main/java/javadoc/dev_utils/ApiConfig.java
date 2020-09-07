@@ -405,6 +405,9 @@ public final class ApiConfig {
                 "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor",
                 "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
 
+        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick",
+                "getCount", "getInvalidCount", "getInvalidCycleNumber"});
+
         // ==========
         // = Common =
         // ==========
@@ -423,9 +426,12 @@ public final class ApiConfig {
 
         sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
 
-        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
+        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments",
+                "getOwnerType", "getRawType", "equals", "hashCode"});
 
         sFilterMethodMap.put("CollectionUtils.java", new String[]{"put", "create"});
+
+        sFilterMethodMap.put("ScaleUtils.java", new String[]{"getXYx", "getXY", "compareTo"});
 
         // =============
         // = DevAssist =
