@@ -463,7 +463,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("FileIOUtils", Utils.asList("setBufferSize - void"));
         ignoreReturnVoidMap.put("FileRecordUtils", Utils.asList("setInsertInfo - void","setCallBack - void"));
         ignoreReturnVoidMap.put("FileRecordUtils.CallBack", Utils.asList("callback - void"));
-        ignoreReturnVoidMap.put("HandlerUtils", Utils.asList("postRunnable - void","postRunnable - void","postRunnable - void","postRunnable - void","removeRunnable - void"));
+        ignoreReturnVoidMap.put("HandlerUtils", Utils.asList("postRunnable - void","postRunnable - void","postRunnable - void","postRunnable - void","removeRunnable - void","clearRunnableMaps - void","postRunnable - void","removeRunnable - void"));
         ignoreReturnVoidMap.put("HandlerUtils.OnEndListener", Utils.asList("onEnd - void"));
         ignoreReturnVoidMap.put("HttpURLConnectionUtils", Utils.asList("doGetAsyn - void","doPostAsyn - void","request - void","getNetTime - void","getNetTime - void","reqNetTime - void"));
         ignoreReturnVoidMap.put("HttpURLConnectionUtils.CallBack", Utils.asList("onResponse - void","onFail - void"));
