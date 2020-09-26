@@ -25,6 +25,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Base64.Coder", Utils.asList("maxOutputSize"));
         ignoreAnnotateMap.put("Base64.Decoder", Utils.asList("maxOutputSize"));
         ignoreAnnotateMap.put("Base64.Encoder", Utils.asList("maxOutputSize","process"));
+        ignoreAnnotateMap.put("CalendarUtils", Utils.asList("getBitInt","solarToInt","solarFromInt"));
+        ignoreAnnotateMap.put("CalendarUtils.Festival", Utils.asList("compareTo","toString"));
         ignoreAnnotateMap.put("ClickUtils.OnCountClickListener", Utils.asList("onClick"));
         ignoreAnnotateMap.put("ClickUtils.OnDebouncingClickListener", Utils.asList("onClick"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo", Utils.asList("toString"));
@@ -80,6 +82,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("Base64.Encoder", Utils.asList("maxOutputSize","process"));
         ignoreFinalMap.put("Base64Cipher", Utils.asList("decrypt","encrypt"));
         ignoreFinalMap.put("BitmapUtils", Utils.asList("combineToCenter","combineToSameSize","combineToSameSize"));
+        ignoreFinalMap.put("CalendarUtils", Utils.asList("getBitInt","solarToInt","solarFromInt"));
+        ignoreFinalMap.put("CalendarUtils.Festival", Utils.asList("compareTo"));
         ignoreFinalMap.put("CameraSizeAssist", Utils.asList("setPreviewSize","setPictureSize","calcPreviewSize","calcPictureSize","calcVideoSize"));
         ignoreFinalMap.put("CameraUtils", Utils.asList("initCamera","open"));
         ignoreFinalMap.put("ColorUtils.ColorInfo", Utils.asList("RGBtoHSB"));
@@ -137,6 +141,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("Base64.Encoder", Utils.asList("maxOutputSize","process"));
         ignoreStaticMap.put("Base64Cipher", Utils.asList("decrypt","encrypt"));
         ignoreStaticMap.put("BeepVibrateAssist", Utils.asList("shouldBeep","streamUpdate","isPlayBeep","isVibrate","setVibrate","setVibrate","setMediaPlayer","playBeepSoundAndVibrate","close"));
+        ignoreStaticMap.put("CalendarUtils.Festival", Utils.asList("isFestival","isFestival","isFestival","compareTo","toString"));
+        ignoreStaticMap.put("CalendarUtils.SolarLunar", Utils.asList("getLunarYearDays","getLunarLeapDays","getLunarLeapMonth","getLunarMonthDays","getLunarGanZhi","getLunarMonthChinese","getLunarDayChinese","getSolarTermsIndex","getSolarTerms","getSolarTermsDate"));
         ignoreStaticMap.put("CameraAssist", Utils.asList("openDriver","closeDriver","startPreview","stopPreview","freeCameraResource","getCameraResolution","getPreviewSize","getCameraSizeAssist","getCamera","setCamera","setPreviewNotify","setAutoFocus","isPreviewing","setAutoInterval","setFlashlightOn","setFlashlightOff","isFlashlightOn"));
         ignoreStaticMap.put("CameraSizeAssist", Utils.asList("getCamera","setPreviewSize","setPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","setPictureSize","setPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","calcPreviewSize","calcPictureSize","calcVideoSize"));
         ignoreStaticMap.put("ClickUtils.ClickAssist", Utils.asList("isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","initConfig","putConfig","removeConfig","getConfigTime","removeRecord","clearRecord","setIntervalTime","reset"));
@@ -238,6 +244,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Base64.Coder", Utils.asList("process","maxOutputSize"));
         ignoreParamMap.put("Base64.Decoder", Utils.asList("maxOutputSize","process"));
         ignoreParamMap.put("Base64.Encoder", Utils.asList("maxOutputSize","process"));
+        ignoreParamMap.put("CalendarUtils", Utils.asList("getBitInt","solarToInt","solarFromInt"));
+        ignoreParamMap.put("CalendarUtils.Festival", Utils.asList("compareTo"));
         ignoreParamMap.put("ClassUtils", Utils.asList("getClass","getClass"));
         ignoreParamMap.put("ClickUtils.OnCountClickListener", Utils.asList("onClick"));
         ignoreParamMap.put("ClickUtils.OnDebouncingClickListener", Utils.asList("onClick"));
@@ -304,6 +312,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("AutoFocusAssist.AutoFocusTask", Utils.asList("doInBackground"));
         ignoreUnPublicMap.put("BarUtils", Utils.asList("addMarginTopEqualStatusBarHeight","subtractMarginTopEqualStatusBarHeight","applyStatusBarColor","applyStatusBarColor","hideStatusBarView","hideStatusBarView","showStatusBarView","createStatusBarView"));
         ignoreUnPublicMap.put("BeepVibrateAssist", Utils.asList("shouldBeep","streamUpdate"));
+        ignoreUnPublicMap.put("CalendarUtils", Utils.asList("getBitInt","solarToInt","solarFromInt","solarTermsDateSplit"));
+        ignoreUnPublicMap.put("CalendarUtils.FestivalHook", Utils.asList("hook"));
         ignoreUnPublicMap.put("CameraAssist", Utils.asList("freeCameraResource"));
         ignoreUnPublicMap.put("CameraAssist.PreviewNotify", Utils.asList("stopPreviewNotify","startPreviewNotify"));
         ignoreUnPublicMap.put("CameraSizeAssist", Utils.asList("calcPreviewSize","calcPictureSize","calcVideoSize"));
@@ -425,6 +435,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("BarUtils", Utils.asList("addMarginTopEqualStatusBarHeight - void","subtractMarginTopEqualStatusBarHeight - void","hideStatusBarView - void","hideStatusBarView - void","showStatusBarView - void"));
         ignoreReturnVoidMap.put("BeepVibrateAssist", Utils.asList("streamUpdate - void","close - void"));
         ignoreReturnVoidMap.put("BigDecimalUtils", Utils.asList("setScale - void","setRoundingMode - void"));
+        ignoreReturnVoidMap.put("CalendarUtils", Utils.asList("setFestivalHook - void"));
         ignoreReturnVoidMap.put("CameraAssist", Utils.asList("closeDriver - void","startPreview - void","stopPreview - void","freeCameraResource - void"));
         ignoreReturnVoidMap.put("CameraAssist.PreviewNotify", Utils.asList("stopPreviewNotify - void","startPreviewNotify - void"));
         ignoreReturnVoidMap.put("CameraUtils", Utils.asList("freeCameraResource - void"));
