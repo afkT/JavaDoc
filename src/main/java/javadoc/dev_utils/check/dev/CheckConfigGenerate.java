@@ -17,7 +17,7 @@ import java.util.Set;
 public class CheckConfigGenerate {
 
     // 格式化内容
-    private final static String FORMAT_STR;
+    private static final String FORMAT_STR;
     // 项目目录
     private static final String USER_DIR = System.getProperty("user.dir");
     // 包目录

@@ -16,6 +16,10 @@ import java.util.List;
 public final class CodeNewLineRemove {
 
     private static LinkedHashSet<String> sSets = new LinkedHashSet<>();
+    // 检查 Key
+    private static final String END_KEY = "}" + StringUtils.NEW_LINE_STR;
+    // 追加内容
+    private static final String APPEND = "}";
 
     public static void main(String[] args) {
         FileDepthFirstSearchUtils utils = new FileDepthFirstSearchUtils();
@@ -29,9 +33,13 @@ public final class CodeNewLineRemove {
             public boolean isAddToList(File file) {
                 String data = new String(FileUtils.readFileBytes(file));
                 if (data != null) {
-                    if (data.endsWith("}" + StringUtils.NEW_LINE_STR)) {
-                        String path = FileUtils.getAbsolutePath(file);
-                        sSets.add(path);
+                    if (data.endsWith(END_KEY)) {
+                        // 删减内容
+                        data = data.substring(0, data.length() - END_KEY.length()) + APPEND;
+                        // 替换内容
+                        FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
+                        // 存储路径
+                        sSets.add(FileUtils.getAbsolutePath(file));
                     }
                 }
                 return true;
