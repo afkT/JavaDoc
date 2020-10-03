@@ -1,5 +1,6 @@
 package javadoc.dev_utils;
 
+import java.io.File;
 import java.util.HashMap;
 
 /**
@@ -17,6 +18,8 @@ public final class ApiConfig {
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
     public static final String LOCAL_PATH = "F:/Project/Android";
+    // 项目路径
+    public static final String PROJECT_PATH = LOCAL_PATH + File.separator + PROJECT_NAME;
 
     // 包目录名
     public static final String DEV_PACKAGE = "dev.utils";
@@ -40,7 +43,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "2.0.5";
+    public static final String DEV_APP_VERSION = "2.0.6";
 
     // ===========
     // = DevJava =
@@ -55,7 +58,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.1.8";
+    public static final String DEV_JAVA_VERSION = "1.1.9";
 
     // =============
     // = DevAssist =
