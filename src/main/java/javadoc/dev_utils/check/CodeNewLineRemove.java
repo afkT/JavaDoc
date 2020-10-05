@@ -50,7 +50,7 @@ public final class CodeNewLineRemove {
                 for (String path : sSets) {
                     System.out.println(path);
                 }
-                System.out.println("搜索结束了");
+                System.out.println("搜索结束");
             }
         });
         utils.query(ApiConfig.PROJECT_PATH, true);
