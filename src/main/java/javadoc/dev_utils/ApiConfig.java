@@ -411,6 +411,8 @@ public final class ApiConfig {
         sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick",
                 "getCount", "getInvalidCount", "getInvalidCycleNumber"});
 
+        sFilterMethodMap.put("ScreenshotUtils.java", new String[]{"onScreenshot", "onChange", "onChecker"});
+
         // ==========
         // = Common =
         // ==========

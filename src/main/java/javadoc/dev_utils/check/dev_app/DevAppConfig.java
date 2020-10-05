@@ -45,6 +45,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ScaleUtils.XY", Utils.asList("getXYx","getXY","getXY","compareTo"));
         ignoreAnnotateMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
         ignoreAnnotateMap.put("ScreenSensorAssist.OrientationSensorListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
+        ignoreAnnotateMap.put("ScreenshotUtils.MediaContentObserver", Utils.asList("onChange"));
         ignoreAnnotateMap.put("SpanUtils.CustomBulletSpan", Utils.asList("getLeadingMargin","drawLeadingMargin"));
         ignoreAnnotateMap.put("SpanUtils.CustomDynamicDrawableSpan", Utils.asList("getDrawable","getSize","draw","getCachedDrawable"));
         ignoreAnnotateMap.put("SpanUtils.CustomImageSpan", Utils.asList("getDrawable"));
@@ -106,6 +107,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("ScaleUtils.XY", Utils.asList("getXY","compareTo"));
         ignoreFinalMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
         ignoreFinalMap.put("ScreenSensorAssist.OrientationSensorListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
+        ignoreFinalMap.put("ScreenshotUtils.MediaContentObserver", Utils.asList("onChange"));
         ignoreFinalMap.put("SnackbarUtils.StyleBuilder", Utils.asList("setRootGravity","setRootCornerRadius","setRootBackgroundTintColor","setRootBackground","setRootMargin","setRootAlpha","setTextGravity","setTextColor","setTextSize","setTextMaxLines","setTextEllipsize","setTextTypeface","setTextPadding","setActionGravity","setActionColor","setActionSize","setActionPadding","setActionCornerRadius","setActionBackgroundTintColor","setActionBackground"));
         ignoreFinalMap.put("SpanUtils.VerticalAlignSpan", Utils.asList("getSize","draw"));
         ignoreFinalMap.put("ToastFactory.BaseToast", Utils.asList("setView","setText"));
@@ -195,6 +197,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ScreenSensorAssist", Utils.asList("init","start","stop","isPortrait","isAllowChange"));
         ignoreStaticMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
         ignoreStaticMap.put("ScreenSensorAssist.OrientationSensorListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
+        ignoreStaticMap.put("ScreenshotUtils", Utils.asList("registerContentObserver","unregisterContentObserver","getStartListenTime","isCheckPrefix","setCheckPrefix","getScreenshotChecker","setScreenshotChecker","getListener","setListener","startListen","startListen","startListen","stopListen"));
+        ignoreStaticMap.put("ScreenshotUtils.MediaContentObserver", Utils.asList("onChange"));
         ignoreStaticMap.put("ShapeUtils", Utils.asList("getDrawable","setDrawable","setAlpha","setShape","setInnerRadius","setInnerRadiusRatio","setThickness","setThicknessRatio","setColor","setColor","setStroke","setStroke","setStroke","setStroke","setCornerRadius","setCornerRadius","setCornerRadiusLeft","setCornerRadiusRight","setCornerRadiusTop","setCornerRadiusBottom","setColors","setGradientType","setOrientation","setGradientCenter","setGradientRadius","setUseLevel","setPadding","setPadding","setSize"));
         ignoreStaticMap.put("ShellUtils.CommandResult", Utils.asList("isSuccess","isSuccess2","isSuccess3","isSuccess4"));
         ignoreStaticMap.put("SnackbarUtils", Utils.asList("getStyle","setStyle","getSnackbar","getSnackbarView","getTextView","getActionButton","getSnackbarLayout","getSnackbarContentLayout","addView","addView","setCallback","setAction","setAction","setAction","setAction","dismiss","dismiss","showShort","showLong","showIndefinite","showShort","showLong","showIndefinite","priShow","setSnackbarStyle","setSnackbarStyle","getShadowMargin","setShadowMargin","isAutoCalc","setAutoCalc","clearLocations","above","bellow","setSnackbarLocation","setLayoutGravity","setMargin"));
@@ -263,6 +267,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("ScaleUtils.XY", Utils.asList("getXY","compareTo"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorChangeListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorListener", Utils.asList("onAccuracyChanged","onSensorChanged"));
+        ignoreParamMap.put("ScreenshotUtils.MediaContentObserver", Utils.asList("onChange"));
         ignoreParamMap.put("SpanUtils.CustomBulletSpan", Utils.asList("getLeadingMargin","drawLeadingMargin"));
         ignoreParamMap.put("SpanUtils.CustomDynamicDrawableSpan", Utils.asList("getSize","draw"));
         ignoreParamMap.put("SpanUtils.CustomLineHeightSpan", Utils.asList("chooseHeight"));
@@ -380,6 +385,9 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ROMUtils", Utils.asList("isRightRom","getManufacturer","getBrand","getRomVersion","getSystemProperty","getSystemPropertyByShell","getSystemPropertyByStream","getSystemPropertyByReflect","_getRomInfo"));
         ignoreUnPublicMap.put("ReflectUtils", Utils.asList("forName","forName","getArgsType","sortConstructors","newInstance","getField","getAccessibleField","unwrap","method","exactMethod","similarMethod","sortMethods","isSimilarSignature","match","accessible","property","wrapper"));
         ignoreUnPublicMap.put("ScreenSensorAssist", Utils.asList("init"));
+        ignoreUnPublicMap.put("ScreenshotUtils", Utils.asList("registerContentObserver","unregisterContentObserver"));
+        ignoreUnPublicMap.put("ScreenshotUtils.OnScreenshotListener", Utils.asList("onScreenshot"));
+        ignoreUnPublicMap.put("ScreenshotUtils.ScreenshotChecker", Utils.asList("onChange","onChecker"));
         ignoreUnPublicMap.put("ShellUtils", Utils.asList("consumeInputStream"));
         ignoreUnPublicMap.put("ShortCutUtils", Utils.asList("getAuthority","getAuthorityFromPermission","getAuthorityFromPermission"));
         ignoreUnPublicMap.put("SignaturesUtils", Utils.asList("loadCertificates"));
@@ -503,6 +511,9 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ProcessUtils", Utils.asList("kill - void","kill - void"));
         ignoreReturnVoidMap.put("ReflectUtils", Utils.asList("sortConstructors - void","sortMethods - void"));
         ignoreReturnVoidMap.put("ScreenSensorAssist", Utils.asList("init - void"));
+        ignoreReturnVoidMap.put("ScreenshotUtils", Utils.asList("handleMediaContentChange - void"));
+        ignoreReturnVoidMap.put("ScreenshotUtils.OnScreenshotListener", Utils.asList("onScreenshot - void"));
+        ignoreReturnVoidMap.put("ScreenshotUtils.ScreenshotChecker", Utils.asList("onChange - void","onChecker - void"));
         ignoreReturnVoidMap.put("SharedUtils", Utils.asList("init - void","put - void","putAll - void","putAll - void","putAll - void","remove - void","removeAll - void","removeAll - void","clear - void"));
         ignoreReturnVoidMap.put("SizeUtils.onGetSizeListener", Utils.asList("onGetSize - void"));
         ignoreReturnVoidMap.put("SnackbarUtils", Utils.asList("dismiss - void","dismiss - void","showShort - void","showLong - void","showIndefinite - void","showShort - void","showLong - void","showIndefinite - void","priShow - void","clearLocations - void","setSnackbarLocation - void"));
