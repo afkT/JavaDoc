@@ -167,6 +167,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("FileBreadthFirstSearchUtils", Utils.asList("setSearchHandler","getQueueSameTimeNumber","setQueueSameTimeNumber","isRunning","stop","isStop","getStartTime","getEndTime","getDelayTime","setDelayTime","query","queryFile","whileQueue"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils.FileItem", Utils.asList("put"));
         ignoreStaticMap.put("FileDepthFirstSearchUtils", Utils.asList("setSearchHandler","isRunning","stop","isStop","getStartTime","getEndTime","query","queryFile"));
+        ignoreStaticMap.put("FilePartAssist", Utils.asList("getFile","getFileName","getFilePartItems","getFilePartItem","getPartCount","existsPart","isOnlyOne","getPartName"));
+        ignoreStaticMap.put("FilePartItem", Utils.asList("isFirstItem","isLastItem","existsPart","isOnlyOne","getPartName"));
         ignoreStaticMap.put("FileUtils.FileList", Utils.asList("getFile","getSubFiles"));
         ignoreStaticMap.put("FlashlightUtils", Utils.asList("register","unregister","setFlashlightOn","setFlashlightOn","setFlashlightOff","setFlashlightOff","isFlashlightOn","isFlashlightOn"));
         ignoreStaticMap.put("IToastImpl", Utils.asList("reset","setIsHandler","setNullText","setTextLength","init","style","defaultStyle","getToastStyle","initStyle","initToastFilter","setView","show","show","show","show","cancel","filter","handlerContent","getThreadToastStyle","createView","priShowToastText","newToastText","priShowToastView","newToastView"));

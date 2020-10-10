@@ -17,7 +17,7 @@ public final class ApiConfig {
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
-    public static final String LOCAL_PATH = "F:/Project/Android";
+    public static final String LOCAL_PATH = "F:/Project/Android/Utils";
     // 项目路径
     public static final String PROJECT_PATH = LOCAL_PATH + File.separator + PROJECT_NAME;
 
@@ -241,6 +241,7 @@ public final class ApiConfig {
         sCatelogMap.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
         sCatelogMap.put(".common.cipher", "编 / 解码工具类");
         sCatelogMap.put(".common.encrypt", "加密工具类");
+        sCatelogMap.put(".common.file", "文件分片相关");
         sCatelogMap.put(".common.random", "随机概率算法工具类");
         sCatelogMap.put(".common.thread", "线程相关");
         sCatelogMap.put(".common.validator", "数据校验工具类");
