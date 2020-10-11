@@ -108,13 +108,15 @@ public final class ApiConfig {
     // ===========
 
     // 包目录名
-    public static final String DEV_BASE_PACKAGE = "dev";
+    public static final String DEV_BASE_PACKAGE = "dev.base";
     // DevBase API 文件保存路径
     public static final String DEV_BASE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBase/";
     // DevBase 文件路径
-    public static final String DEV_BASE_PATH = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/";
+    public static final String DEV_BASE_PATH = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/base/";
     // DevBase GitHub 项目文件路径
-    public static final String DEV_BASE_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev";
+    public static final String DEV_BASE_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
+    // DevBase 版本号
+    public static final String DEV_BASE_VERSION = "1.0.0";
 
     // ===============
     // = DevStandard =
@@ -169,6 +171,13 @@ public final class ApiConfig {
     public static final HashMap<String, String> sFilterClassMap_Other = new HashMap<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
+
+    // ============
+    // = DevOther =
+    // ============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatelogMap_Base = new HashMap<>();
 
     // =============
     // = DevWidget =
@@ -294,6 +303,21 @@ public final class ApiConfig {
         sCatelogMap_Widget.put(".widget.function", "需求功能 View");
         sCatelogMap_Widget.put(".widget.ui", "UI View");
         sCatelogMap_Widget.put(".widget.utils", "工具类目录");
+
+        // ===========
+        // = DevBase =
+        // ===========
+
+        sCatelogMap_Base.put("dev.base", "根目录");
+        sCatelogMap_Base.put(".able", "基类接口");
+        sCatelogMap_Base.put(".activity", "核心 Base Activity 代码");
+        sCatelogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
+        sCatelogMap_Base.put(".expand.content", "内置 XML Layout 为 Content View 基类封装");
+        sCatelogMap_Base.put(".expand.mvp", "MVP 基础架构封装");
+        sCatelogMap_Base.put(".expand.viewbinding", "ViewBinding 基类封装");
+        sCatelogMap_Base.put(".fragment", "核心 Base Fragment 代码");
+        sCatelogMap_Base.put(".utils", "基类依赖工具包");
+        sCatelogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
     }
 
     /**
