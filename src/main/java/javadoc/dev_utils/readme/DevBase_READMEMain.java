@@ -22,9 +22,10 @@ final class DevBase_READMEMain {
      * @param path        文件路径
      * @param packageName 包名
      * @param mapCatelog  对应目录的注释
+     * @param githubUrl   项目 github 链接
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
-                                         final HashMap<String, String> mapCatelog) {
+                                         final HashMap<String, String> mapCatelog, final String githubUrl) {
         buffer.append("\n");
         buffer.append("## Gradle");
 
@@ -41,6 +42,30 @@ final class DevBase_READMEMain {
         buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
+
+        buffer.append("\n\n");
+        buffer.append("### 项目类结构 - [包目录](" + githubUrl + ")");
+        buffer.append("\n\n");
+        buffer.append("#### 核心代码");
+        buffer.append("\n\n");
+        buffer.append("* 核心 Base Activity（[AbstractDevBaseActivity](" + githubUrl + "/activity)）：整个库 Activity 基类都基于该模块代码");
+        buffer.append("\n\n");
+        buffer.append("* 核心 Base Fragment（[AbstractDevBaseFragment](" + githubUrl + "/fragment)）：整个库 Fragment 基类都基于该模块代码");
+        buffer.append("\n\n");
+        buffer.append("#### 其他代码");
+        buffer.append("\n\n");
+        buffer.append("* 接口相关（[able](" + githubUrl + "/able)）：对外提供开放方法接口，服务基类用于可选配置及获取操作");
+        buffer.append("\n\n");
+        buffer.append("* 库依赖工具包（[utils](" + githubUrl + "/utils)）：抽取通用代码工具类、封装基类相同逻辑代码辅助类");
+        buffer.append("\n\n");
+        buffer.append("#### 基于 Base Activity、Fragment 扩展包 - [expand](" + githubUrl + "/expand)");
+        buffer.append("\n\n");
+        buffer.append("* 内置 XML Layout 基类（[content](" + githubUrl + "/expand/content)）：对外提供开放方法接口，服务基类用于可选配置及获取操作");
+        buffer.append("\n\n");
+        buffer.append("* MVP 架构基类（[mvp](" + githubUrl + "/expand/mvp)）：抽取通用代码工具类、封装基类相同逻辑代码辅助类");
+        buffer.append("\n\n");
+        buffer.append("* ViewBinding 基类（[mvp](" + githubUrl + "/expand/viewbinding)）：抽取通用代码工具类、封装基类相同逻辑代码辅助类");
+        buffer.append("\n\n");
 
         buffer.append("\n\n");
     }
@@ -64,7 +89,7 @@ final class DevBase_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Base);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Base, githubUrl);
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(new File(ApiConfig.DEV_BASE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
