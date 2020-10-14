@@ -309,14 +309,14 @@ public final class ApiConfig {
         // ===========
 
         sCatelogMap_Base.put("dev.base", "根目录");
-        sCatelogMap_Base.put(".able", "基类库接口相关");
+        sCatelogMap_Base.put(".able", "接口相关");
         sCatelogMap_Base.put(".activity", "核心 Base Activity 代码");
         sCatelogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
-        sCatelogMap_Base.put(".expand.content", "内置 XML Layout 为 Content View 基类封装");
-        sCatelogMap_Base.put(".expand.mvp", "MVP 基础架构封装");
-        sCatelogMap_Base.put(".expand.viewbinding", "ViewBinding 基类封装");
+        sCatelogMap_Base.put(".expand.content", "Content Layout 基类");
+        sCatelogMap_Base.put(".expand.mvp", "MVP 架构基类");
+        sCatelogMap_Base.put(".expand.viewbinding", "ViewBinding 基类");
         sCatelogMap_Base.put(".fragment", "核心 Base Fragment 代码");
-        sCatelogMap_Base.put(".utils", "基类依赖工具包");
+        sCatelogMap_Base.put(".utils", "依赖工具包");
         sCatelogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
     }
 
