@@ -97,11 +97,23 @@ final class DevBase_READMEMain {
         buffer.append(">");
         buffer.append("\n");
         buffer.append("> 并进行动态添加 title、body 等布局 View，以达到能够对全局进行 View 增删显隐控制处理");
-        buffer.append("，以及后期全局底层需求维护迭代");
+        buffer.append("，以及后续需求迭代、维护全局操作");
         buffer.append("\n\n");
         buffer.append("各个拓展基类都有实现 MVP、ViewBinding 组合功能，如：");
         buffer.append("`MVPViewBinding`、`ContentMVP`、`ContentViewBinding`、`ContentMVPViewBinding` 组合基类");
+
         buffer.append("\n\n");
+        buffer.append("## 其他");
+        buffer.append("\n\n");
+        buffer.append("* 为什么没添加 MVVM 架构基类");
+        buffer.append("\n\n");
+        buffer.append("> 因 MVVM 需要依赖较多库，可能部分项目并不使用 MVVM 作为基础架构，为此新增");
+        buffer.append(" [DevBaseMVVM](https://github.com/afkT/DevUtils/tree/master/lib/DevBaseMVVM/README.md)");
+        buffer.append(" 库进行区分，减少库依赖数量，以及 MVVM 架构代码实现设计理解");
+        buffer.append("\n\n");
+        buffer.append("架构只是一种思维方式，不管是 MVC、MVP 还是 MVVM，都只是一种思考问题、解决问题的思维");
+        buffer.append("\n\n");
+        buffer.append("其目的是要解决编程过程中，模块内部高内聚、模块与模块之间低耦合、可维护性、易测试等问题");
 
         buffer.append("\n\n");
     }
