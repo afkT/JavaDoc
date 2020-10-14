@@ -15,11 +15,11 @@ import java.util.List;
  */
 public final class CodeNewLineRemove {
 
-    private static LinkedHashSet<String> sSets = new LinkedHashSet<>();
+    private static       LinkedHashSet<String> sSets   = new LinkedHashSet<>();
     // 检查 Key
-    private static final String END_KEY = "}" + StringUtils.NEW_LINE_STR;
+    private static final String                END_KEY = "}" + StringUtils.NEW_LINE_STR;
     // 追加内容
-    private static final String APPEND = "}";
+    private static final String                APPEND  = "}";
 
     public static void main(String[] args) {
         FileDepthFirstSearchUtils utils = new FileDepthFirstSearchUtils();

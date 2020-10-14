@@ -13,20 +13,20 @@ public final class ApiConfig {
     }
 
     // 项目名
-    public static final String PROJECT_NAME = "DevUtils";
+    public static final String PROJECT_NAME   = "DevUtils";
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
-    public static final String LOCAL_PATH = "F:/Project/Android/Utils";
+    public static final String LOCAL_PATH     = "F:/Project/Android/Utils";
     // 项目路径
-    public static final String PROJECT_PATH = LOCAL_PATH + File.separator + PROJECT_NAME;
+    public static final String PROJECT_PATH   = LOCAL_PATH + File.separator + PROJECT_NAME;
 
     // 包目录名
-    public static final String DEV_PACKAGE = "dev.utils";
+    public static final String DEV_PACKAGE          = "dev.utils";
     // 作者 Github 地址
-    public static final String GITHUB_AUTHOR_URL = "https://github.com/afkT";
+    public static final String GITHUB_AUTHOR_URL    = "https://github.com/afkT";
     // README API 文件名
-    public static final String README_FILE_NAME = "README.md";
+    public static final String README_FILE_NAME     = "README.md";
     // README_API 文件名
     public static final String README_API_FILE_NAME = "README_API.md";
 
@@ -37,13 +37,13 @@ public final class ApiConfig {
     // DevApp API 文件保存路径
     public static final String DEV_APP_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevApp/";
     // DevApp 文件路径
-    public static final String DEV_APP_PATH = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
+    public static final String DEV_APP_PATH               = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
     // DevApp Utils 文件路径
-    public static final String DEV_APP_UTILS_PATH = DEV_APP_PATH + "utils/";
+    public static final String DEV_APP_UTILS_PATH         = DEV_APP_PATH + "utils/";
     // DevApp GitHub 项目文件路径
-    public static final String DEV_APP_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
+    public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION = "2.0.6";
+    public static final String DEV_APP_VERSION            = "2.0.6";
 
     // ===========
     // = DevJava =
@@ -52,84 +52,84 @@ public final class ApiConfig {
     // DevJava API 文件保存路径
     public static final String DEV_JAVA_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevJava/";
     // DevJava 文件路径
-    public static final String DEV_JAVA_PATH = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
+    public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
     // DevJava Utils 文件路径
-    public static final String DEV_JAVA_UTILS_PATH = DEV_JAVA_PATH + "utils/";
+    public static final String DEV_JAVA_UTILS_PATH         = DEV_JAVA_PATH + "utils/";
     // DevJava GitHub 项目文件路径
-    public static final String DEV_JAVA_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
+    public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION = "1.1.9";
+    public static final String DEV_JAVA_VERSION            = "1.1.9";
 
     // =============
     // = DevAssist =
     // =============
 
     // 包目录名
-    public static final String DEV_ASSIST_PACKAGE = "dev";
+    public static final String DEV_ASSIST_PACKAGE            = "dev";
     // DevAssist API 文件保存路径
     public static final String DEV_ASSIST_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevAssist/";
     // DevAssist 文件路径
-    public static final String DEV_ASSIST_PATH = LOCAL_PATH + "/DevUtils/lib/DevAssist/src/main/java/dev/";
+    public static final String DEV_ASSIST_PATH               = LOCAL_PATH + "/DevUtils/lib/DevAssist/src/main/java/dev/";
     // DevAssist GitHub 项目文件路径
-    public static final String DEV_ASSIST_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
+    public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION = "1.0.4";
+    public static final String DEV_ASSIST_VERSION            = "1.0.4";
 
     // ============
     // = DevOther =
     // ============
 
     // 包目录名
-    public static final String DEV_OTHER_PACKAGE = "dev";
+    public static final String DEV_OTHER_PACKAGE            = "dev";
     // DevOther API 文件保存路径
     public static final String DEV_OTHER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevOther/";
     // DevOther 文件路径
-    public static final String DEV_OTHER_PATH = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/dev/";
+    public static final String DEV_OTHER_PATH               = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/dev/";
     // DevOther GitHub 项目文件路径
-    public static final String DEV_OTHER_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/dev";
+    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/dev";
 
     // =============
     // = DevWidget =
     // =============
 
     // 包目录名
-    public static final String DEV_WIDGET_PACKAGE = "dev";
+    public static final String DEV_WIDGET_PACKAGE            = "dev";
     // DevWidget API 文件保存路径
     public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
     // DevWidget 文件路径
-    public static final String DEV_WIDGET_PATH = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
+    public static final String DEV_WIDGET_PATH               = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
     // DevWidget GitHub 项目文件路径
-    public static final String DEV_WIDGET_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
+    public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION = "1.0.4";
+    public static final String DEV_WIDGET_VERSION            = "1.0.4";
 
     // ===========
     // = DevBase =
     // ===========
 
     // 包目录名
-    public static final String DEV_BASE_PACKAGE = "dev.base";
+    public static final String DEV_BASE_PACKAGE            = "dev.base";
     // DevBase API 文件保存路径
     public static final String DEV_BASE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBase/";
     // DevBase 文件路径
-    public static final String DEV_BASE_PATH = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/base/";
+    public static final String DEV_BASE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/base/";
     // DevBase GitHub 项目文件路径
-    public static final String DEV_BASE_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
+    public static final String DEV_BASE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
     // DevBase 版本号
-    public static final String DEV_BASE_VERSION = "1.0.0";
+    public static final String DEV_BASE_VERSION            = "1.0.0";
 
     // ===============
     // = DevStandard =
     // ===============
 
     // 包目录名
-    public static final String DEV_STANDARD_PACKAGE = "dev";
+    public static final String DEV_STANDARD_PACKAGE            = "dev";
     // DevStandard API 文件保存路径
     public static final String DEV_STANDARD_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevStandard/";
     // DevStandard 文件路径
-    public static final String DEV_STANDARD_PATH = LOCAL_PATH + "/DevUtils/lib/DevStandard/src/main/java/dev/";
+    public static final String DEV_STANDARD_PATH               = LOCAL_PATH + "/DevUtils/lib/DevStandard/src/main/java/dev/";
     // DevStandard GitHub 项目文件路径
-    public static final String DEV_STANDARD_GITHUB_URL = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevStandard/src/main/java/dev";
+    public static final String DEV_STANDARD_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevStandard/src/main/java/dev";
 
     // ========
     // = 其他 =
@@ -144,9 +144,9 @@ public final class ApiConfig {
     // ===================
 
     // 包名目录注释
-    public static final HashMap<String, String> sCatelogMap = new HashMap<>();
+    public static final HashMap<String, String>   sCatelogMap      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String> sFilterClassMap = new HashMap<>();
+    public static final HashMap<String, String>   sFilterClassMap  = new HashMap<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap = new HashMap<>();
 
@@ -155,9 +155,9 @@ public final class ApiConfig {
     // =============
 
     // 包名目录注释
-    public static final HashMap<String, String> sCatelogMap_Assist = new HashMap<>();
+    public static final HashMap<String, String>   sCatelogMap_Assist      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String> sFilterClassMap_Assist = new HashMap<>();
+    public static final HashMap<String, String>   sFilterClassMap_Assist  = new HashMap<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
 
@@ -166,9 +166,9 @@ public final class ApiConfig {
     // ============
 
     // 包名目录注释
-    public static final HashMap<String, String> sCatelogMap_Other = new HashMap<>();
+    public static final HashMap<String, String>   sCatelogMap_Other      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String> sFilterClassMap_Other = new HashMap<>();
+    public static final HashMap<String, String>   sFilterClassMap_Other  = new HashMap<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
 
@@ -184,9 +184,9 @@ public final class ApiConfig {
     // =============
 
     // 包名目录注释
-    public static final HashMap<String, String> sCatelogMap_Widget = new HashMap<>();
+    public static final HashMap<String, String>   sCatelogMap_Widget      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String> sFilterClassMap_Widget = new HashMap<>();
+    public static final HashMap<String, String>   sFilterClassMap_Widget  = new HashMap<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Widget = new HashMap<>();
 

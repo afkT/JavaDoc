@@ -22,9 +22,9 @@ public final class CodeAnnotationAnalyeRecord {
     }
 
     // 代码间距等规范处理
-    private static final Pangu sPangu = new Pangu();
+    private static final Pangu   sPangu = new Pangu();
     // 判断是否覆盖文件内容
-    private static boolean sCoverText;
+    private static       boolean sCoverText;
 
     // =====================
     // = Map<类名, 类代码> =

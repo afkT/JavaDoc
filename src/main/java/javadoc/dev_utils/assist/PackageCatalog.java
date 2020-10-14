@@ -73,7 +73,7 @@ public final class PackageCatalog {
     private static class Catalog {
 
         // 文件夹对象
-        private File cataFile;
+        private File               cataFile;
         // 文件夹内的子文件列表
         private ArrayList<Catalog> listCataLogs = new ArrayList<>();
 

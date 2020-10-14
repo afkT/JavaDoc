@@ -18,19 +18,19 @@ import java.util.HashMap;
 public final class APIReader implements JavaDocReader.CallBack {
 
     // 对应的类 Github 链接地址
-    private String mClassGithubUrl;
+    private String                             mClassGithubUrl;
     // 忽略不保存的方法
-    private HashMap<String, String[]> mFilterMethodMap;
+    private HashMap<String, String[]>          mFilterMethodMap;
     // 方法名匹配正则表达式
-    private String mMethodNameRegex;
+    private String                             mMethodNameRegex;
     // 方法名匹配存储 Map<类名, ArrayList<方法名>>
     private HashMap<String, ArrayList<String>> mMethodNameMatchesMap;
     // 方法名重复记录存储
-    private StringBuffer mMethodRepeatBuffer;
+    private StringBuffer                       mMethodRepeatBuffer;
     // 方法没有注释记录存储
-    private StringBuffer mMethodNotAnnotateBuffer;
+    private StringBuffer                       mMethodNotAnnotateBuffer;
     // 类不存在方法记录存储
-    private StringBuffer mNotMethodBuffer;
+    private StringBuffer                       mNotMethodBuffer;
 
     /**
      * 构造函数

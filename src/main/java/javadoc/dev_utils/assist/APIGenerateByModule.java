@@ -26,7 +26,7 @@ final class APIGenerateByModule {
     private static class Subnode {
 
         // 文件夹对象
-        private File subFile;
+        private File               subFile;
         // 文件夹内的子文件列表
         private ArrayList<Subnode> listSubs = new ArrayList<>();
 

@@ -14,21 +14,21 @@ import java.util.Set;
 public final class CheckInfo {
 
     // 检测路径
-    public String mPath;
+    public String          mPath;
     // 代码检测分析配置接口
-    public ICheckConfig mICheckConfig;
+    public ICheckConfig    mICheckConfig;
     // 是否覆盖文件内容
-    public boolean mCoverText = true;
+    public boolean         mCoverText               = true;
     // 是否使用 ArrayList<File>
-    public boolean mIsLists = false;
+    public boolean         mIsLists                 = false;
     // 检测指定文件集合
     public ArrayList<File> mListFiles;
     // 是否打印方法返回值 void 记录
-    public boolean mIsPrintVoid = false;
+    public boolean         mIsPrintVoid             = false;
     // 是否需要生成 Config
-    public boolean isGenerateConfig;
+    public boolean         isGenerateConfig;
     // 忽略注释间距异常文件
-    public Set<String> ignoreAnnotationSpaceSet = new HashSet<>();
+    public Set<String>     ignoreAnnotationSpaceSet = new HashSet<>();
 
     public CheckInfo(String path, ICheckConfig iCheckConfig) {
         this.mPath = path;

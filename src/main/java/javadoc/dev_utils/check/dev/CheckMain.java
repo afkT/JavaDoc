@@ -21,7 +21,7 @@ public final class CheckMain {
 
     /**
      * 执行检测方法
-     * @param clazz 执法该方法的类 ( 用于生成 xxxConfig )
+     * @param clazz     执法该方法的类 ( 用于生成 xxxConfig )
      * @param checkInfo 检测信息实体类
      * @return 检测结果 JSON String
      */
@@ -201,7 +201,7 @@ public final class CheckMain {
 
         // 判断是否需要生成 Config 文件
         if (checkInfo.isGenerateConfig) {
-            CheckConfigGenerate.format(clazz, new String[] {
+            CheckConfigGenerate.format(clazz, new String[]{
                     unAnnotateGenerateMapString,
                     unFinalGenerateMapString,
                     unStaticGenerateMapString,
