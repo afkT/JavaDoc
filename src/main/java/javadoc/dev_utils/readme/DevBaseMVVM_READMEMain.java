@@ -108,7 +108,7 @@ final class DevBaseMVVM_READMEMain {
         buffer.append("* 为什么没添加 MVVM 架构基类");
         buffer.append("\n\n");
         buffer.append("> 因 MVVM 需要依赖较多库，可能部分项目并不使用 MVVM 作为基础架构，为此新增");
-        buffer.append(" [DevBaseMVVM](https://github.com/afkT/DevUtils/tree/master/lib/DevBaseMVVM/README.md)");
+        buffer.append(" [DevBaseMVVM](https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/README.md)");
         buffer.append(" 库进行区分，减少库依赖数量，以及 MVVM 架构代码实现设计理解");
         buffer.append("\n\n");
         buffer.append("架构只是一种思维方式，不管是 MVC、MVP 还是 MVVM，都只是一种思考问题、解决问题的思维");
