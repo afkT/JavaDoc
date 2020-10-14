@@ -119,6 +119,21 @@ public final class ApiConfig {
     public static final String DEV_BASE_VERSION            = "1.0.0";
 
     // ===============
+    // = DevBaseMVVM =
+    // ===============
+
+    // 包目录名
+    public static final String DEV_BASE_MVVM_PACKAGE            = "dev.base";
+    // DevBaseMVVM API 文件保存路径
+    public static final String DEV_BASE_MVVM_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBaseMVVM/";
+    // DevBaseMVVM 文件路径
+    public static final String DEV_BASE_MVVM_PATH               = LOCAL_PATH + "/DevUtils/lib/DevBaseMVVM/src/main/java/dev/base/";
+    // DevBaseMVVM GitHub 项目文件路径
+    public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
+    // DevBaseMVVM 版本号
+    public static final String DEV_BASE_MVVM_VERSION            = "1.0.0";
+
+    // ===============
     // = DevStandard =
     // ===============
 
