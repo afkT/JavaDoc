@@ -84,6 +84,24 @@ final class DevBase_READMEMain {
         buffer.append("> **Butter Knife Attention**: This tool is now deprecated. Please switch to");
         buffer.append(" [view binding](https://developer.android.com/topic/libraries/view-binding)");
         buffer.append("\n\n");
+        buffer.append("* **MVP 架构基类**");
+        buffer.append("\n\n");
+        buffer.append("> 使用 MVP Contract 来进行管理，优化代码结构并使用");
+        buffer.append(" [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle)");
+        buffer.append(" 解决 MVP 内存泄漏问题");
+        buffer.append("\n\n");
+        buffer.append("* **Content Layout 基类**");
+        buffer.append("\n\n");
+        buffer.append("> **核心实现：内置 R.layout.base_content_view 作为 contentView 根布局进行显示**");
+        buffer.append("\n");
+        buffer.append(">");
+        buffer.append("\n");
+        buffer.append("> 并进行动态添加 title、body 等布局 View，以达到能够对全局进行 View 增删显隐控制处理");
+        buffer.append("，以及后期全局底层需求维护迭代");
+        buffer.append("\n\n");
+        buffer.append("各个拓展基类都有实现 MVP、ViewBinding 组合功能，如：");
+        buffer.append("`MVPViewBinding`、`ContentMVP`、`ContentViewBinding`、`ContentMVPViewBinding` 组合基类");
+        buffer.append("\n\n");
 
         buffer.append("\n\n");
     }
