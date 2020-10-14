@@ -48,9 +48,9 @@ final class DevBase_READMEMain {
         buffer.append("\n\n");
         buffer.append("### 核心代码");
         buffer.append("\n\n");
-        buffer.append("* 核心 Base Activity（[AbstractDevBaseActivity](" + githubUrl + "/activity)）：整个库 Activity 基类都基于该模块代码");
+        buffer.append("* 核心 Base Activity（[activity](" + githubUrl + "/activity)）：整个库 Activity 基类都基于该模块代码");
         buffer.append("\n\n");
-        buffer.append("* 核心 Base Fragment（[AbstractDevBaseFragment](" + githubUrl + "/fragment)）：整个库 Fragment 基类都基于该模块代码");
+        buffer.append("* 核心 Base Fragment（[fragment](" + githubUrl + "/fragment)）：整个库 Fragment 基类都基于该模块代码");
         buffer.append("\n\n");
         buffer.append("### 其他代码");
         buffer.append("\n\n");
@@ -67,8 +67,22 @@ final class DevBase_READMEMain {
         buffer.append("* ViewBinding 基类（[viewbinding](" + githubUrl + "/expand/viewbinding)）：使用 ViewBinding 实现对 View 进行 bind 基类");
 
         buffer.append("\n\n");
-        buffer.append("\n\n");
         buffer.append("## 设计思路");
+        buffer.append("\n\n");
+        buffer.append("首先整个库 Activity、Fragment 最终实现都是继承");
+        buffer.append(" [AbstractDevBaseActivity](" + githubUrl + "/activity/AbstractDevBaseActivity.kt)、");
+        buffer.append("[AbstractDevBaseFragment](" + githubUrl + "/fragment/AbstractDevBaseFragment.kt)");
+        buffer.append(" 方便对核心代码设计理解及管理控制，并在此基础上实现三个扩展基类 MVP、ViewBinding、Content Layout");
+        buffer.append("\n\n");
+        buffer.append("* **ViewBinding 基类**");
+        buffer.append("\n\n");
+        buffer.append("> 使用 ViewBinding 代替频繁 findViewById，或替换");
+        buffer.append(" [Butter Knife](https://github.com/JakeWharton/butterknife)");
+        buffer.append("\n");
+        buffer.append(">");
+        buffer.append("\n");
+        buffer.append("> **Butter Knife Attention**: This tool is now deprecated. Please switch to");
+        buffer.append(" [view binding](https://developer.android.com/topic/libraries/view-binding)");
         buffer.append("\n\n");
 
         buffer.append("\n\n");

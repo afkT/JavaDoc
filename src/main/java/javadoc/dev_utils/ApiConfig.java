@@ -309,7 +309,7 @@ public final class ApiConfig {
         // ===========
 
         sCatelogMap_Base.put("dev.base", "根目录");
-        sCatelogMap_Base.put(".able", "接口相关");
+        sCatelogMap_Base.put(".able", "基类库接口相关");
         sCatelogMap_Base.put(".activity", "核心 Base Activity 代码");
         sCatelogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
         sCatelogMap_Base.put(".expand.content", "Content Layout 基类");
