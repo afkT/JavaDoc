@@ -10,22 +10,18 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
- * detail: 代码换行移除
+ * detail: Xml Encoding 追加处理
  * @author Ttt
  */
-public final class CodeNewLineRemove {
+public final class CodeXmlEncoding {
 
-    private static       LinkedHashSet<String> sSets            = new LinkedHashSet<>();
-    // 结尾符合
-    private static final String                SYMBOL           = ""; // }
-    // 检查 Key
-    private static final String                END_KEY          = SYMBOL + StringUtils.NEW_LINE_STR;
+    private static       LinkedHashSet<String> sSets       = new LinkedHashSet<>();
+    // 开头
+    private static final String                STARTS_WITH = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
     // 追加内容
-    private static final String                APPEND           = SYMBOL;
-    // 忽略文件后缀
-    private static final String[]              IGNORE_SUFFIX    = {"md", "txt", "bat"};
-    // 是否忽略后缀
-    private static final boolean               IS_IGNORE_SUFFIX = false;
+    private static final String                APPEND      = STARTS_WITH + StringUtils.NEW_LINE_STR;
+    // 文件后缀
+    private static final String[]              SUFFIX      = {"xml"};
 
     public static void main(String[] args) {
         FileDepthFirstSearchUtils utils = new FileDepthFirstSearchUtils();
@@ -40,15 +36,15 @@ public final class CodeNewLineRemove {
                 if (file.getAbsolutePath().indexOf("\\.") != -1) return false;
 
                 String fileSuffix = FileUtils.getFileSuffix(file);
-                if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {
+                if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) {
                     return true;
                 }
 
                 String data = new String(FileUtils.readFileBytes(file));
                 if (data != null) {
-                    if (data.endsWith(END_KEY)) {
+                    if (!data.startsWith(STARTS_WITH)) {
                         // 删减内容
-                        data = data.substring(0, data.length() - END_KEY.length()) + APPEND;
+                        data = APPEND + data;
                         // 替换内容
                         FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
                         // 存储路径
