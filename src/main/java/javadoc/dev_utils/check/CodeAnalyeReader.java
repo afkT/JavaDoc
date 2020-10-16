@@ -422,7 +422,7 @@ public final class CodeAnalyeReader {
             for (int i = 0, len = ArrayUtils.length(genericityTypes); i < len; i++) {
                 String genericity = genericityTypes[i];
                 // 清空空格
-                genericity = StringUtils.toClearSpaceTrim(genericity);
+                genericity = StringUtils.clearSpaceTrim(genericity);
                 // 进行空格拆分
                 String[] genericityArys = genericity.split(" ");
                 // 保存新的内容

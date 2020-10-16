@@ -128,7 +128,7 @@ public final class APIReader implements JavaDocReader.CallBack {
             // 进行拆分处理
             classAnnotate = classAnnotate.substring("detail:".length(), ln == -1 ? classAnnotate.length() : ln);
             // 去掉前后空格
-            classAnnotate = StringUtils.toClearSpaceTrim(classAnnotate);
+            classAnnotate = StringUtils.clearSpaceTrim(classAnnotate);
         } catch (Exception e) {
         }
         // 格式化标题 - 替换 %s 为类注释
