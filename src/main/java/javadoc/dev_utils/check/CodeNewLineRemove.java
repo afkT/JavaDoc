@@ -15,11 +15,17 @@ import java.util.List;
  */
 public final class CodeNewLineRemove {
 
-    private static       LinkedHashSet<String> sSets   = new LinkedHashSet<>();
+    private static       LinkedHashSet<String> sSets            = new LinkedHashSet<>();
+    // 结尾符合
+    private static final String                SYMBOL           = ""; // }
     // 检查 Key
-    private static final String                END_KEY = "}" + StringUtils.NEW_LINE_STR;
+    private static final String                END_KEY          = SYMBOL + StringUtils.NEW_LINE_STR;
     // 追加内容
-    private static final String                APPEND  = "}";
+    private static final String                APPEND           = SYMBOL;
+    // 忽略文件后缀
+    private static final String[]              IGNORE_SUFFIX    = {"md", "txt", "bat"};
+    // 是否忽略后缀
+    private static final boolean               IS_IGNORE_SUFFIX = false;
 
     public static void main(String[] args) {
         FileDepthFirstSearchUtils utils = new FileDepthFirstSearchUtils();
@@ -31,6 +37,11 @@ public final class CodeNewLineRemove {
 
             @Override
             public boolean isAddToList(File file) {
+                String fileSuffix = FileUtils.getFileSuffix(file);
+                if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {
+                    return true;
+                }
+
                 String data = new String(FileUtils.readFileBytes(file));
                 if (data != null) {
                     if (data.endsWith(END_KEY)) {
