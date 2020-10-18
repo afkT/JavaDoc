@@ -10,18 +10,22 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
- * detail: Xml Encoding 追加处理
+ * detail: 代码结尾换行移除
  * @author Ttt
  */
-public final class CodeXmlEncoding {
+public final class CodeEndNewLineRemove {
 
-    private static       LinkedHashSet<String> sSets       = new LinkedHashSet<>();
-    // 开头
-    private static final String                STARTS_WITH = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+    private static       LinkedHashSet<String> sSets            = new LinkedHashSet<>();
+    // 结尾符合
+    private static final String                SYMBOL           = ""; // }
+    // 检查 Key
+    private static final String                END_KEY          = SYMBOL + StringUtils.NEW_LINE_STR;
     // 追加内容
-    private static final String                APPEND      = STARTS_WITH + StringUtils.NEW_LINE_STR;
-    // 文件后缀
-    private static final String[]              SUFFIX      = {"xml"};
+    private static final String                APPEND           = SYMBOL;
+    // 忽略文件后缀
+    private static final String[]              IGNORE_SUFFIX    = {"md", "txt", "bat"};
+    // 是否忽略后缀
+    private static final boolean               IS_IGNORE_SUFFIX = false;
 
     public static void main(String[] args) {
         new FileDepthFirstSearchUtils()
@@ -36,15 +40,15 @@ public final class CodeXmlEncoding {
                         if (file.getAbsolutePath().indexOf("\\.") != -1) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
-                        if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) {
+                        if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {
                             return true;
                         }
 
                         String data = new String(FileUtils.readFileBytes(file));
                         if (data != null) {
-                            if (!data.startsWith(STARTS_WITH)) {
+                            if (data.endsWith(END_KEY)) {
                                 // 删减内容
-                                data = APPEND + data;
+                                data = data.substring(0, data.length() - END_KEY.length()) + APPEND;
                                 // 替换内容
                                 FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
                                 // 存储路径
