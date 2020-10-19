@@ -77,8 +77,8 @@ final class DevApp_READMEMain {
         buffer.append("JCLogUtils");
         buffer.append("\n");
         buffer.append("```");
-        buffer.append("\n\n");
 
+        buffer.append("\n\n");
         buffer.append("- 开启日志");
         buffer.append("\n");
         buffer.append("```java");
@@ -110,6 +110,25 @@ final class DevApp_READMEMain {
 
         buffer.append("\n\n");
         buffer.append("- [Dev 工具类链式调用 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/DevHelper.java)");
+
+        buffer.append("\n\n");
+        buffer.append("- 如果出现 ```Failed to resolve: DevAppX-x.x.x``` 可在根目录 build.gradle 添加");
+        buffer.append("\n");
+        buffer.append("```java");
+        buffer.append("\n");
+        buffer.append("allprojects {");
+        buffer.append("\n");
+        buffer.append("    repositories {");
+        buffer.append("\n");
+        buffer.append("        // bintray maven 出现 Failed to resolve: DevAppX-x.x.x 可考虑加上这句");
+        buffer.append("\n");
+        buffer.append("        maven { url 'https://dl.bintray.com/afkt/maven' }");
+        buffer.append("\n");
+        buffer.append("    }");
+        buffer.append("\n");
+        buffer.append("}");
+        buffer.append("\n");
+        buffer.append("```");
 
         buffer.append("\n\n");
         buffer.append("## API");
