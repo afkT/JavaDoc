@@ -23,6 +23,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("CatalogMain", Utils.asList("main"));
         ignoreAnnotateMap.put("ColorSortMain", Utils.asList("main"));
         ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreAnnotateMap.put("ConfigMain", Utils.asList("main"));
         ignoreAnnotateMap.put("PanguAnalyeMain", Utils.asList("main"));
 
         return ignoreAnnotateMap;
@@ -38,6 +39,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("CatalogMain", Utils.asList("main"));
         ignoreFinalMap.put("ColorSortMain", Utils.asList("main"));
         ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
+        ignoreFinalMap.put("ConfigMain", Utils.asList("main"));
         ignoreFinalMap.put("Pangu", Utils.asList("spacingText","spacingFile"));
         ignoreFinalMap.put("PanguAnalyeMain", Utils.asList("main"));
 
@@ -53,6 +55,7 @@ final class DevStandardConfig implements ICheckConfig {
         Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("ColorSortMain.SAXXml", Utils.asList("analysisColorsXml"));
         ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreStaticMap.put("DepsJsonBean", Utils.asList("map","getDependencies","getAllDependencies","getAllDependencies"));
         ignoreStaticMap.put("Pangu", Utils.asList("spacingText","spacingFile"));
 
         return ignoreStaticMap;
@@ -68,6 +71,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("CatalogMain", Utils.asList("main"));
         ignoreParamMap.put("ColorSortMain", Utils.asList("main"));
         ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asList("startElement","endElement","characters"));
+        ignoreParamMap.put("ConfigMain", Utils.asList("main"));
         ignoreParamMap.put("PanguAnalyeMain", Utils.asList("main"));
 
         return ignoreParamMap;

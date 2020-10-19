@@ -359,7 +359,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("HttpURLConnectionUtils", Utils.asList("reqNetTime"));
         ignoreUnPublicMap.put("HttpURLConnectionUtils.CallBack", Utils.asList("onResponse","onFail"));
         ignoreUnPublicMap.put("HttpURLConnectionUtils.TimeCallBack", Utils.asList("onResponse","onFail"));
-        ignoreUnPublicMap.put("IDCardUtils", Utils.asList("converCharToInt","validateDateSmllerThenNow","isNumber"));
+        ignoreUnPublicMap.put("IDCardUtils", Utils.asList("convertCharToInt","validateDateSmllerThenNow","isNumber"));
         ignoreUnPublicMap.put("IPreference", Utils.asList("put","putAll","putAll","putAll","get","getAll","getAll","remove","removeAll","removeAll","contains","clear","getInt","getFloat","getLong","getBoolean","getString","getSet"));
         ignoreUnPublicMap.put("IPrinter", Utils.asList("other","getLogConfig","init","init","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreUnPublicMap.put("IToast.Filter", Utils.asList("filter","handlerContent"));
