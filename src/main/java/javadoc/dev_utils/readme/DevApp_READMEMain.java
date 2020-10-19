@@ -94,24 +94,6 @@ final class DevApp_READMEMain {
         buffer.append("```");
 
         buffer.append("\n\n");
-        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/ViewHelper.java)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Dev 工具类链式调用 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/DevHelper.java)");
-
-        buffer.append("\n\n");
         buffer.append("- 如果出现 ```Failed to resolve: DevAppX-x.x.x``` 可在根目录 build.gradle 添加");
         buffer.append("\n");
         buffer.append("```java");
@@ -129,6 +111,24 @@ final class DevApp_READMEMain {
         buffer.append("}");
         buffer.append("\n");
         buffer.append("```");
+
+        buffer.append("\n\n");
+        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
+
+        buffer.append("\n\n");
+        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
+
+        buffer.append("\n\n");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
+
+        buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
+
+        buffer.append("\n\n");
+        buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/ViewHelper.java)");
+
+        buffer.append("\n\n");
+        buffer.append("- [Dev 工具类链式调用 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/DevHelper.java)");
 
         buffer.append("\n\n");
         buffer.append("## API");
