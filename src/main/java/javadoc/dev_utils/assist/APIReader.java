@@ -51,9 +51,9 @@ public final class APIReader implements JavaDocReader.CallBack {
         if (mNotMethodBuffer == null) mNotMethodBuffer = new StringBuffer();
     }
 
-    // ================
+    // =============
     // = 对外公开方法 =
-    // ================
+    // =============
 
     /**
      * 读取文档处理

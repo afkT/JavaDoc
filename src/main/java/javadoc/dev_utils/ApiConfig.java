@@ -58,7 +58,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.2.0";
+    public static final String DEV_JAVA_VERSION            = "1.2.1";
 
     // =============
     // = DevAssist =
@@ -146,17 +146,16 @@ public final class ApiConfig {
     // DevStandard GitHub 项目文件路径
     public static final String DEV_STANDARD_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevStandard/src/main/java/dev";
 
-    // ========
+    // =======
     // = 其他 =
-    // ========
+    // =======
 
-    // = Regex =
     // 方法名规则
     public static final String sMethodNameRegex = "[A-Za-z]+[2][A-Za-z][A-Za-z0-9]+";
 
-    // ===================
+    // ==================
     // = DevApp、DevJava =
-    // ===================
+    // ==================
 
     // 包名目录注释
     public static final HashMap<String, String>   sCatelogMap      = new HashMap<>();
@@ -216,24 +215,24 @@ public final class ApiConfig {
         initMethodNameRegex();
     }
 
-    // ==================
+    // ===============
     // = 内部初始化方法 =
-    // ==================
+    // ===============
 
     /**
      * 初始化 包名目录注释 Map
      */
     private static void initCatelogMap() {
 
-        // ===================
+        // ==================
         // = DevApp、DevJava =
-        // ===================
+        // ==================
 
         sCatelogMap.put("dev.utils", "根目录");
 
-        // ============
+        // ===========
         // = APP 目录 =
-        // ============
+        // ===========
 
         sCatelogMap.put(".app", "APP 相关工具类");
         sCatelogMap.put(".app.anim", "动画工具类");
@@ -256,9 +255,9 @@ public final class ApiConfig {
 
         sCatelogMap.put(".app.wifi", "Wifi、热点工具类");
 
-        // ===============
+        // ==============
         // = Common 目录 =
-        // ===============
+        // ==============
 
         sCatelogMap.put(".common", "Java 工具类, 不依赖 android api");
         sCatelogMap.put(".common.assist", "各种快捷辅助类");
@@ -340,9 +339,9 @@ public final class ApiConfig {
      */
     private static void initFilterClassMap() {
 
-        // ===================
+        // ==================
         // = DevApp、DevJava =
-        // ===================
+        // ==================
 
         // =======
         // = APP =
@@ -372,9 +371,9 @@ public final class ApiConfig {
      */
     private static void initFilterMethodMap() {
 
-        // ===================
+        // ==================
         // = DevApp、DevJava =
-        // ===================
+        // ==================
 
         // =======
         // = APP =

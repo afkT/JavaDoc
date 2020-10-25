@@ -43,9 +43,9 @@ public final class PackageCatalog {
 //      - validator    | 数据校验工具类
 //```
 
-    // ====================
+    // =================
     // = 目录层级计算回调 =
-    // ====================
+    // =================
 
     /**
      * detail: 文件目录层级回调
@@ -62,9 +62,9 @@ public final class PackageCatalog {
         void callback(String name, int lineNumber, String linkTag);
     }
 
-    // ======================
+    // ==================
     // = 文件目录遍历实体类 =
-    // ======================
+    // ==================
 
     /**
      * detail: 目录实体类
@@ -134,9 +134,9 @@ public final class PackageCatalog {
         return lists;
     }
 
-    // ============
+    // ==========
     // = 内部方法 =
-    // ============
+    // ==========
 
     // 目录信息最大长度
     private static int sMaxLength = 0;
@@ -247,9 +247,9 @@ public final class PackageCatalog {
         }
     }
 
-    // ================
+    // =============
     // = 对外公开方法 =
-    // ================
+    // =============
 
     /**
      * 创建目录信息

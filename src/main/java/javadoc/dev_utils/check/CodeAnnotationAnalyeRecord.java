@@ -26,9 +26,9 @@ public final class CodeAnnotationAnalyeRecord {
     // 判断是否覆盖文件内容
     private static       boolean sCoverText;
 
-    // =====================
+    // ===================
     // = Map<类名, 类代码> =
-    // =====================
+    // ===================
 
     // 代码注释空格间距异常记录
     private static HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
@@ -58,9 +58,9 @@ public final class CodeAnnotationAnalyeRecord {
         return sAnnotationSpaceMap;
     }
 
-    // ================
+    // =============
     // = 内部处理方法 =
-    // ================
+    // =============
 
     /**
      * 循环读取处理
@@ -123,9 +123,9 @@ public final class CodeAnnotationAnalyeRecord {
         }
     }
 
-    // ================
+    // =============
     // = 外部获取方法 =
-    // ================
+    // =============
 
     /**
      * 代码注释重复换行记录

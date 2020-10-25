@@ -3,6 +3,7 @@ package javadoc;
 import com.google.gson.GsonBuilder;
 import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
+import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 
 import java.io.File;
@@ -204,5 +205,62 @@ public final class Utils {
             }
         }
         return "";
+    }
+
+    // =====================
+    // = 临时等 DevJava 发包 =
+    // =====================
+
+    /**
+     * 添加一条数据
+     * @param map   待添加 {@link Map}
+     * @param key   key
+     * @param value value, add to list
+     * @param <K>   key
+     * @param <T>   value type
+     * @return {@code true} success, {@code false} fail
+     */
+    public static <K, T> boolean putToList(final Map<K, List<T>> map, final K key, final T value) {
+        return putToList(map, key, value, true);
+    }
+
+    /**
+     * 添加一条数据
+     * @param map   {@link Map}
+     * @param key   key
+     * @param value value, add to list
+     * @param isNew 当指定 (key) 的 value 为 null, 是否创建
+     * @param <K>   key
+     * @param <T>   value type
+     * @return {@code true} success, {@code false} fail
+     */
+    public static <K, T> boolean putToList(final Map<K, List<T>> map, final K key, final T value, final boolean isNew) {
+        if (map != null) {
+            if (map.containsKey(key)) {
+                List<T> lists = map.get(key);
+                if (lists != null) {
+                    try {
+                        lists.add(value);
+                        map.put(key, lists);
+                        return true;
+                    } catch (Exception e) {
+                        JCLogUtils.eTag(MapUtils.class.getSimpleName(), e, "putToList");
+                    }
+                }
+            } else {
+                // 判断是否创建
+                if (isNew) {
+                    try {
+                        List<T> lists = new ArrayList<>();
+                        lists.add(value);
+                        map.put(key, lists);
+                        return true;
+                    } catch (Exception e) {
+                        JCLogUtils.eTag(MapUtils.class.getSimpleName(), e, "putToList");
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

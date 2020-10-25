@@ -35,9 +35,9 @@ public final class CheckInfo {
         this.mICheckConfig = iCheckConfig;
     }
 
-    // ================
+    // =============
     // = 对外公开方法 =
-    // ================
+    // =============
 
     /**
      * 设置检测路径

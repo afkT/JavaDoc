@@ -46,9 +46,10 @@ class JavaDocMain {
                         // 类注释
                         classBuffer.append("\n类注释: ").append(classDoc.commentText());
 
-                        // ============
+                        // ==========
                         // = 读取方法 =
-                        // ============
+                        // ==========
+
                         StringBuffer methodBuffer = new StringBuffer();
                         // 获取方法 Doc 信息数组
                         MethodDoc[] methodDocs = classDoc.methods();

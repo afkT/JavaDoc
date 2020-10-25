@@ -52,9 +52,9 @@ public final class CheckMain {
             sAnnotationSpaceMap = CodeAnnotationAnalyeRecord.codeAnalye(path, checkInfo.mCoverText);
         }
 
-        // ============
+        // ==========
         // = 代码间距 =
-        // ============
+        // ==========
 
         // 代码注释重复换行记录
         final HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = CodeAnnotationAnalyeRecord.getAnnotationRepeatLineMap();
@@ -68,9 +68,9 @@ public final class CheckMain {
         // 转换 JSON 数据 - 代码注释重复换行记录
         String annotationRepeatLineJSON = Utils.toJsonFormat(sAnnotationRepeatLineMap, true);
 
-        // ============
+        // ==========
         // = 结果处理 =
-        // ============
+        // ==========
 
         // 方法注释缺少注释记录
         final HashMap<String, ArrayList<String>> sMethodUnAnnotateMap = lists.get(0);
