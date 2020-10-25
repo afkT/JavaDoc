@@ -3,8 +3,8 @@ package javadoc.dev_utils.check.%s;
 import javadoc.Utils;
 import javadoc.dev_utils.check.dev.ICheckConfig;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
