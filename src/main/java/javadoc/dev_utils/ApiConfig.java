@@ -380,108 +380,45 @@ public final class ApiConfig {
         // = APP =
         // =======
 
-        sFilterMethodMap.put("ActivityUtils.java", new String[]{"onStartActivityForResult",
-                "onActivityResult", "start", "onCreate", "onDestroy"});
-
-        sFilterMethodMap.put("PermissionUtils.java", new String[]{"start",
-                "onCreate", "onGranted", "onDenied"});
-
-        sFilterMethodMap.put("WifiHotUtils.java", new String[]{"onStarted",
-                "onStopped", "onFailed"});
-
+        sFilterMethodMap.put("ActivityUtils.java", new String[]{"onStartActivityForResult", "onActivityResult", "start", "onCreate", "onDestroy"});
+        sFilterMethodMap.put("PermissionUtils.java", new String[]{"start", "onCreate", "onGranted", "onDenied"});
+        sFilterMethodMap.put("WifiHotUtils.java", new String[]{"onStarted", "onStopped", "onFailed"});
         sFilterMethodMap.put("HandlerUtils.java", new String[]{"onEnd"});
-
-        sFilterMethodMap.put("OnLocationChangeListener.java",
-                new String[]{"getLastKnownLocation", "onLocationChanged", "onStatusChanged"});
-
+        sFilterMethodMap.put("OnLocationChangeListener.java", new String[]{"getLastKnownLocation", "onLocationChanged", "onStatusChanged"});
         sFilterMethodMap.put("SizeUtils.java", new String[]{"onGetSize"});
-
         sFilterMethodMap.put("KeyBoardUtils.java", new String[]{"onSoftInputChanged"});
-
-        sFilterMethodMap.put("DevMediaManager.java", new String[]{"onPrepared",
-                "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError",
-                "onVideoSizeChanged", "isLooping", "setMediaConfig"});
-
-        sFilterMethodMap.put("DevVideoPlayerControl.java", new String[]{"onPrepared",
-                "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError",
-                "onVideoSizeChanged", "isLooping", "setMediaConfig",
-                "surfaceChanged", "surfaceCreated", "surfaceDestroyed"});
-
-        sFilterMethodMap.put("CameraAssist.java", new String[]{"stopPreviewNotify",
-                "startPreviewNotify"});
-
+        sFilterMethodMap.put("DevMediaManager.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig"});
+        sFilterMethodMap.put("DevVideoPlayerControl.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig", "surfaceChanged", "surfaceCreated", "surfaceDestroyed"});
+        sFilterMethodMap.put("CameraAssist.java", new String[]{"stopPreviewNotify", "startPreviewNotify"});
         sFilterMethodMap.put("ImageUtils.java", new String[]{"getValue"});
-
         sFilterMethodMap.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
-
         sFilterMethodMap.put("AnalysisRecordUtils.java", new String[]{"callback"});
-
-        sFilterMethodMap.put("AsyncExecutor.java", new String[]{"doInBackground",
-                "onPostExecute", "onCanceled", "abort"});
-
-        sFilterMethodMap.put("ToastTintUtils.java", new String[]{"getTextColor",
-                "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines",
-                "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon",
-                "filter", "handlerContent"});
-
-        sFilterMethodMap.put("EditTextUtils.java", new String[]{"getMarkId",
-                "isOperate", "setOperate", "getOperateState", "setOperateState",
-                "getType", "setType", "beforeTextChanged", "onTextChanged", "afterTextChanged"});
-
+        sFilterMethodMap.put("AsyncExecutor.java", new String[]{"doInBackground", "onPostExecute", "onCanceled", "abort"});
+        sFilterMethodMap.put("ToastTintUtils.java", new String[]{"getTextColor", "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines", "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon", "filter", "handlerContent"});
+        sFilterMethodMap.put("EditTextUtils.java", new String[]{"getMarkId", "isOperate", "setOperate", "getOperateState", "setOperateState", "getType", "setType", "beforeTextChanged", "onTextChanged", "afterTextChanged"});
         sFilterMethodMap.put("AutoFocusAssist.java", new String[]{"onAutoFocus"});
-
         sFilterMethodMap.put("PhoneUtils.java", new String[]{"printInfo"});
-
         sFilterMethodMap.put("ROMUtils.java", new String[]{"getName", "getVersion", "toString"});
-
-        sFilterMethodMap.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss",
-                "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
-
-        sFilterMethodMap.put("SnackbarUtils.java", new String[]{"getRootGravity",
-                "setRootGravity", "getRootCornerRadius", "setRootCornerRadius", "getRootBackgroundTintColor",
-                "setRootBackgroundTintColor", "getRootBackground", "setRootBackground", "getRootMargin",
-                "setRootMargin", "getRootAlpha", "setRootAlpha", "getTextGravity", "setTextGravity",
-                "getTextColor", "setTextColor", "getTextSize", "setTextSize", "getTextMaxLines",
-                "setTextMaxLines", "getTextEllipsize", "setTextEllipsize", "getTextTypeface", "setTextTypeface",
-                "getTextPadding", "setTextPadding", "getActionGravity", "setActionGravity",
-                "getActionColor", "setActionColor", "getActionSize", "setActionSize", "getActionPadding",
-                "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor",
-                "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
-
-        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick",
-                "getCount", "getInvalidCount", "getInvalidCycleNumber"});
-
+        sFilterMethodMap.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss", "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
+        sFilterMethodMap.put("SnackbarUtils.java", new String[]{"getRootGravity", "setRootGravity", "getRootCornerRadius", "setRootCornerRadius", "getRootBackgroundTintColor", "setRootBackgroundTintColor", "getRootBackground", "setRootBackground", "getRootMargin", "setRootMargin", "getRootAlpha", "setRootAlpha", "getTextGravity", "setTextGravity", "getTextColor", "setTextColor", "getTextSize", "setTextSize", "getTextMaxLines", "setTextMaxLines", "getTextEllipsize", "setTextEllipsize", "getTextTypeface", "setTextTypeface", "getTextPadding", "setTextPadding", "getActionGravity", "setActionGravity", "getActionColor", "setActionColor", "getActionSize", "setActionSize", "getActionPadding", "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor", "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
+        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick", "getCount", "getInvalidCount", "getInvalidCycleNumber"});
         sFilterMethodMap.put("ScreenshotUtils.java", new String[]{"onScreenshot", "onChange", "onChecker"});
 
         // ==========
         // = Common =
         // ==========
 
-        sFilterMethodMap.put("FileBreadthFirstSearchUtils.java",
-                new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
-
-        sFilterMethodMap.put("FileDepthFirstSearchUtils.java",
-                new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
-
+        sFilterMethodMap.put("FileBreadthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
+        sFilterMethodMap.put("FileDepthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
         sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace", "getSubFiles"});
         sFilterMethodMap.put("FileRecordUtils.java", new String[]{"callback"});
-
-        sFilterMethodMap.put("HttpURLConnectionUtils.java",
-                new String[]{"onResponse", "onFail"});
-
+        sFilterMethodMap.put("HttpURLConnectionUtils.java", new String[]{"onResponse", "onFail"});
         sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
-
-        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments",
-                "getOwnerType", "getRawType", "equals", "hashCode"});
-
+        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
         sFilterMethodMap.put("CollectionUtils.java", new String[]{"put", "create"});
-
         sFilterMethodMap.put("ScaleUtils.java", new String[]{"getXYx", "getXY", "compareTo"});
-
         sFilterMethodMap.put("ColorUtils.java", new String[]{"toString"});
-
         sFilterMethodMap.put("KeyValueBean.java", new String[]{"toString"});
-
         sFilterMethodMap.put("CalendarUtils.java", new String[]{"compareTo", "toString", "hook"});
 
         // =============
@@ -495,10 +432,8 @@ public final class ApiConfig {
         // = DevWidget =
         // =============
 
-        sFilterMethodMap_Widget.put("ViewAssist.java", new String[]{"onRemove", "onNotFound", "onChange",
-                "onCreateView", "onBindView"});
-        sFilterMethodMap_Widget.put("StateLayout.java", new String[]{"onRemove", "onNotFound", "onChange",
-                "onCreateView", "onBindView"});
+        sFilterMethodMap_Widget.put("ViewAssist.java", new String[]{"onRemove", "onNotFound", "onChange", "onCreateView", "onBindView"});
+        sFilterMethodMap_Widget.put("StateLayout.java", new String[]{"onRemove", "onNotFound", "onChange", "onCreateView", "onBindView"});
     }
 
     /**
