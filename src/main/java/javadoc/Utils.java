@@ -75,8 +75,8 @@ public final class Utils {
      * @param map {@link Map}
      * @return 排序后的 Map
      */
-    public static Map<String, ArrayList<String>> sortHashMap(final Map<String, ArrayList<String>> map) {
-        Map<String, ArrayList<String>> sortedMap = new LinkedHashMap<>();
+    public static Map<String, List<String>> sortHashMap(final Map<String, List<String>> map) {
+        Map<String, List<String>> sortedMap = new LinkedHashMap<>();
         List<String> list = new ArrayList<>();
         Iterator<String> item = map.keySet().iterator();
         while (item.hasNext()) {
@@ -112,17 +112,17 @@ public final class Utils {
      * @param mapName map 变量名
      * @return 生成指定格式字符串
      */
-    public static String generateMapString(final HashMap<String, ArrayList<String>> map, final String mapName) {
+    public static String generateMapString(final HashMap<String, List<String>> map, final String mapName) {
         StringBuilder builder = new StringBuilder();
         // HashMap 排序
-        Map<String, ArrayList<String>> sortHashMap = sortHashMap(map);
+        Map<String, List<String>> sortHashMap = sortHashMap(map);
         // 空格前缀
         String space = "        ";
         // 格式化字符串
         String format = space + "%s.put(\"%s\", Utils.asList(%s));";
         // 循环处理
         for (String className : sortHashMap.keySet()) {
-            ArrayList<String> lists = sortHashMap.get(className);
+            List<String> lists = sortHashMap.get(className);
             // 格式化追加
             builder.append(String.format(format, mapName, className,
                     ArrayUtils.appendToString(lists.toArray(new String[]{}))));
@@ -260,6 +260,69 @@ public final class Utils {
                     }
                 }
             }
+        }
+        return false;
+    }
+
+    /**
+     * 移除多条数据 ( 通过 Map 进行移除 )
+     * @param map       {@link Map}
+     * @param removeMap {@link Map} 移除对比数据源
+     * @param <K>       key
+     * @param <T>       value type
+     * @return {@code true} success, {@code false} fail
+     */
+    public static <K, T> boolean removeToMap(final Map<K, List<T>> map, final Map<K, List<T>> removeMap) {
+        return removeToMap(map, removeMap, true, false);
+    }
+
+    /**
+     * 移除多条数据 ( 通过 Map 进行移除 )
+     * @param map             {@link Map}
+     * @param removeMap       {@link Map} 移除对比数据源
+     * @param removeEmpty     是否移除 null、长度为 0 的数据
+     * @param isNullRemoveAll 如果待移除的 ArrayList 是 null, 是否移除全部
+     * @param <K>             key
+     * @param <T>             value type
+     * @return {@code true} success, {@code false} fail
+     */
+    public static <K, T> boolean removeToMap(final Map<K, List<T>> map, final Map<K, List<T>> removeMap,
+                                             final boolean removeEmpty, final boolean isNullRemoveAll) {
+        if (map != null && removeMap != null) {
+            Iterator<Map.Entry<K, List<T>>> iterator = removeMap.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<K, List<T>> entry = iterator.next();
+                // 获取 key
+                K key = entry.getKey();
+                // 进行移除处理
+                if (map.containsKey(key)) {
+                    List<T> value = entry.getValue();
+                    try {
+                        if (value != null) {
+                            map.get(key).removeAll(value);
+                        } else {
+                            if (isNullRemoveAll) {
+                                map.remove(key);
+                            }
+                        }
+                    } catch (Exception e) {
+                        JCLogUtils.eTag(MapUtils.class.getSimpleName(), e, "removeToMap - removeAll");
+                    }
+                    // 判断是否移除 null、长度为 0 的数据
+                    if (removeEmpty) {
+                        List<T> lists = map.get(key);
+                        try {
+                            // 不存在数据了, 则移除
+                            if (lists == null || lists.size() == 0) {
+                                map.remove(key);
+                            }
+                        } catch (Exception e) {
+                            JCLogUtils.eTag(MapUtils.class.getSimpleName(), e, "removeToMap");
+                        }
+                    }
+                }
+            }
+            return true;
         }
         return false;
     }

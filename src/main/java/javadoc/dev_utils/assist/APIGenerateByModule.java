@@ -5,6 +5,7 @@ import javadoc.Utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 功能模块 API 生成
@@ -97,12 +98,12 @@ final class APIGenerateByModule {
      * @param methodNotAnnotateBuffer 方法没有注释记录存储 Buffer
      * @param notMethodBuffer         类不存在方法记录存储 Buffer
      */
-    private static void forSubnode(final StringBuffer buffer, final ArrayList<Subnode> lists,
+    private static void forSubnode(final StringBuffer buffer, final List<Subnode> lists,
                                    final String path, final String packageName, final String githubUrl,
                                    final HashMap<String, String> filterClassMap,
                                    final HashMap<String, String[]> filterMethodMap,
                                    final String methodNameRegex,
-                                   final HashMap<String, ArrayList<String>> methodNameMatchesMap,
+                                   final HashMap<String, List<String>> methodNameMatchesMap,
                                    final StringBuffer methodRepeatBuffer,
                                    final StringBuffer methodNotAnnotateBuffer,
                                    final StringBuffer notMethodBuffer) {
@@ -177,7 +178,7 @@ final class APIGenerateByModule {
                                      final HashMap<String, String> filterClassMap,
                                      final HashMap<String, String[]> filterMethodMap,
                                      final String methodNameRegex,
-                                     final HashMap<String, ArrayList<String>> methodNameMatchesMap,
+                                     final HashMap<String, List<String>> methodNameMatchesMap,
                                      final StringBuffer methodRepeatBuffer,
                                      final StringBuffer methodNotAnnotateBuffer,
                                      final StringBuffer notMethodBuffer) {

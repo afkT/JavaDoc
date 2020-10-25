@@ -2,13 +2,11 @@ package javadoc.dev_utils.check;
 
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
-import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import other.Pangu;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -34,7 +32,7 @@ public final class CodeAnnotationAnalyeRecord {
     private static HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
 
     // 代码注释重复换行记录
-    private static HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = new HashMap<>();
+    private static HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     /**
      * 代码分析检测
@@ -52,7 +50,7 @@ public final class CodeAnnotationAnalyeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalye(final ArrayList<File> listFiles, final boolean coverText) {
+    public static HashMap<String, String> codeAnalye(final List<File> listFiles, final boolean coverText) {
         sCoverText = coverText;
         forReader(listFiles);
         return sAnnotationSpaceMap;
@@ -66,7 +64,7 @@ public final class CodeAnnotationAnalyeRecord {
      * 循环读取处理
      * @param lists 文件列表
      */
-    private static void forReader(final ArrayList<File> lists) {
+    private static void forReader(final List<File> lists) {
         // 循环子文件
         for (File file : lists) {
             if (file.isDirectory()) {
@@ -115,7 +113,7 @@ public final class CodeAnnotationAnalyeRecord {
                 repeat = false; // 不需要判断重复
             } else {
                 if (code != null && repeat) {
-                    MapUtils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
+                    Utils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
                 }
                 // 表示需要检测重复
                 repeat = true;
@@ -131,7 +129,7 @@ public final class CodeAnnotationAnalyeRecord {
      * 代码注释重复换行记录
      * @return {@link HashMap}
      */
-    public static HashMap<String, ArrayList<String>> getAnnotationRepeatLineMap() {
+    public static HashMap<String, List<String>> getAnnotationRepeatLineMap() {
         return sAnnotationRepeatLineMap;
     }
 }

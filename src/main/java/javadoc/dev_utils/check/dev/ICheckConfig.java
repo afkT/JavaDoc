@@ -1,7 +1,7 @@
 package javadoc.dev_utils.check.dev;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,49 +14,49 @@ public interface ICheckConfig {
      * 获取忽略指定方法注释配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreAnnotateMap();
+    Map<String, List<String>> getIgnoreAnnotateMap();
 
     /**
      * 获取忽略指定方法参数 final 修饰符配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreFinalMap();
+    Map<String, List<String>> getIgnoreFinalMap();
 
     /**
      * 获取忽略指定方法 static 修饰符配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreStaticMap();
+    Map<String, List<String>> getIgnoreStaticMap();
 
     /**
      * 获取忽略指定方法 @param 处理配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreParamMap();
+    Map<String, List<String>> getIgnoreParamMap();
 
     /**
      * 获取忽略指定方法 @return 处理配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreReturnMap();
+    Map<String, List<String>> getIgnoreReturnMap();
 
     /**
      * 获取忽略指定方法非 public 处理配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreUnPublicMap();
+    Map<String, List<String>> getIgnoreUnPublicMap();
 
     /**
      * 获取忽略无修饰符变量处理配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreModifierVariableMap();
+    Map<String, List<String>> getIgnoreModifierVariableMap();
 
     /**
      * 获取忽略指定方法 return void 处理配置
      * @return 忽略配置 Map
      */
-    Map<String, ArrayList<String>> getIgnoreReturnVoidMap();
+    Map<String, List<String>> getIgnoreReturnVoidMap();
 
     /**
      * 忽略注释间距异常文件

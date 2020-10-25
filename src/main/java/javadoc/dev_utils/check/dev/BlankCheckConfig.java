@@ -1,7 +1,7 @@
 package javadoc.dev_utils.check.dev;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,42 +11,42 @@ import java.util.Map;
 public class BlankCheckConfig implements ICheckConfig {
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreAnnotateMap() {
+    public Map<String, List<String>> getIgnoreAnnotateMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreFinalMap() {
+    public Map<String, List<String>> getIgnoreFinalMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreStaticMap() {
+    public Map<String, List<String>> getIgnoreStaticMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreParamMap() {
+    public Map<String, List<String>> getIgnoreParamMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreReturnMap() {
+    public Map<String, List<String>> getIgnoreReturnMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreUnPublicMap() {
+    public Map<String, List<String>> getIgnoreUnPublicMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreModifierVariableMap() {
+    public Map<String, List<String>> getIgnoreModifierVariableMap() {
         return new HashMap<>();
     }
 
     @Override
-    public Map<String, ArrayList<String>> getIgnoreReturnVoidMap() {
+    public Map<String, List<String>> getIgnoreReturnVoidMap() {
         return new HashMap<>();
     }
 

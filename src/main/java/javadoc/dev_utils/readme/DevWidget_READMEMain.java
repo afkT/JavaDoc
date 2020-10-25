@@ -6,8 +6,8 @@ import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -81,8 +81,8 @@ final class DevWidget_READMEMain {
         // Github 链接地址
         final String githubUrl = ApiConfig.DEV_WIDGET_GITHUB_URL;
 
-        // 方法名匹配存储 Map<类名, ArrayList<方法名>>
-        final HashMap<String, ArrayList<String>> methodNameMatchesMap = new HashMap<>();
+        // 方法名匹配存储 Map<类名, List<方法名>>
+        final HashMap<String, List<String>> methodNameMatchesMap = new HashMap<>();
         // 方法名重复记录存储
         final StringBuffer methodRepeatBuffer = new StringBuffer();
         // 方法没有注释记录存储

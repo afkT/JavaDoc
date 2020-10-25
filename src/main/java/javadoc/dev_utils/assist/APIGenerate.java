@@ -6,6 +6,7 @@ import javadoc.Utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: Api 生成
@@ -32,7 +33,7 @@ public class APIGenerate {
                                      final HashMap<String, String> filterClassMap,
                                      final HashMap<String, String[]> filterMethodMap,
                                      final String methodNameRegex,
-                                     final HashMap<String, ArrayList<String>> methodNameMatchesMap,
+                                     final HashMap<String, List<String>> methodNameMatchesMap,
                                      final StringBuffer methodRepeatBuffer,
                                      final StringBuffer methodNotAnnotateBuffer,
                                      final StringBuffer notMethodBuffer) {

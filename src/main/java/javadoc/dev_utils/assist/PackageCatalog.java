@@ -5,6 +5,7 @@ import dev.utils.common.StringUtils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 包目录结构生成
@@ -73,16 +74,16 @@ public final class PackageCatalog {
     private static class Catalog {
 
         // 文件夹对象
-        private File               cataFile;
+        private File          cataFile;
         // 文件夹内的子文件列表
-        private ArrayList<Catalog> listCataLogs = new ArrayList<>();
+        private List<Catalog> listCataLogs;
 
         /**
          * 构造函数
          * @param file  文件夹对象
          * @param lists 文件夹内的子文件列表
          */
-        public Catalog(File file, ArrayList<Catalog> lists) {
+        public Catalog(File file, List<Catalog> lists) {
             this.cataFile = file;
             this.listCataLogs = lists;
         }
@@ -99,7 +100,7 @@ public final class PackageCatalog {
          * 获取文件夹内的子文件列表
          * @return {@link ArrayList}
          */
-        public ArrayList<Catalog> getListCataLogs() {
+        public List<Catalog> getListCataLogs() {
             return listCataLogs;
         }
     }
@@ -224,7 +225,7 @@ public final class PackageCatalog {
      * @param linkTag     锚链接 TAG 标记
      * @param mapCatelog  对应目录的注释
      */
-    private static void forCatelog(final StringBuffer buffer, final ArrayList<Catalog> lists,
+    private static void forCatelog(final StringBuffer buffer, final List<Catalog> lists,
                                    final boolean isAnchor, final String packageName,
                                    final int lineNumber, final String linkTag,
                                    final HashMap<String, String> mapCatelog) {

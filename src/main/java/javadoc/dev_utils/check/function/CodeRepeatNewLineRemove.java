@@ -2,14 +2,12 @@ package javadoc.dev_utils.check.function;
 
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
-import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import javadoc.dev_utils.ApiConfig;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,7 +18,7 @@ import java.util.List;
 public final class CodeRepeatNewLineRemove {
 
     // 代码注释重复换行记录
-    private static HashMap<String, ArrayList<String>> sAnnotationRepeatLineMap = new HashMap<>();
+    private static HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     // 忽略文件后缀
     private static final String[] SUFFIX = {"kt", "xml", "java", "gradle",};
@@ -70,7 +68,7 @@ public final class CodeRepeatNewLineRemove {
                 repeat = false; // 不需要判断重复
             } else {
                 if (code != null && repeat) {
-                    MapUtils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
+                    Utils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
                 }
                 // 表示需要检测重复
                 repeat = true;

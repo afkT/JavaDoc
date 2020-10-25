@@ -18,8 +18,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreAnnotateMap() {
-        Map<String, ArrayList<String>> ignoreAnnotateMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreAnnotateMap() {
+        Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         %s
         return ignoreAnnotateMap;
     }
@@ -29,8 +29,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreFinalMap() {
-        Map<String, ArrayList<String>> ignoreFinalMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreFinalMap() {
+        Map<String, List<String>> ignoreFinalMap = new HashMap<>();
         %s
         return ignoreFinalMap;
     }
@@ -40,8 +40,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreStaticMap() {
-        Map<String, ArrayList<String>> ignoreStaticMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreStaticMap() {
+        Map<String, List<String>> ignoreStaticMap = new HashMap<>();
         %s
         return ignoreStaticMap;
     }
@@ -51,8 +51,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreParamMap() {
-        Map<String, ArrayList<String>> ignoreParamMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreParamMap() {
+        Map<String, List<String>> ignoreParamMap = new HashMap<>();
         %s
         return ignoreParamMap;
     }
@@ -62,8 +62,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreReturnMap() {
-        Map<String, ArrayList<String>> ignoreReturnMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreReturnMap() {
+        Map<String, List<String>> ignoreReturnMap = new HashMap<>();
         %s
         return ignoreReturnMap;
     }
@@ -73,8 +73,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreUnPublicMap() {
-        Map<String, ArrayList<String>> ignoreUnPublicMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreUnPublicMap() {
+        Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
         %s
         return ignoreUnPublicMap;
     }
@@ -84,8 +84,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreModifierVariableMap() {
-        Map<String, ArrayList<String>> ignoreModifierVariableMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreModifierVariableMap() {
+        Map<String, List<String>> ignoreModifierVariableMap = new HashMap<>();
         %s
         return ignoreModifierVariableMap;
     }
@@ -95,8 +95,8 @@ final class %s implements ICheckConfig {
      * @return 忽略配置 Map
      */
     @Override
-    public Map<String, ArrayList<String>> getIgnoreReturnVoidMap() {
-        Map<String, ArrayList<String>> ignoreReturnVoidMap = new HashMap<>();
+    public Map<String, List<String>> getIgnoreReturnVoidMap() {
+        Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
         %s
         return ignoreReturnVoidMap;
     }

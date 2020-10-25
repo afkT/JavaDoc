@@ -10,6 +10,7 @@ import javadoc.api.JavaDocReader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: API(JavaDoc) 读取类
@@ -18,19 +19,19 @@ import java.util.HashMap;
 public final class APIReader implements JavaDocReader.CallBack {
 
     // 对应的类 Github 链接地址
-    private String                             mClassGithubUrl;
+    private String                        mClassGithubUrl;
     // 忽略不保存的方法
-    private HashMap<String, String[]>          mFilterMethodMap;
+    private HashMap<String, String[]>     mFilterMethodMap;
     // 方法名匹配正则表达式
-    private String                             mMethodNameRegex;
-    // 方法名匹配存储 Map<类名, ArrayList<方法名>>
-    private HashMap<String, ArrayList<String>> mMethodNameMatchesMap;
+    private String                        mMethodNameRegex;
+    // 方法名匹配存储 Map<类名, List<方法名>>
+    private HashMap<String, List<String>> mMethodNameMatchesMap;
     // 方法名重复记录存储
-    private StringBuffer                       mMethodRepeatBuffer;
+    private StringBuffer                  mMethodRepeatBuffer;
     // 方法没有注释记录存储
-    private StringBuffer                       mMethodNotAnnotateBuffer;
+    private StringBuffer                  mMethodNotAnnotateBuffer;
     // 类不存在方法记录存储
-    private StringBuffer                       mNotMethodBuffer;
+    private StringBuffer                  mNotMethodBuffer;
 
     /**
      * 构造函数
@@ -71,7 +72,7 @@ public final class APIReader implements JavaDocReader.CallBack {
     public static String readDoc(final String path, final String className, final String classGithubUrl,
                                  final HashMap<String, String[]> filterMethodMap,
                                  final String methodNameRegex,
-                                 final HashMap<String, ArrayList<String>> methodNameMatchesMap,
+                                 final HashMap<String, List<String>> methodNameMatchesMap,
                                  final StringBuffer methodRepeatBuffer,
                                  final StringBuffer methodNotAnnotateBuffer,
                                  final StringBuffer notMethodBuffer) {
@@ -167,7 +168,7 @@ public final class APIReader implements JavaDocReader.CallBack {
                 // ========================
                 // 方法名正则表达式匹配处理
                 if (ValidatorUtils.match(mMethodNameRegex, methodName)) {
-                    ArrayList<String> listMatchs = mMethodNameMatchesMap.get(className);
+                    List<String> listMatchs = mMethodNameMatchesMap.get(className);
                     if (listMatchs == null) {
                         listMatchs = new ArrayList<>();
                         mMethodNameMatchesMap.put(className, listMatchs);
