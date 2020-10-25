@@ -119,7 +119,7 @@ public final class Utils {
         // 空格前缀
         String space = "        ";
         // 格式化字符串
-        String format = space + "%s.put(\"%s\", Utils.asList(%s));";
+        String format = space + "%s.put(\"%s\", Utils.asListArgs(%s));";
         // 循环处理
         for (String className : sortHashMap.keySet()) {
             List<String> lists = sortHashMap.get(className);
@@ -158,22 +158,6 @@ public final class Utils {
         return builder.toString();
     }
 
-    /**
-     * 转换数组为集合
-     * @param array 数组
-     * @param <T>   泛型
-     * @return {@link List<T>}
-     */
-    public static <T> List<T> asList(final T... array) {
-        if (array != null) {
-            try {
-                return new ArrayList<>(Arrays.asList(array));
-            } catch (Exception e) {
-            }
-        }
-        return null;
-    }
-
     // ========
     // = Gson =
     // ========
@@ -210,6 +194,23 @@ public final class Utils {
     // =====================
     // = 临时等 DevJava 发包 =
     // =====================
+
+    /**
+     * 转换数组为集合
+     * @param array 数组
+     * @param <T>   泛型
+     * @return {@link List<T>}
+     */
+    public static <T> List<T> asListArgs(final T... array) {
+        if (array != null) {
+            try {
+                return new ArrayList<>(Arrays.asList(array));
+            } catch (Exception e) {
+                JCLogUtils.eTag(ArrayUtils.class.getSimpleName(), e, "asListArgs");
+            }
+        }
+        return null;
+    }
 
     /**
      * 添加一条数据
