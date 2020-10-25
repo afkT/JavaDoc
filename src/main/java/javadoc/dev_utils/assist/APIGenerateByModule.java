@@ -27,16 +27,16 @@ final class APIGenerateByModule {
     private static class Subnode {
 
         // 文件夹对象
-        private File               subFile;
+        private File          subFile;
         // 文件夹内的子文件列表
-        private ArrayList<Subnode> listSubs = new ArrayList<>();
+        private List<Subnode> listSubs;
 
         /**
          * 构造函数
          * @param file  文件夹对象
          * @param lists 文件夹内的子文件列表
          */
-        public Subnode(File file, ArrayList<Subnode> lists) {
+        public Subnode(File file, List<Subnode> lists) {
             this.subFile = file;
             this.listSubs = lists;
         }
@@ -51,9 +51,9 @@ final class APIGenerateByModule {
 
         /**
          * 获取文件夹内的子文件列表
-         * @return {@link ArrayList}
+         * @return {@link List}
          */
-        public ArrayList<Subnode> getListSubs() {
+        public List<Subnode> getListSubs() {
             return listSubs;
         }
     }
@@ -63,8 +63,8 @@ final class APIGenerateByModule {
      * @param path 文件路径
      * @return 文件夹目录列表集合
      */
-    private static ArrayList<Subnode> getFolderLists(final String path) {
-        ArrayList<Subnode> lists = new ArrayList<>();
+    private static List<Subnode> getFolderLists(final String path) {
+        List<Subnode> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
@@ -118,7 +118,7 @@ final class APIGenerateByModule {
             buffer.append("\n\n\n## <span id=\"" + (packageName + "." + name).replaceAll("\\.", "") + "\">**`" + (packageName + "." + name) + "`**</span>");
 
             // 获取全部文件夹
-            ArrayList<File> listFiles = Utils.getFileLists((path + "/" + name));
+            List<File> listFiles = Utils.getFileLists((path + "/" + name));
             // 循环子节点文件
             for (File file : listFiles) {
                 // 获取类名

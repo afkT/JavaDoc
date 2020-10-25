@@ -3,8 +3,8 @@ package javadoc.dev_utils.check.dev;
 import dev.utils.common.ArrayUtils;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -14,21 +14,21 @@ import java.util.Set;
 public final class CheckInfo {
 
     // 检测路径
-    public String          mPath;
+    public String       mPath;
     // 代码检测分析配置接口
-    public ICheckConfig    mICheckConfig;
+    public ICheckConfig mICheckConfig;
     // 是否覆盖文件内容
-    public boolean         mCoverText               = true;
-    // 是否使用 ArrayList<File>
-    public boolean         mIsLists                 = false;
+    public boolean      mCoverText               = true;
+    // 是否使用 List<File>
+    public boolean      mIsLists                 = false;
     // 检测指定文件集合
-    public ArrayList<File> mListFiles;
+    public List<File>   mListFiles;
     // 是否打印方法返回值 void 记录
-    public boolean         mIsPrintVoid             = false;
+    public boolean      mIsPrintVoid             = false;
     // 是否需要生成 Config
-    public boolean         isGenerateConfig;
+    public boolean      isGenerateConfig;
     // 忽略注释间距异常文件
-    public Set<String>     ignoreAnnotationSpaceSet = new HashSet<>();
+    public Set<String>  ignoreAnnotationSpaceSet = new HashSet<>();
 
     public CheckInfo(String path, ICheckConfig iCheckConfig) {
         this.mPath = path;
@@ -70,7 +70,7 @@ public final class CheckInfo {
     }
 
     /**
-     * 设置是否使用 ArrayList<File>
+     * 设置是否使用 List<File>
      * @param lists {@code true} yes, {@code false} no
      * @return {@link CheckInfo}
      */
@@ -84,7 +84,7 @@ public final class CheckInfo {
      * @param listFiles 检测指定文件集合
      * @return {@link CheckInfo}
      */
-    public CheckInfo setListFiles(ArrayList<File> listFiles) {
+    public CheckInfo setListFiles(List<File> listFiles) {
         this.mListFiles = listFiles;
         return this;
     }

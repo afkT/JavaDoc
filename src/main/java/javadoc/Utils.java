@@ -34,8 +34,8 @@ public final class Utils {
      * @param path 文件路径
      * @return 文件列表
      */
-    public static ArrayList<File> getFileLists(final String path) {
-        ArrayList<File> lists = new ArrayList<>();
+    public static List<File> getFileLists(final String path) {
+        List<File> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
@@ -54,8 +54,8 @@ public final class Utils {
      * @param path 文件路径
      * @return 文件目录列表
      */
-    public static ArrayList<File> getFileCatalogLists(final String path) {
-        ArrayList<File> lists = new ArrayList<>();
+    public static List<File> getFileCatalogLists(final String path) {
+        List<File> lists = new ArrayList<>();
         try {
             // 获取文件路径
             File baseFile = new File(path);
@@ -162,9 +162,9 @@ public final class Utils {
      * 转换数组为集合
      * @param array 数组
      * @param <T>   泛型
-     * @return {@link ArrayList<T>}
+     * @return {@link List<T>}
      */
-    public static <T> ArrayList<T> asList(final T... array) {
+    public static <T> List<T> asList(final T... array) {
         if (array != null) {
             try {
                 return new ArrayList<>(Arrays.asList(array));
@@ -281,7 +281,7 @@ public final class Utils {
      * @param map             {@link Map}
      * @param removeMap       {@link Map} 移除对比数据源
      * @param removeEmpty     是否移除 null、长度为 0 的数据
-     * @param isNullRemoveAll 如果待移除的 ArrayList 是 null, 是否移除全部
+     * @param isNullRemoveAll 如果待移除的 List 是 null, 是否移除全部
      * @param <K>             key
      * @param <T>             value type
      * @return {@code true} success, {@code false} fail

@@ -4,7 +4,6 @@ import dev.utils.common.StringUtils;
 import javadoc.Utils;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -55,7 +54,7 @@ public class APIGenerate {
         buffer.append("\n## <span id=\"" + apiPackageName.replaceAll("\\.", "") + "\">**`" + apiPackageName + "`**</span>");
 
         // 获取全部文件夹
-        ArrayList<File> lists = Utils.getFileLists(apiPath);
+        List<File> lists = Utils.getFileLists(apiPath);
         // 循环子文件
         for (File file : lists) {
             // 获取类名

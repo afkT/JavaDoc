@@ -9,6 +9,7 @@ import javadoc.dev_utils.check.dev.ICheckConfig;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * detail: 代码读取检测分析 Main 方法
@@ -23,10 +24,10 @@ public class DevWidgetMain {
         ICheckConfig iCheckConfig = new DevWidgetConfig();
         // 是否覆盖文件内容
         boolean coverText = ConvertUtils.toBoolean(ArrayUtils.get(args, 0), true);
-        // 是否使用 ArrayList<File>
+        // 是否使用 List<File>
         boolean isLists = false;
         // 检测指定文件集合
-        ArrayList<File> listFiles = new ArrayList<>();
+        List<File> listFiles = new ArrayList<>();
         // 是否打印方法返回值 void 记录
         boolean isPrintVoid = false;
         // 是否需要生成 Config

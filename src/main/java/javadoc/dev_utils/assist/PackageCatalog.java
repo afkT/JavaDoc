@@ -98,7 +98,7 @@ public final class PackageCatalog {
 
         /**
          * 获取文件夹内的子文件列表
-         * @return {@link ArrayList}
+         * @return {@link List}
          */
         public List<Catalog> getListCataLogs() {
             return listCataLogs;
@@ -111,8 +111,8 @@ public final class PackageCatalog {
      * @param catalogCallback 目录回调通知
      * @return 文件夹目录列表集合
      */
-    private static ArrayList<Catalog> getFolderLists(final String path, final CatalogCallback catalogCallback) {
-        ArrayList<Catalog> lists = new ArrayList<>();
+    private static List<Catalog> getFolderLists(final String path, final CatalogCallback catalogCallback) {
+        List<Catalog> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
@@ -266,7 +266,7 @@ public final class PackageCatalog {
         // 拼接信息
         StringBuffer buffer = new StringBuffer();
         // 获取文件夹列表
-        ArrayList<Catalog> lists = getFolderLists(path, new CatalogCallback() {
+        List<Catalog> lists = getFolderLists(path, new CatalogCallback() {
             @Override
             public void callback(String name, int lineNumber, String linkTag) {
                 // 计算目录最大长度
