@@ -14,9 +14,9 @@ import java.util.List;
  * detail: 代码注释读取检测分析
  * @author Ttt
  */
-public final class CodeAnnotationAnalyeRecord {
+public final class CodeAnnotationAnalyzeRecord {
 
-    private CodeAnnotationAnalyeRecord() {
+    private CodeAnnotationAnalyzeRecord() {
     }
 
     // 代码间距等规范处理
@@ -40,8 +40,8 @@ public final class CodeAnnotationAnalyeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalye(final String path, final boolean coverText) {
-        return codeAnalye(Utils.getFileCatalogLists(path), coverText);
+    public static HashMap<String, String> codeAnalyze(final String path, final boolean coverText) {
+        return codeAnalyze(Utils.getFileCatalogLists(path), coverText);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class CodeAnnotationAnalyeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalye(final List<File> listFiles, final boolean coverText) {
+    public static HashMap<String, String> codeAnalyze(final List<File> listFiles, final boolean coverText) {
         sCoverText = coverText;
         forReader(listFiles);
         return sAnnotationSpaceMap;

@@ -24,7 +24,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ColorSortMain", Utils.asListArgs("main"));
         ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreAnnotateMap.put("ConfigMain", Utils.asListArgs("main"));
-        ignoreAnnotateMap.put("PanguAnalyeMain", Utils.asListArgs("main"));
+        ignoreAnnotateMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
 
         return ignoreAnnotateMap;
     }
@@ -41,7 +41,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startElement","endElement","characters"));
         ignoreFinalMap.put("ConfigMain", Utils.asListArgs("main"));
         ignoreFinalMap.put("Pangu", Utils.asListArgs("spacingText","spacingFile"));
-        ignoreFinalMap.put("PanguAnalyeMain", Utils.asListArgs("main"));
+        ignoreFinalMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
 
         return ignoreFinalMap;
     }
@@ -72,7 +72,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("ColorSortMain", Utils.asListArgs("main"));
         ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startElement","endElement","characters"));
         ignoreParamMap.put("ConfigMain", Utils.asListArgs("main"));
-        ignoreParamMap.put("PanguAnalyeMain", Utils.asListArgs("main"));
+        ignoreParamMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
 
         return ignoreParamMap;
     }
@@ -99,8 +99,8 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", Utils.asListArgs("callback"));
         ignoreUnPublicMap.put("CatalogMain", Utils.asListArgs("print"));
         ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asListArgs("OnEnd"));
-        ignoreUnPublicMap.put("PanguAnalyeMain", Utils.asListArgs("getFileCatalogLists","forReader","readFile","createGson","toJsonFormat"));
-        ignoreUnPublicMap.put("PanguAnalyeMain.Filter", Utils.asListArgs("filter"));
+        ignoreUnPublicMap.put("PanguAnalyzeMain", Utils.asListArgs("getFileCatalogLists","forReader","readFile","createGson","toJsonFormat"));
+        ignoreUnPublicMap.put("PanguAnalyzeMain.Filter", Utils.asListArgs("filter"));
 
         return ignoreUnPublicMap;
     }
@@ -129,7 +129,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", Utils.asListArgs("analysisColorsXml - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asListArgs("OnEnd - void"));
         ignoreReturnVoidMap.put("Pangu", Utils.asListArgs("spacingFile - void"));
-        ignoreReturnVoidMap.put("PanguAnalyeMain", Utils.asListArgs("forReader - void","readFile - void"));
+        ignoreReturnVoidMap.put("PanguAnalyzeMain", Utils.asListArgs("forReader - void","readFile - void"));
 
         return ignoreReturnVoidMap;
     }

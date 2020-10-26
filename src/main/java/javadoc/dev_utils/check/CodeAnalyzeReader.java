@@ -21,9 +21,9 @@ import java.util.List;
  * detail: 代码读取检测分析
  * @author Ttt
  */
-public final class CodeAnalyeReader {
+public final class CodeAnalyzeReader {
 
-    private CodeAnalyeReader() {
+    private CodeAnalyzeReader() {
     }
 
     // =========================
@@ -76,8 +76,8 @@ public final class CodeAnalyeReader {
      * @param path 文件夹路径
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static List<HashMap<String, List<String>>> codeAnalye(final String path) {
-        return codeAnalye(Utils.getFileCatalogLists(path));
+    public static List<HashMap<String, List<String>>> codeAnalyze(final String path) {
+        return codeAnalyze(Utils.getFileCatalogLists(path));
     }
 
     /**
@@ -85,7 +85,7 @@ public final class CodeAnalyeReader {
      * @param listFiles 文件集合
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static List<HashMap<String, List<String>>> codeAnalye(final List<File> listFiles) {
+    public static List<HashMap<String, List<String>>> codeAnalyze(final List<File> listFiles) {
         MapConfig mapConfig = new MapConfig();
         // 循环读取
         forReader(listFiles, mapConfig);
