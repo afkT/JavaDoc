@@ -158,7 +158,7 @@ public final class ApiConfig {
     // ==================
 
     // 包名目录注释
-    public static final HashMap<String, String>   sCatelogMap      = new HashMap<>();
+    public static final HashMap<String, String>   sCatalogMap      = new HashMap<>();
     // 忽略不保存的类
     public static final HashMap<String, String>   sFilterClassMap  = new HashMap<>();
     // 忽略不保存的方法
@@ -169,7 +169,7 @@ public final class ApiConfig {
     // =============
 
     // 包名目录注释
-    public static final HashMap<String, String>   sCatelogMap_Assist      = new HashMap<>();
+    public static final HashMap<String, String>   sCatalogMap_Assist      = new HashMap<>();
     // 忽略不保存的类
     public static final HashMap<String, String>   sFilterClassMap_Assist  = new HashMap<>();
     // 忽略不保存的方法
@@ -180,7 +180,7 @@ public final class ApiConfig {
     // ============
 
     // 包名目录注释
-    public static final HashMap<String, String>   sCatelogMap_Other      = new HashMap<>();
+    public static final HashMap<String, String>   sCatalogMap_Other      = new HashMap<>();
     // 忽略不保存的类
     public static final HashMap<String, String>   sFilterClassMap_Other  = new HashMap<>();
     // 忽略不保存的方法
@@ -191,14 +191,14 @@ public final class ApiConfig {
     // ============
 
     // 包名目录注释
-    public static final HashMap<String, String> sCatelogMap_Base = new HashMap<>();
+    public static final HashMap<String, String> sCatalogMap_Base = new HashMap<>();
 
     // =============
     // = DevWidget =
     // =============
 
     // 包名目录注释
-    public static final HashMap<String, String>   sCatelogMap_Widget      = new HashMap<>();
+    public static final HashMap<String, String>   sCatalogMap_Widget      = new HashMap<>();
     // 忽略不保存的类
     public static final HashMap<String, String>   sFilterClassMap_Widget  = new HashMap<>();
     // 忽略不保存的方法
@@ -206,7 +206,7 @@ public final class ApiConfig {
 
     static {
         // 初始化 包名目录注释 Map
-        initCatelogMap();
+        initCatalogMap();
         // 初始化 忽略不保存的类 Map
         initFilterClassMap();
         // 初始化 忽略不保存的方法 Map
@@ -222,116 +222,116 @@ public final class ApiConfig {
     /**
      * 初始化 包名目录注释 Map
      */
-    private static void initCatelogMap() {
+    private static void initCatalogMap() {
 
         // ==================
         // = DevApp、DevJava =
         // ==================
 
-        sCatelogMap.put("dev.utils", "根目录");
+        sCatalogMap.put("dev.utils", "根目录");
 
         // ===========
         // = APP 目录 =
         // ===========
 
-        sCatelogMap.put(".app", "APP 相关工具类");
-        sCatelogMap.put(".app.anim", "动画工具类");
+        sCatalogMap.put(".app", "APP 相关工具类");
+        sCatalogMap.put(".app.anim", "动画工具类");
 
-        sCatelogMap.put(".app.assist", "辅助类");
-        sCatelogMap.put(".app.assist.manager", "管理器 如: TimerManager");
+        sCatalogMap.put(".app.assist", "辅助类");
+        sCatalogMap.put(".app.assist.manager", "管理器 如: TimerManager");
 
-        sCatelogMap.put(".app.cache", "缓存工具类");
-        sCatelogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
-        sCatelogMap.put(".app.helper", "功能 Helper 辅助类");
-        sCatelogMap.put(".app.image", "图片相关处理");
-        sCatelogMap.put(".app.info", "APP 信息、PackageInfo 等");
-        sCatelogMap.put(".app.logger", "日志库 DevLogger");
-        sCatelogMap.put(".app.permission", "权限工具类");
-        sCatelogMap.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
-        sCatelogMap.put(".app.share", "SharedPreferences 封装");
+        sCatalogMap.put(".app.cache", "缓存工具类");
+        sCatalogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
+        sCatalogMap.put(".app.helper", "功能 Helper 辅助类");
+        sCatalogMap.put(".app.image", "图片相关处理");
+        sCatalogMap.put(".app.info", "APP 信息、PackageInfo 等");
+        sCatalogMap.put(".app.logger", "日志库 DevLogger");
+        sCatalogMap.put(".app.permission", "权限工具类");
+        sCatalogMap.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
+        sCatalogMap.put(".app.share", "SharedPreferences 封装");
 
-        sCatelogMap.put(".app.toast", "Toast");
-        sCatelogMap.put(".app.toast.toaster", "Toaster 处理无通知权限");
+        sCatalogMap.put(".app.toast", "Toast");
+        sCatalogMap.put(".app.toast.toaster", "Toaster 处理无通知权限");
 
-        sCatelogMap.put(".app.wifi", "Wifi、热点工具类");
+        sCatalogMap.put(".app.wifi", "Wifi、热点工具类");
 
         // ==============
         // = Common 目录 =
         // ==============
 
-        sCatelogMap.put(".common", "Java 工具类, 不依赖 android api");
-        sCatelogMap.put(".common.assist", "各种快捷辅助类");
-        sCatelogMap.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
-        sCatelogMap.put(".common.cipher", "编 / 解码工具类");
-        sCatelogMap.put(".common.encrypt", "加密工具类");
-        sCatelogMap.put(".common.file", "文件分片相关");
-        sCatelogMap.put(".common.random", "随机概率算法工具类");
-        sCatelogMap.put(".common.thread", "线程相关");
-        sCatelogMap.put(".common.validator", "数据校验工具类");
+        sCatalogMap.put(".common", "Java 工具类, 不依赖 android api");
+        sCatalogMap.put(".common.assist", "各种快捷辅助类");
+        sCatalogMap.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
+        sCatalogMap.put(".common.cipher", "编 / 解码工具类");
+        sCatalogMap.put(".common.encrypt", "加密工具类");
+        sCatalogMap.put(".common.file", "文件分片相关");
+        sCatalogMap.put(".common.random", "随机概率算法工具类");
+        sCatalogMap.put(".common.thread", "线程相关");
+        sCatalogMap.put(".common.validator", "数据校验工具类");
 
         // =============
         // = DevAssist =
         // =============
 
-        sCatelogMap_Assist.put("dev", "根目录");
-        sCatelogMap_Assist.put(".assist", "快捷功能辅助类");
-        sCatelogMap_Assist.put(".assist.adapter", "Adapter 相关");
-        sCatelogMap_Assist.put(".assist.multiselect", "多选模块");
-        sCatelogMap_Assist.put(".assist.multiselect.edit", "多选编辑方法");
-        sCatelogMap_Assist.put(".base", "基类相关");
-        sCatelogMap_Assist.put(".callback", "回调相关");
-        sCatelogMap_Assist.put(".callback.click", "点击回调");
-        sCatelogMap_Assist.put(".callback.common", "通用回调");
-        sCatelogMap_Assist.put(".callback.result", "操作结果回调");
-        sCatelogMap_Assist.put(".engine", "兼容 Engine");
-        sCatelogMap_Assist.put(".engine.http", "Http Engine");
-        sCatelogMap_Assist.put(".engine.image", "Image Engine");
-        sCatelogMap_Assist.put(".engine.json", "JSON Engine");
-        sCatelogMap_Assist.put(".engine.log", "Log Engine");
+        sCatalogMap_Assist.put("dev", "根目录");
+        sCatalogMap_Assist.put(".assist", "快捷功能辅助类");
+        sCatalogMap_Assist.put(".assist.adapter", "Adapter 相关");
+        sCatalogMap_Assist.put(".assist.multiselect", "多选模块");
+        sCatalogMap_Assist.put(".assist.multiselect.edit", "多选编辑方法");
+        sCatalogMap_Assist.put(".base", "基类相关");
+        sCatalogMap_Assist.put(".callback", "回调相关");
+        sCatalogMap_Assist.put(".callback.click", "点击回调");
+        sCatalogMap_Assist.put(".callback.common", "通用回调");
+        sCatalogMap_Assist.put(".callback.result", "操作结果回调");
+        sCatalogMap_Assist.put(".engine", "兼容 Engine");
+        sCatalogMap_Assist.put(".engine.http", "Http Engine");
+        sCatalogMap_Assist.put(".engine.image", "Image Engine");
+        sCatalogMap_Assist.put(".engine.json", "JSON Engine");
+        sCatalogMap_Assist.put(".engine.log", "Log Engine");
 
         // ============
         // = DevOther =
         // ============
 
-        sCatelogMap_Other.put("dev", "根目录");
-        sCatelogMap_Other.put(".assist", "常用辅助类封装");
-        sCatelogMap_Other.put(".other", "第三方库封装工具类");
-        sCatelogMap_Other.put(".other.okgo", "OkGo 网络请求");
-        sCatelogMap_Other.put(".other.picture", "PictureSelector 图片选择库");
-        sCatelogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
-        sCatelogMap_Other.put(".other.retrofit.response", "请求响应解析");
-        sCatelogMap_Other.put(".other.retrofit.subscriber", "请求响应处理");
-        sCatelogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
-        sCatelogMap_Other.put(".service", "Service 相关");
-        sCatelogMap_Other.put(".temp", "临时快捷调用工具类");
+        sCatalogMap_Other.put("dev", "根目录");
+        sCatalogMap_Other.put(".assist", "常用辅助类封装");
+        sCatalogMap_Other.put(".other", "第三方库封装工具类");
+        sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
+        sCatalogMap_Other.put(".other.picture", "PictureSelector 图片选择库");
+        sCatalogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
+        sCatalogMap_Other.put(".other.retrofit.response", "请求响应解析");
+        sCatalogMap_Other.put(".other.retrofit.subscriber", "请求响应处理");
+        sCatalogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
+        sCatalogMap_Other.put(".service", "Service 相关");
+        sCatalogMap_Other.put(".temp", "临时快捷调用工具类");
 
         // =============
         // = DevWidget =
         // =============
 
-        sCatelogMap_Widget.put("dev", "根目录");
-        sCatelogMap_Widget.put(".widget", "自定义 View 根目录");
-        sCatelogMap_Widget.put(".widget.adjust", "自动调节高度 View");
-        sCatelogMap_Widget.put(".widget.assist", "View 辅助类");
-        sCatelogMap_Widget.put(".widget.custom", "自定义 View");
-        sCatelogMap_Widget.put(".widget.function", "需求功能 View");
-        sCatelogMap_Widget.put(".widget.ui", "UI View");
-        sCatelogMap_Widget.put(".widget.utils", "工具类目录");
+        sCatalogMap_Widget.put("dev", "根目录");
+        sCatalogMap_Widget.put(".widget", "自定义 View 根目录");
+        sCatalogMap_Widget.put(".widget.adjust", "自动调节高度 View");
+        sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
+        sCatalogMap_Widget.put(".widget.custom", "自定义 View");
+        sCatalogMap_Widget.put(".widget.function", "需求功能 View");
+        sCatalogMap_Widget.put(".widget.ui", "UI View");
+        sCatalogMap_Widget.put(".widget.utils", "工具类目录");
 
         // ===========
         // = DevBase =
         // ===========
 
-        sCatelogMap_Base.put("dev.base", "根目录");
-        sCatelogMap_Base.put(".able", "基类库接口相关");
-        sCatelogMap_Base.put(".activity", "核心 Base Activity 代码");
-        sCatelogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
-        sCatelogMap_Base.put(".expand.content", "Content Layout 基类");
-        sCatelogMap_Base.put(".expand.mvp", "MVP 架构基类");
-        sCatelogMap_Base.put(".expand.viewbinding", "ViewBinding 基类");
-        sCatelogMap_Base.put(".fragment", "核心 Base Fragment 代码");
-        sCatelogMap_Base.put(".utils", "依赖工具包");
-        sCatelogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
+        sCatalogMap_Base.put("dev.base", "根目录");
+        sCatalogMap_Base.put(".able", "基类库接口相关");
+        sCatalogMap_Base.put(".activity", "核心 Base Activity 代码");
+        sCatalogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
+        sCatalogMap_Base.put(".expand.content", "Content Layout 基类");
+        sCatalogMap_Base.put(".expand.mvp", "MVP 架构基类");
+        sCatalogMap_Base.put(".expand.viewbinding", "ViewBinding 基类");
+        sCatalogMap_Base.put(".fragment", "核心 Base Fragment 代码");
+        sCatalogMap_Base.put(".utils", "依赖工具包");
+        sCatalogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
     }
 
     /**

@@ -23,10 +23,10 @@ final class DevJava_READMEMain {
      * @param buffer      拼接 Buffer
      * @param path        文件路径
      * @param packageName 包名
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
-                                         final HashMap<String, String> mapCatelog) {
+                                         final HashMap<String, String> mapCatalog) {
         buffer.append("\n");
         buffer.append("## Gradle");
 
@@ -42,7 +42,7 @@ final class DevJava_READMEMain {
 
         buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
+        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
 
         buffer.append("\n\n");
         buffer.append("## 事项");
@@ -80,7 +80,7 @@ final class DevJava_READMEMain {
 
         buffer.append("\n\n");
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatelog));
+        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
 
         buffer.append("\n\n");
     }
@@ -113,7 +113,7 @@ final class DevJava_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap);
 
         // 生成 dev.utils.common 包下 dev.utils
         String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,

@@ -76,7 +76,7 @@ public final class PackageCatalog {
         // 文件夹对象
         private File          cataFile;
         // 文件夹内的子文件列表
-        private List<Catalog> listCataLogs;
+        private List<Catalog> listCatalogs;
 
         /**
          * 构造函数
@@ -85,7 +85,7 @@ public final class PackageCatalog {
          */
         public Catalog(File file, List<Catalog> lists) {
             this.cataFile = file;
-            this.listCataLogs = lists;
+            this.listCatalogs = lists;
         }
 
         /**
@@ -100,8 +100,8 @@ public final class PackageCatalog {
          * 获取文件夹内的子文件列表
          * @return {@link List}
          */
-        public List<Catalog> getListCataLogs() {
-            return listCataLogs;
+        public List<Catalog> getListCatalogs() {
+            return listCatalogs;
         }
     }
 
@@ -154,7 +154,7 @@ public final class PackageCatalog {
                                            final String name, final int lineNumber, final String linkTag) {
         StringBuffer buffer = new StringBuffer();
         // 添加目录
-        buffer.append(createCatelog(isAnchor, packageName, name, lineNumber, linkTag));
+        buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
         // 获取长度
         int length = buffer.toString().length();
         // 判断长度 => 大于最大长度, 则重新设置
@@ -172,7 +172,7 @@ public final class PackageCatalog {
      * @param linkTag     锚链接 TAG 标记
      * @return 目录信息
      */
-    private static String createCatelog(final boolean isAnchor, final String packageName,
+    private static String createCatalog(final boolean isAnchor, final String packageName,
                                         final String name, final int lineNumber, final String linkTag) {
         StringBuffer buffer = new StringBuffer();
         if (isAnchor) {
@@ -198,19 +198,19 @@ public final class PackageCatalog {
      * @param name        目录名
      * @param lineNumber  行数
      * @param linkTag     锚链接 TAG 标记
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      * @return 目录行信息
      */
-    private static String createCataLogLine(final boolean isAnchor, final String packageName,
+    private static String createCatalogLine(final boolean isAnchor, final String packageName,
                                             final String name, final int lineNumber, final String linkTag,
-                                            final HashMap<String, String> mapCatelog) {
+                                            final HashMap<String, String> mapCatalog) {
         StringBuffer buffer = new StringBuffer();
         // 添加目录
-        buffer.append(createCatelog(isAnchor, packageName, name, lineNumber, linkTag));
+        buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
         // 设置间隔长度
         buffer.append(StringUtils.appendSpace(sMaxLength - buffer.toString().length()));
         // 添加 间隔 |
-        buffer.append("| " + mapCatelog.get(linkTag));
+        buffer.append("| " + mapCatalog.get(linkTag));
         // 返回处理后的目录行
         return buffer.toString();
     }
@@ -223,12 +223,12 @@ public final class PackageCatalog {
      * @param packageName 包名
      * @param lineNumber  行数
      * @param linkTag     锚链接 TAG 标记
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      */
-    private static void forCatelog(final StringBuffer buffer, final List<Catalog> lists,
+    private static void forCatalog(final StringBuffer buffer, final List<Catalog> lists,
                                    final boolean isAnchor, final String packageName,
                                    final int lineNumber, final String linkTag,
-                                   final HashMap<String, String> mapCatelog) {
+                                   final HashMap<String, String> mapCatalog) {
         // 循环遍历
         for (int i = 0, len = lists.size(); i < len; i++) {
             // 获取目录
@@ -238,12 +238,12 @@ public final class PackageCatalog {
             // 进行换行
             buffer.append("\n");
             // 添加目录行
-            buffer.append(createCataLogLine(isAnchor, packageName, name, lineNumber,
-                    linkTag + "." + name, mapCatelog));
+            buffer.append(createCatalogLine(isAnchor, packageName, name, lineNumber,
+                    linkTag + "." + name, mapCatalog));
             // 判断是否存在子文件夹
-            if (catalog.getListCataLogs().size() != 0) {
-                forCatelog(buffer, catalog.getListCataLogs(), isAnchor, packageName,
-                        lineNumber + 1, linkTag + "." + name, mapCatelog);
+            if (catalog.getListCatalogs().size() != 0) {
+                forCatalog(buffer, catalog.getListCatalogs(), isAnchor, packageName,
+                        lineNumber + 1, linkTag + "." + name, mapCatalog);
             }
         }
     }
@@ -257,11 +257,11 @@ public final class PackageCatalog {
      * @param isAnchor    是否增加锚链接
      * @param path        文件路径
      * @param packageName 包名
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      * @return 目录信息
      */
     public static String apiCatalog(final boolean isAnchor, final String path, final String packageName,
-                                    final HashMap<String, String> mapCatelog) {
+                                    final HashMap<String, String> mapCatalog) {
 
         // 拼接信息
         StringBuffer buffer = new StringBuffer();
@@ -282,9 +282,9 @@ public final class PackageCatalog {
             buffer.append("```\n");
         }
         // 增加根目录
-        buffer.append(head + StringUtils.appendSpace(sMaxLength - head.length()) + "| " + mapCatelog.get(packageName));
+        buffer.append(head + StringUtils.appendSpace(sMaxLength - head.length()) + "| " + mapCatalog.get(packageName));
         // 递归循环目录
-        forCatelog(buffer, lists, isAnchor, packageName, 1, "", mapCatelog);
+        forCatalog(buffer, lists, isAnchor, packageName, 1, "", mapCatalog);
         // 判断是否增加锚链接处理
         if (isAnchor) {
             buffer.append("\n\n");

@@ -21,11 +21,11 @@ final class DevBaseMVVM_READMEMain {
      * @param buffer      拼接 Buffer
      * @param path        文件路径
      * @param packageName 包名
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      * @param githubUrl   项目 github 链接
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
-                                         final HashMap<String, String> mapCatelog, final String githubUrl) {
+                                         final HashMap<String, String> mapCatalog, final String githubUrl) {
         buffer.append("\n");
         buffer.append("## Gradle");
 
@@ -41,7 +41,7 @@ final class DevBaseMVVM_READMEMain {
 
         buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
+        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
 
         buffer.append("\n\n");
         buffer.append("## 项目类结构 - [包目录](" + githubUrl + ")");
@@ -137,7 +137,7 @@ final class DevBaseMVVM_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Base, githubUrl);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Base, githubUrl);
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(new File(ApiConfig.DEV_BASE_MVVM_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),

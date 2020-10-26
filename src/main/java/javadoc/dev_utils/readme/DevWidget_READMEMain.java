@@ -23,10 +23,10 @@ final class DevWidget_READMEMain {
      * @param buffer      拼接 Buffer
      * @param path        文件路径
      * @param packageName 包名
-     * @param mapCatelog  对应目录的注释
+     * @param mapCatalog  对应目录的注释
      */
     private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
-                                         final HashMap<String, String> mapCatelog) {
+                                         final HashMap<String, String> mapCatalog) {
         buffer.append("\n");
         buffer.append("## Gradle");
 
@@ -44,7 +44,7 @@ final class DevWidget_READMEMain {
 
         buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatelog));
+        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
 
         buffer.append("\n\n");
         buffer.append("## README");
@@ -64,7 +64,7 @@ final class DevWidget_READMEMain {
 
         buffer.append("\n\n");
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatelog));
+        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
 
         buffer.append("\n\n");
     }
@@ -97,7 +97,7 @@ final class DevWidget_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatelogMap_Widget);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Widget);
 
         // 生成 dev 包下
         String widgetAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,

@@ -95,7 +95,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
-        ignoreUnPublicMap.put("CatalogGenerate", Utils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatelog","createCataLogLine","forCatelog"));
+        ignoreUnPublicMap.put("CatalogGenerate", Utils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
         ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", Utils.asListArgs("callback"));
         ignoreUnPublicMap.put("CatalogMain", Utils.asListArgs("print"));
         ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asListArgs("OnEnd"));
@@ -123,7 +123,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnVoidMap() {
         Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
-        ignoreReturnVoidMap.put("CatalogGenerate", Utils.asListArgs("calculateMaxLength - void","forCatelog - void"));
+        ignoreReturnVoidMap.put("CatalogGenerate", Utils.asListArgs("calculateMaxLength - void","forCatalog - void"));
         ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", Utils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("CatalogMain", Utils.asListArgs("print - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", Utils.asListArgs("analysisColorsXml - void"));
