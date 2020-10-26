@@ -74,7 +74,7 @@ public final class PackageCatalog {
     private static class Catalog {
 
         // 文件夹对象
-        private File          cataFile;
+        private File          file;
         // 文件夹内的子文件列表
         private List<Catalog> listCatalogs;
 
@@ -84,7 +84,7 @@ public final class PackageCatalog {
          * @param lists 文件夹内的子文件列表
          */
         public Catalog(File file, List<Catalog> lists) {
-            this.cataFile = file;
+            this.file = file;
             this.listCatalogs = lists;
         }
 
@@ -92,8 +92,8 @@ public final class PackageCatalog {
          * 获取文件夹对象
          * @return {@link File}
          */
-        public File getCataFile() {
-            return cataFile;
+        public File getFile() {
+            return file;
         }
 
         /**
@@ -234,7 +234,7 @@ public final class PackageCatalog {
             // 获取目录
             Catalog catalog = lists.get(i);
             // 获取目录名
-            String name = catalog.getCataFile().getName();
+            String name = catalog.getFile().getName();
             // 进行换行
             buffer.append("\n");
             // 添加目录行

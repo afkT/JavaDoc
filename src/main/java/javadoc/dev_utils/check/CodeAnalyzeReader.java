@@ -490,17 +490,17 @@ public final class CodeAnalyzeReader {
             // 裁剪字符串 => @param xx 注释 @param xx 注释
             documentation = documentation.substring(paramStart, documentation.length());
             // 裁剪拼接后的数据
-            String subparam = subparam(documentation).trim();
+            String subParam = subParam(documentation).trim();
             // 判断是否存在
             String paramBuffer = buffer.toString().trim();
             // 注释拼接参数长度
-            int subparamLen = subparam.length();
+            int subParamLen = subParam.length();
             // 拼接参数参数
             int paramBufferLen = paramBuffer.length();
             // 防止各自缺失、增多 - 自己计算的参数拼接 等于 通过注释拆分拼接的参数长度, 才符合条件
-            if (subparamLen == paramBufferLen && paramBuffer.equals(subparam)) {
+            if (subParamLen == paramBufferLen && paramBuffer.equals(subParam)) {
                 // 数据一样, 才检测是否注释
-                if (!subparamToCheckAnnotate(documentation)) {
+                if (!subParamToCheckAnnotate(documentation)) {
                     // @param 不存在注释则保存
                     Utils.putToList(mapConfig.sMethodUnAnnotateParamMap, className, methodName);
                 }
@@ -519,7 +519,7 @@ public final class CodeAnalyzeReader {
      * @param documentation 注释内容
      * @return 返回裁剪字符串
      */
-    private static String subparam(final String documentation) {
+    private static String subParam(final String documentation) {
         StringBuilder builder = new StringBuilder();
         // 进行拆分处理
         String[] splits = documentation.split(" ");
@@ -545,7 +545,7 @@ public final class CodeAnalyzeReader {
      * @param documentation 注释内容
      * @return {@code true} yes, {@code false} no
      */
-    private static boolean subparamToCheckAnnotate(String documentation) {
+    private static boolean subParamToCheckAnnotate(String documentation) {
         StringBuilder builder = new StringBuilder();
         // 判断是否存在 返回值
         int index = documentation.indexOf("@return ");
