@@ -119,7 +119,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IAdapterNotify", Utils.asListArgs("adapterNotifyDataSetChanged"));
         ignoreUnPublicMap.put("IBaseMultiSelect", Utils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll"));
         ignoreUnPublicMap.put("IHttpEngine", Utils.asListArgs("newCall","cancelAll","cancelCall","cancelUrl","cancelTag"));
-        ignoreUnPublicMap.put("IHttpEngine.Call", Utils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAync"));
+        ignoreUnPublicMap.put("IHttpEngine.Call", Utils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAsync"));
         ignoreUnPublicMap.put("IImageEngine", Utils.asListArgs("displayImage","displayImage","displayImage","displayImage","loadImage","loadImage","clearDiskCache","clearMemoryCache"));
         ignoreUnPublicMap.put("IImageEngine.ImageCallBack", Utils.asListArgs("getTranscodeType","onResponse","onFailure"));
         ignoreUnPublicMap.put("IJSONEngine", Utils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
