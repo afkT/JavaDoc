@@ -1,5 +1,6 @@
 package javadoc.dev_utils.check.dev;
 
+import dev.utils.common.MapUtils;
 import javadoc.Utils;
 
 import java.io.File;
@@ -94,7 +95,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnAnnotateMap, checkConfig.getIgnoreAnnotateMap());
+        MapUtils.removeToMap(sMethodUnAnnotateMap, checkConfig.getIgnoreAnnotateMap());
         // 转换 JSON 数据 - 缺少注释的方法
         String unAnnotateJSON = Utils.toJsonFormat(sMethodUnAnnotateMap, true);
         // 转换 Map 字符串
@@ -103,7 +104,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sParamUnFinalMap, checkConfig.getIgnoreFinalMap());
+        MapUtils.removeToMap(sParamUnFinalMap, checkConfig.getIgnoreFinalMap());
         // 转换 JSON 数据 - 缺少 final 修饰的方法(参数)
         String unFinalJSON = Utils.toJsonFormat(sParamUnFinalMap, true);
         // 转换 Map 字符串
@@ -112,7 +113,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnStaticMap, checkConfig.getIgnoreStaticMap());
+        MapUtils.removeToMap(sMethodUnStaticMap, checkConfig.getIgnoreStaticMap());
         // 转换 JSON 数据 - 缺少 static 修饰的方法
         String unStaticJSON = Utils.toJsonFormat(sMethodUnStaticMap, true);
         // 转换 Map 字符串
@@ -121,7 +122,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodLackParamMap, checkConfig.getIgnoreParamMap());
+        MapUtils.removeToMap(sMethodLackParamMap, checkConfig.getIgnoreParamMap());
         // 转换 JSON 数据 - 缺少 @param 的方法
         String lackParamJSON = Utils.toJsonFormat(sMethodLackParamMap, true);
         // 转换 Map 字符串
@@ -130,7 +131,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodLackReturnMap, checkConfig.getIgnoreReturnMap());
+        MapUtils.removeToMap(sMethodLackReturnMap, checkConfig.getIgnoreReturnMap());
         // 转换 JSON 数据 - 缺少 @return 的方法
         String lackReturnJSON = Utils.toJsonFormat(sMethodLackReturnMap, true);
         // 转换 Map 字符串
@@ -149,7 +150,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodUnPublicMap, checkConfig.getIgnoreUnPublicMap());
+        MapUtils.removeToMap(sMethodUnPublicMap, checkConfig.getIgnoreUnPublicMap());
         // 转换 JSON 数据 - 非 public 方法记录
         String methodUnPublicJSON = Utils.toJsonFormat(sMethodUnPublicMap, true);
         // 转换 Map 字符串
@@ -158,7 +159,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sNoModifierVariableMap, checkConfig.getIgnoreModifierVariableMap());
+        MapUtils.removeToMap(sNoModifierVariableMap, checkConfig.getIgnoreModifierVariableMap());
         // 转换 JSON 数据 - 无修饰符变量 记录
         String noModifierVariableJSON = Utils.toJsonFormat(sNoModifierVariableMap, true);
         // 转换 Map 字符串
@@ -167,7 +168,7 @@ public final class CheckMain {
         // =
 
         // 忽略处理
-        Utils.removeToMap(sMethodReturnVoidMap, checkConfig.getIgnoreReturnVoidMap());
+        MapUtils.removeToMap(sMethodReturnVoidMap, checkConfig.getIgnoreReturnVoidMap());
         // 转换 JSON 数据 - 方法返回值 void 记录
         String methodReturnVoidJSON = Utils.toJsonFormat(sMethodReturnVoidMap, true);
         // 转换 Map 字符串

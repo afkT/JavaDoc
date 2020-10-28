@@ -1,6 +1,6 @@
 package javadoc.dev_utils.check.%s;
 
-import javadoc.Utils;
+import dev.utils.common.ArrayUtils;
 import javadoc.dev_utils.check.dev.ICheckConfig;
 
 import java.util.HashMap;

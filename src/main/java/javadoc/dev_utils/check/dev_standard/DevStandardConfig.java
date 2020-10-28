@@ -1,6 +1,6 @@
 package javadoc.dev_utils.check.dev_standard;
 
-import javadoc.Utils;
+import dev.utils.common.ArrayUtils;
 import javadoc.dev_utils.check.dev.ICheckConfig;
 
 import java.util.HashMap;
@@ -20,11 +20,11 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
-        ignoreAnnotateMap.put("CatalogMain", Utils.asListArgs("main"));
-        ignoreAnnotateMap.put("ColorSortMain", Utils.asListArgs("main"));
-        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
-        ignoreAnnotateMap.put("ConfigMain", Utils.asListArgs("main"));
-        ignoreAnnotateMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
+        ignoreAnnotateMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
     }
@@ -36,12 +36,12 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
-        ignoreFinalMap.put("CatalogMain", Utils.asListArgs("main"));
-        ignoreFinalMap.put("ColorSortMain", Utils.asListArgs("main"));
-        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startElement","endElement","characters"));
-        ignoreFinalMap.put("ConfigMain", Utils.asListArgs("main"));
-        ignoreFinalMap.put("Pangu", Utils.asListArgs("spacingText","spacingFile"));
-        ignoreFinalMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
+        ignoreFinalMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
+        ignoreFinalMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
 
         return ignoreFinalMap;
     }
@@ -53,10 +53,10 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
-        ignoreStaticMap.put("ColorSortMain.SAXXml", Utils.asListArgs("analysisColorsXml"));
-        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
-        ignoreStaticMap.put("DepsJsonBean", Utils.asListArgs("map","getDependencies","getAllDependencies","getAllDependencies"));
-        ignoreStaticMap.put("Pangu", Utils.asListArgs("spacingText","spacingFile"));
+        ignoreStaticMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml"));
+        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreStaticMap.put("DepsJsonBean", ArrayUtils.asListArgs("map","getDependencies","getAllDependencies","getAllDependencies"));
+        ignoreStaticMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
 
         return ignoreStaticMap;
     }
@@ -68,11 +68,11 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
-        ignoreParamMap.put("CatalogMain", Utils.asListArgs("main"));
-        ignoreParamMap.put("ColorSortMain", Utils.asListArgs("main"));
-        ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", Utils.asListArgs("startElement","endElement","characters"));
-        ignoreParamMap.put("ConfigMain", Utils.asListArgs("main"));
-        ignoreParamMap.put("PanguAnalyzeMain", Utils.asListArgs("main"));
+        ignoreParamMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
     }
@@ -95,12 +95,12 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
-        ignoreUnPublicMap.put("CatalogGenerate", Utils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
-        ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", Utils.asListArgs("callback"));
-        ignoreUnPublicMap.put("CatalogMain", Utils.asListArgs("print"));
-        ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asListArgs("OnEnd"));
-        ignoreUnPublicMap.put("PanguAnalyzeMain", Utils.asListArgs("getFileCatalogLists","forReader","readFile","createGson","toJsonFormat"));
-        ignoreUnPublicMap.put("PanguAnalyzeMain.Filter", Utils.asListArgs("filter"));
+        ignoreUnPublicMap.put("CatalogGenerate", ArrayUtils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
+        ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback"));
+        ignoreUnPublicMap.put("CatalogMain", ArrayUtils.asListArgs("print"));
+        ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("OnEnd"));
+        ignoreUnPublicMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("getFileCatalogLists","forReader","readFile","createGson","toJsonFormat"));
+        ignoreUnPublicMap.put("PanguAnalyzeMain.Filter", ArrayUtils.asListArgs("filter"));
 
         return ignoreUnPublicMap;
     }
@@ -123,13 +123,13 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnVoidMap() {
         Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
-        ignoreReturnVoidMap.put("CatalogGenerate", Utils.asListArgs("calculateMaxLength - void","forCatalog - void"));
-        ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", Utils.asListArgs("callback - void"));
-        ignoreReturnVoidMap.put("CatalogMain", Utils.asListArgs("print - void"));
-        ignoreReturnVoidMap.put("ColorSortMain.SAXXml", Utils.asListArgs("analysisColorsXml - void"));
-        ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", Utils.asListArgs("OnEnd - void"));
-        ignoreReturnVoidMap.put("Pangu", Utils.asListArgs("spacingFile - void"));
-        ignoreReturnVoidMap.put("PanguAnalyzeMain", Utils.asListArgs("forReader - void","readFile - void"));
+        ignoreReturnVoidMap.put("CatalogGenerate", ArrayUtils.asListArgs("calculateMaxLength - void","forCatalog - void"));
+        ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback - void"));
+        ignoreReturnVoidMap.put("CatalogMain", ArrayUtils.asListArgs("print - void"));
+        ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
+        ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("OnEnd - void"));
+        ignoreReturnVoidMap.put("Pangu", ArrayUtils.asListArgs("spacingFile - void"));
+        ignoreReturnVoidMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("forReader - void","readFile - void"));
 
         return ignoreReturnVoidMap;
     }

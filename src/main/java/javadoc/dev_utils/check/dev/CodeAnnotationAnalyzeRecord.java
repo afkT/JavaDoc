@@ -2,6 +2,7 @@ package javadoc.dev_utils.check.dev;
 
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
+import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import other.Pangu;
@@ -113,7 +114,7 @@ public final class CodeAnnotationAnalyzeRecord {
                 repeat = false; // 不需要判断重复
             } else {
                 if (code != null && repeat) {
-                    Utils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
+                    MapUtils.putToList(sAnnotationRepeatLineMap, file.getName(), (i + 1) + "");
                 }
                 // 表示需要检测重复
                 repeat = true;
