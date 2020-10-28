@@ -1,8 +1,6 @@
 package javadoc.dev_utils.check.dev;
 
 import javadoc.Utils;
-import javadoc.dev_utils.check.CodeAnalyzeReader;
-import javadoc.dev_utils.check.CodeAnnotationAnalyzeRecord;
 
 import java.io.File;
 import java.util.ArrayList;

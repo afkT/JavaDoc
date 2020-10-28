@@ -1,4 +1,4 @@
-package javadoc.dev_utils.check;
+package javadoc.dev_utils.check.dev;
 
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;

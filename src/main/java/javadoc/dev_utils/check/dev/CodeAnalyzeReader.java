@@ -1,4 +1,4 @@
-package javadoc.dev_utils.check;
+package javadoc.dev_utils.check.dev;
 
 import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
