@@ -33,6 +33,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("GlideTransformUtils.RotateTransformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreAnnotateMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
+        ignoreAnnotateMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreAnnotateMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("NotificationService", ArrayUtils.asListArgs("onCreate","onDestroy","onStartCommand"));
         ignoreAnnotateMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
@@ -65,6 +66,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreFinalMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreFinalMap.put("LubanUtils", ArrayUtils.asListArgs("compress","compress","compress","compress","compress","compress","compress"));
+        ignoreFinalMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("containsKey","removeValueForKey","removeValuesForKeys","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreFinalMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("NotificationService", ArrayUtils.asListArgs("onNotificationPosted","onNotificationRemoved","onStartCommand"));
         ignoreFinalMap.put("OkGoDemo", ArrayUtils.asListArgs("getUserInfo","getUserList","uploadImage","uploadImages"));
@@ -97,6 +99,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("GlideTransformUtils.RotateTransformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey"));
         ignoreStaticMap.put("GlideUtils.GlideLoader", ArrayUtils.asListArgs("preload","preload","displayImage","displayImage","displayImage","displayImage","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToFile","displayImageToFile","displayImageToFile","displayImageToFile","loadImageBitmap","loadImageBitmap","loadImageDrawable","loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif","cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
         ignoreStaticMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
+        ignoreStaticMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("getMMKV","mmapID","isMMKVEmpty","isMMKVNotEmpty","containsKey","removeValueForKey","removeValuesForKeys","sync","async","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreStaticMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("NotificationService", ArrayUtils.asListArgs("onNotificationPosted","onNotificationRemoved","onCreate","onDestroy","onStartCommand","cancelNotification"));
         ignoreStaticMap.put("OkGoResponse", ArrayUtils.asListArgs("getDataString"));
@@ -133,6 +136,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreParamMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
         ignoreParamMap.put("LubanUtils", ArrayUtils.asListArgs("compress","compress","compress","compress","compress","compress","compress"));
+        ignoreParamMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreParamMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("NotificationService", ArrayUtils.asListArgs("onStartCommand"));
         ignoreParamMap.put("OkGoCallback", ArrayUtils.asListArgs("onStart","uploadProgress","downloadProgress","onCacheSuccess","onError","onSuccess","convertResponse"));
@@ -226,6 +230,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ImageLoaderUtils", ArrayUtils.asListArgs("init - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","clearDiskCache - void","clearMemoryCache - void","handleSlowNetwork - void","denyNetworkDownloads - void","cancelDisplayTask - void","setDefaultLoadingListener - void","destroy - void","pause - void","resume - void","stop - void"));
         ignoreReturnVoidMap.put("LubanUtils", ArrayUtils.asListArgs("setConfig - void"));
         ignoreReturnVoidMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
+        ignoreReturnVoidMap.put("MMKVUtils", ArrayUtils.asListArgs("init - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver", ArrayUtils.asListArgs("registerReceiver - void","unregisterReceiver - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver.NetwordStateListener", ArrayUtils.asListArgs("onNetworkState - void"));
         ignoreReturnVoidMap.put("NotificationService", ArrayUtils.asListArgs("onNotificationPosted - void","onNotificationRemoved - void","startService - void","stopService - void","startNotificationListenSettings - void","cancelNotification - void","setNotificationListener - void"));
