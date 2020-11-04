@@ -58,7 +58,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.2.1";
+    public static final String DEV_JAVA_VERSION            = "1.2.2";
 
     // =============
     // = DevAssist =
@@ -407,8 +407,8 @@ public final class ApiConfig {
         // = Common =
         // ==========
 
-        sFilterMethodMap.put("FileBreadthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
-        sFilterMethodMap.put("FileDepthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "OnEndListener"});
+        sFilterMethodMap.put("FileBreadthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
+        sFilterMethodMap.put("FileDepthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
         sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace", "getSubFiles"});
         sFilterMethodMap.put("FileRecordUtils.java", new String[]{"callback"});
         sFilterMethodMap.put("HttpURLConnectionUtils.java", new String[]{"onResponse", "onFail"});

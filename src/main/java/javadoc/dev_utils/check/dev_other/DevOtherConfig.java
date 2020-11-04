@@ -181,7 +181,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreUnPublicMap.put("LubanUtils", ArrayUtils.asListArgs("getContext"));
         ignoreUnPublicMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
-        ignoreUnPublicMap.put("NetWorkReceiver.NetwordStateListener", ArrayUtils.asListArgs("onNetworkState"));
+        ignoreUnPublicMap.put("NetWorkReceiver.NetWorkStateListener", ArrayUtils.asListArgs("onNetworkState"));
         ignoreUnPublicMap.put("NotificationService.NotificationListener", ArrayUtils.asListArgs("onServiceCreated","onServiceDestroy","onStartCommand","onNotificationPosted","onNotificationRemoved"));
         ignoreUnPublicMap.put("OkGoCallback", ArrayUtils.asListArgs("_response","isSuccess"));
         ignoreUnPublicMap.put("OkGoDemo", ArrayUtils.asListArgs("demo"));
@@ -232,7 +232,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
         ignoreReturnVoidMap.put("MMKVUtils", ArrayUtils.asListArgs("init - void"));
         ignoreReturnVoidMap.put("NetWorkReceiver", ArrayUtils.asListArgs("registerReceiver - void","unregisterReceiver - void"));
-        ignoreReturnVoidMap.put("NetWorkReceiver.NetwordStateListener", ArrayUtils.asListArgs("onNetworkState - void"));
+        ignoreReturnVoidMap.put("NetWorkReceiver.NetWorkStateListener", ArrayUtils.asListArgs("onNetworkState - void"));
         ignoreReturnVoidMap.put("NotificationService", ArrayUtils.asListArgs("onNotificationPosted - void","onNotificationRemoved - void","startService - void","stopService - void","startNotificationListenSettings - void","cancelNotification - void","setNotificationListener - void"));
         ignoreReturnVoidMap.put("NotificationService.NotificationListener", ArrayUtils.asListArgs("onServiceCreated - void","onServiceDestroy - void","onNotificationPosted - void","onNotificationRemoved - void"));
         ignoreReturnVoidMap.put("OkGoCallback", ArrayUtils.asListArgs("onStart - void","onFinish - void","uploadProgress - void","downloadProgress - void","onCacheSuccess - void","onError - void","onSuccess - void","onSuccessResponse - void","onErrorResponse - void","_response - void"));

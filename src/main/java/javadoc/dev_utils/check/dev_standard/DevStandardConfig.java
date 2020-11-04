@@ -98,7 +98,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CatalogGenerate", ArrayUtils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
         ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("CatalogMain", ArrayUtils.asListArgs("print"));
-        ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("OnEnd"));
+        ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd"));
         ignoreUnPublicMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("getFileCatalogLists","forReader","readFile","createGson","toJsonFormat"));
         ignoreUnPublicMap.put("PanguAnalyzeMain.Filter", ArrayUtils.asListArgs("filter"));
 
@@ -127,7 +127,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("CatalogMain", ArrayUtils.asListArgs("print - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
-        ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("OnEnd - void"));
+        ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd - void"));
         ignoreReturnVoidMap.put("Pangu", ArrayUtils.asListArgs("spacingFile - void"));
         ignoreReturnVoidMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("forReader - void","readFile - void"));
 
