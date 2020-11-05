@@ -19,7 +19,7 @@ dependencies {
     // Gson 解析
     compile 'com.google.code.gson:gson:2.8.2'
     // DevJava
-    compile 'com.afkt:DevJava:1.2.1'
+    compile 'com.afkt:DevJava:1.2.2'
 
     // tools.jar 的依赖
     compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)

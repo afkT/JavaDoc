@@ -43,7 +43,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.0.9";
+    public static final String DEV_APP_VERSION            = "2.1.0";
 
     // ===========
     // = DevJava =

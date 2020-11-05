@@ -59,7 +59,7 @@ public final class CodeEndNewLineRemove {
                     }
 
                     @Override
-                    public void OnEndListener(List<FileDepthFirstSearchUtils.FileItem> lists, long startTime, long endTime) {
+                    public void onEndListener(List<FileDepthFirstSearchUtils.FileItem> lists, long startTime, long endTime) {
                         for (String path : sSets) {
                             System.out.println(path);
                         }
