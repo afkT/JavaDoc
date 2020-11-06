@@ -23,7 +23,7 @@ public class DevBaseMain {
         // 代码检测分析配置接口
         ICheckConfig iCheckConfig = new DevBaseConfig();
         // 是否覆盖文件内容
-        boolean coverText = ConvertUtils.toBoolean(ArrayUtils.get(args, 0), true);
+        boolean coverText = ConvertUtils.toBoolean(ArrayUtils.get(args, 0), CheckInfo.COVER_TEXT);
         // 是否使用 List<File>
         boolean isLists = false;
         // 检测指定文件集合
