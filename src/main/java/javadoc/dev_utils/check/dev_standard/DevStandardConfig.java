@@ -25,6 +25,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("SortMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
     }
@@ -42,6 +43,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
         ignoreFinalMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("SortMain", ArrayUtils.asListArgs("main"));
 
         return ignoreFinalMap;
     }
@@ -73,6 +75,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startElement","endElement","characters"));
         ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("SortMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
     }
