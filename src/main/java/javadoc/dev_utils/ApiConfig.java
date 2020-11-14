@@ -17,7 +17,7 @@ public final class ApiConfig {
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
     // 本地路径
-    public static final String LOCAL_PATH     = "F:/Project/Android/Utils";
+    public static final String LOCAL_PATH     = "F:/Project/Android";
     // 项目路径
     public static final String PROJECT_PATH   = LOCAL_PATH + File.separator + PROJECT_NAME;
 

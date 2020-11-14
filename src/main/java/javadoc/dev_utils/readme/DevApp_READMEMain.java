@@ -131,6 +131,9 @@ final class DevApp_READMEMain {
         buffer.append("- [Dev 工具类链式调用 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/DevHelper.java)");
 
         buffer.append("\n\n");
+        buffer.append("- [Android 版本适配 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/VersionHelper.java)");
+
+        buffer.append("\n\n");
         buffer.append("## API");
 
         buffer.append("\n\n");
