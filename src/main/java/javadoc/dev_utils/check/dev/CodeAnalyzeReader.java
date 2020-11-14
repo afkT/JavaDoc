@@ -466,7 +466,7 @@ public final class CodeAnalyzeReader {
 
         StringBuffer buffer = new StringBuffer();
         // 合并参数
-        String[] arrays = ArrayUtils.arraycopy(paramNames, genericityTypes);
+        String[] arrays = ArrayUtils.arrayCopy(paramNames, genericityTypes);
         if (arrays != null) {
             // 循环拼接
             for (String param : arrays) {

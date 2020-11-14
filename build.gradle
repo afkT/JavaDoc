@@ -17,9 +17,9 @@ dependencies {
     // 加载 libs 文件夹全部 jar
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Gson 解析
-    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.code.gson:gson:2.8.6'
     // DevJava
-    compile 'com.afkt:DevJava:1.2.2'
+    compile 'com.afkt:DevJava:1.2.3'
 
     // tools.jar 的依赖
     compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)
