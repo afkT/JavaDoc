@@ -32,7 +32,7 @@ final class DevBaseMVVM_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevBase:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
+        buffer.append("implementation 'com.afkt:DevBaseMVVM:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -137,7 +137,7 @@ final class DevBaseMVVM_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Base, githubUrl);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_BaseMVVM, githubUrl);
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(new File(ApiConfig.DEV_BASE_MVVM_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),

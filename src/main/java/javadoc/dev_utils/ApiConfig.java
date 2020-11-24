@@ -116,7 +116,7 @@ public final class ApiConfig {
     // DevBase GitHub 项目文件路径
     public static final String DEV_BASE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
     // DevBase 版本号
-    public static final String DEV_BASE_VERSION            = "1.0.1";
+    public static final String DEV_BASE_VERSION            = "1.0.2";
 
     // ===============
     // = DevBaseMVVM =
@@ -186,12 +186,19 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
 
-    // ============
-    // = DevOther =
-    // ============
+    // ===========
+    // = DevBase =
+    // ===========
 
     // 包名目录注释
     public static final HashMap<String, String> sCatalogMap_Base = new HashMap<>();
+
+    // ===============
+    // = DevBaseMVVM =
+    // ===============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_BaseMVVM = new HashMap<>();
 
     // =============
     // = DevWidget =
@@ -332,6 +339,20 @@ public final class ApiConfig {
         sCatalogMap_Base.put(".fragment", "核心 Base Fragment 代码");
         sCatalogMap_Base.put(".utils", "依赖工具包");
         sCatalogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
+
+        // ===============
+        // = DevBaseMVVM =
+        // ===============
+
+        sCatalogMap_BaseMVVM.put("dev.base", "根目录");
+        sCatalogMap_BaseMVVM.put(".able", "基类库接口相关");
+        sCatalogMap_BaseMVVM.put(".expand", "基于 Base Activity、Fragment 扩展包");
+        sCatalogMap_BaseMVVM.put(".expand.content", "Content Layout 基类");
+        sCatalogMap_BaseMVVM.put(".expand.mvvm", "MVVM 架构基类");
+        sCatalogMap_BaseMVVM.put(".expand.viewdata", "ViewDataBinding 基类");
+        sCatalogMap_BaseMVVM.put(".expand.viewmodel", "ViewModel 基类");
+        sCatalogMap_BaseMVVM.put(".utils", "依赖工具包");
+        sCatalogMap_BaseMVVM.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
     }
 
     /**
