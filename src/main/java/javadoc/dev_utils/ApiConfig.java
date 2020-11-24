@@ -347,7 +347,7 @@ public final class ApiConfig {
         sCatalogMap_BaseMVVM.put("dev.base", "根目录");
         sCatalogMap_BaseMVVM.put(".able", "基类库接口相关");
         sCatalogMap_BaseMVVM.put(".expand", "基于 Base Activity、Fragment 扩展包");
-        sCatalogMap_BaseMVVM.put(".expand.content", "Content Layout 基类");
+        sCatalogMap_BaseMVVM.put(".expand.content", "Content Layout MVVM 基类");
         sCatalogMap_BaseMVVM.put(".expand.mvvm", "MVVM 架构基类");
         sCatalogMap_BaseMVVM.put(".expand.viewdata", "ViewDataBinding 基类");
         sCatalogMap_BaseMVVM.put(".expand.viewmodel", "ViewModel 基类");
