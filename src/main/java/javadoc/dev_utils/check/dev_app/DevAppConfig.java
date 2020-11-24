@@ -379,7 +379,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LogPrintUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","splitErrorMessage"));
         ignoreUnPublicMap.put("LogPrintUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("LoggerPrinter", ArrayUtils.asListArgs("isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
-        ignoreUnPublicMap.put("PermissionUtils", ArrayUtils.asListArgs("onRequestPermissionsResultCommon","isGranted","checkPermissions","requestCallback","getPermissionsStatus"));
+        ignoreUnPublicMap.put("PermissionUtils", ArrayUtils.asListArgs("isGranted","onRequestPermissionsResultCommon","checkPermissions","requestCallback","getPermissionsStatus"));
         ignoreUnPublicMap.put("PermissionUtils.PermissionActivity", ArrayUtils.asListArgs("start","onCreate"));
         ignoreUnPublicMap.put("PermissionUtils.PermissionCallBack", ArrayUtils.asListArgs("onGranted","onDenied"));
         ignoreUnPublicMap.put("PreferenceImpl", ArrayUtils.asListArgs("put","getValue"));
