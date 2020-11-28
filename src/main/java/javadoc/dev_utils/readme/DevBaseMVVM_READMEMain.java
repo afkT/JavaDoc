@@ -88,9 +88,18 @@ final class DevBaseMVVM_READMEMain {
         buffer.append("\n\n");
         buffer.append("* [AndroidX Jetpack Practice](https://github.com/hi-dhl/AndroidX-Jetpack-Practice)");
         buffer.append("\n\n");
+        buffer.append("* [AndroidLibs / 框架](https://github.com/GuoYangGit/AndroidLibs/tree/master/%E6%A1%86%E6%9E%B6)");
+        buffer.append("\n\n");
         buffer.append("* [深入浅出 MVVM 教程](https://www.jianshu.com/p/bcdb7c2a07eb)");
         buffer.append("\n\n");
-        buffer.append("* [AndroidLibs / 框架](https://github.com/GuoYangGit/AndroidLibs/tree/master/%E6%A1%86%E6%9E%B6)");
+        buffer.append("* [深入浅出 MVVM 教程 Repository ( 数据仓库 ) ](https://juejin.cn/post/6844903505635835911)");
+
+        buffer.append("\n\n");
+        buffer.append("## Other");
+        buffer.append("\n\n");
+        buffer.append("* [GitHub MVVMHabit](https://github.com/goldze/MVVMHabit)");
+        buffer.append("\n\n");
+        buffer.append("* [GitHub Jetpack-MVVM-Best-Practice](https://github.com/KunMinX/Jetpack-MVVM-Best-Practice)");
 
         buffer.append("\n\n");
     }
