@@ -61,7 +61,7 @@ public class APIGenerate {
             // 获取类名
             String className = file.getName();
             // 等于 null 才处理 => 不为 null, 则表示需要忽略
-            if (filterClassSet.contains(className)) {
+            if (!filterClassSet.contains(className)) {
                 // 原始路径
                 String root = apiPath;
                 // 获取 MarkDown 格式 dev.utils
