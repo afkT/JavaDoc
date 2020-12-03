@@ -117,7 +117,7 @@ final class DevJava_READMEMain {
 
         // 生成 dev.utils.common 包下 dev.utils
         String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
+                ApiConfig.sFilterClassSet, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(commonAPI);

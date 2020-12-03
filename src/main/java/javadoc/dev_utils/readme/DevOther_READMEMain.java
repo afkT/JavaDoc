@@ -83,7 +83,7 @@ final class DevOther_READMEMain {
 
         // 生成 dev 包下
         String otherAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap_Other, ApiConfig.sFilterMethodMap_Other, ApiConfig.sMethodNameRegex,
+                ApiConfig.sFilterClassSet_Other, ApiConfig.sFilterMethodMap_Other, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(otherAPI);

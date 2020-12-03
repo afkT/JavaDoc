@@ -95,7 +95,7 @@ final class DevAssist_READMEMain {
 
         // 生成 dev 包下
         String assistAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
+                ApiConfig.sFilterClassSet_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(assistAPI);

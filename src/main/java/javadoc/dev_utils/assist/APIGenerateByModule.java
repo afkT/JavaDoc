@@ -5,6 +5,7 @@ import javadoc.Utils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -90,7 +91,7 @@ final class APIGenerateByModule {
      * @param path                    文件路径
      * @param packageName             包名
      * @param githubUrl               Github 链接地址
-     * @param filterClassMap          忽略不保存的类 Map
+     * @param filterClassSet          忽略不保存的类 Set
      * @param filterMethodMap         忽略不保存方法 Map
      * @param methodNameRegex         方法名匹配正则表达式
      * @param methodNameMatchesMap    方法名匹配存储 Map
@@ -100,7 +101,7 @@ final class APIGenerateByModule {
      */
     private static void forSubnode(final StringBuffer buffer, final List<Subnode> lists,
                                    final String path, final String packageName, final String githubUrl,
-                                   final HashMap<String, String> filterClassMap,
+                                   final HashSet<String> filterClassSet,
                                    final HashMap<String, String[]> filterMethodMap,
                                    final String methodNameRegex,
                                    final HashMap<String, List<String>> methodNameMatchesMap,
@@ -124,7 +125,7 @@ final class APIGenerateByModule {
                 // 获取类名
                 String className = file.getName();
                 // 等于 null 才处理 => 不为 null, 则表示需要忽略
-                if (filterClassMap.get(className) == null) {
+                if (filterClassSet.contains(className)) {
                     // 原始路径
                     String root = (path + "/" + name) + "/";
                     // 拼接最后点击 url
@@ -150,7 +151,7 @@ final class APIGenerateByModule {
             if (subnode.getListSubs().size() != 0) {
                 forSubnode(buffer, subnode.getListSubs(),
                         path + "/" + name, packageName + "." + name, githubUrl + "/" + name,
-                        filterClassMap, filterMethodMap, methodNameRegex, methodNameMatchesMap,
+                        filterClassSet, filterMethodMap, methodNameRegex, methodNameMatchesMap,
                         methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
             }
         }
@@ -165,7 +166,7 @@ final class APIGenerateByModule {
      * @param path                    文件路径
      * @param packageName             包名
      * @param githubUrl               Github 链接地址
-     * @param filterClassMap          忽略不保存的类 Map
+     * @param filterClassSet          忽略不保存的类 Set
      * @param filterMethodMap         忽略不保存方法 Map
      * @param methodNameRegex         方法名匹配正则表达式
      * @param methodNameMatchesMap    方法名匹配存储 Map
@@ -175,7 +176,7 @@ final class APIGenerateByModule {
      * @return 指定模块 API 数据
      */
     public static String apiGenerate(final String path, final String packageName, final String githubUrl,
-                                     final HashMap<String, String> filterClassMap,
+                                     final HashSet<String> filterClassSet,
                                      final HashMap<String, String[]> filterMethodMap,
                                      final String methodNameRegex,
                                      final HashMap<String, List<String>> methodNameMatchesMap,
@@ -186,7 +187,7 @@ final class APIGenerateByModule {
         StringBuffer buffer = new StringBuffer();
         // 递归循环子节点
         forSubnode(buffer, getFolderLists(path), path, packageName, githubUrl,
-                filterClassMap, filterMethodMap, methodNameRegex, methodNameMatchesMap,
+                filterClassSet, filterMethodMap, methodNameRegex, methodNameMatchesMap,
                 methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
         // 返回数据
         return buffer.toString();

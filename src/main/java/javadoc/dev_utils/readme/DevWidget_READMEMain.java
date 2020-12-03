@@ -101,7 +101,7 @@ final class DevWidget_READMEMain {
 
         // 生成 dev 包下
         String widgetAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassMap_Widget, ApiConfig.sFilterMethodMap_Widget, ApiConfig.sMethodNameRegex,
+                ApiConfig.sFilterClassSet_Widget, ApiConfig.sFilterMethodMap_Widget, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(widgetAPI);

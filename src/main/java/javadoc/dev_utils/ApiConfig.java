@@ -2,6 +2,7 @@ package javadoc.dev_utils;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * detail: 配置信息
@@ -160,7 +161,7 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String>   sCatalogMap      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String>   sFilterClassMap  = new HashMap<>();
+    public static final HashSet<String>           sFilterClassSet  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap = new HashMap<>();
 
@@ -171,7 +172,7 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String>   sCatalogMap_Assist      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String>   sFilterClassMap_Assist  = new HashMap<>();
+    public static final HashSet<String>           sFilterClassSet_Assist  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
 
@@ -182,7 +183,7 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String>   sCatalogMap_Other      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String>   sFilterClassMap_Other  = new HashMap<>();
+    public static final HashSet<String>           sFilterClassSet_Other  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
 
@@ -207,7 +208,7 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String>   sCatalogMap_Widget      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashMap<String, String>   sFilterClassMap_Widget  = new HashMap<>();
+    public static final HashSet<String>           sFilterClassSet_Widget  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Widget = new HashMap<>();
 
@@ -368,23 +369,25 @@ public final class ApiConfig {
         // = APP =
         // =======
 
-        sFilterClassMap.put("IPrinter.java", "");
-        sFilterClassMap.put("IPreference.java", "");
-        sFilterClassMap.put("IToast.java", "");
-        sFilterClassMap.put("DefaultToastStyle.java", "");
-        sFilterClassMap.put("WifiVo.java", "");
+        sFilterClassSet.add("IPrinter.java");
+        sFilterClassSet.add("IPreference.java");
+        sFilterClassSet.add("IToast.java");
+        sFilterClassSet.add("DefaultToastStyle.java");
+        sFilterClassSet.add("WifiVo.java");
 
         // ==========
         // = Common =
         // ==========
 
-        sFilterClassMap.put("Cipher.java", "");
-        sFilterClassMap.put("Decrypt.java", "");
-        sFilterClassMap.put("Encrypt.java", "");
+        sFilterClassSet.add("Cipher.java");
+        sFilterClassSet.add("Decrypt.java");
+        sFilterClassSet.add("Encrypt.java");
 
-        // =============
-        // = DevAssist =
-        // =============
+        // ============
+        // = DevOther =
+        // ============
+
+        sFilterClassSet_Other.add("DataStoreUtils.kt");
     }
 
     /**
