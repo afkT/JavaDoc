@@ -107,7 +107,7 @@ public final class PackageCatalog {
 
     /**
      * 获取文件夹目录列表
-     * @param path            文件路径
+     * @param path     文件路径
      * @param callback 目录回调通知
      * @return 文件夹目录列表集合
      */
