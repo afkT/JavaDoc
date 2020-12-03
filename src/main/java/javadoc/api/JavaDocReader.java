@@ -43,7 +43,7 @@ public final class JavaDocReader {
      * detail: 读取回调
      * @author Ttt
      */
-    public interface CallBack {
+    public interface Callback {
 
         /**
          * 回调通知
@@ -68,12 +68,12 @@ public final class JavaDocReader {
 
     /**
      * 读取处理
-     * @param callBack  读取回调
+     * @param callback  读取回调
      * @param path      文件路径
      * @param className 文件名 ( 类名 )
      * @return 处理后的文档信息
      */
-    private static String read(final CallBack callBack, final String path, final String className) {
+    private static String read(final Callback callback, final String path, final String className) {
         // 类 Doc 信息
         ClassDoc[] classDocs = null; // 如果有内部类, 则长度大于 1, 否则为 1 ( 指定的 className)
         // 防止为 null
@@ -81,8 +81,8 @@ public final class JavaDocReader {
             classDocs = mRoot.classes();
         }
         // 触发回调
-        if (callBack != null) {
-            return callBack.callback(path, className, mRoot, classDocs);
+        if (callback != null) {
+            return callback.callback(path, className, mRoot, classDocs);
         }
         return null;
     }
@@ -93,21 +93,21 @@ public final class JavaDocReader {
 
     /**
      * 读取文档处理
-     * @param callBack      读取回调
+     * @param callback      读取回调
      * @param path          文件路径
      * @param className     文件名 ( 类名 )
      * @param executeParams 执行参数
      * @return 处理后的文档信息
      */
-    public static String readDoc(final CallBack callBack, final String path, final String className, final String[] executeParams) {
+    public static String readDoc(final Callback callback, final String path, final String className, final String[] executeParams) {
         try {
             // 调用 com.sun.tools.javadoc.Main 执行 javadoc, 具体参数百度搜索
             com.sun.tools.javadoc.Main.execute(executeParams);
             // 进行读取
-            return read(callBack, path, className);
+            return read(callback, path, className);
         } catch (Exception e) {
-            if (callBack != null) {
-                callBack.error(e);
+            if (callback != null) {
+                callback.error(e);
             }
         }
         return null;

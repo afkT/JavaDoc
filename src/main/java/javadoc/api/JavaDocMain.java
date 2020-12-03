@@ -21,7 +21,7 @@ class JavaDocMain {
         final String[] executeParams = JavaDocReader.getExecuteParams(true, path, className);
 
         // 读取文档
-        String javaDcoData = JavaDocReader.readDoc(new JavaDocReader.CallBack() {
+        String javaDcoData = JavaDocReader.readDoc(new JavaDocReader.Callback() {
             @Override
             public String callback(String path, String className, RootDoc rootDoc, ClassDoc[] classDocs) {
                 StringBuffer buffer = new StringBuffer();

@@ -129,7 +129,7 @@ public final class CodeAnalyzeReader {
      * detail: 代码读取
      * @author Ttt
      */
-    private static class CodeReader implements JavaDocReader.CallBack {
+    private static class CodeReader implements JavaDocReader.Callback {
 
         MapConfig mapConfig;
 
@@ -156,7 +156,7 @@ public final class CodeAnalyzeReader {
         }
 
         // ==========================
-        // = JavaDocReader.CallBack =
+        // = JavaDocReader.Callback =
         // ==========================
 
         /**

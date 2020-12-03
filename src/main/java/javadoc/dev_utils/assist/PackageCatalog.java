@@ -108,10 +108,10 @@ public final class PackageCatalog {
     /**
      * 获取文件夹目录列表
      * @param path            文件路径
-     * @param catalogCallback 目录回调通知
+     * @param callback 目录回调通知
      * @return 文件夹目录列表集合
      */
-    private static List<Catalog> getFolderLists(final String path, final CatalogCallback catalogCallback) {
+    private static List<Catalog> getFolderLists(final String path, final CatalogCallback callback) {
         List<Catalog> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
@@ -122,13 +122,13 @@ public final class PackageCatalog {
             String name = file.getName();
             // 属于文件夹才处理
             if (file.isDirectory()) {
-                Catalog catalog = new Catalog(file, getFolderLists(file.getAbsolutePath(), catalogCallback));
+                Catalog catalog = new Catalog(file, getFolderLists(file.getAbsolutePath(), callback));
                 lists.add(catalog);
 
                 // 触发回调
-                if (catalogCallback != null) {
+                if (callback != null) {
                     // lineNumber 固定传 1 只是为了增加默认空格间距
-                    catalogCallback.callback(name, 1, name + "." + name);
+                    callback.callback(name, 1, name + "." + name);
                 }
             }
         }

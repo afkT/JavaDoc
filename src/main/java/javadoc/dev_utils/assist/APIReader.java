@@ -16,7 +16,7 @@ import java.util.List;
  * detail: API(JavaDoc) 读取类
  * @author Ttt
  */
-public final class APIReader implements JavaDocReader.CallBack {
+public final class APIReader implements JavaDocReader.Callback {
 
     // 对应的类 Github 链接地址
     private String                        mClassGithubUrl;
@@ -92,7 +92,7 @@ public final class APIReader implements JavaDocReader.CallBack {
     }
 
     // ==========================
-    // = JavaDocReader.CallBack =
+    // = JavaDocReader.Callback =
     // ==========================
 
     /**
