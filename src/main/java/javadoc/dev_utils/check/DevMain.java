@@ -16,7 +16,7 @@ public class DevMain {
 
     public static void main(String[] args) {
 
-        boolean coverText = false;
+        boolean coverText      = false;
         boolean generateConfig = true;
 
         DevAppMain.main(new String[]{coverText + "", generateConfig + ""});

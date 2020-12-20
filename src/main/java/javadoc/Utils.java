@@ -76,8 +76,8 @@ public final class Utils {
      */
     public static Map<String, List<String>> sortHashMap(final Map<String, List<String>> map) {
         Map<String, List<String>> sortedMap = new LinkedHashMap<>();
-        List<String> list = new ArrayList<>();
-        Iterator<String> item = map.keySet().iterator();
+        List<String>              list      = new ArrayList<>();
+        Iterator<String>          item      = map.keySet().iterator();
         while (item.hasNext()) {
             list.add(item.next());
         }
@@ -96,7 +96,7 @@ public final class Utils {
      * @return 排序后的 Set
      */
     public static Set<String> sortHashSet(final Set<String> set) {
-        List<String> list = new ArrayList<>();
+        List<String>     list = new ArrayList<>();
         Iterator<String> item = set.iterator();
         while (item.hasNext()) {
             list.add(item.next());
