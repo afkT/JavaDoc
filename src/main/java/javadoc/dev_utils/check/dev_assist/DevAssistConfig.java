@@ -60,7 +60,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("DevDialogCallback", ArrayUtils.asListArgs("onDialogNotify","onDialogShow","onDialogDismiss","onDialogStart","onDialogResume","onDialogPause","onDialogStop","onDialogDestroy"));
         ignoreStaticMap.put("DevFilterCallback", ArrayUtils.asListArgs("filter","filter","isFilter","isFilter","compare","compare"));
         ignoreStaticMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick"));
-        ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("postSearch","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
+        ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove","post","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
         ignoreStaticMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener","bindListener","focusChange"));
         ignoreStaticMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreStaticMap.put("IHttpEngine.Response", ArrayUtils.asListArgs("getRequest","getSentRequestAtMillis","getReceivedResponseAtMillis"));
@@ -168,7 +168,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevJSONEngine", ArrayUtils.asListArgs("initEngine - void"));
         ignoreReturnVoidMap.put("DevLogEngine", ArrayUtils.asListArgs("initEngine - void","d - void","e - void","e - void","e - void","w - void","i - void","v - void","wtf - void","json - void","xml - void","dTag - void","eTag - void","eTag - void","eTag - void","wTag - void","iTag - void","vTag - void","wtfTag - void","jsonTag - void","xmlTag - void"));
         ignoreReturnVoidMap.put("DevResultCallback", ArrayUtils.asListArgs("onResult - void"));
-        ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("postSearch - void"));
+        ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove - void","post - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged - void"));
