@@ -1,15 +1,15 @@
 package javadoc.dev_utils.check.dev_basemvvm;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import dev.utils.common.ArrayUtils;
 import dev.utils.common.ConvertUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.check.dev.CheckInfo;
 import javadoc.dev_utils.check.dev.CheckMain;
 import javadoc.dev_utils.check.dev.ICheckConfig;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * detail: 代码读取检测分析 Main 方法

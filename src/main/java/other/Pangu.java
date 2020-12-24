@@ -1,6 +1,11 @@
 package other;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -133,7 +138,10 @@ public class Pangu {
      * @throws IOException if an error occurs.
      * @since 1.1.0
      */
-    public void spacingFile(File inputFile, File outputFile) throws IOException {
+    public void spacingFile(
+            File inputFile,
+            File outputFile
+    ) throws IOException {
         // TODO: support charset
 
         FileReader     fr = new FileReader(inputFile);

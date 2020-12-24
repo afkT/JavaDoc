@@ -4,15 +4,20 @@ import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.RootDoc;
 import com.sun.tools.javac.tree.JCTree;
-import dev.utils.common.*;
-import dev.utils.common.validator.ValidatorUtils;
-import javadoc.Utils;
-import javadoc.api.JavaDocReader;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import dev.utils.common.ArrayUtils;
+import dev.utils.common.CollectionUtils;
+import dev.utils.common.MapUtils;
+import dev.utils.common.Reflect2Utils;
+import dev.utils.common.StringUtils;
+import dev.utils.common.validator.ValidatorUtils;
+import javadoc.Utils;
+import javadoc.api.JavaDocReader;
 
 /**
  * detail: 代码读取检测分析
@@ -110,7 +115,10 @@ public final class CodeAnalyzeReader {
      * @param lists     文件列表
      * @param mapConfig Map 配置
      */
-    private static void forReader(final List<File> lists, final MapConfig mapConfig) {
+    private static void forReader(
+            final List<File> lists,
+            final MapConfig mapConfig
+    ) {
         // 循环子文件
         for (File file : lists) {
             if (file.isDirectory()) {
@@ -148,7 +156,11 @@ public final class CodeAnalyzeReader {
          * @param mapConfig Map 配置
          * @return 处理后的文档信息
          */
-        public static String readDoc(final String path, final String className, final MapConfig mapConfig) {
+        public static String readDoc(
+                final String path,
+                final String className,
+                final MapConfig mapConfig
+        ) {
             // 执行参数, 生成 API readAll 设置为 false, 不读取 private、protected 等修饰符方法
             String[] executeParams = JavaDocReader.getExecuteParams(true, path, className);
             // 读取 class javaDoc 并返回文档信息
@@ -168,7 +180,12 @@ public final class CodeAnalyzeReader {
          * @return 处理后的文档信息
          */
         @Override
-        public String callback(String path, String className, RootDoc rootDoc, ClassDoc[] classDocs) {
+        public String callback(
+                String path,
+                String className,
+                RootDoc rootDoc,
+                ClassDoc[] classDocs
+        ) {
             if (classDocs != null) {
                 // 循环 Class Doc 信息
                 for (ClassDoc classDoc : classDocs) {
@@ -377,13 +394,15 @@ public final class CodeAnalyzeReader {
      * @param listJCVariableDecls 方法参数 List
      * @param mapConfig           Map 配置
      */
-    private static void paramCheckHandler(final HashMap<String, List<String>> map,
-                                          final String methodDocumentation,
-                                          final String className,
-                                          final String methodName,
-                                          final JCTree.JCMethodDecl jcMethodDecl,
-                                          final List<JCTree.JCVariableDecl> listJCVariableDecls,
-                                          final MapConfig mapConfig) {
+    private static void paramCheckHandler(
+            final HashMap<String, List<String>> map,
+            final String methodDocumentation,
+            final String className,
+            final String methodName,
+            final JCTree.JCMethodDecl jcMethodDecl,
+            final List<JCTree.JCVariableDecl> listJCVariableDecls,
+            final MapConfig mapConfig
+    ) {
         // 泛型类型数组
         String[] genericityTypes = null;
         // 参数名

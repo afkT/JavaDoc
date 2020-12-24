@@ -1,12 +1,22 @@
 package javadoc;
 
 import com.google.gson.GsonBuilder;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
 import dev.utils.common.StringUtils;
-
-import java.io.File;
-import java.util.*;
 
 /**
  * detail: 内部工具类
@@ -96,7 +106,7 @@ public final class Utils {
      * @return 排序后的 Set
      */
     public static Set<String> sortHashSet(final Set<String> set) {
-        List<String>     list = new ArrayList<>();
+        List<String> list     = new ArrayList<>();
         Iterator<String> item = set.iterator();
         while (item.hasNext()) {
             list.add(item.next());
@@ -111,7 +121,10 @@ public final class Utils {
      * @param mapName map 变量名
      * @return 生成指定格式字符串
      */
-    public static String generateMapString(final HashMap<String, List<String>> map, final String mapName) {
+    public static String generateMapString(
+            final HashMap<String, List<String>> map,
+            final String mapName
+    ) {
         StringBuilder builder = new StringBuilder();
         // HashMap 排序
         Map<String, List<String>> sortHashMap = sortHashMap(map);
@@ -138,7 +151,10 @@ public final class Utils {
      * @param mapName map 变量名
      * @return 生成指定格式字符串
      */
-    public static String generateSetString(final Set<String> set, final String mapName) {
+    public static String generateSetString(
+            final Set<String> set,
+            final String mapName
+    ) {
         StringBuilder builder = new StringBuilder();
         // HashMap 排序
         Set<String> sortHashMap = sortHashSet(set);
@@ -178,7 +194,10 @@ public final class Utils {
      * @param includeNulls 是否序列化null值
      * @return 格式化 JSON 数据
      */
-    public static String toJsonFormat(final Object data, final boolean includeNulls) {
+    public static String toJsonFormat(
+            final Object data,
+            final boolean includeNulls
+    ) {
         if (data != null) {
             try {
                 // 返回 JSON格式数据 - 格式化

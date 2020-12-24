@@ -1,11 +1,11 @@
 package javadoc.dev_utils.check.dev;
 
-import dev.utils.common.ArrayUtils;
-
 import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import dev.utils.common.ArrayUtils;
 
 /**
  * detail: 检测信息实体类
@@ -33,7 +33,10 @@ public final class CheckInfo {
     // 忽略注释间距异常文件
     public Set<String>  ignoreAnnotationSpaceSet = new HashSet<>();
 
-    public CheckInfo(String path, ICheckConfig iCheckConfig) {
+    public CheckInfo(
+            String path,
+            ICheckConfig iCheckConfig
+    ) {
         this.mPath = path;
         this.mICheckConfig = iCheckConfig;
     }

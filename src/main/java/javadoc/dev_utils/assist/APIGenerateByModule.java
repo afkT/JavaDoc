@@ -1,12 +1,12 @@
 package javadoc.dev_utils.assist;
 
-import javadoc.Utils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+
+import javadoc.Utils;
 
 /**
  * detail: 功能模块 API 生成
@@ -28,7 +28,7 @@ final class APIGenerateByModule {
     private static class Subnode {
 
         // 文件夹对象
-        private File          subFile;
+        private File subFile;
         // 文件夹内的子文件列表
         private List<Subnode> listSubs;
 
@@ -37,7 +37,10 @@ final class APIGenerateByModule {
          * @param file  文件夹对象
          * @param lists 文件夹内的子文件列表
          */
-        public Subnode(File file, List<Subnode> lists) {
+        public Subnode(
+                File file,
+                List<Subnode> lists
+        ) {
             this.subFile = file;
             this.listSubs = lists;
         }
@@ -99,15 +102,20 @@ final class APIGenerateByModule {
      * @param methodNotAnnotateBuffer 方法没有注释记录存储 Buffer
      * @param notMethodBuffer         类不存在方法记录存储 Buffer
      */
-    private static void forSubnode(final StringBuffer buffer, final List<Subnode> lists,
-                                   final String path, final String packageName, final String githubUrl,
-                                   final HashSet<String> filterClassSet,
-                                   final HashMap<String, String[]> filterMethodMap,
-                                   final String methodNameRegex,
-                                   final HashMap<String, List<String>> methodNameMatchesMap,
-                                   final StringBuffer methodRepeatBuffer,
-                                   final StringBuffer methodNotAnnotateBuffer,
-                                   final StringBuffer notMethodBuffer) {
+    private static void forSubnode(
+            final StringBuffer buffer,
+            final List<Subnode> lists,
+            final String path,
+            final String packageName,
+            final String githubUrl,
+            final HashSet<String> filterClassSet,
+            final HashMap<String, String[]> filterMethodMap,
+            final String methodNameRegex,
+            final HashMap<String, List<String>> methodNameMatchesMap,
+            final StringBuffer methodRepeatBuffer,
+            final StringBuffer methodNotAnnotateBuffer,
+            final StringBuffer notMethodBuffer
+    ) {
         // 循环遍历
         for (int i = 0, len = lists.size(); i < len; i++) {
             // 获取子节点
@@ -175,14 +183,18 @@ final class APIGenerateByModule {
      * @param notMethodBuffer         类不存在方法记录存储 Buffer
      * @return 指定模块 API 数据
      */
-    public static String apiGenerate(final String path, final String packageName, final String githubUrl,
-                                     final HashSet<String> filterClassSet,
-                                     final HashMap<String, String[]> filterMethodMap,
-                                     final String methodNameRegex,
-                                     final HashMap<String, List<String>> methodNameMatchesMap,
-                                     final StringBuffer methodRepeatBuffer,
-                                     final StringBuffer methodNotAnnotateBuffer,
-                                     final StringBuffer notMethodBuffer) {
+    public static String apiGenerate(
+            final String path,
+            final String packageName,
+            final String githubUrl,
+            final HashSet<String> filterClassSet,
+            final HashMap<String, String[]> filterMethodMap,
+            final String methodNameRegex,
+            final HashMap<String, List<String>> methodNameMatchesMap,
+            final StringBuffer methodRepeatBuffer,
+            final StringBuffer methodNotAnnotateBuffer,
+            final StringBuffer notMethodBuffer
+    ) {
         // 拼接信息
         StringBuffer buffer = new StringBuffer();
         // 递归循环子节点

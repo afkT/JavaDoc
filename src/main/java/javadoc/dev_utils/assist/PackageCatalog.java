@@ -1,11 +1,11 @@
 package javadoc.dev_utils.assist;
 
-import dev.utils.common.StringUtils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import dev.utils.common.StringUtils;
 
 /**
  * detail: 包目录结构生成
@@ -60,7 +60,11 @@ public final class PackageCatalog {
          * @param lineNumber 行数
          * @param linkTag    锚链接 TAG 标记
          */
-        void callback(String name, int lineNumber, String linkTag);
+        void callback(
+                String name,
+                int lineNumber,
+                String linkTag
+        );
     }
 
     // ==================
@@ -74,7 +78,7 @@ public final class PackageCatalog {
     private static class Catalog {
 
         // 文件夹对象
-        private File          file;
+        private File file;
         // 文件夹内的子文件列表
         private List<Catalog> listCatalogs;
 
@@ -83,7 +87,10 @@ public final class PackageCatalog {
          * @param file  文件夹对象
          * @param lists 文件夹内的子文件列表
          */
-        public Catalog(File file, List<Catalog> lists) {
+        public Catalog(
+                File file,
+                List<Catalog> lists
+        ) {
             this.file = file;
             this.listCatalogs = lists;
         }
@@ -111,7 +118,10 @@ public final class PackageCatalog {
      * @param callback 目录回调通知
      * @return 文件夹目录列表集合
      */
-    private static List<Catalog> getFolderLists(final String path, final CatalogCallback callback) {
+    private static List<Catalog> getFolderLists(
+            final String path,
+            final CatalogCallback callback
+    ) {
         List<Catalog> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
@@ -150,8 +160,13 @@ public final class PackageCatalog {
      * @param lineNumber  行数
      * @param linkTag     锚链接 TAG 标记
      */
-    private static void calculateMaxLength(final boolean isAnchor, final String packageName,
-                                           final String name, final int lineNumber, final String linkTag) {
+    private static void calculateMaxLength(
+            final boolean isAnchor,
+            final String packageName,
+            final String name,
+            final int lineNumber,
+            final String linkTag
+    ) {
         StringBuffer buffer = new StringBuffer();
         // 添加目录
         buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
@@ -172,8 +187,13 @@ public final class PackageCatalog {
      * @param linkTag     锚链接 TAG 标记
      * @return 目录信息
      */
-    private static String createCatalog(final boolean isAnchor, final String packageName,
-                                        final String name, final int lineNumber, final String linkTag) {
+    private static String createCatalog(
+            final boolean isAnchor,
+            final String packageName,
+            final String name,
+            final int lineNumber,
+            final String linkTag
+    ) {
         StringBuffer buffer = new StringBuffer();
         if (isAnchor) {
             // 添加空格
@@ -201,9 +221,14 @@ public final class PackageCatalog {
      * @param mapCatalog  对应目录的注释
      * @return 目录行信息
      */
-    private static String createCatalogLine(final boolean isAnchor, final String packageName,
-                                            final String name, final int lineNumber, final String linkTag,
-                                            final HashMap<String, String> mapCatalog) {
+    private static String createCatalogLine(
+            final boolean isAnchor,
+            final String packageName,
+            final String name,
+            final int lineNumber,
+            final String linkTag,
+            final HashMap<String, String> mapCatalog
+    ) {
         StringBuffer buffer = new StringBuffer();
         // 添加目录
         buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
@@ -225,10 +250,15 @@ public final class PackageCatalog {
      * @param linkTag     锚链接 TAG 标记
      * @param mapCatalog  对应目录的注释
      */
-    private static void forCatalog(final StringBuffer buffer, final List<Catalog> lists,
-                                   final boolean isAnchor, final String packageName,
-                                   final int lineNumber, final String linkTag,
-                                   final HashMap<String, String> mapCatalog) {
+    private static void forCatalog(
+            final StringBuffer buffer,
+            final List<Catalog> lists,
+            final boolean isAnchor,
+            final String packageName,
+            final int lineNumber,
+            final String linkTag,
+            final HashMap<String, String> mapCatalog
+    ) {
         // 循环遍历
         for (int i = 0, len = lists.size(); i < len; i++) {
             // 获取目录
@@ -260,15 +290,23 @@ public final class PackageCatalog {
      * @param mapCatalog  对应目录的注释
      * @return 目录信息
      */
-    public static String apiCatalog(final boolean isAnchor, final String path, final String packageName,
-                                    final HashMap<String, String> mapCatalog) {
+    public static String apiCatalog(
+            final boolean isAnchor,
+            final String path,
+            final String packageName,
+            final HashMap<String, String> mapCatalog
+    ) {
 
         // 拼接信息
         StringBuffer buffer = new StringBuffer();
         // 获取文件夹列表
         List<Catalog> lists = getFolderLists(path, new CatalogCallback() {
             @Override
-            public void callback(String name, int lineNumber, String linkTag) {
+            public void callback(
+                    String name,
+                    int lineNumber,
+                    String linkTag
+            ) {
                 // 计算目录最大长度
                 calculateMaxLength(isAnchor, packageName, name, lineNumber, linkTag);
             }

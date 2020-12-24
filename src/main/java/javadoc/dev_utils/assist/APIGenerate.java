@@ -1,12 +1,12 @@
 package javadoc.dev_utils.assist;
 
-import dev.utils.common.StringUtils;
-import javadoc.Utils;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+
+import dev.utils.common.StringUtils;
+import javadoc.Utils;
 
 /**
  * detail: Api 生成
@@ -29,14 +29,19 @@ public class APIGenerate {
      * @param notMethodBuffer         类不存在方法记录存储 Buffer
      * @return API 生成信息
      */
-    public static String apiGenerate(final String module, final String path, final String packageName, final String githubUrl,
-                                     final HashSet<String> filterClassSet,
-                                     final HashMap<String, String[]> filterMethodMap,
-                                     final String methodNameRegex,
-                                     final HashMap<String, List<String>> methodNameMatchesMap,
-                                     final StringBuffer methodRepeatBuffer,
-                                     final StringBuffer methodNotAnnotateBuffer,
-                                     final StringBuffer notMethodBuffer) {
+    public static String apiGenerate(
+            final String module,
+            final String path,
+            final String packageName,
+            final String githubUrl,
+            final HashSet<String> filterClassSet,
+            final HashMap<String, String[]> filterMethodMap,
+            final String methodNameRegex,
+            final HashMap<String, List<String>> methodNameMatchesMap,
+            final StringBuffer methodRepeatBuffer,
+            final StringBuffer methodNotAnnotateBuffer,
+            final StringBuffer notMethodBuffer
+    ) {
         // 文件路径
         String apiPath = path + module + "/";
         // 包名

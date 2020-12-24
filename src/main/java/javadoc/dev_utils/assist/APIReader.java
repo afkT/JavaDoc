@@ -3,14 +3,15 @@ package javadoc.dev_utils.assist;
 import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.RootDoc;
-import dev.utils.common.ArrayUtils;
-import dev.utils.common.StringUtils;
-import dev.utils.common.validator.ValidatorUtils;
-import javadoc.api.JavaDocReader;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import dev.utils.common.ArrayUtils;
+import dev.utils.common.StringUtils;
+import dev.utils.common.validator.ValidatorUtils;
+import javadoc.api.JavaDocReader;
 
 /**
  * detail: API(JavaDoc) 读取类
@@ -69,13 +70,17 @@ public final class APIReader implements JavaDocReader.Callback {
      * @param notMethodBuffer         类不存在方法记录存储 Buffer
      * @return 处理后的文档信息
      */
-    public static String readDoc(final String path, final String className, final String classGithubUrl,
-                                 final HashMap<String, String[]> filterMethodMap,
-                                 final String methodNameRegex,
-                                 final HashMap<String, List<String>> methodNameMatchesMap,
-                                 final StringBuffer methodRepeatBuffer,
-                                 final StringBuffer methodNotAnnotateBuffer,
-                                 final StringBuffer notMethodBuffer) {
+    public static String readDoc(
+            final String path,
+            final String className,
+            final String classGithubUrl,
+            final HashMap<String, String[]> filterMethodMap,
+            final String methodNameRegex,
+            final HashMap<String, List<String>> methodNameMatchesMap,
+            final StringBuffer methodRepeatBuffer,
+            final StringBuffer methodNotAnnotateBuffer,
+            final StringBuffer notMethodBuffer
+    ) {
         // API 读取配置处理
         APIReader apiReader = new APIReader(classGithubUrl);
         apiReader.mFilterMethodMap = filterMethodMap;
@@ -104,7 +109,12 @@ public final class APIReader implements JavaDocReader.Callback {
      * @return 处理后的文档信息
      */
     @Override
-    public String callback(String path, String className, RootDoc rootDoc, ClassDoc[] classDocs) {
+    public String callback(
+            String path,
+            String className,
+            RootDoc rootDoc,
+            ClassDoc[] classDocs
+    ) {
         // 长度为 0, 则不处理
         if (classDocs.length == 0) return "";
 

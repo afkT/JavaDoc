@@ -1,16 +1,16 @@
 package javadoc.dev_utils.check.function;
 
+import java.io.File;
+import java.io.FileFilter;
+import java.util.HashMap;
+import java.util.List;
+
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
 import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import javadoc.dev_utils.ApiConfig;
-
-import java.io.File;
-import java.io.FileFilter;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * detail: 代码重复换行检测
