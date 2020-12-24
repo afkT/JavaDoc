@@ -106,7 +106,7 @@ public final class Utils {
      * @return 排序后的 Set
      */
     public static Set<String> sortHashSet(final Set<String> set) {
-        List<String> list     = new ArrayList<>();
+        List<String>     list = new ArrayList<>();
         Iterator<String> item = set.iterator();
         while (item.hasNext()) {
             list.add(item.next());

@@ -78,7 +78,7 @@ public final class PackageCatalog {
     private static class Catalog {
 
         // 文件夹对象
-        private File file;
+        private File          file;
         // 文件夹内的子文件列表
         private List<Catalog> listCatalogs;
 
