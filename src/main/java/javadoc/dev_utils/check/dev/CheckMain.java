@@ -1,13 +1,13 @@
 package javadoc.dev_utils.check.dev;
 
-import dev.utils.common.MapUtils;
-import javadoc.Utils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import dev.utils.common.MapUtils;
+import javadoc.Utils;
 
 /**
  * detail: 代码读取检测分析入口方法
@@ -24,7 +24,10 @@ public final class CheckMain {
      * @param checkInfo 检测信息实体类
      * @return 检测结果 JSON String
      */
-    public static String execute(final Class clazz, final CheckInfo checkInfo) {
+    public static String execute(
+            final Class clazz,
+            final CheckInfo checkInfo
+    ) {
         // 代码检测分析配置接口
         ICheckConfig checkConfig = checkInfo.mICheckConfig;
         // 本地文件路径

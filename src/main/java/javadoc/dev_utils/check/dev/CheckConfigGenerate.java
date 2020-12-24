@@ -1,14 +1,14 @@
 package javadoc.dev_utils.check.dev;
 
-import dev.utils.common.ArrayUtils;
-import dev.utils.common.FileUtils;
-import dev.utils.common.StringUtils;
-import javadoc.Utils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
+import dev.utils.common.ArrayUtils;
+import dev.utils.common.FileUtils;
+import dev.utils.common.StringUtils;
+import javadoc.Utils;
 
 /**
  * detail: CheckConfig 文件生成
@@ -36,8 +36,11 @@ public class CheckConfigGenerate {
      * @param mapStr                   map 校验字符串
      * @param ignoreAnnotationSpaceSet 忽略注释间距异常文件 Set
      */
-    public static void format(final Class clazz, final String[] mapStr,
-                              final Set<String> ignoreAnnotationSpaceSet) {
+    public static void format(
+            final Class clazz,
+            final String[] mapStr,
+            final Set<String> ignoreAnnotationSpaceSet
+    ) {
         String className = clazz.getSimpleName();
         // 类名
         className = className.substring(0, className.indexOf("Main"));
@@ -54,8 +57,12 @@ public class CheckConfigGenerate {
      * @param mapStr                   map 校验字符串
      * @param ignoreAnnotationSpaceSet 忽略注释间距异常文件 Set
      */
-    private static void format(final String packageName, final String className, final String[] mapStr,
-                               final Set<String> ignoreAnnotationSpaceSet) {
+    private static void format(
+            final String packageName,
+            final String className,
+            final String[] mapStr,
+            final Set<String> ignoreAnnotationSpaceSet
+    ) {
         List<String> lists = new ArrayList<>();
         lists.add(packageName);
         lists.add(className + "Config");

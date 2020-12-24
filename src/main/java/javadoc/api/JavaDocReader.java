@@ -53,7 +53,12 @@ public final class JavaDocReader {
          * @param classDocs 类 Doc 信息
          * @return 处理后的文档信息
          */
-        String callback(String path, String className, RootDoc rootDoc, ClassDoc[] classDocs);
+        String callback(
+                String path,
+                String className,
+                RootDoc rootDoc,
+                ClassDoc[] classDocs
+        );
 
         /**
          * 异常回调
@@ -73,7 +78,11 @@ public final class JavaDocReader {
      * @param className 文件名 ( 类名 )
      * @return 处理后的文档信息
      */
-    private static String read(final Callback callback, final String path, final String className) {
+    private static String read(
+            final Callback callback,
+            final String path,
+            final String className
+    ) {
         // 类 Doc 信息
         ClassDoc[] classDocs = null; // 如果有内部类, 则长度大于 1, 否则为 1 ( 指定的 className)
         // 防止为 null
@@ -99,7 +108,12 @@ public final class JavaDocReader {
      * @param executeParams 执行参数
      * @return 处理后的文档信息
      */
-    public static String readDoc(final Callback callback, final String path, final String className, final String[] executeParams) {
+    public static String readDoc(
+            final Callback callback,
+            final String path,
+            final String className,
+            final String[] executeParams
+    ) {
         try {
             // 调用 com.sun.tools.javadoc.Main 执行 javadoc, 具体参数百度搜索
             com.sun.tools.javadoc.Main.execute(executeParams);
@@ -126,7 +140,11 @@ public final class JavaDocReader {
      * @param className 文件名 ( 类名 )
      * @return 执行参数
      */
-    public static String[] getExecuteParams(final boolean readAll, final String path, final String className) {
+    public static String[] getExecuteParams(
+            final boolean readAll,
+            final String path,
+            final String className
+    ) {
         if (readAll) {
             return new String[]{
                     "-private", "-encoding", "utf-8",

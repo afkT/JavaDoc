@@ -1,15 +1,15 @@
 package javadoc.dev_utils.check.dev;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
 import dev.utils.common.MapUtils;
 import dev.utils.common.StringUtils;
 import javadoc.Utils;
 import other.Pangu;
-
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * detail: 代码注释读取检测分析
@@ -21,7 +21,7 @@ public final class CodeAnnotationAnalyzeRecord {
     }
 
     // 代码间距等规范处理
-    private static final Pangu   sPangu = new Pangu();
+    private static final Pangu sPangu = new Pangu();
     // 判断是否覆盖文件内容
     private static       boolean sCoverText;
 
@@ -41,7 +41,10 @@ public final class CodeAnnotationAnalyzeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalyze(final String path, final boolean coverText) {
+    public static HashMap<String, String> codeAnalyze(
+            final String path,
+            final boolean coverText
+    ) {
         return codeAnalyze(Utils.getFileCatalogLists(path), coverText);
     }
 
@@ -51,7 +54,10 @@ public final class CodeAnnotationAnalyzeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalyze(final List<File> listFiles, final boolean coverText) {
+    public static HashMap<String, String> codeAnalyze(
+            final List<File> listFiles,
+            final boolean coverText
+    ) {
         sCoverText = coverText;
         forReader(listFiles);
         return sAnnotationSpaceMap;

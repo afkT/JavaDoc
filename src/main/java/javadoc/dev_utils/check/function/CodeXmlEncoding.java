@@ -1,13 +1,13 @@
 package javadoc.dev_utils.check.function;
 
+import java.io.File;
+import java.util.LinkedHashSet;
+import java.util.List;
+
 import dev.utils.common.FileUtils;
 import dev.utils.common.StringUtils;
 import dev.utils.common.assist.search.FileDepthFirstSearchUtils;
 import javadoc.dev_utils.ApiConfig;
-
-import java.io.File;
-import java.util.LinkedHashSet;
-import java.util.List;
 
 /**
  * detail: Xml Encoding 追加处理
@@ -55,7 +55,11 @@ public final class CodeXmlEncoding {
                     }
 
                     @Override
-                    public void onEndListener(List<FileDepthFirstSearchUtils.FileItem> lists, long startTime, long endTime) {
+                    public void onEndListener(
+                            List<FileDepthFirstSearchUtils.FileItem> lists,
+                            long startTime,
+                            long endTime
+                    ) {
                         for (String path : sSets) {
                             System.out.println(path);
                         }

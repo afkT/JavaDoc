@@ -1,11 +1,11 @@
 package javadoc.dev_utils.readme;
 
+import java.io.File;
+import java.util.HashMap;
+
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.PackageCatalog;
-
-import java.io.File;
-import java.util.HashMap;
 
 /**
  * detail: 创建 README Main 方法
@@ -24,8 +24,13 @@ final class DevBase_READMEMain {
      * @param mapCatalog  对应目录的注释
      * @param githubUrl   项目 github 链接
      */
-    private static void createREADMEHead(final StringBuffer buffer, final String path, final String packageName,
-                                         final HashMap<String, String> mapCatalog, final String githubUrl) {
+    private static void createREADMEHead(
+            final StringBuffer buffer,
+            final String path,
+            final String packageName,
+            final HashMap<String, String> mapCatalog,
+            final String githubUrl
+    ) {
         buffer.append("\n");
         buffer.append("## Gradle");
 

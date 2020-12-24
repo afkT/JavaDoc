@@ -23,7 +23,12 @@ class JavaDocMain {
         // 读取文档
         String javaDcoData = JavaDocReader.readDoc(new JavaDocReader.Callback() {
             @Override
-            public String callback(String path, String className, RootDoc rootDoc, ClassDoc[] classDocs) {
+            public String callback(
+                    String path,
+                    String className,
+                    RootDoc rootDoc,
+                    ClassDoc[] classDocs
+            ) {
                 StringBuffer buffer = new StringBuffer();
                 buffer.append("\n\n");
                 buffer.append("\n================");
