@@ -20,6 +20,7 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
+        ignoreAnnotateMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreAnnotateMap.put("IImageEngine.BitmapCallback", ArrayUtils.asListArgs("getTranscodeType","onResponse","onFailure"));
         ignoreAnnotateMap.put("IImageEngine.DrawableCallback", ArrayUtils.asListArgs("getTranscodeType","onResponse","onFailure"));
@@ -59,6 +60,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("DevDialogCallback", ArrayUtils.asListArgs("onDialogNotify","onDialogShow","onDialogDismiss","onDialogStart","onDialogResume","onDialogPause","onDialogStop","onDialogDestroy"));
         ignoreStaticMap.put("DevFilterCallback", ArrayUtils.asListArgs("filter","filter","isFilter","isFilter","compare","compare"));
         ignoreStaticMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick"));
+        ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("postSearch","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
         ignoreStaticMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener","bindListener","focusChange"));
         ignoreStaticMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreStaticMap.put("IHttpEngine.Response", ArrayUtils.asListArgs("getRequest","getSentRequestAtMillis","getReceivedResponseAtMillis"));
@@ -113,6 +115,8 @@ final class DevAssistConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("DevBaseModel", ArrayUtils.asListArgs("isCorrect"));
+        ignoreUnPublicMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
+        ignoreUnPublicMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("focusChange"));
         ignoreUnPublicMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged"));
         ignoreUnPublicMap.put("IAdapterData", ArrayUtils.asListArgs("getDataList","getDataArrayList","getDataCount","getDataItem","getDataItemPosition","getDataFirstItem","getDataLastItem","isFirstItem","isLastItem","isLastItem","clearDataList","clearDataList","addData","addData","addAllData","addAllData","removeData","removeData","removeData","setDataList","setDataList"));
@@ -164,6 +168,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevJSONEngine", ArrayUtils.asListArgs("initEngine - void"));
         ignoreReturnVoidMap.put("DevLogEngine", ArrayUtils.asListArgs("initEngine - void","d - void","e - void","e - void","e - void","w - void","i - void","v - void","wtf - void","json - void","xml - void","dTag - void","eTag - void","eTag - void","eTag - void","wTag - void","iTag - void","vTag - void","wtfTag - void","jsonTag - void","xmlTag - void"));
         ignoreReturnVoidMap.put("DevResultCallback", ArrayUtils.asListArgs("onResult - void"));
+        ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("postSearch - void"));
+        ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged - void"));
         ignoreReturnVoidMap.put("IAdapterData", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","addData - void","addData - void","addAllData - void","addAllData - void","removeData - void","setDataList - void","setDataList - void"));
