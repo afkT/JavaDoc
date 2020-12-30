@@ -17,7 +17,8 @@ import javadoc.api.JavaDocReader;
  * detail: API(JavaDoc) 读取类
  * @author Ttt
  */
-public final class APIReader implements JavaDocReader.Callback {
+public final class APIReader
+        implements JavaDocReader.Callback {
 
     // 对应的类 Github 链接地址
     private String                        mClassGithubUrl;
