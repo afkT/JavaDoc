@@ -137,7 +137,8 @@ public final class CodeAnalyzeReader {
      * detail: 代码读取
      * @author Ttt
      */
-    private static class CodeReader implements JavaDocReader.Callback {
+    private static class CodeReader
+            implements JavaDocReader.Callback {
 
         MapConfig mapConfig;
 

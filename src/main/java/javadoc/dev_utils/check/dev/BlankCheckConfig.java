@@ -8,7 +8,8 @@ import java.util.Map;
  * detail: 空白实现类
  * @author Ttt
  */
-public class BlankCheckConfig implements ICheckConfig {
+public class BlankCheckConfig
+        implements ICheckConfig {
 
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
