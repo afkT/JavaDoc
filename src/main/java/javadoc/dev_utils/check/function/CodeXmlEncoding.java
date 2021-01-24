@@ -15,7 +15,7 @@ import javadoc.dev_utils.ApiConfig;
  */
 public final class CodeXmlEncoding {
 
-    private static       LinkedHashSet<String> sSets       = new LinkedHashSet<>();
+    private static final LinkedHashSet<String> sSets       = new LinkedHashSet<>();
     // 开头
     private static final String                STARTS_WITH = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
     // 追加内容

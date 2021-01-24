@@ -28,9 +28,9 @@ final class APIGenerateByModule {
     private static class Subnode {
 
         // 文件夹对象
-        private File          subFile;
+        private final File          subFile;
         // 文件夹内的子文件列表
-        private List<Subnode> listSubs;
+        private final List<Subnode> listSubs;
 
         /**
          * 构造函数

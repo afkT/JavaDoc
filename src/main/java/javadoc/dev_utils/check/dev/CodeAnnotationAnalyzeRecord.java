@@ -30,10 +30,10 @@ public final class CodeAnnotationAnalyzeRecord {
     // ===================
 
     // 代码注释空格间距异常记录
-    private static HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
+    private static final HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
 
     // 代码注释重复换行记录
-    private static HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
+    private static final HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     /**
      * 代码分析检测
