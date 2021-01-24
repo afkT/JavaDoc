@@ -38,7 +38,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreAnnotateMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("JCLogUtils", ArrayUtils.asListArgs("d","e","e","e","i","xml","dTag","eTag","eTag","eTag","iTag","xmlTag"));
-        ignoreAnnotateMap.put("KeyValueBean", ArrayUtils.asListArgs("toString"));
+        ignoreAnnotateMap.put("KeyValue", ArrayUtils.asListArgs("toString"));
         ignoreAnnotateMap.put("LogPrintUtils", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreAnnotateMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("ROMUtils.RomInfo", ArrayUtils.asListArgs("toString"));
@@ -177,7 +177,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("onPause","onResume","onDestroy","start","cancel"));
         ignoreStaticMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreStaticMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
-        ignoreStaticMap.put("KeyValueBean", ArrayUtils.asListArgs("getKey","getValue","toString"));
+        ignoreStaticMap.put("KeyValue", ArrayUtils.asListArgs("getKey","getValue","toString"));
         ignoreStaticMap.put("KeyguardUtils", ArrayUtils.asListArgs("isKeyguardLocked","isKeyguardSecure","inKeyguardRestrictedInputMode","getKeyguardManager","setKeyguardManager","disableKeyguard","reenableKeyguard","release","getKeyguardLock","setKeyguardLock"));
         ignoreStaticMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
         ignoreStaticMap.put("LogConfig", ArrayUtils.asListArgs("methodCount","methodOffset","outputMethodAll","displayThreadInfo","sortLog","logLevel","tag"));
