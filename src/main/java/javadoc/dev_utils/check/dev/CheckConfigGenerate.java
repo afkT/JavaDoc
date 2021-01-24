@@ -45,7 +45,7 @@ public class CheckConfigGenerate {
         // 类名
         className = className.substring(0, className.indexOf("Main"));
         // 包名
-        String packageName = "dev_" + className.substring(3, className.length()).toLowerCase();
+        String packageName = "dev_" + className.substring(3).toLowerCase();
         // 格式化处理
         format(packageName, className, mapStr, ignoreAnnotationSpaceSet);
     }

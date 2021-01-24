@@ -200,7 +200,7 @@ public final class CodeAnalyzeReader {
                     // 类标记
                     String classTag = "";
                     // 反射获取 tree 变量
-                    JCTree.JCClassDecl jcClassDecl = (JCTree.JCClassDecl) Reflect2Utils.getPropertyByParent(classDoc, "tree");
+                    JCTree.JCClassDecl jcClassDecl = Reflect2Utils.getPropertyByParent(classDoc, "tree");
                     JCTree.JCModifiers jcModifiers = jcClassDecl.getModifiers();
                     if (jcModifiers != null) {
                         // 属于接口的则跳过
@@ -245,11 +245,11 @@ public final class CodeAnalyzeReader {
                         String methodAnnotate = methodDoc.commentText();
 
                         // 反射获取 tree 变量
-                        JCTree.JCMethodDecl jcMethodDecl = (JCTree.JCMethodDecl) Reflect2Utils.getPropertyByParent(methodDoc, "tree");
+                        JCTree.JCMethodDecl jcMethodDecl = Reflect2Utils.getPropertyByParent(methodDoc, "tree");
                         // 反射获取方法参数
-                        List<JCTree.JCVariableDecl> listJCVariableDecls = (List<JCTree.JCVariableDecl>) Reflect2Utils.getPropertyByParent(jcMethodDecl, "params");
+                        List<JCTree.JCVariableDecl> listJCVariableDecls = Reflect2Utils.getPropertyByParent(jcMethodDecl, "params");
                         // 获取方法全部注释 (含 @param)
-                        String methodDocumentation = (String) Reflect2Utils.getPropertyByParent(methodDoc, "documentation");
+                        String methodDocumentation = Reflect2Utils.getPropertyByParent(methodDoc, "documentation");
 
                         // 获取方法代码
                         String methodCode = jcMethodDecl.toString();
@@ -505,7 +505,7 @@ public final class CodeAnalyzeReader {
         // 进行裁剪处理
         if (paramStart != -1) {
             // 裁剪字符串 => @param xx 注释 @param xx 注释
-            documentation = documentation.substring(paramStart, documentation.length());
+            documentation = documentation.substring(paramStart);
             // 裁剪拼接后的数据
             String subParam = subParam(documentation).trim();
             // 判断是否存在
@@ -594,9 +594,6 @@ public final class CodeAnalyzeReader {
                 }
             }
         }
-        if (isCheck) {
-            return false;
-        }
-        return true;
+        return !isCheck;
     }
 }

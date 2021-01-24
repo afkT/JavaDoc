@@ -19,7 +19,7 @@ import javadoc.dev_utils.ApiConfig;
 public final class CodeRepeatNewLineRemove {
 
     // 代码注释重复换行记录
-    private static HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
+    private static final HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     // 忽略文件后缀
     private static final String[] SUFFIX = {"kt", "xml", "java", "gradle",};
@@ -34,8 +34,7 @@ public final class CodeRepeatNewLineRemove {
                 if (file.isDirectory()) return false;
 
                 String fileSuffix = FileUtils.getFileSuffix(file);
-                if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) return false;
-                return true;
+                return StringUtils.isOrEquals(fileSuffix, SUFFIX);
             }
         }, true);
 
