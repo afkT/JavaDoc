@@ -93,6 +93,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("StateLayout.Global", ArrayUtils.asListArgs("register","unregister"));
         ignoreFinalMap.put("StateLayout.TypeAdapter", ArrayUtils.asListArgs("onCreateView","onBindView"));
         ignoreFinalMap.put("ViewAssist", ArrayUtils.asListArgs("wrap","wrap","showType","register","unregister","unregister","setTag","setData","getData","setData","getAdapter","getView","setListener"));
+        ignoreFinalMap.put("WidgetAttrs", ArrayUtils.asListArgs("setMaxWidth","setMaxHeight","setSlide"));
         ignoreFinalMap.put("WrapView", ArrayUtils.asListArgs("initAttrs","onMeasure","onLayout","setMaxLine","setRowTopMargin","setViewLeftMargin","setRowViewMargin"));
 
         return ignoreFinalMap;
@@ -135,6 +136,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("StateLayout.Global", ArrayUtils.asListArgs("register","unregister"));
         ignoreStaticMap.put("StateLayout.TypeAdapter", ArrayUtils.asListArgs("onCreateView","onBindView"));
         ignoreStaticMap.put("ViewAssist", ArrayUtils.asListArgs("showIng","showFailed","showSuccess","showEmptyData","showType","notifyDataSetChanged","gone","visible","register","unregister","unregister","reset","getWrapper","getTag","setTag","getData","setData","getData","setData","getAdapter","getView","getCurrentType","getCurrentView","setListener"));
+        ignoreStaticMap.put("WidgetAttrs", ArrayUtils.asListArgs("getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
         ignoreStaticMap.put("WrapView", ArrayUtils.asListArgs("initAttrs","onMeasure","onLayout","calc","refreshDraw","getRowLine","getMaxLine","setMaxLine","getRowTopMargin","setRowTopMargin","getViewLeftMargin","setViewLeftMargin","setRowViewMargin"));
 
         return ignoreStaticMap;
