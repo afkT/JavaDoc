@@ -40,13 +40,13 @@ public final class CodeXmlEncoding {
                             return true;
                         }
 
-                        String data = new String(FileUtils.readFileBytes(file));
+                        String data = new String(FileUtils.readFileBytes(file)); // , "UTF-8"
                         if (data != null) {
                             if (!data.startsWith(STARTS_WITH)) {
                                 // 删减内容
                                 data = APPEND + data;
                                 // 替换内容
-                                FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
+                                FileUtils.saveFile(file.getAbsolutePath(), data.getBytes()); // "UTF-8"
                                 // 存储路径
                                 sSets.add(FileUtils.getAbsolutePath(file));
                             }
