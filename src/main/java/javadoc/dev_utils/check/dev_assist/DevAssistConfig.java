@@ -20,10 +20,10 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
+        ignoreAnnotateMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath"));
         ignoreAnnotateMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreAnnotateMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
-        ignoreAnnotateMap.put("Source", ArrayUtils.asListArgs("create","create","createWithPath"));
 
         return ignoreAnnotateMap;
     }
@@ -35,10 +35,11 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
-        ignoreFinalMap.put("DevCallback", ArrayUtils.asListArgs("callback","callback","callback","callback"));
-        ignoreFinalMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick","onLongClick","onClick","onLongClick","onClick","onLongClick"));
-        ignoreFinalMap.put("DevFilterCallback", ArrayUtils.asListArgs("filter","filter","isFilter","isFilter","compare","compare"));
-        ignoreFinalMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick"));
+        ignoreFinalMap.put("DataAssist", ArrayUtils.asListArgs("getDataItem","getDataItemPosition","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","setDataList","setDataList","notifyElementChanged"));
+        ignoreFinalMap.put("DevCallback", ArrayUtils.asListArgs("callback","callback","filter","isFilter","compare"));
+        ignoreFinalMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick","onClick","onLongClick","onLongClick"));
+        ignoreFinalMap.put("DevDataSource", ArrayUtils.asListArgs("getDataItem","getDataItemPosition","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","setDataList","setDataList"));
+        ignoreFinalMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemClick","onItemLongClick","onItemLongClick"));
         ignoreFinalMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
 
         return ignoreFinalMap;
@@ -51,25 +52,26 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
-        ignoreStaticMap.put("AdapterDataAssist", ArrayUtils.asListArgs("setAdapterNotify","getDataList","getDataArrayList","getDataCount","getDataItem","getDataItemPosition","getDataFirstItem","getDataLastItem","isFirstItem","isLastItem","isLastItem","clearDataList","clearDataList","addData","addData","addAllData","addAllData","removeData","removeData","removeData","setDataList","setDataList","adapterNotifyDataSetChanged"));
-        ignoreStaticMap.put("DevCallback", ArrayUtils.asListArgs("callback","callback","callback","callback","callback"));
-        ignoreStaticMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick","onLongClick","onClick","onLongClick","onClick","onLongClick","onClick","onLongClick"));
+        ignoreStaticMap.put("DataAssist", ArrayUtils.asListArgs("setDataChanged","getDataSource","getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList","notifyDataChanged","notifyElementChanged"));
+        ignoreStaticMap.put("DevCallback", ArrayUtils.asListArgs("callback","callback","callback","filter","isFilter","compare"));
+        ignoreStaticMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick","onClick","onClick","onLongClick","onLongClick","onLongClick"));
+        ignoreStaticMap.put("DevDataSource", ArrayUtils.asListArgs("getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList"));
         ignoreStaticMap.put("DevDialogCallback", ArrayUtils.asListArgs("onDialogNotify","onDialogShow","onDialogDismiss","onDialogStart","onDialogResume","onDialogPause","onDialogStop","onDialogDestroy"));
-        ignoreStaticMap.put("DevEntry", ArrayUtils.asListArgs("getEntryKey","setEntryKey","getEntryValue","setEntryValue","isCorrect"));
-        ignoreStaticMap.put("DevEvent", ArrayUtils.asListArgs("getCode","setCode","getCodeStr","setCodeStr","getValue","setValue","getObject","setObject","equalsCode","equalsCode","equalsValue","equalsObject"));
-        ignoreStaticMap.put("DevFilterCallback", ArrayUtils.asListArgs("filter","filter","isFilter","isFilter","compare","compare"));
-        ignoreStaticMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick","onItemClick","onItemLongClick"));
+        ignoreStaticMap.put("DevEntry", ArrayUtils.asListArgs("getKey","setKey","getValue","setValue","equalsKey","equalsValue"));
+        ignoreStaticMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick","onItemClick","onItemClick","onItemLongClick","onItemLongClick","onItemLongClick"));
+        ignoreStaticMap.put("DevMultiSelectList", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","select","select","select","unselect","unselect","toggle","getSelectValues","getSelectValuesToReverse","getSelectValue","getSelectValueToPosition"));
+        ignoreStaticMap.put("DevMultiSelectMap", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","isSelectKey","select","select","unselect","toggle","getSelectValue","getSelectValues","getSelectValuesToReverse","getSelectKey","getSelectKeys","getSelectKeysToReverse"));
+        ignoreStaticMap.put("DevNumber", ArrayUtils.asListArgs("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener","checkUpdate"));
+        ignoreStaticMap.put("DevObject", ArrayUtils.asListArgs("getUUID","getObject","setObject","getTag","convertTag","setTag","getModelId","setModelId","getCode","setCode","setCode","getType","setType","getState","setState","getTokenUUID","setTokenUUID","randomTokenUUID","equalsObject","equalsTag","equalsModelId","equalsCode","equalsCode","equalsType","equalsState","equalsTokenUUID","isCorrect"));
+        ignoreStaticMap.put("DevPage", ArrayUtils.asListArgs("reset","getPage","setPage","equalsPage","getPageSize","equalsPageSize","isLastPage","setLastPage","calculateLastPage","isFirstPage","canNextPage","getNextPage","nextPage","isLessThanPageSize"));
         ignoreStaticMap.put("DevVariable", ArrayUtils.asListArgs("getVariables","clearVariables","putVariables","getVariablesSize","isVariables","isVariableValue","removeVariableValue","removeVariableValueAll","isVariable","isVariable","putVariable","putVariable","removeVariable","toggle","getVariableValue","getVariableValueConvert","getVariableValues","getVariableValuesToReverse","getVariableKey","getVariableKeys","getVariableKeysToReverse"));
         ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove","post","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
         ignoreStaticMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener","bindListener","focusChange"));
         ignoreStaticMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreStaticMap.put("IHttpEngine.Response", ArrayUtils.asListArgs("getRequest","getSentRequestAtMillis","getReceivedResponseAtMillis"));
-        ignoreStaticMap.put("MultiSelectListAssist", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","select","select","select","unselect","unselect","toggle","getSelectValues","getSelectValuesToReverse","getSelectValue","getSelectValueToPosition"));
-        ignoreStaticMap.put("MultiSelectMapAssist", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll","isSelect","isSelectKey","select","select","unselect","toggle","getSelectValue","getSelectValues","getSelectValuesToReverse","getSelectKey","getSelectKeys","getSelectKeysToReverse"));
-        ignoreStaticMap.put("NumberControlAssist", ArrayUtils.asListArgs("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getObject","setObject","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","checkUpdate","getNumberListener","setNumberListener"));
-        ignoreStaticMap.put("PageAssist", ArrayUtils.asListArgs("getPageNum","getPageNum","setPageNum","getPageSize","getPageSize","setPageSize","getTotalRow","getTotalRow","setTotalRow","isLastPage","isLastPage","setLastPage","isFirstPage","isFirstPage","isAllowNextPage","getNextPage","nextPage","isLessThanPageSize","reset"));
-        ignoreStaticMap.put("RequestStateAssist", ArrayUtils.asListArgs("getRequestType","getRequestType","setRequestType","equalsRequestType","getRequestHashCode","getRequestHashCodeRandom","equalsHashCode","getRequestState","getRequestState","setRequestState","isRequestNormal","isRequestNever","isRequestIng","isRequestSuccess","isRequestFail","isRequestError","setRequestNormal","setRequestNever","setRequestIng","setRequestSuccess","setRequestFail","setRequestError"));
-        ignoreStaticMap.put("VariableAssist", ArrayUtils.asListArgs("getBooleanVariable","getObjectVariable"));
+        ignoreStaticMap.put("NumberControlAssist", ArrayUtils.asListArgs("getNumber","isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener"));
+        ignoreStaticMap.put("PageAssist", ArrayUtils.asListArgs("reset","getPage","setPage","equalsPage","getPageSize","equalsPageSize","isLastPage","setLastPage","calculateLastPage","isFirstPage","canNextPage","getNextPage","nextPage","isLessThanPageSize"));
+        ignoreStaticMap.put("RequestState", ArrayUtils.asListArgs("getType","setType","equalsType","getRequestUUID","randomRequestUUID","equalsRequestUUID","getState","setState","equalsState","isRequestNormal","isRequestNever","isRequestIng","isRequestSuccess","isRequestFail","isRequestError","setRequestNormal","setRequestNever","setRequestIng","setRequestSuccess","setRequestFail","setRequestError"));
 
         return ignoreStaticMap;
     }
@@ -81,17 +83,17 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
-        ignoreParamMap.put("AbstractCallback", ArrayUtils.asListArgs("setTag","setValue","setObject"));
-        ignoreParamMap.put("AdapterDataAssist", ArrayUtils.asListArgs("setAdapterNotify"));
-        ignoreParamMap.put("DevEntry", ArrayUtils.asListArgs("setEntryKey","setEntryValue"));
-        ignoreParamMap.put("DevEvent", ArrayUtils.asListArgs("setCode","setCodeStr","setValue","setObject"));
-        ignoreParamMap.put("DevExResultCallback", ArrayUtils.asListArgs("setExpandResult"));
+        ignoreParamMap.put("DataAssist", ArrayUtils.asListArgs("setDataChanged"));
+        ignoreParamMap.put("DevEntry", ArrayUtils.asListArgs("setKey","setValue"));
+        ignoreParamMap.put("DevNumber", ArrayUtils.asListArgs("setMinNumber","setMaxNumber","setMinMaxNumber","setCurrentNumber","setCurrentNumber","setResetNumber","setAllowNegative","numberChange","setNumberListener"));
+        ignoreParamMap.put("DevObject", ArrayUtils.asListArgs("setObject","convertTag","setTag","setModelId","setCode","setCode","setType","setState","setTokenUUID"));
+        ignoreParamMap.put("DevPage", ArrayUtils.asListArgs("setPage","setLastPage","calculateLastPage"));
+        ignoreParamMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath"));
         ignoreParamMap.put("DevVariable", ArrayUtils.asListArgs("putVariables","removeVariableValue","removeVariableValueAll","putVariable","putVariable","removeVariable","toggle"));
         ignoreParamMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreParamMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
-        ignoreParamMap.put("PageAssist", ArrayUtils.asListArgs("setPageNum","setPageSize","setTotalRow","setLastPage"));
-        ignoreParamMap.put("RequestStateAssist", ArrayUtils.asListArgs("setRequestType","setRequestState"));
-        ignoreParamMap.put("Source", ArrayUtils.asListArgs("create","create","createWithPath"));
+        ignoreParamMap.put("PageAssist", ArrayUtils.asListArgs("setPage","setLastPage","calculateLastPage"));
+        ignoreParamMap.put("RequestState", ArrayUtils.asListArgs("setType","setState"));
 
         return ignoreParamMap;
     }
@@ -114,26 +116,25 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
-        ignoreUnPublicMap.put("DevModel", ArrayUtils.asListArgs("isCorrect"));
+        ignoreUnPublicMap.put("DataChanged", ArrayUtils.asListArgs("notifyDataChanged","notifyElementChanged"));
+        ignoreUnPublicMap.put("DataManager", ArrayUtils.asListArgs("getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList"));
+        ignoreUnPublicMap.put("DevNumber", ArrayUtils.asListArgs("checkUpdate"));
         ignoreUnPublicMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreUnPublicMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("focusChange"));
         ignoreUnPublicMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged"));
-        ignoreUnPublicMap.put("IAdapterData", ArrayUtils.asListArgs("getDataList","getDataArrayList","getDataCount","getDataItem","getDataItemPosition","getDataFirstItem","getDataLastItem","isFirstItem","isLastItem","isLastItem","clearDataList","clearDataList","addData","addData","addAllData","addAllData","removeData","removeData","removeData","setDataList","setDataList"));
-        ignoreUnPublicMap.put("IAdapterNotify", ArrayUtils.asListArgs("adapterNotifyDataSetChanged"));
-        ignoreUnPublicMap.put("IBaseMultiSelect", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll"));
         ignoreUnPublicMap.put("IHttpEngine", ArrayUtils.asListArgs("newCall","cancelAll","cancelCall","cancelUrl","cancelTag"));
         ignoreUnPublicMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAsync"));
         ignoreUnPublicMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
         ignoreUnPublicMap.put("IJSONEngine", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreUnPublicMap.put("ILogEngine", ArrayUtils.asListArgs("isPrintLog","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreUnPublicMap.put("IMultiSelect", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll"));
         ignoreUnPublicMap.put("IMultiSelectEdit", ArrayUtils.asListArgs("isEditState","setEditState","toggleEditState","selectAll","clearSelectAll","inverseSelect","isSelectAll","isSelect","isNotSelect","getSelectSize","getDataCount"));
         ignoreUnPublicMap.put("IMultiSelectToList", ArrayUtils.asListArgs("isSelect","select","select","select","unselect","unselect","toggle","getSelectValues","getSelectValuesToReverse","getSelectValue","getSelectValueToPosition"));
         ignoreUnPublicMap.put("IMultiSelectToMap", ArrayUtils.asListArgs("isSelect","isSelectKey","select","select","unselect","toggle","getSelectValue","getSelectValues","getSelectValuesToReverse","getSelectKey","getSelectKeys","getSelectKeysToReverse"));
+        ignoreUnPublicMap.put("INumberListener", ArrayUtils.asListArgs("onPrepareChanged","onNumberChanged"));
+        ignoreUnPublicMap.put("INumberOperate", ArrayUtils.asListArgs("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener"));
         ignoreUnPublicMap.put("LoadListener", ArrayUtils.asListArgs("getTranscodeType","onStart","onResponse","onFailure"));
-        ignoreUnPublicMap.put("NumberControlAssist", ArrayUtils.asListArgs("checkUpdate"));
-        ignoreUnPublicMap.put("NumberControlAssist.INumberListener", ArrayUtils.asListArgs("onPrepareChanged","onNumberChanged"));
-        ignoreUnPublicMap.put("NumberControlAssist.INumberOperate", ArrayUtils.asListArgs("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getObject","setObject","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener"));
 
         return ignoreUnPublicMap;
     }
@@ -156,36 +157,35 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnVoidMap() {
         Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
-        ignoreReturnVoidMap.put("AbstractCommonCallback", ArrayUtils.asListArgs("onResult - void","onError - void","onFailure - void"));
-        ignoreReturnVoidMap.put("AdapterDataAssist", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","addData - void","addData - void","addAllData - void","addAllData - void","removeData - void","setDataList - void","setDataList - void","adapterNotifyDataSetChanged - void"));
-        ignoreReturnVoidMap.put("DevCallback", ArrayUtils.asListArgs("callback - void","callback - void","callback - void","callback - void","callback - void"));
-        ignoreReturnVoidMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick - void","onLongClick - void","onClick - void","onLongClick - void","onClick - void","onLongClick - void","onClick - void","onLongClick - void"));
+        ignoreReturnVoidMap.put("DataAssist", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","setDataList - void","setDataList - void","notifyDataChanged - void","notifyElementChanged - void"));
+        ignoreReturnVoidMap.put("DataChanged", ArrayUtils.asListArgs("notifyDataChanged - void","notifyElementChanged - void"));
+        ignoreReturnVoidMap.put("DataManager", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","setDataList - void","setDataList - void"));
+        ignoreReturnVoidMap.put("DevCallback", ArrayUtils.asListArgs("callback - void","callback - void","callback - void"));
+        ignoreReturnVoidMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick - void","onClick - void","onClick - void","onLongClick - void","onLongClick - void","onLongClick - void"));
+        ignoreReturnVoidMap.put("DevDataSource", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","setDataList - void","setDataList - void"));
         ignoreReturnVoidMap.put("DevDialogCallback", ArrayUtils.asListArgs("onDialogNotify - void","onDialogShow - void","onDialogDismiss - void","onDialogStart - void","onDialogResume - void","onDialogPause - void","onDialogStop - void","onDialogDestroy - void"));
-        ignoreReturnVoidMap.put("DevExResultCallback", ArrayUtils.asListArgs("onResult - void","onResult - void","onError - void","onFailure - void"));
         ignoreReturnVoidMap.put("DevHttpEngine", ArrayUtils.asListArgs("setEngine - void"));
         ignoreReturnVoidMap.put("DevImageEngine", ArrayUtils.asListArgs("setEngine - void"));
-        ignoreReturnVoidMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick - void","onItemLongClick - void","onItemClick - void","onItemLongClick - void","onItemClick - void","onItemLongClick - void","onItemClick - void","onItemLongClick - void"));
+        ignoreReturnVoidMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick - void","onItemClick - void","onItemClick - void","onItemLongClick - void","onItemLongClick - void","onItemLongClick - void"));
         ignoreReturnVoidMap.put("DevJSONEngine", ArrayUtils.asListArgs("setEngine - void"));
         ignoreReturnVoidMap.put("DevLogEngine", ArrayUtils.asListArgs("setEngine - void"));
-        ignoreReturnVoidMap.put("DevResultCallback", ArrayUtils.asListArgs("onResult - void"));
+        ignoreReturnVoidMap.put("DevMultiSelectList", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","select - void","unselect - void","toggle - void"));
+        ignoreReturnVoidMap.put("DevMultiSelectMap", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","unselect - void","toggle - void"));
+        ignoreReturnVoidMap.put("DevNumber", ArrayUtils.asListArgs("checkUpdate - void"));
+        ignoreReturnVoidMap.put("DevResultCallback", ArrayUtils.asListArgs("onResult - void","onError - void","onFailure - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove - void","post - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged - void"));
-        ignoreReturnVoidMap.put("IAdapterData", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","addData - void","addData - void","addAllData - void","addAllData - void","removeData - void","setDataList - void","setDataList - void"));
-        ignoreReturnVoidMap.put("IAdapterNotify", ArrayUtils.asListArgs("adapterNotifyDataSetChanged - void"));
-        ignoreReturnVoidMap.put("IBaseMultiSelect", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void"));
         ignoreReturnVoidMap.put("IHttpEngine", ArrayUtils.asListArgs("cancelAll - void","cancelCall - void","cancelUrl - void","cancelTag - void"));
         ignoreReturnVoidMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("cancel - void"));
         ignoreReturnVoidMap.put("IHttpEngine.RequestCallback", ArrayUtils.asListArgs("onStart - void","onCancel - void","onResponse - void","onFailure - void"));
         ignoreReturnVoidMap.put("ILogEngine", ArrayUtils.asListArgs("d - void","e - void","e - void","e - void","w - void","i - void","v - void","wtf - void","json - void","xml - void","dTag - void","eTag - void","eTag - void","eTag - void","wTag - void","iTag - void","vTag - void","wtfTag - void","jsonTag - void","xmlTag - void"));
+        ignoreReturnVoidMap.put("IMultiSelect", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void"));
         ignoreReturnVoidMap.put("IMultiSelectToList", ArrayUtils.asListArgs("select - void","select - void","select - void","unselect - void","toggle - void"));
         ignoreReturnVoidMap.put("IMultiSelectToMap", ArrayUtils.asListArgs("select - void","select - void","unselect - void","toggle - void"));
+        ignoreReturnVoidMap.put("INumberListener", ArrayUtils.asListArgs("onNumberChanged - void"));
         ignoreReturnVoidMap.put("LoadListener", ArrayUtils.asListArgs("onStart - void","onResponse - void","onFailure - void"));
-        ignoreReturnVoidMap.put("MultiSelectListAssist", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","select - void","unselect - void","toggle - void"));
-        ignoreReturnVoidMap.put("MultiSelectMapAssist", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","unselect - void","toggle - void"));
-        ignoreReturnVoidMap.put("NumberControlAssist", ArrayUtils.asListArgs("checkUpdate - void"));
-        ignoreReturnVoidMap.put("NumberControlAssist.INumberListener", ArrayUtils.asListArgs("onNumberChanged - void"));
         ignoreReturnVoidMap.put("PageAssist", ArrayUtils.asListArgs("initPageConfig - void"));
 
         return ignoreReturnVoidMap;

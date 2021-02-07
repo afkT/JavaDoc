@@ -59,7 +59,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.2.6";
+    public static final String DEV_JAVA_VERSION            = "1.2.7";
 
     // =============
     // = DevAssist =
@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.0.7";
+    public static final String DEV_ASSIST_VERSION            = "1.0.8";
 
     // ============
     // = DevOther =
@@ -283,14 +283,13 @@ public final class ApiConfig {
 
         sCatalogMap_Assist.put("dev", "根目录");
         sCatalogMap_Assist.put(".assist", "快捷功能辅助类");
-        sCatalogMap_Assist.put(".assist.adapter", "Adapter 相关");
-        sCatalogMap_Assist.put(".assist.multiselect", "多选模块");
-        sCatalogMap_Assist.put(".assist.multiselect.edit", "多选编辑方法");
-        sCatalogMap_Assist.put(".base", "基类相关");
-        sCatalogMap_Assist.put(".callback", "回调相关");
-        sCatalogMap_Assist.put(".callback.click", "点击回调");
-        sCatalogMap_Assist.put(".callback.common", "通用回调");
-        sCatalogMap_Assist.put(".callback.result", "操作结果回调");
+        sCatalogMap_Assist.put(".base", "实体类基类相关");
+        sCatalogMap_Assist.put(".base.data", "数据操作");
+        sCatalogMap_Assist.put(".base.entry", "KeyValue 实体类");
+        sCatalogMap_Assist.put(".base.expand", "实体类拓展");
+        sCatalogMap_Assist.put(".base.multiselect", "多选编辑操作");
+        sCatalogMap_Assist.put(".base.number", "数值操作");
+        sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
         sCatalogMap_Assist.put(".engine.http", "Http Engine");
         sCatalogMap_Assist.put(".engine.image", "Image Engine");
