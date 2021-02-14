@@ -26,8 +26,13 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("BaseResponse", ArrayUtils.asListArgs("getOriginal"));
         ignoreAnnotateMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onNext","onError","onStart","onComplete"));
         ignoreAnnotateMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreAnnotateMap.put("GlideConfig", ArrayUtils.asListArgs("create","create","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
         ignoreAnnotateMap.put("GlideEngine", ArrayUtils.asListArgs("createGlideEngine"));
-        ignoreAnnotateMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions"));
+        ignoreAnnotateMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
+        ignoreAnnotateMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreAnnotateMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
+        ignoreAnnotateMap.put("GlideEngineImpl.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreAnnotateMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideBlurformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideCircleTransform", ArrayUtils.asListArgs("transform","circleCrop","updateDiskCacheKey"));
         ignoreAnnotateMap.put("GlideTransformUtils.GlideRoundTransform", ArrayUtils.asListArgs("transform","roundCrop","updateDiskCacheKey"));
@@ -61,8 +66,13 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onAccessibilityEvent"));
         ignoreFinalMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreFinalMap.put("GlideConfig", ArrayUtils.asListArgs("setCacheDisk","setCacheMemory","setScaleType","setTransform","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
         ignoreFinalMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
-        ignoreFinalMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions"));
+        ignoreFinalMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder"));
+        ignoreFinalMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreFinalMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
+        ignoreFinalMap.put("GlideEngineImpl.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreFinalMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreFinalMap.put("GlideTransformUtils.GlideBlurformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey","blurBitmap"));
         ignoreFinalMap.put("GlideTransformUtils.GlideCircleTransform", ArrayUtils.asListArgs("transform","circleCrop","updateDiskCacheKey"));
         ignoreFinalMap.put("GlideTransformUtils.GlideRoundTransform", ArrayUtils.asListArgs("transform","roundCrop","updateDiskCacheKey"));
@@ -97,8 +107,13 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("BaseResponse", ArrayUtils.asListArgs("getOriginal"));
         ignoreStaticMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreStaticMap.put("GlideConfig", ArrayUtils.asListArgs("clone","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
         ignoreStaticMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
-        ignoreStaticMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions"));
+        ignoreStaticMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder"));
+        ignoreStaticMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreStaticMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
+        ignoreStaticMap.put("GlideEngineImpl.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreStaticMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreStaticMap.put("GlideTransformUtils.GlideBlurformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey","blurBitmap"));
         ignoreStaticMap.put("GlideTransformUtils.GlideCircleTransform", ArrayUtils.asListArgs("transform","circleCrop","updateDiskCacheKey"));
         ignoreStaticMap.put("GlideTransformUtils.GlideRoundTransform", ArrayUtils.asListArgs("transform","roundCrop","updateDiskCacheKey"));
@@ -136,7 +151,12 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onNext","onError"));
         ignoreParamMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onNext","onError"));
         ignoreParamMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
-        ignoreParamMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions"));
+        ignoreParamMap.put("GlideConfig", ArrayUtils.asListArgs("create","setCacheDisk","setCacheMemory","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
+        ignoreParamMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","setToRequest","buildRequest","priDisplayToRequestBuilder"));
+        ignoreParamMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreParamMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
+        ignoreParamMap.put("GlideEngineImpl.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
+        ignoreParamMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreParamMap.put("GlideTransformUtils.GlideBlurformation", ArrayUtils.asListArgs("transform","updateDiskCacheKey","blurBitmap"));
         ignoreParamMap.put("GlideTransformUtils.GlideCircleTransform", ArrayUtils.asListArgs("transform","circleCrop","updateDiskCacheKey"));
         ignoreParamMap.put("GlideTransformUtils.GlideRoundTransform", ArrayUtils.asListArgs("transform","roundCrop","updateDiskCacheKey"));
@@ -167,6 +187,7 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnMap() {
         Map<String, List<String>> ignoreReturnMap = new HashMap<>();
+        ignoreReturnMap.put("GlideConfig", ArrayUtils.asListArgs("setScaleType","setTransform"));
         ignoreReturnMap.put("OkGoCallback", ArrayUtils.asListArgs("convertResponse"));
 
         return ignoreReturnMap;
@@ -184,7 +205,9 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onStart","getErrorMessage"));
         ignoreUnPublicMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onStart","getErrorMessage","isSuccess"));
         ignoreUnPublicMap.put("BatteryReceiver.BatteryListener", ArrayUtils.asListArgs("onBatteryChanged","onBatteryLow","onBatteryOkay","onPowerConnected","onPowerUsageSummary"));
-        ignoreUnPublicMap.put("GlideEngineImpl", ArrayUtils.asListArgs("canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions"));
+        ignoreUnPublicMap.put("GlideEngineImpl", ArrayUtils.asListArgs("canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder"));
+        ignoreUnPublicMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource"));
+        ignoreUnPublicMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideBlurformation", ArrayUtils.asListArgs("transform"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideCircleTransform", ArrayUtils.asListArgs("transform","circleCrop"));
         ignoreUnPublicMap.put("GlideTransformUtils.GlideRoundTransform", ArrayUtils.asListArgs("transform","roundCrop"));
@@ -235,6 +258,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("BatteryReceiver.BatteryListener", ArrayUtils.asListArgs("onBatteryChanged - void","onBatteryLow - void","onBatteryOkay - void","onPowerConnected - void","onPowerUsageSummary - void"));
         ignoreReturnVoidMap.put("EventBusUtils", ArrayUtils.asListArgs("register - void","unregister - void","post - void","cancelEventDelivery - void","postSticky - void","removeStickyEvent - void","removeAllStickyEvents - void"));
         ignoreReturnVoidMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage - void","loadImage - void","loadImage - void","loadFolderImage - void","loadAsGifImage - void","loadGridImage - void"));
+        ignoreReturnVoidMap.put("GlideEngineImpl", ArrayUtils.asListArgs("priDisplayToRequestBuilder - void","priDisplayToRequestBuilder - void"));
         ignoreReturnVoidMap.put("GlideUtils", ArrayUtils.asListArgs("init - void","clearDiskCache - void","clearMemoryCache - void","onLowMemory - void"));
         ignoreReturnVoidMap.put("GlideUtils.GlideLoader", ArrayUtils.asListArgs("preload - void","preload - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToGif - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToDrawable - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","displayImageToFile - void","loadImageBitmap - void","loadImageBitmap - void","loadImageDrawable - void","loadImageDrawable - void","loadImageFile - void","loadImageFile - void","loadImageGif - void","loadImageGif - void","cancelDisplayTask - void","cancelDisplayTask - void","destroy - void","pause - void","resume - void","stop - void","start - void"));
         ignoreReturnVoidMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("_finalPrintLog - void"));

@@ -29,6 +29,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("CalendarUtils.Festival", ArrayUtils.asListArgs("compareTo","toString"));
         ignoreAnnotateMap.put("ClickUtils.OnCountClickListener", ArrayUtils.asListArgs("onClick"));
         ignoreAnnotateMap.put("ClickUtils.OnDebouncingClickListener", ArrayUtils.asListArgs("onClick"));
+        ignoreAnnotateMap.put("ClickUtils.OnMultiClickListener", ArrayUtils.asListArgs("doClick","doInvalidClick"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo", ArrayUtils.asListArgs("toString"));
         ignoreAnnotateMap.put("ColorUtils.ColorInfo.ColorParser", ArrayUtils.asListArgs("handleColor"));
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfo", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
@@ -259,6 +260,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("ClassUtils", ArrayUtils.asListArgs("getClass","getClass"));
         ignoreParamMap.put("ClickUtils.OnCountClickListener", ArrayUtils.asListArgs("onClick"));
         ignoreParamMap.put("ClickUtils.OnDebouncingClickListener", ArrayUtils.asListArgs("onClick"));
+        ignoreParamMap.put("ClickUtils.OnMultiClickListener", ArrayUtils.asListArgs("doClick","doInvalidClick"));
         ignoreParamMap.put("ColorUtils.ColorInfo.ColorParser", ArrayUtils.asListArgs("handleColor"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfo", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfoUri", ArrayUtils.asListArgs("getSelection","getSelectionArgs"));
@@ -459,6 +461,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ClickUtils", ArrayUtils.asListArgs("setCheckViewId - void","setGlobalIntervalTime - void","remove - void"));
         ignoreReturnVoidMap.put("ClickUtils.OnCountClickListener", ArrayUtils.asListArgs("doClick - void","doInvalidClick - void"));
         ignoreReturnVoidMap.put("ClickUtils.OnDebouncingClickListener", ArrayUtils.asListArgs("doClick - void","doInvalidClick - void"));
+        ignoreReturnVoidMap.put("ClickUtils.OnMultiClickListener", ArrayUtils.asListArgs("doMultiClick - void"));
         ignoreReturnVoidMap.put("CloseUtils", ArrayUtils.asListArgs("closeIO - void","closeIOQuietly - void","flush - void","flushQuietly - void","flushCloseIO - void","flushCloseIOQuietly - void","flushCloseIO - void","flushCloseIOQuietly - void"));
         ignoreReturnVoidMap.put("CollectionUtils.ArrayWithTypeToken", ArrayUtils.asListArgs("put - void","newInstance - void","newInstance - void"));
         ignoreReturnVoidMap.put("ColorUtils", ArrayUtils.asListArgs("setParser - void","sortGray - void","sortHSB - void"));
