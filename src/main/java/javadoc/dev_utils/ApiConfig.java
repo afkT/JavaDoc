@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.0.8";
+    public static final String DEV_ASSIST_VERSION            = "1.0.9";
 
     // ============
     // = DevOther =
@@ -282,6 +282,7 @@ public final class ApiConfig {
         // =============
 
         sCatalogMap_Assist.put("dev", "根目录");
+        sCatalogMap_Assist.put(".adapter", "适配器相关");
         sCatalogMap_Assist.put(".assist", "快捷功能辅助类");
         sCatalogMap_Assist.put(".base", "实体类基类相关");
         sCatalogMap_Assist.put(".base.data", "数据操作");
@@ -293,6 +294,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
         sCatalogMap_Assist.put(".engine.http", "Http Engine");
         sCatalogMap_Assist.put(".engine.image", "Image Engine");
+        sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
         sCatalogMap_Assist.put(".engine.json", "JSON Engine");
         sCatalogMap_Assist.put(".engine.log", "Log Engine");
 
@@ -302,6 +304,11 @@ public final class ApiConfig {
 
         sCatalogMap_Other.put("dev", "根目录");
         sCatalogMap_Other.put(".assist", "常用辅助类封装");
+        sCatalogMap_Other.put(".engine", "兼容 Engine");
+        sCatalogMap_Other.put(".engine.http", "Http Engine");
+        sCatalogMap_Other.put(".engine.image", "Image Engine");
+        sCatalogMap_Other.put(".engine.json", "JSON Engine");
+        sCatalogMap_Other.put(".engine.log", "Log Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.picture", "PictureSelector 图片选择库");
@@ -423,7 +430,7 @@ public final class ApiConfig {
         sFilterMethodMap.put("ROMUtils.java", new String[]{"getName", "getVersion", "toString"});
         sFilterMethodMap.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss", "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
         sFilterMethodMap.put("SnackbarUtils.java", new String[]{"getRootGravity", "setRootGravity", "getRootCornerRadius", "setRootCornerRadius", "getRootBackgroundTintColor", "setRootBackgroundTintColor", "getRootBackground", "setRootBackground", "getRootMargin", "setRootMargin", "getRootAlpha", "setRootAlpha", "getTextGravity", "setTextGravity", "getTextColor", "setTextColor", "getTextSize", "setTextSize", "getTextMaxLines", "setTextMaxLines", "getTextEllipsize", "setTextEllipsize", "getTextTypeface", "setTextTypeface", "getTextPadding", "setTextPadding", "getActionGravity", "setActionGravity", "getActionColor", "setActionColor", "getActionSize", "setActionSize", "getActionPadding", "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor", "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
-        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick", "getCount", "getInvalidCount", "getInvalidCycleNumber"});
+        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick", "doMultiClick", "getCount", "getInvalidCount", "getInvalidCycleNumber"});
         sFilterMethodMap.put("ScreenshotUtils.java", new String[]{"onScreenshot", "onChange", "onChecker"});
 
         // ==========
