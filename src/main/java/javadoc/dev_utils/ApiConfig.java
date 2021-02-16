@@ -311,10 +311,13 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.log", "Log Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
+        sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
         sCatalogMap_Other.put(".other.picture", "PictureSelector 图片选择库");
         sCatalogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
         sCatalogMap_Other.put(".other.retrofit.response", "请求响应解析");
         sCatalogMap_Other.put(".other.retrofit.subscriber", "请求响应处理");
+        sCatalogMap_Other.put(".other.work", "WorkManager Utils");
+        sCatalogMap_Other.put(".other.work.demo", "WorkManager 使用 Demo");
         sCatalogMap_Other.put(".receiver", "BroadcastReceiver 监听相关");
         sCatalogMap_Other.put(".service", "Service 相关");
         sCatalogMap_Other.put(".temp", "临时快捷调用工具类");
