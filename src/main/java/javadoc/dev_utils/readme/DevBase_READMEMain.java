@@ -119,6 +119,12 @@ final class DevBase_READMEMain {
         buffer.append("架构只是一种思维方式，不管是 MVC、MVP 还是 MVVM，都只是一种思考问题、解决问题的思维");
         buffer.append("\n\n");
         buffer.append("其目的是要解决编程过程中，模块内部高内聚、模块与模块之间低耦合、可维护性、易测试等问题");
+        buffer.append("\n\n");
+        buffer.append("* 混淆");
+        buffer.append("\n\n");
+        buffer.append("> -keep class 包名.databinding.** {*;}");
+        buffer.append("\n\n");
+        buffer.append("因为 [ViewBindingUtils](https://github.com/afkT/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base/utils/ViewBindingUtils.kt) 是通过反射进行初始化，防止方法 `bind`、`inflate` 被混淆，所以需要忽略自动生成的 ViewBinding 类");
 
         buffer.append("\n\n");
     }
