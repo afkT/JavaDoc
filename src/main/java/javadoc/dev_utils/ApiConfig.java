@@ -342,6 +342,7 @@ public final class ApiConfig {
         sCatalogMap_Base.put("dev.base", "根目录");
         sCatalogMap_Base.put(".able", "基类库接口相关");
         sCatalogMap_Base.put(".activity", "核心 Base Activity 代码");
+        sCatalogMap_Base.put(".adapter", "RecyclerView ViewBinding ViewHolder");
         sCatalogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
         sCatalogMap_Base.put(".expand.content", "Content Layout 基类");
         sCatalogMap_Base.put(".expand.mvp", "MVP 架构基类");
@@ -356,6 +357,7 @@ public final class ApiConfig {
 
         sCatalogMap_BaseMVVM.put("dev.base", "根目录");
         sCatalogMap_BaseMVVM.put(".able", "基类库接口相关");
+        sCatalogMap_BaseMVVM.put(".adapter", "RecyclerView ViewDataBinding ViewHolder");
         sCatalogMap_BaseMVVM.put(".expand", "基于 Base Activity、Fragment 扩展包");
         sCatalogMap_BaseMVVM.put(".expand.content", "Content Layout MVVM 基类");
         sCatalogMap_BaseMVVM.put(".expand.mvvm", "MVVM 架构基类");
