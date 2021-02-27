@@ -44,7 +44,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.1.6";
+    public static final String DEV_APP_VERSION            = "2.1.7";
 
     // ===========
     // = DevJava =
@@ -59,7 +59,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.2.7";
+    public static final String DEV_JAVA_VERSION            = "1.2.8";
 
     // =============
     // = DevAssist =
@@ -117,7 +117,7 @@ public final class ApiConfig {
     // DevBase GitHub 项目文件路径
     public static final String DEV_BASE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
     // DevBase 版本号
-    public static final String DEV_BASE_VERSION            = "1.0.3";
+    public static final String DEV_BASE_VERSION            = "1.0.4";
 
     // ===============
     // = DevBaseMVVM =
@@ -132,7 +132,7 @@ public final class ApiConfig {
     // DevBaseMVVM GitHub 项目文件路径
     public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
     // DevBaseMVVM 版本号
-    public static final String DEV_BASE_MVVM_VERSION            = "1.0.1";
+    public static final String DEV_BASE_MVVM_VERSION            = "1.0.2";
 
     // ===============
     // = DevStandard =
