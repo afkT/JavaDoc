@@ -144,6 +144,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("Base64.Encoder", ArrayUtils.asListArgs("maxOutputSize","process"));
         ignoreStaticMap.put("Base64Cipher", ArrayUtils.asListArgs("decrypt","encrypt"));
         ignoreStaticMap.put("BeepVibrateAssist", ArrayUtils.asListArgs("shouldBeep","streamUpdate","isPlayBeep","isVibrate","setVibrate","setVibrate","setMediaPlayer","playBeepSoundAndVibrate","close"));
+        ignoreStaticMap.put("BigDecimalUtils.Config", ArrayUtils.asListArgs("getScale","getRoundingMode"));
+        ignoreStaticMap.put("BigDecimalUtils.Operation", ArrayUtils.asListArgs("getBigDecimal","setBigDecimal","getConfig","setConfig","setConfig","removeConfig","setScale","setScale","setScaleByConfig","clone","toString","toPlainString","toEngineeringString","intValue","floatValue","longValue","doubleValue","add","add","add","subtract","subtract","subtract","multiply","multiply","multiply","divide","divide","divide","divide","divide","divide","divide","divide","divide","remainder","remainder","remainder","round","round","round","compareTo","compareTo","compareTo","formatMoney","formatMoney","formatMoney","formatMoney","formatMoney"));
         ignoreStaticMap.put("CalendarUtils.Festival", ArrayUtils.asListArgs("isFestival","isFestival","isFestival","compareTo","toString"));
         ignoreStaticMap.put("CalendarUtils.SolarLunar", ArrayUtils.asListArgs("getLunarYearDays","getLunarLeapDays","getLunarLeapMonth","getLunarMonthDays","getLunarGanZhi","getLunarMonthChinese","getLunarDayChinese","getSolarTermsIndex","getSolarTerms","getSolarTermsDate"));
         ignoreStaticMap.put("CameraAssist", ArrayUtils.asListArgs("openDriver","closeDriver","startPreview","stopPreview","freeCameraResource","getCameraResolution","getPreviewSize","getCameraSizeAssist","getCamera","setCamera","setPreviewNotify","setAutoFocus","isPreviewing","setAutoInterval","setFlashlightOn","setFlashlightOff","isFlashlightOn"));
@@ -452,7 +454,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("AutoFocusAssist", ArrayUtils.asListArgs("setFocusModes - void","setAutoFocus - void","onAutoFocus - void","autoFocusAgainLater - void","start - void","stop - void","cancelOutstandingTask - void"));
         ignoreReturnVoidMap.put("BarUtils", ArrayUtils.asListArgs("addMarginTopEqualStatusBarHeight - void","subtractMarginTopEqualStatusBarHeight - void","hideStatusBarView - void","hideStatusBarView - void","showStatusBarView - void"));
         ignoreReturnVoidMap.put("BeepVibrateAssist", ArrayUtils.asListArgs("streamUpdate - void","close - void"));
-        ignoreReturnVoidMap.put("BigDecimalUtils", ArrayUtils.asListArgs("setScale - void","setRoundingMode - void"));
+        ignoreReturnVoidMap.put("BigDecimalUtils", ArrayUtils.asListArgs("setScale - void"));
         ignoreReturnVoidMap.put("CalendarUtils", ArrayUtils.asListArgs("setFestivalHook - void"));
         ignoreReturnVoidMap.put("CameraAssist", ArrayUtils.asListArgs("closeDriver - void","startPreview - void","stopPreview - void","freeCameraResource - void"));
         ignoreReturnVoidMap.put("CameraAssist.PreviewNotify", ArrayUtils.asListArgs("stopPreviewNotify - void","startPreviewNotify - void"));
