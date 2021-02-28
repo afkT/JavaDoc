@@ -41,6 +41,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("JCLogUtils", ArrayUtils.asListArgs("d","e","e","e","i","xml","dTag","eTag","eTag","eTag","iTag","xmlTag"));
         ignoreAnnotateMap.put("KeyValue", ArrayUtils.asListArgs("toString"));
         ignoreAnnotateMap.put("LogPrintUtils", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreAnnotateMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
+        ignoreAnnotateMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("getPendingIntent","setPendingIntent","getIcon","setIcon","getTicker","setTicker","getTitle","setTitle","getContent","setContent","isAutoCancel","setAutoCancel","getVibratePattern","setVibratePattern","getLightPattern","setLightPattern","getChannel","setChannel"));
         ignoreAnnotateMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("ROMUtils.RomInfo", ArrayUtils.asListArgs("toString"));
         ignoreAnnotateMap.put("ScaleUtils.XY", ArrayUtils.asListArgs("getXYx","getXY","getXY","compareTo"));
@@ -186,6 +188,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
         ignoreStaticMap.put("LogConfig", ArrayUtils.asListArgs("methodCount","methodOffset","outputMethodAll","displayThreadInfo","sortLog","logLevel","tag"));
         ignoreStaticMap.put("LoggerPrinter", ArrayUtils.asListArgs("other","getLogConfig","init","init","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag","isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
+        ignoreStaticMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("getPendingIntent","setPendingIntent","getIcon","setIcon","getTicker","setTicker","getTitle","setTitle","getContent","setContent","isAutoCancel","setAutoCancel","getVibratePattern","setVibratePattern","getLightPattern","setLightPattern","getChannel","setChannel"));
         ignoreStaticMap.put("NotificationUtils.VibratePattern", ArrayUtils.asListArgs("isEmpty"));
         ignoreStaticMap.put("PathUtils.AppExternalPath", ArrayUtils.asListArgs("getAppDataPath","getAppDataDir","getAppDataPath","getAppDataDir","getAppCachePath","getAppCacheDir","getAppCachePath","getAppCacheDir","getExternalFilesPath","getExternalFilesDir","getAppFilesPath","getAppFilesDir","getAppFilesPath","getAppFilesDir","getAppMusicPath","getAppMusicDir","getAppPodcastsPath","getAppPodcastsDir","getAppRingtonesPath","getAppRingtonesDir","getAppAlarmsPath","getAppAlarmsDir","getAppNotificationsPath","getAppNotificationsDir","getAppPicturesPath","getAppPicturesDir","getAppMoviesPath","getAppMoviesDir","getAppDownloadPath","getAppDownloadDir","getAppDCIMPath","getAppDCIMDir","getAppDocumentsPath","getAppDocumentsDir","getAppAudiobooksPath","getAppAudiobooksDir","getAppObbPath","getAppObbDir"));
         ignoreStaticMap.put("PathUtils.InternalPath", ArrayUtils.asListArgs("getRootPath","getRootDirectory","getDataPath","getDataDirectory","getDownloadCachePath","getDownloadCacheDirectory","getAppDataPath","getAppDataDir","getAppDataPath","getAppDataDir","getAppCachePath","getAppCacheDir","getAppCachePath","getAppCacheDir","getAppCodeCachePath","getAppCodeCacheDir","getAppDbsPath","getAppDbsDir","getAppDbPath","getAppDbFile","getAppFilesPath","getAppFilesDir","getAppFilesPath","getAppFilesDir","getAppSpPath","getAppSpDir","getAppSpPath","getAppSpFile","getAppNoBackupFilesPath","getAppNoBackupFilesDir","getAppMusicPath","getAppMusicDir","getAppPodcastsPath","getAppPodcastsDir","getAppRingtonesPath","getAppRingtonesDir","getAppAlarmsPath","getAppAlarmsDir","getAppNotificationsPath","getAppNotificationsDir","getAppPicturesPath","getAppPicturesDir","getAppMoviesPath","getAppMoviesDir","getAppDownloadPath","getAppDownloadDir","getAppDCIMPath","getAppDCIMDir","getAppDocumentsPath","getAppDocumentsDir","getAppAudiobooksPath","getAppAudiobooksDir"));
@@ -271,6 +274,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("JCLogUtils", ArrayUtils.asListArgs("d","e","e","e","i","xml","dTag","eTag","eTag","eTag","iTag","xmlTag"));
         ignoreParamMap.put("LogPrintUtils", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreParamMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
+        ignoreParamMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("setPendingIntent","setIcon","setTicker","setTitle","setContent","setAutoCancel","setVibratePattern","setLightPattern","setChannel"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("ScaleUtils.XY", ArrayUtils.asListArgs("getXY","compareTo"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorChangeListener", ArrayUtils.asListArgs("onAccuracyChanged","onSensorChanged"));
@@ -386,6 +391,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LogPrintUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","splitErrorMessage"));
         ignoreUnPublicMap.put("LogPrintUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("LoggerPrinter", ArrayUtils.asListArgs("isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
+        ignoreUnPublicMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("PermissionUtils", ArrayUtils.asListArgs("isGranted","onRequestPermissionsResultCommon","checkPermissions","requestCallback","getPermissionsStatus"));
         ignoreUnPublicMap.put("PermissionUtils.PermissionActivity", ArrayUtils.asListArgs("start","onCreate"));
         ignoreUnPublicMap.put("PermissionUtils.PermissionCallback", ArrayUtils.asListArgs("onGranted","onDenied"));
