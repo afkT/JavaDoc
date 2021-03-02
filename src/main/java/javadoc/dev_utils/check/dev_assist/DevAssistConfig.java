@@ -26,6 +26,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DrawableListener", ArrayUtils.asListArgs("getTranscodeType"));
         ignoreAnnotateMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
+        ignoreAnnotateMap.put("Function.Method", ArrayUtils.asListArgs("method"));
+        ignoreAnnotateMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
         ignoreAnnotateMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
 
         return ignoreAnnotateMap;
@@ -72,6 +74,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove","post","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
         ignoreStaticMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener","bindListener","focusChange"));
         ignoreStaticMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
+        ignoreStaticMap.put("Function.Operation", ArrayUtils.asListArgs("getObject","setObject","operation","operation","tryCatch","thread","thread","threadPool","threadPool","threadPool","threadPool","threadCatch","threadCatch","threadPoolCatch","threadPoolCatch","threadPoolCatch","threadPoolCatch"));
         ignoreStaticMap.put("IHttpEngine.Response", ArrayUtils.asListArgs("getRequest","getSentRequestAtMillis","getReceivedResponseAtMillis"));
         ignoreStaticMap.put("NumberControlAssist", ArrayUtils.asListArgs("getNumber","isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener"));
         ignoreStaticMap.put("PageAssist", ArrayUtils.asListArgs("reset","getPage","setPage","equalsPage","getPageSize","equalsPageSize","isLastPage","setLastPage","calculateLastPage","isFirstPage","canNextPage","getNextPage","nextPage","isLessThanPageSize"));
@@ -96,6 +99,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath"));
         ignoreParamMap.put("DevVariable", ArrayUtils.asListArgs("putVariables","removeVariableValue","removeVariableValueAll","putVariable","putVariable","removeVariable","toggle"));
         ignoreParamMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
+        ignoreParamMap.put("Function.Method", ArrayUtils.asListArgs("method"));
+        ignoreParamMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
         ignoreParamMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
         ignoreParamMap.put("PageAssist", ArrayUtils.asListArgs("setPage","setLastPage","calculateLastPage"));
         ignoreParamMap.put("RequestState", ArrayUtils.asListArgs("setType","setState"));
@@ -128,6 +133,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("focusChange"));
         ignoreUnPublicMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged"));
+        ignoreUnPublicMap.put("Function.Method", ArrayUtils.asListArgs("method"));
+        ignoreUnPublicMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
         ignoreUnPublicMap.put("IHttpEngine", ArrayUtils.asListArgs("newCall","cancelAll","cancelCall","cancelUrl","cancelTag"));
         ignoreUnPublicMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAsync"));
         ignoreUnPublicMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
