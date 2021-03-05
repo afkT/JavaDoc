@@ -102,7 +102,7 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = "1.0.7";
+    public static final String DEV_WIDGET_VERSION            = "1.0.8";
 
     // ===========
     // = DevBase =
@@ -334,6 +334,7 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.custom", "自定义 View");
         sCatalogMap_Widget.put(".widget.function", "需求功能 View");
         sCatalogMap_Widget.put(".widget.ui", "UI View");
+        sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
         sCatalogMap_Widget.put(".widget.utils", "工具类目录");
 
         // ===========
