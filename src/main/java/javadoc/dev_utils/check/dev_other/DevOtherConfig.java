@@ -31,7 +31,9 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ChainWorker.BWorker", ArrayUtils.asListArgs("doWork"));
         ignoreAnnotateMap.put("ChainWorker.CWorker", ArrayUtils.asListArgs("doWork"));
         ignoreAnnotateMap.put("ChainWorker.DWorker", ArrayUtils.asListArgs("doWork"));
-        ignoreAnnotateMap.put("GlideConfig", ArrayUtils.asListArgs("create","create","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
+        ignoreAnnotateMap.put("DevLoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreAnnotateMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request","isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
+        ignoreAnnotateMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreAnnotateMap.put("GlideEngine", ArrayUtils.asListArgs("createGlideEngine"));
         ignoreAnnotateMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
         ignoreAnnotateMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
@@ -45,9 +47,9 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreAnnotateMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreAnnotateMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
+        ignoreAnnotateMap.put("ImageConfig", ArrayUtils.asListArgs("create","create","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
         ignoreAnnotateMap.put("LocationWorker", ArrayUtils.asListArgs("doWork","test"));
         ignoreAnnotateMap.put("LogWorker", ArrayUtils.asListArgs("doWork"));
-        ignoreAnnotateMap.put("LoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreAnnotateMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreAnnotateMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("NotificationService", ArrayUtils.asListArgs("onCreate","onDestroy","onStartCommand"));
@@ -74,7 +76,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onAccessibilityEvent"));
         ignoreFinalMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
-        ignoreFinalMap.put("GlideConfig", ArrayUtils.asListArgs("setCacheDisk","setCacheMemory","setScaleType","setTransform","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
+        ignoreFinalMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request","isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
+        ignoreFinalMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreFinalMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
         ignoreFinalMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder"));
         ignoreFinalMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
@@ -88,6 +91,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreFinalMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreFinalMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
+        ignoreFinalMap.put("ImageConfig", ArrayUtils.asListArgs("setCacheDisk","setCacheMemory","setScaleType","setTransform","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
         ignoreFinalMap.put("LogWorker", ArrayUtils.asListArgs("observe"));
         ignoreFinalMap.put("LubanUtils", ArrayUtils.asListArgs("compress","compress","compress","compress","compress","compress","compress"));
         ignoreFinalMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("containsKey","removeValueForKey","removeValuesForKeys","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
@@ -120,7 +124,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("ChainWorker.BWorker", ArrayUtils.asListArgs("doWork"));
         ignoreStaticMap.put("ChainWorker.CWorker", ArrayUtils.asListArgs("doWork"));
         ignoreStaticMap.put("ChainWorker.DWorker", ArrayUtils.asListArgs("doWork"));
-        ignoreStaticMap.put("GlideConfig", ArrayUtils.asListArgs("clone","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
+        ignoreStaticMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request","isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
+        ignoreStaticMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreStaticMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
         ignoreStaticMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder"));
         ignoreStaticMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
@@ -134,6 +139,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("GlideUtils.GlideLoader", ArrayUtils.asListArgs("preload","preload","displayImage","displayImage","displayImage","displayImage","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToGif","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToDrawable","displayImageToFile","displayImageToFile","displayImageToFile","displayImageToFile","loadImageBitmap","loadImageBitmap","loadImageDrawable","loadImageDrawable","loadImageFile","loadImageFile","loadImageGif","loadImageGif","cancelDisplayTask","cancelDisplayTask","destroy","pause","resume","stop","start"));
         ignoreStaticMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreStaticMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
+        ignoreStaticMap.put("ImageConfig", ArrayUtils.asListArgs("clone","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail"));
         ignoreStaticMap.put("LocationWorker", ArrayUtils.asListArgs("doWork","test"));
         ignoreStaticMap.put("LogWorker", ArrayUtils.asListArgs("onStopped","doWork","code","getLog"));
         ignoreStaticMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("getMMKV","mmapID","isMMKVEmpty","isMMKVNotEmpty","containsKey","removeValueForKey","removeValuesForKeys","sync","async","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
@@ -168,7 +174,9 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onNext","onError"));
         ignoreParamMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("ChainWorker", ArrayUtils.asListArgs("builder"));
-        ignoreParamMap.put("GlideConfig", ArrayUtils.asListArgs("create","setCacheDisk","setCacheMemory","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
+        ignoreParamMap.put("DevLoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreParamMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request","isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
+        ignoreParamMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreParamMap.put("GlideEngineImpl", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable","setToRequest","buildRequest","priDisplayToRequestBuilder"));
         ignoreParamMap.put("GlideEngineImpl.InnerBitmapTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
         ignoreParamMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
@@ -181,8 +189,8 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("GlideUtils", ArrayUtils.asListArgs("with","with","with","with","with","with"));
         ignoreParamMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreParamMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
+        ignoreParamMap.put("ImageConfig", ArrayUtils.asListArgs("create","setCacheDisk","setCacheMemory","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail"));
         ignoreParamMap.put("LogWorker", ArrayUtils.asListArgs("observe"));
-        ignoreParamMap.put("LoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreParamMap.put("LubanUtils", ArrayUtils.asListArgs("compress","compress","compress","compress","compress","compress","compress"));
         ignoreParamMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreParamMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
@@ -206,7 +214,7 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnMap() {
         Map<String, List<String>> ignoreReturnMap = new HashMap<>();
-        ignoreReturnMap.put("GlideConfig", ArrayUtils.asListArgs("setScaleType","setTransform"));
+        ignoreReturnMap.put("ImageConfig", ArrayUtils.asListArgs("setScaleType","setTransform"));
         ignoreReturnMap.put("OkGoCallback", ArrayUtils.asListArgs("convertResponse"));
 
         return ignoreReturnMap;

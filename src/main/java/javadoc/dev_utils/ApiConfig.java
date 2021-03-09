@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.1.0";
+    public static final String DEV_ASSIST_VERSION            = "1.1.1";
 
     // ============
     // = DevOther =
@@ -297,6 +297,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
         sCatalogMap_Assist.put(".engine.json", "JSON Engine");
         sCatalogMap_Assist.put(".engine.log", "Log Engine");
+        sCatalogMap_Assist.put(".engine.permission", "Permission Engine");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
@@ -310,6 +311,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.image", "Image Engine");
         sCatalogMap_Other.put(".engine.json", "JSON Engine");
         sCatalogMap_Other.put(".engine.log", "Log Engine");
+        sCatalogMap_Other.put(".engine.permission", "Permission Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
