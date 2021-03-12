@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.1.1";
+    public static final String DEV_ASSIST_VERSION            = "1.1.3";
 
     // ============
     // = DevOther =
@@ -292,10 +292,13 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".base.number", "数值操作");
         sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
+        sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine");
+        sCatalogMap_Assist.put(".engine.compress.listener", "图片压缩回调事件");
         sCatalogMap_Assist.put(".engine.http", "Http Engine");
         sCatalogMap_Assist.put(".engine.image", "Image Engine");
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
         sCatalogMap_Assist.put(".engine.json", "JSON Engine");
+        sCatalogMap_Assist.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Assist.put(".engine.log", "Log Engine");
         sCatalogMap_Assist.put(".engine.permission", "Permission Engine");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
@@ -307,15 +310,16 @@ public final class ApiConfig {
         sCatalogMap_Other.put("dev", "根目录");
         sCatalogMap_Other.put(".assist", "常用辅助类封装");
         sCatalogMap_Other.put(".engine", "兼容 Engine");
+        sCatalogMap_Other.put(".engine.compress", "Image Compress Engine");
         sCatalogMap_Other.put(".engine.http", "Http Engine");
         sCatalogMap_Other.put(".engine.image", "Image Engine");
         sCatalogMap_Other.put(".engine.json", "JSON Engine");
+        sCatalogMap_Other.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Other.put(".engine.log", "Log Engine");
         sCatalogMap_Other.put(".engine.permission", "Permission Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
-        sCatalogMap_Other.put(".other.picture", "PictureSelector 图片选择库");
         sCatalogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
         sCatalogMap_Other.put(".other.retrofit.response", "请求响应解析");
         sCatalogMap_Other.put(".other.retrofit.subscriber", "请求响应处理");

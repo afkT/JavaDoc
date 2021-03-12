@@ -101,6 +101,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreParamMap.put("Function.Method", ArrayUtils.asListArgs("method"));
         ignoreParamMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
+        ignoreParamMap.put("ICompressEngine", ArrayUtils.asListArgs("compress","compress","compress","compress"));
         ignoreParamMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
         ignoreParamMap.put("PageAssist", ArrayUtils.asListArgs("setPage","setLastPage","calculateLastPage"));
         ignoreParamMap.put("RequestState", ArrayUtils.asListArgs("setType","setState"));
@@ -126,6 +127,7 @@ final class DevAssistConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
+        ignoreUnPublicMap.put("CompressFilter", ArrayUtils.asListArgs("apply"));
         ignoreUnPublicMap.put("DataChanged", ArrayUtils.asListArgs("notifyDataChanged","notifyElementChanged"));
         ignoreUnPublicMap.put("DataManager", ArrayUtils.asListArgs("getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList"));
         ignoreUnPublicMap.put("DevNumber", ArrayUtils.asListArgs("checkUpdate"));
@@ -135,11 +137,13 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged"));
         ignoreUnPublicMap.put("Function.Method", ArrayUtils.asListArgs("method"));
         ignoreUnPublicMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
+        ignoreUnPublicMap.put("ICompressEngine", ArrayUtils.asListArgs("compress","compress","compress","compress"));
         ignoreUnPublicMap.put("IHttpEngine", ArrayUtils.asListArgs("newCall","cancelAll","cancelCall","cancelUrl","cancelTag"));
         ignoreUnPublicMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAsync"));
         ignoreUnPublicMap.put("IImageEngine", ArrayUtils.asListArgs("pause","resume","pause","resume","preload","preload","clear","clear","clearDiskCache","clearMemoryCache","clearAllCache","lowMemory","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","display","loadImage","loadImage","loadImage","loadBitmap","loadBitmap","loadBitmap","loadDrawable","loadDrawable","loadDrawable"));
         ignoreUnPublicMap.put("IJSONEngine", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreUnPublicMap.put("ILogEngine", ArrayUtils.asListArgs("isPrintLog","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreUnPublicMap.put("IMediaEngine", ArrayUtils.asListArgs("openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","getConfig","setConfig","getCameraSavePath","getCompressSavePath","setSavePath","getMinimumCompressSize","setMinimumCompressSize","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorPaths","getSingleSelector","getSingleSelectorPath"));
         ignoreUnPublicMap.put("IMultiSelect", ArrayUtils.asListArgs("clearSelects","getSelectSize","getSelects","putSelects","putSelects","isSelect","isSelectValue","unselectValue","unselectValueAll"));
         ignoreUnPublicMap.put("IMultiSelectEdit", ArrayUtils.asListArgs("isEditState","setEditState","toggleEditState","selectAll","clearSelectAll","inverseSelect","isSelectAll","isSelect","isNotSelect","getSelectSize","getDataCount"));
         ignoreUnPublicMap.put("IMultiSelectToList", ArrayUtils.asListArgs("isSelect","select","select","select","unselect","unselect","toggle","getSelectValues","getSelectValuesToReverse","getSelectValue","getSelectValueToPosition"));
@@ -149,6 +153,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IPermissionEngine", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreUnPublicMap.put("IPermissionEngine.Callback", ArrayUtils.asListArgs("onGranted","onDenied"));
         ignoreUnPublicMap.put("LoadListener", ArrayUtils.asListArgs("getTranscodeType","onStart","onResponse","onFailure"));
+        ignoreUnPublicMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
+        ignoreUnPublicMap.put("OnRenameListener", ArrayUtils.asListArgs("rename"));
 
         return ignoreUnPublicMap;
     }
@@ -176,6 +182,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DataManager", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","setDataList - void","setDataList - void"));
         ignoreReturnVoidMap.put("DevCallback", ArrayUtils.asListArgs("callback - void","callback - void","callback - void"));
         ignoreReturnVoidMap.put("DevClickCallback", ArrayUtils.asListArgs("onClick - void","onClick - void","onClick - void","onLongClick - void","onLongClick - void","onLongClick - void"));
+        ignoreReturnVoidMap.put("DevCompressEngine", ArrayUtils.asListArgs("setEngine - void"));
         ignoreReturnVoidMap.put("DevDataSource", ArrayUtils.asListArgs("clearDataList - void","clearDataList - void","setDataList - void","setDataList - void"));
         ignoreReturnVoidMap.put("DevDialogCallback", ArrayUtils.asListArgs("onDialogNotify - void","onDialogShow - void","onDialogDismiss - void","onDialogStart - void","onDialogResume - void","onDialogPause - void","onDialogStop - void","onDialogDestroy - void"));
         ignoreReturnVoidMap.put("DevHttpEngine", ArrayUtils.asListArgs("setEngine - void"));
@@ -183,6 +190,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevItemClickCallback", ArrayUtils.asListArgs("onItemClick - void","onItemClick - void","onItemClick - void","onItemLongClick - void","onItemLongClick - void","onItemLongClick - void"));
         ignoreReturnVoidMap.put("DevJSONEngine", ArrayUtils.asListArgs("setEngine - void"));
         ignoreReturnVoidMap.put("DevLogEngine", ArrayUtils.asListArgs("setEngine - void"));
+        ignoreReturnVoidMap.put("DevMediaEngine", ArrayUtils.asListArgs("setEngine - void"));
         ignoreReturnVoidMap.put("DevMultiSelectList", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","select - void","unselect - void","toggle - void"));
         ignoreReturnVoidMap.put("DevMultiSelectMap", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void","select - void","select - void","unselect - void","toggle - void"));
         ignoreReturnVoidMap.put("DevNumber", ArrayUtils.asListArgs("checkUpdate - void"));
@@ -196,6 +204,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("cancel - void"));
         ignoreReturnVoidMap.put("IHttpEngine.RequestCallback", ArrayUtils.asListArgs("onStart - void","onCancel - void","onResponse - void","onFailure - void"));
         ignoreReturnVoidMap.put("ILogEngine", ArrayUtils.asListArgs("d - void","e - void","e - void","e - void","w - void","i - void","v - void","wtf - void","json - void","xml - void","dTag - void","eTag - void","eTag - void","eTag - void","wTag - void","iTag - void","vTag - void","wtfTag - void","jsonTag - void","xmlTag - void"));
+        ignoreReturnVoidMap.put("IMediaEngine", ArrayUtils.asListArgs("setConfig - void","setSavePath - void","setMinimumCompressSize - void","deleteCacheDirFile - void","deleteAllCacheDirFile - void"));
         ignoreReturnVoidMap.put("IMultiSelect", ArrayUtils.asListArgs("clearSelects - void","putSelects - void","putSelects - void","unselectValue - void","unselectValueAll - void"));
         ignoreReturnVoidMap.put("IMultiSelectToList", ArrayUtils.asListArgs("select - void","select - void","select - void","unselect - void","toggle - void"));
         ignoreReturnVoidMap.put("IMultiSelectToMap", ArrayUtils.asListArgs("select - void","select - void","unselect - void","toggle - void"));
@@ -203,6 +212,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("IPermissionEngine", ArrayUtils.asListArgs("request - void","request - void"));
         ignoreReturnVoidMap.put("IPermissionEngine.Callback", ArrayUtils.asListArgs("onGranted - void","onDenied - void"));
         ignoreReturnVoidMap.put("LoadListener", ArrayUtils.asListArgs("onStart - void","onResponse - void","onFailure - void"));
+        ignoreReturnVoidMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
         ignoreReturnVoidMap.put("PageAssist", ArrayUtils.asListArgs("initPageConfig - void"));
 
         return ignoreReturnVoidMap;
