@@ -210,7 +210,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("LocalMediaData", ArrayUtils.asListArgs("setLocalMedia"));
         ignoreParamMap.put("LogWorker", ArrayUtils.asListArgs("observe"));
         ignoreParamMap.put("LubanEngineImpl", ArrayUtils.asListArgs("compress","compress","compress","compress"));
-        ignoreParamMap.put("LubanUtils", ArrayUtils.asListArgs("compress","compress","compress","compress"));
         ignoreParamMap.put("LubanUtils.Config", ArrayUtils.asListArgs("setFailFinish"));
         ignoreParamMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreParamMap.put("NetWorkReceiver", ArrayUtils.asListArgs("onReceive"));
