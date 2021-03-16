@@ -318,6 +318,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Other.put(".engine.log", "Log Engine");
         sCatalogMap_Other.put(".engine.permission", "Permission Engine");
+        sCatalogMap_Other.put(".engine.storage", "Storage Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
