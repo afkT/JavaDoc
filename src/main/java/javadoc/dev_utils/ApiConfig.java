@@ -44,7 +44,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.1.9";
+    public static final String DEV_APP_VERSION            = "2.2.0";
 
     // ===========
     // = DevJava =
@@ -301,6 +301,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Assist.put(".engine.log", "Log Engine");
         sCatalogMap_Assist.put(".engine.permission", "Permission Engine");
+        sCatalogMap_Assist.put(".engine.storage", "Storage Engine");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
