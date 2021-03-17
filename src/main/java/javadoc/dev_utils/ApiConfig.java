@@ -44,7 +44,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.2.0";
+    public static final String DEV_APP_VERSION            = "2.2.1";
 
     // ===========
     // = DevJava =
@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.1.4";
+    public static final String DEV_ASSIST_VERSION            = "1.1.5";
 
     // ============
     // = DevOther =
@@ -246,7 +246,6 @@ public final class ApiConfig {
         sCatalogMap.put(".app.anim", "动画工具类");
 
         sCatalogMap.put(".app.assist", "辅助类");
-        sCatalogMap.put(".app.assist.manager", "管理器 如: TimerManager");
 
         sCatalogMap.put(".app.cache", "缓存工具类");
         sCatalogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
@@ -256,6 +255,7 @@ public final class ApiConfig {
         sCatalogMap.put(".app.logger", "日志库 DevLogger");
         sCatalogMap.put(".app.permission", "权限工具类");
         sCatalogMap.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
+        sCatalogMap.put(".app.timer", "定时器");
         sCatalogMap.put(".app.share", "SharedPreferences 封装");
 
         sCatalogMap.put(".app.toast", "Toast");
