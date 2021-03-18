@@ -292,6 +292,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".base.number", "数值操作");
         sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
+        sCatalogMap_Assist.put(".engine.cache", "Cache Engine");
         sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine");
         sCatalogMap_Assist.put(".engine.compress.listener", "图片压缩回调事件");
         sCatalogMap_Assist.put(".engine.http", "Http Engine");
@@ -311,6 +312,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put("dev", "根目录");
         sCatalogMap_Other.put(".assist", "常用辅助类封装");
         sCatalogMap_Other.put(".engine", "兼容 Engine");
+        sCatalogMap_Other.put(".engine.cache", "Cache Engine");
         sCatalogMap_Other.put(".engine.compress", "Image Compress Engine");
         sCatalogMap_Other.put(".engine.http", "Http Engine");
         sCatalogMap_Other.put(".engine.image", "Image Engine");
