@@ -20,6 +20,7 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
+        ignoreAnnotateMap.put("ACache.XFileOutputStream", ArrayUtils.asListArgs("close"));
         ignoreAnnotateMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onCreate","onDestroy"));
         ignoreAnnotateMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onNext","onError","onStart","onComplete"));
@@ -67,7 +68,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("RetrofitManager", ArrayUtils.asListArgs("getInstance"));
         ignoreAnnotateMap.put("RxJavaManager", ArrayUtils.asListArgs("getInstance"));
         ignoreAnnotateMap.put("SPConfig", ArrayUtils.asListArgs("getPreference"));
-        ignoreAnnotateMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
+        ignoreAnnotateMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreAnnotateMap.put("ScreenReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("SmsReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("TimeReceiver", ArrayUtils.asListArgs("onReceive"));
@@ -118,7 +119,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("OkGoUtils", ArrayUtils.asListArgs("initOkGo","execute","execute"));
         ignoreFinalMap.put("PhoneReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","setConfig","setSavePath","setMinimumCompressSize","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorPaths","getSingleSelector","getSingleSelectorPath"));
-        ignoreFinalMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
+        ignoreFinalMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreFinalMap.put("ScreenReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("SmsReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("TimeReceiver", ArrayUtils.asListArgs("onReceive"));
@@ -134,6 +135,9 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
+        ignoreStaticMap.put("ACache", ArrayUtils.asListArgs("put","put","getAsString","put","put","getAsJSONObject","put","put","getAsJSONArray","put","get","getAsBinary","getAsObject","put","put","getAsBitmap","put","put","getAsDrawable","file","remove","clear"));
+        ignoreStaticMap.put("ACache.XFileOutputStream", ArrayUtils.asListArgs("close"));
+        ignoreStaticMap.put("ACacheManager", ArrayUtils.asListArgs("calculateCacheSizeAndCacheCount","put","get","newFile","remove","clear","removeNext","calculateSize"));
         ignoreStaticMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onAccessibilityEvent","onInterrupt","onServiceConnected","onCreate","onDestroy"));
         ignoreStaticMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("BaseResponse", ArrayUtils.asListArgs("getOriginal"));
@@ -179,7 +183,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("RetrofitManager", ArrayUtils.asListArgs("get","put","remove","contains","getRetrofitMap","create"));
         ignoreStaticMap.put("RxJavaManager", ArrayUtils.asListArgs("add","remove","contains","getManagerMap"));
         ignoreStaticMap.put("SPConfig", ArrayUtils.asListArgs("getPreference"));
-        ignoreStaticMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
+        ignoreStaticMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreStaticMap.put("ScreenReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("SmsReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("TimeReceiver", ArrayUtils.asListArgs("onReceive"));
@@ -233,7 +237,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreParamMap.put("PhoneReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","setConfig","setSavePath","setMinimumCompressSize","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorPaths","getSingleSelector","getSingleSelectorPath"));
-        ignoreParamMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
+        ignoreParamMap.put("SPStorageEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreParamMap.put("ScreenReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("SmsReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("TimeReceiver", ArrayUtils.asListArgs("onReceive"));
@@ -263,6 +267,9 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
+        ignoreUnPublicMap.put("ACache", ArrayUtils.asListArgs("myPid","getCachePath"));
+        ignoreUnPublicMap.put("ACacheManager", ArrayUtils.asListArgs("calculateCacheSizeAndCacheCount","put","get","newFile","remove","clear","removeNext","calculateSize"));
+        ignoreUnPublicMap.put("ACacheUtils", ArrayUtils.asListArgs("isDue","isDue","newStringWithDateInfo","newByteArrayWithDateInfo","createDateInfo","clearDateInfo","clearDateInfo","hasDateInfo","getDateInfoFromDate","indexOf","copyOfRange","bitmapToByte","byteToBitmap","drawableToBitmap","bitmapToDrawable","isDue","isDue","newStringWithDateInfo","newByteArrayWithDateInfo","createDateInfo","clearDateInfo","clearDateInfo","hasDateInfo","getDateInfoFromDate","indexOf","copyOfRange","bitmapToByte","byteToBitmap","drawableToBitmap","bitmapToDrawable"));
         ignoreUnPublicMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onServiceConnected"));
         ignoreUnPublicMap.put("AppStateReceiver.AppStateListener", ArrayUtils.asListArgs("onAdded","onReplaced","onRemoved"));
         ignoreUnPublicMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onStart","getErrorMessage"));
@@ -313,6 +320,8 @@ final class DevOtherConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnVoidMap() {
         Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
+        ignoreReturnVoidMap.put("ACache", ArrayUtils.asListArgs("clear - void"));
+        ignoreReturnVoidMap.put("ACacheManager", ArrayUtils.asListArgs("calculateCacheSizeAndCacheCount - void","put - void","clear - void"));
         ignoreReturnVoidMap.put("AccessibilityListenerService", ArrayUtils.asListArgs("onAccessibilityEvent - void","onInterrupt - void","onServiceConnected - void","startService - void","stopService - void","setAccessibilityListener - void"));
         ignoreReturnVoidMap.put("AccessibilityListenerService.AccessibilityListener", ArrayUtils.asListArgs("onAccessibilityEvent - void","onInterrupt - void","onServiceCreated - void","onServiceDestroy - void"));
         ignoreReturnVoidMap.put("AppStateReceiver", ArrayUtils.asListArgs("registerReceiver - void","unregisterReceiver - void"));

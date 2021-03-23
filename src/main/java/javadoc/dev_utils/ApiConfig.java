@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.1.5";
+    public static final String DEV_ASSIST_VERSION            = "1.1.6";
 
     // ============
     // = DevOther =
@@ -322,6 +322,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.permission", "Permission Engine");
         sCatalogMap_Other.put(".engine.storage", "Storage Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
+        sCatalogMap_Other.put(".other.cache", "缓存工具类");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
         sCatalogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
