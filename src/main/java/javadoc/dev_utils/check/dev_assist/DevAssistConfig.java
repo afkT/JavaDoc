@@ -21,8 +21,7 @@ final class DevAssistConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("BitmapListener", ArrayUtils.asListArgs("getTranscodeType"));
-        ignoreAnnotateMap.put("DevDataAdapter", ArrayUtils.asListArgs("getContext","getItemCount","getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList","notifyDataChanged","notifyElementChanged"));
-        ignoreAnnotateMap.put("DevDataAdapterExt", ArrayUtils.asListArgs("getObject","getPage","setPage"));
+        ignoreAnnotateMap.put("DevDataAdapter", ArrayUtils.asListArgs("getItemCount","getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList","notifyDataChanged","notifyElementChanged"));
         ignoreAnnotateMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath","isUrl","isUri","isBytes","isResource","isFile","isSource"));
         ignoreAnnotateMap.put("DrawableListener", ArrayUtils.asListArgs("getTranscodeType"));
         ignoreAnnotateMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
@@ -93,7 +92,6 @@ final class DevAssistConfig implements ICheckConfig {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("DataAssist", ArrayUtils.asListArgs("setDataChanged"));
         ignoreParamMap.put("DevDataAdapter", ArrayUtils.asListArgs("getDataItem","getDataItemPosition","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","setDataList","setDataList","notifyElementChanged"));
-        ignoreParamMap.put("DevDataAdapterExt", ArrayUtils.asListArgs("setPage"));
         ignoreParamMap.put("DevEntry", ArrayUtils.asListArgs("setKey","setValue"));
         ignoreParamMap.put("DevNumber", ArrayUtils.asListArgs("setMinNumber","setMaxNumber","setMinMaxNumber","setCurrentNumber","setCurrentNumber","setResetNumber","setAllowNegative","numberChange","setNumberListener"));
         ignoreParamMap.put("DevObject", ArrayUtils.asListArgs("setObject","convertTag","setTag","setModelId","setCode","setCode","setType","setState","setTokenUUID"));
@@ -139,7 +137,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged"));
         ignoreUnPublicMap.put("Function.Method", ArrayUtils.asListArgs("method"));
         ignoreUnPublicMap.put("Function.Method2", ArrayUtils.asListArgs("error"));
-        ignoreUnPublicMap.put("ICacheEngine", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
+        ignoreUnPublicMap.put("ICacheEngine", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","isDue","clear","clearDue","clearInvalid","clearType","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
         ignoreUnPublicMap.put("ICompressEngine", ArrayUtils.asListArgs("compress","compress","compress","compress"));
         ignoreUnPublicMap.put("IHttpEngine", ArrayUtils.asListArgs("newCall","cancelAll","cancelCall","cancelUrl","cancelTag"));
         ignoreUnPublicMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("getRequest","isCanceled","isExecuted","isEnd","cancel","start","startAsync"));
@@ -207,7 +205,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged - void"));
-        ignoreReturnVoidMap.put("ICacheEngine", ArrayUtils.asListArgs("remove - void","removeForKeys - void","clear - void","clearDue - void","clearType - void"));
+        ignoreReturnVoidMap.put("ICacheEngine", ArrayUtils.asListArgs("remove - void","removeForKeys - void","clear - void","clearDue - void","clearInvalid - void","clearType - void"));
         ignoreReturnVoidMap.put("IHttpEngine", ArrayUtils.asListArgs("cancelAll - void","cancelCall - void","cancelUrl - void","cancelTag - void"));
         ignoreReturnVoidMap.put("IHttpEngine.Call", ArrayUtils.asListArgs("cancel - void"));
         ignoreReturnVoidMap.put("IHttpEngine.RequestCallback", ArrayUtils.asListArgs("onStart - void","onCancel - void","onResponse - void","onFailure - void"));
