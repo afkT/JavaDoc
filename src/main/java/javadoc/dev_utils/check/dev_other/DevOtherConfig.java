@@ -33,6 +33,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ChainWorker.CWorker", ArrayUtils.asListArgs("doWork"));
         ignoreAnnotateMap.put("ChainWorker.DWorker", ArrayUtils.asListArgs("doWork"));
         ignoreAnnotateMap.put("CompressConfig", ArrayUtils.asListArgs("isFailFinish","setFailFinish"));
+        ignoreAnnotateMap.put("DevCacheEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
         ignoreAnnotateMap.put("DevLoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreAnnotateMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreAnnotateMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
@@ -89,6 +90,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("AppStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("CompressConfig", ArrayUtils.asListArgs("setFailFinish"));
+        ignoreFinalMap.put("DevCacheEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
         ignoreFinalMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreFinalMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreFinalMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
@@ -147,6 +149,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("ChainWorker.CWorker", ArrayUtils.asListArgs("doWork"));
         ignoreStaticMap.put("ChainWorker.DWorker", ArrayUtils.asListArgs("doWork"));
         ignoreStaticMap.put("CompressConfig", ArrayUtils.asListArgs("isFailFinish","setFailFinish"));
+        ignoreStaticMap.put("DevCacheEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
         ignoreStaticMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreStaticMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreStaticMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
@@ -208,6 +211,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("BatteryReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("ChainWorker", ArrayUtils.asListArgs("builder"));
         ignoreParamMap.put("CompressConfig", ArrayUtils.asListArgs("setFailFinish"));
+        ignoreParamMap.put("DevCacheEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
         ignoreParamMap.put("DevLoggerEngineImpl", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
         ignoreParamMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreParamMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
