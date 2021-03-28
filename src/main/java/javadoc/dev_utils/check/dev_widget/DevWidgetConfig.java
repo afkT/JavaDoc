@@ -33,6 +33,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreAnnotateMap.put("CustomViewPager", ArrayUtils.asListArgs("onMeasure","onTouchEvent","onInterceptTouchEvent"));
         ignoreAnnotateMap.put("CustomViewPager.OnDirectionListener", ArrayUtils.asListArgs("onPageScrolled","onPageScrollStateChanged"));
         ignoreAnnotateMap.put("CustomWebView", ArrayUtils.asListArgs("onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreAnnotateMap.put("FlipCardView.Adapter", ArrayUtils.asListArgs("getItemCount","getItemView"));
         ignoreAnnotateMap.put("FlowLikeView", ArrayUtils.asListArgs("onMeasure","onSizeChanged"));
         ignoreAnnotateMap.put("FlowLikeView.AnimationEndListener", ArrayUtils.asListArgs("onAnimationEnd"));
         ignoreAnnotateMap.put("FlowLikeView.CurveEvaluator", ArrayUtils.asListArgs("evaluate"));
@@ -42,6 +43,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreAnnotateMap.put("LoadProgressBar", ArrayUtils.asListArgs("onDraw"));
         ignoreAnnotateMap.put("RadiusAttrs", ArrayUtils.asListArgs("onSaveInstanceState","onRestoreInstanceState"));
         ignoreAnnotateMap.put("RadiusLayout", ArrayUtils.asListArgs("onSizeChanged","draw","onSaveInstanceState","onRestoreInstanceState"));
+        ignoreAnnotateMap.put("ResizableImageView", ArrayUtils.asListArgs("onMeasure"));
         ignoreAnnotateMap.put("RightIconEditText", ArrayUtils.asListArgs("setCompoundDrawables","onTouchEvent","finalize"));
         ignoreAnnotateMap.put("RoundDrawable", ArrayUtils.asListArgs("onStateChange","isStateful","onBoundsChange","hasNativeStateListAPI"));
         ignoreAnnotateMap.put("ScanShapeView", ArrayUtils.asListArgs("onDraw"));
@@ -78,6 +80,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("CustomScrollView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallback"));
         ignoreFinalMap.put("CustomViewPager", ArrayUtils.asListArgs("initAttrs","onMeasure","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide"));
         ignoreFinalMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent","setMaxWidth","setMaxHeight","setSlide","setScrollCallback"));
+        ignoreFinalMap.put("FlipCardView", ArrayUtils.asListArgs("setAdapter","setInOutAnimator","setFlipDistance","loadView","calculatePosition"));
         ignoreFinalMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs","onMeasure","onSizeChanged","generateCTRLPointF","generateCurveAnimation","generateEnterAnimation","startAnimation","setDrawables","setIconWidth","setIconHeight","setAnimDuration"));
         ignoreFinalMap.put("FlowLikeView.AnimationEndListener", ArrayUtils.asListArgs("onAnimationEnd"));
         ignoreFinalMap.put("FlowLikeView.CurveEvaluator", ArrayUtils.asListArgs("evaluate"));
@@ -87,6 +90,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreFinalMap.put("LoadProgressBar", ArrayUtils.asListArgs("initAttrs","onDraw","drawProgressText","drawProgressText","setMax","setProgress","setProgressColor","setOuterRingColor","setInsideCircleWidth","setOuterRingWidth","setCanvasNumber","setNumberTextSize","setNumberTextColor","setProgressStyle"));
         ignoreFinalMap.put("RadiusAttrs", ArrayUtils.asListArgs("onSizeChanged","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","onSaveInstanceState","onRestoreInstanceState"));
         ignoreFinalMap.put("RadiusLayout", ArrayUtils.asListArgs("initAttrs","onSizeChanged","draw","onRestoreInstanceState","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom"));
+        ignoreFinalMap.put("ResizableImageView", ArrayUtils.asListArgs("onMeasure","setWHListener"));
         ignoreFinalMap.put("RightIconEditText", ArrayUtils.asListArgs("setCompoundDrawables","onTouchEvent","setRangeMultiple","setDrawRightIcon","setRightIcon","setTextWatcher","init"));
         ignoreFinalMap.put("RoundButton", ArrayUtils.asListArgs("initAttrs"));
         ignoreFinalMap.put("RoundConstraintLayout", ArrayUtils.asListArgs("initAttrs"));
@@ -127,6 +131,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("CustomScrollView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallback"));
         ignoreStaticMap.put("CustomViewPager", ArrayUtils.asListArgs("initAttrs","onMeasure","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
         ignoreStaticMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallback"));
+        ignoreStaticMap.put("FlipCardView", ArrayUtils.asListArgs("init","isFront","getCurrentPosition","getAdapter","setAdapter","flip","setInOutAnimator","setFlipDistance","loadView","calculatePosition"));
         ignoreStaticMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs","onMeasure","onSizeChanged","generateCTRLPointF","generateCurveAnimation","generateEnterAnimation","startAnimation","resetLayoutParams","like","getDrawables","setDrawables","setDrawablesById","getIconWidth","setIconWidth","getIconHeight","setIconHeight","getAnimDuration","setAnimDuration"));
         ignoreStaticMap.put("FlowLikeView.AnimationEndListener", ArrayUtils.asListArgs("onAnimationEnd"));
         ignoreStaticMap.put("FlowLikeView.CurveEvaluator", ArrayUtils.asListArgs("evaluate"));
@@ -136,6 +141,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("LoadProgressBar", ArrayUtils.asListArgs("initAttrs","init","onDraw","drawProgressText","drawProgressText","reset","getMax","setMax","getProgress","setProgress","getProgressColor","setProgressColor","getOuterRingColor","setOuterRingColor","getInsideCircleWidth","setInsideCircleWidth","getOuterRingWidth","setOuterRingWidth","isCanvasNumber","setCanvasNumber","getNumberTextSize","setNumberTextSize","getNumberTextColor","setNumberTextColor","getProgressStyle","setProgressStyle"));
         ignoreStaticMap.put("RadiusAttrs", ArrayUtils.asListArgs("resetRadius","onSizeChanged","getPath","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","getRadius","getRadiusLeftTop","getRadiusLeftBottom","getRadiusRightTop","getRadiusRightBottom","onSaveInstanceState","onRestoreInstanceState"));
         ignoreStaticMap.put("RadiusLayout", ArrayUtils.asListArgs("initAttrs","onSizeChanged","draw","onSaveInstanceState","onRestoreInstanceState","setRadius","setRadiusLeftTop","setRadiusLeftBottom","setRadiusRightTop","setRadiusRightBottom","setRadiusLeft","setRadiusRight","setRadiusTop","setRadiusBottom","getRadius","getRadiusLeftTop","getRadiusLeftBottom","getRadiusRightTop","getRadiusRightBottom"));
+        ignoreStaticMap.put("ResizableImageView", ArrayUtils.asListArgs("onMeasure","getZoomHeight","getWHListener","setWHListener"));
         ignoreStaticMap.put("RightIconEditText", ArrayUtils.asListArgs("setCompoundDrawables","onTouchEvent","finalize","getRangeMultiple","setRangeMultiple","isDrawRightIcon","setDrawRightIcon","getRightIcon","setRightIcon","setTextWatcher","init","drawOperate"));
         ignoreStaticMap.put("RoundButton", ArrayUtils.asListArgs("initAttrs"));
         ignoreStaticMap.put("RoundConstraintLayout", ArrayUtils.asListArgs("initAttrs"));
@@ -177,6 +183,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreParamMap.put("CustomViewPager", ArrayUtils.asListArgs("onMeasure","onTouchEvent","onInterceptTouchEvent"));
         ignoreParamMap.put("CustomViewPager.OnDirectionListener", ArrayUtils.asListArgs("onPageScrolled","onPageScrollStateChanged"));
         ignoreParamMap.put("CustomWebView", ArrayUtils.asListArgs("onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent"));
+        ignoreParamMap.put("FlipCardView.Adapter", ArrayUtils.asListArgs("getItemView"));
         ignoreParamMap.put("FlowLikeView", ArrayUtils.asListArgs("onMeasure","onSizeChanged"));
         ignoreParamMap.put("FlowLikeView.AnimationEndListener", ArrayUtils.asListArgs("onAnimationEnd"));
         ignoreParamMap.put("FlowLikeView.CurveEvaluator", ArrayUtils.asListArgs("evaluate"));
@@ -186,6 +193,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreParamMap.put("LoadProgressBar", ArrayUtils.asListArgs("onDraw"));
         ignoreParamMap.put("RadiusAttrs", ArrayUtils.asListArgs("onSaveInstanceState","onRestoreInstanceState"));
         ignoreParamMap.put("RadiusLayout", ArrayUtils.asListArgs("onSizeChanged","draw","onRestoreInstanceState"));
+        ignoreParamMap.put("ResizableImageView", ArrayUtils.asListArgs("onMeasure"));
         ignoreParamMap.put("RightIconEditText", ArrayUtils.asListArgs("setCompoundDrawables","onTouchEvent"));
         ignoreParamMap.put("RoundDrawable", ArrayUtils.asListArgs("onStateChange","onBoundsChange"));
         ignoreParamMap.put("ScanShapeView", ArrayUtils.asListArgs("onDraw"));
@@ -237,6 +245,8 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CustomViewPager", ArrayUtils.asListArgs("initAttrs","onMeasure"));
         ignoreUnPublicMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged"));
         ignoreUnPublicMap.put("CustomWebView.ScrollCallback", ArrayUtils.asListArgs("onScrollChanged"));
+        ignoreUnPublicMap.put("FlipCardView", ArrayUtils.asListArgs("init","loadView","calculatePosition"));
+        ignoreUnPublicMap.put("FlipCardView.Adapter", ArrayUtils.asListArgs("getItemCount","getItemView"));
         ignoreUnPublicMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs","onMeasure","onSizeChanged","generateCTRLPointF","generateCurveAnimation","generateEnterAnimation","startAnimation","resetLayoutParams"));
         ignoreUnPublicMap.put("LimitLayout", ArrayUtils.asListArgs("initAttrs","onMeasure"));
         ignoreUnPublicMap.put("LineTextView", ArrayUtils.asListArgs("onDraw"));
@@ -244,6 +254,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LoadProgressBar", ArrayUtils.asListArgs("initAttrs","init","onDraw","drawProgressText","drawProgressText"));
         ignoreUnPublicMap.put("RadiusAttrs", ArrayUtils.asListArgs("resetRadius"));
         ignoreUnPublicMap.put("RadiusLayout", ArrayUtils.asListArgs("initAttrs","onSizeChanged","onSaveInstanceState","onRestoreInstanceState"));
+        ignoreUnPublicMap.put("ResizableImageView", ArrayUtils.asListArgs("onMeasure"));
         ignoreUnPublicMap.put("RightIconEditText", ArrayUtils.asListArgs("finalize","init","drawOperate"));
         ignoreUnPublicMap.put("RoundButton", ArrayUtils.asListArgs("initAttrs"));
         ignoreUnPublicMap.put("RoundConstraintLayout", ArrayUtils.asListArgs("initAttrs"));
@@ -296,6 +307,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("CustomViewPager.OnDirectionListener", ArrayUtils.asListArgs("onSlideDirection - void"));
         ignoreReturnVoidMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("CustomWebView.ScrollCallback", ArrayUtils.asListArgs("onScrollChanged - void"));
+        ignoreReturnVoidMap.put("FlipCardView", ArrayUtils.asListArgs("init - void","flip - void"));
         ignoreReturnVoidMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs - void","startAnimation - void","resetLayoutParams - void","like - void"));
         ignoreReturnVoidMap.put("LimitLayout", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("LineTextView.OnNewLineCallback", ArrayUtils.asListArgs("onNewLine - void"));
