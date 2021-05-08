@@ -37,7 +37,7 @@ final class DevBaseMVVM_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevBaseMVVM:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevBaseMVVM:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 

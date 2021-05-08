@@ -37,7 +37,7 @@ final class DevBase_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevBase:" + ApiConfig.DEV_BASE_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevBase:" + ApiConfig.DEV_BASE_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 

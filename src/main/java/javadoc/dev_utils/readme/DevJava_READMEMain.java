@@ -37,7 +37,7 @@ final class DevJava_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevJava:" + ApiConfig.DEV_JAVA_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevJava:" + ApiConfig.DEV_JAVA_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
