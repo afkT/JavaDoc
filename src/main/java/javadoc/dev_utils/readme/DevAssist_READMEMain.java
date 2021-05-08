@@ -37,7 +37,7 @@ final class DevAssist_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevAssist:" + ApiConfig.DEV_ASSIST_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevAssist:" + ApiConfig.DEV_ASSIST_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 

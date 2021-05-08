@@ -37,13 +37,13 @@ final class DevApp_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// Android ( 1.9.4 以后只更新 AndroidX )");
+        buffer.append("// Android ( 1.9.4 以后只更新 AndroidX ) JCenter");
         buffer.append("\n");
         buffer.append("//implementation 'com.afkt:DevApp:1.9.4'");
         buffer.append("\n\n");
-        buffer.append("// AndroidX");
+        buffer.append("// AndroidX ( Maven Central ) ");
         buffer.append("\n");
-        buffer.append("implementation 'com.afkt:DevAppX:" + ApiConfig.DEV_APP_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevAppX:" + ApiConfig.DEV_APP_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -94,25 +94,6 @@ final class DevApp_READMEMain {
         buffer.append("// 标示 debug 模式");
         buffer.append("\n");
         buffer.append("DevUtils.openDebug();");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 如果出现 ```Failed to resolve: DevAppX-x.x.x``` 可在根目录 build.gradle 添加");
-        buffer.append("\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("allprojects {");
-        buffer.append("\n");
-        buffer.append("    repositories {");
-        buffer.append("\n");
-        buffer.append("        // bintray maven 出现 Failed to resolve: DevAppX-x.x.x 可考虑加上这句");
-        buffer.append("\n");
-        buffer.append("        maven { url 'https://dl.bintray.com/afkt/maven' }");
-        buffer.append("\n");
-        buffer.append("    }");
-        buffer.append("\n");
-        buffer.append("}");
         buffer.append("\n");
         buffer.append("```");
 

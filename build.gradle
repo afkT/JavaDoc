@@ -4,11 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 
 repositories {
-    // bintray maven
-    maven { url 'https://dl.bintray.com/afkt/maven' }
-
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
