@@ -5,6 +5,9 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
+    // bintray maven
+    maven { url 'https://dl.bintray.com/afkt/maven' }
+    jcenter()
 }
 
 dependencies {
