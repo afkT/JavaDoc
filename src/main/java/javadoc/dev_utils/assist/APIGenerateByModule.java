@@ -134,6 +134,9 @@ final class APIGenerateByModule {
                 String className = file.getName();
                 // 等于 null 才处理 => 不为 null, 则表示需要忽略
                 if (!filterClassSet.contains(className)) {
+                    if (className.endsWith(".kt")) {
+                        continue; // kotlin 跳过
+                    }
                     // 原始路径
                     String root = (path + "/" + name) + "/";
                     // 拼接最后点击 url
