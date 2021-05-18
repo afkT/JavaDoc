@@ -21,7 +21,7 @@ public final class CodeRepeatNewLineRemove {
     // 代码注释重复换行记录
     private static final HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
-    // 忽略文件后缀
+    // 匹配文件后缀
     private static final String[] SUFFIX = {"kt", "xml", "java", "gradle",};
 
     public static void main(String[] args) {
