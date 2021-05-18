@@ -16,7 +16,7 @@ import javadoc.dev_utils.ApiConfig;
 public final class CodeEndNewLineRemove {
 
     private static final LinkedHashSet<String> sSets            = new LinkedHashSet<>();
-    // 结尾符合
+    // 结尾符号
     private static final String                SYMBOL           = ""; // }
     // 检查 Key
     private static final String                END_KEY          = SYMBOL + StringUtils.NEW_LINE_STR;
