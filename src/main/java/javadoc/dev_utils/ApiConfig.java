@@ -132,7 +132,7 @@ public final class ApiConfig {
     // DevBaseMVVM GitHub 项目文件路径
     public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
     // DevBaseMVVM 版本号
-    public static final String DEV_BASE_MVVM_VERSION            = "1.0.3";
+    public static final String DEV_BASE_MVVM_VERSION            = "1.0.4";
 
     // ===============
     // = DevStandard =
