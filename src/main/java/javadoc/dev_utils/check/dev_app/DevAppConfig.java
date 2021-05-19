@@ -486,7 +486,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ClickUtils.OnMultiClickListener", ArrayUtils.asListArgs("doMultiClick - void"));
         ignoreReturnVoidMap.put("CloseUtils", ArrayUtils.asListArgs("closeIO - void","closeIOQuietly - void","flush - void","flushQuietly - void","flushCloseIO - void","flushCloseIOQuietly - void","flushCloseIO - void","flushCloseIOQuietly - void"));
         ignoreReturnVoidMap.put("CollectionUtils.ArrayWithTypeToken", ArrayUtils.asListArgs("put - void","newInstance - void","newInstance - void"));
-        ignoreReturnVoidMap.put("ColorUtils", ArrayUtils.asListArgs("setParser - void","sortGray - void","sortHSB - void"));
+        ignoreReturnVoidMap.put("ColorUtils", ArrayUtils.asListArgs("setParser - void","sortGray - void","sortHUE - void","sortSaturation - void","sortBrightness - void"));
         ignoreReturnVoidMap.put("ColorUtils.ColorInfo", ArrayUtils.asListArgs("priConvert - void"));
         ignoreReturnVoidMap.put("ConvertUtils", ArrayUtils.asListArgs("bytesBitwiseAND - void"));
         ignoreReturnVoidMap.put("CrashUtils", ArrayUtils.asListArgs("init - void","uncaughtException - void"));

@@ -22,7 +22,7 @@ final class DevStandardConfig implements ICheckConfig {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
@@ -41,7 +41,7 @@ final class DevStandardConfig implements ICheckConfig {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
         ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("GradleMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("Main", ArrayUtils.asListArgs("print","main"));
@@ -60,7 +60,7 @@ final class DevStandardConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml"));
-        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreStaticMap.put("DepsJsonBean", ArrayUtils.asListArgs("map","getDependencies","getAllDependencies","getAllDependencies"));
         ignoreStaticMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
 
@@ -76,7 +76,7 @@ final class DevStandardConfig implements ICheckConfig {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("ColorSortMain.SAXXml.SAXDemoHandel", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreParamMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
         ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
@@ -107,6 +107,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CatalogGenerate", ArrayUtils.asListArgs("getFolderLists","getFolderLists","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
         ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("CatalogMain", ArrayUtils.asListArgs("print"));
+        ignoreUnPublicMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort"));
         ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd"));
         ignoreUnPublicMap.put("GradleMain", ArrayUtils.asListArgs("getGradleFileName"));
         ignoreUnPublicMap.put("Main", ArrayUtils.asListArgs("print"));
@@ -137,6 +138,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("CatalogGenerate", ArrayUtils.asListArgs("calculateMaxLength - void","forCatalog - void"));
         ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("CatalogMain", ArrayUtils.asListArgs("print - void"));
+        ignoreReturnVoidMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd - void"));
         ignoreReturnVoidMap.put("Pangu", ArrayUtils.asListArgs("spacingFile - void"));
