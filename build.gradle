@@ -9,14 +9,14 @@ repositories {
 
 dependencies {
     // 加载 libs 文件夹全部 jar
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     // Gson 解析
-    compile 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.6'
     // DevJava
-    compile 'io.github.afkt:DevJava:1.3.1'
+    implementation 'io.github.afkt:DevJava:1.3.2'
 
     // tools.jar 的依赖
-    compile files(org.gradle.internal.jvm.Jvm.current().toolsJar)
+    implementation files(org.gradle.internal.jvm.Jvm.current().toolsJar)
 }
 
 // 全局编码设置
