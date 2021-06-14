@@ -91,7 +91,7 @@ public final class PackageCatalog {
                 File file,
                 List<Catalog> lists
         ) {
-            this.file = file;
+            this.file         = file;
             this.listCatalogs = lists;
         }
 

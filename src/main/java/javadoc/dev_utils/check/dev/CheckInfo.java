@@ -37,7 +37,7 @@ public final class CheckInfo {
             String path,
             ICheckConfig iCheckConfig
     ) {
-        this.mPath = path;
+        this.mPath         = path;
         this.mICheckConfig = iCheckConfig;
     }
 

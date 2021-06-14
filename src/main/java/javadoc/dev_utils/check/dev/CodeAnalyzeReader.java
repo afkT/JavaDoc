@@ -205,10 +205,10 @@ public final class CodeAnalyzeReader {
                     if (jcModifiers != null) {
                         // 属于接口的则跳过
                         if (jcModifiers.toString().endsWith("interface ")) {
-                            classTag = " [interface]";
+                            classTag      = " [interface]";
                             isIgnoreClass = true;
                         } else if (jcModifiers.toString().endsWith("abstract ")) { // 属于抽象类的跳过
-                            classTag = " [abstract]";
+                            classTag      = " [abstract]";
                             isIgnoreClass = true;
                         }
                     }
@@ -587,7 +587,7 @@ public final class CodeAnalyzeReader {
                     }
                 } else if (isAdd) {
                     builder.append(str + " ");
-                    isAdd = false;
+                    isAdd   = false;
                     isCheck = true;
                 } else {
                     isCheck = false;
