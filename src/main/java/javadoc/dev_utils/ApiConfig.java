@@ -300,13 +300,13 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.image", "Image Engine");
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
         sCatalogMap_Assist.put(".engine.json", "JSON Engine");
+        sCatalogMap_Assist.put(".engine.keyvalue", "Key-Value Engine");
         sCatalogMap_Assist.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Assist.put(".engine.log", "Log Engine");
         sCatalogMap_Assist.put(".engine.permission", "Permission Engine");
         sCatalogMap_Assist.put(".engine.push", "Push Engine");
         sCatalogMap_Assist.put(".engine.share", "Share Engine");
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
-        sCatalogMap_Assist.put(".engine.storage", "Storage Engine");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
@@ -322,13 +322,13 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.http", "Http Engine");
         sCatalogMap_Other.put(".engine.image", "Image Engine");
         sCatalogMap_Other.put(".engine.json", "JSON Engine");
+        sCatalogMap_Other.put(".engine.keyvalue", "Key-Value Engine");
         sCatalogMap_Other.put(".engine.media", "Media Selector Engine");
         sCatalogMap_Other.put(".engine.log", "Log Engine");
         sCatalogMap_Other.put(".engine.permission", "Permission Engine");
         sCatalogMap_Other.put(".engine.push", "Push Engine");
         sCatalogMap_Other.put(".engine.share", "Share Engine");
         sCatalogMap_Other.put(".engine.share.listener", "分享回调事件");
-        sCatalogMap_Other.put(".engine.storage", "Storage Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.cache", "缓存工具类");
         sCatalogMap_Other.put(".other.http", "Http 通用封装");
