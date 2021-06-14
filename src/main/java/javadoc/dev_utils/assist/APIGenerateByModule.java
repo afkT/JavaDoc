@@ -41,7 +41,7 @@ final class APIGenerateByModule {
                 File file,
                 List<Subnode> lists
         ) {
-            this.subFile = file;
+            this.subFile  = file;
             this.listSubs = lists;
         }
 

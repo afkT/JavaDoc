@@ -84,12 +84,12 @@ public final class APIReader
     ) {
         // API 读取配置处理
         APIReader apiReader = new APIReader(classGithubUrl);
-        apiReader.mFilterMethodMap = filterMethodMap;
-        apiReader.mMethodNameRegex = methodNameRegex;
-        apiReader.mMethodNameMatchesMap = methodNameMatchesMap;
-        apiReader.mMethodRepeatBuffer = methodRepeatBuffer;
+        apiReader.mFilterMethodMap         = filterMethodMap;
+        apiReader.mMethodNameRegex         = methodNameRegex;
+        apiReader.mMethodNameMatchesMap    = methodNameMatchesMap;
+        apiReader.mMethodRepeatBuffer      = methodRepeatBuffer;
         apiReader.mMethodNotAnnotateBuffer = methodNotAnnotateBuffer;
-        apiReader.mNotMethodBuffer = notMethodBuffer;
+        apiReader.mNotMethodBuffer         = notMethodBuffer;
         apiReader.init(); // 初始化防止为 null
         // 执行参数, 生成 API readAll 设置为 false, 不读取 private、protected 等修饰符方法
         String[] executeParams = JavaDocReader.getExecuteParams(false, path, className);
