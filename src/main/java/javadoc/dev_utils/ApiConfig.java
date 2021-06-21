@@ -44,7 +44,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.2.6";
+    public static final String DEV_APP_VERSION            = "2.2.7";
 
     // ===========
     // = DevJava =
@@ -59,7 +59,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.3";
+    public static final String DEV_JAVA_VERSION            = "1.3.4";
 
     // =============
     // = DevAssist =
@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.3";
+    public static final String DEV_ASSIST_VERSION            = "1.2.4";
 
     // ============
     // = DevOther =
@@ -307,6 +307,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.push", "Push Engine");
         sCatalogMap_Assist.put(".engine.share", "Share Engine");
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
+        sCatalogMap_Assist.put(".engine.storage", "Storage Engine");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
@@ -329,6 +330,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.push", "Push Engine");
         sCatalogMap_Other.put(".engine.share", "Share Engine");
         sCatalogMap_Other.put(".engine.share.listener", "分享回调事件");
+        sCatalogMap_Other.put(".engine.storage", "Storage Engine");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.cache", "缓存工具类");
         sCatalogMap_Other.put(".other.http", "Http 通用封装");
