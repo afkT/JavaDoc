@@ -44,7 +44,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.2.7";
+    public static final String DEV_APP_VERSION            = "2.2.8";
 
     // ===========
     // = DevJava =
@@ -59,7 +59,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.4";
+    public static final String DEV_JAVA_VERSION            = "1.3.5";
 
     // =============
     // = DevAssist =
@@ -74,7 +74,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.4";
+    public static final String DEV_ASSIST_VERSION            = "1.2.5";
 
     // ============
     // = DevOther =
@@ -292,22 +292,22 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".base.number", "数值操作");
         sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
-        sCatalogMap_Assist.put(".engine.analytics", "Analytics Engine");
-        sCatalogMap_Assist.put(".engine.cache", "Cache Engine");
-        sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine");
+        sCatalogMap_Assist.put(".engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Assist.put(".engine.cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine 图片压缩");
         sCatalogMap_Assist.put(".engine.compress.listener", "图片压缩回调事件");
-        sCatalogMap_Assist.put(".engine.http", "Http Engine");
-        sCatalogMap_Assist.put(".engine.image", "Image Engine");
+        sCatalogMap_Assist.put(".engine.http", "Http Engine 网络请求");
+        sCatalogMap_Assist.put(".engine.image", "Image Engine 图片加载、下载、转格式等");
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
         sCatalogMap_Assist.put(".engine.json", "JSON Engine");
-        sCatalogMap_Assist.put(".engine.keyvalue", "Key-Value Engine");
-        sCatalogMap_Assist.put(".engine.media", "Media Selector Engine");
-        sCatalogMap_Assist.put(".engine.log", "Log Engine");
-        sCatalogMap_Assist.put(".engine.permission", "Permission Engine");
-        sCatalogMap_Assist.put(".engine.push", "Push Engine");
-        sCatalogMap_Assist.put(".engine.share", "Share Engine");
+        sCatalogMap_Assist.put(".engine.keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Assist.put(".engine.log", "Log Engine 日志打印");
+        sCatalogMap_Assist.put(".engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Assist.put(".engine.permission", "Permission Engine 权限申请");
+        sCatalogMap_Assist.put(".engine.push", "Push Engine 推送平台处理");
+        sCatalogMap_Assist.put(".engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
-        sCatalogMap_Assist.put(".engine.storage", "Storage Engine");
+        sCatalogMap_Assist.put(".engine.storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
@@ -317,20 +317,20 @@ public final class ApiConfig {
         sCatalogMap_Other.put("dev", "根目录");
         sCatalogMap_Other.put(".assist", "常用辅助类封装");
         sCatalogMap_Other.put(".engine", "兼容 Engine");
-        sCatalogMap_Other.put(".engine.analytics", "Analytics Engine");
-        sCatalogMap_Other.put(".engine.cache", "Cache Engine");
-        sCatalogMap_Other.put(".engine.compress", "Image Compress Engine");
-        sCatalogMap_Other.put(".engine.http", "Http Engine");
-        sCatalogMap_Other.put(".engine.image", "Image Engine");
+        sCatalogMap_Other.put(".engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Other.put(".engine.cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Other.put(".engine.compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Other.put(".engine.http", "Http Engine 网络请求");
+        sCatalogMap_Other.put(".engine.image", "Image Engine 图片加载、下载、转格式等");
         sCatalogMap_Other.put(".engine.json", "JSON Engine");
-        sCatalogMap_Other.put(".engine.keyvalue", "Key-Value Engine");
-        sCatalogMap_Other.put(".engine.media", "Media Selector Engine");
-        sCatalogMap_Other.put(".engine.log", "Log Engine");
-        sCatalogMap_Other.put(".engine.permission", "Permission Engine");
-        sCatalogMap_Other.put(".engine.push", "Push Engine");
-        sCatalogMap_Other.put(".engine.share", "Share Engine");
+        sCatalogMap_Other.put(".engine.keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Other.put(".engine.log", "Log Engine 日志打印");
+        sCatalogMap_Other.put(".engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Other.put(".engine.permission", "Permission Engine 权限申请");
+        sCatalogMap_Other.put(".engine.push", "Push Engine 推送平台处理");
+        sCatalogMap_Other.put(".engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Other.put(".engine.share.listener", "分享回调事件");
-        sCatalogMap_Other.put(".engine.storage", "Storage Engine");
+        sCatalogMap_Other.put(".engine.storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.cache", "缓存工具类");
         sCatalogMap_Other.put(".other.http", "Http 通用封装");
