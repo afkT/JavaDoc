@@ -21,6 +21,7 @@ final class DevAppConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
+        ignoreAnnotateMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo","getFileInfo","createFileInfo"));
         ignoreAnnotateMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreAnnotateMap.put("Base64.Coder", ArrayUtils.asListArgs("maxOutputSize"));
         ignoreAnnotateMap.put("Base64.Decoder", ArrayUtils.asListArgs("maxOutputSize"));
@@ -47,6 +48,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("getPendingIntent","setPendingIntent","getIcon","setIcon","getTicker","setTicker","getTitle","setTitle","getContent","setContent","isAutoCancel","setAutoCancel","getVibratePattern","setVibratePattern","getLightPattern","setLightPattern","getChannel","setChannel"));
         ignoreAnnotateMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("ROMUtils.RomInfo", ArrayUtils.asListArgs("toString"));
+        ignoreAnnotateMap.put("RecordInsert", ArrayUtils.asListArgs("getFileInfo","setFileInfo","getLogHeader","setLogHeader","getLogTail","setLogTail"));
         ignoreAnnotateMap.put("ScaleUtils.XY", ArrayUtils.asListArgs("getXYx","getXY","getXY","compareTo"));
         ignoreAnnotateMap.put("ScreenSensorAssist.OrientationSensorChangeListener", ArrayUtils.asListArgs("onAccuracyChanged","onSensorChanged"));
         ignoreAnnotateMap.put("ScreenSensorAssist.OrientationSensorListener", ArrayUtils.asListArgs("onAccuracyChanged","onSensorChanged"));
@@ -81,6 +83,7 @@ final class DevAppConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
+        ignoreFinalMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo"));
         ignoreFinalMap.put("AutoFocusAssist", ArrayUtils.asListArgs("onAutoFocus"));
         ignoreFinalMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreFinalMap.put("Base64", ArrayUtils.asListArgs("decode","decode","decode","encodeToString","encodeToString","encode","encode"));
@@ -140,10 +143,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ActivityUtils", ArrayUtils.asListArgs("getActivityStacks","addActivity","removeActivity","removeActivity","currentActivity","finishActivity","existActivitys","finishActivity","finishActivity","finishAllActivityToIgnore","finishAllActivityToIgnore","finishAllActivity","exitApplication","restartApplication"));
         ignoreStaticMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
         ignoreStaticMap.put("AliasMethod", ArrayUtils.asListArgs("next"));
-        ignoreStaticMap.put("AnalysisRecordUtils.FileInfo", ArrayUtils.asListArgs("getStoragePath","getFileName","getFileFunction","getFileIntervalTime","getFolderName","isHandler","setHandler","getLogPath","getIntervalTimeFolder"));
         ignoreStaticMap.put("ApkInfoItem", ArrayUtils.asListArgs("getAppInfoBean","getListKeyValues","getAppMD5","getAppSHA1","getAppSHA256","getMinSdkVersion","getTargetSdkVersion","getApkLength","getX509Certificate","getNotBefore","getNotAfter","isEffective","getCertPrincipal","getCertVersion","getCertSigAlgName","getCertSigAlgOID","getCertSerialnumber","getCertDERCode"));
         ignoreStaticMap.put("AppInfoBean", ArrayUtils.asListArgs("getAppPackName","getAppName","getAppIcon","getAppType","getVersionCode","getVersionName","getFirstInstallTime","getLastUpdateTime","getSourceDir","getApkSize"));
         ignoreStaticMap.put("AppInfoItem", ArrayUtils.asListArgs("getAppInfoBean","getListKeyValues","getAppMD5","getAppSHA1","getAppSHA256","getMinSdkVersion","getTargetSdkVersion","getApkLength","getX509Certificate","getNotBefore","getNotAfter","isEffective","getCertPrincipal","getCertVersion","getCertSigAlgName","getCertSigAlgOID","getCertSerialnumber","getCertDERCode"));
+        ignoreStaticMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo","getFileInfo","createFileInfo"));
         ignoreStaticMap.put("AutoFocusAssist", ArrayUtils.asListArgs("isAutoFocus","setAutoFocus","onAutoFocus","autoFocusAgainLater","start","stop","cancelOutstandingTask"));
         ignoreStaticMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreStaticMap.put("Averager", ArrayUtils.asListArgs("add","clear","size","getAverage","print"));
@@ -207,6 +210,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("QuickHelper", ArrayUtils.asListArgs("getView","targetView","targetViewGroup","targetImageView","targetTextView","targetEditText","viewHelper","devHelper","quickHelper","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable","setHint","setText","setHtmlText","setHintTextColor","setHintTextColor","setTextColor","setTextColor","setTypeface","setTextSizeByPx","setTextSizeBySp","setTextSizeByDp","setTextSizeByIn","setTextSize","clearFlags","setPaintFlags","setAntiAliasFlag","setBold","setBold","setBold","setUnderlineText","setUnderlineText","setStrikeThruText","setStrikeThruText","setLetterSpacing","setLineSpacing","setLineSpacingAndMultiplier","setTextScaleX","setIncludeFontPadding","setInputType","setImeOptions","setLines","setMaxLines","setMinLines","setMaxEms","setMinEms","setEms","setEllipsize","setAutoLinkMask","setAllCaps","setTextGravity","setText","insert","insert","setMaxLength","setMaxLengthAndText","setCursorVisible","setSelectionToTop","setSelectionToBottom","setSelection","setTransformationMethod","setTransformationMethod","addTextChangedListener","removeTextChangedListener","setKeyListener","setAdjustViewBounds","setMaxHeight","setMaxWidth","setBackground","setBackgroundColor","setBackgroundResource","setBackgroundTintList","setBackgroundTintMode","setForeground","setForegroundGravity","setForegroundTintList","setForegroundTintMode","setImageBitmap","setImageDrawable","setImageResource","setImageMatrix","setImageTintList","setImageTintMode","setScaleType","setColorFilter","setColorFilter","setColorFilter","setColorFilter","setBackgroundResources","setBackgroundResources","setImageResources","setImageResources","setImageBitmaps","setImageBitmaps","setImageDrawables","setImageDrawables","setScaleTypes","setScaleTypes","setWidthHeight","setWidthHeight","setWidth","setWidth","setHeight","setHeight","setMinimumHeight","setMinimumWidth","setAlpha","setTag","scrollTo","scrollBy","setDescendantFocusability","setOverScrollMode","setHorizontalScrollBarEnabled","setVerticalScrollBarEnabled","setScrollContainer","setNextFocusForwardId","setNextFocusDownId","setNextFocusLeftId","setNextFocusRightId","setNextFocusUpId","setRotation","setRotationX","setRotationY","setScaleX","setScaleY","setTextAlignment","setTextDirection","setPivotX","setPivotY","setTranslationX","setTranslationY","setLayerType","requestLayout","requestFocus","clearFocus","requestLayoutParent","setClipChildren","setLayoutParams","setFocusableInTouchMode","setFocusable","toggleFocusable","setSelected","toggleSelected","setEnabled","toggleEnabled","setClickable","toggleClickable","setLongClickable","toggleLongClickable","setVisibility","setVisibility","toggleVisibilitys","reverseVisibilitys","reverseVisibilitys","removeSelfFromParent","setLayoutGravity","setLayoutGravity","setMarginLeft","setMarginLeft","setMarginTop","setMarginTop","setMarginRight","setMarginRight","setMarginBottom","setMarginBottom","setMargin","setMargin","setMargin","setPaddingLeft","setPaddingLeft","setPaddingTop","setPaddingTop","setPaddingRight","setPaddingRight","setPaddingBottom","setPaddingBottom","setPadding","setPadding","setPadding","setCompoundDrawablePadding","setCompoundDrawablesByLeft","setCompoundDrawablesByTop","setCompoundDrawablesByRight","setCompoundDrawablesByBottom","setCompoundDrawables","setCompoundDrawablesWithIntrinsicBoundsByLeft","setCompoundDrawablesWithIntrinsicBoundsByTop","setCompoundDrawablesWithIntrinsicBoundsByRight","setCompoundDrawablesWithIntrinsicBoundsByBottom","setCompoundDrawablesWithIntrinsicBounds","addRule","addRule","removeRule","setAnimation","clearAnimation","startAnimation","cancelAnimation","setOnClicks","setOnLongClicks","setOnTouchs","addTouchArea","addTouchArea","smoothScrollToPosition","scrollToPosition","smoothScrollToTop","scrollToTop","smoothScrollToBottom","scrollToBottom","smoothScrollTo","smoothScrollBy","fullScroll","openKeyboard","openKeyboardDelay","openKeyboardDelay","closeKeyboard","closeKeyBoardSpecial","closeKeyBoardSpecialDelay","closeKeyBoardSpecialDelay","forceGetViewSize"));
         ignoreStaticMap.put("ROMUtils.RomInfo", ArrayUtils.asListArgs("getName","getVersion","toString"));
+        ignoreStaticMap.put("RecordConfig", ArrayUtils.asListArgs("getStoragePath","getFileName","getFolderName","getFileIntervalTime","isHandler","setHandler","getRecordInsert","getRecordInsert","setRecordInsert","getFinalPath","getIntervalTimeFolder"));
+        ignoreStaticMap.put("RecordInsert", ArrayUtils.asListArgs("getFileInfo","setFileInfo","getLogHeader","setLogHeader","getLogTail","setLogTail"));
         ignoreStaticMap.put("ReflectUtils", ArrayUtils.asListArgs("newInstance","newInstance","getArgsType","sortConstructors","newInstance","field","field","getField","getAccessibleField","unwrap","setEnumVal","method","method","method","exactMethod","similarMethod","sortMethods","isSimilarSignature","match","accessible","proxy","property","type","wrapper","get","hashCode","equals","toString"));
         ignoreStaticMap.put("ResourceAssist", ArrayUtils.asListArgs("reset","getPackageName","getResources","getDisplayMetrics","getConfiguration","getAssets","getIdentifier","getResourceName","getStringId","getString","getString","getString","getString","getDimenId","getDimension","getDimensionInt","getDimension","getDimensionInt","getColorId","getColor","getColor","getDrawableId","getDrawable","getNinePatchDrawable","getDrawable","getNinePatchDrawable","getBitmap","getBitmap","getBitmap","getBitmap","getMipmapId","getDrawableMipmap","getNinePatchDrawableMipmap","getBitmapMipmap","getBitmapMipmap","getAnimId","getAnimationXml","getAnimationXml","getAnimation","getAnimation","getAnimation","getAnimation","getBooleanId","getBoolean","getBoolean","getIntegerId","getInteger","getInteger","getArrayId","getIntArray","getStringArray","getTextArray","getIntArray","getStringArray","getTextArray","getId","getLayoutId","getMenuId","getRawId","getAttrId","getStyleId","getStyleableId","getAnimatorId","getXmlId","getInterpolatorId","getPluralsId","getColorStateList","getColorStateList","getColorDrawable","getColorDrawable","openInputStream","openInputStream","openOutputStream","openOutputStream","openOutputStream","openOutputStream","openFileDescriptor","openFileDescriptor","openAssetFileDescriptor","openAssetFileDescriptor","open","openFd","openNonAssetFd","openRawResource","openRawResourceFd","readBytesFromAssets","readStringFromAssets","readBytesFromRaw","readStringFromRaw","geFileToListFromAssets","geFileToListFromRaw","saveAssetsFormFile","saveRawFormFile"));
         ignoreStaticMap.put("ResourcePluginUtils", ArrayUtils.asListArgs("getResourceAssist","getResources","getPackageName","getAPKPath","getApkInfoItem","getDisplayMetrics","getConfiguration","getAssets","getIdentifier","getResourceName","getStringId","getString","getString","getString","getString","getDimenId","getDimension","getDimensionInt","getDimension","getDimensionInt","getColorId","getColor","getColor","getDrawableId","getDrawable","getNinePatchDrawable","getDrawable","getNinePatchDrawable","getBitmap","getBitmap","getBitmap","getBitmap","getMipmapId","getDrawableMipmap","getNinePatchDrawableMipmap","getBitmapMipmap","getBitmapMipmap","getAnimId","getAnimationXml","getAnimationXml","getAnimation","getAnimation","getAnimation","getAnimation","getBooleanId","getBoolean","getBoolean","getIntegerId","getInteger","getInteger","getArrayId","getIntArray","getStringArray","getTextArray","getIntArray","getStringArray","getTextArray","getId","getLayoutId","getMenuId","getRawId","getAttrId","getStyleId","getStyleableId","getAnimatorId","getXmlId","getInterpolatorId","getPluralsId","getColorStateList","getColorStateList","getColorDrawable","getColorDrawable","open","openFd","openNonAssetFd","openRawResource","openRawResourceFd","readBytesFromAssets","readStringFromAssets","readBytesFromRaw","readStringFromRaw","geFileToListFromAssets","geFileToListFromRaw","saveAssetsFormFile","saveRawFormFile"));
@@ -262,6 +267,7 @@ final class DevAppConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
+        ignoreParamMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo"));
         ignoreParamMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreParamMap.put("Base64.Coder", ArrayUtils.asListArgs("process","maxOutputSize"));
         ignoreParamMap.put("Base64.Decoder", ArrayUtils.asListArgs("maxOutputSize","process"));
@@ -287,6 +293,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreParamMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("setPendingIntent","setIcon","setTicker","setTitle","setContent","setAutoCancel","setVibratePattern","setLightPattern","setChannel"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("RecordInsert", ArrayUtils.asListArgs("setFileInfo","setLogHeader","setLogTail"));
         ignoreParamMap.put("ScaleUtils.XY", ArrayUtils.asListArgs("getXY","compareTo"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorChangeListener", ArrayUtils.asListArgs("onAccuracyChanged","onSensorChanged"));
         ignoreParamMap.put("ScreenSensorAssist.OrientationSensorListener", ArrayUtils.asListArgs("onAccuracyChanged","onSensorChanged"));
@@ -333,11 +340,10 @@ final class DevAppConfig implements ICheckConfig {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("start","onCreate","onActivityResult","onDestroy"));
         ignoreUnPublicMap.put("ActivityUtils.ResultCallback", ArrayUtils.asListArgs("onStartActivityForResult","onActivityResult"));
-        ignoreUnPublicMap.put("AnalysisRecordUtils", ArrayUtils.asListArgs("saveLogRecord","splitLog","handlerDeviceInfo"));
-        ignoreUnPublicMap.put("AnalysisRecordUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("ApkInfoItem", ArrayUtils.asListArgs("get"));
         ignoreUnPublicMap.put("AppInfoBean", ArrayUtils.asListArgs("get"));
         ignoreUnPublicMap.put("AppInfoItem", ArrayUtils.asListArgs("get"));
+        ignoreUnPublicMap.put("AppRecordInsert", ArrayUtils.asListArgs("createFileInfo"));
         ignoreUnPublicMap.put("AutoFocusAssist", ArrayUtils.asListArgs("autoFocusAgainLater","cancelOutstandingTask"));
         ignoreUnPublicMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreUnPublicMap.put("BarUtils", ArrayUtils.asListArgs("addMarginTopEqualStatusBarHeight","subtractMarginTopEqualStatusBarHeight","applyStatusBarColor","applyStatusBarColor","hideStatusBarView","hideStatusBarView","showStatusBarView","createStatusBarView"));
@@ -376,6 +382,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("FileBreadthFirstSearchUtils.SearchHandler", ArrayUtils.asListArgs("isHandlerFile","isAddToList","onEndListener"));
         ignoreUnPublicMap.put("FileDepthFirstSearchUtils", ArrayUtils.asListArgs("queryFile"));
         ignoreUnPublicMap.put("FileDepthFirstSearchUtils.SearchHandler", ArrayUtils.asListArgs("isHandlerFile","isAddToList","onEndListener"));
+        ignoreUnPublicMap.put("FileRecordUtils", ArrayUtils.asListArgs("concatInsertLog","concatLog","finalRecord"));
         ignoreUnPublicMap.put("FileRecordUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("FileUtils", ArrayUtils.asListArgs("copyFolder"));
         ignoreUnPublicMap.put("FileUtils.OnReplaceListener", ArrayUtils.asListArgs("onReplace"));
@@ -394,13 +401,13 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ImageViewUtils", ArrayUtils.asListArgs("getImageViewFieldValue"));
         ignoreUnPublicMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("start","cancel"));
         ignoreUnPublicMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreUnPublicMap.put("JCLogUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","splitErrorMessage"));
+        ignoreUnPublicMap.put("JCLogUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","concatErrorMessage"));
         ignoreUnPublicMap.put("JCLogUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("KeyBoardUtils", ArrayUtils.asListArgs("getContentViewInvisibleHeight"));
         ignoreUnPublicMap.put("KeyBoardUtils.OnSoftInputChangedListener", ArrayUtils.asListArgs("onSoftInputChanged"));
         ignoreUnPublicMap.put("LocationUtils", ArrayUtils.asListArgs("getCriteria"));
         ignoreUnPublicMap.put("LocationUtils.OnLocationChangeListener", ArrayUtils.asListArgs("getLastKnownLocation","onLocationChanged","onStatusChanged"));
-        ignoreUnPublicMap.put("LogPrintUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","splitErrorMessage"));
+        ignoreUnPublicMap.put("LogPrintUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","concatErrorMessage"));
         ignoreUnPublicMap.put("LogPrintUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("LoggerPrinter", ArrayUtils.asListArgs("isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
         ignoreUnPublicMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
@@ -410,6 +417,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("PreferenceImpl", ArrayUtils.asListArgs("put","getValue"));
         ignoreUnPublicMap.put("QuickHelper", ArrayUtils.asListArgs("targetView","targetViewGroup","targetImageView","targetTextView","targetEditText"));
         ignoreUnPublicMap.put("ROMUtils", ArrayUtils.asListArgs("isRightRom","getManufacturer","getBrand","getRomVersion","getSystemProperty","getSystemPropertyByShell","getSystemPropertyByStream","getSystemPropertyByReflect","_getRomInfo"));
+        ignoreUnPublicMap.put("RecordConfig", ArrayUtils.asListArgs("getIntervalTimeFolder"));
         ignoreUnPublicMap.put("ReflectUtils", ArrayUtils.asListArgs("forName","forName","getArgsType","sortConstructors","newInstance","getField","getAccessibleField","unwrap","method","exactMethod","similarMethod","sortMethods","isSimilarSignature","match","accessible","property","wrapper"));
         ignoreUnPublicMap.put("ScreenSensorAssist", ArrayUtils.asListArgs("init"));
         ignoreUnPublicMap.put("ScreenshotUtils", ArrayUtils.asListArgs("registerContentObserver","unregisterContentObserver"));
@@ -467,8 +475,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ADBUtils", ArrayUtils.asListArgs("sendEventSlide - void"));
         ignoreReturnVoidMap.put("AccessibilityUtils", ArrayUtils.asListArgs("setService - void","printAccessibilityEvent - void","printAccessibilityEvent - void"));
         ignoreReturnVoidMap.put("ActivityUtils.ResultCallback", ArrayUtils.asListArgs("onActivityResult - void"));
-        ignoreReturnVoidMap.put("AnalysisRecordUtils", ArrayUtils.asListArgs("init - void","setCallback - void","setHandler - void","setAppendSpace - void","setLogFolderName - void","setLogStoragePath - void"));
-        ignoreReturnVoidMap.put("AnalysisRecordUtils.Callback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("AppInfoUtils", ArrayUtils.asListArgs("printAppPermission - void"));
         ignoreReturnVoidMap.put("AutoFocusAssist", ArrayUtils.asListArgs("setFocusModes - void","setAutoFocus - void","onAutoFocus - void","autoFocusAgainLater - void","start - void","stop - void","cancelOutstandingTask - void"));
         ignoreReturnVoidMap.put("BarUtils", ArrayUtils.asListArgs("addMarginTopEqualStatusBarHeight - void","subtractMarginTopEqualStatusBarHeight - void","hideStatusBarView - void","hideStatusBarView - void","showStatusBarView - void"));
@@ -516,7 +522,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("FileDepthFirstSearchUtils", ArrayUtils.asListArgs("stop - void","query - void","queryFile - void"));
         ignoreReturnVoidMap.put("FileDepthFirstSearchUtils.SearchHandler", ArrayUtils.asListArgs("onEndListener - void"));
         ignoreReturnVoidMap.put("FileIOUtils", ArrayUtils.asListArgs("setBufferSize - void"));
-        ignoreReturnVoidMap.put("FileRecordUtils", ArrayUtils.asListArgs("setInsertInfo - void","setCallback - void"));
+        ignoreReturnVoidMap.put("FileRecordUtils", ArrayUtils.asListArgs("setHandler - void","setRecordInsert - void","setCallback - void"));
         ignoreReturnVoidMap.put("FileRecordUtils.Callback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("HandlerUtils", ArrayUtils.asListArgs("postRunnable - void","postRunnable - void","postRunnable - void","postRunnable - void","removeRunnable - void","clearRunnableMaps - void","postRunnable - void","removeRunnable - void"));
         ignoreReturnVoidMap.put("HandlerUtils.OnEndListener", ArrayUtils.asListArgs("onEnd - void"));

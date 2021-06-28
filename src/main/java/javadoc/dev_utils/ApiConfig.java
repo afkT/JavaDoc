@@ -246,6 +246,7 @@ public final class ApiConfig {
         sCatalogMap.put(".app.anim", "动画工具类");
 
         sCatalogMap.put(".app.assist", "辅助类");
+        sCatalogMap.put(".app.assist.record", "文件记录分析类");
 
         sCatalogMap.put(".app.cache", "缓存工具类");
         sCatalogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
@@ -269,6 +270,7 @@ public final class ApiConfig {
 
         sCatalogMap.put(".common", "Java 工具类, 不依赖 android api");
         sCatalogMap.put(".common.assist", "各种快捷辅助类");
+        sCatalogMap.put(".common.assist.record", "文件记录分析类");
         sCatalogMap.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
         sCatalogMap.put(".common.cipher", "编 / 解码工具类");
         sCatalogMap.put(".common.encrypt", "加密工具类");
@@ -308,6 +310,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
         sCatalogMap_Assist.put(".engine.storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Assist.put(".engine.storage.listener", "Storage 存储结果事件");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ============
@@ -331,6 +334,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Other.put(".engine.share.listener", "分享回调事件");
         sCatalogMap_Other.put(".engine.storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Other.put(".engine.storage.listener", "Storage 存储结果事件");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.cache", "缓存工具类");
         sCatalogMap_Other.put(".other.http", "Http 通用封装");

@@ -25,7 +25,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DevDataAdapterExt2", ArrayUtils.asListArgs("isEditState","setEditState","toggleEditState","clearSelectAll","isSelectAll","isSelect","isNotSelect","getSelectSize","getDataCount","selectAll","inverseSelect"));
         ignoreAnnotateMap.put("DevFunction.Method", ArrayUtils.asListArgs("method"));
         ignoreAnnotateMap.put("DevFunction.Method2", ArrayUtils.asListArgs("error"));
-        ignoreAnnotateMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath","isUrl","isUri","isBytes","isResource","isFile","isInputStream","isSource"));
+        ignoreAnnotateMap.put("DevSource", ArrayUtils.asListArgs("create","create","create","create","createWithPath","isUrl","isUri","isBytes","isResource","isFile","isInputStream","isDrawable","isBitmap"));
         ignoreAnnotateMap.put("DrawableListener", ArrayUtils.asListArgs("getTranscodeType"));
         ignoreAnnotateMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreAnnotateMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
@@ -72,7 +72,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("DevNumber", ArrayUtils.asListArgs("isMinNumber","isMinNumber","isLessThanMinNumber","isGreaterThanMinNumber","isMaxNumber","isMaxNumber","isLessThanMaxNumber","isGreaterThanMaxNumber","getMinNumber","setMinNumber","getMaxNumber","setMaxNumber","setMinMaxNumber","getCurrentNumber","setCurrentNumber","setCurrentNumber","getResetNumber","setResetNumber","isAllowNegative","setAllowNegative","numberChange","addNumber","subtractionNumber","getNumberListener","setNumberListener","checkUpdate"));
         ignoreStaticMap.put("DevObject", ArrayUtils.asListArgs("getUUID","getObject","setObject","getTag","convertTag","setTag","getModelId","setModelId","getCode","setCode","setCode","getType","setType","getState","setState","getTokenUUID","setTokenUUID","randomTokenUUID","equalsObject","equalsTag","equalsModelId","equalsCode","equalsCode","equalsType","equalsState","equalsTokenUUID","isCorrect"));
         ignoreStaticMap.put("DevPage", ArrayUtils.asListArgs("reset","reset","getPage","setPage","equalsPage","getConfig","getConfigPage","getConfigPageSize","getPageSize","equalsPageSize","isLastPage","setLastPage","calculateLastPage","isFirstPage","canNextPage","getNextPage","nextPage","isLessThanPageSize"));
-        ignoreStaticMap.put("DevSource", ArrayUtils.asListArgs("isUrl","isUri","isBytes","isResource","isFile","isInputStream","isSource"));
+        ignoreStaticMap.put("DevSource", ArrayUtils.asListArgs("isUrl","isUri","isBytes","isResource","isFile","isInputStream","isDrawable","isBitmap","isSource"));
         ignoreStaticMap.put("DevVariable", ArrayUtils.asListArgs("getVariables","clearVariables","putVariables","getVariablesSize","isVariables","isVariableValue","removeVariableValue","removeVariableValueAll","isVariable","isVariable","putVariable","putVariable","removeVariable","toggle","getVariableValue","getVariableValueConvert","getVariableValues","getVariableValuesToReverse","getVariableKey","getVariableKeys","getVariableKeysToReverse"));
         ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove","post","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
         ignoreStaticMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener","bindListener","focusChange"));
@@ -101,7 +101,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("DevNumber", ArrayUtils.asListArgs("setMinNumber","setMaxNumber","setMinMaxNumber","setCurrentNumber","setCurrentNumber","setResetNumber","setAllowNegative","numberChange","setNumberListener"));
         ignoreParamMap.put("DevObject", ArrayUtils.asListArgs("setObject","convertTag","setTag","setModelId","setCode","setCode","setType","setState","setTokenUUID"));
         ignoreParamMap.put("DevPage", ArrayUtils.asListArgs("reset","setPage","setLastPage","calculateLastPage"));
-        ignoreParamMap.put("DevSource", ArrayUtils.asListArgs("create","create","createWithPath"));
+        ignoreParamMap.put("DevSource", ArrayUtils.asListArgs("create","create","create","create","createWithPath"));
         ignoreParamMap.put("DevVariable", ArrayUtils.asListArgs("putVariables","removeVariableValue","removeVariableValueAll","putVariable","putVariable","removeVariable","toggle"));
         ignoreParamMap.put("EditTextWatcherAssist.FocusListener", ArrayUtils.asListArgs("onFocusChange"));
         ignoreParamMap.put("ICacheEngine", ArrayUtils.asListArgs("getParcelable","getParcelable"));
@@ -165,6 +165,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LoadListener", ArrayUtils.asListArgs("getTranscodeType","onStart","onResponse","onFailure"));
         ignoreUnPublicMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
         ignoreUnPublicMap.put("OnConvertListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
+        ignoreUnPublicMap.put("OnInsertListener", ArrayUtils.asListArgs("onResult"));
         ignoreUnPublicMap.put("OnRenameListener", ArrayUtils.asListArgs("rename"));
         ignoreUnPublicMap.put("ShareListener", ArrayUtils.asListArgs("onStart","onResult","onError","onCancel"));
 
@@ -234,9 +235,11 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("IPermissionEngine.Callback", ArrayUtils.asListArgs("onGranted - void","onDenied - void"));
         ignoreReturnVoidMap.put("IPushEngine", ArrayUtils.asListArgs("initialize - void","register - void","unregister - void","onReceiveServicePid - void","onReceiveClientId - void","onReceiveDeviceToken - void","onReceiveOnlineState - void","onReceiveCommandResult - void","onNotificationMessageArrived - void","onNotificationMessageClicked - void","onReceiveMessageData - void"));
         ignoreReturnVoidMap.put("IShareEngine", ArrayUtils.asListArgs("initialize - void","onActivityResult - void"));
+        ignoreReturnVoidMap.put("IStorageEngine", ArrayUtils.asListArgs("insertImageToExternal - void","insertVideoToExternal - void","insertAudioToExternal - void","insertDownloadToExternal - void","insertMediaToExternal - void","insertImageToInternal - void","insertVideoToInternal - void","insertAudioToInternal - void","insertDownloadToInternal - void","insertMediaToInternal - void"));
         ignoreReturnVoidMap.put("LoadListener", ArrayUtils.asListArgs("onStart - void","onResponse - void","onFailure - void"));
         ignoreReturnVoidMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
         ignoreReturnVoidMap.put("OnConvertListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
+        ignoreReturnVoidMap.put("OnInsertListener", ArrayUtils.asListArgs("onResult - void"));
         ignoreReturnVoidMap.put("PageAssist", ArrayUtils.asListArgs("initPageConfig - void"));
         ignoreReturnVoidMap.put("ShareListener", ArrayUtils.asListArgs("onStart - void","onResult - void","onError - void","onCancel - void"));
 
