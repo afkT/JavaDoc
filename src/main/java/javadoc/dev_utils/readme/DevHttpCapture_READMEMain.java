@@ -11,13 +11,13 @@ import javadoc.dev_utils.assist.PackageCatalog;
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class DevBaseMVVM_READMEMain {
+final class DevHttpCapture_READMEMain {
 
-    private DevBaseMVVM_READMEMain() {
+    private DevHttpCapture_READMEMain() {
     }
 
     /**
-     * 创建 DevBaseMVVM - README 头部前缀
+     * 创建 DevHttpCapture - README 头部前缀
      * @param buffer      拼接 Buffer
      * @param path        文件路径
      * @param packageName 包名
@@ -37,7 +37,7 @@ final class DevBaseMVVM_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevBaseMVVM:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevHttpCapture:" + ApiConfig.DEV_BASE_MVVM_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -121,11 +121,11 @@ final class DevBaseMVVM_READMEMain {
      */
     public static String createREADME() {
         // 包名
-        final String packageName = ApiConfig.DEV_BASE_MVVM_PACKAGE;
+        final String packageName = ApiConfig.DEV_HTTP_CAPTURE_PACKAGE;
         // 本地文件路径
-        final String path = ApiConfig.DEV_BASE_MVVM_PATH;
+        final String path = ApiConfig.DEV_HTTP_CAPTURE_PATH;
         // Github 链接地址
-        final String githubUrl = ApiConfig.DEV_BASE_MVVM_GITHUB_URL;
+        final String githubUrl = ApiConfig.DEV_HTTP_CAPTURE_GITHUB_URL;
 
         // ===========
         // = 生成 API =
@@ -137,7 +137,7 @@ final class DevBaseMVVM_READMEMain {
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_BaseMVVM, githubUrl);
 
         // 保存合成后的 API REAMDE
-        FileUtils.saveFile(new File(ApiConfig.DEV_BASE_MVVM_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
+        FileUtils.saveFile(new File(ApiConfig.DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
                 buffer.toString().getBytes());
 
         StringBuffer resultBuffer = new StringBuffer();
@@ -147,12 +147,12 @@ final class DevBaseMVVM_READMEMain {
         resultBuffer.append("\n=====================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_BASE_MVVM_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
+        resultBuffer.append("保存地址: " + ApiConfig.DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
         resultBuffer.append("\n");
         return resultBuffer.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(DevBaseMVVM_READMEMain.createREADME());
+        System.out.println(DevHttpCapture_READMEMain.createREADME());
     }
 }
