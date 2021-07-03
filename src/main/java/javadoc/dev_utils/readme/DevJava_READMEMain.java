@@ -117,11 +117,11 @@ final class DevJava_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap);
+        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_APP);
 
-        // 生成 dev.utils.common 包下 dev.utils
+        // 生成 API 目录
         String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet, ApiConfig.sFilterMethodMap, ApiConfig.sMethodNameRegex,
+                ApiConfig.sFilterClassSet_APP, ApiConfig.sFilterMethodMap_APP, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
 
         buffer.append(commonAPI);

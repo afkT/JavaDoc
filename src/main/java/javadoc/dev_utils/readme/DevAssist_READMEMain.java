@@ -97,7 +97,7 @@ final class DevAssist_READMEMain {
         // 添加头部信息
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Assist);
 
-        // 生成 dev 包下
+        // 生成 API 目录
         String assistAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
                 ApiConfig.sFilterClassSet_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);

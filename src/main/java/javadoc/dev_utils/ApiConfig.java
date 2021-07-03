@@ -174,11 +174,11 @@ public final class ApiConfig {
     // ==================
 
     // 包名目录注释
-    public static final HashMap<String, String>   sCatalogMap      = new HashMap<>();
+    public static final HashMap<String, String>   sCatalogMap_APP      = new HashMap<>();
     // 忽略不保存的类
-    public static final HashSet<String>           sFilterClassSet  = new HashSet<>();
+    public static final HashSet<String>           sFilterClassSet_APP  = new HashSet<>();
     // 忽略不保存的方法
-    public static final HashMap<String, String[]> sFilterMethodMap = new HashMap<>();
+    public static final HashMap<String, String[]> sFilterMethodMap_APP = new HashMap<>();
 
     // =============
     // = DevAssist =
@@ -190,6 +190,17 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_Assist  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
+
+    // ==================
+    // = DevHttpCapture =
+    // ==================
+
+    // 包名目录注释
+    public static final HashMap<String, String>   sCatalogMap_HttpCapture      = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashSet<String>           sFilterClassSet_HttpCapture  = new HashSet<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_HttpCapture = new HashMap<>();
 
     // ============
     // = DevOther =
@@ -251,48 +262,48 @@ public final class ApiConfig {
         // = DevApp、DevJava =
         // ==================
 
-        sCatalogMap.put("dev.utils", "根目录");
+        sCatalogMap_APP.put("dev.utils", "根目录");
 
         // ===========
         // = APP 目录 =
         // ===========
 
-        sCatalogMap.put(".app", "APP 相关工具类");
-        sCatalogMap.put(".app.anim", "动画工具类");
+        sCatalogMap_APP.put(".app", "APP 相关工具类");
+        sCatalogMap_APP.put(".app.anim", "动画工具类");
 
-        sCatalogMap.put(".app.assist", "辅助类");
-        sCatalogMap.put(".app.assist.record", "文件记录分析类");
+        sCatalogMap_APP.put(".app.assist", "辅助类");
+        sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
 
-        sCatalogMap.put(".app.cache", "缓存工具类");
-        sCatalogMap.put(".app.camera1", "摄像头相关 android.hardware.Camera");
-        sCatalogMap.put(".app.helper", "功能 Helper 辅助类");
-        sCatalogMap.put(".app.image", "图片相关处理");
-        sCatalogMap.put(".app.info", "APP 信息、PackageInfo 等");
-        sCatalogMap.put(".app.logger", "日志库 DevLogger");
-        sCatalogMap.put(".app.permission", "权限工具类");
-        sCatalogMap.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
-        sCatalogMap.put(".app.timer", "定时器");
-        sCatalogMap.put(".app.share", "SharedPreferences 封装");
+        sCatalogMap_APP.put(".app.cache", "缓存工具类");
+        sCatalogMap_APP.put(".app.camera1", "摄像头相关 android.hardware.Camera");
+        sCatalogMap_APP.put(".app.helper", "功能 Helper 辅助类");
+        sCatalogMap_APP.put(".app.image", "图片相关处理");
+        sCatalogMap_APP.put(".app.info", "APP 信息、PackageInfo 等");
+        sCatalogMap_APP.put(".app.logger", "日志库 DevLogger");
+        sCatalogMap_APP.put(".app.permission", "权限工具类");
+        sCatalogMap_APP.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
+        sCatalogMap_APP.put(".app.timer", "定时器");
+        sCatalogMap_APP.put(".app.share", "SharedPreferences 封装");
 
-        sCatalogMap.put(".app.toast", "Toast");
-        sCatalogMap.put(".app.toast.toaster", "Toaster 处理无通知权限");
+        sCatalogMap_APP.put(".app.toast", "Toast");
+        sCatalogMap_APP.put(".app.toast.toaster", "Toaster 处理无通知权限");
 
-        sCatalogMap.put(".app.wifi", "Wifi、热点工具类");
+        sCatalogMap_APP.put(".app.wifi", "Wifi、热点工具类");
 
         // ==============
         // = Common 目录 =
         // ==============
 
-        sCatalogMap.put(".common", "Java 工具类, 不依赖 android api");
-        sCatalogMap.put(".common.assist", "各种快捷辅助类");
-        sCatalogMap.put(".common.assist.record", "文件记录分析类");
-        sCatalogMap.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
-        sCatalogMap.put(".common.cipher", "编 / 解码工具类");
-        sCatalogMap.put(".common.encrypt", "加密工具类");
-        sCatalogMap.put(".common.file", "文件分片相关");
-        sCatalogMap.put(".common.random", "随机概率算法工具类");
-        sCatalogMap.put(".common.thread", "线程相关");
-        sCatalogMap.put(".common.validator", "数据校验工具类");
+        sCatalogMap_APP.put(".common", "Java 工具类, 不依赖 android api");
+        sCatalogMap_APP.put(".common.assist", "各种快捷辅助类");
+        sCatalogMap_APP.put(".common.assist.record", "文件记录分析类");
+        sCatalogMap_APP.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
+        sCatalogMap_APP.put(".common.cipher", "编 / 解码工具类");
+        sCatalogMap_APP.put(".common.encrypt", "加密工具类");
+        sCatalogMap_APP.put(".common.file", "文件分片相关");
+        sCatalogMap_APP.put(".common.random", "随机概率算法工具类");
+        sCatalogMap_APP.put(".common.thread", "线程相关");
+        sCatalogMap_APP.put(".common.validator", "数据校验工具类");
 
         // =============
         // = DevAssist =
@@ -328,6 +339,13 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.storage.listener", "Storage 存储结果事件");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
+        // ==================
+        // = DevHttpCapture =
+        // ==================
+
+        sCatalogMap_HttpCapture.put("dev", "根目录");
+        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
+
         // ============
         // = DevOther =
         // ============
@@ -352,7 +370,6 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".engine.storage.listener", "Storage 存储结果事件");
         sCatalogMap_Other.put(".other", "第三方库封装工具类");
         sCatalogMap_Other.put(".other.cache", "缓存工具类");
-        sCatalogMap_Other.put(".other.http", "Http 通用封装");
         sCatalogMap_Other.put(".other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".other.okgo.demo", "OkGo 使用 Demo");
         sCatalogMap_Other.put(".other.retrofit", "Retrofit 网络请求");
@@ -424,19 +441,19 @@ public final class ApiConfig {
         // = APP =
         // =======
 
-        sFilterClassSet.add("IPrinter.java");
-        sFilterClassSet.add("IPreference.java");
-        sFilterClassSet.add("IToast.java");
-        sFilterClassSet.add("DefaultToastStyle.java");
-        sFilterClassSet.add("WifiVo.java");
+        sFilterClassSet_APP.add("IPrinter.java");
+        sFilterClassSet_APP.add("IPreference.java");
+        sFilterClassSet_APP.add("IToast.java");
+        sFilterClassSet_APP.add("DefaultToastStyle.java");
+        sFilterClassSet_APP.add("WifiVo.java");
 
         // ==========
         // = Common =
         // ==========
 
-        sFilterClassSet.add("Cipher.java");
-        sFilterClassSet.add("Decrypt.java");
-        sFilterClassSet.add("Encrypt.java");
+        sFilterClassSet_APP.add("Cipher.java");
+        sFilterClassSet_APP.add("Decrypt.java");
+        sFilterClassSet_APP.add("Encrypt.java");
 
         // ============
         // = DevOther =
@@ -458,47 +475,47 @@ public final class ApiConfig {
         // = APP =
         // =======
 
-        sFilterMethodMap.put("ActivityUtils.java", new String[]{"onStartActivityForResult", "onActivityResult", "start", "onCreate", "onDestroy"});
-        sFilterMethodMap.put("PermissionUtils.java", new String[]{"start", "onCreate", "onGranted", "onDenied"});
-        sFilterMethodMap.put("WifiHotUtils.java", new String[]{"onStarted", "onStopped", "onFailed"});
-        sFilterMethodMap.put("HandlerUtils.java", new String[]{"onEnd"});
-        sFilterMethodMap.put("OnLocationChangeListener.java", new String[]{"getLastKnownLocation", "onLocationChanged", "onStatusChanged"});
-        sFilterMethodMap.put("SizeUtils.java", new String[]{"onGetSize"});
-        sFilterMethodMap.put("KeyBoardUtils.java", new String[]{"onSoftInputChanged"});
-        sFilterMethodMap.put("DevMediaManager.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig"});
-        sFilterMethodMap.put("DevVideoPlayerControl.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig", "surfaceChanged", "surfaceCreated", "surfaceDestroyed"});
-        sFilterMethodMap.put("CameraAssist.java", new String[]{"stopPreviewNotify", "startPreviewNotify"});
-        sFilterMethodMap.put("ImageUtils.java", new String[]{"getValue"});
-        sFilterMethodMap.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
-        sFilterMethodMap.put("AnalysisRecordUtils.java", new String[]{"callback"});
-        sFilterMethodMap.put("AsyncExecutor.java", new String[]{"doInBackground", "onPostExecute", "onCanceled", "abort"});
-        sFilterMethodMap.put("ToastTintUtils.java", new String[]{"getTextColor", "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines", "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon", "filter", "handlerContent"});
-        sFilterMethodMap.put("EditTextUtils.java", new String[]{"getMarkId", "isOperate", "setOperate", "getOperateState", "setOperateState", "getType", "setType", "beforeTextChanged", "onTextChanged", "afterTextChanged"});
-        sFilterMethodMap.put("AutoFocusAssist.java", new String[]{"onAutoFocus"});
-        sFilterMethodMap.put("PhoneUtils.java", new String[]{"printInfo"});
-        sFilterMethodMap.put("ROMUtils.java", new String[]{"getName", "getVersion", "toString"});
-        sFilterMethodMap.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss", "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
-        sFilterMethodMap.put("SnackbarUtils.java", new String[]{"getRootGravity", "setRootGravity", "getRootCornerRadius", "setRootCornerRadius", "getRootBackgroundTintColor", "setRootBackgroundTintColor", "getRootBackground", "setRootBackground", "getRootMargin", "setRootMargin", "getRootAlpha", "setRootAlpha", "getTextGravity", "setTextGravity", "getTextColor", "setTextColor", "getTextSize", "setTextSize", "getTextMaxLines", "setTextMaxLines", "getTextEllipsize", "setTextEllipsize", "getTextTypeface", "setTextTypeface", "getTextPadding", "setTextPadding", "getActionGravity", "setActionGravity", "getActionColor", "setActionColor", "getActionSize", "setActionSize", "getActionPadding", "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor", "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
-        sFilterMethodMap.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick", "doMultiClick", "getCount", "getInvalidCount", "getInvalidCycleNumber"});
-        sFilterMethodMap.put("ScreenshotUtils.java", new String[]{"onScreenshot", "onChange", "onChecker"});
-        sFilterMethodMap.put("NotificationUtils.java", new String[]{"getPendingIntent", "setPendingIntent", "getIcon", "setIcon", "getTicker", "setTicker", "getTitle", "setTitle", "getContent", "setContent", "isAutoCancel", "setAutoCancel", "getVibratePattern", "setVibratePattern", "getLightPattern", "setLightPattern", "getChannel", "setChannel", "callback"});
+        sFilterMethodMap_APP.put("ActivityUtils.java", new String[]{"onStartActivityForResult", "onActivityResult", "start", "onCreate", "onDestroy"});
+        sFilterMethodMap_APP.put("PermissionUtils.java", new String[]{"start", "onCreate", "onGranted", "onDenied"});
+        sFilterMethodMap_APP.put("WifiHotUtils.java", new String[]{"onStarted", "onStopped", "onFailed"});
+        sFilterMethodMap_APP.put("HandlerUtils.java", new String[]{"onEnd"});
+        sFilterMethodMap_APP.put("OnLocationChangeListener.java", new String[]{"getLastKnownLocation", "onLocationChanged", "onStatusChanged"});
+        sFilterMethodMap_APP.put("SizeUtils.java", new String[]{"onGetSize"});
+        sFilterMethodMap_APP.put("KeyBoardUtils.java", new String[]{"onSoftInputChanged"});
+        sFilterMethodMap_APP.put("DevMediaManager.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig"});
+        sFilterMethodMap_APP.put("DevVideoPlayerControl.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig", "surfaceChanged", "surfaceCreated", "surfaceDestroyed"});
+        sFilterMethodMap_APP.put("CameraAssist.java", new String[]{"stopPreviewNotify", "startPreviewNotify"});
+        sFilterMethodMap_APP.put("ImageUtils.java", new String[]{"getValue"});
+        sFilterMethodMap_APP.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
+        sFilterMethodMap_APP.put("AnalysisRecordUtils.java", new String[]{"callback"});
+        sFilterMethodMap_APP.put("AsyncExecutor.java", new String[]{"doInBackground", "onPostExecute", "onCanceled", "abort"});
+        sFilterMethodMap_APP.put("ToastTintUtils.java", new String[]{"getTextColor", "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines", "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon", "filter", "handlerContent"});
+        sFilterMethodMap_APP.put("EditTextUtils.java", new String[]{"getMarkId", "isOperate", "setOperate", "getOperateState", "setOperateState", "getType", "setType", "beforeTextChanged", "onTextChanged", "afterTextChanged"});
+        sFilterMethodMap_APP.put("AutoFocusAssist.java", new String[]{"onAutoFocus"});
+        sFilterMethodMap_APP.put("PhoneUtils.java", new String[]{"printInfo"});
+        sFilterMethodMap_APP.put("ROMUtils.java", new String[]{"getName", "getVersion", "toString"});
+        sFilterMethodMap_APP.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss", "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
+        sFilterMethodMap_APP.put("SnackbarUtils.java", new String[]{"getRootGravity", "setRootGravity", "getRootCornerRadius", "setRootCornerRadius", "getRootBackgroundTintColor", "setRootBackgroundTintColor", "getRootBackground", "setRootBackground", "getRootMargin", "setRootMargin", "getRootAlpha", "setRootAlpha", "getTextGravity", "setTextGravity", "getTextColor", "setTextColor", "getTextSize", "setTextSize", "getTextMaxLines", "setTextMaxLines", "getTextEllipsize", "setTextEllipsize", "getTextTypeface", "setTextTypeface", "getTextPadding", "setTextPadding", "getActionGravity", "setActionGravity", "getActionColor", "setActionColor", "getActionSize", "setActionSize", "getActionPadding", "setActionPadding", "getActionCornerRadius", "setActionCornerRadius", "getActionBackgroundTintColor", "setActionBackgroundTintColor", "getActionBackground", "setActionBackground"});
+        sFilterMethodMap_APP.put("ClickUtils.java", new String[]{"onClick", "doClick", "doInvalidClick", "doMultiClick", "getCount", "getInvalidCount", "getInvalidCycleNumber"});
+        sFilterMethodMap_APP.put("ScreenshotUtils.java", new String[]{"onScreenshot", "onChange", "onChecker"});
+        sFilterMethodMap_APP.put("NotificationUtils.java", new String[]{"getPendingIntent", "setPendingIntent", "getIcon", "setIcon", "getTicker", "setTicker", "getTitle", "setTitle", "getContent", "setContent", "isAutoCancel", "setAutoCancel", "getVibratePattern", "setVibratePattern", "getLightPattern", "setLightPattern", "getChannel", "setChannel", "callback"});
 
         // ==========
         // = Common =
         // ==========
 
-        sFilterMethodMap.put("FileBreadthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
-        sFilterMethodMap.put("FileDepthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
-        sFilterMethodMap.put("FileUtils.java", new String[]{"onReplace", "getSubFiles"});
-        sFilterMethodMap.put("FileRecordUtils.java", new String[]{"callback"});
-        sFilterMethodMap.put("HttpURLConnectionUtils.java", new String[]{"onResponse", "onFail"});
-        sFilterMethodMap.put("TimeKeeper.java", new String[]{"onEnd"});
-        sFilterMethodMap.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
-        sFilterMethodMap.put("CollectionUtils.java", new String[]{"put", "create"});
-        sFilterMethodMap.put("ScaleUtils.java", new String[]{"getXYx", "getXY", "compareTo"});
-        sFilterMethodMap.put("ColorUtils.java", new String[]{"toString"});
-        sFilterMethodMap.put("KeyValue.java", new String[]{"toString"});
-        sFilterMethodMap.put("CalendarUtils.java", new String[]{"compareTo", "toString", "hook"});
+        sFilterMethodMap_APP.put("FileBreadthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
+        sFilterMethodMap_APP.put("FileDepthFirstSearchUtils.java", new String[]{"isHandlerFile", "isAddToList", "onEndListener"});
+        sFilterMethodMap_APP.put("FileUtils.java", new String[]{"onReplace", "getSubFiles"});
+        sFilterMethodMap_APP.put("FileRecordUtils.java", new String[]{"callback"});
+        sFilterMethodMap_APP.put("HttpURLConnectionUtils.java", new String[]{"onResponse", "onFail"});
+        sFilterMethodMap_APP.put("TimeKeeper.java", new String[]{"onEnd"});
+        sFilterMethodMap_APP.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
+        sFilterMethodMap_APP.put("CollectionUtils.java", new String[]{"put", "create"});
+        sFilterMethodMap_APP.put("ScaleUtils.java", new String[]{"getXYx", "getXY", "compareTo"});
+        sFilterMethodMap_APP.put("ColorUtils.java", new String[]{"toString"});
+        sFilterMethodMap_APP.put("KeyValue.java", new String[]{"toString"});
+        sFilterMethodMap_APP.put("CalendarUtils.java", new String[]{"compareTo", "toString", "hook"});
 
         // =============
         // = DevAssist =
