@@ -123,9 +123,9 @@ final class DevWidget_READMEMain {
 
         StringBuffer resultBuffer = new StringBuffer();
         resultBuffer.append("\n\n");
-        resultBuffer.append("\n=====================");
+        resultBuffer.append("\n===================");
         resultBuffer.append("\n= 保存 JavaDoc 成功 =");
-        resultBuffer.append("\n=====================");
+        resultBuffer.append("\n===================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
         resultBuffer.append("保存地址: " + ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH + ApiConfig.README_API_FILE_NAME);

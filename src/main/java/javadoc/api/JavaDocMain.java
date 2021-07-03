@@ -31,9 +31,9 @@ class JavaDocMain {
             ) {
                 StringBuffer buffer = new StringBuffer();
                 buffer.append("\n\n");
-                buffer.append("\n================");
+                buffer.append("\n===============");
                 buffer.append("\n= 读取 JavaDoc =");
-                buffer.append("\n================");
+                buffer.append("\n===============");
                 buffer.append("\n");
                 // 拼接信息
                 buffer.append("\n文件路径: ").append(path + className)
@@ -78,9 +78,9 @@ class JavaDocMain {
                 }
 
                 buffer.append("\n\n");
-                buffer.append("\n=====================");
+                buffer.append("\n===================");
                 buffer.append("\n= 读取 JavaDoc 结束 =");
-                buffer.append("\n=====================");
+                buffer.append("\n===================");
                 buffer.append("\n");
 
                 // 返回文档信息

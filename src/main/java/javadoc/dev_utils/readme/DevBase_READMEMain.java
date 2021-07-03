@@ -156,9 +156,9 @@ final class DevBase_READMEMain {
 
         StringBuffer resultBuffer = new StringBuffer();
         resultBuffer.append("\n\n");
-        resultBuffer.append("\n=====================");
+        resultBuffer.append("\n===================");
         resultBuffer.append("\n= 保存 JavaDoc 成功 =");
-        resultBuffer.append("\n=====================");
+        resultBuffer.append("\n===================");
         resultBuffer.append("\n");
         resultBuffer.append("\n");
         resultBuffer.append("保存地址: " + ApiConfig.DEV_BASE_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
