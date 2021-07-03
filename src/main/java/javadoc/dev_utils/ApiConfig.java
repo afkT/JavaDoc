@@ -76,6 +76,21 @@ public final class ApiConfig {
     // DevAssist 版本号
     public static final String DEV_ASSIST_VERSION            = "1.2.5";
 
+    // ==================
+    // = DevHttpCapture =
+    // ==================
+
+    // 包目录名
+    public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
+    // DevHttpCapture API 文件保存路径
+    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCapture/";
+    // DevHttpCapture 文件路径
+    public static final String DEV_HTTP_CAPTURE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevHttpCapture/src/main/java/dev/";
+    // DevHttpCapture GitHub 项目文件路径
+    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
+    // DevHttpCapture 版本号
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.0";
+
     // ============
     // = DevOther =
     // ============
