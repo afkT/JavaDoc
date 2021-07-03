@@ -103,7 +103,7 @@ final class DevWidget_READMEMain {
         // 添加头部信息
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Widget);
 
-        // 生成 dev 包下
+        // 生成 API 目录
         String widgetAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
                 ApiConfig.sFilterClassSet_Widget, ApiConfig.sFilterMethodMap_Widget, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);

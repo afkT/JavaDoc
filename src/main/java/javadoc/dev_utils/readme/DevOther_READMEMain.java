@@ -85,7 +85,7 @@ final class DevOther_READMEMain {
         // 添加头部信息
         createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Other);
 
-        // 生成 dev 包下
+        // 生成 API 目录
         String otherAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
                 ApiConfig.sFilterClassSet_Other, ApiConfig.sFilterMethodMap_Other, ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuffer, methodNotAnnotateBuffer, notMethodBuffer);
