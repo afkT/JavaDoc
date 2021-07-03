@@ -17,7 +17,7 @@ final class DevBase_READMEMain {
     }
 
     /**
-     * 创建 DevUtils - README 头部前缀
+     * 创建 DevBase - README 头部前缀
      * @param buffer      拼接 Buffer
      * @param path        文件路径
      * @param packageName 包名
