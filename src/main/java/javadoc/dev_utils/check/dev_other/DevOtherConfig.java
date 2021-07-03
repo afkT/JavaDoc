@@ -51,7 +51,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("GlideUtils.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
         ignoreAnnotateMap.put("GlideUtils.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreAnnotateMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
-        ignoreAnnotateMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
         ignoreAnnotateMap.put("ImageConfig", ArrayUtils.asListArgs("create","create","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail","getQuality","setQuality","isOriginalPathReturn","setOriginalPathReturn"));
         ignoreAnnotateMap.put("LocalMediaData", ArrayUtils.asListArgs("getLocalMedia","setLocalMedia"));
         ignoreAnnotateMap.put("LocationWorker", ArrayUtils.asListArgs("doWork","test"));
@@ -107,7 +106,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("GlideUtils.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
         ignoreFinalMap.put("GlideUtils.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreFinalMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
-        ignoreFinalMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreFinalMap.put("ImageConfig", ArrayUtils.asListArgs("setCacheDisk","setCacheMemory","setScaleType","setTransform","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail","setQuality","setOriginalPathReturn"));
         ignoreFinalMap.put("LogWorker", ArrayUtils.asListArgs("observe"));
         ignoreFinalMap.put("LubanEngineImpl", ArrayUtils.asListArgs("compress","compress","compress","compress"));
@@ -142,7 +140,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("ChainWorker.DWorker", ArrayUtils.asListArgs("doWork"));
         ignoreStaticMap.put("CompressConfig", ArrayUtils.asListArgs("isFailFinish","setFailFinish"));
         ignoreStaticMap.put("DevCacheEngineImpl", ArrayUtils.asListArgs("getConfig","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getEntity"));
-        ignoreStaticMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("insertImageToExternal","insertVideoToExternal","insertAudioToExternal","insertDownloadToExternal","insertMediaToExternal","insertImageToInternal","insertVideoToInternal","insertAudioToInternal","insertDownloadToInternal","insertMediaToInternal","convertType","insidePreCheck","getOutputUri","getOutputFile","insideInsertToExternal","insideInsertToInternal","insideInsertThread","insideInsertFinal"));
+        ignoreStaticMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("insertImageToExternal","insertVideoToExternal","insertAudioToExternal","insertDownloadToExternal","insertMediaToExternal","insertImageToInternal","insertVideoToInternal","insertAudioToInternal","insertDownloadToInternal","insertMediaToInternal","convertType","innerPreCheck","getOutputUri","getOutputFile","innerInsertToExternal","innerInsertToInternal","innerInsertThread","innerInsertFinal","finalCallback"));
         ignoreStaticMap.put("DevPermissionEngineImpl", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request"));
         ignoreStaticMap.put("FastjsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
         ignoreStaticMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage","loadImage","loadImage","loadFolderImage","loadAsGifImage","loadGridImage"));
@@ -162,7 +160,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("GlideUtils.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
         ignoreStaticMap.put("GlideUtils.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreStaticMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
-        ignoreStaticMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreStaticMap.put("ImageConfig", ArrayUtils.asListArgs("clone","isCacheDisk","setCacheDisk","isCacheMemory","setCacheMemory","getScaleType","setScaleType","getTransform","setTransform","getRoundedCornersRadius","setRoundedCornersRadius","getErrorPlaceholder","setErrorPlaceholder","getLoadingPlaceholder","setLoadingPlaceholder","getErrorDrawable","setErrorDrawable","getLoadingDrawable","setLoadingDrawable","getWidth","getHeight","setSize","getThumbnail","setThumbnail","getQuality","setQuality","isOriginalPathReturn","setOriginalPathReturn"));
         ignoreStaticMap.put("LocalMediaData", ArrayUtils.asListArgs("getLocalMedia","setLocalMedia","getLocalMediaPath"));
         ignoreStaticMap.put("LocationWorker", ArrayUtils.asListArgs("doWork","test"));
@@ -223,7 +220,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("GlideUtils.InnerDrawableTarget", ArrayUtils.asListArgs("onResourceReady","onLoadStarted","onLoadFailed","onLoadCleared"));
         ignoreParamMap.put("GlideUtils.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource","onResourceReady","onLoadStarted","onLoadFailed"));
         ignoreParamMap.put("GsonEngineImpl", ArrayUtils.asListArgs("toJson","toJson","fromJson","fromJson","fromJson","fromJson","isJSON","isJSONObject","isJSONArray","toJsonIndent","toJsonIndent","toJsonIndent","toJsonIndent"));
-        ignoreParamMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
         ignoreParamMap.put("ImageConfig", ArrayUtils.asListArgs("create","setCacheDisk","setCacheMemory","setRoundedCornersRadius","setErrorPlaceholder","setLoadingPlaceholder","setErrorDrawable","setLoadingDrawable","setSize","setThumbnail","setQuality","setOriginalPathReturn"));
         ignoreParamMap.put("LocalMediaData", ArrayUtils.asListArgs("setLocalMedia"));
         ignoreParamMap.put("LogWorker", ArrayUtils.asListArgs("observe"));
@@ -267,7 +263,7 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ACacheUtils", ArrayUtils.asListArgs("isDue","isDue","newStringWithDateInfo","newByteArrayWithDateInfo","createDateInfo","clearDateInfo","clearDateInfo","hasDateInfo","getDateInfoFromDate","indexOf","copyOfRange","bitmapToByte","byteToBitmap","drawableToBitmap","bitmapToDrawable","isDue","isDue","newStringWithDateInfo","newByteArrayWithDateInfo","createDateInfo","clearDateInfo","clearDateInfo","hasDateInfo","getDateInfoFromDate","indexOf","copyOfRange","bitmapToByte","byteToBitmap","drawableToBitmap","bitmapToDrawable"));
         ignoreUnPublicMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onStart","getErrorMessage"));
         ignoreUnPublicMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onStart","getErrorMessage","isSuccess"));
-        ignoreUnPublicMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("convertType","insidePreCheck","getOutputUri","getOutputFile","insideInsertToExternal","insideInsertToInternal","insideInsertThread","insideInsertFinal"));
+        ignoreUnPublicMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("convertType","innerPreCheck","getOutputUri","getOutputFile","innerInsertToExternal","innerInsertToInternal","innerInsertThread","innerInsertFinal","finalCallback"));
         ignoreUnPublicMap.put("GlideEngineImpl", ArrayUtils.asListArgs("canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder","priConvertImageFormat"));
         ignoreUnPublicMap.put("GlideEngineImpl.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource"));
         ignoreUnPublicMap.put("GlideEngineImpl.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource"));
@@ -278,7 +274,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("GlideUtils", ArrayUtils.asListArgs("canFragmentLoadImage","setToRequest","setToRequest","buildRequestOptions","buildRequest","priDisplayToRequestBuilder","priDisplayToRequestBuilder","priConvertImageFormat"));
         ignoreUnPublicMap.put("GlideUtils.InnerBitmapViewTarget", ArrayUtils.asListArgs("setResource"));
         ignoreUnPublicMap.put("GlideUtils.InnerDrawableViewTarget", ArrayUtils.asListArgs("setResource"));
-        ignoreUnPublicMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("_finalPrintLog","isPlaintext","bodyEncoded"));
         ignoreUnPublicMap.put("LocationWorker", ArrayUtils.asListArgs("test"));
         ignoreUnPublicMap.put("LogWorker", ArrayUtils.asListArgs("code","createData","getLog"));
         ignoreUnPublicMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
@@ -318,12 +313,11 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("BaseBeanSubscriber", ArrayUtils.asListArgs("onSuccessResponse - void","onErrorResponse - void"));
         ignoreReturnVoidMap.put("BaseResponseSubscriber", ArrayUtils.asListArgs("onSuccessResponse - void","onErrorResponse - void"));
         ignoreReturnVoidMap.put("ChainWorker", ArrayUtils.asListArgs("start - void"));
-        ignoreReturnVoidMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("insertImageToExternal - void","insertVideoToExternal - void","insertAudioToExternal - void","insertDownloadToExternal - void","insertMediaToExternal - void","insertImageToInternal - void","insertVideoToInternal - void","insertAudioToInternal - void","insertDownloadToInternal - void","insertMediaToInternal - void","insideInsertToExternal - void","insideInsertToInternal - void","insideInsertThread - void","insideInsertFinal - void"));
+        ignoreReturnVoidMap.put("DevMediaStoreEngineImpl", ArrayUtils.asListArgs("insertImageToExternal - void","insertVideoToExternal - void","insertAudioToExternal - void","insertDownloadToExternal - void","insertMediaToExternal - void","insertImageToInternal - void","insertVideoToInternal - void","insertAudioToInternal - void","insertDownloadToInternal - void","insertMediaToInternal - void","innerInsertToExternal - void","innerInsertToInternal - void","innerInsertThread - void","innerInsertFinal - void","finalCallback - void"));
         ignoreReturnVoidMap.put("EventBusUtils", ArrayUtils.asListArgs("register - void","unregister - void","post - void","cancelEventDelivery - void","postSticky - void","removeStickyEvent - void","removeAllStickyEvents - void"));
         ignoreReturnVoidMap.put("GlideEngine", ArrayUtils.asListArgs("loadImage - void","loadImage - void","loadImage - void","loadFolderImage - void","loadAsGifImage - void","loadGridImage - void"));
         ignoreReturnVoidMap.put("GlideEngineImpl", ArrayUtils.asListArgs("priDisplayToRequestBuilder - void","priDisplayToRequestBuilder - void"));
         ignoreReturnVoidMap.put("GlideUtils", ArrayUtils.asListArgs("priDisplayToRequestBuilder - void","priDisplayToRequestBuilder - void"));
-        ignoreReturnVoidMap.put("HttpLoggingInterceptor", ArrayUtils.asListArgs("_finalPrintLog - void"));
         ignoreReturnVoidMap.put("ImageLoaderUtils", ArrayUtils.asListArgs("init - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","displayImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","loadImage - void","clearDiskCache - void","clearMemoryCache - void","handleSlowNetwork - void","denyNetworkDownloads - void","cancelDisplayTask - void","setDefaultLoadingListener - void","destroy - void","pause - void","resume - void","stop - void"));
         ignoreReturnVoidMap.put("LogWorker", ArrayUtils.asListArgs("onStopped - void","code - void","observe - void"));
         ignoreReturnVoidMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
