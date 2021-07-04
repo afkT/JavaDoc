@@ -1,13 +1,13 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -37,13 +37,7 @@ final class DevHttpCapture_READMEMain {
         buffer.append("\n\n");
         buffer.append("```java");
         buffer.append("\n");
-        buffer.append("// Android ( 1.9.4 以后只更新 AndroidX ) JCenter");
-        buffer.append("\n");
-        buffer.append("//implementation 'com.afkt:DevHttpCapture:1.9.4'");
-        buffer.append("\n\n");
-        buffer.append("// AndroidX ( Maven Central ) ");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevAppX:" + ApiConfig.DEV_HTTP_CAPTURE_VERSION + "'");
+        buffer.append("implementation 'io.github.afkt:DevHttpCapture:" + ApiConfig.DEV_HTTP_CAPTURE_VERSION + "'");
         buffer.append("\n");
         buffer.append("```");
 
@@ -58,35 +52,15 @@ final class DevHttpCapture_READMEMain {
         buffer.append("## 使用");
 
         buffer.append("\n\n");
-        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用");
-
-        buffer.append("\n\n");
-        buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类 ( 工具类内部调用 )，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
+        buffer.append("> 该库主要对使用 Okhttp 网络请求库的项目，提供 Http 抓包功能，并支持抓包数据加密存储。");
         buffer.append("\n");
-        buffer.append("// 整个工具类内部日志信息，都通过以下两个工具类输出打印，并且通过 DevUtils.openLog() 控制开关");
+        buffer.append(">");
         buffer.append("\n");
+        buffer.append("> **并且是以 Module ( ModuleName Key ) 为基础，支持组件化不同 Module 各自的抓包功能**，支持实时开关抓包功能、可控 Http 拦截过滤器。");
         buffer.append("\n");
-        buffer.append("// dev.utils.app - APP 日志打印工具类");
+        buffer.append(">");
         buffer.append("\n");
-        buffer.append("LogPrintUtils");
-        buffer.append("\n");
-        buffer.append("// dev.utils.common - Java Common 日志打印工具类");
-        buffer.append("\n");
-        buffer.append("JCLogUtils");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
+        buffer.append("> 内置两个 Http 抓包拦截器，CallbackInterceptor ( 无存储逻辑，进行回调通知 )、HttpCaptureInterceptor ( 存在存储抓包数据逻辑 )");
 
         buffer.append("\n\n");
         buffer.append("## API");
