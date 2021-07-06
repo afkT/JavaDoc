@@ -63,6 +63,18 @@ final class DevHttpCapture_READMEMain {
         buffer.append("> 内置两个 Http 抓包拦截器，CallbackInterceptor ( 无存储逻辑，进行回调通知 )、HttpCaptureInterceptor ( 存在存储抓包数据逻辑 )");
 
         buffer.append("\n\n");
+        buffer.append("## 事项");
+
+        buffer.append("\n\n");
+        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
+
+        buffer.append("\n\n");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
+
+        buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md)");
+
+        buffer.append("\n\n");
         buffer.append("## API");
 
         buffer.append("\n\n");

@@ -58,6 +58,9 @@ final class DevAssist_READMEMain {
         buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/CHANGELOG.md)");
+
+        buffer.append("\n\n");
         buffer.append("## API");
 
         buffer.append("\n\n");

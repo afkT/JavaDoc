@@ -52,6 +52,15 @@ final class DevJava_READMEMain {
         buffer.append("## 事项");
 
         buffer.append("\n\n");
+        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
+
+        buffer.append("\n\n");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
+
+        buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevJava/CHANGELOG.md)");
+
+        buffer.append("\n\n");
         buffer.append("- 该工具类不依赖 android api，属于 Java 工具类库");
 
         buffer.append("\n\n");
@@ -72,12 +81,6 @@ final class DevJava_READMEMain {
         buffer.append("JCLogUtils.setPrint(new JCLogUtils.Print() {});");
         buffer.append("\n");
         buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
 
         buffer.append("\n\n");
         buffer.append("## API");
