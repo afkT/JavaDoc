@@ -64,6 +64,15 @@ final class DevApp_READMEMain {
         buffer.append("## 事项");
 
         buffer.append("\n\n");
+        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
+
+        buffer.append("\n\n");
+        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
+
+        buffer.append("\n\n");
+        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
+
+        buffer.append("\n\n");
         buffer.append("- 内部存在两个日志工具类 ( 工具类内部调用 )，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
 
         buffer.append("\n\n");
@@ -99,15 +108,6 @@ final class DevApp_READMEMain {
 
         buffer.append("\n\n");
         buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
 
         buffer.append("\n\n");
         buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/ViewHelper.java)");
