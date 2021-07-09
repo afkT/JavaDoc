@@ -131,7 +131,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("CustomScrollView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","computeScrollDeltaToGetChildRectOnScreen","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallback"));
         ignoreStaticMap.put("CustomViewPager", ArrayUtils.asListArgs("initAttrs","onMeasure","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
         ignoreStaticMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs","onMeasure","onScrollChanged","onTouchEvent","onInterceptTouchEvent","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","setScrollCallback"));
-        ignoreStaticMap.put("FlipCardView", ArrayUtils.asListArgs("init","isFront","getCurrentPosition","getAdapter","setAdapter","flip","setInOutAnimator","setFlipDistance","loadView","calculatePosition"));
+        ignoreStaticMap.put("FlipCardView", ArrayUtils.asListArgs("init","isFront","getCurrentPosition","getAdapter","setAdapter","notifyDataSetChanged","flip","setInOutAnimator","setFlipDistance","loadView","calculatePosition"));
         ignoreStaticMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs","onMeasure","onSizeChanged","generateCTRLPointF","generateCurveAnimation","generateEnterAnimation","startAnimation","resetLayoutParams","like","getDrawables","setDrawables","setDrawablesById","getIconWidth","setIconWidth","getIconHeight","setIconHeight","getAnimDuration","setAnimDuration"));
         ignoreStaticMap.put("FlowLikeView.AnimationEndListener", ArrayUtils.asListArgs("onAnimationEnd"));
         ignoreStaticMap.put("FlowLikeView.CurveEvaluator", ArrayUtils.asListArgs("evaluate"));
@@ -307,7 +307,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("CustomViewPager.OnDirectionListener", ArrayUtils.asListArgs("onSlideDirection - void"));
         ignoreReturnVoidMap.put("CustomWebView", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("CustomWebView.ScrollCallback", ArrayUtils.asListArgs("onScrollChanged - void"));
-        ignoreReturnVoidMap.put("FlipCardView", ArrayUtils.asListArgs("init - void","flip - void"));
+        ignoreReturnVoidMap.put("FlipCardView", ArrayUtils.asListArgs("init - void","notifyDataSetChanged - void","flip - void"));
         ignoreReturnVoidMap.put("FlowLikeView", ArrayUtils.asListArgs("initAttrs - void","startAnimation - void","resetLayoutParams - void","like - void"));
         ignoreReturnVoidMap.put("LimitLayout", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("LineTextView.OnNewLineCallback", ArrayUtils.asListArgs("onNewLine - void"));
