@@ -1,11 +1,11 @@
 package javadoc.dev_utils.check.dev_assist;
 
-import dev.utils.common.ArrayUtils;
-import javadoc.dev_utils.check.dev.ICheckConfig;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import dev.utils.common.ArrayUtils;
+import javadoc.dev_utils.check.dev.ICheckConfig;
 
 /**
  * detail: DevAssistConfig 代码检测分析配置
@@ -23,6 +23,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreAnnotateMap.put("BitmapListener", ArrayUtils.asListArgs("getTranscodeType"));
         ignoreAnnotateMap.put("DevDataAdapter", ArrayUtils.asListArgs("getItemCount","getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList","notifyDataChanged","notifyElementChanged"));
         ignoreAnnotateMap.put("DevDataAdapterExt2", ArrayUtils.asListArgs("isEditState","setEditState","toggleEditState","clearSelectAll","isSelectAll","isSelect","isNotSelect","getSelectSize","getDataCount","selectAll","inverseSelect"));
+        ignoreAnnotateMap.put("DevDataList", ArrayUtils.asListArgs("getItemCount","getDataList","getDataArrayList","getDataSize","getDataItem","getDataItemPosition","getFirstData","getLastData","getLastPosition","isDataEmpty","isDataNotEmpty","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","clearDataList","setDataList","setDataList"));
+        ignoreAnnotateMap.put("DevDataListExt", ArrayUtils.asListArgs("isEditState","setEditState","toggleEditState","clearSelectAll","isSelectAll","isSelect","isNotSelect","getSelectSize","getDataCount","selectAll","inverseSelect"));
         ignoreAnnotateMap.put("DevFunction.Method", ArrayUtils.asListArgs("method"));
         ignoreAnnotateMap.put("DevFunction.Method2", ArrayUtils.asListArgs("error"));
         ignoreAnnotateMap.put("DevSource", ArrayUtils.asListArgs("create","create","create","create","createWithPath","isUrl","isUri","isBytes","isResource","isFile","isInputStream","isDrawable","isBitmap"));
@@ -94,6 +96,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("DataAssist", ArrayUtils.asListArgs("setDataChanged"));
         ignoreParamMap.put("DevDataAdapter", ArrayUtils.asListArgs("getDataItem","getDataItemPosition","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","setDataList","setDataList","notifyElementChanged"));
         ignoreParamMap.put("DevDataAdapterExt2", ArrayUtils.asListArgs("setEditState"));
+        ignoreParamMap.put("DevDataList", ArrayUtils.asListArgs("setContext","setActivity","parentContext","getDataItem","getDataItemPosition","isFirstPosition","isLastPosition","isLastPosition","isLastPositionAndGreaterThanOrEqual","isLastPositionAndGreaterThanOrEqual","equalsFirstData","equalsLastData","equalsPositionData","addData","addDataAt","addDatas","addDatasAt","addDatasChecked","addDatasCheckedAt","addLists","removeData","removeDataAt","removeDatas","replaceData","replaceDataAt","swipePosition","contains","clearDataList","setDataList","setDataList","setObject","setPage","setPage","setPage","setCallback","setItemCallback","setState","setTextWatcherAssist","setMultiSelectMap"));
+        ignoreParamMap.put("DevDataListExt", ArrayUtils.asListArgs("setNotifyAdapter","setEditState"));
         ignoreParamMap.put("DevEntry", ArrayUtils.asListArgs("setKey","setValue"));
         ignoreParamMap.put("DevFunction.Method", ArrayUtils.asListArgs("method"));
         ignoreParamMap.put("DevFunction.Method2", ArrayUtils.asListArgs("error"));
