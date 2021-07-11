@@ -1,11 +1,11 @@
 package javadoc.dev_utils.check.dev_other;
 
-import dev.utils.common.ArrayUtils;
-import javadoc.dev_utils.check.dev.ICheckConfig;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import dev.utils.common.ArrayUtils;
+import javadoc.dev_utils.check.dev.ICheckConfig;
 
 /**
  * detail: DevOtherConfig 代码检测分析配置
