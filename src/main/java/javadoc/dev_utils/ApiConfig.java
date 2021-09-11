@@ -149,6 +149,21 @@ public final class ApiConfig {
     // DevBaseMVVM 版本号
     public static final String DEV_BASE_MVVM_VERSION            = "1.0.4";
 
+    // =============
+    // = DevEngine =
+    // =============
+
+    // 包目录名
+    public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
+    // DevEngine API 文件保存路径
+    public static final String DEV_ENGINE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevEngine/";
+    // DevEngine 文件路径
+    public static final String DEV_ENGINE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevEngine/src/main/java/dev/engine/";
+    // DevEngine GitHub 项目文件路径
+    public static final String DEV_ENGINE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevEngine/src/main/java/dev/engine";
+    // DevEngine 版本号
+    public static final String DEV_ENGINE_VERSION            = "1.0.0";
+
     // ===============
     // = DevStandard =
     // ===============
@@ -226,6 +241,13 @@ public final class ApiConfig {
 
     // 包名目录注释
     public static final HashMap<String, String> sCatalogMap_BaseMVVM = new HashMap<>();
+
+    // =============
+    // = DevEngine =
+    // =============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_Engine = new HashMap<>();
 
     // =============
     // = DevWidget =
@@ -450,6 +472,31 @@ public final class ApiConfig {
         sCatalogMap_BaseMVVM.put(".expand.viewmodel", "ViewModel 基类");
         sCatalogMap_BaseMVVM.put(".utils", "依赖工具包");
         sCatalogMap_BaseMVVM.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
+
+        // =============
+        // = DevEngine =
+        // =============
+
+        sCatalogMap_Engine.put("dev.engine", "根目录");
+        sCatalogMap_Engine.put(".analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Engine.put(".barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Engine.put(".barcode.listener", "条形码、二维码操作回调事件");
+        sCatalogMap_Engine.put(".cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Engine.put(".compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Engine.put(".compress.listener", "图片压缩回调事件");
+        sCatalogMap_Engine.put(".http", "Http Engine 网络请求");
+        sCatalogMap_Engine.put(".image", "Image Engine 图片加载、下载、转格式等");
+        sCatalogMap_Engine.put(".image.listener", "图片加载监听事件");
+        sCatalogMap_Engine.put(".json", "JSON Engine");
+        sCatalogMap_Engine.put(".keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Engine.put(".log", "Log Engine 日志打印");
+        sCatalogMap_Engine.put(".media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Engine.put(".permission", "Permission Engine 权限申请");
+        sCatalogMap_Engine.put(".push", "Push Engine 推送平台处理");
+        sCatalogMap_Engine.put(".share", "Share Engine 分享平台处理");
+        sCatalogMap_Engine.put(".share.listener", "分享回调事件");
+        sCatalogMap_Engine.put(".storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Engine.put(".storage.listener", "Storage 存储结果事件");
     }
 
     /**

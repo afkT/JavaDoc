@@ -15,6 +15,7 @@ final class READMEMain {
         builder.append(DevAssist_READMEMain.createREADME());
         builder.append(DevBase_READMEMain.createREADME());
         builder.append(DevBaseMVVM_READMEMain.createREADME());
+        builder.append(DevEngine_READMEMain.createREADME());
         builder.append(DevHttpCapture_READMEMain.createREADME());
         builder.append(DevJava_READMEMain.createREADME());
         builder.append(DevOther_READMEMain.createREADME());
@@ -27,15 +28,12 @@ final class READMEMain {
      * @param str str info
      */
     private static void print(final String str) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                }
-                System.out.println(str);
+        new Thread(() -> {
+            try {
+                Thread.sleep(2000);
+            } catch (Exception ignored) {
             }
+            System.out.println(str);
         }).start();
     }
 }

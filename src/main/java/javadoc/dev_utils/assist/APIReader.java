@@ -141,7 +141,7 @@ public final class APIReader
             classAnnotate = classAnnotate.substring("detail:".length(), ln == -1 ? classAnnotate.length() : ln);
             // 去掉前后空格
             classAnnotate = StringUtils.clearSpaceTrim(classAnnotate);
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
         // 格式化标题 - 替换 %s 为类注释
         finalBuffer.append(String.format(title, classAnnotate));
