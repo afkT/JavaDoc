@@ -275,8 +275,13 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
 
         sCatalogMap_APP.put(".app.cache", "缓存工具类");
-        sCatalogMap_APP.put(".app.camera1", "摄像头相关 android.hardware.Camera");
+        sCatalogMap_APP.put(".app.camera", "摄像头相关");
+        sCatalogMap_APP.put(".app.camera.camera1", "android.hardware.Camera ( Camera1 相关 )");
         sCatalogMap_APP.put(".app.helper", "功能 Helper 辅助类");
+        sCatalogMap_APP.put(".app.helper.dev", "Dev 工具类链式调用 Helper 类");
+        sCatalogMap_APP.put(".app.helper.quick", "简化链式设置 View Quick Helper 类");
+        sCatalogMap_APP.put(".app.helper.version", "Android 版本适配 Helper 类");
+        sCatalogMap_APP.put(".app.helper.view", "View 链式调用快捷设置 Helper 类");
         sCatalogMap_APP.put(".app.image", "图片相关处理");
         sCatalogMap_APP.put(".app.info", "APP 信息、PackageInfo 等");
         sCatalogMap_APP.put(".app.logger", "日志库 DevLogger");
@@ -321,6 +326,8 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
         sCatalogMap_Assist.put(".engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Assist.put(".engine.barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Assist.put(".engine.barcode.listener", "条形码、二维码操作回调事件");
         sCatalogMap_Assist.put(".engine.cache", "Cache Engine 有效期键值对缓存");
         sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine 图片压缩");
         sCatalogMap_Assist.put(".engine.compress.listener", "图片压缩回调事件");
@@ -354,6 +361,8 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".assist", "常用辅助类封装");
         sCatalogMap_Other.put(".engine", "兼容 Engine");
         sCatalogMap_Other.put(".engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Other.put(".engine.barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Other.put(".engine.barcode.listener", "条形码、二维码操作回调事件");
         sCatalogMap_Other.put(".engine.cache", "Cache Engine 有效期键值对缓存");
         sCatalogMap_Other.put(".engine.compress", "Image Compress Engine 图片压缩");
         sCatalogMap_Other.put(".engine.http", "Http Engine 网络请求");
