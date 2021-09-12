@@ -1,13 +1,13 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -20,39 +20,32 @@ final class DevOther_READMEMain {
 
     /**
      * 创建 DevOther - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
-            final HashMap<String, String> mapCatalog
+            final HashMap<String, String> mapCatalog,
+            final String templatePath
     ) {
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
-
-        buffer.append("\n\n");
-        buffer.append("## Use");
-
-        buffer.append("\n\n");
-        buffer.append("> 直接 copy 所需要的类到项目中使用");
-        buffer.append("\n");
-
-        buffer.append("\n\n");
-        buffer.append("## API");
-
-        buffer.append("\n\n");
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
+        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
-        buffer.append("\n\n");
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, catalog, apiCatalog
+        ));
     }
 
     /**
@@ -83,7 +76,10 @@ final class DevOther_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Other);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_Other,
+                ApiConfig.DEV_OTHER_TEMPLATE
+        );
 
         // 生成 API 目录
         String otherAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,

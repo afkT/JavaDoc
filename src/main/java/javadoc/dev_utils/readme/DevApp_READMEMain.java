@@ -20,112 +20,33 @@ final class DevApp_READMEMain {
 
     /**
      * 创建 DevApp - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
-            final HashMap<String, String> mapCatalog
+            final HashMap<String, String> mapCatalog,
+            final String templatePath
     ) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// Android ( 1.9.4 以后只更新 AndroidX ) JCenter");
-        buffer.append("\n");
-        buffer.append("//implementation 'com.afkt:DevApp:1.9.4'");
-        buffer.append("\n\n");
-        buffer.append("// AndroidX ( Maven Central ) ");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevAppX:" + ApiConfig.DEV_APP_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
-
-        buffer.append("\n\n");
-        buffer.append("## 使用");
-
-        buffer.append("\n\n");
-        buffer.append("> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用");
-
-        buffer.append("\n\n");
-        buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- 内部存在两个日志工具类 ( 工具类内部调用 )，对外使用 [DevLogger](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/logger/DevLogger.md)");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// 整个工具类内部日志信息，都通过以下两个工具类输出打印，并且通过 DevUtils.openLog() 控制开关");
-        buffer.append("\n");
-        buffer.append("\n");
-        buffer.append("// dev.utils.app - APP 日志打印工具类");
-        buffer.append("\n");
-        buffer.append("LogPrintUtils");
-        buffer.append("\n");
-        buffer.append("// dev.utils.common - Java Common 日志打印工具类");
-        buffer.append("\n");
-        buffer.append("JCLogUtils");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 开启日志");
-        buffer.append("\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法");
-        buffer.append("\n");
-        buffer.append("DevUtils.openLog();");
-        buffer.append("\n");
-        buffer.append("// 标示 debug 模式");
-        buffer.append("\n");
-        buffer.append("DevUtils.openDebug();");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("- 工具类部分模块配置与使用 - [Use and Config](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/utils_readme/USE_CONFIG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- [View 链式调用快捷设置 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/ViewHelper.java)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Dev 工具类链式调用 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/DevHelper.java)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Android 版本适配 Helper 类](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/VersionHelper.java)");
-
-        buffer.append("\n\n");
-        buffer.append("## API");
-
-        buffer.append("\n\n");
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
+        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
-        buffer.append("\n\n");
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, ApiConfig.DEV_APP_VERSION,
+                catalog, apiCatalog
+        ));
     }
 
     /**
@@ -156,7 +77,10 @@ final class DevApp_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_APP);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_APP,
+                ApiConfig.DEV_APP_TEMPLATE
+        );
 
         // 生成 API 目录
         String appAPI = APIGenerate.apiGenerate("app", path, packageName, githubUrl,

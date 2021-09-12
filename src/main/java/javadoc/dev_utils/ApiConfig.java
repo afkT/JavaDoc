@@ -50,6 +50,8 @@ public final class ApiConfig {
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
     public static final String DEV_APP_VERSION            = "2.2.8";
+    // DevApp Template Readme
+    public static final String DEV_APP_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevApp_README.md";
 
     // ===========
     // = DevJava =
@@ -114,6 +116,8 @@ public final class ApiConfig {
     public static final String DEV_OTHER_PATH               = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/";
     // DevOther GitHub 项目文件路径
     public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/";
+    // DevOther Template Readme
+    public static final String DEV_OTHER_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
 
     // =============
     // = DevWidget =
