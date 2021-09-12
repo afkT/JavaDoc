@@ -20,6 +20,7 @@ final class READMEMain {
         builder.append(DevJava_READMEMain.createREADME());
         builder.append(DevOther_READMEMain.createREADME());
         builder.append(DevWidget_READMEMain.createREADME());
+        builder.append(DevEnvironment_READMEMain.createREADME());
         print(builder.toString());
     }
 

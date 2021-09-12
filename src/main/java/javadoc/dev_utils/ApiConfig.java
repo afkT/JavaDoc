@@ -87,56 +87,6 @@ public final class ApiConfig {
     // DevAssist Template Readme
     public static final String DEV_ASSIST_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevAssist_README.md";
 
-    // ==================
-    // = DevHttpCapture =
-    // ==================
-
-    // 包目录名
-    public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
-    // DevHttpCapture API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCapture/";
-    // DevHttpCapture 文件路径
-    public static final String DEV_HTTP_CAPTURE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevHttpCapture/src/main/java/dev/";
-    // DevHttpCapture GitHub 项目文件路径
-    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
-    // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.0";
-    // DevHttpCapture Template Readme
-    public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
-
-    // ============
-    // = DevOther =
-    // ============
-
-    // 包目录名
-    public static final String DEV_OTHER_PACKAGE            = "";
-    // DevOther API 文件保存路径
-    public static final String DEV_OTHER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevOther/";
-    // DevOther 文件路径
-    public static final String DEV_OTHER_PATH               = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/";
-    // DevOther GitHub 项目文件路径
-    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/";
-    // DevOther Template Readme
-    public static final String DEV_OTHER_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
-
-    // =============
-    // = DevWidget =
-    // =============
-
-    // 包目录名
-    public static final String DEV_WIDGET_PACKAGE            = "dev";
-    // DevWidget API 文件保存路径
-    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
-    // DevWidget 文件路径
-    public static final String DEV_WIDGET_PATH               = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
-    // DevWidget GitHub 项目文件路径
-    public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
-    // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = "1.1.0";
-    // DevWidget Template Readme
-    public static final String DEV_WIDGET_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
-    public static final String DEV_WIDGET_API_TEMPLATE       = TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
-
     // ===========
     // = DevBase =
     // ===========
@@ -188,6 +138,67 @@ public final class ApiConfig {
     // DevEngine Template Readme
     public static final String DEV_ENGINE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEngine_README.md";
 
+    // ==================
+    // = DevHttpCapture =
+    // ==================
+
+    // 包目录名
+    public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
+    // DevHttpCapture API 文件保存路径
+    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCapture/";
+    // DevHttpCapture 文件路径
+    public static final String DEV_HTTP_CAPTURE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevHttpCapture/src/main/java/dev/";
+    // DevHttpCapture GitHub 项目文件路径
+    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
+    // DevHttpCapture 版本号
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.0";
+    // DevHttpCapture Template Readme
+    public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
+
+    // ============
+    // = DevOther =
+    // ============
+
+    // 包目录名
+    public static final String DEV_OTHER_PACKAGE            = "";
+    // DevOther API 文件保存路径
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevOther/";
+    // DevOther 文件路径
+    public static final String DEV_OTHER_PATH               = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/";
+    // DevOther GitHub 项目文件路径
+    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevOther/src/main/java/";
+    // DevOther Template Readme
+    public static final String DEV_OTHER_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
+
+    // =============
+    // = DevWidget =
+    // =============
+
+    // 包目录名
+    public static final String DEV_WIDGET_PACKAGE            = "dev";
+    // DevWidget API 文件保存路径
+    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
+    // DevWidget 文件路径
+    public static final String DEV_WIDGET_PATH               = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
+    // DevWidget GitHub 项目文件路径
+    public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
+    // DevWidget 版本号
+    public static final String DEV_WIDGET_VERSION            = "1.1.0";
+    // DevWidget Template Readme
+    public static final String DEV_WIDGET_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
+    public static final String DEV_WIDGET_API_TEMPLATE       = TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
+
+    // ==================
+    // = DevEnvironment =
+    // ==================
+
+    // DevEnvironment API 文件保存路径
+    public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "Environment/";
+    // DevEnvironment 版本号
+    public static final String DEV_ENVIRONMENT_VERSION            = "1.0.3";
+    // DevEnvironment Template Readme
+    public static final String DEV_ENVIRONMENT_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEnvironment_README.md";
+
     // ===============
     // = DevStandard =
     // ===============
@@ -230,6 +241,27 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Assist = new HashMap<>();
 
+    // ===========
+    // = DevBase =
+    // ===========
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_Base = new HashMap<>();
+
+    // ===============
+    // = DevBaseMVVM =
+    // ===============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_BaseMVVM = new HashMap<>();
+
+    // =============
+    // = DevEngine =
+    // =============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_Engine = new HashMap<>();
+
     // ==================
     // = DevHttpCapture =
     // ==================
@@ -251,27 +283,6 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_Other  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
-
-    // ===========
-    // = DevBase =
-    // ===========
-
-    // 包名目录注释
-    public static final HashMap<String, String> sCatalogMap_Base = new HashMap<>();
-
-    // ===============
-    // = DevBaseMVVM =
-    // ===============
-
-    // 包名目录注释
-    public static final HashMap<String, String> sCatalogMap_BaseMVVM = new HashMap<>();
-
-    // =============
-    // = DevEngine =
-    // =============
-
-    // 包名目录注释
-    public static final HashMap<String, String> sCatalogMap_Engine = new HashMap<>();
 
     // =============
     // = DevWidget =
