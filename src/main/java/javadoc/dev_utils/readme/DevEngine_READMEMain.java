@@ -50,6 +50,7 @@ final class DevEngine_READMEMain {
         // 不增加锚链接 -> 一级目录
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
 
+        // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
         String templateContent = new String(bytes);
         buffer.append(templateContent);

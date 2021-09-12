@@ -138,6 +138,8 @@ public final class ApiConfig {
     public static final String DEV_BASE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
     // DevBase 版本号
     public static final String DEV_BASE_VERSION            = "1.0.6";
+    // DevBase Template Readme
+    public static final String DEV_BASE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevBase_README.md";
 
     // ===============
     // = DevBaseMVVM =
@@ -153,6 +155,8 @@ public final class ApiConfig {
     public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
     // DevBaseMVVM 版本号
     public static final String DEV_BASE_MVVM_VERSION            = "1.0.4";
+    // DevBaseMVVM Template Readme
+    public static final String DEV_BASE_MVVM_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevBaseMVVM_README.md";
 
     // =============
     // = DevEngine =
