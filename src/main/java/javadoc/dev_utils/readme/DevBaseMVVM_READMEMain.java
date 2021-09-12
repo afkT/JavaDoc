@@ -1,11 +1,11 @@
 package javadoc.dev_utils.readme;
 
+import java.io.File;
+import java.util.HashMap;
+
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.PackageCatalog;
-
-import java.io.File;
-import java.util.HashMap;
 
 /**
  * detail: 创建 README Main 方法
