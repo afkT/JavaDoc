@@ -1,4 +1,13 @@
 
+## Gradle
+
+```java
+implementation 'io.github.afkt:DevBase:%s'
+```
+
+## 目录结构
+
+%s
 
 ## 项目类结构 - [包目录](https://github.com/afkT/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base)
 

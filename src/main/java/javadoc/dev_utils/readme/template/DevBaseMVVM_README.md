@@ -1,4 +1,13 @@
 
+## Gradle
+
+```java
+implementation 'io.github.afkt:DevBaseMVVM:%s'
+```
+
+## 目录结构
+
+%s
 
 ## 项目类结构 - [包目录](https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base)
 
@@ -42,7 +51,7 @@
 
 * [AndroidX Jetpack Practice](https://github.com/hi-dhl/AndroidX-Jetpack-Practice)
 
-* [AndroidLibs / 框架](https://github.com/GuoYangGit/AndroidLibs/tree/master/%E6%A1%86%E6%9E%B6)
+* [AndroidLibs / 框架](https://github.com/GuoYangGit/AndroidLibs/tree/master/框架)
 
 * [深入浅出 MVVM 教程](https://www.jianshu.com/p/bcdb7c2a07eb)
 

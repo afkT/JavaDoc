@@ -33,27 +33,17 @@ final class DevBase_READMEMain {
             final String githubUrl,
             final String templatePath
     ) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevBase:" + ApiConfig.DEV_BASE_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
 
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
         String templateContent = new String(bytes);
-        buffer.append(templateContent);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, ApiConfig.DEV_BASE_VERSION, catalog
+        ));
     }
 
     /**
