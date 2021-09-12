@@ -1,13 +1,13 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -20,68 +20,33 @@ final class DevHttpCapture_READMEMain {
 
     /**
      * 创建 DevHttpCapture - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
-            final HashMap<String, String> mapCatalog
+            final HashMap<String, String> mapCatalog,
+            final String templatePath
     ) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevHttpCapture:" + ApiConfig.DEV_HTTP_CAPTURE_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
-
-        buffer.append("\n\n");
-        buffer.append("## 使用");
-
-        buffer.append("\n\n");
-        buffer.append("> 该库主要对使用 Okhttp 网络请求库的项目，提供 Http 抓包功能，并支持抓包数据加密存储。");
-        buffer.append("\n");
-        buffer.append(">");
-        buffer.append("\n");
-        buffer.append("> **并且是以 Module ( ModuleName Key ) 为基础，支持组件化不同 Module 各自的抓包功能**，支持实时开关抓包功能、可控 Http 拦截过滤器。");
-        buffer.append("\n");
-        buffer.append(">");
-        buffer.append("\n");
-        buffer.append("> 内置两个 Http 抓包拦截器，CallbackInterceptor ( 无存储逻辑，进行回调通知 )、HttpCaptureInterceptor ( 存在存储抓包数据逻辑 )");
-
-        buffer.append("\n\n");
-        buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("## API");
-
-        buffer.append("\n\n");
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
+        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
-        buffer.append("\n\n");
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, ApiConfig.DEV_HTTP_CAPTURE_VERSION,
+                catalog, apiCatalog
+        ));
     }
 
     /**
@@ -112,7 +77,10 @@ final class DevHttpCapture_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_HttpCapture);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_HttpCapture,
+                ApiConfig.DEV_HTTP_CAPTURE_TEMPLATE
+        );
 
         // 生成 API 目录
         String httpCaptureAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,

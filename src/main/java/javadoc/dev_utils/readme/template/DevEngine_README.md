@@ -1,4 +1,13 @@
 
+## Gradle
+
+```java
+implementation 'io.github.afkt:DevEngine:%s'
+```
+
+## 目录结构
+
+%s
 
 ## About
 
