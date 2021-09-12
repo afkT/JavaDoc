@@ -18,18 +18,20 @@ final class DevEngine_READMEMain {
 
     /**
      * 创建 DevEngine - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
-     * @param githubUrl   项目 github 链接
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param githubUrl    项目 github 链接
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
             final HashMap<String, String> mapCatalog,
-            final String githubUrl
+            final String githubUrl,
+            final String templatePath
     ) {
         buffer.append("\n");
         buffer.append("## Gradle");
@@ -48,39 +50,9 @@ final class DevEngine_READMEMain {
         // 不增加锚链接 -> 一级目录
         buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
 
-        buffer.append("\n\n");
-        buffer.append("## 项目类结构 - [包目录](" + githubUrl + ")");
-        buffer.append("\n\n");
-        buffer.append("### 核心代码");
-        buffer.append("\n\n");
-        buffer.append("* 核心依赖库 [DevBase](https://github.com/afkT/DevUtils/blob/master/lib/DevBase/README.md)：整个库最终基类都基于该库 `DevBase` 代码");
-        buffer.append("\n\n");
-        buffer.append("### 其他代码");
-        buffer.append("\n\n");
-        buffer.append("* 接口相关（[able](" + githubUrl + "/able)）：对外提供开放方法接口，用于基类可选配置及获取操作");
-        buffer.append("\n\n");
-        buffer.append("* 库依赖工具包（[utils、assist](" + githubUrl + "/utils)）：抽取通用代码工具类、封装相同逻辑代码辅助类");
-        buffer.append("\n\n");
-        buffer.append("### 基于 Base Activity、Fragment 扩展包（[expand](" + githubUrl + "/expand)）");
-        buffer.append("\n\n");
-        buffer.append("* Content Layout MVVM 基类（[content](" + githubUrl + "/expand/content)）：通过内置 Layout 作为根布局，方便对全局进行增删 View 控制处理");
-        buffer.append("\n\n");
-        buffer.append("* MVVM 架构基类（[mvvm](" + githubUrl + "/expand/mvvm)）：MVVM ( ViewDataBinding + ViewModel ) 架构基类");
-        buffer.append("\n\n");
-        buffer.append("* ViewDataBinding 基类（[viewdata](" + githubUrl + "/expand/viewdata)）：使用 ViewDataBinding 实现对 View 进行 bind、数据双向绑定基类");
-        buffer.append("\n\n");
-        buffer.append("* ViewModel 基类（[viewmodel](" + githubUrl + "/expand/viewmodel)）：使用 ViewModel 进行数据管理、交互基类");
-
-        buffer.append("\n\n");
-        buffer.append("## Google");
-        buffer.append("\n\n");
-        buffer.append("* [android / sunflower](https://github.com/android/sunflower)");
-        buffer.append("\n\n");
-        buffer.append("* [ViewModel 概览](https://developer.android.com/topic/libraries/architecture/viewmodel)");
-        buffer.append("\n\n");
-        buffer.append("* [LiveData 概览](https://developer.android.com/topic/libraries/architecture/livedata)");
-
-        buffer.append("\n\n");
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+        buffer.append(templateContent);
     }
 
     /**
@@ -102,7 +74,10 @@ final class DevEngine_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Engine, githubUrl);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_Engine,
+                githubUrl, ApiConfig.DEV_ENGINE_TEMPLATE
+        );
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(new File(ApiConfig.DEV_ENGINE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),

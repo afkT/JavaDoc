@@ -17,9 +17,9 @@ public final class ApiConfig {
     public static final String PROJECT_NAME   = "DevUtils";
     // 文件保存路径
     public static final String FILE_SAVE_PATH = "D:/API/";
-    // 本地路径
+    // 本地路径 ( DevUtils 项目 )
     public static final String LOCAL_PATH     = "F:/Project/Android";
-    // 项目路径
+    // 项目路径 ( DevUtils 项目 )
     public static final String PROJECT_PATH   = LOCAL_PATH + File.separator + PROJECT_NAME;
 
     // 包目录名
@@ -30,6 +30,11 @@ public final class ApiConfig {
     public static final String README_FILE_NAME     = "README.md";
     // README_API 文件名
     public static final String README_API_FILE_NAME = "README_API.md";
+
+    // 本项目路径 ( JavaDoc 项目 )
+    private static final String JAVADOC_PROJECT_PATH  = new File(System.getProperty("user.dir")).getAbsolutePath();
+    // Template package path
+    private static final String TEMPLATE_PACKAGE_PATH = JAVADOC_PROJECT_PATH + "/src/main/java/javadoc/dev_utils/readme/template";
 
     // ==========
     // = DevApp =
@@ -163,6 +168,8 @@ public final class ApiConfig {
     public static final String DEV_ENGINE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevEngine/src/main/java/dev/engine";
     // DevEngine 版本号
     public static final String DEV_ENGINE_VERSION            = "1.0.0";
+    // DevEngine Template Readme
+    public static final String DEV_ENGINE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEngine_README.md";
 
     // ===============
     // = DevStandard =
