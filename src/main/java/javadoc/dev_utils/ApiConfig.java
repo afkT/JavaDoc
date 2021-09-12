@@ -133,6 +133,9 @@ public final class ApiConfig {
     public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
     // DevWidget 版本号
     public static final String DEV_WIDGET_VERSION            = "1.1.0";
+    // DevWidget Template Readme
+    public static final String DEV_WIDGET_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
+    public static final String DEV_WIDGET_API_TEMPLATE       = TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
 
     // ===========
     // = DevBase =

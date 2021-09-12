@@ -1,13 +1,13 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -20,69 +20,33 @@ final class DevWidget_READMEMain {
 
     /**
      * 创建 DevWidget - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
-            final HashMap<String, String> mapCatalog
+            final HashMap<String, String> mapCatalog,
+            final String templatePath
     ) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// AndroidX");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevWidgetX:" + ApiConfig.DEV_WIDGET_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
-
-        buffer.append("\n\n");
-        buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/CHANGELOG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("## README");
-
-        buffer.append("\n\n");
-        buffer.append("- 效果可运行 DevUtils 项目点击 DevWidget UI 库查看");
-        buffer.append("\n\n");
-        buffer.append("- 该库依赖 [DevApp](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md) 开发，需引用 DevApp 库");
-        buffer.append("\n\n");
-        buffer.append("- [Preview README](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md)");
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/CHANGELOG.md)");
-        buffer.append("\n");
-
-        buffer.append("\n\n");
-        buffer.append("## API");
-
-        buffer.append("\n\n");
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
+        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
-        buffer.append("\n\n");
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, ApiConfig.DEV_WIDGET_VERSION,
+                catalog, apiCatalog
+        ));
     }
 
     /**
@@ -106,6 +70,21 @@ final class DevWidget_READMEMain {
         // 类不存在方法记录存储
         final StringBuffer notMethodBuffer = new StringBuffer();
 
+        // ==============
+        // = 生成 README =
+        // ==============
+
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_WIDGET_TEMPLATE);
+        String templateContent = new String(bytes);
+        // 保存 README 内容
+        templateContent = String.format(templateContent, ApiConfig.DEV_WIDGET_VERSION);
+        // 保存 DevWidget README.md 文件
+        FileUtils.saveFile(
+                new File(ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
+                templateContent.getBytes()
+        );
+
         // ===========
         // = 生成 API =
         // ===========
@@ -113,7 +92,10 @@ final class DevWidget_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_Widget);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_Widget,
+                ApiConfig.DEV_WIDGET_API_TEMPLATE
+        );
 
         // 生成 API 目录
         String widgetAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
