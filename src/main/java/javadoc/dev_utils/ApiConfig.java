@@ -356,7 +356,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.http", "Http Engine 网络请求");
         sCatalogMap_Assist.put(".engine.image", "Image Engine 图片加载、下载、转格式等");
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
-        sCatalogMap_Assist.put(".engine.json", "JSON Engine");
+        sCatalogMap_Assist.put(".engine.json", "JSON Engine 映射");
         sCatalogMap_Assist.put(".engine.keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Assist.put(".engine.log", "Log Engine 日志打印");
         sCatalogMap_Assist.put(".engine.media", "Media Selector Engine 多媒体资源选择");
@@ -397,7 +397,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".java.dev.engine.compress", "Image Compress Engine 图片压缩");
         sCatalogMap_Other.put(".java.dev.engine.http", "Http Engine 网络请求");
         sCatalogMap_Other.put(".java.dev.engine.image", "Image Engine 图片加载、下载、转格式等");
-        sCatalogMap_Other.put(".java.dev.engine.json", "JSON Engine");
+        sCatalogMap_Other.put(".java.dev.engine.json", "JSON Engine 映射");
         sCatalogMap_Other.put(".java.dev.engine.keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Other.put(".java.dev.engine.log", "Log Engine 日志打印");
         sCatalogMap_Other.put(".java.dev.engine.media", "Media Selector Engine 多媒体资源选择");
@@ -487,7 +487,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".http", "Http Engine 网络请求");
         sCatalogMap_Engine.put(".image", "Image Engine 图片加载、下载、转格式等");
         sCatalogMap_Engine.put(".image.listener", "图片加载监听事件");
-        sCatalogMap_Engine.put(".json", "JSON Engine");
+        sCatalogMap_Engine.put(".json", "JSON Engine 映射");
         sCatalogMap_Engine.put(".keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Engine.put(".log", "Log Engine 日志打印");
         sCatalogMap_Engine.put(".media", "Media Selector Engine 多媒体资源选择");

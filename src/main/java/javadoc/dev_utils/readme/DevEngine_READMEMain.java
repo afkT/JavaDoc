@@ -81,38 +81,6 @@ final class DevEngine_READMEMain {
         buffer.append("* [LiveData 概览](https://developer.android.com/topic/libraries/architecture/livedata)");
 
         buffer.append("\n\n");
-        buffer.append("## 其他");
-        buffer.append("\n\n");
-        buffer.append("* [MVPVM in Action, 谁告诉你 MVP 和 MVVM 是互斥的](http://blog.zhaiyifan.cn/2016/03/16/android-new-project-from-0-p3)");
-        buffer.append("\n\n");
-        buffer.append("* [是让人耳目一新的 Jetpack MVVM 精讲啊！](https://juejin.cn/post/6844903976240939021)");
-        buffer.append("\n\n");
-        buffer.append("* [DataBinding 最全使用说明](https://juejin.cn/post/6844903549223059463)");
-        buffer.append("\n\n");
-        buffer.append("* [Android 官方 MVVM 框架实现组件化之整体结构](https://www.jianshu.com/p/c0988e7f31fd)");
-        buffer.append("\n\n");
-        buffer.append("* [AndroidX Jetpack Practice](https://github.com/hi-dhl/AndroidX-Jetpack-Practice)");
-        buffer.append("\n\n");
-        buffer.append("* [AndroidLibs / 框架](https://github.com/GuoYangGit/AndroidLibs/tree/master/%E6%A1%86%E6%9E%B6)");
-        buffer.append("\n\n");
-        buffer.append("* [深入浅出 MVVM 教程](https://www.jianshu.com/p/bcdb7c2a07eb)");
-        buffer.append("\n\n");
-        buffer.append("* [深入浅出 MVVM 教程 Repository ( 数据仓库 ) ](https://juejin.cn/post/6844903505635835911)");
-        buffer.append("\n\n");
-        buffer.append("* [关于 Android 架构，你是否还在生搬硬套？](https://juejin.cn/post/6942464122273398820)");
-        buffer.append("\n\n");
-        buffer.append("* [引入 Jetpack 架构后，你的 App 会发生哪些变化？](https://juejin.cn/post/6955491901265051661)");
-
-        buffer.append("\n\n");
-        buffer.append("## Other");
-        buffer.append("\n\n");
-        buffer.append("* [GitHub MVVMHabit](https://github.com/goldze/MVVMHabit)");
-        buffer.append("\n\n");
-        buffer.append("* [GitHub Jetpack-Mvvm](https://github.com/zskingking/Jetpack-Mvvm)");
-        buffer.append("\n\n");
-        buffer.append("* [GitHub Jetpack-MVVM-Best-Practice](https://github.com/KunMinX/Jetpack-MVVM-Best-Practice)");
-
-        buffer.append("\n\n");
     }
 
     /**
