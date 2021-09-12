@@ -65,6 +65,8 @@ public final class ApiConfig {
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
     public static final String DEV_JAVA_VERSION            = "1.3.5";
+    // DevJava Template Readme
+    public static final String DEV_JAVA_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevJava_README.md";
 
     // =============
     // = DevAssist =
@@ -80,6 +82,8 @@ public final class ApiConfig {
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
     public static final String DEV_ASSIST_VERSION            = "1.2.5";
+    // DevAssist Template Readme
+    public static final String DEV_ASSIST_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevAssist_README.md";
 
     // ==================
     // = DevHttpCapture =

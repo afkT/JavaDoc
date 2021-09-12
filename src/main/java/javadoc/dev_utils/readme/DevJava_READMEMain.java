@@ -1,13 +1,13 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * detail: 创建 README Main 方法
@@ -20,76 +20,33 @@ final class DevJava_READMEMain {
 
     /**
      * 创建 DevJava - README 头部前缀
-     * @param buffer      拼接 Buffer
-     * @param path        文件路径
-     * @param packageName 包名
-     * @param mapCatalog  对应目录的注释
+     * @param buffer       拼接 Buffer
+     * @param path         文件路径
+     * @param packageName  包名
+     * @param mapCatalog   对应目录的注释
+     * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
             final StringBuffer buffer,
             final String path,
             final String packageName,
-            final HashMap<String, String> mapCatalog
+            final HashMap<String, String> mapCatalog,
+            final String templatePath
     ) {
-        buffer.append("\n");
-        buffer.append("## Gradle");
-
-        buffer.append("\n\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("implementation 'io.github.afkt:DevJava:" + ApiConfig.DEV_JAVA_VERSION + "'");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## 目录结构");
-
-        buffer.append("\n\n");
         // 不增加锚链接 -> 一级目录
-        buffer.append(PackageCatalog.apiCatalog(false, path, packageName, mapCatalog));
-
-        buffer.append("\n\n");
-        buffer.append("## 事项");
-
-        buffer.append("\n\n");
-        buffer.append("- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`");
-
-        buffer.append("\n\n");
-        buffer.append("- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)");
-
-        buffer.append("\n\n");
-        buffer.append("- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevJava/CHANGELOG.md)");
-
-        buffer.append("\n\n");
-        buffer.append("- 该工具类不依赖 android api，属于 Java 工具类库");
-
-        buffer.append("\n\n");
-        buffer.append("- 开启日志");
-        buffer.append("\n");
-        buffer.append("```java");
-        buffer.append("\n");
-        buffer.append("// 打开 lib 内部日志 - 线上 (release) 环境，不调用方法");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setPrintLog(true);");
-        buffer.append("\n");
-        buffer.append("// 控制台打印日志");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setControlPrintLog(true);");
-        buffer.append("\n");
-        buffer.append("// 设置 Java 模块日志信息监听");
-        buffer.append("\n");
-        buffer.append("JCLogUtils.setPrint(new JCLogUtils.Print() {});");
-        buffer.append("\n");
-        buffer.append("```");
-
-        buffer.append("\n\n");
-        buffer.append("## API");
-
-        buffer.append("\n\n");
+        String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
         // 增加锚链接 -> 二级目录
-        buffer.append(PackageCatalog.apiCatalog(true, path, packageName, mapCatalog));
+        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
-        buffer.append("\n\n");
+        // template readme content
+        byte[] bytes           = FileUtils.readFileBytes(templatePath);
+        String templateContent = new String(bytes);
+
+        // 保存 README 内容
+        buffer.append(String.format(
+                templateContent, ApiConfig.DEV_JAVA_VERSION,
+                catalog, apiCatalog
+        ));
     }
 
     /**
@@ -120,7 +77,10 @@ final class DevJava_READMEMain {
         // 最终的数据
         StringBuffer buffer = new StringBuffer();
         // 添加头部信息
-        createREADMEHead(buffer, path, packageName, ApiConfig.sCatalogMap_APP);
+        createREADMEHead(
+                buffer, path, packageName, ApiConfig.sCatalogMap_APP,
+                ApiConfig.DEV_JAVA_TEMPLATE
+        );
 
         // 生成 API 目录
         String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
