@@ -222,6 +222,13 @@ public final class APIReader
                                 methodAnnotate = methodAnnotate.split("\n")[0];
                             }
                         }
+//                        // 进行括号追加空格处理
+//                        methodAnnotate = methodAnnotate.replaceAll("\\(", " ( ")
+//                                .replaceAll("\\)", " ) ")
+//                                .replaceAll("  ", " ")
+//                                .replaceAll(" \\( \\)", "()");
+//                        methodAnnotate = StringUtils.clearSpaceTabLineTrim(methodAnnotate);
+
                         // 保存方法名、方法注释
                         finalBuffer.append("\n| " + methodName + " | " + methodAnnotate + " |");
                         // 进行保存过滤字段
