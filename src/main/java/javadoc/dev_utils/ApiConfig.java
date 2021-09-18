@@ -418,8 +418,6 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".dev", "通用实现");
         sCatalogMap_Other.put(".dev.receiver", "BroadcastReceiver 监听相关");
         sCatalogMap_Other.put(".dev.service", "Service 相关");
-        sCatalogMap_Other.put(".dev.widget", "控件相关");
-        sCatalogMap_Other.put(".dev.widget.decoration", "RecyclerView ItemDecoration");
 
         sCatalogMap_Other.put(".java", "Java 实现");
         sCatalogMap_Other.put(".java.dev", "根目录");
@@ -472,6 +470,7 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.adjust", "自动调节高度 View");
         sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
         sCatalogMap_Widget.put(".widget.custom", "自定义 View");
+        sCatalogMap_Widget.put(".widget.decoration", "RecyclerView ItemDecoration");
         sCatalogMap_Widget.put(".widget.function", "需求功能 View");
         sCatalogMap_Widget.put(".widget.ui", "UI View");
         sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
