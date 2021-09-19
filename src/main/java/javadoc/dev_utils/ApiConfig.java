@@ -53,23 +53,6 @@ public final class ApiConfig {
     // DevApp Template Readme
     public static final String DEV_APP_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevApp_README.md";
 
-    // ===========
-    // = DevJava =
-    // ===========
-
-    // DevJava API 文件保存路径
-    public static final String DEV_JAVA_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevJava/";
-    // DevJava 文件路径
-    public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
-    // DevJava Utils 文件路径
-    public static final String DEV_JAVA_UTILS_PATH         = DEV_JAVA_PATH + "utils/";
-    // DevJava GitHub 项目文件路径
-    public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
-    // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.6";
-    // DevJava Template Readme
-    public static final String DEV_JAVA_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevJava_README.md";
-
     // =============
     // = DevAssist =
     // =============
@@ -198,6 +181,23 @@ public final class ApiConfig {
     public static final String DEV_ENVIRONMENT_VERSION            = "1.0.4";
     // DevEnvironment Template Readme
     public static final String DEV_ENVIRONMENT_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEnvironment_README.md";
+
+    // ===========
+    // = DevJava =
+    // ===========
+
+    // DevJava API 文件保存路径
+    public static final String DEV_JAVA_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevJava/";
+    // DevJava 文件路径
+    public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
+    // DevJava Utils 文件路径
+    public static final String DEV_JAVA_UTILS_PATH         = DEV_JAVA_PATH + "utils/";
+    // DevJava GitHub 项目文件路径
+    public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
+    // DevJava 版本号
+    public static final String DEV_JAVA_VERSION            = "1.3.6";
+    // DevJava Template Readme
+    public static final String DEV_JAVA_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevJava_README.md";
 
     // ===============
     // = DevStandard =
