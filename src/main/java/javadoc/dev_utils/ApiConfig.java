@@ -49,7 +49,7 @@ public final class ApiConfig {
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.2.8";
+    public static final String DEV_APP_VERSION            = "2.2.9";
     // DevApp Template Readme
     public static final String DEV_APP_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevApp_README.md";
 
@@ -66,7 +66,7 @@ public final class ApiConfig {
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.5";
+    public static final String DEV_JAVA_VERSION            = "1.3.6";
     // DevJava Template Readme
     public static final String DEV_JAVA_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevJava_README.md";
 
@@ -83,7 +83,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.5";
+    public static final String DEV_ASSIST_VERSION            = "1.2.6";
     // DevAssist Template Readme
     public static final String DEV_ASSIST_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevAssist_README.md";
 
@@ -100,7 +100,7 @@ public final class ApiConfig {
     // DevBase GitHub 项目文件路径
     public static final String DEV_BASE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base";
     // DevBase 版本号
-    public static final String DEV_BASE_VERSION            = "1.0.6";
+    public static final String DEV_BASE_VERSION            = "1.0.7";
     // DevBase Template Readme
     public static final String DEV_BASE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevBase_README.md";
 
@@ -117,7 +117,7 @@ public final class ApiConfig {
     // DevBaseMVVM GitHub 项目文件路径
     public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
     // DevBaseMVVM 版本号
-    public static final String DEV_BASE_MVVM_VERSION            = "1.0.4";
+    public static final String DEV_BASE_MVVM_VERSION            = "1.0.5";
     // DevBaseMVVM Template Readme
     public static final String DEV_BASE_MVVM_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevBaseMVVM_README.md";
 
@@ -151,7 +151,7 @@ public final class ApiConfig {
     // DevHttpCapture GitHub 项目文件路径
     public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
     // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.0";
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.1";
     // DevHttpCapture Template Readme
     public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
 
@@ -183,7 +183,7 @@ public final class ApiConfig {
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = "1.1.0";
+    public static final String DEV_WIDGET_VERSION            = "1.1.1";
     // DevWidget Template Readme
     public static final String DEV_WIDGET_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
     public static final String DEV_WIDGET_API_TEMPLATE       = TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
@@ -195,7 +195,7 @@ public final class ApiConfig {
     // DevEnvironment API 文件保存路径
     public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "Environment/";
     // DevEnvironment 版本号
-    public static final String DEV_ENVIRONMENT_VERSION            = "1.0.3";
+    public static final String DEV_ENVIRONMENT_VERSION            = "1.0.4";
     // DevEnvironment Template Readme
     public static final String DEV_ENVIRONMENT_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEnvironment_README.md";
 
