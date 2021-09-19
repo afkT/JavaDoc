@@ -122,9 +122,16 @@ final class APIGenerateByModule {
             Subnode subnode = lists.get(i);
             // 获取目录名
             String name = subnode.getSubFile().getName();
+            // 包名
+            String apiPackageName = packageName + "." + name;
+
+            // 特殊处理
+            if (apiPackageName.startsWith(".")) {
+                apiPackageName = apiPackageName.substring(1);
+            }
 
             // 设置锚链接标记 => ## <span id="包名(无.)">**`包名`**</span>
-            buffer.append("\n\n\n## <span id=\"" + (packageName + "." + name).replaceAll("\\.", "") + "\">**`" + (packageName + "." + name) + "`**</span>");
+            buffer.append("\n\n\n## <span id=\"" + apiPackageName.replaceAll("\\.", "") + "\">**`" + apiPackageName + "`**</span>");
 
             // 获取全部文件夹
             List<File> listFiles = Utils.getFileLists((path + "/" + name));

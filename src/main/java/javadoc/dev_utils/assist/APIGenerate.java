@@ -53,11 +53,16 @@ public class APIGenerate {
         if (StringUtils.isEmpty(module)) {
             apiPackageName = packageName;
         }
-
+        if (apiPackageName.startsWith(".")) {
+            apiPackageName = apiPackageName.substring(1);
+        }
         // 拼接对象
         StringBuffer buffer = new StringBuffer();
-        // 设置锚链接标记 => ## <span id="包名(无.)">**`包名`**</span>
-        buffer.append("\n## <span id=\"" + apiPackageName.replaceAll("\\.", "") + "\">**`" + apiPackageName + "`**</span>");
+
+        if (StringUtils.isNotEmpty(apiPackageName)) {
+            // 设置锚链接标记 => ## <span id="包名(无.)">**`包名`**</span>
+            buffer.append("\n## <span id=\"" + apiPackageName.replaceAll("\\.", "") + "\">**`" + apiPackageName + "`**</span>");
+        }
 
         // 获取全部文件夹
         List<File> lists = Utils.getFileLists(apiPath);
