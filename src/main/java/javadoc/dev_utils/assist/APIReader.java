@@ -222,9 +222,10 @@ public final class APIReader
                                 methodAnnotate = methodAnnotate.split("\n")[0];
                             }
                         }
-//                        // 进行括号追加空格处理
+//                        // 方法注释进行括号追加空格处理
 //                        methodAnnotate = methodAnnotate.replaceAll("\\(", " ( ")
 //                                .replaceAll("\\)", " ) ")
+//                                .replaceAll("  ", " ")
 //                                .replaceAll("  ", " ")
 //                                .replaceAll(" \\( \\)", "()");
 //                        methodAnnotate = StringUtils.clearSpaceTabLineTrim(methodAnnotate);
