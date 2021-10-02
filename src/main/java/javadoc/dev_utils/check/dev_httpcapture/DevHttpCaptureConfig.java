@@ -102,7 +102,7 @@ final class DevHttpCaptureConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IHttpCapture", ArrayUtils.asListArgs("getModuleName","getEncrypt","getHttpFilter","isCapture","setCapture","getModulePath","getModuleHttpCaptures"));
         ignoreUnPublicMap.put("IHttpCaptureCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("IHttpFilter", ArrayUtils.asListArgs("filter"));
-        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getUniqueFileName"));
+        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("sortFileByName","getUniqueFileName"));
 
         return ignoreUnPublicMap;
     }

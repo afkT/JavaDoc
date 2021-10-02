@@ -138,6 +138,23 @@ public final class ApiConfig {
     // DevHttpCapture Template Readme
     public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
 
+    // ==========================
+    // = DevHttpCaptureCompiler =
+    // ==========================
+
+    // 包目录名
+    public static final String DEV_HTTP_CAPTURE_COMPILER_PACKAGE            = "dev";
+    // DevHttpCaptureCompiler API 文件保存路径
+    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCaptureCompiler/";
+    // DevHttpCaptureCompiler 文件路径
+    public static final String DEV_HTTP_CAPTURE_COMPILER_PATH               = LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/";
+    // DevHttpCaptureCompiler GitHub 项目文件路径
+    public static final String DEV_HTTP_CAPTURE_COMPILER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev";
+    // DevHttpCaptureCompiler 版本号
+    public static final String DEV_HTTP_CAPTURE_COMPILER_VERSION            = DEV_HTTP_CAPTURE_VERSION;
+    // DevHttpCaptureCompiler Template Readme
+    public static final String DEV_HTTP_CAPTURE_COMPILER_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCaptureCompiler_README.md";
+
     // ============
     // = DevOther =
     // ============
