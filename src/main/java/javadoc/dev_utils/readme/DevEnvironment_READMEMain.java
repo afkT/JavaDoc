@@ -35,16 +35,16 @@ final class DevEnvironment_READMEMain {
                 templateContent.getBytes()
         );
 
-        StringBuffer resultBuffer = new StringBuffer();
-        resultBuffer.append("\n\n");
-        resultBuffer.append("\n===================");
-        resultBuffer.append("\n= 保存 JavaDoc 成功 =");
-        resultBuffer.append("\n===================");
-        resultBuffer.append("\n");
-        resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_ENVIRONMENT_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
-        resultBuffer.append("\n");
-        return resultBuffer.toString();
+        StringBuilder resultBuilder = new StringBuilder();
+        resultBuilder.append("\n\n");
+        resultBuilder.append("\n===================");
+        resultBuilder.append("\n= 保存 JavaDoc 成功 =");
+        resultBuilder.append("\n===================");
+        resultBuilder.append("\n");
+        resultBuilder.append("\n");
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_ENVIRONMENT_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
+        resultBuilder.append("\n");
+        return resultBuilder.toString();
     }
 
     public static void main(String[] args) {

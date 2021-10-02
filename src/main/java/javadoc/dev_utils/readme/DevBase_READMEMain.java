@@ -18,7 +18,7 @@ final class DevBase_READMEMain {
 
     /**
      * 创建 DevBase - README 头部前缀
-     * @param buffer       拼接 Buffer
+     * @param builder      拼接 Builder
      * @param path         文件路径
      * @param packageName  包名
      * @param mapCatalog   对应目录的注释
@@ -26,7 +26,7 @@ final class DevBase_READMEMain {
      * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
-            final StringBuffer buffer,
+            final StringBuilder builder,
             final String path,
             final String packageName,
             final HashMap<String, String> mapCatalog,
@@ -41,7 +41,7 @@ final class DevBase_READMEMain {
         String templateContent = new String(bytes);
 
         // 保存 README 内容
-        buffer.append(String.format(
+        builder.append(String.format(
                 templateContent, ApiConfig.DEV_BASE_VERSION, catalog
         ));
     }
@@ -63,27 +63,27 @@ final class DevBase_READMEMain {
         // ===========
 
         // 最终的数据
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         // 添加头部信息
         createREADMEHead(
-                buffer, path, packageName, ApiConfig.sCatalogMap_Base,
+                builder, path, packageName, ApiConfig.sCatalogMap_Base,
                 githubUrl, ApiConfig.DEV_BASE_TEMPLATE
         );
 
         // 保存合成后的 API REAMDE
         FileUtils.saveFile(new File(ApiConfig.DEV_BASE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                buffer.toString().getBytes());
+                builder.toString().getBytes());
 
-        StringBuffer resultBuffer = new StringBuffer();
-        resultBuffer.append("\n\n");
-        resultBuffer.append("\n===================");
-        resultBuffer.append("\n= 保存 JavaDoc 成功 =");
-        resultBuffer.append("\n===================");
-        resultBuffer.append("\n");
-        resultBuffer.append("\n");
-        resultBuffer.append("保存地址: " + ApiConfig.DEV_BASE_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
-        resultBuffer.append("\n");
-        return resultBuffer.toString();
+        StringBuilder resultBuilder = new StringBuilder();
+        resultBuilder.append("\n\n");
+        resultBuilder.append("\n===================");
+        resultBuilder.append("\n= 保存 JavaDoc 成功 =");
+        resultBuilder.append("\n===================");
+        resultBuilder.append("\n");
+        resultBuilder.append("\n");
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_BASE_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
+        resultBuilder.append("\n");
+        return resultBuilder.toString();
     }
 
     public static void main(String[] args) {

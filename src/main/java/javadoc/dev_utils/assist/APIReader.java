@@ -29,11 +29,11 @@ public final class APIReader
     // 方法名匹配存储 Map<类名, List<方法名>>
     private       HashMap<String, List<String>> mMethodNameMatchesMap;
     // 方法名重复记录存储
-    private       StringBuffer                  mMethodRepeatBuffer;
+    private       StringBuilder                 mMethodRepeatBuilder;
     // 方法没有注释记录存储
-    private       StringBuffer                  mMethodNotAnnotateBuffer;
+    private       StringBuilder                 mMethodNotAnnotateBuilder;
     // 类不存在方法记录存储
-    private       StringBuffer                  mNotMethodBuffer;
+    private       StringBuilder                 mNotMethodBuilder;
 
     /**
      * 构造函数
@@ -49,9 +49,9 @@ public final class APIReader
     private void init() {
         if (mFilterMethodMap == null) mFilterMethodMap = new HashMap<>();
         if (mMethodNameMatchesMap == null) mMethodNameMatchesMap = new HashMap<>();
-        if (mMethodRepeatBuffer == null) mMethodRepeatBuffer = new StringBuffer();
-        if (mMethodNotAnnotateBuffer == null) mMethodNotAnnotateBuffer = new StringBuffer();
-        if (mNotMethodBuffer == null) mNotMethodBuffer = new StringBuffer();
+        if (mMethodRepeatBuilder == null) mMethodRepeatBuilder = new StringBuilder();
+        if (mMethodNotAnnotateBuilder == null) mMethodNotAnnotateBuilder = new StringBuilder();
+        if (mNotMethodBuilder == null) mNotMethodBuilder = new StringBuilder();
     }
 
     // =============
@@ -60,15 +60,15 @@ public final class APIReader
 
     /**
      * 读取文档处理
-     * @param path                    文件路径
-     * @param className               文件名 ( 类名 )
-     * @param classGithubUrl          对应的类 Github 链接地址
-     * @param filterMethodMap         忽略不保存方法 Map
-     * @param methodNameRegex         方法名匹配正则表达式
-     * @param methodNameMatchesMap    方法名匹配存储 Map
-     * @param methodRepeatBuffer      方法名重复记录存储 Buffer
-     * @param methodNotAnnotateBuffer 方法没有注释记录存储 Buffer
-     * @param notMethodBuffer         类不存在方法记录存储 Buffer
+     * @param path                     文件路径
+     * @param className                文件名 ( 类名 )
+     * @param classGithubUrl           对应的类 Github 链接地址
+     * @param filterMethodMap          忽略不保存方法 Map
+     * @param methodNameRegex          方法名匹配正则表达式
+     * @param methodNameMatchesMap     方法名匹配存储 Map
+     * @param methodRepeatBuilder      方法名重复记录存储 Builder
+     * @param methodNotAnnotateBuilder 方法没有注释记录存储 Builder
+     * @param notMethodBuilder         类不存在方法记录存储 Builder
      * @return 处理后的文档信息
      */
     public static String readDoc(
@@ -78,18 +78,18 @@ public final class APIReader
             final HashMap<String, String[]> filterMethodMap,
             final String methodNameRegex,
             final HashMap<String, List<String>> methodNameMatchesMap,
-            final StringBuffer methodRepeatBuffer,
-            final StringBuffer methodNotAnnotateBuffer,
-            final StringBuffer notMethodBuffer
+            final StringBuilder methodRepeatBuilder,
+            final StringBuilder methodNotAnnotateBuilder,
+            final StringBuilder notMethodBuilder
     ) {
         // API 读取配置处理
         APIReader apiReader = new APIReader(classGithubUrl);
-        apiReader.mFilterMethodMap         = filterMethodMap;
-        apiReader.mMethodNameRegex         = methodNameRegex;
-        apiReader.mMethodNameMatchesMap    = methodNameMatchesMap;
-        apiReader.mMethodRepeatBuffer      = methodRepeatBuffer;
-        apiReader.mMethodNotAnnotateBuffer = methodNotAnnotateBuffer;
-        apiReader.mNotMethodBuffer         = notMethodBuffer;
+        apiReader.mFilterMethodMap          = filterMethodMap;
+        apiReader.mMethodNameRegex          = methodNameRegex;
+        apiReader.mMethodNameMatchesMap     = methodNameMatchesMap;
+        apiReader.mMethodRepeatBuilder      = methodRepeatBuilder;
+        apiReader.mMethodNotAnnotateBuilder = methodNotAnnotateBuilder;
+        apiReader.mNotMethodBuilder         = notMethodBuilder;
         apiReader.init(); // 初始化防止为 null
         // 执行参数, 生成 API readAll 设置为 false, 不读取 private、protected 等修饰符方法
         String[] executeParams = JavaDocReader.getExecuteParams(false, path, className);
@@ -120,8 +120,8 @@ public final class APIReader
         if (classDocs.length == 0) return "";
 
         // 最终返回数据
-        StringBuffer finalBuffer = new StringBuffer();
-        finalBuffer.append("\n\n");
+        StringBuilder finalBuilder = new StringBuilder();
+        finalBuilder.append("\n\n");
 
         // 判断是否存在重复的方法名
         boolean isMethodRepeat = false;
@@ -144,17 +144,17 @@ public final class APIReader
         } catch (Exception ignored) {
         }
         // 格式化标题 - 替换 %s 为类注释
-        finalBuffer.append(String.format(title, classAnnotate));
+        finalBuilder.append(String.format(title, classAnnotate));
         // 拼接方法、注释 Table 语法
-        finalBuffer.append("\n\n| 方法 | 注释 |");
-        //finalBuffer.append("\n| :-: | :-: |"); // 居中
-        finalBuffer.append("\n| :- | :- |"); // 左对齐
+        finalBuilder.append("\n\n| 方法 | 注释 |");
+        //finalBuilder.append("\n| :-: | :-: |"); // 居中
+        finalBuilder.append("\n| :- | :- |"); // 左对齐
         // ========================
 
-        // 临时存储 Buffer
-        StringBuffer tempBuffer = new StringBuffer();
+        // 临时存储 Builder
+        StringBuilder tempBuilder = new StringBuilder();
         // 保存开头
-        tempBuffer.append(finalBuffer);
+        tempBuilder.append(finalBuilder);
 
         // 循环 Class Doc 信息
         for (int i = 0, len = classDocs.length; i < len; ++i) {
@@ -173,7 +173,7 @@ public final class APIReader
 
                 // 如果方法没有注释, 则进行记录
                 if (StringUtils.isEmpty(methodAnnotate)) {
-                    mMethodNotAnnotateBuffer.append("\n" + className + " - " + methodName);
+                    mMethodNotAnnotateBuilder.append("\n" + className + " - " + methodName);
                 }
 
                 // ========================
@@ -231,14 +231,14 @@ public final class APIReader
 //                        methodAnnotate = StringUtils.clearSpaceTabLineTrim(methodAnnotate);
 
                         // 保存方法名、方法注释
-                        finalBuffer.append("\n| " + methodName + " | " + methodAnnotate + " |");
+                        finalBuilder.append("\n| " + methodName + " | " + methodAnnotate + " |");
                         // 进行保存过滤字段
                         methodNameMap.put(methodName, methodName);
                     } else {
                         // 表示方法存在重复的
                         isMethodRepeat = true;
                         // 保存重复的数据
-                        tempBuffer.append("\n| " + methodName + " | " + methodAnnotate + " |");
+                        tempBuilder.append("\n| " + methodName + " | " + methodAnnotate + " |");
                     }
                 }
                 // ========================
@@ -248,14 +248,14 @@ public final class APIReader
         // 判断是否存在方法
         if (methodNameMap.size() != 0) {
             // 存在重复的数据才处理
-            if (isMethodRepeat) mMethodRepeatBuffer.append(tempBuffer);
+            if (isMethodRepeat) mMethodRepeatBuilder.append(tempBuilder);
         } else { // 该类没有任何方法
-            mNotMethodBuffer.append(tempBuffer);
+            mNotMethodBuilder.append(tempBuilder);
             // 不存在方法数据, 则不处理
             return "";
         }
         // 返回数据
-        return finalBuffer.toString();
+        return finalBuilder.toString();
     }
 
     /**

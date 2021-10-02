@@ -167,11 +167,11 @@ public final class PackageCatalog {
             final int lineNumber,
             final String linkTag
     ) {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         // 添加目录
-        buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
+        builder.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
         // 获取长度
-        int length = buffer.toString().length();
+        int length = builder.toString().length();
         // 判断长度 => 大于最大长度, 则重新设置
         if ((length + 6) >= sMaxLength) {
             sMaxLength = length + 6;
@@ -194,21 +194,21 @@ public final class PackageCatalog {
             final int lineNumber,
             final String linkTag
     ) {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         if (isAnchor) {
             // 添加空格
-            buffer.append(StringUtils.appendSpace(lineNumber * 3));
+            builder.append(StringUtils.appendSpace(lineNumber * 3));
             // 打印目录
-            buffer.append("- [" + name + "]");
+            builder.append("- [" + name + "]");
             // 增加锚
-            buffer.append("(#" + (packageName + linkTag).replaceAll("\\.", "") + ")");
+            builder.append("(#" + (packageName + linkTag).replaceAll("\\.", "") + ")");
         } else {
             // 添加空格
-            buffer.append(StringUtils.appendSpace(lineNumber * 3));
+            builder.append(StringUtils.appendSpace(lineNumber * 3));
             // 打印目录
-            buffer.append("- " + name);
+            builder.append("- " + name);
         }
-        return buffer.toString();
+        return builder.toString();
     }
 
     /**
@@ -229,20 +229,20 @@ public final class PackageCatalog {
             final String linkTag,
             final HashMap<String, String> mapCatalog
     ) {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         // 添加目录
-        buffer.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
+        builder.append(createCatalog(isAnchor, packageName, name, lineNumber, linkTag));
         // 设置间隔长度
-        buffer.append(StringUtils.appendSpace(sMaxLength - buffer.toString().length()));
+        builder.append(StringUtils.appendSpace(sMaxLength - builder.toString().length()));
         // 添加 间隔 |
-        buffer.append("| " + mapCatalog.get(linkTag));
+        builder.append("| " + mapCatalog.get(linkTag));
         // 返回处理后的目录行
-        return buffer.toString();
+        return builder.toString();
     }
 
     /**
      * 递归目录拼接目录列表信息
-     * @param buffer      拼接 Buffer
+     * @param builder     拼接 Builder
      * @param lists       目录列表
      * @param isAnchor    是否增加锚链接
      * @param packageName 包名
@@ -251,7 +251,7 @@ public final class PackageCatalog {
      * @param mapCatalog  对应目录的注释
      */
     private static void forCatalog(
-            final StringBuffer buffer,
+            final StringBuilder builder,
             final List<Catalog> lists,
             final boolean isAnchor,
             final String packageName,
@@ -266,13 +266,13 @@ public final class PackageCatalog {
             // 获取目录名
             String name = catalog.getFile().getName();
             // 进行换行
-            buffer.append("\n");
+            builder.append("\n");
             // 添加目录行
-            buffer.append(createCatalogLine(isAnchor, packageName, name, lineNumber,
+            builder.append(createCatalogLine(isAnchor, packageName, name, lineNumber,
                     linkTag + "." + name, mapCatalog));
             // 判断是否存在子文件夹
             if (catalog.getListCatalogs().size() != 0) {
-                forCatalog(buffer, catalog.getListCatalogs(), isAnchor, packageName,
+                forCatalog(builder, catalog.getListCatalogs(), isAnchor, packageName,
                         lineNumber + 1, linkTag + "." + name, mapCatalog);
             }
         }
@@ -298,7 +298,7 @@ public final class PackageCatalog {
     ) {
 
         // 拼接信息
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         // 获取文件夹列表
         List<Catalog> lists = getFolderLists(path, new CatalogCallback() {
             @Override
@@ -315,21 +315,21 @@ public final class PackageCatalog {
         String head = "- " + packageName;
         // 判断是否增加锚链接处理
         if (isAnchor) {
-            buffer.append("\n");
+            builder.append("\n");
         } else {
-            buffer.append("```\n");
+            builder.append("```\n");
         }
         // 增加根目录
-        buffer.append(head + StringUtils.appendSpace(sMaxLength - head.length()) + "| " + mapCatalog.get(packageName));
+        builder.append(head + StringUtils.appendSpace(sMaxLength - head.length()) + "| " + mapCatalog.get(packageName));
         // 递归循环目录
-        forCatalog(buffer, lists, isAnchor, packageName, 1, "", mapCatalog);
+        forCatalog(builder, lists, isAnchor, packageName, 1, "", mapCatalog);
         // 判断是否增加锚链接处理
         if (isAnchor) {
-            buffer.append("\n\n");
+            builder.append("\n\n");
         } else {
-            buffer.append("\n```\n");
+            builder.append("\n```\n");
         }
         // 返回数据
-        return buffer.toString();
+        return builder.toString();
     }
 }

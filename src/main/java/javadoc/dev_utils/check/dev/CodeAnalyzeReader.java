@@ -482,14 +482,14 @@ public final class CodeAnalyzeReader {
         // 最简单的对比处理, 就是直接拼接判断 @param xxx @param xxx
         // 既能判断参数顺序, 又能判断参数数量、参数字段名、泛型参数等
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder builder = new StringBuilder();
         // 合并参数
         String[] arrays = ArrayUtils.arrayCopy(paramNames, genericityTypes);
         if (arrays != null) {
             // 循环拼接
             for (String param : arrays) {
                 if (!StringUtils.isEmpty(param)) {
-                    buffer.append("@param " + param + " ");
+                    builder.append("@param " + param + " ");
                 }
             }
         }
@@ -507,13 +507,13 @@ public final class CodeAnalyzeReader {
             // 裁剪拼接后的数据
             String subParam = subParam(documentation).trim();
             // 判断是否存在
-            String paramBuffer = buffer.toString().trim();
+            String paramBuilder = builder.toString().trim();
             // 注释拼接参数长度
             int subParamLen = subParam.length();
             // 拼接参数参数
-            int paramBufferLen = paramBuffer.length();
+            int paramBuilderLen = paramBuilder.length();
             // 防止各自缺失、增多 - 自己计算的参数拼接 等于 通过注释拆分拼接的参数长度, 才符合条件
-            if (subParamLen == paramBufferLen && paramBuffer.equals(subParam)) {
+            if (subParamLen == paramBuilderLen && paramBuilder.equals(subParam)) {
                 // 数据一样, 才检测是否注释
                 if (!subParamToCheckAnnotate(documentation)) {
                     // @param 不存在注释则保存

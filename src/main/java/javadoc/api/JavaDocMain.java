@@ -29,62 +29,62 @@ class JavaDocMain {
                     RootDoc rootDoc,
                     ClassDoc[] classDocs
             ) {
-                StringBuffer buffer = new StringBuffer();
-                buffer.append("\n\n");
-                buffer.append("\n===============");
-                buffer.append("\n= 读取 JavaDoc =");
-                buffer.append("\n===============");
-                buffer.append("\n");
+                StringBuilder builder = new StringBuilder();
+                builder.append("\n\n");
+                builder.append("\n===============");
+                builder.append("\n= 读取 JavaDoc =");
+                builder.append("\n===============");
+                builder.append("\n");
                 // 拼接信息
-                buffer.append("\n文件路径: ").append(path + className)
+                builder.append("\n文件路径: ").append(path + className)
                         .append("\n文件名字: ").append(className)
                         .append("\n执行参数: ").append(Arrays.toString(executeParams));
 
                 if (classDocs != null) {
-                    StringBuffer classBuffer = new StringBuffer();
+                    StringBuilder classBuilder = new StringBuilder();
                     // 循环 Class Doc 信息
                     for (ClassDoc classDoc : classDocs) {
-                        classBuffer.append("\n\n");
-                        classBuffer.append("\n= " + classDoc.name() + " =\n");
+                        classBuilder.append("\n\n");
+                        classBuilder.append("\n= " + classDoc.name() + " =\n");
                         // 包名.类名
-                        classBuffer.append("\n包名.类名: ").append(classDoc.toString());
+                        classBuilder.append("\n包名.类名: ").append(classDoc.toString());
                         // 类注释
-                        classBuffer.append("\n类注释: ").append(classDoc.commentText());
+                        classBuilder.append("\n类注释: ").append(classDoc.commentText());
 
                         // ==========
                         // = 读取方法 =
                         // ==========
 
-                        StringBuffer methodBuffer = new StringBuffer();
+                        StringBuilder methodBuilder = new StringBuilder();
                         // 获取方法 Doc 信息数组
                         MethodDoc[] methodDocs = classDoc.methods();
                         // 防止不存在方法
                         if (methodDocs.length != 0) {
-                            methodBuffer.append("\n\n| 方法信息 |");
+                            methodBuilder.append("\n\n| 方法信息 |");
                         }
                         // 循环读取方法信息
                         for (MethodDoc methodDoc : methodDocs) {
-                            methodBuffer.append("\n");
+                            methodBuilder.append("\n");
                             // 方法名
-                            methodBuffer.append("\n方法名: " + methodDoc.name());
+                            methodBuilder.append("\n方法名: " + methodDoc.name());
                             // 方法注释
-                            methodBuffer.append("\n方法注释: " + methodDoc.commentText());
+                            methodBuilder.append("\n方法注释: " + methodDoc.commentText());
                         }
                         // 保存方法信息
-                        classBuffer.append(methodBuffer);
+                        classBuilder.append(methodBuilder);
                     }
                     // 保存类信息
-                    buffer.append(classBuffer);
+                    builder.append(classBuilder);
                 }
 
-                buffer.append("\n\n");
-                buffer.append("\n===================");
-                buffer.append("\n= 读取 JavaDoc 结束 =");
-                buffer.append("\n===================");
-                buffer.append("\n");
+                builder.append("\n\n");
+                builder.append("\n===================");
+                builder.append("\n= 读取 JavaDoc 结束 =");
+                builder.append("\n===================");
+                builder.append("\n");
 
                 // 返回文档信息
-                return buffer.toString();
+                return builder.toString();
             }
 
             @Override
