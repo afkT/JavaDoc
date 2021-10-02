@@ -37,7 +37,7 @@ public final class CodeEndNewLineRemove {
 
                     @Override
                     public boolean isAddToList(File file) {
-                        if (file.getAbsolutePath().indexOf("\\.") != -1) return false;
+                        if (file.getAbsolutePath().contains("\\.")) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {
@@ -45,15 +45,13 @@ public final class CodeEndNewLineRemove {
                         }
 
                         String data = new String(FileUtils.readFileBytes(file));
-                        if (data != null) {
-                            if (data.endsWith(END_KEY)) {
-                                // 删减内容
-                                data = data.substring(0, data.length() - END_KEY.length()) + APPEND;
-                                // 替换内容
-                                FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
-                                // 存储路径
-                                sSets.add(FileUtils.getAbsolutePath(file));
-                            }
+                        if (data.endsWith(END_KEY)) {
+                            // 删减内容
+                            data = data.substring(0, data.length() - END_KEY.length()) + APPEND;
+                            // 替换内容
+                            FileUtils.saveFile(file.getAbsolutePath(), data.getBytes());
+                            // 存储路径
+                            sSets.add(FileUtils.getAbsolutePath(file));
                         }
                         return true;
                     }

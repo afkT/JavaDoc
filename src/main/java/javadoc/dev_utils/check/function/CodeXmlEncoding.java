@@ -33,7 +33,7 @@ public final class CodeXmlEncoding {
 
                     @Override
                     public boolean isAddToList(File file) {
-                        if (file.getAbsolutePath().indexOf("\\.") != -1) return false;
+                        if (file.getAbsolutePath().contains("\\.")) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) {
@@ -41,15 +41,13 @@ public final class CodeXmlEncoding {
                         }
 
                         String data = new String(FileUtils.readFileBytes(file)); // , "UTF-8"
-                        if (data != null) {
-                            if (!data.startsWith(STARTS_WITH)) {
-                                // 删减内容
-                                data = APPEND + data;
-                                // 替换内容
-                                FileUtils.saveFile(file.getAbsolutePath(), data.getBytes()); // "UTF-8"
-                                // 存储路径
-                                sSets.add(FileUtils.getAbsolutePath(file));
-                            }
+                        if (!data.startsWith(STARTS_WITH)) {
+                            // 删减内容
+                            data = APPEND + data;
+                            // 替换内容
+                            FileUtils.saveFile(file.getAbsolutePath(), data.getBytes()); // "UTF-8"
+                            // 存储路径
+                            sSets.add(FileUtils.getAbsolutePath(file));
                         }
                         return true;
                     }
