@@ -257,10 +257,10 @@ public final class CodeAnalyzeReader {
                         boolean isPublic = methodCode.startsWith("public ");
 
                         // 如果方法名存在换行(注解)
-                        if (methodCode.indexOf("\r\n") != -1) {
+                        if (methodCode.contains("\r\n")) {
                             String[] methodCodeSplit = methodCode.split("\r\n");
                             for (String methodCodeStr : methodCodeSplit) {
-                                if (methodCodeStr.indexOf(methodName) != -1) {
+                                if (methodCodeStr.contains(methodName)) {
                                     if (methodCodeStr.startsWith("public ")) {
                                         isPublic = true;
                                     }
@@ -277,11 +277,9 @@ public final class CodeAnalyzeReader {
                         // 不忽略才处理进行方法参数判断
                         if (!isIgnoreClass) {
                             // 判断方法是否存在 static 修饰符
-                            if (jcMethodDecl != null) {
-                                // 不存在则保存
-                                if (jcMethodDecl.toString().indexOf("static ") == -1) {
-                                    MapUtils.putToList(mapConfig.sMethodUnStaticMap, className + classTag, methodName);
-                                }
+                            // 不存在则保存
+                            if (!jcMethodDecl.toString().contains("static ")) {
+                                MapUtils.putToList(mapConfig.sMethodUnStaticMap, className + classTag, methodName);
                             }
                         }
                         // ========================
@@ -325,9 +323,9 @@ public final class CodeAnalyzeReader {
                             }
                         } else {
                             // 不存在 void, 表示有返回值
-                            if (jcMethodDecl.toString().indexOf("void ") == -1) {
+                            if (!jcMethodDecl.toString().contains("void ")) {
                                 // 判断是否存在 @return, 不存在则记录
-                                if (methodDocumentation.indexOf("@return") == -1) {
+                                if (!methodDocumentation.contains("@return")) {
                                     MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName);
                                 } else { // 存在则判断数量
                                     // 判断存在的数量
@@ -343,7 +341,7 @@ public final class CodeAnalyzeReader {
                                 }
                             } else { // 无返回值
                                 // 判断是否存在 @return, 存在则记录 => 属于 void 并不需要增加 @return
-                                if (methodDocumentation.indexOf("@return") != -1) {
+                                if (methodDocumentation.contains("@return")) {
                                     MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName + " - 多余 @return");
                                 } else { // 方法为 void
                                     MapUtils.putToList(mapConfig.sMethodReturnVoidMap, className, methodName + " - void");
