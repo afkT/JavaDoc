@@ -145,7 +145,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_COMPILER_PACKAGE            = "dev";
     // DevHttpCaptureCompiler API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCaptureCompiler/";
+    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "HttpCapture/";
     // DevHttpCaptureCompiler 文件路径
     public static final String DEV_HTTP_CAPTURE_COMPILER_PATH               = LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/";
     // DevHttpCaptureCompiler GitHub 项目文件路径

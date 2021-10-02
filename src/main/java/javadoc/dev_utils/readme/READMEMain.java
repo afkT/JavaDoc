@@ -17,6 +17,7 @@ final class READMEMain {
         builder.append(DevBaseMVVM_READMEMain.createREADME());
         builder.append(DevEngine_READMEMain.createREADME());
         builder.append(DevHttpCapture_READMEMain.createREADME());
+        builder.append(DevHttpCaptureCompiler_READMEMain.createREADME());
         builder.append(DevJava_READMEMain.createREADME());
         builder.append(DevOther_READMEMain.createREADME());
         builder.append(DevWidget_READMEMain.createREADME());
