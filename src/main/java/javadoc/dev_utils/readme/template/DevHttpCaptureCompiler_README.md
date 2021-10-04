@@ -1,15 +1,5 @@
 
-## Gradle
-
-```java
-implementation 'io.github.afkt:DevHttpCapture:%s'
-```
-
-## 目录结构
-
-%s
-
-## 使用
+## DevHttpCapture
 
 > 该库主要对使用 Okhttp 网络请求库的项目，提供 Http 抓包功能，并支持抓包数据加密存储。
 >
@@ -17,14 +7,49 @@ implementation 'io.github.afkt:DevHttpCapture:%s'
 >
 > 内置两个 Http 抓包拦截器，CallbackInterceptor ( 无存储逻辑，进行回调通知 )、HttpCaptureInterceptor ( 存在存储抓包数据逻辑 )
 
-## 事项
 
-- 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`
+### 最新版本
 
-- [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)
+module | DevHttpCapture | DevHttpCaptureCompiler | DevHttpCaptureCompilerRelease
+:---:|:---:|:---:|:---:
+version | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt) | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt) | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt)
 
-- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md)
 
-## API
+### Gradle
+
+```groovy
+dependencies {
+    implementation 'io.github.afkt:DevHttpCapture:DEVersion'
+    debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:DEVersion'
+    releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:DEVersion'
+}
+```
+
+
+### 使用方法
+
+> `DevHttpCaptureCompiler` 提供对 `DevHttpCapture` 抓包库可视化功能
+
+```java
+// 显示所有 Module 抓包数据
+DevHttpCaptureCompiler.start(context);
+// 显示指定 Module 抓包数据
+DevHttpCaptureCompiler.start(context, moduleName);
+
+// =======
+// = 可选 =
+// =======
+
+// 添加接口所属功能注释
+DevHttpCaptureCompiler.putUrlFunction(moduleName, UrlFunctionGet);
+// 移除接口所属功能注释
+DevHttpCaptureCompiler.removeUrlFunction(moduleName);
+```
+
+### 目录结构
+
+%s
+
+### API
 
 %s

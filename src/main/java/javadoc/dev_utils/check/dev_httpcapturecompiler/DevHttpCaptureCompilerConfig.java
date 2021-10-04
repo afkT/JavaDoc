@@ -29,6 +29,11 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("onCreate","onBackPressed"));
         ignoreAnnotateMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate","onBackPressed"));
         ignoreAnnotateMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("onCreate","onBackPressed"));
+        ignoreAnnotateMap.put("Dialogs.DataTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreAnnotateMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreAnnotateMap.put("Items.DataType", ArrayUtils.asListArgs("getTitle"));
+        ignoreAnnotateMap.put("Items.GroupItem", ArrayUtils.asListArgs("setFunction"));
+        ignoreAnnotateMap.put("Items.GroupType", ArrayUtils.asListArgs("getTitle"));
 
         return ignoreAnnotateMap;
     }
@@ -67,9 +72,14 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreStaticMap.put("AdapterMainModuleList", ArrayUtils.asListArgs("onCreateViewHolder","onBindViewHolder","start"));
         ignoreStaticMap.put("BaseDevHttpActivity", ArrayUtils.asListArgs("onCreate","onDestroy"));
         ignoreStaticMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("onCreate","onBackPressed","finishOperate","initValue"));
-        ignoreStaticMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate","onBackPressed","finishOperate","initValue"));
+        ignoreStaticMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate","onBackPressed","finishOperate","initValue","queryData","getNewOptions","refreshOptionsText","initListener","initDialogs"));
         ignoreStaticMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("onCreate","onBackPressed","finishOperate","initValue"));
-        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getDateData","getFileData"));
+        ignoreStaticMap.put("Dialogs.DataTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreStaticMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreStaticMap.put("Items.DataType", ArrayUtils.asListArgs("getTitle"));
+        ignoreStaticMap.put("Items.GroupItem", ArrayUtils.asListArgs("setFunction"));
+        ignoreStaticMap.put("Items.GroupType", ArrayUtils.asListArgs("getTitle"));
+        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile"));
 
         return ignoreStaticMap;
     }
@@ -90,6 +100,9 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreParamMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("onCreate"));
         ignoreParamMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate"));
         ignoreParamMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("onCreate"));
+        ignoreParamMap.put("Dialogs.DataTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreParamMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreParamMap.put("Items.GroupItem", ArrayUtils.asListArgs("setFunction"));
 
         return ignoreParamMap;
     }
@@ -116,11 +129,13 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreUnPublicMap.put("AdapterMainModuleList", ArrayUtils.asListArgs("start"));
         ignoreUnPublicMap.put("BaseDevHttpActivity", ArrayUtils.asListArgs("onCreate","onDestroy"));
         ignoreUnPublicMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("onCreate","finishOperate","initValue"));
-        ignoreUnPublicMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate","finishOperate","initValue"));
+        ignoreUnPublicMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("onCreate","finishOperate","initValue","queryData","getNewOptions","refreshOptionsText","initListener","initDialogs"));
         ignoreUnPublicMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("onCreate","finishOperate","initValue"));
-        ignoreUnPublicMap.put("Items", ArrayUtils.asListArgs("convertTitleByHHMM","convertUrlKey"));
+        ignoreUnPublicMap.put("Dialogs.DataTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreUnPublicMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
+        ignoreUnPublicMap.put("Items", ArrayUtils.asListArgs("convertDataType","convertTitleByHHMM","convertUrlKey"));
         ignoreUnPublicMap.put("UrlFunctionGet", ArrayUtils.asListArgs("toUrlFunction"));
-        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getDateData","getFileData"));
+        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile"));
 
         return ignoreUnPublicMap;
     }
@@ -147,7 +162,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("AdapterMainModuleList", ArrayUtils.asListArgs("start - void"));
         ignoreReturnVoidMap.put("DevHttpCaptureCompiler", ArrayUtils.asListArgs("finishAllActivity - void","putUrlFunction - void","removeUrlFunction - void"));
         ignoreReturnVoidMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void"));
-        ignoreReturnVoidMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void"));
+        ignoreReturnVoidMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void","queryData - void","refreshOptionsText - void","initListener - void","initDialogs - void"));
         ignoreReturnVoidMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void"));
         ignoreReturnVoidMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity - void","removeActivity - void","finishAllActivity - void","putUrlFunction - void","removeUrlFunction - void","clearCallback - void","removeCallback - void","addCallback - void","notifyCallback - void","queryData - void","clearData - void"));
 
