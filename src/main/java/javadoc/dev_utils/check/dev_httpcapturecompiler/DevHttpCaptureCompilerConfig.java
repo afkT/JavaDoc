@@ -79,7 +79,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreStaticMap.put("Items.DataType", ArrayUtils.asListArgs("getTitle"));
         ignoreStaticMap.put("Items.GroupItem", ArrayUtils.asListArgs("setFunction"));
         ignoreStaticMap.put("Items.GroupType", ArrayUtils.asListArgs("getTitle"));
-        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile"));
+        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","resetRefreshClick"));
 
         return ignoreStaticMap;
     }
@@ -135,7 +135,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreUnPublicMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("Items", ArrayUtils.asListArgs("convertDataType","convertTitleByHHMM","convertUrlKey"));
         ignoreUnPublicMap.put("UrlFunctionGet", ArrayUtils.asListArgs("toUrlFunction"));
-        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile"));
+        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","resetRefreshClick"));
 
         return ignoreUnPublicMap;
     }
@@ -164,7 +164,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevHttpCaptureFileActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void"));
         ignoreReturnVoidMap.put("DevHttpCaptureListActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void","queryData - void","refreshOptionsText - void","initListener - void","initDialogs - void"));
         ignoreReturnVoidMap.put("DevHttpCaptureMainActivity", ArrayUtils.asListArgs("finishOperate - void","initValue - void"));
-        ignoreReturnVoidMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity - void","removeActivity - void","finishAllActivity - void","putUrlFunction - void","removeUrlFunction - void","clearCallback - void","removeCallback - void","addCallback - void","notifyCallback - void","queryData - void","clearData - void"));
+        ignoreReturnVoidMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity - void","removeActivity - void","finishAllActivity - void","putUrlFunction - void","removeUrlFunction - void","clearCallback - void","removeCallback - void","addCallback - void","notifyCallback - void","queryData - void","clearData - void","resetRefreshClick - void"));
 
         return ignoreReturnVoidMap;
     }

@@ -6,6 +6,8 @@
 > **并且是以 Module ( ModuleName Key ) 为基础，支持组件化不同 Module 各自的抓包功能**，支持实时开关抓包功能、可控 Http 拦截过滤器。
 >
 > 内置两个 Http 抓包拦截器，CallbackInterceptor ( 无存储逻辑，进行回调通知 )、HttpCaptureInterceptor ( 存在存储抓包数据逻辑 )
+>
+> `DevHttpCaptureCompiler` 提供对 `DevHttpCapture` 抓包库可视化功能
 
 
 ### 最新版本
@@ -19,7 +21,6 @@ version | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgr
 
 ```groovy
 dependencies {
-    implementation 'io.github.afkt:DevHttpCapture:DEVersion'
     debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:DEVersion'
     releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:DEVersion'
 }
@@ -27,8 +28,6 @@ dependencies {
 
 
 ### 使用方法
-
-> `DevHttpCaptureCompiler` 提供对 `DevHttpCapture` 抓包库可视化功能
 
 ```java
 // 显示所有 Module 抓包数据
