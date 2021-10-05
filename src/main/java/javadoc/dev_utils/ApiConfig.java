@@ -66,7 +66,7 @@ public final class ApiConfig {
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.6";
+    public static final String DEV_ASSIST_VERSION            = "1.2.7";
     // DevAssist Template Readme
     public static final String DEV_ASSIST_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevAssist_README.md";
 
