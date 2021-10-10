@@ -134,7 +134,7 @@ public final class ApiConfig {
     // DevHttpCapture GitHub 项目文件路径
     public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
     // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.2";
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.3";
     // DevHttpCapture Template Readme
     public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
 

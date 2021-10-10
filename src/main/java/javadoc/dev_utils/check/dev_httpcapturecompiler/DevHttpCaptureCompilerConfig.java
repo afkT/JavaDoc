@@ -79,7 +79,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreStaticMap.put("Items.DataType", ArrayUtils.asListArgs("getTitle"));
         ignoreStaticMap.put("Items.GroupItem", ArrayUtils.asListArgs("setFunction"));
         ignoreStaticMap.put("Items.GroupType", ArrayUtils.asListArgs("getTitle"));
-        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","resetRefreshClick","mapToString","mapToString"));
+        ignoreStaticMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","finishAllActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","putUrlFunction","removeUrlFunction","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","getUrlFunctionByFile","resetRefreshClick","mapToString","mapToString"));
 
         return ignoreStaticMap;
     }
@@ -135,7 +135,7 @@ final class DevHttpCaptureCompilerConfig implements ICheckConfig {
         ignoreUnPublicMap.put("Dialogs.GroupTypeDialog", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("Items", ArrayUtils.asListArgs("convertDataType","convertTitleByHHMM","convertUrlKey"));
         ignoreUnPublicMap.put("UrlFunctionGet", ArrayUtils.asListArgs("toUrlFunction"));
-        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","resetRefreshClick","mapToString","mapToString"));
+        ignoreUnPublicMap.put("UtilsCompiler", ArrayUtils.asListArgs("addActivity","removeActivity","createGson","toJsonIndent","toJsonIndent","fromJson","fromJson","getUrlFunction","clearCallback","removeCallback","addCallback","notifyCallback","queryData","clearData","isQuerying","getMainData","getCaptureItemByDate","getFileData","getDateData","getUrlFunctionByInfo","getUrlFunctionByFile","getUrlFunctionByFile","resetRefreshClick","mapToString","mapToString"));
 
         return ignoreUnPublicMap;
     }
