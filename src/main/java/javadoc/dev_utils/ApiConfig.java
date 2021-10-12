@@ -195,7 +195,7 @@ public final class ApiConfig {
     // DevEnvironment API 文件保存路径
     public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "Environment/";
     // DevEnvironment 版本号
-    public static final String DEV_ENVIRONMENT_VERSION            = "1.0.4";
+    public static final String DEV_ENVIRONMENT_VERSION            = "1.0.5";
     // DevEnvironment Template Readme
     public static final String DEV_ENVIRONMENT_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevEnvironment_README.md";
 
