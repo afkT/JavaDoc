@@ -164,7 +164,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IPermissionEngine", ArrayUtils.asListArgs("isGranted","shouldShowRequestPermissionRationale","getDeniedPermissionStatus","againRequest","request","request","request"));
         ignoreUnPublicMap.put("IPermissionEngine.Callback", ArrayUtils.asListArgs("onGranted","onDenied"));
         ignoreUnPublicMap.put("IPushEngine", ArrayUtils.asListArgs("initialize","register","unregister","onReceiveServicePid","onReceiveClientId","onReceiveDeviceToken","onReceiveOnlineState","onReceiveCommandResult","onNotificationMessageArrived","onNotificationMessageClicked","onReceiveMessageData","convertMessage"));
-        ignoreUnPublicMap.put("IShareEngine", ArrayUtils.asListArgs("initialize","openMinApp","shareMinApp","shareUrl","shareImage","shareVideo","shareMusic","shareEmoji","shareText","shareFile","share","onActivityResult"));
+        ignoreUnPublicMap.put("IShareEngine", ArrayUtils.asListArgs("initialize","openMinApp","shareMinApp","shareUrl","shareImage","shareImageList","shareText","shareVideo","shareMusic","shareEmoji","shareFile","share","onActivityResult"));
         ignoreUnPublicMap.put("IStorageEngine", ArrayUtils.asListArgs("insertImageToExternal","insertVideoToExternal","insertAudioToExternal","insertDownloadToExternal","insertMediaToExternal","insertImageToInternal","insertVideoToInternal","insertAudioToInternal","insertDownloadToInternal","insertMediaToInternal"));
         ignoreUnPublicMap.put("LoadListener", ArrayUtils.asListArgs("getTranscodeType","onStart","onResponse","onFailure"));
         ignoreUnPublicMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
