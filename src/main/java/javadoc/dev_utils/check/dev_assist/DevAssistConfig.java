@@ -226,6 +226,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist.InputListener", ArrayUtils.asListArgs("onTextChanged - void"));
+        ignoreReturnVoidMap.put("EditTextWatcherAssist.OtherListener", ArrayUtils.asListArgs("onFocusChange - void","beforeTextChanged - void","onTextChanged - void","afterTextChanged - void"));
         ignoreReturnVoidMap.put("IAnalyticsEngine", ArrayUtils.asListArgs("initialize - void","register - void","unregister - void"));
         ignoreReturnVoidMap.put("IBarCodeEngine", ArrayUtils.asListArgs("initialize - void","encodeBarCode - void","decodeBarCode - void"));
         ignoreReturnVoidMap.put("ICacheEngine", ArrayUtils.asListArgs("remove - void","removeForKeys - void","clear - void","clearDue - void","clearType - void"));
