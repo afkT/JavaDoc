@@ -4,6 +4,7 @@ import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
 
 import java.io.File;
+import java.text.MessageFormat;
 
 /**
  * detail: 创建 README Main 方法
@@ -27,8 +28,23 @@ final class Dev_READMEMain {
         String templateContent = new String(bytes);
 
         // 保存 README 内容
-        builder.append(String.format(
-                templateContent, ApiConfig.DEV_APP_VERSION
+        builder.append(MessageFormat.format(
+                templateContent,
+                ApiConfig.DEV_APP_VERSION,
+                ApiConfig.DEV_APP_VERSION,
+                ApiConfig.DEV_ASSIST_VERSION,
+                ApiConfig.DEV_BASE_VERSION,
+                ApiConfig.DEV_BASE_MVVM_VERSION,
+                ApiConfig.DEV_ENGINE_VERSION,
+                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
+                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
+                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
+                ApiConfig.DEV_WIDGET_VERSION,
+                ApiConfig.DEV_ENVIRONMENT_VERSION,
+                ApiConfig.DEV_ENVIRONMENT_VERSION,
+                ApiConfig.DEV_ENVIRONMENT_VERSION,
+                ApiConfig.DEV_ENVIRONMENT_VERSION,
+                ApiConfig.DEV_JAVA_VERSION
         ));
 
         // 保存 README
