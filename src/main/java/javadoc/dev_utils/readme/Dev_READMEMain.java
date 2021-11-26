@@ -1,10 +1,10 @@
 package javadoc.dev_utils.readme;
 
-import dev.utils.common.FileUtils;
-import javadoc.dev_utils.ApiConfig;
-
 import java.io.File;
 import java.text.MessageFormat;
+
+import dev.utils.common.FileUtils;
+import javadoc.dev_utils.ApiConfig;
 
 /**
  * detail: 创建 README Main 方法
@@ -29,7 +29,8 @@ final class Dev_READMEMain {
 
         // 保存 README 内容
         builder.append(MessageFormat.format(
-                templateContent,
+                // MessageFormat 会移除单引号, 所以需要加上双引号处理
+                templateContent.replaceAll("'", "''"),
                 ApiConfig.DEV_APP_VERSION,
                 ApiConfig.DEV_APP_VERSION,
                 ApiConfig.DEV_ASSIST_VERSION,

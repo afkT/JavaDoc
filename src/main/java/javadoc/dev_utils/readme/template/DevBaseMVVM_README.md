@@ -61,6 +61,8 @@ implementation 'io.github.afkt:DevBaseMVVM:%s'
 
 * [引入 Jetpack 架构后，你的 App 会发生哪些变化？](https://juejin.cn/post/6955491901265051661)
 
+* [一个整合了大量主流开源项目高度可配置化的 Android MVP 快速集成框架](https://github.com/JessYanCoding/MVPArms/blob/master/MVPArms.md)
+
 ## Other
 
 * [GitHub MVVMHabit](https://github.com/goldze/MVVMHabit)
