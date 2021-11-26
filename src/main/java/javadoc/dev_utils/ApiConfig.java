@@ -14,13 +14,15 @@ public final class ApiConfig {
     }
 
     // 项目名
-    public static final String PROJECT_NAME   = "DevUtils";
+    public static final String PROJECT_NAME       = "DevUtils";
     // 文件保存路径
-    public static final String FILE_SAVE_PATH = "D:/API/";
+    public static final String FILE_SAVE_PATH     = "D:/API/";
+    // Lib 文件保存路径
+    public static final String LIB_FILE_SAVE_PATH = FILE_SAVE_PATH + "lib/";
     // 本地路径 ( DevUtils 项目 )
-    public static final String LOCAL_PATH     = "F:/Project/Android";
+    public static final String LOCAL_PATH         = "F:/Project/Android";
     // 项目路径 ( DevUtils 项目 )
-    public static final String PROJECT_PATH   = LOCAL_PATH + File.separator + PROJECT_NAME;
+    public static final String PROJECT_PATH       = LOCAL_PATH + File.separator + PROJECT_NAME;
 
     // 包目录名
     public static final String DEV_PACKAGE          = "dev.utils";
@@ -41,7 +43,7 @@ public final class ApiConfig {
     // ==========
 
     // DevApp API 文件保存路径
-    public static final String DEV_APP_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevApp/";
+    public static final String DEV_APP_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevApp/";
     // DevApp 文件路径
     public static final String DEV_APP_PATH               = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
     // DevApp Utils 文件路径
@@ -60,13 +62,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_ASSIST_PACKAGE            = "dev";
     // DevAssist API 文件保存路径
-    public static final String DEV_ASSIST_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevAssist/";
+    public static final String DEV_ASSIST_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevAssist/";
     // DevAssist 文件路径
     public static final String DEV_ASSIST_PATH               = LOCAL_PATH + "/DevUtils/lib/DevAssist/src/main/java/dev/";
     // DevAssist GitHub 项目文件路径
     public static final String DEV_ASSIST_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevAssist/src/main/java/dev";
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.7";
+    public static final String DEV_ASSIST_VERSION            = "1.2.8";
     // DevAssist Template Readme
     public static final String DEV_ASSIST_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevAssist_README.md";
 
@@ -77,7 +79,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_BASE_PACKAGE            = "dev.base";
     // DevBase API 文件保存路径
-    public static final String DEV_BASE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBase/";
+    public static final String DEV_BASE_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevBase/";
     // DevBase 文件路径
     public static final String DEV_BASE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevBase/src/main/java/dev/base/";
     // DevBase GitHub 项目文件路径
@@ -94,7 +96,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_BASE_MVVM_PACKAGE            = "dev.base";
     // DevBaseMVVM API 文件保存路径
-    public static final String DEV_BASE_MVVM_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevBaseMVVM/";
+    public static final String DEV_BASE_MVVM_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevBaseMVVM/";
     // DevBaseMVVM 文件路径
     public static final String DEV_BASE_MVVM_PATH               = LOCAL_PATH + "/DevUtils/lib/DevBaseMVVM/src/main/java/dev/base/";
     // DevBaseMVVM GitHub 项目文件路径
@@ -111,7 +113,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
     // DevEngine API 文件保存路径
-    public static final String DEV_ENGINE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevEngine/";
+    public static final String DEV_ENGINE_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevEngine/";
     // DevEngine 文件路径
     public static final String DEV_ENGINE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevEngine/src/main/java/dev/engine/";
     // DevEngine GitHub 项目文件路径
@@ -128,13 +130,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
     // DevHttpCapture API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevHttpCapture/";
+    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevHttpCapture/";
     // DevHttpCapture 文件路径
     public static final String DEV_HTTP_CAPTURE_PATH               = LOCAL_PATH + "/DevUtils/lib/DevHttpCapture/src/main/java/dev/";
     // DevHttpCapture GitHub 项目文件路径
     public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
     // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.3";
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.4";
     // DevHttpCapture Template Readme
     public static final String DEV_HTTP_CAPTURE_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
 
@@ -145,7 +147,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_COMPILER_PACKAGE            = "dev";
     // DevHttpCaptureCompiler API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "HttpCapture/";
+    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "HttpCapture/";
     // DevHttpCaptureCompiler 文件路径
     public static final String DEV_HTTP_CAPTURE_COMPILER_PATH               = LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/";
     // DevHttpCaptureCompiler GitHub 项目文件路径
@@ -162,7 +164,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_OTHER_PACKAGE            = "";
     // DevOther API 文件保存路径
-    public static final String DEV_OTHER_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevOther/";
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevOther/";
     // DevOther 文件路径
     public static final String DEV_OTHER_PATH               = LOCAL_PATH + "/DevUtils/lib/DevOther/src/main/java/";
     // DevOther GitHub 项目文件路径
@@ -177,13 +179,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_WIDGET_PACKAGE            = "dev";
     // DevWidget API 文件保存路径
-    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevWidget/";
+    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevWidget/";
     // DevWidget 文件路径
     public static final String DEV_WIDGET_PATH               = LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
     // DevWidget GitHub 项目文件路径
     public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = "1.1.1";
+    public static final String DEV_WIDGET_VERSION            = "1.1.2";
     // DevWidget Template Readme
     public static final String DEV_WIDGET_TEMPLATE           = TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
     public static final String DEV_WIDGET_API_TEMPLATE       = TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
@@ -193,7 +195,7 @@ public final class ApiConfig {
     // ==================
 
     // DevEnvironment API 文件保存路径
-    public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "Environment/";
+    public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "Environment/";
     // DevEnvironment 版本号
     public static final String DEV_ENVIRONMENT_VERSION            = "1.0.5";
     // DevEnvironment Template Readme
@@ -204,7 +206,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava API 文件保存路径
-    public static final String DEV_JAVA_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevJava/";
+    public static final String DEV_JAVA_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevJava/";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
     // DevJava Utils 文件路径
@@ -223,7 +225,7 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_STANDARD_PACKAGE            = "dev";
     // DevStandard API 文件保存路径
-    public static final String DEV_STANDARD_API_FILE_SAVE_PATH = FILE_SAVE_PATH + "DevStandard/";
+    public static final String DEV_STANDARD_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "DevStandard/";
     // DevStandard 文件路径
     public static final String DEV_STANDARD_PATH               = LOCAL_PATH + "/DevUtils/interesting/DevStandard/src/main/java/dev/";
     // DevStandard GitHub 项目文件路径
