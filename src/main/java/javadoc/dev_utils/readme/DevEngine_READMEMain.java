@@ -47,7 +47,7 @@ final class DevEngine_READMEMain {
     }
 
     /**
-     * 创建 REAMDE 文件
+     * 创建 README 文件
      * @return Create Result
      */
     public static String createREADME() {
@@ -70,7 +70,7 @@ final class DevEngine_READMEMain {
                 githubUrl, ApiConfig.DEV_ENGINE_TEMPLATE
         );
 
-        // 保存合成后的 API REAMDE
+        // 保存合成后的 API README
         FileUtils.saveFile(new File(ApiConfig.DEV_ENGINE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
                 builder.toString().getBytes());
 

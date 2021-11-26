@@ -51,7 +51,7 @@ final class DevHttpCaptureCompiler_READMEMain {
     }
 
     /**
-     * 创建 REAMDE 文件
+     * 创建 README 文件
      * @return Create Result
      */
     public static String createREADME() {
@@ -90,7 +90,7 @@ final class DevHttpCaptureCompiler_READMEMain {
 
         builder.append(httpCaptureAPI);
 
-        // 保存合成后的 API REAMDE
+        // 保存合成后的 API README
         FileUtils.saveFile(new File(ApiConfig.DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
                 builder.toString().getBytes());
 

@@ -38,6 +38,15 @@ public final class ApiConfig {
     // Template package path
     private static final String TEMPLATE_PACKAGE_PATH = JAVADOC_PROJECT_PATH + "/src/main/java/javadoc/dev_utils/readme/template";
 
+    // ============
+    // = DevUtils =
+    // ============
+
+    // DevUtils Readme 文件保存路径
+    public static final String DEV_UTILS_README_FILE_SAVE_PATH = FILE_SAVE_PATH;
+    // DevUtils Template Readme
+    public static final String DEV_UTILS_TEMPLATE              = TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
+
     // ==========
     // = DevApp =
     // ==========

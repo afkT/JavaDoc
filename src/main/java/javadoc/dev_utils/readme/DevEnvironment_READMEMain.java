@@ -15,7 +15,7 @@ final class DevEnvironment_READMEMain {
     }
 
     /**
-     * 创建 REAMDE 文件
+     * 创建 README 文件
      * @return Create Result
      */
     public static String createREADME() {
