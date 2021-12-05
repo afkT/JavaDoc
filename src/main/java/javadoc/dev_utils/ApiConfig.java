@@ -357,6 +357,8 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.anim", "动画工具类");
 
         sCatalogMap_APP.put(".app.assist", "辅助类");
+        sCatalogMap_APP.put(".app.assist.floating", "悬浮窗实现方案辅助类");
+        sCatalogMap_APP.put(".app.assist.lifecycle", "Activity 生命周期监听辅助类");
         sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
 
         sCatalogMap_APP.put(".app.cache", "缓存工具类");

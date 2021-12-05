@@ -5,7 +5,7 @@
 
 ## Gradle
 
-```java
+```gradle
 // AndroidX
 implementation 'io.github.afkt:DevWidgetX:%s'
 ```

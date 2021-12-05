@@ -1,7 +1,7 @@
 
 ## Gradle
 
-```java
+```gradle
 // Android ( 1.9.4 以后只更新 AndroidX ) JCenter
 //implementation 'com.afkt:DevApp:1.9.4'
 
