@@ -28,6 +28,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreAnnotateMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("SortMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("StateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
     }
@@ -48,6 +49,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
         ignoreFinalMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("SortMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("StateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreFinalMap;
     }
@@ -82,6 +84,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreParamMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("SortMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("StateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
     }

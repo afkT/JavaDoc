@@ -407,9 +407,9 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".base", "实体类基类相关");
         sCatalogMap_Assist.put(".base.data", "数据操作");
         sCatalogMap_Assist.put(".base.entry", "KeyValue 实体类");
-        sCatalogMap_Assist.put(".base.expand", "实体类扩展");
         sCatalogMap_Assist.put(".base.multiselect", "多选编辑操作");
         sCatalogMap_Assist.put(".base.number", "数值操作");
+        sCatalogMap_Assist.put(".base.state", "状态相关");
         sCatalogMap_Assist.put(".callback", "接口回调相关");
         sCatalogMap_Assist.put(".engine", "兼容 Engine");
         sCatalogMap_Assist.put(".engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
