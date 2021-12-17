@@ -56,9 +56,9 @@ public final class ApiConfig {
     // DevApp API 文件保存路径
     public static final String DEV_APP_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "/DevApp/";
     // DevApp 文件路径
-    public static final String DEV_APP_PATH               = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev/";
+    public static final String DEV_APP_PATH               = LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev";
     // DevApp Utils 文件路径
-    public static final String DEV_APP_UTILS_PATH         = DEV_APP_PATH + "utils/";
+    public static final String DEV_APP_UTILS_PATH         = DEV_APP_PATH + "/utils/";
     // DevApp GitHub 项目文件路径
     public static final String DEV_APP_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/";
     // DevApp Template Readme
@@ -219,9 +219,9 @@ public final class ApiConfig {
     // DevJava API 文件保存路径
     public static final String DEV_JAVA_API_FILE_SAVE_PATH = LIB_FILE_SAVE_PATH + "/DevJava/";
     // DevJava 文件路径
-    public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev/";
+    public static final String DEV_JAVA_PATH               = LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
-    public static final String DEV_JAVA_UTILS_PATH         = DEV_JAVA_PATH + "utils/";
+    public static final String DEV_JAVA_UTILS_PATH         = DEV_JAVA_PATH + "/utils/";
     // DevJava GitHub 项目文件路径
     public static final String DEV_JAVA_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevJava/src/main/java/dev/utils/";
     // DevJava Template Readme

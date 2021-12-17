@@ -19,7 +19,7 @@ public class DevAppMain {
 
     public static void main(String[] args) {
         // 检测路径
-        String path = ApiConfig.DEV_APP_PATH + "utils/";
+        String path = ApiConfig.DEV_APP_UTILS_PATH;
         // 代码检测分析配置接口
         ICheckConfig iCheckConfig = new DevAppConfig();
         // 是否覆盖文件内容
