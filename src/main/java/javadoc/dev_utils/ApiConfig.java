@@ -25,7 +25,7 @@ public final class ApiConfig {
     // Lib 文件保存路径
     public static final String LIB_FILE_SAVE_PATH = FILE_SAVE_PATH + "/lib";
     // 本地路径 ( DevUtils 项目 )
-    public static final String LOCAL_PATH         = "F:/Project/Android";
+    public static final String LOCAL_PATH         = "../../AndroidStudioProjects";
     // 项目路径 ( DevUtils 项目 )
     public static final String PROJECT_PATH       = LOCAL_PATH + File.separator + PROJECT_NAME;
 
