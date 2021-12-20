@@ -37,7 +37,8 @@ public final class CodeEndNewLineRemove {
 
                     @Override
                     public boolean isAddToList(File file) {
-                        if (file.getAbsolutePath().contains("\\.")) return false;
+                        String absolutePath = file.getAbsolutePath();
+                        if (Code.isHidden(absolutePath)) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {

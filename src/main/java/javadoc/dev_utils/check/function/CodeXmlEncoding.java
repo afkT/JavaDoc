@@ -33,7 +33,8 @@ public final class CodeXmlEncoding {
 
                     @Override
                     public boolean isAddToList(File file) {
-                        if (file.getAbsolutePath().contains("\\.")) return false;
+                        String absolutePath = file.getAbsolutePath();
+                        if (Code.isHidden(absolutePath)) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) {

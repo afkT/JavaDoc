@@ -29,8 +29,9 @@ public final class CodeRepeatNewLineRemove {
         List<File> lists = FileUtils.listFilesInDirWithFilter(ApiConfig.PROJECT_PATH, new FileFilter() {
             @Override
             public boolean accept(File file) {
-                if (file.getAbsolutePath().contains("\\.")) return false;
-                if (file.getAbsolutePath().contains("\\build\\")) return false;
+                String absolutePath = file.getAbsolutePath();
+                if (Code.isHidden(absolutePath)) return false;
+                if (absolutePath.contains("\\build\\")) return false;
                 if (file.isDirectory()) return false;
 
                 String fileSuffix = FileUtils.getFileSuffix(file);
