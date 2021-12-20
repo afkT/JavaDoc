@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import dev.utils.DevFinal;
 import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
-import dev.utils.common.StringUtils;
 
 /**
  * detail: 内部工具类
@@ -138,7 +138,7 @@ public final class Utils {
             // 格式化追加
             builder.append(String.format(format, mapName, className,
                     ArrayUtils.appendToString(lists.toArray(new String[]{}))));
-            builder.append(StringUtils.NEW_LINE_STR);
+            builder.append(DevFinal.SYMBOL.NEW_LINE);
         }
         // 用于生成 Config 特殊处理
         builder.delete(0, space.length());
@@ -166,7 +166,7 @@ public final class Utils {
         for (String className : sortHashMap) {
             // 格式化追加
             builder.append(String.format(format, mapName, className));
-            builder.append(StringUtils.NEW_LINE_STR);
+            builder.append(DevFinal.SYMBOL.NEW_LINE);
         }
         // 用于生成 Config 特殊处理
         builder.delete(0, space.length());

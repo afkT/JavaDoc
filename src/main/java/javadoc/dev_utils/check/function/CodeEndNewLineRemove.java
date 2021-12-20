@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import dev.utils.DevFinal;
 import dev.utils.common.FileUtils;
 import dev.utils.common.StringUtils;
 import dev.utils.common.assist.search.FileDepthFirstSearchUtils;
@@ -19,7 +20,7 @@ public final class CodeEndNewLineRemove {
     // 结尾符号
     private static final String                SYMBOL           = ""; // }
     // 检查 Key
-    private static final String                END_KEY          = SYMBOL + StringUtils.NEW_LINE_STR;
+    private static final String                END_KEY          = SYMBOL + DevFinal.SYMBOL.NEW_LINE;
     // 追加内容
     private static final String                APPEND           = SYMBOL;
     // 忽略文件后缀

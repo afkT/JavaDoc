@@ -4,9 +4,9 @@ import com.sun.javadoc.ClassDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.RootDoc;
 
-import javadoc.dev_utils.ApiConfig;
-
 import java.util.Arrays;
+
+import javadoc.dev_utils.ApiConfig;
 
 /**
  * detail: JavaDoc 读取演示

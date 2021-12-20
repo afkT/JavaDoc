@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import dev.utils.DevFinal;
 import dev.utils.common.FileUtils;
 import dev.utils.common.StringUtils;
 import dev.utils.common.assist.search.FileDepthFirstSearchUtils;
@@ -19,7 +20,7 @@ public final class CodeXmlEncoding {
     // 开头
     private static final String                STARTS_WITH = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
     // 追加内容
-    private static final String                APPEND      = STARTS_WITH + StringUtils.NEW_LINE_STR;
+    private static final String                APPEND      = STARTS_WITH + DevFinal.SYMBOL.NEW_LINE;
     // 文件后缀
     private static final String[]              SUFFIX      = {"xml"};
 
