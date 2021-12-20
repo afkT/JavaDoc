@@ -52,7 +52,7 @@ public final class ApiConfig {
     // ==========
 
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.3.0";
+    public static final String DEV_APP_VERSION            = "2.3.1";
     // DevApp 文件路径
     public static final String DEV_APP_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev";
     // DevApp Utils 文件路径
@@ -69,7 +69,7 @@ public final class ApiConfig {
     // =============
 
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.2.8";
+    public static final String DEV_ASSIST_VERSION            = "1.2.9";
     // 包目录名
     public static final String DEV_ASSIST_PACKAGE            = "dev";
     // DevAssist 文件路径
@@ -120,7 +120,7 @@ public final class ApiConfig {
     // =============
 
     // DevEngine 版本号
-    public static final String DEV_ENGINE_VERSION            = "1.0.0";
+    public static final String DEV_ENGINE_VERSION            = "1.0.1";
     // 包目录名
     public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
     // DevEngine 文件路径
@@ -137,7 +137,7 @@ public final class ApiConfig {
     // ==================
 
     // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.4";
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.5";
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
     // DevHttpCapture 文件路径
@@ -215,7 +215,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.7";
+    public static final String DEV_JAVA_VERSION            = "1.3.8";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
