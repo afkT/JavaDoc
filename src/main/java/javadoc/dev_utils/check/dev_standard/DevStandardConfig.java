@@ -24,10 +24,12 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("DevFinalIgnore", ArrayUtils.asListArgs("ignoreSet"));
+        ignoreAnnotateMap.put("DevIntentGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreAnnotateMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("SortMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
@@ -44,11 +46,12 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
         ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("DevIntentGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("GradleMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreFinalMap.put("Pangu", ArrayUtils.asListArgs("spacingText","spacingFile"));
         ignoreFinalMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("SortMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreFinalMap;
@@ -80,10 +83,11 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
         ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("DevIntentGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreParamMap.put("PanguAnalyzeMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("SortMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
