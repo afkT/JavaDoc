@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.1'
+implementation 'io.github.afkt:DevAppX:2.3.2'
 ```
 
 ## 目录结构
@@ -168,6 +168,9 @@ DevUtils.openDebug();
 | getActivity | 通过 Context 获取 Activity |
 | isFinishing | 判断 Activity 是否关闭 |
 | isNotFinishing | 判断 Activity 是否未关闭 |
+| isDestroyed | 判断 Activity 是否销毁 |
+| isNotDestroyed | 判断 Activity 是否未销毁 |
+| assertValidActivity | 判断 Activity 是否有效 |
 | isActivityExists | 判断是否存在指定的 Activity |
 | startHomeActivity | 回到桌面 ( 同点击 Home 键效果 ) |
 | getLauncherActivity | 获取 Launcher activity |
@@ -1941,6 +1944,10 @@ DevUtils.openDebug();
 | setTranslationX | 设置水平方向的移动距离 |
 | getTranslationY | 获取竖直方向的移动距离 |
 | setTranslationY | 设置竖直方向的移动距离 |
+| getX | 获取 X 轴位置 |
+| setX | 设置 X 轴位置 |
+| getY | 获取 Y 轴位置 |
+| setY | 设置 Y 轴位置 |
 | getLayerType | 获取 View 硬件加速类型 |
 | setLayerType | 设置 View 硬件加速类型 |
 | requestLayout | 请求重新对 View 布局 |
@@ -2341,11 +2348,32 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistfloating">**`dev.utils.app.assist.floating`**</span>
 
 
+* **DevApp 悬浮窗边缘检测辅助类实现 ->** [DevFloatingEdgeIMPL.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingEdgeIMPL.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| calculateEdge | calculateEdge |
+
+
 * **DevApp 悬浮窗触摸辅助类实现 ->** [DevFloatingTouchIMPL.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingTouchIMPL.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | onTouchEvent | onTouchEvent |
+
+
+* **DevApp 悬浮窗触摸辅助类实现 ->** [DevFloatingTouchIMPL2.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingTouchIMPL2.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| onTouchEvent | onTouchEvent |
+| updateViewLayout | updateViewLayout |
+| getX | 获取 X 轴坐标 |
+| setX | 设置 X 轴坐标 |
+| getY | 获取 Y 轴坐标 |
+| setY | 设置 Y 轴坐标 |
+| getFloatingEdge | 获取悬浮窗边缘检测接口实现 |
+| setFloatingEdge | 设置悬浮窗边缘检测接口实现 |
 
 
 * **悬浮窗管理辅助类 ( 需权限 ) ->** [FloatingWindowManagerAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/FloatingWindowManagerAssist.java)
@@ -2370,6 +2398,7 @@ DevUtils.openDebug();
 | removeFloatingView | 移除悬浮窗 View |
 | addFloatingView | 添加悬浮窗 View |
 | removeAllFloatingView | 移除所有悬浮窗 View |
+| updateViewLayout | 更新悬浮窗 View Layout |
 | isNeedsAdd | 是否处理悬浮 View 添加操作 |
 | setNeedsAdd | 设置是否处理悬浮 View 添加操作 |
 
@@ -2384,6 +2413,13 @@ DevUtils.openDebug();
 | getMapFloatingViewLayoutParams | 获取悬浮窗 View LayoutParams |
 
 
+* **悬浮窗边缘检测接口 ->** [IFloatingEdge.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/IFloatingEdge.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| calculateEdge | 计算悬浮窗边缘检测坐标 |
+
+
 * **悬浮窗操作辅助类接口 ->** [IFloatingOperate.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/IFloatingOperate.java)
 
 | 方法 | 注释 |
@@ -2391,6 +2427,7 @@ DevUtils.openDebug();
 | removeFloatingView | 移除悬浮窗 View |
 | addFloatingView | 添加悬浮窗 View |
 | removeAllFloatingView | 移除所有悬浮窗 View |
+| updateViewLayout | 更新悬浮窗 View Layout |
 | isNeedsAdd | 是否处理悬浮 View 添加操作 |
 | setNeedsAdd | 设置是否处理悬浮 View 添加操作 |
 
@@ -2942,6 +2979,8 @@ DevUtils.openDebug();
 | setPivotY | 设置竖直方向偏转量 |
 | setTranslationX | 设置水平方向的移动距离 |
 | setTranslationY | 设置竖直方向的移动距离 |
+| setX | 设置 X 轴位置 |
+| setY | 设置 Y 轴位置 |
 | setLayerType | 设置 View 硬件加速类型 |
 | requestLayout | 请求重新对 View 布局 |
 | requestFocus | View 请求获取焦点 |
@@ -3158,6 +3197,8 @@ DevUtils.openDebug();
 | setPivotY | 设置竖直方向偏转量 |
 | setTranslationX | 设置水平方向的移动距离 |
 | setTranslationY | 设置竖直方向的移动距离 |
+| setX | 设置 X 轴位置 |
+| setY | 设置 Y 轴位置 |
 | setLayerType | 设置 View 硬件加速类型 |
 | requestLayout | 请求重新对 View 布局 |
 | requestFocus | View 请求获取焦点 |
@@ -3442,6 +3483,8 @@ DevUtils.openDebug();
 | setPivotY | 设置竖直方向偏转量 |
 | setTranslationX | 设置水平方向的移动距离 |
 | setTranslationY | 设置竖直方向的移动距离 |
+| setX | 设置 X 轴位置 |
+| setY | 设置 Y 轴位置 |
 | setLayerType | 设置 View 硬件加速类型 |
 | requestLayout | 请求重新对 View 布局 |
 | requestFocus | View 请求获取焦点 |
@@ -3651,6 +3694,8 @@ DevUtils.openDebug();
 | setPivotY | 设置竖直方向偏转量 |
 | setTranslationX | 设置水平方向的移动距离 |
 | setTranslationY | 设置竖直方向的移动距离 |
+| setX | 设置 X 轴位置 |
+| setY | 设置 Y 轴位置 |
 | setLayerType | 设置 View 硬件加速类型 |
 | requestLayout | 请求重新对 View 布局 |
 | requestFocus | View 请求获取焦点 |

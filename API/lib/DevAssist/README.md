@@ -2,7 +2,7 @@
 ## Gradle
 
 ```gradle
-implementation 'io.github.afkt:DevAssist:1.2.9'
+implementation 'io.github.afkt:DevAssist:1.3.0'
 ```
 
 ## 目录结构
@@ -481,6 +481,27 @@ implementation 'io.github.afkt:DevAssist:1.2.9'
 | clear | 清空数据回调 |
 | add | 添加数据到栈内 |
 | acceptCurrentToList | 是否允许 Current 添加到列表中 |
+
+
+* **DevFinal.STR Intent 传参读写辅助类 ->** [DevIntent.java](https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/src/main/java/dev/base/DevIntent.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getDataMaps | 获取存储数据 Map |
+| containsKey | 是否存在 Key |
+| containsValue | 是否存在 Value |
+| put | 保存数据 |
+| putAll | 保存集合数据 |
+| remove | 移除数据 |
+| removeAll | 移除集合数据 |
+| get | 获取对应 Key 保存的 Value |
+| clear | 清空数据 |
+| clearNull | 清除 null 数据 |
+| clearNullKey | 清除 null Key 数据 |
+| clearNullValue | 清除 null Value 数据 |
+| clearEmpty | 清除 empty 数据 |
+| clearEmptyKey | 清除 empty Key 数据 |
+| clearEmptyValue | 清除 empty Value 数据 |
 
 
 * **数量实体类 ->** [DevNumber.java](https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/src/main/java/dev/base/DevNumber.java)
