@@ -483,13 +483,17 @@ implementation 'io.github.afkt:DevAssist:1.3.0'
 | acceptCurrentToList | 是否允许 Current 添加到列表中 |
 
 
-* **DevFinal.STR Intent 传参读写辅助类 ->** [DevIntent.java](https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/src/main/java/dev/base/DevIntent.java)
+* **Intent 传参读写辅助类 ->** [DevIntent.java](https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/src/main/java/dev/base/DevIntent.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| with | 创建 DevIntent |
+| insert | 插入数据 |
+| reader | 读取数据并存储 |
 | getDataMaps | 获取存储数据 Map |
 | containsKey | 是否存在 Key |
 | containsValue | 是否存在 Value |
+| isNullValue | 对应 Key 保存的 Value 是否为 null |
 | put | 保存数据 |
 | putAll | 保存集合数据 |
 | remove | 移除数据 |
