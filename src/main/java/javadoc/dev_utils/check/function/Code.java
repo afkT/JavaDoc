@@ -14,9 +14,12 @@ final class Code {
         if (path != null) {
             String temp = path.replaceAll("/../..", "")
                     .replaceAll("\\...\\...", "")
-//                    .replaceAll("\\..\\..", "")
-                    ;
-            return temp.contains("\\.");
+                    .replaceAll("\\..\\..", "");
+            // 判断是否存在特殊情况
+            if (temp.contains("..")) {
+                System.out.println("path replace 未彻底 : " + path);
+            }
+            return temp.contains("\\.") || temp.contains("/.");
         }
         return false;
     }

@@ -78,16 +78,25 @@ public class APIGenerate {
                 // 原始路径
                 String root = apiPath;
                 // 获取 MarkDown 格式 dev.utils
-                String apiMarkDown = APIReader.readDoc(root, className, apiGitHubUrl + className, filterMethodMap,
-                        methodNameRegex, methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+                String apiMarkDown = APIReader.readDoc(
+                        root, className,
+                        apiGitHubUrl + className, filterMethodMap,
+                        methodNameRegex, methodNameMatchesMap,
+                        methodRepeatBuilder, methodNotAnnotateBuilder,
+                        notMethodBuilder
+                );
                 // 拼接保存
                 builder.append(apiMarkDown);
             }
         }
         // 保存 module 目录下的文件夹子节点
-        builder.append(APIGenerateByModule.apiGenerate(apiPath, apiPackageName, apiGitHubUrl,
-                filterClassSet, filterMethodMap, methodNameRegex, methodNameMatchesMap,
-                methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder));
+        builder.append(APIGenerateByModule.apiGenerate(
+                apiPath, apiPackageName, apiGitHubUrl,
+                filterClassSet, filterMethodMap,
+                methodNameRegex, methodNameMatchesMap,
+                methodRepeatBuilder, methodNotAnnotateBuilder,
+                notMethodBuilder
+        ));
         // 返回对应模块的 API 信息
         return builder.toString();
     }

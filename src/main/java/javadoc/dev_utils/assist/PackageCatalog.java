@@ -132,7 +132,9 @@ public final class PackageCatalog {
             String name = file.getName();
             // 属于文件夹才处理
             if (file.isDirectory()) {
-                Catalog catalog = new Catalog(file, getFolderLists(file.getAbsolutePath(), callback));
+                Catalog catalog = new Catalog(
+                        file, getFolderLists(file.getAbsolutePath(), callback)
+                );
                 lists.add(catalog);
 
                 // 触发回调
@@ -272,8 +274,13 @@ public final class PackageCatalog {
                     linkTag + "." + name, mapCatalog));
             // 判断是否存在子文件夹
             if (catalog.getListCatalogs().size() != 0) {
-                forCatalog(builder, catalog.getListCatalogs(), isAnchor, packageName,
-                        lineNumber + 1, linkTag + "." + name, mapCatalog);
+                forCatalog(
+                        builder, catalog.getListCatalogs(),
+                        isAnchor, packageName,
+                        lineNumber + 1,
+                        linkTag + "." + name,
+                        mapCatalog
+                );
             }
         }
     }

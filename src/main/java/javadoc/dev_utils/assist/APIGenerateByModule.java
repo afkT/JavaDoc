@@ -76,7 +76,9 @@ final class APIGenerateByModule {
         for (File file : files) {
             // 属于文件夹才处理
             if (file.isDirectory()) {
-                Subnode subnode = new Subnode(file, getFolderLists(file.getAbsolutePath()));
+                Subnode subnode = new Subnode(
+                        file, getFolderLists(file.getAbsolutePath())
+                );
                 lists.add(subnode);
             }
         }
@@ -158,8 +160,12 @@ final class APIGenerateByModule {
                         clickUrl = urlBuilder.toString();
                     }
                     // 获取 MarkDown 格式 dev.utils
-                    String apiMarkDown = APIReader.readDoc(root, className, clickUrl, filterMethodMap,
-                            methodNameRegex, methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+                    String apiMarkDown = APIReader.readDoc(
+                            root, className, clickUrl,
+                            filterMethodMap, methodNameRegex,
+                            methodNameMatchesMap, methodRepeatBuilder,
+                            methodNotAnnotateBuilder, notMethodBuilder
+                    );
                     // 拼接保存数据
                     builder.append(apiMarkDown);
                 }
@@ -167,10 +173,16 @@ final class APIGenerateByModule {
 
             // 判断是否存在子文件夹
             if (subnode.getListSubs().size() != 0) {
-                forSubnode(builder, subnode.getListSubs(),
-                        path + "/" + name, packageName + "." + name, githubUrl + "/" + name,
-                        filterClassSet, filterMethodMap, methodNameRegex, methodNameMatchesMap,
-                        methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+                forSubnode(
+                        builder, subnode.getListSubs(),
+                        path + "/" + name,
+                        packageName + "." + name,
+                        githubUrl + "/" + name,
+                        filterClassSet, filterMethodMap,
+                        methodNameRegex, methodNameMatchesMap,
+                        methodRepeatBuilder, methodNotAnnotateBuilder,
+                        notMethodBuilder
+                );
             }
         }
     }
@@ -208,9 +220,14 @@ final class APIGenerateByModule {
         // 拼接信息
         StringBuilder builder = new StringBuilder();
         // 递归循环子节点
-        forSubnode(builder, getFolderLists(path), path, packageName, githubUrl,
-                filterClassSet, filterMethodMap, methodNameRegex, methodNameMatchesMap,
-                methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        forSubnode(
+                builder, getFolderLists(path), path,
+                packageName, githubUrl,
+                filterClassSet, filterMethodMap,
+                methodNameRegex, methodNameMatchesMap,
+                methodRepeatBuilder, methodNotAnnotateBuilder,
+                notMethodBuilder
+        );
         // 返回数据
         return builder.toString();
     }

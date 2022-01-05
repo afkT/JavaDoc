@@ -31,7 +31,8 @@ public final class CodeRepeatNewLineRemove {
             public boolean accept(File file) {
                 String absolutePath = file.getAbsolutePath();
                 if (Code.isHidden(absolutePath)) return false;
-                if (absolutePath.contains(File.separator + "build" + File.separator)) return false;
+                if (absolutePath.contains("\\build\\")) return false;
+                if (absolutePath.contains("/build/")) return false;
                 if (file.isDirectory()) return false;
 
                 String fileSuffix = FileUtils.getFileSuffix(file);
