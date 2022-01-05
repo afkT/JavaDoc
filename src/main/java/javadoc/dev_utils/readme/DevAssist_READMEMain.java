@@ -90,8 +90,12 @@ final class DevAssist_READMEMain {
         builder.append(assistAPI);
 
         // 保存合成后的 API README
-        FileUtils.saveFile(new File(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                builder.toString().getBytes());
+        FileUtils.saveFile(
+                new File(
+                        ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH,
+                        ApiConfig.README_FILE_NAME
+                ).getAbsolutePath(), builder.toString().getBytes()
+        );
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.DEV_ASSIST_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuilder.toString());

@@ -105,8 +105,12 @@ final class DevWidget_READMEMain {
         builder.append(widgetAPI);
 
         // 保存合成后的 API README
-        FileUtils.saveFile(new File(ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH, ApiConfig.README_API_FILE_NAME).getAbsolutePath(),
-                builder.toString().getBytes());
+        FileUtils.saveFile(
+                new File(
+                        ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH,
+                        ApiConfig.README_API_FILE_NAME
+                ).getAbsolutePath(), builder.toString().getBytes()
+        );
 
 //        // 方法名重复记录存储
 //        Utils.saveFile(ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuilder.toString());

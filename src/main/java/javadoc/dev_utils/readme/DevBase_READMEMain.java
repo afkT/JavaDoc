@@ -71,8 +71,12 @@ final class DevBase_READMEMain {
         );
 
         // 保存合成后的 API README
-        FileUtils.saveFile(new File(ApiConfig.DEV_BASE_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                builder.toString().getBytes());
+        FileUtils.saveFile(
+                new File(
+                        ApiConfig.DEV_BASE_API_FILE_SAVE_PATH,
+                        ApiConfig.README_FILE_NAME
+                ).getAbsolutePath(), builder.toString().getBytes()
+        );
 
         StringBuilder resultBuilder = new StringBuilder();
         resultBuilder.append("\n\n");

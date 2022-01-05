@@ -20,7 +20,6 @@ final class Dev_READMEMain {
      * @return Create Result
      */
     public static String createREADME() {
-
         StringBuilder builder = new StringBuilder();
 
         // template readme content
@@ -49,8 +48,12 @@ final class Dev_READMEMain {
         ));
 
         // 保存 README
-        FileUtils.saveFile(new File(ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                builder.toString().getBytes());
+        FileUtils.saveFile(
+                new File(
+                        ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH,
+                        ApiConfig.README_FILE_NAME
+                ).getAbsolutePath(), builder.toString().getBytes()
+        );
 
         StringBuilder resultBuilder = new StringBuilder();
         resultBuilder.append("\n\n");

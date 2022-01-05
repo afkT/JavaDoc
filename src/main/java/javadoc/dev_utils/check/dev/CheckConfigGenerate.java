@@ -71,7 +71,11 @@ public class CheckConfigGenerate {
         lists.add(Utils.generateSetString(ignoreAnnotationSpaceSet, "map"));
         String format = StringUtils.getFormatString(FORMAT_STR, lists.toArray());
         // 生成 Config
-        FileUtils.saveFile(new File(PAGE_DIP + packageName,
-                className + "Config.java").getAbsolutePath(), format.getBytes());
+        FileUtils.saveFile(
+                new File(
+                        PAGE_DIP + packageName,
+                        className + "Config.java"
+                ).getAbsolutePath(), format.getBytes()
+        );
     }
 }

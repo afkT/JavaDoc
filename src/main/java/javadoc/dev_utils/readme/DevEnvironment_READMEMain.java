@@ -31,8 +31,10 @@ final class DevEnvironment_READMEMain {
         templateContent = templateContent.replaceAll("DEVersion", ApiConfig.DEV_ENVIRONMENT_VERSION);
         // 保存 DevEnvironment README.md 文件
         FileUtils.saveFile(
-                new File(ApiConfig.DEV_ENVIRONMENT_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                templateContent.getBytes()
+                new File(
+                        ApiConfig.DEV_ENVIRONMENT_API_FILE_SAVE_PATH,
+                        ApiConfig.README_FILE_NAME
+                ).getAbsolutePath(), templateContent.getBytes()
         );
 
         StringBuilder resultBuilder = new StringBuilder();
