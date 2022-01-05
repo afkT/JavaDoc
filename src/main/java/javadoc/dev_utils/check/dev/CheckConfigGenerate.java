@@ -21,12 +21,12 @@ public class CheckConfigGenerate {
     // 项目目录
     private static final String USER_DIR = System.getProperty("user.dir");
     // 包目录
-    private static final String PAGE_DIP = USER_DIR + "\\src\\main\\java\\javadoc\\dev_utils\\check\\";
+    private static final String PAGE_DIP = USER_DIR + "/src/main/java/javadoc/dev_utils/check/";
     // 当前文件目录
-    private static final String FILE_DIP = PAGE_DIP + "dev\\";
+    private static final String FILE_DIP = PAGE_DIP + "dev/";
 
     static {
-        byte[] bytes = FileUtils.readFileBytes(FILE_DIP + "\\format.txt");
+        byte[] bytes = FileUtils.readFileBytes(FILE_DIP + "format.txt");
         FORMAT_STR = new String(bytes);
     }
 
@@ -71,7 +71,7 @@ public class CheckConfigGenerate {
         lists.add(Utils.generateSetString(ignoreAnnotationSpaceSet, "map"));
         String format = StringUtils.getFormatString(FORMAT_STR, lists.toArray());
         // 生成 Config
-        FileUtils.saveFile(new File(PAGE_DIP + "\\" + packageName,
+        FileUtils.saveFile(new File(PAGE_DIP + packageName,
                 className + "Config.java").getAbsolutePath(), format.getBytes());
     }
 }

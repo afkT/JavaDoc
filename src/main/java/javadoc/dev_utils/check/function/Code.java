@@ -13,8 +13,9 @@ final class Code {
     public static boolean isHidden(final String path) {
         if (path != null) {
             String temp = path.replaceAll("/../..", "")
-                    .replaceAll("\\...\\...", "");
-//                    .replaceAll("\\..\\..", "");
+                    .replaceAll("\\...\\...", "")
+//                    .replaceAll("\\..\\..", "")
+                    ;
             return temp.contains("\\.");
         }
         return false;
