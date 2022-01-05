@@ -223,7 +223,10 @@ public final class CodeAnalyzeReader {
                         for (String str : splits) {
                             if (!StringUtils.isSpace(str)) {
                                 if (ValidatorUtils.match("[ ]*[A-Za-z0-9\\<\\>\\[\\]]+ [A-Za-z0-9]+;", str)) {
-                                    MapUtils.putToList(mapConfig.sNoModifierVariableMap, className, str);
+                                    MapUtils.putToList(
+                                            mapConfig.sNoModifierVariableMap,
+                                            className, str
+                                    );
                                 }
                             }
                         }
@@ -245,11 +248,17 @@ public final class CodeAnalyzeReader {
                         String methodAnnotate = methodDoc.commentText();
 
                         // 反射获取 tree 变量
-                        JCTree.JCMethodDecl jcMethodDecl = Reflect2Utils.getPropertyByParent(methodDoc, "tree");
+                        JCTree.JCMethodDecl jcMethodDecl = Reflect2Utils.getPropertyByParent(
+                                methodDoc, "tree"
+                        );
                         // 反射获取方法参数
-                        List<JCTree.JCVariableDecl> listJCVariableDecls = Reflect2Utils.getPropertyByParent(jcMethodDecl, "params");
+                        List<JCTree.JCVariableDecl> listJCVariableDecls = Reflect2Utils.getPropertyByParent(
+                                jcMethodDecl, "params"
+                        );
                         // 获取方法全部注释 (含 @param)
-                        String methodDocumentation = Reflect2Utils.getPropertyByParent(methodDoc, "documentation");
+                        String methodDocumentation = Reflect2Utils.getPropertyByParent(
+                                methodDoc, "documentation"
+                        );
 
                         // 获取方法代码
                         String methodCode = jcMethodDecl.toString();
@@ -269,7 +278,10 @@ public final class CodeAnalyzeReader {
                         }
                         // 不属于 public 修饰符则记录
                         if (!isPublic) {
-                            MapUtils.putToList(mapConfig.sMethodUnPublicMap, className, methodName);
+                            MapUtils.putToList(
+                                    mapConfig.sMethodUnPublicMap,
+                                    className, methodName
+                            );
                         }
 
                         //  专门用于判断方法是否 static 修饰
@@ -279,7 +291,10 @@ public final class CodeAnalyzeReader {
                             // 判断方法是否存在 static 修饰符
                             // 不存在则保存
                             if (!jcMethodDecl.toString().contains("static ")) {
-                                MapUtils.putToList(mapConfig.sMethodUnStaticMap, className + classTag, methodName);
+                                MapUtils.putToList(
+                                        mapConfig.sMethodUnStaticMap,
+                                        className + classTag, methodName
+                                );
                             }
                         }
                         // ========================
@@ -296,7 +311,10 @@ public final class CodeAnalyzeReader {
                                         if (jcModifiers.toString().endsWith("final ")) {
                                             // 存在 final 修饰
                                         } else {
-                                            MapUtils.putToList(mapConfig.sParamUnFinalMap, className + classTag, methodName);
+                                            MapUtils.putToList(
+                                                    mapConfig.sParamUnFinalMap,
+                                                    className + classTag, methodName
+                                            );
                                             break;
                                         }
                                     }
@@ -308,7 +326,10 @@ public final class CodeAnalyzeReader {
                         // 判断是否添加到 无注释 Map 中
                         boolean isUnAnnotate = false;
                         if (StringUtils.isEmpty(methodAnnotate)) {
-                            MapUtils.putToList(mapConfig.sMethodUnAnnotateMap, className, methodName);
+                            MapUtils.putToList(
+                                    mapConfig.sMethodUnAnnotateMap,
+                                    className, methodName
+                            );
                             // 表示已经添加到 Map 中
                             isUnAnnotate = true;
                         }
@@ -319,32 +340,54 @@ public final class CodeAnalyzeReader {
                         if (StringUtils.isEmpty(methodDocumentation)) { // 为 null, 表示没有注释, 需要特殊处理
                             // 没有添加, 才进行添加, 防止多次保存
                             if (!isUnAnnotate) {
-                                MapUtils.putToList(mapConfig.sMethodUnAnnotateMap, className, methodName);
+                                MapUtils.putToList(
+                                        mapConfig.sMethodUnAnnotateMap,
+                                        className, methodName
+                                );
                             }
                         } else {
                             // 不存在 void, 表示有返回值
                             if (!jcMethodDecl.toString().contains("void ")) {
                                 // 判断是否存在 @return, 不存在则记录
                                 if (!methodDocumentation.contains("@return")) {
-                                    MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName);
+                                    MapUtils.putToList(
+                                            mapConfig.sMethodLackReturnMap,
+                                            className, methodName
+                                    );
                                 } else { // 存在则判断数量
                                     // 判断存在的数量
-                                    int returnNumber = StringUtils.countMatches(methodDocumentation, "@return");
+                                    int returnNumber = StringUtils.countMatches(
+                                            methodDocumentation, "@return"
+                                    );
                                     if (returnNumber >= 2) {
-                                        MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName + " - 多个 @return");
+                                        MapUtils.putToList(
+                                                mapConfig.sMethodLackReturnMap,
+                                                className, methodName + " - 多个 @return"
+                                        );
                                     } else {
-                                        String[] splitReturn = methodDocumentation.replaceAll("\r\n", "").split("@return ");
+                                        String[] splitReturn = methodDocumentation.replaceAll(
+                                                "\r\n", ""
+                                        ).split("@return ");
                                         if (splitReturn.length == 1) {
-                                            MapUtils.putToList(mapConfig.sMethodUnAnnotateReturnMap, className, methodName);
+                                            MapUtils.putToList(
+                                                    mapConfig.sMethodUnAnnotateReturnMap,
+                                                    className, methodName
+                                            );
                                         }
                                     }
                                 }
                             } else { // 无返回值
                                 // 判断是否存在 @return, 存在则记录 => 属于 void 并不需要增加 @return
                                 if (methodDocumentation.contains("@return")) {
-                                    MapUtils.putToList(mapConfig.sMethodLackReturnMap, className, methodName + " - 多余 @return");
+                                    MapUtils.putToList(
+                                            mapConfig.sMethodLackReturnMap,
+                                            className, methodName + " - 多余 @return"
+                                    );
                                 } else { // 方法为 void
-                                    MapUtils.putToList(mapConfig.sMethodReturnVoidMap, className, methodName + " - void");
+                                    MapUtils.putToList(
+                                            mapConfig.sMethodReturnVoidMap,
+                                            className, methodName + " - void"
+                                    );
                                 }
                             }
                         }
@@ -355,12 +398,20 @@ public final class CodeAnalyzeReader {
                         if (StringUtils.isEmpty(methodDocumentation)) {
                             // 如果数量不为 0, 表示有参数
                             if (paramNumber != 0) {
-                                MapUtils.putToList(mapConfig.sMethodLackParamMap, className, methodName);
+                                MapUtils.putToList(
+                                        mapConfig.sMethodLackParamMap,
+                                        className, methodName
+                                );
                             }
                         } else {
                             // 参数校验处理
-                            paramCheckHandler(mapConfig.sMethodLackParamMap, methodDocumentation,
-                                    className, methodName, jcMethodDecl, listJCVariableDecls, mapConfig);
+                            paramCheckHandler(
+                                    mapConfig.sMethodLackParamMap,
+                                    methodDocumentation,
+                                    className, methodName,
+                                    jcMethodDecl, listJCVariableDecls,
+                                    mapConfig
+                            );
                         }
                         // ========================
                     }
@@ -419,7 +470,8 @@ public final class CodeAnalyzeReader {
             }
         }
         // 去除换行代码
-        methodCode = methodCode.replaceAll("\r\n", "").replaceAll("\n", "");
+        methodCode = methodCode.replaceAll("\r\n", "")
+                .replaceAll("\n", "");
         // 获取 < 开始位置
         int startIndex = methodCode.indexOf("<");
         // 获取 > 结束位置
@@ -517,7 +569,10 @@ public final class CodeAnalyzeReader {
                 // 数据一样, 才检测是否注释
                 if (!subParamToCheckAnnotate(documentation)) {
                     // @param 不存在注释则保存
-                    MapUtils.putToList(mapConfig.sMethodUnAnnotateParamMap, className, methodName);
+                    MapUtils.putToList(
+                            mapConfig.sMethodUnAnnotateParamMap,
+                            className, methodName
+                    );
                 }
             } else {
                 MapUtils.putToList(map, className, methodName);
