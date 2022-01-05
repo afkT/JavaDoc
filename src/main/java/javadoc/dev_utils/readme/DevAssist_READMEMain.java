@@ -83,9 +83,14 @@ final class DevAssist_READMEMain {
         );
 
         // 生成 API 目录
-        String assistAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_Assist, ApiConfig.sFilterMethodMap_Assist, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        String assistAPI = APIGenerate.apiGenerate(
+                "", path, packageName, githubUrl,
+                ApiConfig.sFilterClassSet_Assist,
+                ApiConfig.sFilterMethodMap_Assist,
+                ApiConfig.sMethodNameRegex,
+                methodNameMatchesMap, methodRepeatBuilder,
+                methodNotAnnotateBuilder, notMethodBuilder
+        );
 
         builder.append(assistAPI);
 

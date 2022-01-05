@@ -83,14 +83,24 @@ final class DevApp_READMEMain {
         );
 
         // 生成 API 目录
-        String appAPI = APIGenerate.apiGenerate("app", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_APP, ApiConfig.sFilterMethodMap_APP, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        String appAPI = APIGenerate.apiGenerate(
+                "app", path, packageName, githubUrl,
+                ApiConfig.sFilterClassSet_APP,
+                ApiConfig.sFilterMethodMap_APP,
+                ApiConfig.sMethodNameRegex,
+                methodNameMatchesMap, methodRepeatBuilder,
+                methodNotAnnotateBuilder, notMethodBuilder
+        );
 
         // 生成 API 目录
-        String commonAPI = APIGenerate.apiGenerate("common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_APP, ApiConfig.sFilterMethodMap_APP, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        String commonAPI = APIGenerate.apiGenerate(
+                "common", path, packageName, githubUrl,
+                ApiConfig.sFilterClassSet_APP,
+                ApiConfig.sFilterMethodMap_APP,
+                ApiConfig.sMethodNameRegex,
+                methodNameMatchesMap, methodRepeatBuilder,
+                methodNotAnnotateBuilder, notMethodBuilder
+        );
 
         builder.append(appAPI);
         builder.append("\n\n");

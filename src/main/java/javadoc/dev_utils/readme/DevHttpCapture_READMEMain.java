@@ -83,9 +83,14 @@ final class DevHttpCapture_READMEMain {
         );
 
         // 生成 API 目录
-        String httpCaptureAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_HttpCapture, ApiConfig.sFilterMethodMap_HttpCapture, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        String httpCaptureAPI = APIGenerate.apiGenerate(
+                "", path, packageName, githubUrl,
+                ApiConfig.sFilterClassSet_HttpCapture,
+                ApiConfig.sFilterMethodMap_HttpCapture,
+                ApiConfig.sMethodNameRegex,
+                methodNameMatchesMap, methodRepeatBuilder,
+                methodNotAnnotateBuilder, notMethodBuilder
+        );
 
         builder.append(httpCaptureAPI);
 

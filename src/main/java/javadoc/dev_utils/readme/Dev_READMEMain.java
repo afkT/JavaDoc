@@ -21,7 +21,6 @@ final class Dev_READMEMain {
      */
     public static String createREADME() {
         StringBuilder builder = new StringBuilder();
-
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_TEMPLATE);
         String templateContent = new String(bytes);

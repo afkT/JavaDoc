@@ -81,8 +81,10 @@ final class DevWidget_READMEMain {
         templateContent = String.format(templateContent, ApiConfig.DEV_WIDGET_VERSION);
         // 保存 DevWidget README.md 文件
         FileUtils.saveFile(
-                new File(ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH, ApiConfig.README_FILE_NAME).getAbsolutePath(),
-                templateContent.getBytes()
+                new File(
+                        ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH,
+                        ApiConfig.README_FILE_NAME
+                ).getAbsolutePath(), templateContent.getBytes()
         );
 
         // ===========
@@ -98,9 +100,14 @@ final class DevWidget_READMEMain {
         );
 
         // 生成 API 目录
-        String widgetAPI = APIGenerate.apiGenerate("", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_Widget, ApiConfig.sFilterMethodMap_Widget, ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder, methodNotAnnotateBuilder, notMethodBuilder);
+        String widgetAPI = APIGenerate.apiGenerate(
+                "", path, packageName, githubUrl,
+                ApiConfig.sFilterClassSet_Widget,
+                ApiConfig.sFilterMethodMap_Widget,
+                ApiConfig.sMethodNameRegex,
+                methodNameMatchesMap, methodRepeatBuilder,
+                methodNotAnnotateBuilder, notMethodBuilder
+        );
 
         builder.append(widgetAPI);
 
