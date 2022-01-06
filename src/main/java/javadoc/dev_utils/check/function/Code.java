@@ -23,4 +23,17 @@ final class Code {
         }
         return false;
     }
+
+    /**
+     * 是否 Build 文件、文件夹判断
+     * @param path 待判断文件路径
+     * @return {@code true} yes, {@code false} no
+     */
+    public static boolean isBuild(final String path) {
+        if (path != null) {
+            if (path.contains("\\build\\")) return true;
+            return (path.contains("/build/"));
+        }
+        return false;
+    }
 }

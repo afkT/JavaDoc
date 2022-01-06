@@ -40,6 +40,7 @@ public final class CodeEndNewLineRemove {
                     public boolean isAddToList(File file) {
                         String absolutePath = file.getAbsolutePath();
                         if (Code.isHidden(absolutePath)) return false;
+                        if (Code.isBuild(absolutePath)) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!IS_IGNORE_SUFFIX && StringUtils.isOrEquals(fileSuffix, IGNORE_SUFFIX)) {

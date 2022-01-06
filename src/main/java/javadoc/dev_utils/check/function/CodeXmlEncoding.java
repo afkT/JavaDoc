@@ -36,6 +36,7 @@ public final class CodeXmlEncoding {
                     public boolean isAddToList(File file) {
                         String absolutePath = file.getAbsolutePath();
                         if (Code.isHidden(absolutePath)) return false;
+                        if (Code.isBuild(absolutePath)) return false;
 
                         String fileSuffix = FileUtils.getFileSuffix(file);
                         if (!StringUtils.isOrEquals(fileSuffix, SUFFIX)) {
