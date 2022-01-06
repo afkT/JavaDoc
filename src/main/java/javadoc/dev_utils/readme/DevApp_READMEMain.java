@@ -122,7 +122,7 @@ final class DevApp_READMEMain {
 //        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuilder.toString());
 
         StringBuilder resultBuilder = new StringBuilder();
-        resultBuilder.append("\n\n");
+        resultBuilder.append("\n");
         resultBuilder.append("\n===================");
         resultBuilder.append("\n= 保存 JavaDoc 成功 =");
         resultBuilder.append("\n===================");

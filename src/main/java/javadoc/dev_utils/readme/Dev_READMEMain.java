@@ -55,7 +55,7 @@ final class Dev_READMEMain {
         );
 
         StringBuilder resultBuilder = new StringBuilder();
-        resultBuilder.append("\n\n");
+        resultBuilder.append("\n");
         resultBuilder.append("\n==================");
         resultBuilder.append("\n= 保存 Readme 成功 =");
         resultBuilder.append("\n==================");

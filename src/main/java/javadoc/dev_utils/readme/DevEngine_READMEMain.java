@@ -79,7 +79,7 @@ final class DevEngine_READMEMain {
         );
 
         StringBuilder resultBuilder = new StringBuilder();
-        resultBuilder.append("\n\n");
+        resultBuilder.append("\n");
         resultBuilder.append("\n===================");
         resultBuilder.append("\n= 保存 JavaDoc 成功 =");
         resultBuilder.append("\n===================");
