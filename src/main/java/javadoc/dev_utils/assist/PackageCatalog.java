@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import dev.utils.common.StringUtils;
+import javadoc.Utils;
 
 /**
  * detail: 包目录结构生成
@@ -126,7 +127,8 @@ public final class PackageCatalog {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        File[] files = baseFile.listFiles();
+        List<File> files = Utils.listFilesOrEmpty(baseFile);
+        Utils.sortFileNameAsc(files);
         for (File file : files) {
             // 获取文件名
             String name = file.getName();

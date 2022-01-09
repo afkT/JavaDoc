@@ -72,7 +72,8 @@ final class APIGenerateByModule {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        File[] files = baseFile.listFiles();
+        List<File> files = Utils.listFilesOrEmpty(baseFile);
+        Utils.sortFileNameAsc(files);
         for (File file : files) {
             // 属于文件夹才处理
             if (file.isDirectory()) {

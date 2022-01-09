@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,6 +18,7 @@ import java.util.Set;
 import dev.utils.DevFinal;
 import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
+import dev.utils.common.FileUtils;
 
 /**
  * detail: 内部工具类
@@ -48,7 +50,8 @@ public final class Utils {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        File[] files = baseFile.listFiles();
+        List<File> files = Utils.listFilesOrEmpty(baseFile);
+        Utils.sortFileNameAsc(files);
         for (File file : files) {
             // 属于文件才处理
             if (file.isFile()) {
@@ -64,19 +67,9 @@ public final class Utils {
      * @return 文件目录列表
      */
     public static List<File> getFileCatalogLists(final String path) {
-        List<File> lists = new ArrayList<>();
-        try {
-            // 获取文件路径
-            File baseFile = new File(path);
-            // 获取子文件
-            File[] files = baseFile.listFiles();
-            for (File file : files) {
-                lists.add(file);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return lists;
+        List<File> files = Utils.listFilesOrEmpty(path);
+        Utils.sortFileNameAsc(files);
+        return files;
     }
 
     /**
@@ -207,5 +200,84 @@ public final class Utils {
             }
         }
         return "";
+    }
+
+    // ========
+    // = Temp =
+    // ========
+
+    /**
+     * 获取文件夹下的文件目录列表 ( 非全部子目录 )
+     * @param dirPath 目录路径
+     * @return 文件目录列表
+     */
+    public static List<File> listFilesOrEmpty(final String dirPath) {
+        return listFilesOrEmpty(FileUtils.getFile(dirPath));
+    }
+
+    /**
+     * 获取文件夹下的文件目录列表 ( 非全部子目录 )
+     * @param dir 目录
+     * @return 文件目录列表
+     */
+    public static List<File> listFilesOrEmpty(final File dir) {
+        if (FileUtils.isFileExists(dir)) {
+            List<File> list = ArrayUtils.asList(dir.listFiles());
+            if (list != null) return list;
+        }
+        return new ArrayList<>();
+    }
+
+    /**
+     * 文件名升序排序
+     * @param list 集合
+     * @param <T>  泛型
+     * @return {@code true} success, {@code false} fail
+     */
+    public static <T extends File> boolean sortFileNameAsc(final List<T> list) {
+        return sort(list, new FileNameSortAsc());
+    }
+
+    /**
+     * List 排序处理
+     * @param list       集合
+     * @param comparator 排序比较器
+     * @param <T>        泛型
+     * @return {@code true} success, {@code false} fail
+     */
+    private static <T> boolean sort(
+            final List<T> list,
+            final Comparator<? super T> comparator
+    ) {
+        if (list != null) {
+            Collections.sort(list, comparator);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * detail: 文件名升序排序
+     * @author Ttt
+     */
+    private static class FileNameSortAsc
+            implements Comparator<File> {
+
+        @Override
+        public int compare(
+                File f,
+                File f1
+        ) {
+            if (f == null || f1 == null) {
+                return -1;
+            }
+            if (f.isDirectory() && f1.isFile()) {
+                return -1;
+            }
+            if (f.isFile() && f1.isDirectory()) {
+                return 1;
+            }
+            return f.getName().compareTo(f1.getName());
+        }
     }
 }
