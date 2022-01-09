@@ -215,7 +215,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.3.9";
+    public static final String DEV_JAVA_VERSION            = "1.4.0";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
@@ -391,6 +391,8 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".common.assist.record", "文件记录分析类");
         sCatalogMap_APP.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
         sCatalogMap_APP.put(".common.cipher", "编 / 解码工具类");
+        sCatalogMap_APP.put(".common.comparator", "排序比较器");
+        sCatalogMap_APP.put(".common.comparator.sort", "各种类型比较器排序实现");
         sCatalogMap_APP.put(".common.encrypt", "加密工具类");
         sCatalogMap_APP.put(".common.file", "文件分片相关");
         sCatalogMap_APP.put(".common.random", "随机概率算法工具类");
