@@ -73,7 +73,7 @@ final class APIGenerateByModule {
         File baseFile = new File(path);
         // 获取子文件
         List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortFileNameAsc(files);
+        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 属于文件夹才处理
             if (file.isDirectory()) {

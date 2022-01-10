@@ -51,7 +51,7 @@ public final class Utils {
         File baseFile = new File(path);
         // 获取子文件
         List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortFileNameAsc(files);
+        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 属于文件才处理
             if (file.isFile()) {
@@ -68,7 +68,7 @@ public final class Utils {
      */
     public static List<File> getFileCatalogLists(final String path) {
         List<File> files = Utils.listFilesOrEmpty(path);
-        Utils.sortFileNameAsc(files);
+        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         return files;
     }
 
@@ -229,13 +229,12 @@ public final class Utils {
     }
 
     /**
-     * 文件名升序排序
+     * Windows 目录资源文件升序排序
      * @param list 集合
-     * @param <T>  泛型
      * @return {@code true} success, {@code false} fail
      */
-    public static <T extends File> boolean sortFileNameAsc(final List<T> list) {
-        return sort(list, new FileNameSortAsc());
+    public static boolean sortWindowsExplorerFileSimpleComparatorAsc(final List<File> list) {
+        return sort(list, new WindowsExplorerFileSimpleComparator());
     }
 
     /**
@@ -254,30 +253,5 @@ public final class Utils {
             return true;
         }
         return false;
-    }
-
-    /**
-     * detail: 文件名升序排序
-     * @author Ttt
-     */
-    private static class FileNameSortAsc
-            implements Comparator<File> {
-
-        @Override
-        public int compare(
-                File f,
-                File f1
-        ) {
-            if (f == null || f1 == null) {
-                return -1;
-            }
-            if (f.isDirectory() && f1.isFile()) {
-                return -1;
-            }
-            if (f.isFile() && f1.isDirectory()) {
-                return 1;
-            }
-            return f.getName().compareTo(f1.getName());
-        }
     }
 }

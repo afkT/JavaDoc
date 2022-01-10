@@ -128,7 +128,7 @@ public final class PackageCatalog {
         File baseFile = new File(path);
         // 获取子文件
         List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortFileNameAsc(files);
+        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 获取文件名
             String name = file.getName();
