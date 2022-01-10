@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
+import dev.utils.common.FileUtils;
+import dev.utils.common.comparator.ComparatorUtils;
 import javadoc.Utils;
 
 /**
@@ -72,8 +74,8 @@ final class APIGenerateByModule {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
+        List<File> files = FileUtils.listFilesOrEmpty(baseFile);
+        ComparatorUtils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 属于文件夹才处理
             if (file.isDirectory()) {
@@ -142,6 +144,10 @@ final class APIGenerateByModule {
             for (File file : listFiles) {
                 // 获取类名
                 String className = file.getName();
+                // 隐藏文件则跳过
+                if (file.isHidden()) {
+                    continue;
+                }
                 // 等于 null 才处理 => 不为 null, 则表示需要忽略
                 if (!filterClassSet.contains(className)) {
                     if (className.endsWith(".kt")) {

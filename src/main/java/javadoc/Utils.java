@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,6 +18,7 @@ import dev.utils.DevFinal;
 import dev.utils.JCLogUtils;
 import dev.utils.common.ArrayUtils;
 import dev.utils.common.FileUtils;
+import dev.utils.common.comparator.ComparatorUtils;
 
 /**
  * detail: 内部工具类
@@ -50,8 +50,8 @@ public final class Utils {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
+        List<File> files = FileUtils.listFilesOrEmpty(baseFile);
+        ComparatorUtils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 属于文件才处理
             if (file.isFile()) {
@@ -67,8 +67,8 @@ public final class Utils {
      * @return 文件目录列表
      */
     public static List<File> getFileCatalogLists(final String path) {
-        List<File> files = Utils.listFilesOrEmpty(path);
-        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
+        List<File> files = FileUtils.listFilesOrEmpty(path);
+        ComparatorUtils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         return files;
     }
 
@@ -200,58 +200,5 @@ public final class Utils {
             }
         }
         return "";
-    }
-
-    // ========
-    // = Temp =
-    // ========
-
-    /**
-     * 获取文件夹下的文件目录列表 ( 非全部子目录 )
-     * @param dirPath 目录路径
-     * @return 文件目录列表
-     */
-    public static List<File> listFilesOrEmpty(final String dirPath) {
-        return listFilesOrEmpty(FileUtils.getFile(dirPath));
-    }
-
-    /**
-     * 获取文件夹下的文件目录列表 ( 非全部子目录 )
-     * @param dir 目录
-     * @return 文件目录列表
-     */
-    public static List<File> listFilesOrEmpty(final File dir) {
-        if (FileUtils.isFileExists(dir)) {
-            List<File> list = ArrayUtils.asList(dir.listFiles());
-            if (list != null) return list;
-        }
-        return new ArrayList<>();
-    }
-
-    /**
-     * Windows 目录资源文件升序排序
-     * @param list 集合
-     * @return {@code true} success, {@code false} fail
-     */
-    public static boolean sortWindowsExplorerFileSimpleComparatorAsc(final List<File> list) {
-        return sort(list, new WindowsExplorerFileSimpleComparator());
-    }
-
-    /**
-     * List 排序处理
-     * @param list       集合
-     * @param comparator 排序比较器
-     * @param <T>        泛型
-     * @return {@code true} success, {@code false} fail
-     */
-    private static <T> boolean sort(
-            final List<T> list,
-            final Comparator<? super T> comparator
-    ) {
-        if (list != null) {
-            Collections.sort(list, comparator);
-            return true;
-        }
-        return false;
     }
 }

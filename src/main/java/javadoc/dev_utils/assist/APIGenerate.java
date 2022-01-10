@@ -70,6 +70,10 @@ public class APIGenerate {
         for (File file : lists) {
             // 获取类名
             String className = file.getName();
+            // 隐藏文件则跳过
+            if (file.isHidden()) {
+                continue;
+            }
             // 等于 null 才处理 => 不为 null, 则表示需要忽略
             if (!filterClassSet.contains(className)) {
                 if (className.endsWith(".kt")) {

@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import dev.utils.common.FileUtils;
 import dev.utils.common.StringUtils;
-import javadoc.Utils;
+import dev.utils.common.comparator.ComparatorUtils;
 
 /**
  * detail: 包目录结构生成
@@ -127,8 +128,8 @@ public final class PackageCatalog {
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
-        List<File> files = Utils.listFilesOrEmpty(baseFile);
-        Utils.sortWindowsExplorerFileSimpleComparatorAsc(files);
+        List<File> files = FileUtils.listFilesOrEmpty(baseFile);
+        ComparatorUtils.sortWindowsExplorerFileSimpleComparatorAsc(files);
         for (File file : files) {
             // 获取文件名
             String name = file.getName();
