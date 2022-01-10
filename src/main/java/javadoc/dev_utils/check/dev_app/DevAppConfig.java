@@ -38,18 +38,41 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfo", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryInfoUri", ArrayUtils.asListArgs("getSelection","getSelectionArgs"));
         ignoreAnnotateMap.put("ContentResolverUtils.MediaQueryUri", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
+        ignoreAnnotateMap.put("DateSort", ArrayUtils.asListArgs("getDateSortValue"));
+        ignoreAnnotateMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime","isInt","isLong","isFloat","isDouble","isBoolean","isString","isBytes","isBitmap","isDrawable","isSerializable","isParcelable","isJSONObject","isJSONArray"));
         ignoreAnnotateMap.put("DevCacheManager", ArrayUtils.asListArgs("getCachePath","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_mapGetData"));
         ignoreAnnotateMap.put("DevFloatingEdgeIMPL", ArrayUtils.asListArgs("calculateEdge"));
         ignoreAnnotateMap.put("DevFloatingTouchIMPL", ArrayUtils.asListArgs("onTouchEvent"));
         ignoreAnnotateMap.put("DevFloatingTouchIMPL2", ArrayUtils.asListArgs("onTouchEvent","updateViewLayout"));
         ignoreAnnotateMap.put("DevTimer.Builder", ArrayUtils.asListArgs("getTag","setTag","getDelay","setDelay","getPeriod","setPeriod","getLimit","setLimit","build"));
+        ignoreAnnotateMap.put("DoubleSort", ArrayUtils.asListArgs("getDoubleSortValue"));
+        ignoreAnnotateMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileLengthSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileNameSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileNameSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FileSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FloatSort", ArrayUtils.asListArgs("getFloatSortValue"));
+        ignoreAnnotateMap.put("FloatSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("FloatingWindowManagerAssist.DevAssistIMPL", ArrayUtils.asListArgs("getWindowManager","getLayoutParams"));
         ignoreAnnotateMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreAnnotateMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreAnnotateMap.put("IntSort", ArrayUtils.asListArgs("getIntSortValue"));
+        ignoreAnnotateMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("JCLogUtils", ArrayUtils.asListArgs("d","e","e","e","i","xml","dTag","eTag","eTag","eTag","iTag","xmlTag"));
         ignoreAnnotateMap.put("KeyValue", ArrayUtils.asListArgs("toString"));
         ignoreAnnotateMap.put("LogPrintUtils", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreAnnotateMap.put("LongSort", ArrayUtils.asListArgs("getLongSortValue"));
+        ignoreAnnotateMap.put("LongSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("LongSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreAnnotateMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("getPendingIntent","setPendingIntent","getIcon","setIcon","getTicker","setTicker","getTitle","setTitle","getContent","setContent","isAutoCancel","setAutoCancel","getVibratePattern","setVibratePattern","getLightPattern","setLightPattern","getChannel","setChannel"));
         ignoreAnnotateMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
@@ -70,6 +93,11 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("SpanUtils.ShadowSpan", ArrayUtils.asListArgs("updateDrawState"));
         ignoreAnnotateMap.put("SpanUtils.SpaceSpan", ArrayUtils.asListArgs("getSize","draw"));
         ignoreAnnotateMap.put("SpanUtils.VerticalAlignSpan", ArrayUtils.asListArgs("getSize","draw"));
+        ignoreAnnotateMap.put("StringSort", ArrayUtils.asListArgs("getStringSortValue"));
+        ignoreAnnotateMap.put("StringSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreAnnotateMap.put("ToastFactory.NotificationToast", ArrayUtils.asListArgs("show","cancel"));
         ignoreAnnotateMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
@@ -78,6 +106,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("ToastUtils.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreAnnotateMap.put("TypeUtils.ParameterizedTypeImpl", ArrayUtils.asListArgs("getActualTypeArguments","getOwnerType","getRawType","equals","hashCode"));
         ignoreAnnotateMap.put("WifiVo", ArrayUtils.asListArgs("describeContents","writeToParcel"));
+        ignoreAnnotateMap.put("WindowsExplorerFileSimpleComparator", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("WindowsExplorerFileSimpleComparator2", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("compare","innerCompare","getSplitFileName"));
+        ignoreAnnotateMap.put("WindowsExplorerStringSimpleComparator2", ArrayUtils.asListArgs("compare","innerCompare","splitStringPreserveDelimiter"));
 
         return ignoreAnnotateMap;
     }
@@ -109,6 +141,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("ContentResolverUtils.MediaQueryInfoUri", ArrayUtils.asListArgs("getSelection","getSelectionArgs"));
         ignoreFinalMap.put("ContentResolverUtils.MediaQueryUri", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreFinalMap.put("CrashUtils", ArrayUtils.asListArgs("uncaughtException"));
+        ignoreFinalMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("DevCache", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray"));
         ignoreFinalMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
         ignoreFinalMap.put("DevCacheManager", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_put","_get"));
@@ -117,13 +151,29 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("DevHelper", ArrayUtils.asListArgs("quickHelper","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable","setAnimationRepeat","setAnimationListener","startAnimation","cancelAnimation","recycle","startTimer","stopTimer","closeAllTagTimer","closeAllUUIDTimer","addTouchArea","addTouchArea","setOnClick","setOnLongClick","setOnTouch","copyText","copyUri","copyIntent","setDialogStatusBarColor","setDialogSemiTransparentStatusBarColor","setDialogStatusBarColorAndFlag","setDialogAttributes","setDialogWidth","setDialogHeight","setDialogWidthHeight","setDialogX","setDialogY","setDialogXY","setDialogGravity","setDialogDimAmount","setDialogCancelable","setDialogCanceledOnTouchOutside","setDialogCancelableAndTouchOutside","showDialog","closeDialogs","closeDialogs","closePopupWindows","autoCloseDialog","autoCloseDialog","autoClosePopupWindow","setSoftInputMode","setSoftInputMode","setSoftInputMode","setSoftInputMode","judgeView","registerSoftInputChangedListener","registerSoftInputChangedListener2","fixSoftInputLeaks","openKeyboardDelay","openKeyboard","openKeyboardDelay","openKeyboardDelay","openKeyboardByFocus","closeKeyboard","closeKeyboard","closeKeyboard","closeKeyBoardSpecial","closeKeyBoardSpecialDelay","closeKeyBoardSpecialDelay","closeKeyboardDelay","closeKeyboardDelay","closeKeyboardDelay","closeKeyboardDelay","closeKeyboardDelay","closeKeyboardDelay","closeKeyboardDelay","applyLanguage","applyLanguage","cancelNotification","cancelNotification","notifyNotification","notifyNotification","createNotificationChannel","dial","call","sendSms","sendSmsSilent","setBright","setBright","setWindowSecure","setFullScreen","setFullScreenNoTitle","setLandscape","setPortrait","toggleScreenOrientation","setSleepDuration","forceGetViewSize","vibrate","vibrate","getWidthHeightExact","getWidthHeightExact2","measureView","measureView","closeIO","closeIOQuietly","flush","flushQuietly","flushCloseIO","flushCloseIOQuietly","flushCloseIO","flushCloseIOQuietly","setSystemUiVisibility","setSystemUiVisibilityByAdd","setSystemUiVisibilityByClear","setAttributes","refreshSelfAttributes","clearFlags","addFlags","setFlags","requestFeature","setSoftInputMode","setStatusBarColor","setNavigationBarColor","setNavigationBarDividerColor","setWidthByParams","setHeightByParams","setWidthHeightByParams","setXByParams","setYByParams","setXYByParams","setGravityByParams","setDimAmountByParams","setWindowBrightness","setKeyBoardSoftInputMode","setFlagKeepScreenOn","clearFlagKeepScreenOn","setFlagSecure","clearFlagSecure","setFlagFullScreen","clearFlagFullScreen","setFlagTranslucentStatus","clearFlagTranslucentStatus","setFlagDrawsSystemBarBackgrounds","clearFlagDrawsSystemBarBackgrounds","setFeatureNoTitle","setFlagFullScreenAndNoTitle","setSemiTransparentStatusBarColor","setStatusBarColorAndFlag"));
         ignoreFinalMap.put("DevMediaManager", ArrayUtils.asListArgs("onError","onVideoSizeChanged","onPrepared","onCompletion","onBufferingUpdate","onSeekComplete"));
         ignoreFinalMap.put("DevVideoPlayerControl", ArrayUtils.asListArgs("surfaceChanged","surfaceCreated","surfaceDestroyed","onBufferingUpdate","onError","onVideoSizeChanged"));
+        ignoreFinalMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileLengthSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileNameSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileNameSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FileSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FloatSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("updateViewLayout"));
         ignoreFinalMap.put("IToastImpl", ArrayUtils.asListArgs("filter","handlerContent"));
         ignoreFinalMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreFinalMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreFinalMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
         ignoreFinalMap.put("LogConfig", ArrayUtils.asListArgs("methodCount","methodOffset","outputMethodAll","displayThreadInfo","sortLog","logLevel","tag"));
         ignoreFinalMap.put("LoggerPrinter", ArrayUtils.asListArgs("logHeaderContent"));
+        ignoreFinalMap.put("LongSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("LongSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("NetWorkUtils", ArrayUtils.asListArgs("isAvailableByPing"));
         ignoreFinalMap.put("PermissionUtils.PermissionActivity", ArrayUtils.asListArgs("onCreate","onRequestPermissionsResult"));
         ignoreFinalMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
@@ -135,6 +185,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("ScreenshotUtils.MediaContentObserver", ArrayUtils.asListArgs("onChange"));
         ignoreFinalMap.put("SnackbarUtils.StyleBuilder", ArrayUtils.asListArgs("setRootGravity","setRootCornerRadius","setRootBackgroundTintColor","setRootBackground","setRootMargin","setRootAlpha","setTextGravity","setTextColor","setTextSize","setTextMaxLines","setTextEllipsize","setTextTypeface","setTextPadding","setActionGravity","setActionColor","setActionSize","setActionPadding","setActionCornerRadius","setActionBackgroundTintColor","setActionBackground"));
         ignoreFinalMap.put("SpanUtils.VerticalAlignSpan", ArrayUtils.asListArgs("getSize","draw"));
+        ignoreFinalMap.put("StringSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreFinalMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreFinalMap.put("ToastFactory.ToastHelper", ArrayUtils.asListArgs("handleMessage"));
@@ -145,6 +199,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("TypeUtils.ParameterizedTypeImpl", ArrayUtils.asListArgs("equals"));
         ignoreFinalMap.put("VersionHelper", ArrayUtils.asListArgs("getUriForFile","getUriForPath","getUriForFileToName","getUriForFile","getUriForString","fromFile","fromFile","isUri","isUri","getUriScheme","getUriScheme","isUriExists","isUriExists","copyByUri","copyByUri","copyByUri","copyByUri","getFilePathByUri","getFilePathByUri","getMediaUri","getMediaUri","getMediaUri","getMediaUri","mediaQuery","mediaQuery","mediaQuery","mediaQuery","notifyMediaStore","notifyMediaStore","notifyMediaStore","createImageUri","createImageUri","createImageUri","createImageUri","createVideoUri","createVideoUri","createVideoUri","createVideoUri","createAudioUri","createAudioUri","createAudioUri","createAudioUri","createDownloadUri","createDownloadUri","createDownloadUri","createDownloadUri","createMediaUri","createMediaUri","createUriByPath","createUriByPath","createUriByFile","createUriByFile","insertImage","insertImage","insertImage","insertVideo","insertAudio","insertDownload","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","insertMedia","createWriteRequest","createFavoriteRequest","createTrashRequest","createDeleteRequest"));
         ignoreFinalMap.put("ViewHelper", ArrayUtils.asListArgs("quickHelper","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable","addTouchArea","addTouchArea","setOnClick","setOnLongClick","setOnTouch","setId","setClipChildren","removeAllViews","addView","addView","addView","addView","addView","setLayoutParams","setWidthHeight","setWidthHeight","setWeight","setWidth","setWidth","setHeight","setHeight","setMinimumWidth","setMinimumHeight","setAlpha","setTag","setScrollX","setScrollY","setDescendantFocusability","setOverScrollMode","setHorizontalScrollBarEnabled","setVerticalScrollBarEnabled","setScrollContainer","setNextFocusForwardId","setNextFocusDownId","setNextFocusLeftId","setNextFocusRightId","setNextFocusUpId","setRotation","setRotationX","setRotationY","setScaleX","setScaleY","setTextAlignment","setTextDirection","setPivotX","setPivotY","setTranslationX","setTranslationY","setX","setY","setLayerType","requestLayout","requestFocus","clearFocus","setFocusableInTouchMode","setFocusable","toggleFocusable","setSelected","toggleSelected","setEnabled","toggleEnabled","setClickable","toggleClickable","setLongClickable","toggleLongClickable","setVisibilitys","setVisibilitys","setVisibilityINs","toggleVisibilitys","toggleVisibilitys","toggleVisibilitys","reverseVisibilitys","reverseVisibilitys","reverseVisibilitys","reverseVisibilitys","toggleViews","removeSelfFromParent","requestLayoutParent","measureView","measureView","setLayoutGravity","setLayoutGravity","setMarginLeft","setMarginLeft","setMarginTop","setMarginTop","setMarginRight","setMarginRight","setMarginBottom","setMarginBottom","setMargin","setMargin","setMargin","setPaddingLeft","setPaddingLeft","setPaddingTop","setPaddingTop","setPaddingRight","setPaddingRight","setPaddingBottom","setPaddingBottom","setPadding","setPadding","setPadding","addRules","addRules","removeRules","setAnimation","clearAnimation","startAnimation","startAnimation","cancelAnimation","setBackground","setBackgroundColor","setBackgroundResource","setBackgroundTintList","setBackgroundTintMode","setForeground","setForegroundGravity","setForegroundTintList","setForegroundTintMode","setColorFilter","setColorFilter","setColorFilter","setColorFilter","setProgressDrawable","setBarProgress","setBarMax","setBarValue","smoothScrollToPosition","scrollToPosition","smoothScrollToTop","scrollToTop","smoothScrollToBottom","scrollToBottom","smoothScrollTo","smoothScrollBy","fullScroll","scrollTo","scrollBy","setAdjustViewBounds","setMaxHeight","setMaxWidth","setImageLevel","setImageBitmap","setImageDrawable","setImageResource","setImageMatrix","setImageTintList","setImageTintMode","setScaleType","setBackgroundResources","setBackgroundResources","setImageResources","setImageResources","setImageBitmaps","setImageBitmaps","setImageDrawables","setImageDrawables","setScaleTypes","setScaleTypes","setText","setMaxLength","setMaxLengthAndText","setInputType","setImeOptions","setTransformationMethod","setTransformationMethod","setText","insert","insert","setCursorVisible","setTextCursorDrawable","setTextCursorDrawable","setSelectionToTop","setSelectionToBottom","setSelection","setTransformationMethod","addTextChangedListener","removeTextChangedListener","setKeyListener","setKeyListener","setKeyListener","setHint","setHintTextColors","setHintTextColors","setTextColors","setTextColors","setHtmlTexts","setTypeface","setTypeface","setTextSizeByPx","setTextSizeBySp","setTextSizeByDp","setTextSizeByIn","setTextSize","clearFlags","setPaintFlags","setAntiAliasFlag","setBold","setBold","setBold","setUnderlineText","setUnderlineText","setStrikeThruText","setStrikeThruText","setLetterSpacing","setLineSpacing","setLineSpacingAndMultiplier","setTextScaleX","setIncludeFontPadding","setLines","setMaxLines","setMinLines","setMaxEms","setMinEms","setEms","setEllipsize","setAutoLinkMask","setAllCaps","setGravity","setCompoundDrawablePadding","setCompoundDrawablesByLeft","setCompoundDrawablesByTop","setCompoundDrawablesByRight","setCompoundDrawablesByBottom","setCompoundDrawables","setCompoundDrawablesWithIntrinsicBoundsByLeft","setCompoundDrawablesWithIntrinsicBoundsByTop","setCompoundDrawablesWithIntrinsicBoundsByRight","setCompoundDrawablesWithIntrinsicBoundsByBottom","setCompoundDrawablesWithIntrinsicBounds","setLayoutManager","setOrientation","setAdapter","notifyItemRemoved","notifyItemInserted","notifyItemMoved","notifyDataSetChanged","attachLinearSnapHelper","attachPagerSnapHelper","addItemDecoration","addItemDecoration","removeItemDecoration","removeItemDecorationAt","removeAllItemDecoration","setOnScrollListener","addOnScrollListener","removeOnScrollListener","clearOnScrollListeners","setNestedScrollingEnabled","forceGetViewSize"));
+        ignoreFinalMap.put("WindowsExplorerFileSimpleComparator", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("WindowsExplorerFileSimpleComparator2", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("compare","innerCompare","getSplitFileName"));
+        ignoreFinalMap.put("WindowsExplorerStringSimpleComparator2", ArrayUtils.asListArgs("compare","innerCompare","splitStringPreserveDelimiter"));
 
         return ignoreFinalMap;
     }
@@ -187,6 +245,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ContentResolverUtils.MediaQueryUri", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreStaticMap.put("CoordinateUtils.Direction", ArrayUtils.asListArgs("getValue"));
         ignoreStaticMap.put("CrashUtils", ArrayUtils.asListArgs("initialize","uncaughtException","handleException"));
+        ignoreStaticMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("DefaultToastStyle", ArrayUtils.asListArgs("getGravity","getXOffset","getYOffset","getHorizontalMargin","getVerticalMargin","getZ","getCornerRadius","getBackgroundTintColor","getBackground","getTextColor","getTextSize","getMaxLines","getEllipsize","getTypeface","getPadding"));
         ignoreStaticMap.put("DelayAssist", ArrayUtils.asListArgs("remove","post","post","setDelayMillis","setCallback"));
         ignoreStaticMap.put("DevCache", ArrayUtils.asListArgs("getCachePath","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray"));
@@ -201,14 +261,26 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("DevTimer.Builder", ArrayUtils.asListArgs("getTag","setTag","getDelay","setDelay","getPeriod","setPeriod","getLimit","setLimit","build"));
         ignoreStaticMap.put("DevVideoPlayerControl", ArrayUtils.asListArgs("resetOperate","surfaceChanged","surfaceCreated","surfaceDestroyed","onPrepared","onCompletion","onBufferingUpdate","onSeekComplete","onError","onVideoSizeChanged","setMediaListener","pausePlayer","stopPlayer","startPlayer","startPlayer","startPlayer","getSurfaceView","isPlaying","isPlaying","isAutoPlay","setAutoPlay","getPlayUri","getVideoWidth","getVideoHeight","getCurrentPosition","getDuration","getPlayPercent"));
         ignoreStaticMap.put("DevicePolicyUtils", ArrayUtils.asListArgs("getDevicePolicyManager","isAdminActive","getActiveIntent","activeAdmin","removeActiveAdmin","startLockPassword","setLockPassword","lockNow","lockByTime","wipeData","resetPassword","setStorageEncryption","setCameraDisabled","getComponentName","setComponentName","isAdminActive","getActiveIntent","activeAdmin","removeActiveAdmin","setLockPassword","lockNow","lockByTime","wipeData","resetPassword","setStorageEncryption","setCameraDisabled"));
+        ignoreStaticMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils", ArrayUtils.asListArgs("setSearchHandler","getQueueSameTimeNumber","setQueueSameTimeNumber","isRunning","stop","isStop","getStartTime","getEndTime","getDelayTime","setDelayTime","query","queryFile","whileQueue"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils.FileItem", ArrayUtils.asListArgs("put"));
         ignoreStaticMap.put("FileDepthFirstSearchUtils", ArrayUtils.asListArgs("setSearchHandler","isRunning","stop","isStop","getStartTime","getEndTime","query","queryFile"));
+        ignoreStaticMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileLengthSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileNameSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileNameSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("FilePartAssist", ArrayUtils.asListArgs("getFile","getFileName","getFilePartItems","getFilePartItem","getPartCount","existsPart","isOnlyOne","getPartName"));
         ignoreStaticMap.put("FilePartItem", ArrayUtils.asListArgs("isFirstItem","isLastItem","existsPart","isOnlyOne","getPartName"));
+        ignoreStaticMap.put("FileSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FileSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("FileUtils.FileList", ArrayUtils.asListArgs("getFile","getSubFiles"));
         ignoreStaticMap.put("FlagsValue", ArrayUtils.asListArgs("getFlags","setFlags","addFlags","clearFlags","hasFlags","notHasFlags"));
         ignoreStaticMap.put("FlashlightUtils", ArrayUtils.asListArgs("register","unregister","setFlashlightOn","setFlashlightOn","setFlashlightOff","setFlashlightOff","isFlashlightOn","isFlashlightOn"));
+        ignoreStaticMap.put("FloatSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("FloatingWindowManagerAssist", ArrayUtils.asListArgs("getIMPL","getWindowManager","getLayoutParams","addView","addView","removeView","updateViewLayout","updateViewLayout"));
         ignoreStaticMap.put("FloatingWindowManagerAssist.DevAssistIMPL", ArrayUtils.asListArgs("getWindowManager","getLayoutParams"));
         ignoreStaticMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("removeFloatingView","addFloatingView","removeAllFloatingView","updateViewLayout","isNeedsAdd","setNeedsAdd","getAttachActivity","getMapFloatingKey","getMapFloatingView","getMapFloatingViewLayoutParams"));
@@ -217,11 +289,15 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("onPause","onResume","onDestroy","start","cancel"));
         ignoreStaticMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreStaticMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreStaticMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("KeyValue", ArrayUtils.asListArgs("getKey","getValue","toString"));
         ignoreStaticMap.put("KeyguardUtils", ArrayUtils.asListArgs("isKeyguardLocked","isKeyguardSecure","inKeyguardRestrictedInputMode","getKeyguardManager","setKeyguardManager","disableKeyguard","reenableKeyguard","release","getKeyguardLock","setKeyguardLock"));
         ignoreStaticMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
         ignoreStaticMap.put("LogConfig", ArrayUtils.asListArgs("methodCount","methodOffset","outputMethodAll","displayThreadInfo","sortLog","logLevel","tag"));
         ignoreStaticMap.put("LoggerPrinter", ArrayUtils.asListArgs("other","getLogConfig","initialize","initialize","d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag","isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
+        ignoreStaticMap.put("LongSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("LongSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("getPendingIntent","setPendingIntent","getIcon","setIcon","getTicker","setTicker","getTitle","setTitle","getContent","setContent","isAutoCancel","setAutoCancel","getVibratePattern","setVibratePattern","getLightPattern","setLightPattern","getChannel","setChannel"));
         ignoreStaticMap.put("NotificationUtils.VibratePattern", ArrayUtils.asListArgs("isEmpty"));
         ignoreStaticMap.put("PathUtils.AppExternalPath", ArrayUtils.asListArgs("getAppDataPath","getAppDataDir","getAppDataPath","getAppDataDir","getAppCachePath","getAppCacheDir","getAppCachePath","getAppCacheDir","getExternalFilesPath","getExternalFilesDir","getAppFilesPath","getAppFilesDir","getAppFilesPath","getAppFilesDir","getAppMusicPath","getAppMusicDir","getAppPodcastsPath","getAppPodcastsDir","getAppRingtonesPath","getAppRingtonesDir","getAppAlarmsPath","getAppAlarmsDir","getAppNotificationsPath","getAppNotificationsDir","getAppPicturesPath","getAppPicturesDir","getAppMoviesPath","getAppMoviesDir","getAppDownloadPath","getAppDownloadDir","getAppDCIMPath","getAppDCIMDir","getAppDocumentsPath","getAppDocumentsDir","getAppAudiobooksPath","getAppAudiobooksDir","getAppObbPath","getAppObbDir"));
@@ -260,6 +336,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("SpanUtils.ShadowSpan", ArrayUtils.asListArgs("updateDrawState"));
         ignoreStaticMap.put("SpanUtils.SpaceSpan", ArrayUtils.asListArgs("getSize","draw"));
         ignoreStaticMap.put("SpanUtils.VerticalAlignSpan", ArrayUtils.asListArgs("getSize","draw"));
+        ignoreStaticMap.put("StringSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("TimeAverager", ArrayUtils.asListArgs("start","end","endAndRestart","average","print","clear"));
         ignoreStaticMap.put("TimeCounter", ArrayUtils.asListArgs("start","durationRestart","duration","getStartTime"));
         ignoreStaticMap.put("TimeKeeper", ArrayUtils.asListArgs("waitForEndAsync","waitForEnd"));
@@ -283,6 +363,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("WifiUtils", ArrayUtils.asListArgs("isOpenWifi","openWifi","closeWifi","toggleWifiEnabled","getWifiState","startScan","getConfiguration","getWifiList","getWifiInfo","isExists","isExists","quickConnWifi","quickConnWifi","removeWifiConfig","disconnectWifi","setStaticWifiConfig","setStaticWifiConfig","inetAddressToInt","setDNS","setGateway","setIpAddress","setStaticIpConfig","getField","getDeclaredField","setEnumField","setValueField"));
         ignoreStaticMap.put("WifiVo", ArrayUtils.asListArgs("describeContents","writeToParcel"));
         ignoreStaticMap.put("WindowAssist", ArrayUtils.asListArgs("getWindow","getDecorView","peekDecorView","getCurrentFocus","setSystemUiVisibility","getSystemUiVisibility","setSystemUiVisibilityByAdd","setSystemUiVisibilityByClear","getAttributes","setAttributes","refreshSelfAttributes","clearFlags","addFlags","setFlags","hasFlags","notHasFlags","requestFeature","hasFeature","notHasFeature","setSoftInputMode","setStatusBarColor","getStatusBarColor","setNavigationBarColor","getNavigationBarColor","setNavigationBarDividerColor","getNavigationBarDividerColor","setWidthByParams","setHeightByParams","setWidthHeightByParams","setXByParams","setYByParams","setXYByParams","setGravityByParams","setDimAmountByParams","setWindowBrightness","getWindowBrightness","setKeyBoardSoftInputMode","isKeepScreenOnFlag","setFlagKeepScreenOn","clearFlagKeepScreenOn","isSecureFlag","setFlagSecure","clearFlagSecure","isFullScreenFlag","setFlagFullScreen","clearFlagFullScreen","isTranslucentStatusFlag","setFlagTranslucentStatus","clearFlagTranslucentStatus","isDrawsSystemBarBackgroundsFlag","setFlagDrawsSystemBarBackgrounds","clearFlagDrawsSystemBarBackgrounds","isNoTitleFeature","setFeatureNoTitle","setFlagFullScreenAndNoTitle","setSemiTransparentStatusBarColor","setStatusBarColorAndFlag","getDecorView","peekDecorView","getCurrentFocus","setSystemUiVisibility","getSystemUiVisibility","setSystemUiVisibilityByAdd","setSystemUiVisibilityByClear","getAttributes","setAttributes","refreshSelfAttributes","clearFlags","addFlags","setFlags","hasFlags","notHasFlags","requestFeature","hasFeature","notHasFeature","setSoftInputMode","setStatusBarColor","getStatusBarColor","setNavigationBarColor","getNavigationBarColor","setNavigationBarDividerColor","getNavigationBarDividerColor","setWidthByParams","setHeightByParams","setWidthHeightByParams","setXByParams","setYByParams","setXYByParams","setGravityByParams","setDimAmountByParams","setWindowBrightness","getWindowBrightness","setKeyBoardSoftInputMode","isKeepScreenOnFlag","setFlagKeepScreenOn","clearFlagKeepScreenOn","isSecureFlag","setFlagSecure","clearFlagSecure","isFullScreenFlag","setFlagFullScreen","clearFlagFullScreen","isTranslucentStatusFlag","setFlagTranslucentStatus","clearFlagTranslucentStatus","isDrawsSystemBarBackgroundsFlag","setFlagDrawsSystemBarBackgrounds","clearFlagDrawsSystemBarBackgrounds","isNoTitleFeature","setFeatureNoTitle","setFlagFullScreenAndNoTitle","setSemiTransparentStatusBarColor","setStatusBarColorAndFlag"));
+        ignoreStaticMap.put("WindowsExplorerFileSimpleComparator", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("WindowsExplorerFileSimpleComparator2", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("compare","innerCompare","getSplitFileName"));
+        ignoreStaticMap.put("WindowsExplorerStringSimpleComparator2", ArrayUtils.asListArgs("compare","innerCompare","splitStringPreserveDelimiter"));
 
         return ignoreStaticMap;
     }
@@ -312,6 +396,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfo", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryInfoUri", ArrayUtils.asListArgs("getSelection","getSelectionArgs"));
         ignoreParamMap.put("ContentResolverUtils.MediaQueryUri", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
+        ignoreParamMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("DevCache", ArrayUtils.asListArgs("getParcelable","getParcelable"));
         ignoreParamMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
         ignoreParamMap.put("DevCacheManager", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_mapGetData"));
@@ -319,10 +405,26 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("DevFloatingTouchIMPL", ArrayUtils.asListArgs("onTouchEvent"));
         ignoreParamMap.put("DevFloatingTouchIMPL2", ArrayUtils.asListArgs("onTouchEvent","updateViewLayout"));
         ignoreParamMap.put("DevTimer.Builder", ArrayUtils.asListArgs("setTag","setDelay","setPeriod","setLimit"));
+        ignoreParamMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileLengthSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileNameSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileNameSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FileSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FloatSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreParamMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
+        ignoreParamMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("JCLogUtils", ArrayUtils.asListArgs("d","e","e","e","i","xml","dTag","eTag","eTag","eTag","iTag","xmlTag"));
         ignoreParamMap.put("LogPrintUtils", ArrayUtils.asListArgs("d","e","e","e","w","i","v","wtf","json","xml","dTag","eTag","eTag","eTag","wTag","iTag","vTag","wtfTag","jsonTag","xmlTag"));
+        ignoreParamMap.put("LongSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("LongSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreParamMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("setPendingIntent","setIcon","setTicker","setTitle","setContent","setAutoCancel","setVibratePattern","setLightPattern","setChannel"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
@@ -342,6 +444,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("SpanUtils.ShadowSpan", ArrayUtils.asListArgs("updateDrawState"));
         ignoreParamMap.put("SpanUtils.SpaceSpan", ArrayUtils.asListArgs("getSize","draw"));
         ignoreParamMap.put("SpanUtils.VerticalAlignSpan", ArrayUtils.asListArgs("getSize","draw"));
+        ignoreParamMap.put("StringSortAsc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreParamMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreParamMap.put("ToastFactory.ToastHelper", ArrayUtils.asListArgs("handleMessage"));
@@ -350,6 +456,10 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("TypeUtils.ParameterizedTypeImpl", ArrayUtils.asListArgs("equals"));
         ignoreParamMap.put("WeakReferenceAssist", ArrayUtils.asListArgs("getWeak"));
         ignoreParamMap.put("WifiVo", ArrayUtils.asListArgs("writeToParcel"));
+        ignoreParamMap.put("WindowsExplorerFileSimpleComparator", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("WindowsExplorerFileSimpleComparator2", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("compare","innerCompare","getSplitFileName"));
+        ignoreParamMap.put("WindowsExplorerStringSimpleComparator2", ArrayUtils.asListArgs("compare","innerCompare","splitStringPreserveDelimiter"));
 
         return ignoreParamMap;
     }
@@ -405,6 +515,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CoordinateUtils", ArrayUtils.asListArgs("transformLat","transformLng","rad"));
         ignoreUnPublicMap.put("CrashUtils", ArrayUtils.asListArgs("handleException"));
         ignoreUnPublicMap.put("CrashUtils.CrashCatchListener", ArrayUtils.asListArgs("handleException","uncaughtException"));
+        ignoreUnPublicMap.put("DateSort", ArrayUtils.asListArgs("getDateSortValue"));
         ignoreUnPublicMap.put("Decrypt", ArrayUtils.asListArgs("decrypt"));
         ignoreUnPublicMap.put("DelayAssist.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
@@ -416,6 +527,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("DevTimer.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("DevVideoPlayerControl", ArrayUtils.asListArgs("resetOperate"));
         ignoreUnPublicMap.put("DeviceUtils", ArrayUtils.asListArgs("getMacAddressByWifiInfo","getMacAddressByNetworkInterface","getMacAddressByInetAddress","getInetAddress","getMacAddressByFile"));
+        ignoreUnPublicMap.put("DoubleSort", ArrayUtils.asListArgs("getDoubleSortValue"));
         ignoreUnPublicMap.put("Encrypt", ArrayUtils.asListArgs("encrypt"));
         ignoreUnPublicMap.put("EncryptUtils", ArrayUtils.asListArgs("base64Encode","base64Decode"));
         ignoreUnPublicMap.put("FileBreadthFirstSearchUtils", ArrayUtils.asListArgs("queryFile","whileQueue"));
@@ -427,6 +539,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("FileRecordUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("FileUtils", ArrayUtils.asListArgs("copyFolder"));
         ignoreUnPublicMap.put("FileUtils.OnReplaceListener", ArrayUtils.asListArgs("onReplace"));
+        ignoreUnPublicMap.put("FloatSort", ArrayUtils.asListArgs("getFloatSortValue"));
         ignoreUnPublicMap.put("FloatingWindowManagerAssist.AssistIMPL", ArrayUtils.asListArgs("getWindowManager","getLayoutParams"));
         ignoreUnPublicMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("getAttachActivity","getMapFloatingKey","getMapFloatingView","getMapFloatingViewLayoutParams"));
         ignoreUnPublicMap.put("ForUtils.BooleanConsumer", ArrayUtils.asListArgs("accept"));
@@ -463,6 +576,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ImageViewUtils", ArrayUtils.asListArgs("getImageViewFieldValue"));
         ignoreUnPublicMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("start","cancel"));
         ignoreUnPublicMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
+        ignoreUnPublicMap.put("IntSort", ArrayUtils.asListArgs("getIntSortValue"));
         ignoreUnPublicMap.put("JCLogUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","concatErrorMessage"));
         ignoreUnPublicMap.put("JCLogUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("KeyBoardUtils", ArrayUtils.asListArgs("getContentViewInvisibleHeight"));
@@ -472,6 +586,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LogPrintUtils", ArrayUtils.asListArgs("isEmpty","printLog","createMessage","concatErrorMessage"));
         ignoreUnPublicMap.put("LogPrintUtils.Print", ArrayUtils.asListArgs("printLog"));
         ignoreUnPublicMap.put("LoggerPrinter", ArrayUtils.asListArgs("isPrintLog","checkLogLevel","finalLogPrinter","logHandle","logHandle","logHandle","logHeaderContent","logTopBorder","logBottomBorder","logDivider","logContent","createMessage","getSimpleClassName","getStackOffset","getThreadLogConfig"));
+        ignoreUnPublicMap.put("LongSort", ArrayUtils.asListArgs("getLongSortValue"));
         ignoreUnPublicMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("OnActivityDestroyedListener", ArrayUtils.asListArgs("onActivityDestroyed"));
         ignoreUnPublicMap.put("OnAppStatusChangedListener", ArrayUtils.asListArgs("onForeground","onBackground"));
@@ -496,6 +611,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("SpanUtils", ArrayUtils.asListArgs("apply","applyLast","updateCharCharSequence","updateImage","updateSpace","setDefault","getContext"));
         ignoreUnPublicMap.put("SpanUtils.CustomDynamicDrawableSpan", ArrayUtils.asListArgs("getCachedDrawable"));
         ignoreUnPublicMap.put("SpanUtils.CustomTypefaceSpan", ArrayUtils.asListArgs("apply"));
+        ignoreUnPublicMap.put("StringSort", ArrayUtils.asListArgs("getStringSortValue"));
         ignoreUnPublicMap.put("TimeKeeper.OnEndCallback", ArrayUtils.asListArgs("onEnd"));
         ignoreUnPublicMap.put("TimerManager", ArrayUtils.asListArgs("addContainsChecker"));
         ignoreUnPublicMap.put("ToastFactory", ArrayUtils.asListArgs("getWindowManager"));
@@ -513,6 +629,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("WifiHotUtils.OnWifiAPListener", ArrayUtils.asListArgs("onStarted","onStopped","onFailed"));
         ignoreUnPublicMap.put("WifiUtils", ArrayUtils.asListArgs("setStaticWifiConfig","setStaticWifiConfig","inetAddressToInt","setDNS","setGateway","setIpAddress","setStaticIpConfig","getField","getDeclaredField","setEnumField","setValueField"));
         ignoreUnPublicMap.put("WindowAssist", ArrayUtils.asListArgs("getInstance"));
+        ignoreUnPublicMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("innerCompare","getSplitFileName"));
+        ignoreUnPublicMap.put("WindowsExplorerStringSimpleComparator2", ArrayUtils.asListArgs("innerCompare","splitStringPreserveDelimiter"));
         ignoreUnPublicMap.put("ZipUtils", ArrayUtils.asListArgs("zipFile","unzipChildFile"));
 
         return ignoreUnPublicMap;
@@ -527,6 +645,8 @@ final class DevAppConfig implements ICheckConfig {
         Map<String, List<String>> ignoreModifierVariableMap = new HashMap<>();
         ignoreModifierVariableMap.put("Base64", ArrayUtils.asListArgs("        int tailLen;"));
         ignoreModifierVariableMap.put("Base64.Encoder", ArrayUtils.asListArgs("    int tailLen;"));
+        ignoreModifierVariableMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("        String name;","        Long number;","        String numberText;","        String ext;"));
+        ignoreModifierVariableMap.put("WindowsExplorerStringSimpleComparator.SplitFileName", ArrayUtils.asListArgs("    String name;","    Long number;","    String numberText;","    String ext;"));
 
         return ignoreModifierVariableMap;
     }
