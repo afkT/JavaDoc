@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
+import dev.utils.DevFinal;
 import dev.utils.common.FileIOUtils;
 import dev.utils.common.FileUtils;
 import dev.utils.common.MapUtils;
@@ -79,7 +80,7 @@ public final class CodeAnnotationAnalyzeRecord {
             } else {
                 // = 慎用, 需要仔细对比部分代码差异化, 如 " " 会被替换成 "" 等 =
                 // 读取文件内容
-                String text = FileIOUtils.readFileToString(file, null);
+                String text = FileIOUtils.readFileToString(file, DevFinal.ENCODE.UTF_8); // null
                 // 处理后的代码
                 String newText = sPangu.spacingText(text);
                 newText = sPangu.spacingText(newText); // 多次处理
@@ -91,8 +92,6 @@ public final class CodeAnnotationAnalyzeRecord {
                         FileUtils.saveFile(file.getAbsolutePath(), newText.getBytes());
                     }
                 }
-                // =
-
                 // 读取文件
                 readFile(file);
             }
