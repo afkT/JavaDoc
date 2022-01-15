@@ -66,6 +66,6 @@ public final class CodeXmlEncoding {
                         }
                         System.out.println("搜索结束");
                     }
-                }).query(ApiConfig.PROJECT_PATH, true);
+                }).query(ApiConfig.DEV_UTILS_PROJECT_PATH, true);
     }
 }

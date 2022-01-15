@@ -26,7 +26,7 @@ public final class CodeRepeatNewLineRemove {
 
     public static void main(String[] args) {
         // 获取文件列表
-        List<File> lists = FileUtils.listFilesInDirWithFilter(ApiConfig.PROJECT_PATH, new FileFilter() {
+        List<File> lists = FileUtils.listFilesInDirWithFilter(ApiConfig.DEV_UTILS_PROJECT_PATH, new FileFilter() {
             @Override
             public boolean accept(File file) {
                 String absolutePath = file.getAbsolutePath();

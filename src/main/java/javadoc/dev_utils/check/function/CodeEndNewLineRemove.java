@@ -70,6 +70,6 @@ public final class CodeEndNewLineRemove {
                         }
                         System.out.println("搜索结束");
                     }
-                }).query(ApiConfig.PROJECT_PATH, true);
+                }).query(ApiConfig.DEV_UTILS_PROJECT_PATH, true);
     }
 }

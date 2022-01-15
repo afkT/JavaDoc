@@ -16,7 +16,7 @@ class JavaDocMain {
 
     public static void main(String[] args) {
         // 文件路径
-        final String path = ApiConfig.PROJECT_PATH + "/lib/DevApp/src/main/java/dev/utils/common/assist/search/";
+        final String path = ApiConfig.DEV_UTILS_PROJECT_PATH + "/lib/DevApp/src/main/java/dev/utils/common/assist/search/";
         // 类名
         final String className = "FileBreadthFirstSearchUtils.java";
         // 执行参数

@@ -19,15 +19,19 @@ public final class ApiConfig {
     private static final String JAVADOC_TEMPLATE_PACKAGE_PATH = JAVADOC_PROJECT_PATH + "/src/main/java/javadoc/dev_utils/readme/template";
 
     // API 文件保存路径 ( 该项目根目录下 )
-    public static final String API_FILE_SAVE_PATH     = JAVADOC_PROJECT_PATH + "/API";
+    public static final String API_FILE_SAVE_PATH         = JAVADOC_PROJECT_PATH + "/API";
     // Lib 文件保存路径
-    public static final String API_LIB_FILE_SAVE_PATH = API_FILE_SAVE_PATH + "/lib";
-    // 项目名
-    public static final String PROJECT_NAME           = "DevUtils";
-    // 本地路径 ( DevUtils 项目 )
-    public static final String PROJECT_LOCAL_PATH     = "../../AndroidStudioProjects";
-    // 项目路径 ( DevUtils 项目 )
-    public static final String PROJECT_PATH           = PROJECT_LOCAL_PATH + File.separator + PROJECT_NAME;
+    public static final String API_LIB_FILE_SAVE_PATH     = API_FILE_SAVE_PATH + "/lib";
+    // Android 项目文件夹路径
+    public static final String PROJECT_LOCAL_PATH         = "../../AndroidStudioProjects";
+    // DevUtils 项目名
+    public static final String DEV_UTILS_PROJECT_NAME     = "DevUtils";
+    // DevUtils 项目路径
+    public static final String DEV_UTILS_PROJECT_PATH     = PROJECT_LOCAL_PATH + File.separator + DEV_UTILS_PROJECT_NAME;
+    // DevComponent 项目名
+    public static final String DEV_COMPONENT_PROJECT_NAME = "DevComponent";
+    // DevComponent 项目路径
+    public static final String DEV_COMPONENT_PROJECT_PATH = PROJECT_LOCAL_PATH + File.separator + DEV_COMPONENT_PROJECT_NAME;
 
     // 包目录名
     public static final String DEV_PACKAGE          = "dev.utils";
