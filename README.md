@@ -75,11 +75,11 @@
 
 - [DevBaseMVVM API](https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/README.md) MVVM ( ViewDataBinding + ViewModel ) 基类库
 
-- [DevEngine API](https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md) 第三方框架解耦、一键替换第三方库
+- [DevEngine API](https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md) 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
 
-- [DevHttpCapture API](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md) OKHttp 抓包工具库
+- [DevHttpCapture API](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md) OkHttp 抓包工具库
 
-- [DevHttpCaptureCompiler API](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md) OKHttp 抓包工具库 ( 可视化功能 )
+- [DevHttpCaptureCompiler API](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md) OkHttp 抓包工具库 ( 可视化功能 )
 
 - [DevWidget API](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md) 自定义 View UI 库
 
