@@ -10,6 +10,8 @@
 > DevUtils 是一个 Android 工具库，主要根据不同功能模块，封装快捷使用的工具类及 API 方法调用
 >
 > 该项目尽可能的便于开发人员，快捷、高效开发安全可靠的项目。
+>
+> **[Android 规范](https://github.com/afkT/DevUtils/blob/master/README/android_standard.md)** 、 **[Java 规范](https://github.com/afkT/DevUtils/blob/master/README/java_standard.md)**
 
 ![module](https://github.com/afkT/DevUtils/raw/master/art/module.png)
 
@@ -41,19 +43,19 @@
 
 - [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/CHANGELOG.md)
 
-### DevEngine - 第三方框架解耦、一键替换第三方库
+### DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
 
 - [README](https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md)
 
 - [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/CHANGELOG.md)
 
-### DevHttpCapture OkHttp 抓包工具库
+### DevHttpCapture - OkHttp 抓包工具库
 
 - [README](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md)
 
 - [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md)
 
-### DevHttpCaptureCompiler OkHttp 抓包工具库 ( 可视化功能 )
+### DevHttpCaptureCompiler - OkHttp 抓包工具库 ( 可视化功能 )
 
 - [README](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md)
 
@@ -94,38 +96,38 @@
 
 ```gradle
 
-// DevApp Android 工具类库
+// DevApp - Android 工具类库
 implementation 'io.github.afkt:DevAppX:{1}'
 
-// DevAssist 快捷功能辅助类库
+// DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
 implementation 'io.github.afkt:DevAssist:{2}'
 
-// DevBase Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+// DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
 implementation 'io.github.afkt:DevBase:{3}'
 
-// DevBaseMVVM MVVM ( ViewDataBinding + ViewModel ) 基类库
+// DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
 implementation 'io.github.afkt:DevBaseMVVM:{4}'
 
-// DevEngine 第三方框架解耦、一键替换第三方库
+// DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
 implementation 'io.github.afkt:DevEngine:{5}'
 
-// DevHttpCapture OkHttp 抓包工具库
+// DevHttpCapture - OkHttp 抓包工具库
 implementation 'io.github.afkt:DevHttpCapture:{6}'
 
-// DevHttpCaptureCompiler OkHttp 抓包工具库 ( 可视化功能 )
+// DevHttpCaptureCompiler - OkHttp 抓包工具库 ( 可视化功能 )
 debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:{7}'
 releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:{8}'
 
-// DevWidget 自定义 View UI 库
+// DevWidget - 自定义 View UI 库
 implementation 'io.github.afkt:DevWidgetX:{9}'
 
-// DevEnvironment Android 环境配置切换库
+// DevEnvironment - Android 环境配置切换库
 implementation 'io.github.afkt:DevEnvironment:{10}'
 debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{11}' // kaptDebug
 releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:{12}' // kaptRelease
 //annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{13}' // kapt
 
-// DevJava Java 工具类库 ( 不依赖 android api )
+// DevJava - Java 工具类库 ( 不依赖 android api )
 implementation 'io.github.afkt:DevJava:{14}' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
 ```
 
