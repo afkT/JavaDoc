@@ -49,7 +49,7 @@ class JavaDocMain {
                         classBuilder.append("\n\n");
                         classBuilder.append("\n= " + classDoc.name() + " =\n");
                         // 包名.类名
-                        classBuilder.append("\n包名.类名: ").append(classDoc.toString());
+                        classBuilder.append("\n包名.类名: ").append(classDoc);
                         // 类注释
                         classBuilder.append("\n类注释: ").append(classDoc.commentText());
 

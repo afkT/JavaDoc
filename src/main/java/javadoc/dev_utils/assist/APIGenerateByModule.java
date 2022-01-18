@@ -27,21 +27,21 @@ final class APIGenerateByModule {
      * detail: 子级节点实体类
      * @author Ttt
      */
-    private static class Subnode {
+    private static class SubNode {
 
         // 文件夹对象
         private final File          subFile;
         // 文件夹内的子文件列表
-        private final List<Subnode> listSubs;
+        private final List<SubNode> listSubs;
 
         /**
          * 构造函数
          * @param file  文件夹对象
          * @param lists 文件夹内的子文件列表
          */
-        public Subnode(
+        public SubNode(
                 File file,
-                List<Subnode> lists
+                List<SubNode> lists
         ) {
             this.subFile  = file;
             this.listSubs = lists;
@@ -59,7 +59,7 @@ final class APIGenerateByModule {
          * 获取文件夹内的子文件列表
          * @return {@link List}
          */
-        public List<Subnode> getListSubs() {
+        public List<SubNode> getListSubs() {
             return listSubs;
         }
     }
@@ -69,8 +69,8 @@ final class APIGenerateByModule {
      * @param path 文件路径
      * @return 文件夹目录列表集合
      */
-    private static List<Subnode> getFolderLists(final String path) {
-        List<Subnode> lists = new ArrayList<>();
+    private static List<SubNode> getFolderLists(final String path) {
+        List<SubNode> lists = new ArrayList<>();
         // 获取文件路径
         File baseFile = new File(path);
         // 获取子文件
@@ -79,10 +79,10 @@ final class APIGenerateByModule {
         for (File file : files) {
             // 属于文件夹才处理
             if (file.isDirectory()) {
-                Subnode subnode = new Subnode(
+                SubNode subNode = new SubNode(
                         file, getFolderLists(file.getAbsolutePath())
                 );
-                lists.add(subnode);
+                lists.add(subNode);
             }
         }
         return lists;
@@ -109,7 +109,7 @@ final class APIGenerateByModule {
      */
     private static void forSubnode(
             final StringBuilder builder,
-            final List<Subnode> lists,
+            final List<SubNode> lists,
             final String path,
             final String packageName,
             final String githubUrl,
@@ -124,9 +124,9 @@ final class APIGenerateByModule {
         // 循环遍历
         for (int i = 0, len = lists.size(); i < len; i++) {
             // 获取子节点
-            Subnode subnode = lists.get(i);
+            SubNode subNode = lists.get(i);
             // 获取目录名
-            String name = subnode.getSubFile().getName();
+            String name = subNode.getSubFile().getName();
             // 包名
             String apiPackageName = packageName + "." + name;
 
@@ -179,9 +179,9 @@ final class APIGenerateByModule {
             }
 
             // 判断是否存在子文件夹
-            if (subnode.getListSubs().size() != 0) {
+            if (subNode.getListSubs().size() != 0) {
                 forSubnode(
-                        builder, subnode.getListSubs(),
+                        builder, subNode.getListSubs(),
                         path + "/" + name,
                         packageName + "." + name,
                         githubUrl + "/" + name,
