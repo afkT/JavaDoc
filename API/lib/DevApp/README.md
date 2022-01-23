@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.3'
+implementation 'io.github.afkt:DevAppX:2.3.4'
 ```
 
 ## 目录结构
@@ -1604,14 +1604,14 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| dipConvertPx | dp 转 px |
-| dipConvertPxf | dp 转 px ( float ) |
-| pxConvertDip | px 转 dp |
-| pxConvertDipf | px 转 dp ( float ) |
-| spConvertPx | sp 转 px |
-| spConvertPxf | sp 转 px ( float ) |
-| pxConvertSp | px 转 sp |
-| pxConvertSpf | px 转 sp ( float ) |
+| dp2px | dp 转 px |
+| dp2pxf | dp 转 px ( float ) |
+| px2dp | px 转 dp |
+| px2dpf | px 转 dp ( float ) |
+| sp2px | sp 转 px |
+| sp2pxf | sp 转 px ( float ) |
+| px2sp | px 转 sp |
+| px2spf | px 转 sp ( float ) |
 | applyDimension | 各种单位转换 ( 该方法存在于 TypedValue.applyDimension ) |
 | forceGetViewSize | 在 onCreate 中获取视图的尺寸 ( 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 ) |
 | measureView | 测量 View |
@@ -4298,7 +4298,7 @@ DevUtils.openDebug();
 | :- | :- |
 | reset | 重置默认参数 |
 | setToastFilter | 设置 Toast 过滤器 |
-| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setUseHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 设置是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置 |
@@ -4332,7 +4332,7 @@ DevUtils.openDebug();
 | :- | :- |
 | reset | 重置默认参数 |
 | setToastFilter | 设置 Toast 过滤器 |
-| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setUseHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setUseConfig | 设置是否使用配置 |
 | setGravity | 设置 Toast 显示在屏幕上的位置 |
@@ -4356,7 +4356,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | reset | 重置默认参数 |
-| setIsHandler | 设置是否使用 Handler 显示 Toast |
+| setUseHandler | 设置是否使用 Handler 显示 Toast |
 | setNullText | 设置 Text 为 null 的文本 |
 | setTextLength | 设置 Toast 文案长度转换 显示时间 |
 | initialize | 初始化调用 ( 内部已调用 ) |
