@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -79,15 +78,9 @@ public final class Utils {
      */
     public static Map<String, List<String>> sortHashMap(final Map<String, List<String>> map) {
         Map<String, List<String>> sortedMap = new LinkedHashMap<>();
-        List<String>              list      = new ArrayList<>();
-        Iterator<String>          item      = map.keySet().iterator();
-        while (item.hasNext()) {
-            list.add(item.next());
-        }
+        List<String>              list      = new ArrayList<>(map.keySet());
         Collections.sort(list);
-        Iterator<String> item2 = list.iterator();
-        while (item2.hasNext()) {
-            String key = item2.next();
+        for (String key : list) {
             sortedMap.put(key, map.get(key));
         }
         return sortedMap;
@@ -99,11 +92,7 @@ public final class Utils {
      * @return 排序后的 Set
      */
     public static Set<String> sortHashSet(final Set<String> set) {
-        List<String>     list = new ArrayList<>();
-        Iterator<String> item = set.iterator();
-        while (item.hasNext()) {
-            list.add(item.next());
-        }
+        List<String> list = new ArrayList<>(set);
         Collections.sort(list);
         return new LinkedHashSet<>(list);
     }

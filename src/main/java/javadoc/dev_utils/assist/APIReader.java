@@ -179,13 +179,13 @@ public final class APIReader
                 // ========================
                 // 方法名正则表达式匹配处理
                 if (ValidatorUtils.match(mMethodNameRegex, methodName)) {
-                    List<String> listMatchs = mMethodNameMatchesMap.get(className);
-                    if (listMatchs == null) {
-                        listMatchs = new ArrayList<>();
-                        mMethodNameMatchesMap.put(className, listMatchs);
+                    List<String> listMatch = mMethodNameMatchesMap.get(className);
+                    if (listMatch == null) {
+                        listMatch = new ArrayList<>();
+                        mMethodNameMatchesMap.put(className, listMatch);
                     }
                     // 追加匹配的方法名数据
-                    listMatchs.add(methodName);
+                    listMatch.add(methodName);
                 }
                 // ========================
 
@@ -216,9 +216,9 @@ public final class APIReader
                             methodAnnotate = methodName;
                         } else {
                             // 判断方法注释是否存在换行
-                            int annotateln = methodAnnotate.indexOf("\n");
+                            int annotateLn = methodAnnotate.indexOf("\n");
                             // 如果存在换行
-                            if (annotateln != -1) { // 把注释换行的直接不要
+                            if (annotateLn != -1) { // 把注释换行的直接不要
                                 methodAnnotate = methodAnnotate.split("\n")[0];
                             }
                         }

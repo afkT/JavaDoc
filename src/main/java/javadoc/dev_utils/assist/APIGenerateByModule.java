@@ -107,7 +107,7 @@ final class APIGenerateByModule {
      * @param methodNotAnnotateBuilder 方法没有注释记录存储 Builder
      * @param notMethodBuilder         类不存在方法记录存储 Builder
      */
-    private static void forSubnode(
+    private static void forSubNode(
             final StringBuilder builder,
             final List<SubNode> lists,
             final String path,
@@ -180,7 +180,7 @@ final class APIGenerateByModule {
 
             // 判断是否存在子文件夹
             if (subNode.getListSubs().size() != 0) {
-                forSubnode(
+                forSubNode(
                         builder, subNode.getListSubs(),
                         path + "/" + name,
                         packageName + "." + name,
@@ -227,7 +227,7 @@ final class APIGenerateByModule {
         // 拼接信息
         StringBuilder builder = new StringBuilder();
         // 递归循环子节点
-        forSubnode(
+        forSubNode(
                 builder, getFolderLists(path), path,
                 packageName, githubUrl,
                 filterClassSet, filterMethodMap,

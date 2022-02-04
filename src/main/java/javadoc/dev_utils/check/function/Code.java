@@ -2,7 +2,7 @@ package javadoc.dev_utils.check.function;
 
 final class Code {
 
-    public Code() {
+    private Code() {
     }
 
     /**

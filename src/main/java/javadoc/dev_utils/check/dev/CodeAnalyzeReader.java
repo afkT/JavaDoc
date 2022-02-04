@@ -140,7 +140,7 @@ public final class CodeAnalyzeReader {
     private static class CodeReader
             implements JavaDocReader.Callback {
 
-        MapConfig mapConfig;
+        final MapConfig mapConfig;
 
         public CodeReader(MapConfig mapConfig) {
             this.mapConfig = mapConfig;
@@ -252,7 +252,7 @@ public final class CodeAnalyzeReader {
                                 methodDoc, "tree"
                         );
                         // 反射获取方法参数
-                        List<JCTree.JCVariableDecl> listJCVariableDecls = Reflect2Utils.getPropertyByParent(
+                        List<JCTree.JCVariableDecl> listJCVariableDecl = Reflect2Utils.getPropertyByParent(
                                 jcMethodDecl, "params"
                         );
                         // 获取方法全部注释 (含 @param)
@@ -304,8 +304,8 @@ public final class CodeAnalyzeReader {
                         // 不忽略才处理进行方法参数判断
                         if (!isIgnoreClass) {
                             // 防止为 null
-                            if (!CollectionUtils.isEmpty(listJCVariableDecls)) {
-                                for (JCTree.JCVariableDecl jcVariableDecl : listJCVariableDecls) {
+                            if (!CollectionUtils.isEmpty(listJCVariableDecl)) {
+                                for (JCTree.JCVariableDecl jcVariableDecl : listJCVariableDecl) {
                                     jcModifiers = jcVariableDecl.getModifiers();
                                     if (jcModifiers != null) {
                                         if (jcModifiers.toString().endsWith("final ")) {
@@ -393,7 +393,7 @@ public final class CodeAnalyzeReader {
                         }
                         // =
                         // 获取参数数量
-                        int paramNumber = CollectionUtils.length(listJCVariableDecls);
+                        int paramNumber = CollectionUtils.length(listJCVariableDecl);
                         // 判断注释是否为 null
                         if (StringUtils.isEmpty(methodDocumentation)) {
                             // 如果数量不为 0, 表示有参数
@@ -409,7 +409,7 @@ public final class CodeAnalyzeReader {
                                     mapConfig.sMethodLackParamMap,
                                     methodDocumentation,
                                     className, methodName,
-                                    jcMethodDecl, listJCVariableDecls,
+                                    jcMethodDecl, listJCVariableDecl,
                                     mapConfig
                             );
                         }
@@ -441,7 +441,7 @@ public final class CodeAnalyzeReader {
      * @param className           类名
      * @param methodName          方法名
      * @param jcMethodDecl        方法信息实体类
-     * @param listJCVariableDecls 方法参数 List
+     * @param listJCVariableDecl  方法参数 List
      * @param mapConfig           Map 配置
      */
     private static void paramCheckHandler(
@@ -450,7 +450,7 @@ public final class CodeAnalyzeReader {
             final String className,
             final String methodName,
             final JCTree.JCMethodDecl jcMethodDecl,
-            final List<JCTree.JCVariableDecl> listJCVariableDecls,
+            final List<JCTree.JCVariableDecl> listJCVariableDecl,
             final MapConfig mapConfig
     ) {
         // 泛型类型数组
@@ -512,7 +512,7 @@ public final class CodeAnalyzeReader {
         // 参数处理
         // ========================
         // 获取参数数量
-        int paramNumber = CollectionUtils.length(listJCVariableDecls);
+        int paramNumber = CollectionUtils.length(listJCVariableDecl);
         // 防止数据为 null
         if (paramNumber != 0) {
             // 创建对应的数组
@@ -520,7 +520,7 @@ public final class CodeAnalyzeReader {
             // 循环遍历
             for (int i = 0; i < paramNumber; i++) {
                 // 获取拆分后的数据
-                String[] splits = listJCVariableDecls.get(i).toString().split(" ");
+                String[] splits = listJCVariableDecl.get(i).toString().split(" ");
                 // 获取最后一位
                 paramNames[i] = splits[ArrayUtils.length(splits) - 1];
             }
