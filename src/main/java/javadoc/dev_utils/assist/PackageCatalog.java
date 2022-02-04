@@ -265,9 +265,7 @@ public final class PackageCatalog {
             final HashMap<String, String> mapCatalog
     ) {
         // 循环遍历
-        for (int i = 0, len = lists.size(); i < len; i++) {
-            // 获取目录
-            Catalog catalog = lists.get(i);
+        for (Catalog catalog : lists) {
             // 获取目录名
             String name = catalog.getFile().getName();
             // 进行换行

@@ -157,9 +157,9 @@ public final class APIReader
         tempBuilder.append(finalBuilder);
 
         // 循环 Class Doc 信息
-        for (int i = 0, len = classDocs.length; i < len; ++i) {
+        for (ClassDoc classDoc : classDocs) {
             // 循环 Method Doc 信息
-            for (MethodDoc method : classDocs[i].methods()) {
+            for (MethodDoc method : classDoc.methods()) {
                 // 属于枚举的 values 、valueOf 不处理
                 if (method.name().equals("values") ||
                         method.name().equals("valueOf")) {

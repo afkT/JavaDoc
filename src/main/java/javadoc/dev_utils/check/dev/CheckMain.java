@@ -25,7 +25,7 @@ public final class CheckMain {
      * @return 检测结果 JSON String
      */
     public static String execute(
-            final Class clazz,
+            final Class<?> clazz,
             final CheckInfo checkInfo
     ) {
         // 代码检测分析配置接口

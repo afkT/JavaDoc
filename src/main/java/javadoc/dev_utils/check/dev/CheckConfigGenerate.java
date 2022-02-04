@@ -37,7 +37,7 @@ public class CheckConfigGenerate {
      * @param ignoreAnnotationSpaceSet 忽略注释间距异常文件 Set
      */
     public static void format(
-            final Class clazz,
+            final Class<?> clazz,
             final String[] mapStr,
             final Set<String> ignoreAnnotationSpaceSet
     ) {

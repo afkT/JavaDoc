@@ -122,9 +122,7 @@ final class APIGenerateByModule {
             final StringBuilder notMethodBuilder
     ) {
         // 循环遍历
-        for (int i = 0, len = lists.size(); i < len; i++) {
-            // 获取子节点
-            SubNode subNode = lists.get(i);
+        for (SubNode subNode : lists) {
             // 获取目录名
             String name = subNode.getSubFile().getName();
             // 包名
