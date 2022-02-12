@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.4'
+implementation 'io.github.afkt:DevAppX:2.3.5'
 ```
 
 ## 目录结构
@@ -1242,6 +1242,8 @@ DevUtils.openDebug();
 | getLinearLayoutManager | 获取 LinearLayoutManager |
 | getGridLayoutManager | 获取 GridLayoutManager |
 | getStaggeredGridLayoutManager | 获取 StaggeredGridLayoutManager |
+| setSpanCount | 设置 GridLayoutManager SpanCount |
+| getSpanCount | 获取 GridLayoutManager SpanCount |
 | getPosition | 获取 RecyclerView 对应 Item View 索引 |
 | findViewByPosition | 获取 RecyclerView 对应索引 Item View |
 | findFirstCompletelyVisibleItemPosition | 获取 RecyclerView 第一条完全显示 Item 索引 |
@@ -2352,11 +2354,56 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistfloating">**`dev.utils.app.assist.floating`**</span>
 
 
+* **悬浮窗通用代码 ->** [DevFloatingCommon.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingCommon.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| update | 实时更新方法 |
+| getView | getView |
+| getEvent | getEvent |
+| getListener | getListener |
+| getDownTime | getDownTime |
+| getPoint | getPoint |
+| getFirstPoint | getFirstPoint |
+| getDelayAssist | getDelayAssist |
+| actionDown | 手势按下 |
+| actionMove | 手势移动 |
+| actionUp | 手势抬起 |
+| onClick | 悬浮窗 View 点击事件 |
+| onLongClick | 悬浮窗 View 长按事件 |
+| getDiffTime | 获取时间差 ( 当前时间 - 触摸时间 ) |
+| isValidTime | 是否有效间隔时间 |
+| isValidClickByTime | 通过时间判断点击是否有效 |
+| isValidLongClickByTime | 通过时间判断长按是否有效 |
+| isValidEvent | 是否有效事件 ( 是否在小范围内移动 ) |
+| isTouchInView | 判断触点是否落在该 View 上 |
+| postLongClick | 开始校验长按 |
+| callback | callback |
+
+
 * **DevApp 悬浮窗边缘检测辅助类实现 ->** [DevFloatingEdgeIMPL.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingEdgeIMPL.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | calculateEdge | calculateEdge |
+| getMaxHeight | 获取 View 最大显示高度 |
+| setMaxHeight | 设置 View 最大显示高度 |
+| getMarginTop | 获取向上边距 |
+| setMarginTop | 设置向上边距 |
+| getMarginBottom | 获取向下边距 |
+| setMarginBottom | 设置向下边距 |
+| setStatusBarHeightMargin | 设置向上边距为状态栏高度 |
+| setNavigationBarHeightMargin | 设置向下边距为底部导航栏高度 |
+
+
+* **悬浮窗触摸事件接口实现 ->** [DevFloatingListener.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingListener.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getClickIntervalTime | 获取点击事件间隔时间 |
+| setClickIntervalTime | 获取点击事件间隔时间 |
+| getLongClickIntervalTime | 获取长按事件间隔时间 |
+| setLongClickIntervalTime | 获取长按事件间隔时间 |
 
 
 * **DevApp 悬浮窗触摸辅助类实现 ->** [DevFloatingTouchIMPL.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingTouchIMPL.java)
@@ -2364,6 +2411,9 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | onTouchEvent | onTouchEvent |
+| getFloatingListener | 获取悬浮窗触摸事件接口 |
+| setFloatingListener | 获取悬浮窗触摸事件接口 |
+| getCommon | 获取悬浮窗通用代码 |
 
 
 * **DevApp 悬浮窗触摸辅助类实现 ->** [DevFloatingTouchIMPL2.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingTouchIMPL2.java)
@@ -2371,13 +2421,16 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | onTouchEvent | onTouchEvent |
-| updateViewLayout | updateViewLayout |
+| updateViewLayout | 更新 View Layout |
 | getX | 获取 X 轴坐标 |
 | setX | 设置 X 轴坐标 |
 | getY | 获取 Y 轴坐标 |
 | setY | 设置 Y 轴坐标 |
 | getFloatingEdge | 获取悬浮窗边缘检测接口实现 |
 | setFloatingEdge | 设置悬浮窗边缘检测接口实现 |
+| getFloatingListener | 获取悬浮窗触摸事件接口 |
+| setFloatingListener | 获取悬浮窗触摸事件接口 |
+| getCommon | 获取悬浮窗通用代码 |
 
 
 * **悬浮窗管理辅助类 ( 需权限 ) ->** [FloatingWindowManagerAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/FloatingWindowManagerAssist.java)
@@ -2424,6 +2477,18 @@ DevUtils.openDebug();
 | calculateEdge | 计算悬浮窗边缘检测坐标 |
 
 
+* **悬浮窗触摸事件接口 ->** [IFloatingListener.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/IFloatingListener.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| onClick | 悬浮窗 View 点击事件 |
+| onLongClick | 悬浮窗 View 长按事件 |
+| getClickIntervalTime | 获取点击事件间隔时间 |
+| setClickIntervalTime | 获取点击事件间隔时间 |
+| getLongClickIntervalTime | 获取长按事件间隔时间 |
+| setLongClickIntervalTime | 获取长按事件间隔时间 |
+
+
 * **悬浮窗操作辅助类接口 ->** [IFloatingOperate.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/IFloatingOperate.java)
 
 | 方法 | 注释 |
@@ -2442,6 +2507,8 @@ DevUtils.openDebug();
 | :- | :- |
 | onTouchEvent | 悬浮窗 View 触摸事件 |
 | updateViewLayout | 更新 View Layout |
+| getFloatingListener | 获取悬浮窗触摸事件接口 |
+| setFloatingListener | 获取悬浮窗触摸事件接口 |
 
 
 ## <span id="devutilsappassistlifecycle">**`dev.utils.app.assist.lifecycle`**</span>
@@ -3124,6 +3191,7 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
+| setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
 | setAdapter | 设置 RecyclerView Adapter |
 | notifyItemRemoved | RecyclerView notifyItemRemoved |
@@ -3342,6 +3410,7 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
+| setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
 | setAdapter | 设置 RecyclerView Adapter |
 | notifyItemRemoved | RecyclerView notifyItemRemoved |
@@ -3628,6 +3697,7 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
+| setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
 | setAdapter | 设置 RecyclerView Adapter |
 | notifyItemRemoved | RecyclerView notifyItemRemoved |
@@ -3839,6 +3909,7 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
+| setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
 | setAdapter | 设置 RecyclerView Adapter |
 | notifyItemRemoved | RecyclerView notifyItemRemoved |
@@ -4616,6 +4687,8 @@ DevUtils.openDebug();
 | addNotNull | 添加一条数据 ( value 不允许为 null ) |
 | addAll | 添加集合数据 |
 | addAllNotNull | 添加集合数据 ( values 内的值不允许为 null ) |
+| clearAndAddAll | 移除全部数据并添加集合数据 |
+| clearAndAddAllNotNull | 移除全部数据并添加集合数据 ( values 内的值不允许为 null ) |
 | remove | 移除一条数据 |
 | removeAll | 移除集合数据 |
 | clear | 清空集合中符合指定 value 的全部数据 |
@@ -5304,7 +5377,8 @@ DevUtils.openDebug();
 | appendLine | 追加换行 |
 | appendLine2 | 追加换行 |
 | forString | 循环指定数量字符串 |
-| forJoint | 循环追加 |
+| joinArgs | 循环拼接 |
+| join | 循环拼接 |
 | colonSplit | 冒号分割处理 |
 | getString | 获取字符串 ( 判 null ) |
 | checkValue | 检查字符串 |

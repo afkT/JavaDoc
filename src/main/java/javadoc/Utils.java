@@ -28,16 +28,16 @@ public final class Utils {
     private Utils() {
     }
 
-    static {
-        JCLogUtils.setPrintLog(true);
-        JCLogUtils.setControlPrintLog(true);
-//        JCLogUtils.setPrint(new JCLogUtils.Print() {
-//            @Override
-//            public void printLog(int logType, String tag, String message) {
-//                System.out.println(tag + " : " + message);
-//            }
-//        });
-    }
+//    static {
+//        JCLogUtils.setPrintLog(true);
+//        JCLogUtils.setControlPrintLog(true);
+////        JCLogUtils.setPrint(new JCLogUtils.Print() {
+////            @Override
+////            public void printLog(int logType, String tag, String message) {
+////                System.out.println(tag + " : " + message);
+////            }
+////        });
+//    }
 
     /**
      * 获取文件列表

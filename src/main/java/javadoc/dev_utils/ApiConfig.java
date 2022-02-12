@@ -56,7 +56,7 @@ public final class ApiConfig {
     // ==========
 
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.3.4";
+    public static final String DEV_APP_VERSION            = "2.3.5";
     // DevApp 文件路径
     public static final String DEV_APP_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev";
     // DevApp Utils 文件路径
@@ -190,7 +190,7 @@ public final class ApiConfig {
     // =============
 
     // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = "1.1.5";
+    public static final String DEV_WIDGET_VERSION            = "1.1.6";
     // 包目录名
     public static final String DEV_WIDGET_PACKAGE            = "dev";
     // DevWidget 文件路径
@@ -219,7 +219,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.4.1";
+    public static final String DEV_JAVA_VERSION            = "1.4.2";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
@@ -507,7 +507,8 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
         sCatalogMap_Widget.put(".widget.custom", "自定义 View");
         sCatalogMap_Widget.put(".widget.decoration", "RecyclerView ItemDecoration");
-        sCatalogMap_Widget.put(".widget.decoration.horizontal", "Horizontal ItemDecoration");
+        sCatalogMap_Widget.put(".widget.decoration.linear", "Linear ItemDecoration");
+        sCatalogMap_Widget.put(".widget.decoration.linear.horizontal", "Linear Horizontal ItemDecoration");
         sCatalogMap_Widget.put(".widget.function", "需求功能 View");
         sCatalogMap_Widget.put(".widget.ui", "UI View");
         sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
