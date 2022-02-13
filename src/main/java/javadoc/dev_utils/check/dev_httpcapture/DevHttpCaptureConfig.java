@@ -21,7 +21,7 @@ final class DevHttpCaptureConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("CallbackInterceptor", ArrayUtils.asListArgs("intercept","isPlaintext","bodyEncoded"));
-        ignoreAnnotateMap.put("CaptureFile", ArrayUtils.asListArgs("getUrl","getMethod","getHttpCaptureData","isEncrypt","getTime","getFileName","getModuleName","setUrl","setMethod","setHttpCaptureData","setEncrypt","setTime","setFileName","setModuleName"));
+        ignoreAnnotateMap.put("CaptureFile", ArrayUtils.asListArgs("getUrl","getMethod","isEncrypt","getTime","getFileName","getModuleName","setUrl","setMethod","setEncrypt","setTime","setFileName","setModuleName","getHttpCaptureData","setHttpCaptureData"));
         ignoreAnnotateMap.put("CaptureInfo", ArrayUtils.asListArgs("getRequestUrl","getRequestMethod","getRequestHeader","getRequestBody","getResponseStatus","getResponseHeader","getResponseBody"));
         ignoreAnnotateMap.put("CaptureItem", ArrayUtils.asListArgs("getYyyyMMdd","getData","setYyyyMMdd"));
         ignoreAnnotateMap.put("HttpCaptureInterceptor", ArrayUtils.asListArgs("getModuleName","getEncrypt","getHttpFilter","isCapture","setCapture","getModulePath","getModuleHttpCaptures","intercept","isPlaintext","bodyEncoded"));
@@ -37,7 +37,7 @@ final class DevHttpCaptureConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("CallbackInterceptor", ArrayUtils.asListArgs("intercept","innerResponse"));
-        ignoreFinalMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setHttpCaptureData","setEncrypt","setTime","setFileName","setModuleName"));
+        ignoreFinalMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setEncrypt","setTime","setFileName","setModuleName","setHttpCaptureData"));
         ignoreFinalMap.put("CaptureItem", ArrayUtils.asListArgs("setYyyyMMdd"));
         ignoreFinalMap.put("HttpCaptureInterceptor", ArrayUtils.asListArgs("setCapture","intercept","innerResponse"));
 
@@ -52,7 +52,7 @@ final class DevHttpCaptureConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
         ignoreStaticMap.put("CallbackInterceptor", ArrayUtils.asListArgs("intercept","innerResponse","finalHttpCallback","isPlaintext","bodyEncoded"));
-        ignoreStaticMap.put("CaptureFile", ArrayUtils.asListArgs("getUrl","getMethod","getHttpCaptureData","isEncrypt","getTime","getFileName","getModuleName","setUrl","setMethod","setHttpCaptureData","setEncrypt","setTime","setFileName","setModuleName","getCaptureInfo","toJson","deleteFile","getFile"));
+        ignoreStaticMap.put("CaptureFile", ArrayUtils.asListArgs("getUrl","getMethod","isEncrypt","getTime","getFileName","getModuleName","setUrl","setMethod","setEncrypt","setTime","setFileName","setModuleName","getHttpCaptureData","setHttpCaptureData","getCaptureInfo","toJson","deleteFile","getFile","getDataFile"));
         ignoreStaticMap.put("CaptureInfo", ArrayUtils.asListArgs("getRequestUrl","getRequestMethod","getRequestHeader","getRequestBody","getResponseStatus","getResponseHeader","getResponseBody","toJson"));
         ignoreStaticMap.put("CaptureItem", ArrayUtils.asListArgs("getYyyyMMdd","getData","setYyyyMMdd"));
         ignoreStaticMap.put("HttpCaptureInterceptor", ArrayUtils.asListArgs("getModuleName","getEncrypt","getHttpFilter","isCapture","setCapture","getModulePath","getModuleHttpCaptures","intercept","innerResponse","finalHttpCaptureSave","isPlaintext","bodyEncoded"));
@@ -68,7 +68,7 @@ final class DevHttpCaptureConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("CallbackInterceptor", ArrayUtils.asListArgs("intercept","innerResponse","isPlaintext","bodyEncoded"));
-        ignoreParamMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setHttpCaptureData","setEncrypt","setTime","setFileName","setModuleName"));
+        ignoreParamMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setEncrypt","setTime","setFileName","setModuleName","setHttpCaptureData"));
         ignoreParamMap.put("CaptureItem", ArrayUtils.asListArgs("setYyyyMMdd"));
         ignoreParamMap.put("HttpCaptureInterceptor", ArrayUtils.asListArgs("setCapture","intercept","innerResponse","isPlaintext","bodyEncoded"));
 
@@ -96,13 +96,13 @@ final class DevHttpCaptureConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("CallbackInterceptor", ArrayUtils.asListArgs("finalHttpCallback","isPlaintext","bodyEncoded"));
-        ignoreUnPublicMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setHttpCaptureData","setEncrypt","setTime","setFileName","setModuleName"));
+        ignoreUnPublicMap.put("CaptureFile", ArrayUtils.asListArgs("setUrl","setMethod","setEncrypt","setTime","setFileName","setModuleName","setHttpCaptureData"));
         ignoreUnPublicMap.put("CaptureItem", ArrayUtils.asListArgs("setYyyyMMdd"));
         ignoreUnPublicMap.put("HttpCaptureInterceptor", ArrayUtils.asListArgs("finalHttpCaptureSave","isPlaintext","bodyEncoded"));
         ignoreUnPublicMap.put("IHttpCapture", ArrayUtils.asListArgs("getModuleName","getEncrypt","getHttpFilter","isCapture","setCapture","getModulePath","getModuleHttpCaptures"));
         ignoreUnPublicMap.put("IHttpCaptureCallback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("IHttpFilter", ArrayUtils.asListArgs("filter"));
-        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("createGson","toJson","fromJson","sortFileByName","getStoragePath","getModulePath","getModuleHttpCaptureFile","getModuleHttpCaptureFile","getUniqueFileName","getTimeFile","saveHttpCaptureFile","fromCaptureFile","getModuleHttpCaptures","getAllModule"));
+        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("createGson","toJson","fromJson","sortFileByName","getStoragePath","getModulePath","getModuleHttpCaptureFile","getModuleHttpCaptureFile","getModuleHttpCaptureDataFile","getUniqueFileName","getTimeFile","saveHttpCaptureFile","fromCaptureFile","getModuleHttpCaptures","getAllModule"));
 
         return ignoreUnPublicMap;
     }

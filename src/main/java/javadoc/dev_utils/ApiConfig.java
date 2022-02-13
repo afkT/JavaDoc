@@ -141,7 +141,7 @@ public final class ApiConfig {
     // ==================
 
     // DevHttpCapture 版本号
-    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.8";
+    public static final String DEV_HTTP_CAPTURE_VERSION            = "1.0.9";
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
     // DevHttpCapture 文件路径
