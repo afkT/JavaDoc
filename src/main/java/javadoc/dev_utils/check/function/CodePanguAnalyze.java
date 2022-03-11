@@ -10,7 +10,7 @@ import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.check.dev.CodeAnnotationAnalyzeRecord;
 
 /**
- * detail: 代码重复换行检测
+ * detail: 代码、注释间距规范检测
  * @author Ttt
  */
 public final class CodePanguAnalyze {
