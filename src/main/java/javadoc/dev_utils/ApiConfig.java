@@ -507,8 +507,8 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
         sCatalogMap_Widget.put(".widget.custom", "自定义 View");
         sCatalogMap_Widget.put(".widget.decoration", "RecyclerView ItemDecoration");
+        sCatalogMap_Widget.put(".widget.decoration.grid", "Grid ItemDecoration");
         sCatalogMap_Widget.put(".widget.decoration.linear", "Linear ItemDecoration");
-        sCatalogMap_Widget.put(".widget.decoration.linear.horizontal", "Linear Horizontal ItemDecoration");
         sCatalogMap_Widget.put(".widget.function", "需求功能 View");
         sCatalogMap_Widget.put(".widget.ui", "UI View");
         sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
@@ -603,6 +603,7 @@ public final class ApiConfig {
         // ============
 
         sFilterClassSet_Other.add("DataStoreUtils.kt");
+        sFilterClassSet_Other.add("package-info.txt");
     }
 
     /**

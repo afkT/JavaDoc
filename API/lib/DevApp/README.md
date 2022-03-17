@@ -1072,6 +1072,7 @@ DevUtils.openDebug();
 | createNotificationChannel | 创建 NotificationChannel |
 | createPendingIntent | 获取 PendingIntent |
 | createNotification | 创建通知栏对象 |
+| createNotificationBuilder | 创建通知栏 Builder 对象 |
 | get | 获取 Led 配置参数 |
 | isEmpty | 判断是否为 null |
 
@@ -1247,17 +1248,22 @@ DevUtils.openDebug();
 | getPosition | 获取 RecyclerView 对应 Item View 索引 |
 | findViewByPosition | 获取 RecyclerView 对应索引 Item View |
 | findFirstCompletelyVisibleItemPosition | 获取 RecyclerView 第一条完全显示 Item 索引 |
+| findFirstCompletelyVisibleItemPositions | 获取 RecyclerView 第一条完全显示 Item 索引数组 |
 | findLastCompletelyVisibleItemPosition | 获取 RecyclerView 最后一条完全显示 Item 索引 |
+| findLastCompletelyVisibleItemPositions | 获取 RecyclerView 最后一条完全显示 Item 索引数组 |
 | findFirstVisibleItemPosition | 获取 RecyclerView 第一条显示 Item 索引 |
-| findLastVisibleItemPosition | 获取 RecyclerView 最后一条显示 Item 索引 |
 | findFirstVisibleItemPositions | 获取 RecyclerView 第一条显示 Item 索引数组 |
+| findLastVisibleItemPosition | 获取 RecyclerView 最后一条显示 Item 索引 |
 | findLastVisibleItemPositions | 获取 RecyclerView 最后一条显示 Item 索引数组 |
 | setOrientation | 设置 RecyclerView Orientation |
 | getOrientation | 获取 RecyclerView Orientation |
-| canScrollHorizontally | 校验 RecyclerView Orientation 是否为 HORIZONTAL |
 | canScrollVertically | 校验 RecyclerView Orientation 是否为 VERTICAL |
+| canScrollHorizontally | 校验 RecyclerView Orientation 是否为 HORIZONTAL |
 | setAdapter | 设置 RecyclerView Adapter |
 | getAdapter | 获取 RecyclerView Adapter |
+| getItemCount | 获取 Adapter ItemCount |
+| getItemId | 获取 Adapter 指定索引 Item Id |
+| getItemViewType | 获取 Adapter 指定索引 Item Type |
 | notifyItemRemoved | RecyclerView notifyItemRemoved |
 | notifyItemInserted | RecyclerView notifyItemInserted |
 | notifyItemMoved | RecyclerView notifyItemMoved |
