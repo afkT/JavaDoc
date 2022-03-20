@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.5'
+implementation 'io.github.afkt:DevAppX:2.3.6'
 ```
 
 ## 目录结构
