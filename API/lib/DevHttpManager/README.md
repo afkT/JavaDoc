@@ -2,12 +2,18 @@
 ## Gradle
 
 ```gradle
-implementation 'io.github.afkt:DevHttpManager:%s'
+implementation 'io.github.afkt:DevHttpManager:1.0.0'
 ```
 
 ## 目录结构
 
-%s
+```
+- dev                                                 | 根目录
+   - http                                             | 基于 OkHttp 管理实现代码
+      - manager                                       | Retrofit 多 BaseUrl 管理
+      - progress                                      | OkHttp 上传、下载进度监听
+```
+
 
 ## 库功能介绍
 
@@ -53,4 +59,20 @@ DevHttpCapture.updateInterceptor(moduleName, isCapture);
 
 ## API
 
-%s
+
+- dev                                                 | 根目录
+   - [http](#devhttp)                                 | 基于 OkHttp 管理实现代码
+      - [manager](#devhttpmanager)                    | Retrofit 多 BaseUrl 管理
+      - [progress](#devhttpprogress)                  | OkHttp 上传、下载进度监听
+
+
+## <span id="dev">**`dev`**</span>
+
+
+## <span id="devhttp">**`dev.http`**</span>
+
+
+## <span id="devhttpmanager">**`dev.http.manager`**</span>
+
+
+## <span id="devhttpprogress">**`dev.http.progress`**</span>

@@ -55,6 +55,8 @@
 
 - [DevHttpCaptureCompiler API Generate Main](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpCaptureCompiler_READMEMain.java)
 
+- [DevHttpManager API Generate Main](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpManager_READMEMain.java)
+
 - [DevWidget API Generate Main](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevWidget_READMEMain.java)
 
 - [DevEnvironment API Generate Main](https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevEnvironment_READMEMain.java)
@@ -80,6 +82,8 @@
 - [DevHttpCapture API](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md) OkHttp 抓包工具库
 
 - [DevHttpCaptureCompiler API](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md) OkHttp 抓包工具库 ( 可视化功能 )
+
+- [DevHttpManager API](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md) OkHttp 管理库 ( Retrofit 多 BaseUrl 等 )
 
 - [DevWidget API](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md) 自定义 View UI 库
 
