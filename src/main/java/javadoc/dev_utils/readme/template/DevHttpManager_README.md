@@ -326,12 +326,12 @@ class WanAndroidAPI private constructor() {
 
 **整个方法流程执行循序为：**
 
-1. [Global.OnRetrofitResetListener] onResetBefore
-2. [RetrofitBuilder] onResetBefore
-3. [Global.OkHttpBuilder] createOkHttpBuilder
-4. [RetrofitBuilder] createRetrofitBuilder
-5. [RetrofitBuilder] onReset
-6. [Global.OnRetrofitResetListener] onReset
+1. `Global.OnRetrofitResetListener` onResetBefore
+2. `RetrofitBuilder` onResetBefore
+3. `Global.OkHttpBuilder` createOkHttpBuilder
+4. `RetrofitBuilder` createRetrofitBuilder
+5. `RetrofitBuilder` onReset
+6. `Global.OnRetrofitResetListener` onReset
 
 ```kotlin
 /**
