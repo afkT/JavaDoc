@@ -28,7 +28,7 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 * 侵入性低, 使用本框架不需要更改历史上传、下载实现代码
 
 
-### API 文档
+## API 文档
 
 * **DevHttpManager 管理库方法 ->** [DevHttpManager.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev/DevHttpManager.kt)
 
@@ -51,7 +51,7 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 | reset | 重置处理 ( 重新构建 Retrofit ) |
 | resetAll | 重置处理 ( 重新构建全部 Retrofit ) |
 
-#### Retrofit 多 BaseUrl 管理功能
+## Retrofit 多 BaseUrl 管理功能
 
 * **全局 OkHttp Builder 接口 ->** [OkHttpBuilder.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev/http/manager/OkHttpBuilder.kt)
 
@@ -77,7 +77,7 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 | onReset | 重新构建后调用 |
 
 
-* **RetrofitOperation ->** [RetrofitOperation.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev/http/manager/RetrofitOperation.kt)
+* **Retrofit Operation ->** [RetrofitOperation.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev/http/manager/RetrofitOperation.kt)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -85,3 +85,66 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 | create | 通过 Retrofit 代理创建 Service |
 | reset | 重置处理 ( 重新构建 Retrofit ) |
 | resetAndCreate | 重置处理 ( 重新构建 Retrofit ) 并代理创建 Service |
+
+
+# Retrofit 多 BaseUrl 管理功能使用
+
+**具体实现代码可以查看 [DevComponent lib_network](https://github.com/afkT/DevComponent/tree/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network) 、 [WanAndroidAPI](https://github.com/afkT/DevComponent/blob/main/component/module/module_wanandroid/src/main/java/afkt_replace/module/wan_android/data/api/WanAndroidAPI.kt) **
+
+以上述 [DevComponent](https://github.com/afkT/DevComponent) 组件化项目代码为例。
+
+```kotlin
+/**
+ * detail: Http Core Lib
+ * @author Ttt
+ * 执行循序为
+ * [Global.OnRetrofitResetListener] onResetBefore
+ * [RetrofitBuilder] onResetBefore
+ * [Global.OkHttpBuilder] createOkHttpBuilder
+ * [RetrofitBuilder] createRetrofitBuilder
+ * [RetrofitBuilder] onReset
+ * [Global.OnRetrofitResetListener] onReset
+ * 使用全局监听事件、构建操作是为了提供统一管理方法, 方便统一做处理
+ * 并且自身也存在回调方法, 也能够单独处理
+ * <p></p>
+ * 使用方法
+ * [DevHttpManager.putRetrofitBuilder]
+ * 通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象
+ */
+object HttpCoreLibrary {
+
+    // 全局通用 OkHttp Builder
+    private val mOkHttpBuilderGlobal = OkHttpBuilderGlobal()
+
+    // 全局 Retrofit 重新构建监听事件
+    private val mRetrofitResetListenerGlobal = RetrofitResetListenerGlobal()
+
+    // =============
+    // = 对外公开方法 =
+    // =============
+
+    /**
+     * 初始化 OkHttp 管理库 ( Retrofit 多 BaseUrl 等 )
+     * @param context Context
+     */
+    fun initialize(context: Context) {
+        // 设置全局 OkHttp Builder 接口对象
+        DevHttpManager.setOkHttpBuilder(
+            mOkHttpBuilderGlobal
+        )
+        // 设置全局 Retrofit 重新构建监听事件
+        DevHttpManager.setRetrofitResetListener(
+            mRetrofitResetListenerGlobal
+        )
+    }
+}
+```
+
+> 支持设置全局 OkHttp Builder 接口对象、全局 Retrofit 重新构建监听事件
+> 
+> initialize() 方法中的代码非必须设置，只是提供全局管理控制方法
+    
+* 如 OkHttpBuilderGlobal 内部实现 OkHttpBuilder 接口，
+  通过创建通用的 OkHttpClient.Builder 提供给 RetrofitBuilder.createRetrofitBuilder() 方法创建 Retrofit.Builder 使用
+
+* RetrofitResetListenerGlobal 则提供全局 BaseUrl Reset 监听，例如重新构建 Retrofit 前取消历史请求操作、重新构建后等操作

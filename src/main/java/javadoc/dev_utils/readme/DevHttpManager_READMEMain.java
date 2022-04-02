@@ -6,7 +6,6 @@ import java.util.List;
 
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
-import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
 
 /**
