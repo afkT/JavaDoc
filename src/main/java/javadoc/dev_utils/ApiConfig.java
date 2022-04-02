@@ -170,6 +170,23 @@ public final class ApiConfig {
     // DevHttpCaptureCompiler Template Readme
     public static final String DEV_HTTP_CAPTURE_COMPILER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpCaptureCompiler_README.md";
 
+    // ==================
+    // = DevHttpManager =
+    // ==================
+
+    // DevHttpManager 版本号
+    public static final String DEV_HTTP_MANAGER_VERSION            = "1.0.0";
+    // 包目录名
+    public static final String DEV_HTTP_MANAGER_PACKAGE            = "dev";
+    // DevHttpManager 文件路径
+    public static final String DEV_HTTP_MANAGER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevHttpManager/src/main/java/dev/";
+    // DevHttpManager GitHub 项目文件路径
+    public static final String DEV_HTTP_MANAGER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev";
+    // DevHttpManager API 文件保存路径
+    public static final String DEV_HTTP_MANAGER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevHttpManager/";
+    // DevHttpManager Template Readme
+    public static final String DEV_HTTP_MANAGER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpManager_README.md";
+
     // ============
     // = DevOther =
     // ============
@@ -304,6 +321,17 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_HttpCapture  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_HttpCapture = new HashMap<>();
+
+    // ==================
+    // = DevHttpManager =
+    // ==================
+
+    // 包名目录注释
+    public static final HashMap<String, String>   sCatalogMap_HttpManager      = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashSet<String>           sFilterClassSet_HttpManager  = new HashSet<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_HttpManager = new HashMap<>();
 
     // ============
     // = DevOther =
@@ -445,6 +473,15 @@ public final class ApiConfig {
 
         sCatalogMap_HttpCapture.put("dev", "根目录");
         sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
+
+        // ==================
+        // = DevHttpManager =
+        // ==================
+
+        sCatalogMap_HttpManager.put("dev", "根目录");
+        sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
+        sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
 
         // ============
         // = DevOther =
