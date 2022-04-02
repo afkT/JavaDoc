@@ -89,9 +89,8 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 
 # Retrofit 多 BaseUrl 管理功能使用
 
-**具体实现代码可以查看 [DevComponent lib_network](https://github.com/afkT/DevComponent/tree/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network) 、 [WanAndroidAPI](https://github.com/afkT/DevComponent/blob/main/component/module/module_wanandroid/src/main/java/afkt_replace/module/wan_android/data/api/WanAndroidAPI.kt) **
-
-以上述 [DevComponent](https://github.com/afkT/DevComponent) 组件化项目代码为例。
+**具体实现代码可以查看 [DevComponent lib_network][DevComponent lib_network]、[WanAndroidAPI][WanAndroidAPI]**
+，以上述 [DevComponent][DevComponent] 组件化项目代码为例。
 
 ```kotlin
 /**
@@ -140,11 +139,164 @@ object HttpCoreLibrary {
 }
 ```
 
-> 支持设置全局 OkHttp Builder 接口对象、全局 Retrofit 重新构建监听事件
-> 
-> initialize() 方法中的代码非必须设置，只是提供全局管理控制方法
+**initialize() 方法中的代码非必须设置，只是提供全局管理控制方法，支持设置全局 OkHttp Builder 接口对象、全局 Retrofit 重新构建监听事件。**
     
-* 如 OkHttpBuilderGlobal 内部实现 OkHttpBuilder 接口，
+* 如 [OkHttpBuilderGlobal][OkHttpBuilderGlobal] 内部实现 OkHttpBuilder 接口，
   通过创建通用的 OkHttpClient.Builder 提供给 RetrofitBuilder.createRetrofitBuilder() 方法创建 Retrofit.Builder 使用
 
-* RetrofitResetListenerGlobal 则提供全局 BaseUrl Reset 监听，例如重新构建 Retrofit 前取消历史请求操作、重新构建后等操作
+* [RetrofitResetListenerGlobal][RetrofitResetListenerGlobal] 则提供全局 BaseUrl Reset 监听，例如重新构建 Retrofit 前取消历史请求操作、重新构建后等操作
+
+> 以上代码为非必须实现，以下为使用该库核心方法
+
+```kotlin
+/**
+ * detail: 玩 Android API Service
+ * @author Ttt
+ */
+interface WanAndroidService {
+
+    @GET("/article/list/{page}/json")
+    suspend fun getArticleList(@Path("page") page: Int): ArticleBean
+}
+
+/**
+ * detail: 玩 Android API
+ * @author Ttt
+ */
+class WanAndroidAPI private constructor() {
+
+    companion object {
+
+        private val instance: WanAndroidAPI by lazy { WanAndroidAPI() }
+
+        fun api(): WanAndroidService {
+            return instance.api()
+        }
+
+        fun operation(): RetrofitOperation {
+            return instance.operation()
+        }
+    }
+
+    // =====================
+    // = WanAndroidService =
+    // =====================
+
+    @Volatile
+    private var mWanAndroidService: WanAndroidService? = null
+
+    fun api(): WanAndroidService {
+        if (mWanAndroidService == null) {
+            synchronized(WanAndroidService::class.java) {
+                if (mWanAndroidService == null) {
+                    createAPI()
+                }
+            }
+        }
+        return mWanAndroidService as WanAndroidService
+    }
+
+    private fun createAPI() {
+        mWanAndroidService = operation().create(
+            WanAndroidService::class.java
+        )
+    }
+
+    // ==================
+    // = DevEnvironment =
+    // ==================
+
+    private fun apiBaseUrl(): HttpUrl {
+        return DevEnvironment.getWanAndroidEnvironmentValue(
+            AppContext.content()
+        ).toHttpUrl()
+    }
+
+    // =====================
+    // = RetrofitOperation =
+    // =====================
+
+    /**
+     * 对外提供操作对象
+     * @return RetrofitOperation
+     */
+    fun operation(): RetrofitOperation {
+        return mOperation
+    }
+
+    // Retrofit Operation
+    private val mOperation: RetrofitOperation by lazy {
+        DevHttpManager.putRetrofitBuilder(
+            BuildConfig.MODULE_NAME, mRetrofitBuilder
+        )
+    }
+
+    // ===================
+    // = RetrofitBuilder =
+    // ===================
+
+    // Retrofit Builder 接口
+    private val mRetrofitBuilder: RetrofitBuilder by lazy {
+        object : RetrofitBuilder {
+
+            /**
+             * 创建 Retrofit Builder
+             * @param oldRetrofit 上一次构建的 Retrofit
+             * @param httpUrl 构建使用指定 baseUrl
+             * @param okHttp OkHttpClient 构建全局复用
+             * @return Retrofit.Builder
+             */
+            override fun createRetrofitBuilder(
+                oldRetrofit: Retrofit?,
+                httpUrl: HttpUrl?,
+                okHttp: OkHttpClient.Builder?
+            ): Retrofit.Builder {
+                return HttpCoreUtils.createRetrofitBuilder(
+                    httpUrl = httpUrl ?: apiBaseUrl(),
+                    okHttp = okHttp ?: OkHttpClient.Builder()
+                )
+            }
+
+            // ==========
+            // = 通知事件 =
+            // ==========
+
+            /**
+             * 重新构建前调用
+             * @param key String
+             * @param oldRetrofit 上一次构建的 Retrofit
+             * 在 [createRetrofitBuilder] 之前调用
+             */
+            override fun onResetBefore(
+                key: String,
+                oldRetrofit: Retrofit?
+            ) {
+
+            }
+
+            /**
+             * 重新构建后调用
+             * @param key String
+             * @param newRetrofit 重新构建的 Retrofit 对象
+             * 在 [createRetrofitBuilder] 之后调用
+             */
+            override fun onReset(
+                key: String,
+                newRetrofit: Retrofit?
+            ) {
+                // 重新构建后创建新的代理对象
+                createAPI()
+            }
+        }
+    }
+}
+```
+
+
+
+
+[DevComponent]: https://github.com/afkT/DevComponent
+[DevComponent lib_network]: https://github.com/afkT/DevComponent/tree/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network
+[WanAndroidAPI]: https://github.com/afkT/DevComponent/blob/main/component/module/module_wanandroid/src/main/java/afkt_replace/module/wan_android/data/api/WanAndroidAPI.kt
+[OkHttpBuilderGlobal]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network/common/OkHttpBuilderGlobal.kt
+[RetrofitResetListenerGlobal]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network/common/RetrofitResetListenerGlobal.kt
