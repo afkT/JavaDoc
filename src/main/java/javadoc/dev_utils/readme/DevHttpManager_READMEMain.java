@@ -35,8 +35,6 @@ final class DevHttpManager_READMEMain {
     ) {
         // 不增加锚链接 -> 一级目录
         String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
-        // 增加锚链接 -> 二级目录
-        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
@@ -45,7 +43,7 @@ final class DevHttpManager_READMEMain {
         // 保存 README 内容
         builder.append(String.format(
                 templateContent, ApiConfig.DEV_HTTP_MANAGER_VERSION,
-                catalog, apiCatalog
+                catalog
         ));
     }
 
@@ -81,18 +79,6 @@ final class DevHttpManager_READMEMain {
                 builder, path, packageName, ApiConfig.sCatalogMap_HttpManager,
                 ApiConfig.DEV_HTTP_MANAGER_TEMPLATE
         );
-
-        // 生成 API 目录
-        String httpManagerAPI = APIGenerate.apiGenerate(
-                "", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_HttpManager,
-                ApiConfig.sFilterMethodMap_HttpManager,
-                ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder,
-                methodNotAnnotateBuilder, notMethodBuilder
-        );
-
-        builder.append(httpManagerAPI);
 
         // 保存合成后的 API README
         FileUtils.saveFile(
