@@ -15,7 +15,7 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 
 * 支持 Retrofit BaseUrl Reset 事件全局监听、各个模块单独监听回调
 
-* 支持全局 OkHttp Builder 创建方法, 可进行全局管理
+* 支持全局 OkHttp Builder 创建方法，可进行全局管理
 
 * 针对多 Retrofit 管理封装 Operation 对象并支持组件化使用
 
@@ -23,9 +23,9 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 
 * 支持对 App 所有链接上传、下载进度监听
 
-* 基于 OkHttp 原生 Api 实现, 不存在兼容问题
+* 基于 OkHttp 原生 Api 实现，不存在兼容问题
 
-* 侵入性低, 使用本框架不需要更改历史上传、下载实现代码
+* 侵入性低，使用本框架不需要更改历史上传、下载实现代码
 
 
 ## API 文档
@@ -146,7 +146,7 @@ object HttpCoreLibrary {
 }
 ```
 
-> **以上代码为非必须实现，以下为使用该库核心方法**
+> **以上代码为非必须实现，以下为使用该库核心方法示例**
 
 ```kotlin
 /**
@@ -292,7 +292,7 @@ class WanAndroidAPI private constructor() {
 }
 ```
 
-核心步骤只有一步: **通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象**
+核心步骤只有一步：**通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象**
 
 ```kotlin
 // 通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象
@@ -302,6 +302,96 @@ DevHttpManager.putRetrofitBuilder(
 ```
 
 通过返回的 [Operation][Operation] 对象进行获取 Retrofit 或直接 create APIService
+
+```kotlin
+/**
+ * 获取 Retrofit 对象
+ * @param check 是否需要判断 Retrofit 是否为 null
+ * @return Retrofit
+ */
+fun getRetrofit(check: Boolean = true): Retrofit? {
+    if (check && mRetrofit == null) {
+        buildRetrofit()
+    }
+    return mRetrofit
+}
+
+/**
+ * 通过 Retrofit 代理创建 Service
+ * @param service Class<T>
+ * @return Service Class
+ */
+fun <T> create(service: Class<T>): T? {
+    try {
+        return getRetrofit()?.create(service)
+    } catch (e: Exception) {
+        LogPrintUtils.eTag(TAG, e, "create")
+    }
+    return null
+}
+```
+
+**整个方法流程执行循序为：**
+
+1. [Global.OnRetrofitResetListener] onResetBefore
+2. [RetrofitBuilder] onResetBefore
+3. [Global.OkHttpBuilder] createOkHttpBuilder
+4. [RetrofitBuilder] createRetrofitBuilder
+5. [RetrofitBuilder] onReset
+6. [Global.OnRetrofitResetListener] onReset
+
+```kotlin
+/**
+ * 构建 Retrofit 方法 ( 最终调用 )
+ * @param httpUrl 构建使用指定 baseUrl
+ * @return Retrofit Operation
+ * 执行循序为
+ * Global onResetBefore
+ * builder ( this ) onResetBefore
+ * Global createOkHttpBuilder
+ * builder ( this ) createRetrofitBuilder
+ * builder ( this ) onReset
+ * Global onReset
+ * 使用全局监听事件、构建操作是为了提供统一管理方法, 方便统一做处理
+ * 并且自身也存在回调方法, 也能够单独处理
+ */
+private fun buildRetrofit(httpUrl: HttpUrl? = null): RetrofitOperation {
+    if (mReset) {
+        try {
+            RetrofitManager.getRetrofitResetListener()?.onResetBefore(
+                key, mRetrofit
+            )
+        } catch (e: Exception) {
+        }
+        builder.onResetBefore(key, mRetrofit)
+    }
+
+    // 获取全局 OkHttp Builder
+    val okHttpBuilder = try {
+        RetrofitManager.getOkHttpBuilder()?.createOkHttpBuilder(key)
+    } catch (e: Exception) {
+        null
+    }
+    // 可以通过 mRetrofit?.baseUrl() 获取之前的配置
+    mRetrofit = builder.createRetrofitBuilder(
+        mRetrofit, httpUrl, okHttpBuilder
+    ).build()
+
+    if (mReset) {
+        builder.onReset(key, mRetrofit)
+        try {
+            RetrofitManager.getRetrofitResetListener()?.onReset(
+                key, mRetrofit
+            )
+        } catch (e: Exception) {
+        }
+    }
+    // 首次为初始化, 后续操作为重置操作
+    mReset = true
+    return this
+}
+```
+
 
 
 
