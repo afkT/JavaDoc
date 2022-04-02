@@ -92,6 +92,13 @@ implementation 'io.github.afkt:DevHttpManager:%s'
 **具体实现代码可以查看 [DevComponent lib_network][DevComponent lib_network]、[WanAndroidAPI][WanAndroidAPI]**
 ，以上述 [DevComponent][DevComponent] 组件化项目代码为例。
 
+* HttpCoreLibrary initialize() 方法中的代码非必须设置，只是提供全局管理控制方法，支持设置全局 OkHttp Builder 接口对象、全局 Retrofit 重新构建监听事件。
+
+* 如 [OkHttpBuilderGlobal][OkHttpBuilderGlobal] 内部实现 OkHttpBuilder 接口，
+  通过创建通用的 OkHttpClient.Builder 提供给 RetrofitBuilder.createRetrofitBuilder() 方法创建 Retrofit.Builder 使用
+
+* [RetrofitResetListenerGlobal][RetrofitResetListenerGlobal] 则提供全局 BaseUrl Reset 监听，例如重新构建 Retrofit 前取消历史请求操作、重新构建后等操作
+
 ```kotlin
 /**
  * detail: Http Core Lib
@@ -139,14 +146,7 @@ object HttpCoreLibrary {
 }
 ```
 
-**initialize() 方法中的代码非必须设置，只是提供全局管理控制方法，支持设置全局 OkHttp Builder 接口对象、全局 Retrofit 重新构建监听事件。**
-    
-* 如 [OkHttpBuilderGlobal][OkHttpBuilderGlobal] 内部实现 OkHttpBuilder 接口，
-  通过创建通用的 OkHttpClient.Builder 提供给 RetrofitBuilder.createRetrofitBuilder() 方法创建 Retrofit.Builder 使用
-
-* [RetrofitResetListenerGlobal][RetrofitResetListenerGlobal] 则提供全局 BaseUrl Reset 监听，例如重新构建 Retrofit 前取消历史请求操作、重新构建后等操作
-
-> 以上代码为非必须实现，以下为使用该库核心方法
+> **以上代码为非必须实现，以下为使用该库核心方法**
 
 ```kotlin
 /**
@@ -292,6 +292,18 @@ class WanAndroidAPI private constructor() {
 }
 ```
 
+核心步骤只有一步: **通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象**
+
+```kotlin
+// 通过 Key 绑定存储 RetrofitBuilder 并返回 Operation 操作对象
+DevHttpManager.putRetrofitBuilder(
+    stringKey, RetrofitBuilder
+)
+```
+
+通过返回的 [Operation][Operation] 对象进行获取 Retrofit 或直接 create APIService
+
+
 
 
 
@@ -300,3 +312,4 @@ class WanAndroidAPI private constructor() {
 [WanAndroidAPI]: https://github.com/afkT/DevComponent/blob/main/component/module/module_wanandroid/src/main/java/afkt_replace/module/wan_android/data/api/WanAndroidAPI.kt
 [OkHttpBuilderGlobal]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network/common/OkHttpBuilderGlobal.kt
 [RetrofitResetListenerGlobal]: https://github.com/afkT/DevComponent/blob/main/component/core/libs/lib_network/src/main/java/afkt_replace/core/lib/network/common/RetrofitResetListenerGlobal.kt
+[Operation]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev/http/manager/RetrofitOperation.kt
