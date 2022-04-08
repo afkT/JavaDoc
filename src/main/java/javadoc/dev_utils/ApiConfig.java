@@ -34,13 +34,13 @@ public final class ApiConfig {
     public static final String DEV_COMPONENT_PROJECT_PATH = PROJECT_LOCAL_PATH + File.separator + DEV_COMPONENT_PROJECT_NAME;
 
     // 包目录名
-    public static final String DEV_PACKAGE          = "dev.utils";
+    public static final String DEV_PACKAGE            = "dev.utils";
     // 作者 Github 地址
-    public static final String GITHUB_AUTHOR_URL    = "https://github.com/afkT";
+    public static final String GITHUB_AUTHOR_URL      = "https://github.com/afkT";
     // README API 文件名
-    public static final String README_FILE_NAME     = "README.md";
+    public static final String README_FILE_NAME       = "README.md";
     // README_API 文件名
-    public static final String README_API_FILE_NAME = "README_API.md";
+    public static final String README_API_FILE_NAME   = "README_API.md";
     // API 占位符常量 【API_PLACEHOLDER_FORMAT】
     public static final String API_PLACEHOLDER_FORMAT = "【API_PLACEHOLDER_FORMAT】";
 
