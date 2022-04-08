@@ -2,21 +2,14 @@ package javadoc;
 
 import com.google.gson.GsonBuilder;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import dev.utils.DevFinal;
 import dev.utils.common.ArrayUtils;
 import dev.utils.common.FileUtils;
 import dev.utils.common.comparator.ComparatorUtils;
+import javadoc.dev_utils.ApiConfig;
+
+import java.io.File;
+import java.util.*;
 
 /**
  * detail: 内部工具类
@@ -152,6 +145,29 @@ public final class Utils {
         // 用于生成 Config 特殊处理
         builder.delete(0, space.length());
         return builder.toString();
+    }
+
+    /**
+     * 拼接 API 内容
+     * <pre>
+     *     解决 Markdown link 优化, 底部拼接 API 错乱问题
+     *     内部查找占位符并进行替换
+     *     如果不存在占位符则直接进行拼接
+     * </pre>
+     * @param builder    拼接 Builder
+     * @param apiContent API 内容
+     */
+    public static void appendAPI(
+            final StringBuilder builder,
+            final String apiContent
+    ) {
+        int apiIndex = builder.lastIndexOf(ApiConfig.API_PLACEHOLDER_FORMAT);
+        if (apiIndex != -1) {
+            builder.delete(apiIndex, apiIndex + ApiConfig.API_PLACEHOLDER_FORMAT.length());
+            builder.insert(apiIndex, apiContent);
+        } else {
+            builder.append(apiContent);
+        }
     }
 
     // ========

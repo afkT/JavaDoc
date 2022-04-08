@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import dev.utils.common.FileUtils;
+import javadoc.Utils;
 import javadoc.dev_utils.ApiConfig;
 import javadoc.dev_utils.assist.APIGenerate;
 import javadoc.dev_utils.assist.PackageCatalog;
@@ -93,7 +94,8 @@ final class DevHttpCaptureCompiler_READMEMain {
                 methodNotAnnotateBuilder, notMethodBuilder
         );
 
-        builder.append(httpCaptureAPI);
+        // 拼接 API 内容
+        Utils.appendAPI(builder, httpCaptureAPI);
 
         // 保存合成后的 API README
         FileUtils.saveFile(

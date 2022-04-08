@@ -54,9 +54,9 @@ implementation 'io.github.afkt:DevAppX:2.3.6'
 
 ## 初始化
 
-> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化~~ , 在 DevUtils FileProviderDevApp 中已初始化 , 无需主动调用
+> ##### ~~只需要在 Application 中调用 `DevUtils.init()` 进行初始化~~，在 DevUtils FileProviderDevApp 中已初始化，无需主动调用
 
-> 视情况决定是否主动调用 `DevUtils.init()` 方法 ( 可自行查询理解 FileProvider onCreate() 方法什么时候被调用及 Application 初始化顺序 )
+> 视情况决定是否主动调用 `DevUtils.init()` 方法 ( 可自行查阅 FileProvider onCreate() 方法什么时候被调用及 Application 初始化顺序 )
 
 ## 事项
 

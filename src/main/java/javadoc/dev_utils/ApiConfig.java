@@ -41,6 +41,8 @@ public final class ApiConfig {
     public static final String README_FILE_NAME     = "README.md";
     // README_API 文件名
     public static final String README_API_FILE_NAME = "README_API.md";
+    // API 占位符常量 【API_PLACEHOLDER_FORMAT】
+    public static final String API_PLACEHOLDER_FORMAT = "【API_PLACEHOLDER_FORMAT】";
 
     // ============
     // = DevUtils =

@@ -53,6 +53,8 @@ DevHttpCaptureCompiler.removeUrlFunction(moduleName);
 
 %s
 
+【API_PLACEHOLDER_FORMAT】
+
 
 
 
