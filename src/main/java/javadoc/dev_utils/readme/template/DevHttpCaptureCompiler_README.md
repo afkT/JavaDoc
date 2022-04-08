@@ -14,7 +14,7 @@
 
 module | DevHttpCapture | DevHttpCaptureCompiler | DevHttpCaptureCompilerRelease
 :---:|:---:|:---:|:---:
-version | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt) | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt) | [![MavenCentral](https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt)
+version | [![][maven_svg]][maven] | [![][maven_svg]][maven] | [![][maven_svg]][maven]
 
 
 ### Gradle
@@ -52,3 +52,10 @@ DevHttpCaptureCompiler.removeUrlFunction(moduleName);
 ### API
 
 %s
+
+
+
+
+
+[maven_svg]: https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg
+[maven]: https://search.maven.org/search?q=io.github.afkt
