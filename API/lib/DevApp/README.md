@@ -152,10 +152,8 @@ DevUtils.openDebug();
 | getRootInActiveWindow | 获取根节点 |
 | operation | 获取 Operation |
 | node | 获取 Node |
-| findFocus | 查找符合条件的节点 |
-| findAccessibilityNodeInfosByText | 查找符合条件的节点 |
-| findAccessibilityNodeInfosByViewId | 查找符合条件的节点 |
 | performGlobalAction | 模拟全局对应 Action 操作 |
+| dispatchGesture | 模拟手势操作 |
 | performActionBack | 触发返回键 |
 | performActionHome | 触发 Home 键 |
 | performActionPowerDialog | 启动长按电源按钮 Dialog |
@@ -165,10 +163,16 @@ DevUtils.openDebug();
 | performActionRecents | 最近打开应用列表 |
 | performActionQuickSettings | 打开设置 |
 | performActionSplitScreen | 分屏 |
+| accept | 是否允许添加 |
 | getNodeInfo | 获取无障碍节点 |
 | performAction | 模拟对应 Action 操作 |
 | performClick | 点击指定节点 |
 | performLongClick | 长按指定节点 |
+| inputText | 指定节点输入文本 |
+| findFocus | 查找符合条件的节点 |
+| findAccessibilityNodeInfosByText | 查找符合条件的节点 |
+| findAccessibilityNodeInfosByViewId | 查找符合条件的节点 |
+| findByFilter | 查找全部子节点并进行筛选 |
 | logEvent | 拼接 AccessibilityEvent 信息日志 |
 | logNodeInfo | 拼接 AccessibilityNodeInfo 信息日志 |
 | logComplete | 拼接 AccessibilityEvent、AccessibilityService 完整信息日志 |
