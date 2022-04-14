@@ -13,7 +13,7 @@
 >
 > **[Android 规范](https://github.com/afkT/DevUtils/blob/master/README/android_standard.md)** 、 **[Java 规范](https://github.com/afkT/DevUtils/blob/master/README/java_standard.md)** 、 **[Git 规范](https://github.com/afkT/DevUtils/blob/master/README/git_standard.md)**
 
-> [DevComponent](https://github.com/afkT/DevComponent) 【100% Kotlin 实现 Android 项目组件化示例代码】
+> **[DevComponent](https://github.com/afkT/DevComponent)** 【100% Kotlin 实现 Android 项目组件化示例代码】
 > 基于 Google JetPack AndroidX + Kotlin + Coroutines + MVVM 架构（DataBinding、ViewModel、Lifecycle）
 > 等最新技术栈进行组件化基础搭建，使用 ARouter 方案实现组件化
 
