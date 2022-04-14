@@ -146,23 +146,37 @@ DevUtils.openDebug();
 | setService | 设置 AccessibilityService 对象 |
 | checkAccessibility | 检查是否开启无障碍功能 |
 | isAccessibilitySettingsOn | 判断是否开启无障碍功能 |
-| printAccessibilityEvent | 打印 AccessibilityEvent 信息日志 |
+| disableSelf | 禁用无障碍服务 |
+| getServiceInfo | 获取无障碍服务信息 |
+| setServiceInfo | 设置无障碍服务信息 ( 动态配置方式 ) |
+| getRootInActiveWindow | 获取根节点 |
+| operation | 获取 Operation |
+| node | 获取 Node |
 | findFocus | 查找符合条件的节点 |
 | findAccessibilityNodeInfosByText | 查找符合条件的节点 |
 | findAccessibilityNodeInfosByViewId | 查找符合条件的节点 |
-| performClick | 点击指定的节点 |
-| performLongClick | 长按指定的节点 |
-| preformActionBack | 触发返回键 |
-| preformActionHome | 触发 Home 键 |
-| preformActionPowerDialog | 启动长按电源按钮 Dialog |
-| preformActionLockScreen | 锁定屏幕 ( 非锁屏 ) |
-| preformActionTakeScreenshot | 截屏 |
-| preformActionNotifications | 打开通知栏 |
-| preformActionRecents | 最近打开应用列表 |
-| preformActionQuickSettings | 打开设置 |
-| preformActionSplitScreen | 分屏 |
-| preformAction | 模拟对应 Action 操作 |
 | performGlobalAction | 模拟全局对应 Action 操作 |
+| performActionBack | 触发返回键 |
+| performActionHome | 触发 Home 键 |
+| performActionPowerDialog | 启动长按电源按钮 Dialog |
+| performActionLockScreen | 锁定屏幕 ( 非锁屏 ) |
+| performActionTakeScreenshot | 截屏 |
+| performActionNotifications | 打开通知栏 |
+| performActionRecents | 最近打开应用列表 |
+| performActionQuickSettings | 打开设置 |
+| performActionSplitScreen | 分屏 |
+| getNodeInfo | 获取无障碍节点 |
+| performAction | 模拟对应 Action 操作 |
+| performClick | 点击指定节点 |
+| performLongClick | 长按指定节点 |
+| logEvent | 拼接 AccessibilityEvent 信息日志 |
+| logNodeInfo | 拼接 AccessibilityNodeInfo 信息日志 |
+| logComplete | 拼接 AccessibilityEvent、AccessibilityService 完整信息日志 |
+| logNodeInfoChild | 拼接 AccessibilityNodeInfo 以及 Child 信息日志 |
+| contentChangeTypesToString | copy AccessibilityEvent singleContentChangeTypeToString |
+| windowChangeTypesToString | copy AccessibilityEvent singleWindowChangeTypeToString |
+| movementGranularitiesToString | copy AccessibilityNodeInfo getMovementGranularitySymbolicName |
+| getMovementGranularitySymbolicName | 封装 AccessibilityNodeInfo#toString() granularity 拼接代码 |
 
 
 * **Activity 工具类 ( 包含 Activity 控制管理 ) ->** [ActivityUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ActivityUtils.java)
