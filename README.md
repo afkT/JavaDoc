@@ -83,7 +83,7 @@
 
 - [DevHttpCaptureCompiler API][DevHttpCaptureCompiler API] OkHttp 抓包工具库 ( 可视化功能 )
 
-- [DevHttpManager API][DevHttpManager API] OkHttp 管理库 ( Retrofit 多 BaseUrl 等 )
+- [DevHttpManager API][DevHttpManager API] OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
 
 - [DevWidget API][DevWidget API] 自定义 View UI 库
 

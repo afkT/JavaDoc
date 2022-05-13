@@ -165,7 +165,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreStaticMap.put("RoundTextView", ArrayUtils.asListArgs("initAttrs"));
         ignoreStaticMap.put("ScanShapeView", ArrayUtils.asListArgs("initialize","handlerCornerPathEffect","onDraw","destroy","getShapeType","setShapeType","getCornerRadius","setCornerEffect","setRegion","setRegion","setRegion","getRegionLeft","getRegionTop","getRegionWidth","getRegionHeight","getRegion","getRegion","getRegionParent","getBorderMargin","setBorderMargin","getBorderColor","setBorderColor","getBorderWidth","setBorderWidth","isDrawBorder","setDrawBorder","isDrawBackground","setDrawBackground","getBGColor","setBGColor","isDrawAnim","setDrawAnim","isAutoAnim","setAutoAnim","getBorderToSquare","setBorderToSquare","getBorderWidthToSquare","setBorderWidthToSquare","getTriAngleLength","setTriAngleLength","isSpecialToSquare","setSpecialToSquare","getLineDurationToSquare","setLineDurationToSquare","getBitmapToSquare","setBitmapToSquare","getLineMarginTopToSquare","setLineMarginTopToSquare","getLineMarginLeftToSquare","setLineMarginLeftToSquare","getLineColorToSquare","setLineColorToSquare","getLineWidthToHexagon","setLineWidthToHexagon","getLineMarginToHexagon","setLineMarginToHexagon","isLineAnimDirection","setLineAnimDirection","getLineColorToHexagon","setLineColorToHexagon","getBitmapToAnnulus","setBitmapToAnnulus","getLineColorToAnnulus","setLineColorToAnnulus","getLineOffsetSpeedToAnnulus","setLineOffsetSpeedToAnnulus","getAnnulusDraws","setAnnulusDraws","getAnnulusColors","setAnnulusColors","getAnnulusLengths","setAnnulusLengths","getAnnulusWidths","setAnnulusWidths","getAnnulusMargins","setAnnulusMargins","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","startAnim","stopAnim","animSwitch","isAnimRunning","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
         ignoreStaticMap.put("ScanShapeView.CornerEffect", ArrayUtils.asListArgs("getRadius"));
-        ignoreStaticMap.put("SignView", ArrayUtils.asListArgs("onDraw","onTouchEvent","_resetCanvas","clearCanvas","snapshotByView","getPath","setPath","getPaint","setPaint","setDrawCallback"));
+        ignoreStaticMap.put("SignView", ArrayUtils.asListArgs("onDraw","onTouchEvent","innerResetCanvas","clearCanvas","snapshotByView","getPath","setPath","getPaint","setPaint","setDrawCallback"));
         ignoreStaticMap.put("StateLayout", ArrayUtils.asListArgs("reset","initialize","setListener","showIng","showFailed","showSuccess","showEmptyData","showType","notifyDataSetChanged","gone","visible","register","unregister","unregister","getAssistTag","setAssistTag","getData","setData","getData","setData","getView","getCurrentType","getCurrentView"));
         ignoreStaticMap.put("StateLayout.Global", ArrayUtils.asListArgs("register","unregister"));
         ignoreStaticMap.put("StateLayout.TypeAdapter", ArrayUtils.asListArgs("onCreateView","onBindView"));
@@ -294,7 +294,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreUnPublicMap.put("RoundRelativeLayout", ArrayUtils.asListArgs("initAttrs"));
         ignoreUnPublicMap.put("RoundTextView", ArrayUtils.asListArgs("initAttrs"));
         ignoreUnPublicMap.put("ScanShapeView", ArrayUtils.asListArgs("initialize","handlerCornerPathEffect","onDraw","refPaintToAnnulus","sin","getRegionMarginLeft","getRegionMarginTop","calcShapeRegion","calcShapeRegion","makeShape","makeBackground","makeAnim","drawAnim","resetAnim","animSwitch","refLineColorToSquare","refLineColorToHexagon","refLineColorToAnnulus","initAnim"));
-        ignoreUnPublicMap.put("SignView", ArrayUtils.asListArgs("onDraw","_resetCanvas"));
+        ignoreUnPublicMap.put("SignView", ArrayUtils.asListArgs("onDraw","innerResetCanvas"));
         ignoreUnPublicMap.put("StateLayout", ArrayUtils.asListArgs("initialize"));
         ignoreUnPublicMap.put("StateLayout.Listener", ArrayUtils.asListArgs("onRemove","onNotFound","onChange"));
         ignoreUnPublicMap.put("ViewAssist.Adapter", ArrayUtils.asListArgs("onCreateView","onBindView"));
@@ -355,7 +355,7 @@ final class DevWidgetConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("RoundRelativeLayout", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("RoundTextView", ArrayUtils.asListArgs("initAttrs - void"));
         ignoreReturnVoidMap.put("ScanShapeView", ArrayUtils.asListArgs("initialize - void","handlerCornerPathEffect - void","destroy - void","refPaintToAnnulus - void","makeBackground - void","makeAnim - void","drawAnim - void","resetAnim - void","startAnim - void","stopAnim - void","animSwitch - void","refLineColorToSquare - void","refLineColorToHexagon - void","refLineColorToAnnulus - void","initAnim - void"));
-        ignoreReturnVoidMap.put("SignView", ArrayUtils.asListArgs("_resetCanvas - void"));
+        ignoreReturnVoidMap.put("SignView", ArrayUtils.asListArgs("innerResetCanvas - void"));
         ignoreReturnVoidMap.put("StateLayout", ArrayUtils.asListArgs("initialize - void"));
         ignoreReturnVoidMap.put("ViewAssist", ArrayUtils.asListArgs("showType - void"));
         ignoreReturnVoidMap.put("WaveHelper", ArrayUtils.asListArgs("start - void","cancel - void"));

@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.6'
+implementation 'io.github.afkt:DevAppX:2.3.7'
 ```
 
 ## 目录结构
@@ -19,11 +19,13 @@ implementation 'io.github.afkt:DevAppX:2.3.6'
          - floating  | 悬浮窗实现方案辅助类
          - lifecycle | Activity 生命周期监听辅助类
          - record    | 文件记录分析类
+         - url       | Url 携带信息解析
       - cache        | 缓存工具类
       - camera       | 摄像头相关
          - camera1   | android.hardware.Camera ( Camera1 相关 )
       - helper       | 功能 Helper 辅助类
          - dev       | Dev 工具类链式调用 Helper 类
+         - flow      | 流式 ( 链式 ) 连接 Helper 类
          - quick     | 简化链式设置 View Quick Helper 类
          - version   | Android 版本适配 Helper 类
          - view      | View 链式调用快捷设置 Helper 类
@@ -41,6 +43,7 @@ implementation 'io.github.afkt:DevAppX:2.3.6'
       - assist       | 各种快捷辅助类
          - record    | 文件记录分析类
          - search    | 搜索相关 ( 文件搜索等 )
+         - url       | Url 携带信息解析
       - cipher       | 编 / 解码工具类
       - comparator   | 排序比较器
          - sort      | 各种类型比较器排序实现
@@ -103,11 +106,13 @@ DevUtils.openDebug();
          - [floating](#devutilsappassistfloating)     | 悬浮窗实现方案辅助类
          - [lifecycle](#devutilsappassistlifecycle)   | Activity 生命周期监听辅助类
          - [record](#devutilsappassistrecord)         | 文件记录分析类
+         - [url](#devutilsappassisturl)               | Url 携带信息解析
       - [cache](#devutilsappcache)                    | 缓存工具类
       - [camera](#devutilsappcamera)                  | 摄像头相关
          - [camera1](#devutilsappcameracamera1)       | android.hardware.Camera ( Camera1 相关 )
       - [helper](#devutilsapphelper)                  | 功能 Helper 辅助类
          - [dev](#devutilsapphelperdev)               | Dev 工具类链式调用 Helper 类
+         - [flow](#devutilsapphelperflow)             | 流式 ( 链式 ) 连接 Helper 类
          - [quick](#devutilsapphelperquick)           | 简化链式设置 View Quick Helper 类
          - [version](#devutilsapphelperversion)       | Android 版本适配 Helper 类
          - [view](#devutilsapphelperview)             | View 链式调用快捷设置 Helper 类
@@ -125,6 +130,7 @@ DevUtils.openDebug();
       - [assist](#devutilscommonassist)               | 各种快捷辅助类
          - [record](#devutilscommonassistrecord)      | 文件记录分析类
          - [search](#devutilscommonassistsearch)      | 搜索相关 ( 文件搜索等 )
+         - [url](#devutilscommonassisturl)            | Url 携带信息解析
       - [cipher](#devutilscommoncipher)               | 编 / 解码工具类
       - [comparator](#devutilscommoncomparator)       | 排序比较器
          - [sort](#devutilscommoncomparatorsort)      | 各种类型比较器排序实现
@@ -2619,6 +2625,24 @@ DevUtils.openDebug();
 | getFileInfo | getFileInfo |
 
 
+## <span id="devutilsappassisturl">**`dev.utils.app.assist.url`**</span>
+
+
+* **Android Api 实现 Url 解析器 ->** [AndroidUrlParser.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/url/AndroidUrlParser.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| reset | reset |
+| setUrl | setUrl |
+| getUrl | getUrl |
+| getUrlByPrefix | getUrlByPrefix |
+| getUrlByParams | getUrlByParams |
+| getUrlParams | getUrlParams |
+| getUrlParamsDecode | getUrlParamsDecode |
+| isConvertMap | isConvertMap |
+| setConvertMap | setConvertMap |
+
+
 ## <span id="devutilsappcache">**`dev.utils.app.cache`**</span>
 
 
@@ -2759,13 +2783,16 @@ DevUtils.openDebug();
 ## <span id="devutilsapphelper">**`dev.utils.app.helper`**</span>
 
 
-* **Helper 通用方法接口 ->** [IHelper.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/IHelper.java)
+* **基础 Helper 通用实现类 ->** [BaseHelper.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/BaseHelper.java)
 
 | 方法 | 注释 |
 | :- | :- |
 | devHelper | 获取 DevHelper |
 | quickHelper | 获取 QuickHelper |
 | viewHelper | 获取 ViewHelper |
+| flowHelper | 获取 FlowHelper |
+| flow | 执行 Action 流方法 |
+| flowValue | 流式返回传入值 |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
 
@@ -2778,9 +2805,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | get | 获取单例 DevHelper |
-| devHelper | 获取 DevHelper |
-| quickHelper | 获取 QuickHelper |
-| viewHelper | 获取 ViewHelper |
+| flow | 执行 Action 流方法 |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
 | setAnimationRepeat | 设置动画重复处理 |
@@ -3027,6 +3052,20 @@ DevUtils.openDebug();
 | setStatusBarColorAndFlag | 设置状态栏颜色、高版本状态栏蒙层 |
 
 
+## <span id="devutilsapphelperflow">**`dev.utils.app.helper.flow`**</span>
+
+
+* **流式 ( 链式 ) 连接 Helper 类 ->** [FlowHelper.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/helper/flow/FlowHelper.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| get | 获取单例 FlowHelper |
+| flow | 执行 Action 流方法 |
+| postRunnable | 在主线程 Handler 中执行任务 |
+| removeRunnable | 在主线程 Handler 中清除任务 |
+| action | 操作方法 |
+
+
 ## <span id="devutilsapphelperquick">**`dev.utils.app.helper.quick`**</span>
 
 
@@ -3248,9 +3287,7 @@ DevUtils.openDebug();
 | targetTextView | 获取目标 View ( 转 TextView ) |
 | targetEditText | 获取目标 View ( 转 EditText ) |
 | targetRecyclerView | 获取目标 View ( 转 RecyclerView ) |
-| devHelper | 获取 DevHelper |
-| quickHelper | 获取 QuickHelper |
-| viewHelper | 获取 ViewHelper |
+| flow | 执行 Action 流方法 |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
 | addTouchArea | 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域 |
@@ -3747,9 +3784,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | get | 获取单例 ViewHelper |
-| devHelper | 获取 DevHelper |
-| quickHelper | 获取 QuickHelper |
-| viewHelper | 获取 ViewHelper |
+| flow | 执行 Action 流方法 |
 | postRunnable | 在主线程 Handler 中执行任务 |
 | removeRunnable | 在主线程 Handler 中清除任务 |
 | addTouchArea | 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域 |
@@ -4585,13 +4620,20 @@ DevUtils.openDebug();
 | getBigDecimal | 获取 BigDecimal |
 | operation | 获取 Operation |
 | adjustDouble | 获取自己想要的数据格式 |
+| compareTo | 比较大小 |
+| compareToThrow | 比较大小 ( 抛出异常 ) |
 | add | 提供精确的加法运算 |
 | subtract | 提供精确的减法运算 |
 | multiply | 提供精确的乘法运算 |
 | divide | 提供精确的除法运算 |
 | remainder | 提供精确的取余运算 |
 | round | 提供精确的小数位四舍五入处理 |
-| compareTo | 比较大小 |
+| addThrow | 提供精确的加法运算 ( 抛出异常 ) |
+| subtractThrow | 提供精确的减法运算 ( 抛出异常 ) |
+| multiplyThrow | 提供精确的乘法运算 ( 抛出异常 ) |
+| divideThrow | 提供精确的除法运算 ( 抛出异常 ) |
+| remainderThrow | 提供精确的取余运算 ( 抛出异常 ) |
+| roundThrow | 提供精确的小数位四舍五入处理 ( 抛出异常 ) |
 | getScale | 获取小数点保留位数 |
 | getRoundingMode | 获取舍入模式 |
 | requireNonNull | 检查 Value 是否为 null, 为 null 则抛出异常 |
@@ -4813,6 +4855,7 @@ DevUtils.openDebug();
 | :- | :- |
 | convert | Object 转换所需类型对象 |
 | newString | Object 转 String |
+| newStringNotArrayDecode | Object 转 String ( 不进行 Array 解码转 String ) |
 | toString | Object 转 String |
 | toInt | Object 转 Integer |
 | toBoolean | Object 转 Boolean |
@@ -5634,6 +5677,41 @@ DevUtils.openDebug();
 | getStartTime | 获取开始搜索时间 ( 毫秒 ) |
 | getEndTime | 获取结束搜索时间 ( 毫秒 ) |
 | query | 搜索目录 |
+
+
+## <span id="devutilscommonassisturl">**`dev.utils.common.assist.url`**</span>
+
+
+* **Dev 库 Java 通用 Url 解析器 ->** [DevJavaUrlParser.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/url/DevJavaUrlParser.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| reset | reset |
+| setUrl | setUrl |
+| getUrl | getUrl |
+| getUrlByPrefix | getUrlByPrefix |
+| getUrlByParams | getUrlByParams |
+| getUrlParams | getUrlParams |
+| getUrlParamsDecode | getUrlParamsDecode |
+| isConvertMap | isConvertMap |
+| setConvertMap | setConvertMap |
+
+
+* **Url 携带信息解析 ->** [UrlExtras.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/url/UrlExtras.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getUrl | 获取完整 Url |
+| getUrlByPrefix | 获取 Url 前缀 ( 去除参数部分 ) |
+| getUrlByParams | 获取 Url 参数部分字符串 |
+| getUrlParams | 获取 Url Params Map |
+| getUrlParamsDecode | 获取 Url Params Map ( 参数值进行 UrlDecode ) |
+| getParser | 获取 Url 解析器 |
+| setParser | 设置 Url 解析器 |
+| reset | 重置并返回一个新的解析器 |
+| setUrl | 设置完整 Url |
+| isConvertMap | 是否解析、转换 Param Map |
+| setConvertMap | 设置是否解析、转换 Param Map |
 
 
 ## <span id="devutilscommoncipher">**`dev.utils.common.cipher`**</span>
