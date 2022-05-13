@@ -394,12 +394,14 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.assist.floating", "悬浮窗实现方案辅助类");
         sCatalogMap_APP.put(".app.assist.lifecycle", "Activity 生命周期监听辅助类");
         sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
+        sCatalogMap_APP.put(".app.assist.url", "Url 携带信息解析");
 
         sCatalogMap_APP.put(".app.cache", "缓存工具类");
         sCatalogMap_APP.put(".app.camera", "摄像头相关");
         sCatalogMap_APP.put(".app.camera.camera1", "android.hardware.Camera ( Camera1 相关 )");
         sCatalogMap_APP.put(".app.helper", "功能 Helper 辅助类");
         sCatalogMap_APP.put(".app.helper.dev", "Dev 工具类链式调用 Helper 类");
+        sCatalogMap_APP.put(".app.helper.flow", "流式 ( 链式 ) 连接 Helper 类");
         sCatalogMap_APP.put(".app.helper.quick", "简化链式设置 View Quick Helper 类");
         sCatalogMap_APP.put(".app.helper.version", "Android 版本适配 Helper 类");
         sCatalogMap_APP.put(".app.helper.view", "View 链式调用快捷设置 Helper 类");
@@ -424,6 +426,7 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".common.assist", "各种快捷辅助类");
         sCatalogMap_APP.put(".common.assist.record", "文件记录分析类");
         sCatalogMap_APP.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
+        sCatalogMap_APP.put(".common.assist.url", "Url 携带信息解析");
         sCatalogMap_APP.put(".common.cipher", "编 / 解码工具类");
         sCatalogMap_APP.put(".common.comparator", "排序比较器");
         sCatalogMap_APP.put(".common.comparator.sort", "各种类型比较器排序实现");
@@ -484,6 +487,7 @@ public final class ApiConfig {
         sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
         sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
         sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
+        sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
 
         // ============
         // = DevOther =
