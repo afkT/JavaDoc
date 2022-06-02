@@ -388,6 +388,7 @@ public final class ApiConfig {
         // ===========
 
         sCatalogMap_APP.put(".app", "APP 相关工具类");
+        sCatalogMap_APP.put(".app.activity_result", "Activity Result API");
         sCatalogMap_APP.put(".app.anim", "动画工具类");
 
         sCatalogMap_APP.put(".app.assist", "辅助类");

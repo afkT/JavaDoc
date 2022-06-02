@@ -6,52 +6,53 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.7'
+implementation 'io.github.afkt:DevAppX:2.3.8'
 ```
 
 ## 目录结构
 
 ```
-- dev.utils          | 根目录
-   - app             | APP 相关工具类
-      - anim         | 动画工具类
-      - assist       | 辅助类
-         - floating  | 悬浮窗实现方案辅助类
-         - lifecycle | Activity 生命周期监听辅助类
-         - record    | 文件记录分析类
-         - url       | Url 携带信息解析
-      - cache        | 缓存工具类
-      - camera       | 摄像头相关
-         - camera1   | android.hardware.Camera ( Camera1 相关 )
-      - helper       | 功能 Helper 辅助类
-         - dev       | Dev 工具类链式调用 Helper 类
-         - flow      | 流式 ( 链式 ) 连接 Helper 类
-         - quick     | 简化链式设置 View Quick Helper 类
-         - version   | Android 版本适配 Helper 类
-         - view      | View 链式调用快捷设置 Helper 类
-      - image        | 图片相关处理
-      - info         | APP 信息、PackageInfo 等
-      - logger       | 日志库 DevLogger
-      - permission   | 权限工具类
-      - player       | 多媒体 ( 视频、音频 ) 播放封装
-      - share        | SharedPreferences 封装
-      - timer        | 定时器
-      - toast        | Toast
-         - toaster   | Toaster 处理无通知权限
-      - wifi         | Wifi、热点工具类
-   - common          | Java 工具类, 不依赖 android api
-      - assist       | 各种快捷辅助类
-         - record    | 文件记录分析类
-         - search    | 搜索相关 ( 文件搜索等 )
-         - url       | Url 携带信息解析
-      - cipher       | 编 / 解码工具类
-      - comparator   | 排序比较器
-         - sort      | 各种类型比较器排序实现
-      - encrypt      | 加密工具类
-      - file         | 文件分片相关
-      - random       | 随机概率算法工具类
-      - thread       | 线程相关
-      - validator    | 数据校验工具类
+- dev.utils               | 根目录
+   - app                  | APP 相关工具类
+      - activity_result   | Activity Result API
+      - anim              | 动画工具类
+      - assist            | 辅助类
+         - floating       | 悬浮窗实现方案辅助类
+         - lifecycle      | Activity 生命周期监听辅助类
+         - record         | 文件记录分析类
+         - url            | Url 携带信息解析
+      - cache             | 缓存工具类
+      - camera            | 摄像头相关
+         - camera1        | android.hardware.Camera ( Camera1 相关 )
+      - helper            | 功能 Helper 辅助类
+         - dev            | Dev 工具类链式调用 Helper 类
+         - flow           | 流式 ( 链式 ) 连接 Helper 类
+         - quick          | 简化链式设置 View Quick Helper 类
+         - version        | Android 版本适配 Helper 类
+         - view           | View 链式调用快捷设置 Helper 类
+      - image             | 图片相关处理
+      - info              | APP 信息、PackageInfo 等
+      - logger            | 日志库 DevLogger
+      - permission        | 权限工具类
+      - player            | 多媒体 ( 视频、音频 ) 播放封装
+      - share             | SharedPreferences 封装
+      - timer             | 定时器
+      - toast             | Toast
+         - toaster        | Toaster 处理无通知权限
+      - wifi              | Wifi、热点工具类
+   - common               | Java 工具类, 不依赖 android api
+      - assist            | 各种快捷辅助类
+         - record         | 文件记录分析类
+         - search         | 搜索相关 ( 文件搜索等 )
+         - url            | Url 携带信息解析
+      - cipher            | 编 / 解码工具类
+      - comparator        | 排序比较器
+         - sort           | 各种类型比较器排序实现
+      - encrypt           | 加密工具类
+      - file              | 文件分片相关
+      - random            | 随机概率算法工具类
+      - thread            | 线程相关
+      - validator         | 数据校验工具类
 ```
 
 
@@ -99,46 +100,47 @@ DevUtils.openDebug();
 ## API
 
 
-- dev.utils                                           | 根目录
-   - [app](#devutilsapp)                              | APP 相关工具类
-      - [anim](#devutilsappanim)                      | 动画工具类
-      - [assist](#devutilsappassist)                  | 辅助类
-         - [floating](#devutilsappassistfloating)     | 悬浮窗实现方案辅助类
-         - [lifecycle](#devutilsappassistlifecycle)   | Activity 生命周期监听辅助类
-         - [record](#devutilsappassistrecord)         | 文件记录分析类
-         - [url](#devutilsappassisturl)               | Url 携带信息解析
-      - [cache](#devutilsappcache)                    | 缓存工具类
-      - [camera](#devutilsappcamera)                  | 摄像头相关
-         - [camera1](#devutilsappcameracamera1)       | android.hardware.Camera ( Camera1 相关 )
-      - [helper](#devutilsapphelper)                  | 功能 Helper 辅助类
-         - [dev](#devutilsapphelperdev)               | Dev 工具类链式调用 Helper 类
-         - [flow](#devutilsapphelperflow)             | 流式 ( 链式 ) 连接 Helper 类
-         - [quick](#devutilsapphelperquick)           | 简化链式设置 View Quick Helper 类
-         - [version](#devutilsapphelperversion)       | Android 版本适配 Helper 类
-         - [view](#devutilsapphelperview)             | View 链式调用快捷设置 Helper 类
-      - [image](#devutilsappimage)                    | 图片相关处理
-      - [info](#devutilsappinfo)                      | APP 信息、PackageInfo 等
-      - [logger](#devutilsapplogger)                  | 日志库 DevLogger
-      - [permission](#devutilsapppermission)          | 权限工具类
-      - [player](#devutilsappplayer)                  | 多媒体 ( 视频、音频 ) 播放封装
-      - [share](#devutilsappshare)                    | SharedPreferences 封装
-      - [timer](#devutilsapptimer)                    | 定时器
-      - [toast](#devutilsapptoast)                    | Toast
-         - [toaster](#devutilsapptoasttoaster)        | Toaster 处理无通知权限
-      - [wifi](#devutilsappwifi)                      | Wifi、热点工具类
-   - [common](#devutilscommon)                        | Java 工具类, 不依赖 android api
-      - [assist](#devutilscommonassist)               | 各种快捷辅助类
-         - [record](#devutilscommonassistrecord)      | 文件记录分析类
-         - [search](#devutilscommonassistsearch)      | 搜索相关 ( 文件搜索等 )
-         - [url](#devutilscommonassisturl)            | Url 携带信息解析
-      - [cipher](#devutilscommoncipher)               | 编 / 解码工具类
-      - [comparator](#devutilscommoncomparator)       | 排序比较器
-         - [sort](#devutilscommoncomparatorsort)      | 各种类型比较器排序实现
-      - [encrypt](#devutilscommonencrypt)             | 加密工具类
-      - [file](#devutilscommonfile)                   | 文件分片相关
-      - [random](#devutilscommonrandom)               | 随机概率算法工具类
-      - [thread](#devutilscommonthread)               | 线程相关
-      - [validator](#devutilscommonvalidator)         | 数据校验工具类
+- dev.utils                                                          | 根目录
+   - [app](#devutilsapp)                                             | APP 相关工具类
+      - [activity_result](#devutilsappactivity_result)               | Activity Result API
+      - [anim](#devutilsappanim)                                     | 动画工具类
+      - [assist](#devutilsappassist)                                 | 辅助类
+         - [floating](#devutilsappassistfloating)                    | 悬浮窗实现方案辅助类
+         - [lifecycle](#devutilsappassistlifecycle)                  | Activity 生命周期监听辅助类
+         - [record](#devutilsappassistrecord)                        | 文件记录分析类
+         - [url](#devutilsappassisturl)                              | Url 携带信息解析
+      - [cache](#devutilsappcache)                                   | 缓存工具类
+      - [camera](#devutilsappcamera)                                 | 摄像头相关
+         - [camera1](#devutilsappcameracamera1)                      | android.hardware.Camera ( Camera1 相关 )
+      - [helper](#devutilsapphelper)                                 | 功能 Helper 辅助类
+         - [dev](#devutilsapphelperdev)                              | Dev 工具类链式调用 Helper 类
+         - [flow](#devutilsapphelperflow)                            | 流式 ( 链式 ) 连接 Helper 类
+         - [quick](#devutilsapphelperquick)                          | 简化链式设置 View Quick Helper 类
+         - [version](#devutilsapphelperversion)                      | Android 版本适配 Helper 类
+         - [view](#devutilsapphelperview)                            | View 链式调用快捷设置 Helper 类
+      - [image](#devutilsappimage)                                   | 图片相关处理
+      - [info](#devutilsappinfo)                                     | APP 信息、PackageInfo 等
+      - [logger](#devutilsapplogger)                                 | 日志库 DevLogger
+      - [permission](#devutilsapppermission)                         | 权限工具类
+      - [player](#devutilsappplayer)                                 | 多媒体 ( 视频、音频 ) 播放封装
+      - [share](#devutilsappshare)                                   | SharedPreferences 封装
+      - [timer](#devutilsapptimer)                                   | 定时器
+      - [toast](#devutilsapptoast)                                   | Toast
+         - [toaster](#devutilsapptoasttoaster)                       | Toaster 处理无通知权限
+      - [wifi](#devutilsappwifi)                                     | Wifi、热点工具类
+   - [common](#devutilscommon)                                       | Java 工具类, 不依赖 android api
+      - [assist](#devutilscommonassist)                              | 各种快捷辅助类
+         - [record](#devutilscommonassistrecord)                     | 文件记录分析类
+         - [search](#devutilscommonassistsearch)                     | 搜索相关 ( 文件搜索等 )
+         - [url](#devutilscommonassisturl)                           | Url 携带信息解析
+      - [cipher](#devutilscommoncipher)                              | 编 / 解码工具类
+      - [comparator](#devutilscommoncomparator)                      | 排序比较器
+         - [sort](#devutilscommoncomparatorsort)                     | 各种类型比较器排序实现
+      - [encrypt](#devutilscommonencrypt)                            | 加密工具类
+      - [file](#devutilscommonfile)                                  | 文件分片相关
+      - [random](#devutilscommonrandom)                              | 随机概率算法工具类
+      - [thread](#devutilscommonthread)                              | 线程相关
+      - [validator](#devutilscommonvalidator)                        | 数据校验工具类
 
 
 ## <span id="devutilsapp">**`dev.utils.app`**</span>
@@ -189,6 +191,18 @@ DevUtils.openDebug();
 | getMovementGranularitySymbolicName | 封装 AccessibilityNodeInfo#toString() granularity 拼接代码 |
 
 
+* **Activity Result 工具类 ->** [ActivityResultUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ActivityResultUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getDefault | 获取默认实现 ( 原始 onActivityResult ) 封装辅助类 |
+| launch | 执行 ActivityResultContract createIntent 并进行跳转 |
+| unregister | 取消启动器注册, 并释放回调监听 |
+| getContract | 获取创建启动器对应 ActivityResultContract |
+| registerForActivityResult | 注册创建跳转回传值启动器并返回 |
+| register | 注册创建跳转回传值启动器并返回 |
+
+
 * **Activity 工具类 ( 包含 Activity 控制管理 ) ->** [ActivityUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ActivityUtils.java)
 
 | 方法 | 注释 |
@@ -211,7 +225,6 @@ DevUtils.openDebug();
 | getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 ( package/activityName ) |
 | getOptionsBundle | 设置跳转动画 |
 | getManager | 获取 ActivityManagerAssist 管理实例 |
-| startActivityForResult | Activity 跳转回传 |
 
 
 * **ADB shell 工具类 ->** [ADBUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ADBUtils.java)
@@ -2136,6 +2149,39 @@ DevUtils.openDebug();
 | :- | :- |
 | getWindow | 获取 Window |
 | get | 获取 WindowAssist |
+
+
+## <span id="devutilsappactivity_result">**`dev.utils.app.activity_result`**</span>
+
+
+* **Activity Result 封装辅助类 ->** [ActivityResultAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/activity_result/ActivityResultAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isLauncherEmpty | 判断启动器是否为 null |
+| isLauncherNotEmpty | 判断启动器是否不为 null |
+| setOperateCallback | 设置操作回调 |
+| getInputValue | 获取启动输入参数值 |
+| getOptionsValue | 获取 Activity 启动选项值 |
+| getMethodType | 获取对应 Type 所属方法 |
+| launch | launch |
+| unregister | unregister |
+| getContract | getContract |
+| onStart | 操作前回调 |
+| onState | 操作状态回调 |
+
+
+* **Activity Result 封装辅助类 ->** [DefaultActivityResult.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/activity_result/DefaultActivityResult.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getInstance | 获取 DefaultActivityResult 实例 |
+| startActivityForResult | Activity 跳转回传 |
+| onStartActivityForResult | 跳转 Activity 操作 |
+| onActivityResult | 回传处理 |
+| start | 跳转回传结果处理 Activity 内部方法 |
+| onCreate | onCreate |
+| onDestroy | onDestroy |
 
 
 ## <span id="devutilsappanim">**`dev.utils.app.anim`**</span>
