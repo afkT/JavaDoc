@@ -12,47 +12,47 @@ implementation 'io.github.afkt:DevAppX:2.3.8'
 ## 目录结构
 
 ```
-- dev.utils               | 根目录
-   - app                  | APP 相关工具类
-      - activity_result   | Activity Result API
-      - anim              | 动画工具类
-      - assist            | 辅助类
-         - floating       | 悬浮窗实现方案辅助类
-         - lifecycle      | Activity 生命周期监听辅助类
-         - record         | 文件记录分析类
-         - url            | Url 携带信息解析
-      - cache             | 缓存工具类
-      - camera            | 摄像头相关
-         - camera1        | android.hardware.Camera ( Camera1 相关 )
-      - helper            | 功能 Helper 辅助类
-         - dev            | Dev 工具类链式调用 Helper 类
-         - flow           | 流式 ( 链式 ) 连接 Helper 类
-         - quick          | 简化链式设置 View Quick Helper 类
-         - version        | Android 版本适配 Helper 类
-         - view           | View 链式调用快捷设置 Helper 类
-      - image             | 图片相关处理
-      - info              | APP 信息、PackageInfo 等
-      - logger            | 日志库 DevLogger
-      - permission        | 权限工具类
-      - player            | 多媒体 ( 视频、音频 ) 播放封装
-      - share             | SharedPreferences 封装
-      - timer             | 定时器
-      - toast             | Toast
-         - toaster        | Toaster 处理无通知权限
-      - wifi              | Wifi、热点工具类
-   - common               | Java 工具类, 不依赖 android api
-      - assist            | 各种快捷辅助类
-         - record         | 文件记录分析类
-         - search         | 搜索相关 ( 文件搜索等 )
-         - url            | Url 携带信息解析
-      - cipher            | 编 / 解码工具类
-      - comparator        | 排序比较器
-         - sort           | 各种类型比较器排序实现
-      - encrypt           | 加密工具类
-      - file              | 文件分片相关
-      - random            | 随机概率算法工具类
-      - thread            | 线程相关
-      - validator         | 数据校验工具类
+- dev.utils                     | 根目录
+   - app                        | APP 相关工具类
+      - activity_result         | Activity Result API
+      - anim                    | 动画工具类
+      - assist                  | 辅助类
+         - floating             | 悬浮窗实现方案辅助类
+         - lifecycle            | Activity 生命周期监听辅助类
+         - record               | 文件记录分析类
+         - url                  | Url 携带信息解析
+      - cache                   | 缓存工具类
+      - camera                  | 摄像头相关
+         - camera1              | android.hardware.Camera ( Camera1 相关 )
+      - helper                  | 功能 Helper 辅助类
+         - dev                  | Dev 工具类链式调用 Helper 类
+         - flow                 | 流式 ( 链式 ) 连接 Helper 类
+         - quick                | 简化链式设置 View Quick Helper 类
+         - version              | Android 版本适配 Helper 类
+         - view                 | View 链式调用快捷设置 Helper 类
+      - image                   | 图片相关处理
+      - info                    | APP 信息、PackageInfo 等
+      - logger                  | 日志库 DevLogger
+      - permission              | 权限工具类
+      - player                  | 多媒体 ( 视频、音频 ) 播放封装
+      - share                   | SharedPreferences 封装
+      - timer                   | 定时器
+      - toast                   | Toast
+         - toaster              | Toaster 处理无通知权限
+      - wifi                    | Wifi、热点工具类
+   - common                     | Java 工具类, 不依赖 android api
+      - assist                  | 各种快捷辅助类
+         - record               | 文件记录分析类
+         - search               | 搜索相关 ( 文件搜索等 )
+         - url                  | Url 携带信息解析
+      - cipher                  | 编 / 解码工具类
+      - comparator              | 排序比较器
+         - sort                 | 各种类型比较器排序实现
+      - encrypt                 | 加密工具类
+      - file                    | 文件分片相关
+      - random                  | 随机概率算法工具类
+      - thread                  | 线程相关
+      - validator               | 数据校验工具类
 ```
 
 
@@ -100,47 +100,47 @@ DevUtils.openDebug();
 ## API
 
 
-- dev.utils                                                          | 根目录
-   - [app](#devutilsapp)                                             | APP 相关工具类
-      - [activity_result](#devutilsappactivity_result)               | Activity Result API
-      - [anim](#devutilsappanim)                                     | 动画工具类
-      - [assist](#devutilsappassist)                                 | 辅助类
-         - [floating](#devutilsappassistfloating)                    | 悬浮窗实现方案辅助类
-         - [lifecycle](#devutilsappassistlifecycle)                  | Activity 生命周期监听辅助类
-         - [record](#devutilsappassistrecord)                        | 文件记录分析类
-         - [url](#devutilsappassisturl)                              | Url 携带信息解析
-      - [cache](#devutilsappcache)                                   | 缓存工具类
-      - [camera](#devutilsappcamera)                                 | 摄像头相关
-         - [camera1](#devutilsappcameracamera1)                      | android.hardware.Camera ( Camera1 相关 )
-      - [helper](#devutilsapphelper)                                 | 功能 Helper 辅助类
-         - [dev](#devutilsapphelperdev)                              | Dev 工具类链式调用 Helper 类
-         - [flow](#devutilsapphelperflow)                            | 流式 ( 链式 ) 连接 Helper 类
-         - [quick](#devutilsapphelperquick)                          | 简化链式设置 View Quick Helper 类
-         - [version](#devutilsapphelperversion)                      | Android 版本适配 Helper 类
-         - [view](#devutilsapphelperview)                            | View 链式调用快捷设置 Helper 类
-      - [image](#devutilsappimage)                                   | 图片相关处理
-      - [info](#devutilsappinfo)                                     | APP 信息、PackageInfo 等
-      - [logger](#devutilsapplogger)                                 | 日志库 DevLogger
-      - [permission](#devutilsapppermission)                         | 权限工具类
-      - [player](#devutilsappplayer)                                 | 多媒体 ( 视频、音频 ) 播放封装
-      - [share](#devutilsappshare)                                   | SharedPreferences 封装
-      - [timer](#devutilsapptimer)                                   | 定时器
-      - [toast](#devutilsapptoast)                                   | Toast
-         - [toaster](#devutilsapptoasttoaster)                       | Toaster 处理无通知权限
-      - [wifi](#devutilsappwifi)                                     | Wifi、热点工具类
-   - [common](#devutilscommon)                                       | Java 工具类, 不依赖 android api
-      - [assist](#devutilscommonassist)                              | 各种快捷辅助类
-         - [record](#devutilscommonassistrecord)                     | 文件记录分析类
-         - [search](#devutilscommonassistsearch)                     | 搜索相关 ( 文件搜索等 )
-         - [url](#devutilscommonassisturl)                           | Url 携带信息解析
-      - [cipher](#devutilscommoncipher)                              | 编 / 解码工具类
-      - [comparator](#devutilscommoncomparator)                      | 排序比较器
-         - [sort](#devutilscommoncomparatorsort)                     | 各种类型比较器排序实现
-      - [encrypt](#devutilscommonencrypt)                            | 加密工具类
-      - [file](#devutilscommonfile)                                  | 文件分片相关
-      - [random](#devutilscommonrandom)                              | 随机概率算法工具类
-      - [thread](#devutilscommonthread)                              | 线程相关
-      - [validator](#devutilscommonvalidator)                        | 数据校验工具类
+- dev.utils                                                                | 根目录
+   - [app](#devutilsapp)                                                   | APP 相关工具类
+      - [activity_result](#devutilsappactivity_result)                     | Activity Result API
+      - [anim](#devutilsappanim)                                           | 动画工具类
+      - [assist](#devutilsappassist)                                       | 辅助类
+         - [floating](#devutilsappassistfloating)                          | 悬浮窗实现方案辅助类
+         - [lifecycle](#devutilsappassistlifecycle)                        | Activity 生命周期监听辅助类
+         - [record](#devutilsappassistrecord)                              | 文件记录分析类
+         - [url](#devutilsappassisturl)                                    | Url 携带信息解析
+      - [cache](#devutilsappcache)                                         | 缓存工具类
+      - [camera](#devutilsappcamera)                                       | 摄像头相关
+         - [camera1](#devutilsappcameracamera1)                            | android.hardware.Camera ( Camera1 相关 )
+      - [helper](#devutilsapphelper)                                       | 功能 Helper 辅助类
+         - [dev](#devutilsapphelperdev)                                    | Dev 工具类链式调用 Helper 类
+         - [flow](#devutilsapphelperflow)                                  | 流式 ( 链式 ) 连接 Helper 类
+         - [quick](#devutilsapphelperquick)                                | 简化链式设置 View Quick Helper 类
+         - [version](#devutilsapphelperversion)                            | Android 版本适配 Helper 类
+         - [view](#devutilsapphelperview)                                  | View 链式调用快捷设置 Helper 类
+      - [image](#devutilsappimage)                                         | 图片相关处理
+      - [info](#devutilsappinfo)                                           | APP 信息、PackageInfo 等
+      - [logger](#devutilsapplogger)                                       | 日志库 DevLogger
+      - [permission](#devutilsapppermission)                               | 权限工具类
+      - [player](#devutilsappplayer)                                       | 多媒体 ( 视频、音频 ) 播放封装
+      - [share](#devutilsappshare)                                         | SharedPreferences 封装
+      - [timer](#devutilsapptimer)                                         | 定时器
+      - [toast](#devutilsapptoast)                                         | Toast
+         - [toaster](#devutilsapptoasttoaster)                             | Toaster 处理无通知权限
+      - [wifi](#devutilsappwifi)                                           | Wifi、热点工具类
+   - [common](#devutilscommon)                                             | Java 工具类, 不依赖 android api
+      - [assist](#devutilscommonassist)                                    | 各种快捷辅助类
+         - [record](#devutilscommonassistrecord)                           | 文件记录分析类
+         - [search](#devutilscommonassistsearch)                           | 搜索相关 ( 文件搜索等 )
+         - [url](#devutilscommonassisturl)                                 | Url 携带信息解析
+      - [cipher](#devutilscommoncipher)                                    | 编 / 解码工具类
+      - [comparator](#devutilscommoncomparator)                            | 排序比较器
+         - [sort](#devutilscommoncomparatorsort)                           | 各种类型比较器排序实现
+      - [encrypt](#devutilscommonencrypt)                                  | 加密工具类
+      - [file](#devutilscommonfile)                                        | 文件分片相关
+      - [random](#devutilscommonrandom)                                    | 随机概率算法工具类
+      - [thread](#devutilscommonthread)                                    | 线程相关
+      - [validator](#devutilscommonvalidator)                              | 数据校验工具类
 
 
 ## <span id="devutilsapp">**`dev.utils.app`**</span>

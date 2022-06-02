@@ -158,6 +158,13 @@ public final class PackageCatalog {
     private static int sMaxLength = 0;
 
     /**
+     * 重置目录信息最大长度
+     */
+    private static void resetMaxLength() {
+        sMaxLength = 0;
+    }
+
+    /**
      * 计算目录最大长度
      * @param isAnchor    是否增加锚链接
      * @param packageName 包名
@@ -179,7 +186,7 @@ public final class PackageCatalog {
         int length = builder.toString().length();
         // 判断长度 => 大于最大长度, 则重新设置
         if ((length + 6) >= sMaxLength) {
-            sMaxLength = length + 6;
+            sMaxLength = length + 12; // 6
         }
     }
 
@@ -304,7 +311,8 @@ public final class PackageCatalog {
             final String packageName,
             final HashMap<String, String> mapCatalog
     ) {
-
+        // 重置目录信息最大长度
+        resetMaxLength();
         // 拼接信息
         StringBuilder builder = new StringBuilder();
         // 获取文件夹列表
