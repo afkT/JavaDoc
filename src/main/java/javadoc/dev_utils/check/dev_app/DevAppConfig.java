@@ -22,7 +22,7 @@ final class DevAppConfig implements ICheckConfig {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("AbstractActivityLifecycle", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed"));
         ignoreAnnotateMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed"));
-        ignoreAnnotateMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
+        ignoreAnnotateMap.put("ActivityResultAssist", ArrayUtils.asListArgs("launch","launch","unregister","getContract"));
         ignoreAnnotateMap.put("AndroidUrlParser", ArrayUtils.asListArgs("reset","setUrl","getUrl","getUrlByPrefix","getUrlByParams","getUrlParams","getUrlParamsDecode","isConvertMap","setConvertMap"));
         ignoreAnnotateMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo","getFileInfo","createFileInfo"));
         ignoreAnnotateMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
@@ -42,6 +42,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DateSort", ArrayUtils.asListArgs("getDateSortValue"));
         ignoreAnnotateMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
         ignoreAnnotateMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime","isInt","isLong","isFloat","isDouble","isBoolean","isString","isBytes","isBitmap","isDrawable","isSerializable","isParcelable","isJSONObject","isJSONArray"));
         ignoreAnnotateMap.put("DevCacheManager", ArrayUtils.asListArgs("getCachePath","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_mapGetData"));
         ignoreAnnotateMap.put("DevFinal.ARRAY", ArrayUtils.asListArgs("HEX_DIGITS","HEX_DIGITS_UPPER","NUMBERS","LOWER_CASE_LETTERS","CAPITAL_LETTERS","LETTERS","NUMBERS_AND_LETTERS","ZODIAC","CONSTELLATION_DATE","CONSTELLATION"));
@@ -126,7 +127,6 @@ final class DevAppConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
         ignoreFinalMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed"));
-        ignoreFinalMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
         ignoreFinalMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo"));
         ignoreFinalMap.put("AutoFocusAssist", ArrayUtils.asListArgs("onAutoFocus"));
         ignoreFinalMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
@@ -147,6 +147,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("CrashUtils", ArrayUtils.asListArgs("uncaughtException"));
         ignoreFinalMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
         ignoreFinalMap.put("DevCache", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray"));
         ignoreFinalMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
         ignoreFinalMap.put("DevCacheManager", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_put","_get"));
@@ -225,7 +226,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ActivityLifecycleAssist", ArrayUtils.asListArgs("getActivityLifecycleGet","getActivityLifecycleNotify","getTopActivity","setActivityLifecycleFilter","setAbstractActivityLifecycle","registerActivityLifecycleCallbacks","unregisterActivityLifecycleCallbacks"));
         ignoreStaticMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed","setTopActivity","getTopActivityByReflect","getTopActivity","isTopActivity","isTopActivity","isBackground","getActivityCount","addOnAppStatusChangedListener","removeOnAppStatusChangedListener","removeAllOnAppStatusChangedListener","addOnActivityDestroyedListener","removeOnActivityDestroyedListener","removeAllOnActivityDestroyedListener","postStatus","consumeOnActivityDestroyedListener"));
         ignoreStaticMap.put("ActivityManagerAssist", ArrayUtils.asListArgs("getActivityStacks","addActivity","removeActivity","removeActivity","currentActivity","finishActivity","existActivitys","finishActivity","finishActivity","finishAllActivityToIgnore","finishAllActivityToIgnore","finishAllActivity","exitApplication","restartApplication"));
-        ignoreStaticMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
+        ignoreStaticMap.put("ActivityResultAssist", ArrayUtils.asListArgs("isLauncherEmpty","isLauncherNotEmpty","setOperateCallback","getInputValue","getOptionsValue","set","launch","launch","unregister","getContract"));
         ignoreStaticMap.put("AliasMethod", ArrayUtils.asListArgs("next"));
         ignoreStaticMap.put("AndroidUrlParser", ArrayUtils.asListArgs("reset","setUrl","getUrl","getUrlByPrefix","getUrlByParams","getUrlParams","getUrlParamsDecode","isConvertMap","setConvertMap","initialize","uriToUrlPrefix"));
         ignoreStaticMap.put("ApkInfoItem", ArrayUtils.asListArgs("getAppInfoBean","getListKeyValues","getAppMD5","getAppSHA1","getAppSHA256","getMinSdkVersion","getTargetSdkVersion","getApkLength","getX509Certificate","getNotBefore","getNotAfter","isEffective","getCertPrincipal","getCertVersion","getCertSigAlgName","getCertSigAlgOID","getCertSerialnumber","getCertDERCode"));
@@ -256,6 +257,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("CrashUtils", ArrayUtils.asListArgs("initialize","uncaughtException","handleException"));
         ignoreStaticMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("DefaultActivityResult", ArrayUtils.asListArgs("startActivityForResult"));
+        ignoreStaticMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
         ignoreStaticMap.put("DefaultToastStyle", ArrayUtils.asListArgs("getGravity","getXOffset","getYOffset","getHorizontalMargin","getVerticalMargin","getZ","getCornerRadius","getBackgroundTintColor","getBackground","getTextColor","getTextSize","getMaxLines","getEllipsize","getTypeface","getPadding"));
         ignoreStaticMap.put("DelayAssist", ArrayUtils.asListArgs("remove","post","post","setDelayMillis","setCallback"));
         ignoreStaticMap.put("DevCache", ArrayUtils.asListArgs("getCachePath","remove","removeForKeys","contains","isDue","clear","clearDue","clearType","getItemByKey","getKeys","getPermanentKeys","getCount","getSize","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray"));
@@ -393,9 +396,10 @@ final class DevAppConfig implements ICheckConfig {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("AbstractActivityLifecycle", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed"));
         ignoreParamMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed"));
-        ignoreParamMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
+        ignoreParamMap.put("ActivityResultAssist", ArrayUtils.asListArgs("setOperateCallback","launch","launch"));
         ignoreParamMap.put("AndroidUrlParser", ArrayUtils.asListArgs("reset","setUrl","setConvertMap"));
         ignoreParamMap.put("AppRecordInsert", ArrayUtils.asListArgs("setFileInfo"));
+        ignoreParamMap.put("AppUtils", ArrayUtils.asListArgs("getSystemService","getSystemService"));
         ignoreParamMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreParamMap.put("Base64.Coder", ArrayUtils.asListArgs("process","maxOutputSize"));
         ignoreParamMap.put("Base64.Decoder", ArrayUtils.asListArgs("maxOutputSize","process"));
@@ -412,6 +416,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("ContentResolverUtils.MediaQueryUri", ArrayUtils.asListArgs("getResult","getProjection","getSelection","getSelectionArgs"));
         ignoreParamMap.put("DateSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("DateSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
         ignoreParamMap.put("DevCache", ArrayUtils.asListArgs("getParcelable","getParcelable"));
         ignoreParamMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
         ignoreParamMap.put("DevCacheManager", ArrayUtils.asListArgs("remove","removeForKeys","contains","isDue","clearType","getItemByKey","put","put","put","put","put","put","put","put","put","put","put","put","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","getInt","getLong","getFloat","getDouble","getBoolean","getString","getBytes","getBitmap","getDrawable","getSerializable","getParcelable","getJSONObject","getJSONArray","_mapGetData"));
@@ -423,6 +428,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("DevTimer.Builder", ArrayUtils.asListArgs("setTag","setDelay","setPeriod","setLimit"));
         ignoreParamMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("EditTextUtils", ArrayUtils.asListArgs("isCursorVisible","setTextCursorDrawable","setTextCursorDrawable"));
         ignoreParamMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
@@ -433,6 +439,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("FileSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FloatSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("ImageViewUtils", ArrayUtils.asListArgs("setImageTintList","setImageTintMode","getImageTintList","getImageTintMode"));
         ignoreParamMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreParamMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
@@ -443,6 +450,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("LongSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("NotificationUtils.Callback", ArrayUtils.asListArgs("callback"));
         ignoreParamMap.put("NotificationUtils.Params", ArrayUtils.asListArgs("setPendingIntent","setIcon","setTicker","setTitle","setContent","setAutoCancel","setVibratePattern","setLightPattern","setChannel"));
+        ignoreParamMap.put("PreferenceImpl", ArrayUtils.asListArgs("get"));
         ignoreParamMap.put("PreferenceImpl.ComparatorImpl", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("RecordInsert", ArrayUtils.asListArgs("setFileInfo","setLogHeader","setLogTail"));
         ignoreParamMap.put("RecyclerViewUtils.FixChildScrollBugLinearLayoutManager", ArrayUtils.asListArgs("requestChildRectangleOnScreen","requestChildRectangleOnScreen"));
@@ -464,6 +472,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
+        ignoreParamMap.put("TextViewUtils", ArrayUtils.asListArgs("getLetterSpacing","setLetterSpacing","getLineSpacingExtra","getLineSpacingMultiplier","getIncludeFontPadding","getMaxLines","getMinLines","getMaxEms","getMinEms"));
         ignoreParamMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreParamMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreParamMap.put("ToastFactory.ToastHelper", ArrayUtils.asListArgs("handleMessage"));
@@ -507,8 +516,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ActivityLifecycleFilter", ArrayUtils.asListArgs("filter"));
         ignoreUnPublicMap.put("ActivityLifecycleGet", ArrayUtils.asListArgs("getTopActivity","isTopActivity","isTopActivity","isBackground","getActivityCount"));
         ignoreUnPublicMap.put("ActivityLifecycleNotify", ArrayUtils.asListArgs("addOnAppStatusChangedListener","removeOnAppStatusChangedListener","removeAllOnAppStatusChangedListener","addOnActivityDestroyedListener","removeOnActivityDestroyedListener","removeAllOnActivityDestroyedListener"));
-        ignoreUnPublicMap.put("ActivityUtils.ResultActivity", ArrayUtils.asListArgs("start","onCreate","onActivityResult","onDestroy"));
-        ignoreUnPublicMap.put("ActivityUtils.ResultCallback", ArrayUtils.asListArgs("onStartActivityForResult","onActivityResult"));
+        ignoreUnPublicMap.put("ActivityResultAssist", ArrayUtils.asListArgs("set"));
         ignoreUnPublicMap.put("AndroidUrlParser", ArrayUtils.asListArgs("initialize","uriToUrlPrefix"));
         ignoreUnPublicMap.put("ApkInfoItem", ArrayUtils.asListArgs("get"));
         ignoreUnPublicMap.put("AppInfoBean", ArrayUtils.asListArgs("get"));
@@ -536,6 +544,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CrashUtils.CrashCatchListener", ArrayUtils.asListArgs("handleException","uncaughtException"));
         ignoreUnPublicMap.put("DateSort", ArrayUtils.asListArgs("getDateSortValue"));
         ignoreUnPublicMap.put("Decrypt", ArrayUtils.asListArgs("decrypt"));
+        ignoreUnPublicMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("start","onCreate","onActivityResult","onDestroy"));
+        ignoreUnPublicMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onStartActivityForResult","onActivityResult"));
         ignoreUnPublicMap.put("DelayAssist.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("DevCache.Data", ArrayUtils.asListArgs("setType","setSaveTime","setValidTime"));
         ignoreUnPublicMap.put("DevCacheManager", ArrayUtils.asListArgs("calculateCacheSizeAndCacheCount","_getKeyDataFile","_getKeyConfigFile","_isExistKeyFile","_mapGetData","_toDataString","_getData","_put","_get"));
@@ -665,11 +675,7 @@ final class DevAppConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreModifierVariableMap() {
         Map<String, List<String>> ignoreModifierVariableMap = new HashMap<>();
-        ignoreModifierVariableMap.put("Base64", ArrayUtils.asListArgs("        int tailLen;"));
-        ignoreModifierVariableMap.put("Base64.Encoder", ArrayUtils.asListArgs("    int tailLen;"));
-        ignoreModifierVariableMap.put("WindowsExplorerStringSimpleComparator", ArrayUtils.asListArgs("        String name;","        Long number;","        String numberText;","        String ext;"));
-        ignoreModifierVariableMap.put("WindowsExplorerStringSimpleComparator.SplitFileName", ArrayUtils.asListArgs("    String name;","    Long number;","    String numberText;","    String ext;"));
-
+        
         return ignoreModifierVariableMap;
     }
 
@@ -686,7 +692,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("AccessibilityUtils.Print", ArrayUtils.asListArgs("logNodeInfoChild - void","logNodeInfoChild - void"));
         ignoreReturnVoidMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("setTopActivity - void","addOnAppStatusChangedListener - void","removeOnAppStatusChangedListener - void","removeAllOnAppStatusChangedListener - void","addOnActivityDestroyedListener - void","removeOnActivityDestroyedListener - void","removeAllOnActivityDestroyedListener - void","postStatus - void","consumeOnActivityDestroyedListener - void"));
         ignoreReturnVoidMap.put("ActivityLifecycleNotify", ArrayUtils.asListArgs("addOnAppStatusChangedListener - void","removeOnAppStatusChangedListener - void","removeAllOnAppStatusChangedListener - void","addOnActivityDestroyedListener - void","removeOnActivityDestroyedListener - void","removeAllOnActivityDestroyedListener - void"));
-        ignoreReturnVoidMap.put("ActivityUtils.ResultCallback", ArrayUtils.asListArgs("onActivityResult - void"));
+        ignoreReturnVoidMap.put("ActivityResultAssist", ArrayUtils.asListArgs("set - void"));
+        ignoreReturnVoidMap.put("ActivityResultAssist.OperateCallback", ArrayUtils.asListArgs("onStart - void","onState - void"));
         ignoreReturnVoidMap.put("AndroidUrlParser", ArrayUtils.asListArgs("initialize - void"));
         ignoreReturnVoidMap.put("AppInfoUtils", ArrayUtils.asListArgs("printAppPermission - void"));
         ignoreReturnVoidMap.put("AutoFocusAssist", ArrayUtils.asListArgs("setFocusModes - void","setAutoFocus - void","onAutoFocus - void","autoFocusAgainLater - void","start - void","stop - void","cancelOutstandingTask - void"));
@@ -710,6 +717,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ConvertUtils", ArrayUtils.asListArgs("bytesBitwiseAND - void"));
         ignoreReturnVoidMap.put("CrashUtils", ArrayUtils.asListArgs("initialize - void","uncaughtException - void"));
         ignoreReturnVoidMap.put("CrashUtils.CrashCatchListener", ArrayUtils.asListArgs("handleException - void","uncaughtException - void"));
+        ignoreReturnVoidMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onActivityResult - void"));
         ignoreReturnVoidMap.put("DelayAssist", ArrayUtils.asListArgs("remove - void","post - void","post - void"));
         ignoreReturnVoidMap.put("DelayAssist.Callback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("DevCache", ArrayUtils.asListArgs("remove - void","removeForKeys - void","clear - void","clearDue - void","clearType - void"));

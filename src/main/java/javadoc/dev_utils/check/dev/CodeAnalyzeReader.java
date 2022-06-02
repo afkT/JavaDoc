@@ -264,6 +264,10 @@ public final class CodeAnalyzeReader {
                         String methodCode = jcMethodDecl.toString();
                         // 判断是否 public 开头
                         boolean isPublic = methodCode.startsWith("public ");
+                        if (!isPublic) {
+                            // 不同 JDK 差异化
+                            isPublic = methodCode.contains("\npublic ");
+                        }
 
                         // 如果方法名存在换行(注解)
                         if (methodCode.contains("\r\n")) {

@@ -107,7 +107,6 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreParamMap.put("DevFunction.Method", ArrayUtils.asListArgs("method"));
         ignoreParamMap.put("DevFunction.Method2", ArrayUtils.asListArgs("error"));
         ignoreParamMap.put("DevHistory", ArrayUtils.asListArgs("setCurrent","setListener","reset","setCurrent","clear"));
-        ignoreParamMap.put("DevNumber", ArrayUtils.asListArgs("setMinNumber","setMaxNumber","setMinMaxNumber","setCurrentNumber","setCurrentNumber","setResetNumber","setAllowNegative","numberChange","setNumberListener"));
         ignoreParamMap.put("DevObject", ArrayUtils.asListArgs("setObject","convertTag","setTag","setModelId","setCode","setCode","setType","setState","setTokenUUID"));
         ignoreParamMap.put("DevPage", ArrayUtils.asListArgs("reset","setPage","setLastPage","calculateLastPage","response","response"));
         ignoreParamMap.put("DevSource", ArrayUtils.asListArgs("create","create","create","create","createWithPath"));
