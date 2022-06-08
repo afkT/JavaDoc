@@ -200,7 +200,7 @@ public final class ApiConfig {
     // DevOther GitHub 项目文件路径
     public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/LocalModules/DevOther/src/main/java/";
     // DevOther API 文件保存路径
-    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevOther/";
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/LocalModules/DevOther/";
     // DevOther Template Readme
     public static final String DEV_OTHER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
 
