@@ -130,4 +130,4 @@
 [DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
-[DevOther API]: https://github.com/afkT/DevUtils/blob/master/lib/DevOther/README.md
+[DevOther API]: https://github.com/afkT/DevUtils/blob/master/lib/LocalModules/DevOther/README.md
