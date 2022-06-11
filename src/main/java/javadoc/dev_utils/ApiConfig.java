@@ -189,6 +189,23 @@ public final class ApiConfig {
     // DevHttpManager Template Readme
     public static final String DEV_HTTP_MANAGER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpManager_README.md";
 
+    // ===============
+    // = DevRetrofit =
+    // ===============
+
+    // DevRetrofit 版本号
+    public static final String DEV_RETROFIT_VERSION            = "1.0.0";
+    // 包目录名
+    public static final String DEV_RETROFIT_PACKAGE            = "dev";
+    // DevRetrofit 文件路径
+    public static final String DEV_RETROFIT_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevRetrofit/src/main/java/dev/";
+    // DevRetrofit GitHub 项目文件路径
+    public static final String DEV_RETROFIT_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev";
+    // DevRetrofit API 文件保存路径
+    public static final String DEV_RETROFIT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevRetrofit/";
+    // DevRetrofit Template Readme
+    public static final String DEV_RETROFIT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevRetrofit_README.md";
+
     // ============
     // = DevOther =
     // ============
@@ -334,6 +351,17 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_HttpManager  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_HttpManager = new HashMap<>();
+
+    // ===============
+    // = DevRetrofit =
+    // ===============
+
+    // 包名目录注释
+    public static final HashMap<String, String>   sCatalogMap_Retrofit      = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashSet<String>           sFilterClassSet_Retrofit  = new HashSet<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Retrofit = new HashMap<>();
 
     // ============
     // = DevOther =
@@ -489,6 +517,14 @@ public final class ApiConfig {
         sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
         sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
         sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
+
+        // ===============
+        // = DevRetrofit =
+        // ===============
+
+        sCatalogMap_Retrofit.put("dev", "根目录");
+        sCatalogMap_Retrofit.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_Retrofit.put(".http.manager", "Retrofit 多 BaseUrl 管理");
 
         // ============
         // = DevOther =
