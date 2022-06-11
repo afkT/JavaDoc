@@ -75,7 +75,7 @@ public final class ApiConfig {
     // =============
 
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.3.4";
+    public static final String DEV_ASSIST_VERSION            = "1.3.5";
     // 包目录名
     public static final String DEV_ASSIST_PACKAGE            = "dev";
     // DevAssist 文件路径
@@ -524,9 +524,9 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".java.dev.other.cache", "缓存工具类");
         sCatalogMap_Other.put(".java.dev.other.okgo", "OkGo 网络请求");
         sCatalogMap_Other.put(".java.dev.other.okgo.demo", "OkGo 使用 Demo");
-        sCatalogMap_Other.put(".java.dev.other.retrofit", "Retrofit 网络请求");
-        sCatalogMap_Other.put(".java.dev.other.retrofit.response", "请求响应解析");
-        sCatalogMap_Other.put(".java.dev.other.retrofit.subscriber", "请求响应处理");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.response", "请求响应解析");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.subscriber", "请求响应处理");
         sCatalogMap_Other.put(".java.dev.other.work", "WorkManager Utils");
         sCatalogMap_Other.put(".java.dev.other.work.demo", "WorkManager 使用 Demo");
 
@@ -534,8 +534,6 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".ktx.dev", "根目录");
         sCatalogMap_Other.put(".ktx.dev.assist", "常用辅助类封装");
         sCatalogMap_Other.put(".ktx.dev.other", "第三方库封装工具类");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_coroutines", "Retrofit Coroutines 封装");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_coroutines.demo", "Retrofit Coroutines Demo");
         sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
         sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.demo", "Retrofit RxJava Demo");
         sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.response", "请求响应解析");
