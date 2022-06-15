@@ -57,6 +57,8 @@
 
 - [DevHttpManager API Generate Main][DevHttpManager API Generate Main]
 
+- [DevRetrofit API Generate Main][DevRetrofit API Generate Main]
+
 - [DevWidget API Generate Main][DevWidget API Generate Main]
 
 - [DevEnvironment API Generate Main][DevEnvironment API Generate Main]
@@ -84,6 +86,8 @@
 - [DevHttpCaptureCompiler API][DevHttpCaptureCompiler API] OkHttp 抓包工具库 ( 可视化功能 )
 
 - [DevHttpManager API][DevHttpManager API] OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+
+- [DevRetrofit API][DevRetrofit API] Retrofit + Kotlin Coroutines 封装
 
 - [DevWidget API][DevWidget API] 自定义 View UI 库
 
@@ -115,6 +119,7 @@
 [DevHttpCapture API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpCapture_READMEMain.java
 [DevHttpCaptureCompiler API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpCaptureCompiler_READMEMain.java
 [DevHttpManager API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpManager_READMEMain.java
+[DevRetrofit API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevRetrofit_READMEMain.java
 [DevWidget API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevWidget_READMEMain.java
 [DevEnvironment API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevEnvironment_READMEMain.java
 [DevJava API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevJava_READMEMain.java
@@ -127,6 +132,7 @@
 [DevHttpCapture API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md
 [DevHttpCaptureCompiler API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md
 [DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
+[DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
 [DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md

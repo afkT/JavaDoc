@@ -14,10 +14,11 @@ implementation 'io.github.afkt:DevRetrofit:1.0.0'
 ## 框架功能介绍
 
 DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封装库，
-针对 `CoroutineScope`、`ViewModel`、`Lifecycle`、`LifecycleOwner` 及 `LifecycleOwner` 实现类 ( `Activity`、`Fragment` ) 封装快捷扩展函数。
+针对 `CoroutineScope`、`ViewModel`、`Lifecycle`、`LifecycleOwner` 及 `LifecycleOwner` 实现类 ( `Activity`、`Fragment` 等 ) 封装快捷扩展函数。
 
-并对上述封装的请求方法扩展函数支持传入 `回调方法体`、`Callback`、`LiveData`，
-内部定义 `Base.Response<T>`、`Base.Result` Base 基类，以及 `Notify.Callback<T>`、`Notify.ResultCallback`、`Notify.GlobalCallback` Notify ( Callback ) 类，防止污染引用项目 BaseXxx、Callback 类
+并对上述封装的请求方法扩展函数支持传入 `LiveData`、`回调方法体`、`Callback`、`ResultCallback`。
+
+且内部定义**Base 基类** `Base.Response<T>`、`Base.Result`，以及**Notify ( Callback ) 类** `Notify.Callback<T>`、`Notify.ResultCallback`、`Notify.GlobalCallback`，防止污染引用项目 BaseXxx、Callback 类
 
 ## API 文档
 
