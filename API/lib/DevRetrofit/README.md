@@ -8,7 +8,7 @@
 ## Gradle
 
 ```gradle
-implementation 'io.github.afkt:DevRetrofit:%s'
+implementation 'io.github.afkt:DevRetrofit:1.0.0'
 ```
 
 ## 框架功能介绍
