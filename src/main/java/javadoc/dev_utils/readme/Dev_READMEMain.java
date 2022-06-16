@@ -39,6 +39,7 @@ final class Dev_READMEMain {
                 ApiConfig.DEV_HTTP_CAPTURE_VERSION,
                 ApiConfig.DEV_HTTP_CAPTURE_VERSION,
                 ApiConfig.DEV_HTTP_MANAGER_VERSION,
+                ApiConfig.DEV_RETROFIT_VERSION,
                 ApiConfig.DEV_WIDGET_VERSION,
                 ApiConfig.DEV_ENVIRONMENT_VERSION,
                 ApiConfig.DEV_ENVIRONMENT_VERSION,

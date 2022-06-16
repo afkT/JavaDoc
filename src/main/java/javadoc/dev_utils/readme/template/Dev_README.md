@@ -71,6 +71,12 @@
 
 - [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/CHANGELOG.md)
 
+### DevRetrofit - Retrofit + Kotlin Coroutines 封装
+
+- [README](https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md)
+
+- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/CHANGELOG.md)
+
 ### DevWidget - 自定义 View UI 库
 
 - [README - API](https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md)
@@ -131,17 +137,20 @@ releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:{8}'
 // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
 implementation 'io.github.afkt:DevHttpManager:{9}'
 
+// DevRetrofit - Retrofit + Kotlin Coroutines 封装
+implementation 'io.github.afkt:DevRetrofit:{10}'
+
 // DevWidget - 自定义 View UI 库
-implementation 'io.github.afkt:DevWidgetX:{10}'
+implementation 'io.github.afkt:DevWidgetX:{11}'
 
 // DevEnvironment - Android 环境配置切换库
-implementation 'io.github.afkt:DevEnvironment:{11}'
-debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{12}' // kaptDebug
-releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:{13}' // kaptRelease
-//annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{14}' // kapt
+implementation 'io.github.afkt:DevEnvironment:{12}'
+debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{13}' // kaptDebug
+releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:{14}' // kaptRelease
+//annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:{15}' // kapt
 
 // DevJava - Java 工具类库 ( 不依赖 android api )
-implementation 'io.github.afkt:DevJava:{15}' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
+implementation 'io.github.afkt:DevJava:{16}' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
 ```
 
 ## [APK Demo](https://github.com/afkT/Resources/blob/main/APK)
