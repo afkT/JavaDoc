@@ -4,6 +4,7 @@
 
 * [框架功能介绍](#框架功能介绍)
 * [API 文档](#API-文档)
+* [使用示例](#使用示例)
 
 
 ## Gradle
@@ -19,6 +20,7 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 
 并对上述封装的请求方法扩展函数支持传入 `LiveData`、`方法体`、`Callback`、`ResultCallback`。
 
+
 ## 项目类结构 - [包目录][包目录]
 
 * 数据模型类 [model.kt][model.kt]：DevRetrofit Base 数据模型、接口汇总类
@@ -32,6 +34,7 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 * Callback 扩展函数 [request_coroutines_simple.kt][request_coroutines_simple.kt]：在 `request_coroutines.kt` 基础上减少 start、success、error、finish 方法体传参，使用 Callback、ResultCallback
 
 * LiveData 扩展函数 [request_coroutines_simple_livedata.kt][request_coroutines_simple_livedata.kt]：在 `request_coroutines_simple.kt` 基础上使用 LiveData
+
 
 ## API 文档
 
@@ -124,6 +127,139 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 | liveDataLaunchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
 
+## 使用示例
+
+具体实现代码可以查看 [DevRetrofitCoroutinesDemo][DevRetrofitCoroutinesDemo]。
+
+### 使用步骤
+
+#### 1. 首先创建 Response 请求响应解析类
+
+`需要创建 Response 类并实现 Base.Response 解析类`
+
+主要是为了解决一个问题：
+
+假设 A 公司，后台返回响应数据结构为
+
+```json
+{
+    "resultData": Object,
+	"resultCode": 200,
+	"errorMessage": "错误提示",
+	"isToast": true
+}
+```
+
+B 公司，后台返回响应数据结构为
+
+```json
+{
+    "response": Object,
+    "code": "200",
+    "toast": "提示消息"
+}
+```
+
+等等诸如此类不同公司差异化字段命名、字段类型，以 A 公司为例定义 `BaseResponse`
+
+```kotlin
+/**
+ * detail: 统一响应实体类
+ * @author Ttt
+ */
+open class BaseResponse<T> : Base.Response<T> {
+
+    private var resultData: T? = null
+    private var resultCode: Int = 0
+    private var errorMessage: String? = null
+    private var isToast: Boolean = true
+
+    // =================
+    // = Base.Response =
+    // =================
+
+    override fun getData(): T? {
+        return resultData
+    }
+
+    override fun getCode(): String? {
+        return resultCode.toString()
+    }
+
+    override fun getMessage(): String? {
+        return errorMessage
+    }
+
+    override fun isSuccess(): Boolean {
+        return resultCode == 200
+    }
+
+    // ==============
+    // = 自定义差异化 =
+    // ==============
+
+    fun isToast(): Boolean {
+        return isToast
+    }
+}
+```
+
+只要实现 `Base.Response` 实现四个核心方法按照对应意思 return 即可
+
+| 方法 | 注释 |
+| :- | :- |
+| getData | 获取响应数据 |
+| getCode | 获取响应 Code |
+| getMessage | 获取提示 Message |
+| isSuccess | 判断请求是否成功 |
+
+> 有其他额外的字段如 `isToast` 则自行添加获取方法即可。
+
+那么以 B 公司定义 `BaseResponse` 将会是这样
+
+```kotlin
+/**
+ * detail: 统一响应实体类
+ * @author Ttt
+ */
+open class BaseResponse<T> : Base.Response<T> {
+
+    private var response: T? = null
+    private var code: String? = null
+    private var toast: String? = null
+
+    // =================
+    // = Base.Response =
+    // =================
+
+    override fun getData(): T? {
+        return response
+    }
+
+    override fun getCode(): String? {
+        return code
+    }
+
+    override fun getMessage(): String? {
+        return toast
+    }
+
+    override fun isSuccess(): Boolean {
+        return code?.let { code ->
+            // 自定义 code 为 200 表示请求成功 ( 后台定义 )
+            StringUtils.equals(code, "200")
+        } ?: false
+    }
+}
+```
+
+
+
+
+
+
+
+
 newline
 
 
@@ -143,3 +279,4 @@ newline
 [Notify.Callback]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev/retrofit/model.kt#L160
 [Notify.ResultCallback]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev/retrofit/model.kt#L230
 [Notify.GlobalCallback]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev/retrofit/model.kt#L280
+[DevRetrofitCoroutinesDemo]: https://github.com/afkT/DevUtils/blob/master/application/DevUtilsApp/src/main/java/afkt/project/use_demo/DevRetrofitCoroutinesDemo.kt
