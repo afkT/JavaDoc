@@ -5,6 +5,7 @@
 * [框架功能介绍](#框架功能介绍)
 * [API 文档](#API-文档)
 * [使用示例](#使用示例)
+* [使用步骤](#使用步骤)
 
 
 ## Gradle
@@ -131,9 +132,10 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 
 具体实现代码可以查看 [DevRetrofitCoroutinesDemo][DevRetrofitCoroutinesDemo]。
 
-### 使用步骤
 
-#### 1. 首先创建 Response 请求响应解析类
+## 使用步骤
+
+### 1. 首先创建 Response 请求响应解析类
 
 `需要创建 Response 类并实现 Base.Response 解析类`
 
@@ -144,9 +146,9 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 ```json
 {
     "resultData": Object,
-	"resultCode": 200,
-	"errorMessage": "错误提示",
-	"isToast": true
+    "resultCode": 200,
+    "errorMessage": "错误提示",
+    "isToast": true
 }
 ```
 
@@ -172,7 +174,7 @@ open class BaseResponse<T> : Base.Response<T> {
     private var resultData: T? = null
     private var resultCode: Int = 0
     private var errorMessage: String? = null
-    private var isToast: Boolean = true
+    private var isToast: Boolean = false
 
     // =================
     // = Base.Response =
@@ -204,7 +206,7 @@ open class BaseResponse<T> : Base.Response<T> {
 }
 ```
 
-只要实现 `Base.Response` 实现四个核心方法按照对应意思 return 即可
+只要实现 `Base.Response` 四个核心方法按照对应意思 return 即可
 
 | 方法 | 注释 |
 | :- | :- |
@@ -215,7 +217,7 @@ open class BaseResponse<T> : Base.Response<T> {
 
 > 有其他额外的字段如 `isToast` 则自行添加获取方法即可。
 
-那么以 B 公司定义 `BaseResponse` 将会是这样
+如果以 B 公司定义 `BaseResponse` 将会是这样
 
 ```kotlin
 /**
