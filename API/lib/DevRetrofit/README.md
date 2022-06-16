@@ -89,14 +89,14 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 | onError | 请求异常 |
 | onFinish | 请求结束 |
 
-* **request.kt ( 整个 DevRetrofit 库 ) 最终调用方法 ->** [request.kt][request.kt]
+* **整个 DevRetrofit 库最终调用方法 ->** [request.kt][request.kt]
 
 | 方法 | 注释 |
 | :- | :- |
 | finalExecute | 无任何额外逻辑封装, 支持自定义解析、处理等代码 |
 | finalExecuteResponse | 封装为 Base.Response、Base.Result 进行响应 |
 
-* **在 `request.kt` 基础上封装使用协程 ->** [request_coroutines.kt][request_coroutines.kt]
+* **请求方法协程扩展函数 ->** [request_coroutines.kt][request_coroutines.kt]
 
 | 方法 | 注释 |
 | :- | :- |
@@ -105,7 +105,7 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 | launchExecuteRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 | launchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
-* **在 `request_coroutines.kt` 基础上使用 Callback 回调 ->** [request_coroutines_simple.kt][request_coroutines_simple.kt]
+* **Callback 扩展函数 ->** [request_coroutines_simple.kt][request_coroutines_simple.kt]
 
 | 方法 | 注释 |
 | :- | :- |
@@ -114,7 +114,7 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 | simpleLaunchExecuteRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 | simpleLaunchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
-* **在 `request_coroutines_simple.kt` 基础上使用 LiveData ->** [request_coroutines_simple_livedata.kt][request_coroutines_simple_livedata.kt]
+* **LiveData 扩展函数 ->** [request_coroutines_simple_livedata.kt][request_coroutines_simple_livedata.kt]
 
 | 方法 | 注释 |
 | :- | :- |
