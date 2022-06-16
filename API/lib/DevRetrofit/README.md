@@ -93,35 +93,35 @@ DevRetrofit 是基于 Retrofit + Kotlin Coroutines 进行封装的网络层封�
 
 | 方法 | 注释 |
 | :- | :- |
-| finalExecute | 无任何封装, 支持自定义解析、处理等代码 |
+| finalExecute | 无任何额外逻辑封装, 支持自定义解析、处理等代码 |
 | finalExecuteResponse | 封装为 Base.Response、Base.Result 进行响应 |
 
 * **在 `request.kt` 基础上封装使用协程 ->** [request_coroutines.kt][request_coroutines.kt]
 
 | 方法 | 注释 |
 | :- | :- |
-| CoroutineScope.scopeExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
+| CoroutineScope.scopeExecuteRequest | 无任何额外逻辑封装, 支持自定义解析、处理等代码 |
 | CoroutineScope.scopeExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].launchExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].launchExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
+| launchExecuteRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
+| launchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
-* **在 `request_coroutines.kt` 基础使用 Callback 回调 ->** [request_coroutines_simple.kt][request_coroutines_simple.kt]
+* **在 `request_coroutines.kt` 基础上使用 Callback 回调 ->** [request_coroutines_simple.kt][request_coroutines_simple.kt]
 
 | 方法 | 注释 |
 | :- | :- |
-| CoroutineScope.simpleScopeExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
+| CoroutineScope.simpleScopeExecuteRequest | 无任何额外逻辑封装, 支持自定义解析、处理等代码 |
 | CoroutineScope.simpleScopeExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].simpleLaunchExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].simpleLaunchExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
+| simpleLaunchExecuteRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
+| simpleLaunchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
 * **在 `request_coroutines_simple.kt` 基础上使用 LiveData ->** [request_coroutines_simple_livedata.kt][request_coroutines_simple_livedata.kt]
 
 | 方法 | 注释 |
 | :- | :- |
-| CoroutineScope.liveDataScopeExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
+| CoroutineScope.liveDataScopeExecuteRequest | 无任何额外逻辑封装, 支持自定义解析、处理等代码 |
 | CoroutineScope.liveDataScopeExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].liveDataLaunchExecuteRequest | 无任何封装, 支持自定义解析、处理等代码 |
-| \[ViewModel、Lifecycle、LifecycleOwner\].liveDataLaunchExecuteResponseRequest | 封装为 Base.Response、Base.Result 进行响应 |
+| liveDataLaunchExecuteRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
+| liveDataLaunchExecuteResponseRequest | ViewModel、Lifecycle、LifecycleOwner 扩展函数 ( 功能如上 ) |
 
 
 newline
