@@ -6,6 +6,7 @@
 * [API 文档](#API-文档)
 * [使用示例](#使用示例)
 * [使用步骤](#使用步骤)
+* [总结与扩展](#总结与扩展)
 
 
 ## Gradle
@@ -301,7 +302,7 @@ interface APIService {
 
 针对 `CoroutineScope`、`ViewModel`、`Lifecycle`、`LifecycleOwner` 及 `LifecycleOwner` 实现类 ( `Activity`、`Fragment` 等 ) 封装快捷扩展函数。
 
-以下例子，模拟在 `Activity` 下使用 ( 在 `ViewModel` ( 上述 ) 下使用也一样 )
+以下例子，模拟在 `Activity` 下使用 ( 在 `ViewModel ( 上述 )` 下使用也一样 )
 
 ```kotlin
 // ===================
@@ -317,6 +318,9 @@ interface APIService {
  * 不管什么扩展函数方式请求, 最终都是执行 request.kt 中的 finalExecute、finalExecuteResponse 方法
  */
 class TestActivity : AppCompatActivity() {
+
+    // 封装 Base Notify.Callback
+    abstract class BaseCallback<T> : Notify.Callback<T>()
 
     // 封装 Notify.ResultCallback 简化代码
     abstract class BaseResultCallback<T> : Notify.ResultCallback<T, BaseResponse<T>>()
@@ -350,7 +354,7 @@ class TestActivity : AppCompatActivity() {
         simpleLaunchExecuteRequest(
             block = {
                 RetrofitAPI.api().loadArticleList(1)
-            }, InnerCallback()
+            }, ArticleCallback()
         )
 
         // 加载文章列表方式二
@@ -407,11 +411,11 @@ class TestActivity : AppCompatActivity() {
             finish = {
 
             },
-            callback = InnerCallback()
+            callback = ArticleCallback()
         )
     }
 
-    private class InnerCallback : Notify.Callback<ArticleResponse>() {
+    private class ArticleCallback : Notify.Callback<ArticleResponse>() {
         override fun onSuccess(
             uuid: UUID,
             data: ArticleResponse?
@@ -439,11 +443,11 @@ class TestActivity : AppCompatActivity() {
 }
 ```
 
-### 4. 总结与扩展
+## 总结与扩展
 
-至此，整个 `DevRetrofit` 库使用及介绍如上，但是`强烈推荐`在该基础上进行二次封装，并搭配 [DevHttpCapture][DevHttpCapture]、[DevHttpManager][DevHttpManager] 使用。
+至此，整个 `DevRetrofit` 库使用及介绍如上，但是 **`强烈推荐`** 在该基础上进行二次封装，并搭配 [DevHttpCapture][DevHttpCapture]、[DevHttpManager][DevHttpManager] 使用。
 
-`二次封装`：例针对 Activity、Fragment `ViewModel` 统一添加 Request Loading Dialog 等，以及其他诸如`全局回调`、`请求阶段数据记录`等各种独立项目逻辑
+**`二次封装`**：例针对 Activity、Fragment 所属 `ViewModel` 统一添加 Request Loading Dialog 等，以及其他`全局回调`、`请求阶段数据记录`等各种独立项目逻辑
 
 并且针对请求方法二次封装，统一使用如 `ViewModel`、`LiveData` 等方法入参参数，方便排查调试以及统一维护。
 
