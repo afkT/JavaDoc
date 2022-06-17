@@ -255,9 +255,185 @@ open class BaseResponse<T> : Base.Response<T> {
 }
 ```
 
+### 2. 创建 Callback 每个阶段通知回调类 ( 非必须 )
 
+创建 Base Callback 是为了整个项目统一使用，内部可添加`额外逻辑处理`、`特殊字段存储`等，视项目情况定义，参考如下：
 
+```kotlin
+// 封装 Base Notify.Callback
+abstract class BaseCallback<T> : Notify.Callback<T>()
 
+// 封装 Base Notify.ResultCallback 简化代码
+abstract class BaseResultCallback<T> : Notify.ResultCallback<T, BaseResponse<T>>()
+```
+
+### 3. 发起请求 ( 最后一步 )
+
+以`获取文章列表`请求为例
+
+```kotlin
+/**
+ * detail: 文章实体类
+ * @author Ttt
+ */
+data class ArticleBean(
+    val content: String?,
+    val cover: String?
+)
+
+/**
+ * detail: 服务器接口 API Service
+ * @author Ttt
+ */
+interface APIService {
+
+    @GET("xxx")
+    suspend fun loadArticleList(@Path("page") page: Int): BaseResponse<List<ArticleBean?>>
+}
+```
+
+针对 `CoroutineScope`、`ViewModel`、`Lifecycle`、`LifecycleOwner` 及 `LifecycleOwner` 实现类 ( `Activity`、`Fragment` 等 ) 封装快捷扩展函数。
+
+以下例子，模拟在 `Activity` 下使用 ( 在 `ViewModel` ( 上述 ) 下使用也一样 )
+
+```kotlin
+// ===================
+// = DevRetrofit 使用 =
+// ===================
+
+/**
+ * 模拟在 Activity 下使用
+ * 总的请求方法分为以下两种
+ * execute Request
+ * execute Response Request
+ * 区别在于 Response 是直接使用内部封装的 Base.Result 以及 ResultCallback 进行回调通知等
+ * 不管什么扩展函数方式请求, 最终都是执行 request.kt 中的 finalExecute、finalExecuteResponse 方法
+ */
+class TestActivity : AppCompatActivity() {
+
+    // 封装 Base Notify.Callback
+    abstract class BaseCallback<T> : Notify.Callback<T>()
+
+    // 封装 Notify.ResultCallback 简化代码
+    abstract class BaseResultCallback<T> : Notify.ResultCallback<T, BaseResponse<T>>()
+
+    // LiveData
+    private val _articleLiveData = MutableLiveData<BaseResponse<List<ArticleBean?>>>()
+    val articleLiveData: LiveData<BaseResponse<List<ArticleBean?>>> = _articleLiveData
+
+    private fun request() {
+        // 加载文章列表方式一
+        simpleLaunchExecuteRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            }, object : Notify.Callback<BaseResponse<List<ArticleBean?>>>() {
+                override fun onSuccess(
+                    uuid: UUID,
+                    data: BaseResponse<List<ArticleBean?>>?
+                ) {
+                    // 请求成功
+                }
+
+                override fun onError(
+                    uuid: UUID,
+                    error: Throwable?
+                ) {
+                    // 请求异常
+                }
+            }
+        )
+        // 加载文章列表方式一 ( 使用封装 Callback )
+        simpleLaunchExecuteRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            }, InnerCallback()
+        )
+
+        // 加载文章列表方式二
+        simpleLaunchExecuteResponseRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            }, object : Notify.ResultCallback<List<ArticleBean?>, BaseResponse<List<ArticleBean?>>>() {
+                override fun onSuccess(
+                    uuid: UUID,
+                    data: Base.Result<List<ArticleBean?>, BaseResponse<List<ArticleBean?>>>
+                ) {
+
+                }
+            }
+        )
+
+        // 加载文章列表方式二 ( 使用 BaseResultCallback )
+        simpleLaunchExecuteResponseRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            }, object : BaseResultCallback<List<ArticleBean?>>() {
+                override fun onSuccess(
+                    uuid: UUID,
+                    data: Base.Result<List<ArticleBean?>, BaseResponse<List<ArticleBean?>>>
+                ) {
+
+                }
+            }
+        )
+
+        // 加载文章列表方式三
+        liveDataLaunchExecuteRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            },
+            liveData = _articleLiveData,
+            usePostValue = false // default true
+        )
+
+        // 加载文章列表方式四 ( 可自行添加额外流程等 )
+        launchExecuteRequest(
+            block = {
+                RetrofitAPI.api().loadArticleList(1)
+            },
+            start = {
+
+            },
+            success = {
+
+            },
+            error = {
+
+            },
+            finish = {
+
+            },
+            callback = InnerCallback()
+        )
+    }
+
+    private class InnerCallback : Notify.Callback<BaseResponse<List<ArticleBean?>>>() {
+        override fun onSuccess(
+            uuid: UUID,
+            data: BaseResponse<List<ArticleBean?>>?
+        ) {
+            // 请求成功
+        }
+
+        override fun onError(
+            uuid: UUID,
+            error: Throwable?
+        ) {
+            // 请求异常
+        }
+
+        override fun onStart(uuid: UUID) {
+            super.onStart(uuid)
+            // 开始请求
+        }
+
+        override fun onFinish(uuid: UUID) {
+            super.onFinish(uuid)
+            // 请求结束
+        }
+    }
+}
+```
 
 
 
