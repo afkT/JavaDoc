@@ -420,6 +420,7 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.anim", "动画工具类");
 
         sCatalogMap_APP.put(".app.assist", "辅助类");
+        sCatalogMap_APP.put(".app.assist.exif", "图片 EXIF 读写辅助类");
         sCatalogMap_APP.put(".app.assist.floating", "悬浮窗实现方案辅助类");
         sCatalogMap_APP.put(".app.assist.lifecycle", "Activity 生命周期监听辅助类");
         sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
@@ -550,6 +551,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".java.dev.engine.keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Other.put(".java.dev.engine.log", "Log Engine 日志打印");
         sCatalogMap_Other.put(".java.dev.engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Other.put(".java.dev.engine.media.luck_lib_engine", "LuckSiege PictureSelector Engine 实现");
         sCatalogMap_Other.put(".java.dev.engine.permission", "Permission Engine 权限申请");
         sCatalogMap_Other.put(".java.dev.engine.push", "Push Engine 推送平台处理");
         sCatalogMap_Other.put(".java.dev.engine.share", "Share Engine 分享平台处理");
@@ -641,6 +643,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Engine.put(".log", "Log Engine 日志打印");
         sCatalogMap_Engine.put(".media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Engine.put(".media.luck_lib_engine", "LuckSiege PictureSelector Engine 实现");
         sCatalogMap_Engine.put(".permission", "Permission Engine 权限申请");
         sCatalogMap_Engine.put(".push", "Push Engine 推送平台处理");
         sCatalogMap_Engine.put(".share", "Share Engine 分享平台处理");

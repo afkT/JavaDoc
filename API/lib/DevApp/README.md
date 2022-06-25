@@ -17,6 +17,7 @@ implementation 'io.github.afkt:DevAppX:2.3.8'
       - activity_result         | Activity Result API
       - anim                    | 动画工具类
       - assist                  | 辅助类
+         - exif                 | 图片 EXIF 读写辅助类
          - floating             | 悬浮窗实现方案辅助类
          - lifecycle            | Activity 生命周期监听辅助类
          - record               | 文件记录分析类
@@ -105,6 +106,7 @@ DevUtils.openDebug();
       - [activity_result](#devutilsappactivity_result)                     | Activity Result API
       - [anim](#devutilsappanim)                                           | 动画工具类
       - [assist](#devutilsappassist)                                       | 辅助类
+         - [exif](#devutilsappassistexif)                                  | 图片 EXIF 读写辅助类
          - [floating](#devutilsappassistfloating)                          | 悬浮窗实现方案辅助类
          - [lifecycle](#devutilsappassistlifecycle)                        | Activity 生命周期监听辅助类
          - [record](#devutilsappassistrecord)                              | 文件记录分析类
@@ -734,6 +736,7 @@ DevUtils.openDebug();
 | closeDialogs | 关闭多个 Dialog |
 | closePopupWindow | 关闭 PopupWindow |
 | closePopupWindows | 关闭多个 PopupWindow |
+| showDialogAndCloses | 显示 Dialog 并关闭其他 Dialog |
 | createAlertDialog | 创建提示 Dialog ( 原生样式 ) |
 | createProgressDialog | 创建加载中 Dialog ( 原生样式 ) |
 | autoCloseDialog | 自动关闭 dialog |
@@ -2427,6 +2430,68 @@ DevUtils.openDebug();
 | setStatusBarColorAndFlag | 设置状态栏颜色、高版本状态栏蒙层 |
 
 
+## <span id="devutilsappassistexif">**`dev.utils.app.assist.exif`**</span>
+
+
+* **图片 EXIF 读写辅助类 ->** [ExifAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/exif/ExifAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| get | get |
+| getByRequire | 创建可获取 EXIF 敏感信息辅助类 |
+| requireOriginal | 获取 EXIF 敏感信息, 请求获取原始 Uri |
+| requestPermission | 请求 ACCESS_MEDIA_LOCATION 权限并进行通知 |
+| isSupportedMimeType | 判断是否支持读取的资源类型 |
+| clone | 克隆图片 EXIF 读写信息 |
+| getExif | 获取图片 EXIF 操作接口 |
+| getExifError | 获取 EXIF 初始化异常信息 |
+| isExifNull | 是否图片 EXIF 为 null |
+| isExifNotNull | 是否图片 EXIF 不为 null |
+| isExifError | 是否 EXIF 初始化异常 |
+| getAttributeInt | 根据 TAG 获取对应值 |
+| getAttributeDouble | 根据 TAG 获取对应值 |
+| getAttribute | 根据 TAG 获取对应值 |
+| getAttributeBytes | 根据 TAG 获取对应值 |
+| getAttributeRange | 根据 TAG 获取对应值 |
+| hasAttribute | 是否存在指定 TAG 值 |
+| setAttribute | 设置对应 TAG 值 |
+| saveAttributes | 将标签数据存储到图片中 ( 最终必须调用 ) |
+| eraseAllExif | 擦除图像 Exif 信息 ( 全部 ) |
+| eraseExifByList | 擦除图像 Exif 信息 ( 指定集合 ) |
+| eraseExifByArray | 擦除图像 Exif 信息 ( 指定数组 ) |
+| eraseExifLocation | 擦除图像所有 GPS 位置信息 |
+| existLocation | 是否存在 GPS 位置信息 |
+| getLatLong | 获取经纬度信息 |
+| setLatLong | 设置经纬度信息 |
+| getGpsInfo | 获取 GPS 信息 |
+| setGpsInfo | 设置 GPS 信息 |
+| getGpsDateTime | 获取 GPS 定位时间信息 |
+| getAltitude | 获取海拔高度信息 ( 单位米 ) |
+| setAltitude | 设置海拔高度信息 |
+| hasThumbnail | 是否存在缩略图 |
+| isThumbnailCompressed | 是否存在 JPEG 压缩缩略图 |
+| getThumbnail | 获取 JPEG 压缩缩略图 |
+| getThumbnailBytes | 获取 Exif 缩略图 |
+| getThumbnailBitmap | 获取 Exif 缩略图 |
+| getThumbnailRange | 获取缩略图数据偏移量位置和长度信息 |
+| isFlipped | 当前图片是否翻转 |
+| flipHorizontally | 进行水平翻转图片 |
+| flipVertically | 进行垂直翻转图片 |
+| getRotationDegrees | 获取图片旋转角度 |
+| rotate | 将图片顺时针旋转给定度数 |
+| resetOrientation | 重置图片方向为默认方向 |
+| getAttributeByGroup | 获取 Exif 信息 ( ExifTag Group ) |
+| getAttributeByList | 获取 Exif 信息 ( 指定集合 ) |
+| getAttributeByArray | 获取 Exif 信息 ( 指定数组 ) |
+
+
+* **图片 EXIF Tag Group 常量类 ->** [ExifTag.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/exif/ExifTag.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| asList | 快捷创建 List 简化 add 操作 |
+
+
 ## <span id="devutilsappassistfloating">**`dev.utils.app.assist.floating`**</span>
 
 
@@ -4053,7 +4118,7 @@ DevUtils.openDebug();
 | recode | 重新编码 Bitmap |
 | recycle | Bitmap 通知回收 |
 | rotate | 旋转图片 |
-| getRotateDegree | 读取图片属性, 获取图片被旋转的角度 |
+| getRotationDegrees | 读取图片属性, 获取图片旋转角度 |
 | reverseByHorizontal | 水平翻转图片 ( 左右颠倒 ) |
 | reverseByVertical | 垂直翻转图片 ( 上下颠倒 ) |
 | reverse | 翻转图片 |
