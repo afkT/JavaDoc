@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.3.8'
+implementation 'io.github.afkt:DevAppX:2.3.9'
 ```
 
 ## 目录结构
@@ -5531,6 +5531,7 @@ DevUtils.openDebug();
 | length | 获取字符串长度 |
 | isLength | 获取字符串长度 是否等于期望长度 |
 | equals | 判断两个值是否一样 |
+| equalsNotNull | 判断两个值是否一样 ( 非 null 判断 ) |
 | isEquals | 判断多个字符串是否相等, 只有全相等才返回 true ( 对比大小写 ) |
 | isOrEquals | 判断多个字符串, 只要有一个符合条件则通过 |
 | isContains | 判断一堆值中, 是否存在符合该条件的 ( 包含 ) |

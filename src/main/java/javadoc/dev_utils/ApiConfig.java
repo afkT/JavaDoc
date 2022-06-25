@@ -58,7 +58,7 @@ public final class ApiConfig {
     // ==========
 
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.3.8";
+    public static final String DEV_APP_VERSION            = "2.3.9";
     // DevApp 文件路径
     public static final String DEV_APP_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev";
     // DevApp Utils 文件路径
@@ -255,7 +255,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.4.4";
+    public static final String DEV_JAVA_VERSION            = "1.4.5";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
