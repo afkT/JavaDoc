@@ -27,11 +27,13 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DevFinalIgnore", ArrayUtils.asListArgs("ignoreSet"));
         ignoreAnnotateMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
         ignoreAnnotateMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreAnnotateMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreAnnotateMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreAnnotateMap.put("Utils", ArrayUtils.asListArgs("getPackagePath","getFormatFilePath","getResultFilePath"));
 
         return ignoreAnnotateMap;
     }
@@ -49,6 +51,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
         ignoreFinalMap.put("GradleMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
@@ -85,6 +88,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
         ignoreParamMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
         ignoreParamMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
@@ -120,6 +124,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("DimenGenerateMain", ArrayUtils.asListArgs("forDimen"));
         ignoreUnPublicMap.put("GradleMain", ArrayUtils.asListArgs("getGradleFileName"));
         ignoreUnPublicMap.put("Main", ArrayUtils.asListArgs("print"));
+        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getPackagePath"));
 
         return ignoreUnPublicMap;
     }
@@ -148,6 +153,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd - void"));
+        ignoreReturnVoidMap.put("Utils", ArrayUtils.asListArgs("convertPSFS - void","sortAppend - void"));
 
         return ignoreReturnVoidMap;
     }

@@ -55,6 +55,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("DoubleSort", ArrayUtils.asListArgs("getDoubleSortValue"));
         ignoreAnnotateMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreAnnotateMap.put("ExifAssist", ArrayUtils.asListArgs("get","get","get"));
         ignoreAnnotateMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreAnnotateMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
@@ -277,6 +278,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("DevicePolicyUtils", ArrayUtils.asListArgs("getDevicePolicyManager","isAdminActive","getActiveIntent","activeAdmin","removeActiveAdmin","startLockPassword","setLockPassword","lockNow","lockByTime","wipeData","resetPassword","setStorageEncryption","setCameraDisabled","getComponentName","setComponentName","isAdminActive","getActiveIntent","activeAdmin","removeActiveAdmin","setLockPassword","lockNow","lockByTime","wipeData","resetPassword","setStorageEncryption","setCameraDisabled"));
         ignoreStaticMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("ExifAssist", ArrayUtils.asListArgs("clone","getExif","getExifError","isExifNull","isExifNotNull","isExifError","getAttributeInt","getAttributeDouble","getAttribute","getAttributeBytes","getAttributeRange","hasAttribute","setAttribute","saveAttributes","eraseAllExif","eraseExifByList","eraseExifByArray","eraseExifLocation","eraseExifLocation","existLocation","getLatLong","setLatLong","getGpsInfo","setGpsInfo","getGpsDateTime","getAltitude","setAltitude","hasThumbnail","isThumbnailCompressed","getThumbnail","getThumbnailBytes","getThumbnailBitmap","getThumbnailRange","isFlipped","flipHorizontally","flipVertically","getRotationDegrees","rotate","resetOrientation","getAttributeByGroup","getAttributeByList","getAttributeByArray"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils", ArrayUtils.asListArgs("setSearchHandler","getQueueSameTimeNumber","setQueueSameTimeNumber","isRunning","stop","isStop","getStartTime","getEndTime","getDelayTime","setDelayTime","query","queryFile","whileQueue"));
         ignoreStaticMap.put("FileBreadthFirstSearchUtils.FileItem", ArrayUtils.asListArgs("put"));
         ignoreStaticMap.put("FileDepthFirstSearchUtils", ArrayUtils.asListArgs("setSearchHandler","isRunning","stop","isStop","getStartTime","getEndTime","query","queryFile"));
@@ -429,6 +431,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("DoubleSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("DoubleSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("EditTextUtils", ArrayUtils.asListArgs("isCursorVisible","setTextCursorDrawable","setTextCursorDrawable"));
+        ignoreParamMap.put("ExifAssist", ArrayUtils.asListArgs("get","get","get"));
         ignoreParamMap.put("FileLastModifiedSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FileLastModifiedSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreParamMap.put("FileLengthSortAsc", ArrayUtils.asListArgs("compare"));
