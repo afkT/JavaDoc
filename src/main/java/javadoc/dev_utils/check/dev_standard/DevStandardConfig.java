@@ -34,6 +34,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreAnnotateMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("Utils", ArrayUtils.asListArgs("getPackagePath","getFormatFilePath","getResultFilePath"));
+        ignoreAnnotateMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
     }
@@ -57,6 +58,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreFinalMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreFinalMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
 
         return ignoreFinalMap;
     }
@@ -94,6 +96,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreParamMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
     }
@@ -125,6 +128,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("GradleMain", ArrayUtils.asListArgs("getGradleFileName"));
         ignoreUnPublicMap.put("Main", ArrayUtils.asListArgs("print"));
         ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getPackagePath"));
+        ignoreUnPublicMap.put("ValiPhoneMain", ArrayUtils.asListArgs("getTypeNumber","toNumberMap","generatePATTERN"));
 
         return ignoreUnPublicMap;
     }
