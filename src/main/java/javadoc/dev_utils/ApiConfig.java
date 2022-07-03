@@ -551,7 +551,8 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".java.dev.engine.keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Other.put(".java.dev.engine.log", "Log Engine 日志打印");
         sCatalogMap_Other.put(".java.dev.engine.media", "Media Selector Engine 多媒体资源选择");
-        sCatalogMap_Other.put(".java.dev.engine.media.luck_lib_engine", "LuckSiege PictureSelector Engine 实现");
+        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
+        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
         sCatalogMap_Other.put(".java.dev.engine.permission", "Permission Engine 权限申请");
         sCatalogMap_Other.put(".java.dev.engine.push", "Push Engine 推送平台处理");
         sCatalogMap_Other.put(".java.dev.engine.share", "Share Engine 分享平台处理");
@@ -643,7 +644,6 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".keyvalue", "KeyValue Engine 键值对存储");
         sCatalogMap_Engine.put(".log", "Log Engine 日志打印");
         sCatalogMap_Engine.put(".media", "Media Selector Engine 多媒体资源选择");
-        sCatalogMap_Engine.put(".media.luck_lib_engine", "LuckSiege PictureSelector Engine 实现");
         sCatalogMap_Engine.put(".permission", "Permission Engine 权限申请");
         sCatalogMap_Engine.put(".push", "Push Engine 推送平台处理");
         sCatalogMap_Engine.put(".share", "Share Engine 分享平台处理");

@@ -1858,6 +1858,10 @@ DevUtils.openDebug();
 | isDownloadsDocument | 判读 Uri authority 是否为 Downloads Provider |
 | isMediaDocument | 判断 Uri authority 是否为 Media Provider |
 | isGooglePhotosUri | 判断 Uri authority 是否为 Google Photos Provider |
+| isAndroidResourceScheme | 判断 Uri Scheme 是否 ContentResolver.SCHEME_ANDROID_RESOURCE |
+| isFileScheme | 判断 Uri Scheme 是否 ContentResolver.SCHEME_FILE |
+| isContentScheme | 判断 Uri Scheme 是否 ContentResolver.SCHEME_CONTENT |
+| isUriScheme | 判断是否指定的 Uri Scheme |
 
 
 * **版本工具类 ->** [VersionUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/VersionUtils.java)
@@ -5532,6 +5536,8 @@ DevUtils.openDebug();
 | isLength | 获取字符串长度 是否等于期望长度 |
 | equals | 判断两个值是否一样 |
 | equalsNotNull | 判断两个值是否一样 ( 非 null 判断 ) |
+| equalsIgnoreCase | 判断两个值是否一样 ( 忽略大小写 ) |
+| equalsIgnoreCaseNotNull | 判断两个值是否一样 ( 忽略大小写 ) |
 | isEquals | 判断多个字符串是否相等, 只有全相等才返回 true ( 对比大小写 ) |
 | isOrEquals | 判断多个字符串, 只要有一个符合条件则通过 |
 | isContains | 判断一堆值中, 是否存在符合该条件的 ( 包含 ) |
@@ -6417,14 +6423,16 @@ DevUtils.openDebug();
 | isContainChinese | 判断字符串中包含中文、包括中文字符标点等 |
 
 
-* **检验联系 ( 手机号、座机 ) 工具类 ->** [ValiToPhoneUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/validator/ValiToPhoneUtils.java)
+* **检验联系 ( 手机号码、座机 ) 工具类 ->** [ValiToPhoneUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/validator/ValiToPhoneUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
-| isPhoneCheck | 中国手机号格式验证, 在输入可以调用该方法, 点击发送验证码, 使用 isPhone |
-| isPhone | 是否中国手机号 |
-| isPhoneToChinaTelecom | 是否中国电信手机号码 |
-| isPhoneToChinaUnicom | 是否中国联通手机号码 |
+| isPhoneSimple | 中国手机号码格式验证 ( 简单手机号码校验 ) |
+| isPhone | 是否中国手机号码 |
 | isPhoneToChinaMobile | 是否中国移动手机号码 |
-| isPhoneToHkMobile | 判断是否香港手机号 |
+| isPhoneToChinaUnicom | 是否中国联通手机号码 |
+| isPhoneToChinaTelecom | 是否中国电信手机号码 |
+| isPhoneToChinaBroadcast | 是否中国广电手机号码 |
+| isPhoneToChinaVirtual | 是否中国虚拟运营商手机号码 |
+| isPhoneToChinaHkMobile | 是否中国香港手机号码 |
 | isPhoneCallNum | 验证电话号码的格式 |
