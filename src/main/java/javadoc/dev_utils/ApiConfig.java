@@ -572,6 +572,10 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".ktx", "Kotlin 实现");
         sCatalogMap_Other.put(".ktx.dev", "根目录");
         sCatalogMap_Other.put(".ktx.dev.assist", "常用辅助类封装");
+        sCatalogMap_Other.put(".ktx.dev.engine", "兼容 Engine");
+        sCatalogMap_Other.put(".ktx.dev.engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
+        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
         sCatalogMap_Other.put(".ktx.dev.other", "第三方库封装工具类");
         sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
         sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.demo", "Retrofit RxJava Demo");

@@ -13,7 +13,7 @@ dependencies {
     // Gson 解析
     implementation 'com.google.code.gson:gson:2.9.0'
     // DevJava
-    implementation 'io.github.afkt:DevJava:1.4.4'
+    implementation 'io.github.afkt:DevJava:1.4.6'
 
 //    // tools.jar 的依赖
 //    implementation files(org.gradle.internal.jvm.Jvm.current().toolsJar)
