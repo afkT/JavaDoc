@@ -25,7 +25,7 @@ dependencies {
     def toolsJARPath = "${homePath}${toolsJAR}"
     // 判断是否为 jre 目录
     if (homePath.endsWith("jre")) {
-        toolsJARPath = "${new File(homePath).parent}${toolsJAR}"
+        toolsJARPath = "${file(homePath).parent}${toolsJAR}"
     }
     implementation files(toolsJARPath)
 
