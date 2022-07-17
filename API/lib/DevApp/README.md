@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.4.0'
+implementation 'io.github.afkt:DevAppX:2.4.1'
 ```
 
 ## 目录结构
@@ -42,6 +42,7 @@ implementation 'io.github.afkt:DevAppX:2.4.0'
          - toaster              | Toaster 处理无通知权限
       - wifi                    | Wifi、热点工具类
    - common                     | Java 工具类, 不依赖 android api
+      - able                    | 通用接口定义
       - assist                  | 各种快捷辅助类
          - record               | 文件记录分析类
          - search               | 搜索相关 ( 文件搜索等 )
@@ -131,6 +132,7 @@ DevUtils.openDebug();
          - [toaster](#devutilsapptoasttoaster)                             | Toaster 处理无通知权限
       - [wifi](#devutilsappwifi)                                           | Wifi、热点工具类
    - [common](#devutilscommon)                                             | Java 工具类, 不依赖 android api
+      - [able](#devutilscommonable)                                        | 通用接口定义
       - [assist](#devutilscommonassist)                                    | 各种快捷辅助类
          - [record](#devutilscommonassistrecord)                           | 文件记录分析类
          - [search](#devutilscommonassistsearch)                           | 搜索相关 ( 文件搜索等 )
@@ -1837,6 +1839,14 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByRight | 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
+| setAutoSizeTextTypeWithDefaults | 通过设置默认的自动调整大小配置, 决定是否自动缩放文本 |
+| setAutoSizeTextTypeUniformWithConfiguration | 设置 TextView 自动调整字体大小配置 |
+| setAutoSizeTextTypeUniformWithPresetSizes | 设置 TextView 自动调整如果预设字体大小范围有效则修改类型为 AUTO_SIZE_TEXT_TYPE_UNIFORM |
+| getAutoSizeTextType | 获取 TextView 自动调整大小类型 |
+| getAutoSizeStepGranularity | 获取 TextView 自动调整大小变动粒度 ( 跨度区间值 ) |
+| getAutoSizeMinTextSize | 获取 TextView 自动调整最小字体大小 |
+| getAutoSizeMaxTextSize | 获取 TextView 自动调整最大字体大小 |
+| getAutoSizeTextAvailableSizes | 获取 TextView 自动调整大小预设范围数组 |
 
 
 * **Uri 工具类 ->** [UriUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/UriUtils.java)
@@ -3368,6 +3378,9 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByRight | 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
+| setAutoSizeTextTypeWithDefaults | 通过设置默认的自动调整大小配置, 决定是否自动缩放文本 |
+| setAutoSizeTextTypeUniformWithConfiguration | 设置 TextView 自动调整字体大小配置 |
+| setAutoSizeTextTypeUniformWithPresetSizes | 设置 TextView 自动调整如果预设字体大小范围有效则修改类型为 AUTO_SIZE_TEXT_TYPE_UNIFORM |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
 | setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
@@ -3585,6 +3598,9 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByRight | 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
+| setAutoSizeTextTypeWithDefaults | 通过设置默认的自动调整大小配置, 决定是否自动缩放文本 |
+| setAutoSizeTextTypeUniformWithConfiguration | 设置 TextView 自动调整字体大小配置 |
+| setAutoSizeTextTypeUniformWithPresetSizes | 设置 TextView 自动调整如果预设字体大小范围有效则修改类型为 AUTO_SIZE_TEXT_TYPE_UNIFORM |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
 | setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
@@ -3872,6 +3888,9 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByRight | 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
+| setAutoSizeTextTypeWithDefaults | 通过设置默认的自动调整大小配置, 决定是否自动缩放文本 |
+| setAutoSizeTextTypeUniformWithConfiguration | 设置 TextView 自动调整字体大小配置 |
+| setAutoSizeTextTypeUniformWithPresetSizes | 设置 TextView 自动调整如果预设字体大小范围有效则修改类型为 AUTO_SIZE_TEXT_TYPE_UNIFORM |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
 | setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
@@ -4082,6 +4101,9 @@ DevUtils.openDebug();
 | setCompoundDrawablesWithIntrinsicBoundsByRight | 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBoundsByBottom | 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 ) |
 | setCompoundDrawablesWithIntrinsicBounds | 设置 CompoundDrawables ( 按照原有比例大小显示图片 ) |
+| setAutoSizeTextTypeWithDefaults | 通过设置默认的自动调整大小配置, 决定是否自动缩放文本 |
+| setAutoSizeTextTypeUniformWithConfiguration | 设置 TextView 自动调整字体大小配置 |
+| setAutoSizeTextTypeUniformWithPresetSizes | 设置 TextView 自动调整如果预设字体大小范围有效则修改类型为 AUTO_SIZE_TEXT_TYPE_UNIFORM |
 | setLayoutManager | 设置 RecyclerView LayoutManager |
 | setSpanCount | 设置 GridLayoutManager SpanCount |
 | setOrientation | 设置 RecyclerView Orientation |
@@ -5644,6 +5666,9 @@ DevUtils.openDebug();
 | unzipFileByKeyword | 解压带有关键字的文件 |
 | getFilesPath | 获取压缩文件中的文件路径链表 |
 | getComments | 获取压缩文件中的注释链表 |
+
+
+## <span id="devutilscommonable">**`dev.utils.common.able`**</span>
 
 
 ## <span id="devutilscommonassist">**`dev.utils.common.assist`**</span>

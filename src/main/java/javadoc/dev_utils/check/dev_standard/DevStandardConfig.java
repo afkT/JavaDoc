@@ -23,6 +23,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
+        ignoreAnnotateMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","returnGetAbleAnnotation","getIgnoreAbleCLass","main","returnGetAbleAnnotation","getIgnoreAbleCLass"));
         ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("DevFinalIgnore", ArrayUtils.asListArgs("ignoreSet"));
         ignoreAnnotateMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
@@ -33,7 +34,8 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreAnnotateMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreAnnotateMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("Utils", ArrayUtils.asListArgs("getPackagePath","getFormatFilePath","getResultFilePath"));
+        ignoreAnnotateMap.put("Utils", ArrayUtils.asListArgs("getPackagePath","getFormatFilePath","getGenerateDirectory","getPackagePath","getFormatFilePath","getResultFilePath"));
+        ignoreAnnotateMap.put("Utils.Replace", ArrayUtils.asListArgs("getFileName"));
         ignoreAnnotateMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
 
         return ignoreAnnotateMap;
@@ -49,6 +51,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreFinalMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreFinalMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","main"));
         ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreFinalMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
@@ -73,6 +76,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreStaticMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml"));
         ignoreStaticMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
         ignoreStaticMap.put("DepsJsonBean", ArrayUtils.asListArgs("map","getDependencies","getAllDependencies","getAllDependencies"));
+        ignoreStaticMap.put("Utils.Replace", ArrayUtils.asListArgs("getFileName"));
 
         return ignoreStaticMap;
     }
@@ -87,6 +91,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
+        ignoreParamMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","main"));
         ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
@@ -96,6 +101,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreParamMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
         ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
         ignoreParamMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
+        ignoreParamMap.put("Utils", ArrayUtils.asListArgs("getGenerateDirectory"));
         ignoreParamMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
 
         return ignoreParamMap;
@@ -124,10 +130,11 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CatalogMain", ArrayUtils.asListArgs("print"));
         ignoreUnPublicMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort"));
         ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd"));
+        ignoreUnPublicMap.put("CommonAbleMain", ArrayUtils.asListArgs("returnGetAbleAnnotation","getIgnoreAbleCLass","returnGetAbleAnnotation","getIgnoreAbleCLass"));
         ignoreUnPublicMap.put("DimenGenerateMain", ArrayUtils.asListArgs("forDimen"));
         ignoreUnPublicMap.put("GradleMain", ArrayUtils.asListArgs("getGradleFileName"));
         ignoreUnPublicMap.put("Main", ArrayUtils.asListArgs("print"));
-        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getPackagePath"));
+        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getFormatTXT","saveFile","getPackagePath","getFormatFilePath","getGenerateDirectory","getPackagePath"));
         ignoreUnPublicMap.put("ValiPhoneMain", ArrayUtils.asListArgs("getTypeNumber","toNumberMap","generatePATTERN"));
 
         return ignoreUnPublicMap;
@@ -157,7 +164,7 @@ final class DevStandardConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
         ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd - void"));
-        ignoreReturnVoidMap.put("Utils", ArrayUtils.asListArgs("convertPSFS - void","sortAppend - void"));
+        ignoreReturnVoidMap.put("Utils", ArrayUtils.asListArgs("generateAbleFile - void","convertPSFS - void","sortAppend - void"));
 
         return ignoreReturnVoidMap;
     }

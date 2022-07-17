@@ -58,7 +58,7 @@ public final class ApiConfig {
     // ==========
 
     // DevApp 版本号
-    public static final String DEV_APP_VERSION            = "2.4.0";
+    public static final String DEV_APP_VERSION            = "2.4.1";
     // DevApp 文件路径
     public static final String DEV_APP_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevApp/src/main/java/dev";
     // DevApp Utils 文件路径
@@ -255,7 +255,7 @@ public final class ApiConfig {
     // ===========
 
     // DevJava 版本号
-    public static final String DEV_JAVA_VERSION            = "1.4.6";
+    public static final String DEV_JAVA_VERSION            = "1.4.7";
     // DevJava 文件路径
     public static final String DEV_JAVA_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevJava/src/main/java/dev";
     // DevJava Utils 文件路径
@@ -453,6 +453,7 @@ public final class ApiConfig {
         // ==============
 
         sCatalogMap_APP.put(".common", "Java 工具类, 不依赖 android api");
+        sCatalogMap_APP.put(".common.able", "通用接口定义");
         sCatalogMap_APP.put(".common.assist", "各种快捷辅助类");
         sCatalogMap_APP.put(".common.assist.record", "文件记录分析类");
         sCatalogMap_APP.put(".common.assist.search", "搜索相关 ( 文件搜索等 )");
@@ -682,6 +683,48 @@ public final class ApiConfig {
         sFilterClassSet_APP.add("Cipher.java");
         sFilterClassSet_APP.add("Decrypt.java");
         sFilterClassSet_APP.add("Encrypt.java");
+
+        sFilterClassSet_APP.add("Getable.java");
+        sFilterClassSet_APP.add("Byable.java");
+        sFilterClassSet_APP.add("Toable.java");
+        sFilterClassSet_APP.add("Flowable.java");
+        sFilterClassSet_APP.add("Sortable.java");
+        sFilterClassSet_APP.add("Calculateable.java");
+        sFilterClassSet_APP.add("Callable.java");
+        sFilterClassSet_APP.add("Methodable.java");
+        sFilterClassSet_APP.add("Cloneable.java");
+        sFilterClassSet_APP.add("Closeable.java");
+        sFilterClassSet_APP.add("Convertable.java");
+        sFilterClassSet_APP.add("Correctable.java");
+        sFilterClassSet_APP.add("Decodeable.java");
+        sFilterClassSet_APP.add("Encodeable.java");
+        sFilterClassSet_APP.add("Decryptable.java");
+        sFilterClassSet_APP.add("Encryptable.java");
+        sFilterClassSet_APP.add("Filterable.java");
+        sFilterClassSet_APP.add("Interceptable.java");
+        sFilterClassSet_APP.add("IOable.java");
+        sFilterClassSet_APP.add("Notifyable.java");
+        sFilterClassSet_APP.add("Operateable.java");
+        sFilterClassSet_APP.add("Inputable.java");
+        sFilterClassSet_APP.add("Outputable.java");
+        sFilterClassSet_APP.add("Readable.java");
+        sFilterClassSet_APP.add("Writeable.java");
+        sFilterClassSet_APP.add("Refreshable.java");
+        sFilterClassSet_APP.add("Replaceable.java");
+        sFilterClassSet_APP.add("Searchable.java");
+        sFilterClassSet_APP.add("Queryable.java");
+        sFilterClassSet_APP.add("Findable.java");
+        sFilterClassSet_APP.add("Splitable.java");
+        sFilterClassSet_APP.add("Taskable.java");
+        sFilterClassSet_APP.add("Routerable.java");
+        sFilterClassSet_APP.add("Errorable.java");
+        sFilterClassSet_APP.add("Threadable.java");
+        sFilterClassSet_APP.add("Editorable.java");
+        sFilterClassSet_APP.add("Copyable.java");
+        sFilterClassSet_APP.add("Pasteable.java");
+        sFilterClassSet_APP.add("Modifyable.java");
+        sFilterClassSet_APP.add("Parseable.java");
+        sFilterClassSet_APP.add("Sendable.java");
 
         // ============
         // = DevOther =
