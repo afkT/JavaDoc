@@ -211,9 +211,9 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_OTHER_PACKAGE            = "";
     // DevOther 文件路径
-    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/LocalModules/DevOther/src/main/java/";
+    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/lib/LocalModules/DevOther/src/main/java/";
     // DevOther GitHub 项目文件路径
-    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/LocalModules/DevOther/src/main/java/";
+    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils-repo/blob/main/lib/LocalModules/DevOther/src/main/java/";
     // DevOther API 文件保存路径
     public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/LocalModules/DevOther/";
     // DevOther Template Readme
