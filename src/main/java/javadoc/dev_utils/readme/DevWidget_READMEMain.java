@@ -70,23 +70,6 @@ final class DevWidget_READMEMain {
         // 类不存在方法记录存储
         final StringBuilder notMethodBuilder = new StringBuilder();
 
-        // ==============
-        // = 生成 README =
-        // ==============
-
-        // template readme content
-        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_WIDGET_TEMPLATE);
-        String templateContent = new String(bytes);
-        // 保存 README 内容
-        templateContent = String.format(templateContent, ApiConfig.DEV_WIDGET_VERSION);
-        // 保存 DevWidget README.md 文件
-        FileUtils.saveFile(
-                new File(
-                        ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH,
-                        ApiConfig.README_FILE_NAME
-                ).getAbsolutePath(), templateContent.getBytes()
-        );
-
         // ===========
         // = 生成 API =
         // ===========
@@ -96,7 +79,7 @@ final class DevWidget_READMEMain {
         // 添加头部信息
         createREADMEHead(
                 builder, path, packageName, ApiConfig.sCatalogMap_Widget,
-                ApiConfig.DEV_WIDGET_API_TEMPLATE
+                ApiConfig.DEV_WIDGET_TEMPLATE
         );
 
         // 生成 API 目录
@@ -115,7 +98,7 @@ final class DevWidget_READMEMain {
         FileUtils.saveFile(
                 new File(
                         ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH,
-                        ApiConfig.README_API_FILE_NAME
+                        ApiConfig.README_FILE_NAME
                 ).getAbsolutePath(), builder.toString().getBytes()
         );
 
@@ -133,7 +116,7 @@ final class DevWidget_READMEMain {
         resultBuilder.append("\n===================");
         resultBuilder.append("\n");
         resultBuilder.append("\n");
-        resultBuilder.append("保存地址: " + ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH + ApiConfig.README_API_FILE_NAME);
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_WIDGET_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
         resultBuilder.append("\n");
         return resultBuilder.toString();
     }

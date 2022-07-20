@@ -39,8 +39,6 @@ public final class ApiConfig {
     public static final String GITHUB_AUTHOR_URL      = "https://github.com/afkT";
     // README API 文件名
     public static final String README_FILE_NAME       = "README.md";
-    // README_API 文件名
-    public static final String README_API_FILE_NAME   = "README_API.md";
     // API 占位符常量 【API_PLACEHOLDER_FORMAT】
     public static final String API_PLACEHOLDER_FORMAT = "【API_PLACEHOLDER_FORMAT】";
 
@@ -237,7 +235,6 @@ public final class ApiConfig {
     public static final String DEV_WIDGET_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevWidget/";
     // DevWidget Template Readme
     public static final String DEV_WIDGET_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
-    public static final String DEV_WIDGET_API_TEMPLATE       = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevWidget_README_API.md";
 
     // ==================
     // = DevEnvironment =

@@ -95,7 +95,7 @@
 
 - [DevJava API][DevJava API] Java 工具类库 ( 不依赖 android api )
 
-- [DevOther API][DevOther API] 第三方库封装、以及部分特殊工具类等，方便 copy 封装类使用
+- [DevOther API][DevOther API] 功能、工具类二次封装, 直接 copy 使用【 部分迁移至 DevUtils-repo 】
 
 
 
@@ -136,4 +136,4 @@
 [DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
-[DevOther API]: https://github.com/afkT/DevUtils/blob/master/lib/LocalModules/DevOther/README.md
+[DevOther API]: https://github.com/afkT/DevUtils-repo/tree/main/lib/LocalModules/DevOther
