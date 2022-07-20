@@ -133,7 +133,7 @@
 [DevHttpCaptureCompiler API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md
 [DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
 [DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
-[DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md
+[DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
-[DevOther API]: https://github.com/afkT/DevUtils-repo/tree/main/lib/LocalModules/DevOther
+[DevOther API]: https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther
