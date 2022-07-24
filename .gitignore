@@ -1,3 +1,11 @@
-/build
-/.gradle
+*.iml
+.gradle
+local.properties
+bintray.properties
+sonatype.properties
 .idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/reports
