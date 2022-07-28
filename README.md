@@ -9,10 +9,6 @@
 
 <p align="center">
 🍧 该项目通过 JavaDoc API 读取 class 中的信息 (注释、方法名、参数、返回值等)
-<br>
-方便大家通过了解 JavaDoc API 并能够实现节省时间、提高效率的工具。
-<br>
-编写该项目主要是提高效率，方便 Dev 系列开发库生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
 </p>
 
 <p align="center">
@@ -20,6 +16,13 @@
 <b><a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a></b>、
 <b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
 </p>
+
+
+## 作用
+
+方便大家通过了解 JavaDoc API 并能够实现节省时间、提高效率的工具。
+
+编写该项目主要是提高效率，方便 Dev 系列开发库生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
 
 
 ## 核心实现
