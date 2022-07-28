@@ -1,13 +1,27 @@
 
-# About
+<h1 align="center">JavaDoc</h1>
 
-> :smirk: 该项目主要是通过 JavaDoc API 读取 class 中的信息 (注释、方法名、参数、返回值等)，方便大家通过了解 JavaDoc API 并能够实现节省时间、提高效率的工具
+<p align="center">
+<a href="https://github.com/afkT"><img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg"/></a>
+<a href="https://github.com/afkT/DevUtils/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
+<a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg"/></a>
+</p>
 
-> 编写该项目主要是提高效率，方便自己工具类项目生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
+<p align="center">
+🍧 该项目通过 JavaDoc API 读取 class 中的信息 (注释、方法名、参数、返回值等)
+<br>
+方便大家通过了解 JavaDoc API 并能够实现节省时间、提高效率的工具。
+<br>
+编写该项目主要是提高效率，方便自己工具类项目生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
+</p>
 
+<p align="center">
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/android_standard.md">Android 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
+</p>
 
-
-# [JavaDoc][JavaDoc]
 
 #### 使用演示类 [JavaDocMain][JavaDocMain] 介绍了使用方法，以及可获取信息
 
@@ -16,8 +30,7 @@
 - Class 信息读取类（[JavaDocReader][JavaDocReader]）：核心类，Class 信息都通过该类 API 读取
 
 
-
-# 代码排版
+## 代码排版
 
 > 代码、注释间距规范检测通过第三方类 pangu.java 进行检测
 
@@ -26,8 +39,7 @@
 - [中文文案排版指北 - 简书][中文文案排版指北 - 简书]
 
 
-
-# DevUtils API 生成
+## DevUtils API 生成
 
 #### 项目类结构 - [包目录][包目录_dev_utils]
 
@@ -36,7 +48,6 @@
 - DevUtils 代码规范检测（[Code Checker][Code Checker]）：该包下的类，主要检测是否缺少注释、@param、@return、重复换行等代码，并且支持注释间距检测覆盖操作
 
 - API 生成配置信息（[API Config][API Config]）：配置生成 API 相关信息，以及忽略指定类、方法的配置等
-
 
 
 #### API 生成实现类 ( 按 API Config 信息生成 API 文档 )
@@ -68,7 +79,6 @@
 - [DevOther API Generate Main][DevOther API Generate Main]
 
 
-
 #### 生成效果
 
 - [DevApp API][DevApp API] Android 工具类库
@@ -98,10 +108,26 @@
 - [DevOther API][DevOther API] 功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】
 
 
+## License
+
+    Copyright 2022 afkT
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 
 
-[JavaDoc]: https://github.com/afkT/JavaDoc
+
+
 [JavaDocMain]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api/JavaDocMain.java
 [包目录_api]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api
 [JavaDocReader]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/api/JavaDocReader.java
