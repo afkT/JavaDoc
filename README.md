@@ -13,7 +13,7 @@
 <br>
 方便大家通过了解 JavaDoc API 并能够实现节省时间、提高效率的工具。
 <br>
-编写该项目主要是提高效率，方便自己工具类项目生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
+编写该项目主要是提高效率，方便 Dev 系列开发库生成 API 以及检测代码规范、中英字符间距、@param、@return 等容易遗漏且复杂耗时的操作
 </p>
 
 <p align="center">
@@ -23,9 +23,11 @@
 </p>
 
 
-#### 使用演示类 [JavaDocMain][JavaDocMain] 介绍了使用方法，以及可获取信息
+## 核心实现
 
-#### 项目类结构 - [包目录][包目录_api]
+### 使用演示类 [JavaDocMain][JavaDocMain] 介绍了使用方法，以及可获取信息
+
+### 项目类结构 - [包目录][包目录_api]
 
 - Class 信息读取类（[JavaDocReader][JavaDocReader]）：核心类，Class 信息都通过该类 API 读取
 
@@ -41,7 +43,7 @@
 
 ## DevUtils API 生成
 
-#### 项目类结构 - [包目录][包目录_dev_utils]
+### 项目类结构 - [包目录][包目录_dev_utils]
 
 - DevUtils API 生成实现代码（[API Generate][API Generate]）：该包下的类，有各自的作用主要用于生成 DevUtils API 文档
 
@@ -50,7 +52,7 @@
 - API 生成配置信息（[API Config][API Config]）：配置生成 API 相关信息，以及忽略指定类、方法的配置等
 
 
-#### API 生成实现类 ( 按 API Config 信息生成 API 文档 )
+### API 生成实现类 ( 按 API Config 信息生成 API 文档 )
 
 - [DevApp API Generate Main][DevApp API Generate Main]
 
@@ -79,7 +81,7 @@
 - [DevOther API Generate Main][DevOther API Generate Main]
 
 
-#### 生成效果
+### 生成效果
 
 - [DevApp API][DevApp API] Android 工具类库
 
