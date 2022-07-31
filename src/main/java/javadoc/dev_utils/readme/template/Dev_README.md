@@ -1,26 +1,36 @@
 
-[![GitHub](https://img.shields.io/badge/GitHub-afkT-blue.svg)](https://github.com/afkT)
-[![GitHub license](https://img.shields.io/github/license/afkT/DevUtils.svg)](https://github.com/afkT/DevUtils/blob/master/LICENSE)
-[![MavenCentral](https://img.shields.io/badge/DevUtils-{0}-brightgreen.svg)](https://search.maven.org/search?q=io.github.afkt)
-[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
-[![Utils](https://img.shields.io/badge/utils-300+-ff69b4.svg)](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md)
+<h1 align="center">DevUtils</h1>
 
-# About ( 持续更新，目前含 300+ 工具类 ) [Roadmap](https://github.com/afkT/DevUtils/projects/1)
+<p align="center">
+<a href="https://github.com/afkT"><img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg"/></a>
+<a href="https://github.com/afkT/DevUtils/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+<a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg"/></a>
+<a href="https://android-arsenal.com/api?level=14"><img alt="API" src="https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat"/></a>
+<a href="https://search.maven.org/search?q=io.github.afkt"><img alt="Version" src="https://img.shields.io/badge/DevUtils-{0}-yellow.svg"/></a>
+<a href="https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md"><img alt="Utils" src="https://img.shields.io/badge/Utils-300+-critical.svg"/></a>
+</p>
 
-> DevUtils 是一个 Android 工具库，主要根据不同功能模块，封装快捷使用的工具类及 API 方法调用
->
-> 该项目尽可能的便于开发人员，快捷、高效开发安全可靠的项目。
->
-> **[Android 规范](https://github.com/afkT/DevUtils/blob/master/README/android_standard.md)** 、 **[Java 规范](https://github.com/afkT/DevUtils/blob/master/README/java_standard.md)** 、 **[Git 规范](https://github.com/afkT/DevUtils/blob/master/README/git_standard.md)**
+<p align="center">
+🔥 ( 持续更新，目前含 300+ 工具类 ) <a href="https://github.com/afkT/DevUtils/projects/1">Roadmap</a>
+<br>
+DevUtils 是一个 Android 工具库，主要根据不同功能模块，封装快捷使用的工具类及 API 方法调用。
+<br>
+该项目尽可能的便于开发人员，快捷、高效开发安全可靠的项目。
+</p>
 
-> **[DevComponent](https://github.com/afkT/DevComponent)** 【100% Kotlin 实现 Android 项目组件化示例代码】
-> 基于 Google JetPack AndroidX + Kotlin + Coroutines + MVVM 架构（DataBinding、ViewModel、Lifecycle）
-> 等最新技术栈进行组件化基础搭建，使用 ARouter 方案实现组件化
-
-> **[DevUtils-repo](https://github.com/afkT/DevUtils-repo)** 该项目是针对 [DevUtils](https://github.com/afkT/DevUtils) 第三方库封装扩展、新技术 Demo 编写、大文件资源等迁移存储仓库，
-> 减少 `DevUtils` 仓库大小方便快速 clone，并让 `DevUtils` 项目**更加纯粹**只保留 Dev 系列工具类库相关代码。
+<p align="center">
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/android_standard.md">Android 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/java_standard.md">Java 规范</a></b>、
+<b><a href="https://github.com/afkT/DevUtils/blob/master/README/git_standard.md">Git 规范</a></b>
+</p>
 
 ![module](https://github.com/afkT/DevUtils/raw/master/art/module.png)
+
+
+## Download
+
+下载 DevUtils 系列开发库演示应用 [APK](https://github.com/afkT/Resources/blob/main/APK)
+
 
 ## Documentation - [Lib](https://github.com/afkT/DevUtils/blob/master/lib) **（ 全部已迁移至 Maven Central ）**
 
@@ -100,30 +110,40 @@
 
 - [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevJava/CHANGELOG.md)
 
-## DevComponent
-
-**[DevComponent](https://github.com/afkT/DevComponent)** 【100% Kotlin 实现 Android 项目组件化示例代码】
-基于 Google JetPack AndroidX + Kotlin + Coroutines + MVVM 架构（DataBinding、ViewModel、Lifecycle）
-等最新技术栈进行组件化基础搭建，使用 ARouter 方案实现组件化
-
-## DevUtils-repo
-
-**[DevUtils-repo](https://github.com/afkT/DevUtils-repo)** 该项目是针对 [DevUtils](https://github.com/afkT/DevUtils) 第三方库封装扩展、新技术 Demo 编写、大文件资源等迁移存储仓库。
-
-减少 `DevUtils` 仓库大小方便快速 clone，并让 `DevUtils` 项目**更加纯粹**只保留 Dev 系列工具类库相关代码。
-
-移除多余的第三方库、插件依赖配置，避免过多无关且繁杂配置影响快速理解项目，降低第三方库下载数量、编译运行 `DevUtils 演示 Demo App` 难度，使项目可更加快捷运行。
 
 ## Other
 
-> [DevOther](https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther) 功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】
->
-> [DevSKU](https://github.com/afkT/DevUtils/blob/master/lib/LocalModules/DevSKU/src/main/java/dev/sku/SKU.kt) 商品 SKU 组合封装实现 ( 如何使用搜索 DevSKUActivity )
->
-> [JavaDoc API Generate](https://github.com/afkT/JavaDoc) 该工具类 (DevUtils) API 文档，是通过 JavaDoc 项目读取 class 信息生成，并且进行代码、注释间距规范检测，生成效果示范 [DevApp - API](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md)
+### DevComponent
+
+**[DevComponent](https://github.com/afkT/DevComponent)** 【100% Kotlin 实现 Android 项目组件化示例代码】
+基于 Android JetPack + Kotlin + Coroutines + MVVM 架构（DataBinding、ViewModel、Lifecycle）
+等最新技术栈进行组件化基础搭建，使用 ARouter 方案实现组件化
+
+### DevUtils-repo
+
+**[DevUtils-repo](https://github.com/afkT/DevUtils-repo)** 该项目是针对 [DevUtils](https://github.com/afkT/DevUtils) 第三方库封装扩展、新技术 Demo 编写、大文件资源等迁移存储仓库。
+
+减少 `DevUtils` 仓库大小方便快速 clone，并让 `DevUtils` 项目**更加纯粹**只保留 Dev 系列开发库相关代码。
+
+移除多余的第三方库、插件依赖配置，避免过多无关且繁杂配置影响快速理解项目，降低第三方库下载数量、编译运行 `DevUtils 演示 Demo App` 难度，使项目可更加快捷运行。
+
+### DevUtils API Generate
+
+[JavaDoc API Generate](https://github.com/afkT/JavaDoc) 该工具类 (DevUtils) API 文档，是通过 JavaDoc 项目读取 class 信息生成，
+并且进行代码、注释间距规范检测，生成效果示范 [DevApp - API](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md)
+
+### DevOther
+
+[DevOther](https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther)
+功能、工具类二次封装，直接 copy 使用【 大部分迁移至 DevUtils-repo 】
+
+### DevSKU
+
+[DevSKU](https://github.com/afkT/DevUtils/blob/master/lib/LocalModules/DevSKU/src/main/java/dev/sku/SKU.kt)
+商品 SKU 组合封装实现 ( 如何使用搜索 DevSKUActivity )
 
 
-## Dev 系列全部 Lib Gradle
+## Dev 系列开发库全部 Lib Gradle
 
 ```gradle
 
@@ -168,7 +188,6 @@ releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:{14}' /
 implementation 'io.github.afkt:DevJava:{16}' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
 ```
 
-## [APK Demo](https://github.com/afkT/Resources/blob/main/APK)
 
 ## License
 
