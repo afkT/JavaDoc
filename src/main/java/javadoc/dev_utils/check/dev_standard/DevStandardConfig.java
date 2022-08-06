@@ -20,24 +20,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
-        ignoreAnnotateMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
-        ignoreAnnotateMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","returnGetAbleAnnotation","getIgnoreAbleCLass","main","returnGetAbleAnnotation","getIgnoreAbleCLass"));
-        ignoreAnnotateMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("DevFinalIgnore", ArrayUtils.asListArgs("ignoreSet"));
-        ignoreAnnotateMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
-        ignoreAnnotateMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
-        ignoreAnnotateMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("Main", ArrayUtils.asListArgs("print","main"));
-        ignoreAnnotateMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreAnnotateMap.put("Utils", ArrayUtils.asListArgs("getPackagePath","getFormatFilePath","getGenerateDirectory","getPackagePath","getFormatFilePath","getResultFilePath"));
-        ignoreAnnotateMap.put("Utils.Replace", ArrayUtils.asListArgs("getFileName"));
-        ignoreAnnotateMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
-
+        
         return ignoreAnnotateMap;
     }
 
@@ -48,21 +31,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreFinalMap() {
         Map<String, List<String>> ignoreFinalMap = new HashMap<>();
-        ignoreFinalMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
-        ignoreFinalMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","main"));
-        ignoreFinalMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
-        ignoreFinalMap.put("GradleMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("Main", ArrayUtils.asListArgs("print","main"));
-        ignoreFinalMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreFinalMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
-
+        
         return ignoreFinalMap;
     }
 
@@ -73,11 +42,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreStaticMap() {
         Map<String, List<String>> ignoreStaticMap = new HashMap<>();
-        ignoreStaticMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml"));
-        ignoreStaticMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startDocument","endDocument","startElement","endElement","characters"));
-        ignoreStaticMap.put("DepsJsonBean", ArrayUtils.asListArgs("map","getDependencies","getAllDependencies","getAllDependencies"));
-        ignoreStaticMap.put("Utils.Replace", ArrayUtils.asListArgs("getFileName"));
-
+        
         return ignoreStaticMap;
     }
 
@@ -88,22 +53,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
-        ignoreParamMap.put("CatalogMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("ColorSortMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("ColorSortMain.SAXXml.SAXHandler", ArrayUtils.asListArgs("startElement","endElement","characters"));
-        ignoreParamMap.put("CommonAbleMain", ArrayUtils.asListArgs("main","main"));
-        ignoreParamMap.put("ConfigMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("DimenGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("FinalSortMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("FinalSortMain2", ArrayUtils.asListArgs("main","main","main"));
-        ignoreParamMap.put("GradleMain", ArrayUtils.asListArgs("main","getGradleFileName"));
-        ignoreParamMap.put("IntentDataJavaGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("IntentDataKotlinGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("Main", ArrayUtils.asListArgs("print","main"));
-        ignoreParamMap.put("StateGenerateMain", ArrayUtils.asListArgs("main"));
-        ignoreParamMap.put("Utils", ArrayUtils.asListArgs("getGenerateDirectory"));
-        ignoreParamMap.put("ValiPhoneMain", ArrayUtils.asListArgs("main"));
-
+        
         return ignoreParamMap;
     }
 
@@ -125,18 +75,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreUnPublicMap() {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
-        ignoreUnPublicMap.put("CatalogGenerate", ArrayUtils.asListArgs("getFolderLists","getFolderLists","resetMaxLength","calculateMaxLength","createCatalog","createCatalogLine","forCatalog"));
-        ignoreUnPublicMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback"));
-        ignoreUnPublicMap.put("CatalogMain", ArrayUtils.asListArgs("print"));
-        ignoreUnPublicMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort"));
-        ignoreUnPublicMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd"));
-        ignoreUnPublicMap.put("CommonAbleMain", ArrayUtils.asListArgs("returnGetAbleAnnotation","getIgnoreAbleCLass","returnGetAbleAnnotation","getIgnoreAbleCLass"));
-        ignoreUnPublicMap.put("DimenGenerateMain", ArrayUtils.asListArgs("forDimen"));
-        ignoreUnPublicMap.put("GradleMain", ArrayUtils.asListArgs("getGradleFileName"));
-        ignoreUnPublicMap.put("Main", ArrayUtils.asListArgs("print"));
-        ignoreUnPublicMap.put("Utils", ArrayUtils.asListArgs("getFormatTXT","saveFile","getPackagePath","getFormatFilePath","getGenerateDirectory","getPackagePath"));
-        ignoreUnPublicMap.put("ValiPhoneMain", ArrayUtils.asListArgs("getTypeNumber","toNumberMap","generatePATTERN"));
-
+        
         return ignoreUnPublicMap;
     }
 
@@ -158,14 +97,7 @@ final class DevStandardConfig implements ICheckConfig {
     @Override
     public Map<String, List<String>> getIgnoreReturnVoidMap() {
         Map<String, List<String>> ignoreReturnVoidMap = new HashMap<>();
-        ignoreReturnVoidMap.put("CatalogGenerate", ArrayUtils.asListArgs("resetMaxLength - void","calculateMaxLength - void","forCatalog - void"));
-        ignoreReturnVoidMap.put("CatalogGenerate.CatalogCallback", ArrayUtils.asListArgs("callback - void"));
-        ignoreReturnVoidMap.put("CatalogMain", ArrayUtils.asListArgs("print - void"));
-        ignoreReturnVoidMap.put("ColorSortMain", ArrayUtils.asListArgs("colorXMLSort - void"));
-        ignoreReturnVoidMap.put("ColorSortMain.SAXXml", ArrayUtils.asListArgs("analysisColorsXml - void"));
-        ignoreReturnVoidMap.put("ColorSortMain.SAXXml.DocumentListener", ArrayUtils.asListArgs("onEnd - void"));
-        ignoreReturnVoidMap.put("Utils", ArrayUtils.asListArgs("generateAbleFile - void","convertPSFS - void","sortAppend - void"));
-
+        
         return ignoreReturnVoidMap;
     }
 

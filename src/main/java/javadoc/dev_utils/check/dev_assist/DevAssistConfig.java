@@ -78,6 +78,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreStaticMap.put("DevObject", ArrayUtils.asListArgs("getUUID","getObject","setObject","getTag","convertTag","setTag","getModelId","setModelId","getCode","setCode","setCode","getType","setType","getState","setState","getTokenUUID","setTokenUUID","randomTokenUUID","equalsObject","equalsTag","equalsModelId","equalsCode","equalsCode","equalsType","equalsState","equalsTokenUUID","isCorrect"));
         ignoreStaticMap.put("DevPage", ArrayUtils.asListArgs("reset","reset","getPage","setPage","equalsPage","getConfig","getConfigPage","getConfigPageSize","getPageSize","equalsPageSize","isLastPage","setLastPage","calculateLastPage","isFirstPage","canNextPage","getNextPage","nextPage","isLessThanPageSize","response","response"));
         ignoreStaticMap.put("DevSource", ArrayUtils.asListArgs("isUrl","isUri","isBytes","isResource","isFile","isInputStream","isDrawable","isBitmap","isSource"));
+        ignoreStaticMap.put("DevTimerAssist", ArrayUtils.asListArgs("setTag","setHandler","setCallback","getTimer","getDuration","start","stop","createTimer","isDurationEnd"));
         ignoreStaticMap.put("DevVariable", ArrayUtils.asListArgs("getVariables","clearVariables","putVariables","getVariablesSize","isVariables","isVariableValue","removeVariableValue","removeVariableValueAll","isVariable","isVariable","putVariable","putVariable","removeVariable","toggle","getVariableValue","getVariableValueConvert","getVariableValues","getVariableValuesToReverse","getVariableKey","getVariableKeys","getVariableKeysToReverse"));
         ignoreStaticMap.put("DevVariableExt", ArrayUtils.asListArgs("getCreator","setCreator","getVariable","getVariableValue","getVariableValue"));
         ignoreStaticMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove","post","setDelayMillis","setCallback","setCallback","bindEditText","initTextWatcher"));
@@ -150,6 +151,8 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("DevHistory", ArrayUtils.asListArgs("calculateRealIndex","setCurrent","clear","size","isEmpty","canGo","add","get","gotoBack","gotoForward","toString"));
         ignoreUnPublicMap.put("DevHistory.Listener", ArrayUtils.asListArgs("accept","changeCurrent","clear","add","acceptCurrentToList"));
         ignoreUnPublicMap.put("DevNumber", ArrayUtils.asListArgs("checkUpdate"));
+        ignoreUnPublicMap.put("DevTimerAssist", ArrayUtils.asListArgs("createTimer","isDurationEnd"));
+        ignoreUnPublicMap.put("DevTimerAssist.Callback", ArrayUtils.asListArgs("callback"));
         ignoreUnPublicMap.put("DevVariableExt.Creator", ArrayUtils.asListArgs("create"));
         ignoreUnPublicMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("initTextWatcher"));
         ignoreUnPublicMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback"));
@@ -232,6 +235,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevResultCallback", ArrayUtils.asListArgs("onResult - void","onError - void","onFailure - void"));
         ignoreReturnVoidMap.put("DevShareEngine", ArrayUtils.asListArgs("removeEngine - void","removeEngine - void"));
         ignoreReturnVoidMap.put("DevStorageEngine", ArrayUtils.asListArgs("removeEngine - void","removeEngine - void"));
+        ignoreReturnVoidMap.put("DevTimerAssist.Callback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove - void","post - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));

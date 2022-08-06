@@ -73,7 +73,7 @@ public final class ApiConfig {
     // =============
 
     // DevAssist 版本号
-    public static final String DEV_ASSIST_VERSION            = "1.3.6";
+    public static final String DEV_ASSIST_VERSION            = "1.3.7";
     // 包目录名
     public static final String DEV_ASSIST_PACKAGE            = "dev";
     // DevAssist 文件路径
@@ -124,7 +124,7 @@ public final class ApiConfig {
     // =============
 
     // DevEngine 版本号
-    public static final String DEV_ENGINE_VERSION            = "1.0.8";
+    public static final String DEV_ENGINE_VERSION            = "1.0.9";
     // 包目录名
     public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
     // DevEngine 文件路径
