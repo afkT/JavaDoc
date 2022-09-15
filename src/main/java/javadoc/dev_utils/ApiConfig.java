@@ -460,6 +460,7 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".common.comparator.sort", "各种类型比较器排序实现");
         sCatalogMap_APP.put(".common.encrypt", "加密工具类");
         sCatalogMap_APP.put(".common.file", "文件分片相关");
+        sCatalogMap_APP.put(".common.format", "格式化相关");
         sCatalogMap_APP.put(".common.random", "随机概率算法工具类");
         sCatalogMap_APP.put(".common.thread", "线程相关");
         sCatalogMap_APP.put(".common.validator", "数据校验工具类");
@@ -506,6 +507,10 @@ public final class ApiConfig {
 
         sCatalogMap_HttpCapture.put("dev", "根目录");
         sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
+        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
+        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
+        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
+        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
 
         // ==================
         // = DevHttpManager =
@@ -701,7 +706,7 @@ public final class ApiConfig {
         sFilterClassSet_APP.add("Interceptable.java");
         sFilterClassSet_APP.add("IOable.java");
         sFilterClassSet_APP.add("Notifyable.java");
-        sFilterClassSet_APP.add("Operateable.java");
+        sFilterClassSet_APP.add("Operatorable.java");
         sFilterClassSet_APP.add("Inputable.java");
         sFilterClassSet_APP.add("Outputable.java");
         sFilterClassSet_APP.add("Readable.java");
@@ -722,6 +727,13 @@ public final class ApiConfig {
         sFilterClassSet_APP.add("Modifyable.java");
         sFilterClassSet_APP.add("Parseable.java");
         sFilterClassSet_APP.add("Sendable.java");
+        sFilterClassSet_APP.add("Functionable.java");
+        sFilterClassSet_APP.add("Bindingable.java");
+        sFilterClassSet_APP.add("UnBinderable.java");
+        sFilterClassSet_APP.add("Commandable.java");
+        sFilterClassSet_APP.add("Consumerable.java");
+        sFilterClassSet_APP.add("Supplierable.java");
+        sFilterClassSet_APP.add("Ofable.java");
 
         // ============
         // = DevOther =

@@ -36,18 +36,17 @@ final class DevHttpCaptureCompiler_READMEMain {
     ) {
         // 不增加锚链接 -> 一级目录
         String catalog = PackageCatalog.apiCatalog(false, path, packageName, mapCatalog);
-        // 增加锚链接 -> 二级目录
-        String apiCatalog = PackageCatalog.apiCatalog(true, path, packageName, mapCatalog);
 
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
         String templateContent = new String(bytes);
         // 保存 README 内容
-        templateContent = templateContent.replaceAll("DEVersion", ApiConfig.DEV_HTTP_CAPTURE_COMPILER_VERSION);
-
+        templateContent = templateContent.replaceAll(
+                "DEVersion", ApiConfig.DEV_HTTP_CAPTURE_COMPILER_VERSION
+        );
         // 保存 README 内容
         builder.append(String.format(
-                templateContent, catalog, apiCatalog
+                templateContent, catalog
         ));
     }
 
@@ -63,15 +62,6 @@ final class DevHttpCaptureCompiler_READMEMain {
         // Github 链接地址
         final String githubUrl = ApiConfig.DEV_HTTP_CAPTURE_COMPILER_GITHUB_URL;
 
-        // 方法名匹配存储 Map<类名, List<方法名>>
-        final HashMap<String, List<String>> methodNameMatchesMap = new HashMap<>();
-        // 方法名重复记录存储
-        final StringBuilder methodRepeatBuilder = new StringBuilder();
-        // 方法没有注释记录存储
-        final StringBuilder methodNotAnnotateBuilder = new StringBuilder();
-        // 类不存在方法记录存储
-        final StringBuilder notMethodBuilder = new StringBuilder();
-
         // ===========
         // = 生成 API =
         // ===========
@@ -84,19 +74,6 @@ final class DevHttpCaptureCompiler_READMEMain {
                 ApiConfig.DEV_HTTP_CAPTURE_COMPILER_TEMPLATE
         );
 
-        // 生成 API 目录
-        String httpCaptureAPI = APIGenerate.apiGenerate(
-                "", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_HttpCapture,
-                ApiConfig.sFilterMethodMap_HttpCapture,
-                ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder,
-                methodNotAnnotateBuilder, notMethodBuilder
-        );
-
-        // 拼接 API 内容
-        Utils.appendAPI(builder, httpCaptureAPI);
-
         // 保存合成后的 API README
         FileUtils.saveFile(
                 new File(
@@ -104,13 +81,6 @@ final class DevHttpCaptureCompiler_READMEMain {
                         ApiConfig.README_FILE_NAME
                 ).getAbsolutePath(), builder.toString().getBytes()
         );
-
-//        // 方法名重复记录存储
-//        Utils.saveFile(ApiConfig.DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuilder.toString());
-//        // 方法没有注释记录存储
-//        Utils.saveFile(ApiConfig.DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuilder.toString());
-//        // 类不存在方法记录存储
-//        Utils.saveFile(ApiConfig.DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuilder.toString());
 
         StringBuilder resultBuilder = new StringBuilder();
         resultBuilder.append("\n");

@@ -28,7 +28,9 @@ final class DevEnvironment_READMEMain {
         byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_ENVIRONMENT_TEMPLATE);
         String templateContent = new String(bytes);
         // 保存 README 内容
-        templateContent = templateContent.replaceAll("DEVersion", ApiConfig.DEV_ENVIRONMENT_VERSION);
+        templateContent = templateContent.replaceAll(
+                "DEVersion", ApiConfig.DEV_ENVIRONMENT_VERSION
+        );
         // 保存 DevEnvironment README.md 文件
         FileUtils.saveFile(
                 new File(

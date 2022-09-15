@@ -29,20 +29,20 @@ dependencies {
 
 ### 使用示例
 
-```java
+```kotlin
 // 显示所有 Module 抓包数据
-DevHttpCaptureCompiler.start(context);
+DevHttpCaptureCompiler.start(context)
 // 显示指定 Module 抓包数据
-DevHttpCaptureCompiler.start(context, moduleName);
+DevHttpCaptureCompiler.start(context, moduleName)
 
 // =======
 // = 可选 =
 // =======
 
 // 添加接口所属功能注释
-DevHttpCaptureCompiler.putUrlFunction(moduleName, UrlFunctionGet);
+DevHttpCaptureCompiler.putUrlFunction(moduleName, UrlFunctionGet)
 // 移除接口所属功能注释
-DevHttpCaptureCompiler.removeUrlFunction(moduleName);
+DevHttpCaptureCompiler.removeUrlFunction(moduleName)
 ```
 
 ### 目录结构
@@ -51,9 +51,32 @@ DevHttpCaptureCompiler.removeUrlFunction(moduleName);
 
 ### API
 
-%s
 
-【API_PLACEHOLDER_FORMAT】
+- dev                                         | 根目录
+    - [capture](#devcapture)                   | Http 抓包实现代码
+
+
+## <span id="dev">**`dev`**</span>
+
+
+* **OkHttp 抓包工具库 ->** [DevHttpCaptureCompiler.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/DevHttpCaptureCompiler.kt)
+
+| 方法 | 注释 |
+| :- | :- |
+| finishAllActivity | 结束所有 Activity |
+| start | 跳转抓包数据可视化 Activity |
+| putUrlFunction | 添加接口所属功能注释 |
+| removeUrlFunction | 移除接口所属功能注释 |
+
+
+## <span id="devcapture">**`dev.capture`**</span>
+
+
+* **接口所属功能注释获取 ->** [UrlFunctionGet.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/capture/UrlFunctionGet.kt)
+
+| 方法 | 注释 |
+| :- | :- |
+| toUrlFunction | 接口所属功能注释获取 |
 
 
 

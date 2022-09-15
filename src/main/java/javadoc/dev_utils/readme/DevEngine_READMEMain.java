@@ -22,7 +22,6 @@ final class DevEngine_READMEMain {
      * @param path         文件路径
      * @param packageName  包名
      * @param mapCatalog   对应目录的注释
-     * @param githubUrl    项目 github 链接
      * @param templatePath Readme 模板路径
      */
     private static void createREADMEHead(
@@ -30,7 +29,6 @@ final class DevEngine_READMEMain {
             final String path,
             final String packageName,
             final HashMap<String, String> mapCatalog,
-            final String githubUrl,
             final String templatePath
     ) {
         // 不增加锚链接 -> 一级目录
@@ -67,7 +65,7 @@ final class DevEngine_READMEMain {
         // 添加头部信息
         createREADMEHead(
                 builder, path, packageName, ApiConfig.sCatalogMap_Engine,
-                githubUrl, ApiConfig.DEV_ENGINE_TEMPLATE
+                ApiConfig.DEV_ENGINE_TEMPLATE
         );
 
         // 保存合成后的 API README
