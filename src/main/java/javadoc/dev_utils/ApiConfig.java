@@ -269,7 +269,7 @@ public final class ApiConfig {
     // ===============
 
     // DevStandard 文件路径
-    public static final String DEV_STANDARD_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/interesting/DevStandard/src/main/java/dev/";
+    public static final String DEV_STANDARD_PATH = PROJECT_LOCAL_PATH + "/DevUtils-repo/interesting/DevStandard/src/main/java/dev/";
 
     // =======
     // = 其他 =
