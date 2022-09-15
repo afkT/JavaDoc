@@ -204,21 +204,6 @@ public final class ApiConfig {
     // DevRetrofit Template Readme
     public static final String DEV_RETROFIT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevRetrofit_README.md";
 
-    // ============
-    // = DevOther =
-    // ============
-
-    // 包目录名
-    public static final String DEV_OTHER_PACKAGE            = "";
-    // DevOther 文件路径
-    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/lib/LocalModules/DevOther/src/main/java/";
-    // DevOther GitHub 项目文件路径
-    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils-repo/blob/main/lib/LocalModules/DevOther/src/main/java/";
-    // DevOther API 文件保存路径
-    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/LocalModules/DevOther/";
-    // DevOther Template Readme
-    public static final String DEV_OTHER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
-
     // =============
     // = DevWidget =
     // =============
@@ -263,6 +248,21 @@ public final class ApiConfig {
     public static final String DEV_JAVA_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevJava/";
     // DevJava Template Readme
     public static final String DEV_JAVA_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevJava_README.md";
+
+    // ============
+    // = DevOther =
+    // ============
+
+    // 包目录名
+    public static final String DEV_OTHER_PACKAGE            = "";
+    // DevOther 文件路径
+    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/lib/LocalModules/DevOther/src/main/java/";
+    // DevOther GitHub 项目文件路径
+    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils-repo/blob/main/lib/LocalModules/DevOther/src/main/java/";
+    // DevOther API 文件保存路径
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/LocalModules/DevOther/";
+    // DevOther Template Readme
+    public static final String DEV_OTHER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
 
     // ===============
     // = DevStandard =
@@ -354,17 +354,6 @@ public final class ApiConfig {
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Retrofit = new HashMap<>();
 
-    // ============
-    // = DevOther =
-    // ============
-
-    // 包名目录注释
-    public static final HashMap<String, String>   sCatalogMap_Other      = new HashMap<>();
-    // 忽略不保存的类
-    public static final HashSet<String>           sFilterClassSet_Other  = new HashSet<>();
-    // 忽略不保存的方法
-    public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
-
     // =============
     // = DevWidget =
     // =============
@@ -375,6 +364,17 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_Widget  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Widget = new HashMap<>();
+
+    // ============
+    // = DevOther =
+    // ============
+
+    // 包名目录注释
+    public static final HashMap<String, String>   sCatalogMap_Other      = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashSet<String>           sFilterClassSet_Other  = new HashSet<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Other = new HashMap<>();
 
     static {
         // 初始化 包名目录注释 Map
@@ -495,107 +495,6 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.storage.listener", "Storage 存储结果事件");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
-        // ==================
-        // = DevHttpCapture =
-        // ==================
-
-        sCatalogMap_HttpCapture.put("dev", "根目录");
-        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
-        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
-        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
-        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
-        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
-
-        // ==================
-        // = DevHttpManager =
-        // ==================
-
-        sCatalogMap_HttpManager.put("dev", "根目录");
-        sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
-        sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
-        sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
-        sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
-
-        // ===============
-        // = DevRetrofit =
-        // ===============
-
-        sCatalogMap_Retrofit.put("dev", "根目录");
-        sCatalogMap_Retrofit.put(".http", "基于 OkHttp 管理实现代码");
-        sCatalogMap_Retrofit.put(".http.manager", "Retrofit 多 BaseUrl 管理");
-
-        // ============
-        // = DevOther =
-        // ============
-
-        sCatalogMap_Other.put("", "根目录");
-        sCatalogMap_Other.put(".dev", "通用实现");
-        sCatalogMap_Other.put(".dev.receiver", "BroadcastReceiver 监听相关");
-        sCatalogMap_Other.put(".dev.service", "Service 相关");
-
-        sCatalogMap_Other.put(".java", "Java 实现");
-        sCatalogMap_Other.put(".java.dev", "根目录");
-        sCatalogMap_Other.put(".java.dev.assist", "常用辅助类封装");
-        sCatalogMap_Other.put(".java.dev.engine", "兼容 Engine");
-        sCatalogMap_Other.put(".java.dev.engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
-        sCatalogMap_Other.put(".java.dev.engine.barcode", "BarCode Engine 条形码、二维码处理");
-        sCatalogMap_Other.put(".java.dev.engine.barcode.listener", "条形码、二维码操作回调事件");
-        sCatalogMap_Other.put(".java.dev.engine.cache", "Cache Engine 有效期键值对缓存");
-        sCatalogMap_Other.put(".java.dev.engine.compress", "Image Compress Engine 图片压缩");
-        sCatalogMap_Other.put(".java.dev.engine.http", "Http Engine 网络请求");
-        sCatalogMap_Other.put(".java.dev.engine.image", "Image Engine 图片加载、下载、转格式等");
-        sCatalogMap_Other.put(".java.dev.engine.json", "JSON Engine 映射");
-        sCatalogMap_Other.put(".java.dev.engine.keyvalue", "KeyValue Engine 键值对存储");
-        sCatalogMap_Other.put(".java.dev.engine.log", "Log Engine 日志打印");
-        sCatalogMap_Other.put(".java.dev.engine.media", "Media Selector Engine 多媒体资源选择");
-        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
-        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
-        sCatalogMap_Other.put(".java.dev.engine.permission", "Permission Engine 权限申请");
-        sCatalogMap_Other.put(".java.dev.engine.push", "Push Engine 推送平台处理");
-        sCatalogMap_Other.put(".java.dev.engine.share", "Share Engine 分享平台处理");
-        sCatalogMap_Other.put(".java.dev.engine.share.listener", "分享回调事件");
-        sCatalogMap_Other.put(".java.dev.engine.storage", "Storage Engine 外部、内部文件存储");
-        sCatalogMap_Other.put(".java.dev.engine.storage.listener", "Storage 存储结果事件");
-        sCatalogMap_Other.put(".java.dev.other", "第三方库封装工具类");
-        sCatalogMap_Other.put(".java.dev.other.cache", "缓存工具类");
-        sCatalogMap_Other.put(".java.dev.other.okgo", "OkGo 网络请求");
-        sCatalogMap_Other.put(".java.dev.other.okgo.demo", "OkGo 使用 Demo");
-        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
-        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.response", "请求响应解析");
-        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.subscriber", "请求响应处理");
-        sCatalogMap_Other.put(".java.dev.other.work", "WorkManager Utils");
-        sCatalogMap_Other.put(".java.dev.other.work.demo", "WorkManager 使用 Demo");
-
-        sCatalogMap_Other.put(".ktx", "Kotlin 实现");
-        sCatalogMap_Other.put(".ktx.dev", "根目录");
-        sCatalogMap_Other.put(".ktx.dev.assist", "常用辅助类封装");
-        sCatalogMap_Other.put(".ktx.dev.engine", "兼容 Engine");
-        sCatalogMap_Other.put(".ktx.dev.engine.media", "Media Selector Engine 多媒体资源选择");
-        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
-        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
-        sCatalogMap_Other.put(".ktx.dev.other", "第三方库封装工具类");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.demo", "Retrofit RxJava Demo");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.response", "请求响应解析");
-        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.subscriber", "请求响应处理");
-
-        // =============
-        // = DevWidget =
-        // =============
-
-        sCatalogMap_Widget.put("dev", "根目录");
-        sCatalogMap_Widget.put(".widget", "自定义 View 根目录");
-        sCatalogMap_Widget.put(".widget.adjust", "自动调节高度 View");
-        sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
-        sCatalogMap_Widget.put(".widget.custom", "自定义 View");
-        sCatalogMap_Widget.put(".widget.decoration", "RecyclerView ItemDecoration");
-        sCatalogMap_Widget.put(".widget.decoration.grid", "Grid ItemDecoration");
-        sCatalogMap_Widget.put(".widget.decoration.linear", "Linear ItemDecoration");
-        sCatalogMap_Widget.put(".widget.function", "需求功能 View");
-        sCatalogMap_Widget.put(".widget.ui", "UI View");
-        sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
-        sCatalogMap_Widget.put(".widget.utils", "工具类目录");
-
         // ===========
         // = DevBase =
         // ===========
@@ -651,6 +550,107 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".share.listener", "分享回调事件");
         sCatalogMap_Engine.put(".storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Engine.put(".storage.listener", "Storage 存储结果事件");
+
+        // ==================
+        // = DevHttpCapture =
+        // ==================
+
+        sCatalogMap_HttpCapture.put("dev", "根目录");
+        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
+        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
+        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
+        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
+        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
+
+        // ==================
+        // = DevHttpManager =
+        // ==================
+
+        sCatalogMap_HttpManager.put("dev", "根目录");
+        sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
+        sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
+        sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
+
+        // ===============
+        // = DevRetrofit =
+        // ===============
+
+        sCatalogMap_Retrofit.put("dev", "根目录");
+        sCatalogMap_Retrofit.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_Retrofit.put(".http.manager", "Retrofit 多 BaseUrl 管理");
+
+        // =============
+        // = DevWidget =
+        // =============
+
+        sCatalogMap_Widget.put("dev", "根目录");
+        sCatalogMap_Widget.put(".widget", "自定义 View 根目录");
+        sCatalogMap_Widget.put(".widget.adjust", "自动调节高度 View");
+        sCatalogMap_Widget.put(".widget.assist", "View 辅助类");
+        sCatalogMap_Widget.put(".widget.custom", "自定义 View");
+        sCatalogMap_Widget.put(".widget.decoration", "RecyclerView ItemDecoration");
+        sCatalogMap_Widget.put(".widget.decoration.grid", "Grid ItemDecoration");
+        sCatalogMap_Widget.put(".widget.decoration.linear", "Linear ItemDecoration");
+        sCatalogMap_Widget.put(".widget.function", "需求功能 View");
+        sCatalogMap_Widget.put(".widget.ui", "UI View");
+        sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
+        sCatalogMap_Widget.put(".widget.utils", "工具类目录");
+
+        // ============
+        // = DevOther =
+        // ============
+
+        sCatalogMap_Other.put("", "根目录");
+        sCatalogMap_Other.put(".dev", "通用实现");
+        sCatalogMap_Other.put(".dev.receiver", "BroadcastReceiver 监听相关");
+        sCatalogMap_Other.put(".dev.service", "Service 相关");
+
+        sCatalogMap_Other.put(".java", "Java 实现");
+        sCatalogMap_Other.put(".java.dev", "根目录");
+        sCatalogMap_Other.put(".java.dev.assist", "常用辅助类封装");
+        sCatalogMap_Other.put(".java.dev.engine", "兼容 Engine");
+        sCatalogMap_Other.put(".java.dev.engine.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Other.put(".java.dev.engine.barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Other.put(".java.dev.engine.barcode.listener", "条形码、二维码操作回调事件");
+        sCatalogMap_Other.put(".java.dev.engine.cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Other.put(".java.dev.engine.compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Other.put(".java.dev.engine.http", "Http Engine 网络请求");
+        sCatalogMap_Other.put(".java.dev.engine.image", "Image Engine 图片加载、下载、转格式等");
+        sCatalogMap_Other.put(".java.dev.engine.json", "JSON Engine 映射");
+        sCatalogMap_Other.put(".java.dev.engine.keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Other.put(".java.dev.engine.log", "Log Engine 日志打印");
+        sCatalogMap_Other.put(".java.dev.engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
+        sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
+        sCatalogMap_Other.put(".java.dev.engine.permission", "Permission Engine 权限申请");
+        sCatalogMap_Other.put(".java.dev.engine.push", "Push Engine 推送平台处理");
+        sCatalogMap_Other.put(".java.dev.engine.share", "Share Engine 分享平台处理");
+        sCatalogMap_Other.put(".java.dev.engine.share.listener", "分享回调事件");
+        sCatalogMap_Other.put(".java.dev.engine.storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Other.put(".java.dev.engine.storage.listener", "Storage 存储结果事件");
+        sCatalogMap_Other.put(".java.dev.other", "第三方库封装工具类");
+        sCatalogMap_Other.put(".java.dev.other.cache", "缓存工具类");
+        sCatalogMap_Other.put(".java.dev.other.okgo", "OkGo 网络请求");
+        sCatalogMap_Other.put(".java.dev.other.okgo.demo", "OkGo 使用 Demo");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.response", "请求响应解析");
+        sCatalogMap_Other.put(".java.dev.other.retrofit_rxjava.subscriber", "请求响应处理");
+        sCatalogMap_Other.put(".java.dev.other.work", "WorkManager Utils");
+        sCatalogMap_Other.put(".java.dev.other.work.demo", "WorkManager 使用 Demo");
+
+        sCatalogMap_Other.put(".ktx", "Kotlin 实现");
+        sCatalogMap_Other.put(".ktx.dev", "根目录");
+        sCatalogMap_Other.put(".ktx.dev.assist", "常用辅助类封装");
+        sCatalogMap_Other.put(".ktx.dev.engine", "兼容 Engine");
+        sCatalogMap_Other.put(".ktx.dev.engine.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib", "LuckSiege PictureSelector Engine 实现");
+        sCatalogMap_Other.put(".ktx.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
+        sCatalogMap_Other.put(".ktx.dev.other", "第三方库封装工具类");
+        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava", "Retrofit RxJava 封装");
+        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.demo", "Retrofit RxJava Demo");
+        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.response", "请求响应解析");
+        sCatalogMap_Other.put(".ktx.dev.other.retrofit_rxjava.subscriber", "请求响应处理");
     }
 
     /**
