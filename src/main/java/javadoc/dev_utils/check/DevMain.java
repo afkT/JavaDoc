@@ -2,8 +2,6 @@ package javadoc.dev_utils.check;
 
 import javadoc.dev_utils.check.dev_app.DevAppMain;
 import javadoc.dev_utils.check.dev_assist.DevAssistMain;
-import javadoc.dev_utils.check.dev_httpcapture.DevHttpCaptureMain;
-import javadoc.dev_utils.check.dev_httpcapturecompiler.DevHttpCaptureCompilerMain;
 import javadoc.dev_utils.check.dev_other.DevOtherMain;
 import javadoc.dev_utils.check.dev_standard.DevStandardMain;
 import javadoc.dev_utils.check.dev_widget.DevWidgetMain;
@@ -21,8 +19,6 @@ public class DevMain {
 
         DevAppMain.main(new String[]{coverText + "", generateConfig + ""});
         DevAssistMain.main(new String[]{coverText + "", generateConfig + ""});
-        DevHttpCaptureMain.main(new String[]{coverText + "", generateConfig + ""});
-        DevHttpCaptureCompilerMain.main(new String[]{coverText + "", generateConfig + ""});
         DevOtherMain.main(new String[]{coverText + "", generateConfig + ""});
         DevStandardMain.main(new String[]{coverText + "", generateConfig + ""});
         DevWidgetMain.main(new String[]{coverText + "", generateConfig + ""});
