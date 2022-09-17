@@ -1,10 +1,10 @@
 package javadoc.dev_utils;
 
-import dev.utils.common.FileIOUtils;
-import dev.utils.common.StringUtils;
-
 import java.io.File;
 import java.util.Properties;
+
+import dev.utils.common.FileIOUtils;
+import dev.utils.common.StringUtils;
 
 /**
  * detail: Dev 系列库版本读取
