@@ -155,4 +155,5 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 | callResponseHeaders | 生成响应头信息 Map |
 | callResponseBodyFailed | 生成错误响应体信息 |
 | callResponseBody | 生成响应体信息 Map |
+| converterRequestBody | 转换请求体信息 Map |
 | callEnd | 抓包结束 |
