@@ -69,7 +69,7 @@ public class CheckConfigGenerate {
         lists.add(className + "Config");
         lists.addAll(ArrayUtils.asList(mapStr));
         lists.add(Utils.generateSetString(ignoreAnnotationSpaceSet, "map"));
-        String format = StringUtils.getFormatString(FORMAT_STR, lists.toArray());
+        String format = StringUtils.format(FORMAT_STR, lists.toArray());
         // 生成 Config
         FileUtils.saveFile(
                 new File(
