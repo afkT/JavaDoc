@@ -184,7 +184,7 @@ public final class Utils {
 
     /**
      * 创建 GsonBuilder
-     * @param serializeNulls 是否序列化null值
+     * @param serializeNulls 是否序列化 null 值
      * @return {@link GsonBuilder}
      */
     private static GsonBuilder createGson(final boolean serializeNulls) {
@@ -196,7 +196,7 @@ public final class Utils {
     /**
      * 转换 JSON 格式数据, 并且格式化
      * @param data         待转换对象
-     * @param includeNulls 是否序列化null值
+     * @param includeNulls 是否序列化 null 值
      * @return 格式化 JSON 数据
      */
     public static String toJsonFormat(

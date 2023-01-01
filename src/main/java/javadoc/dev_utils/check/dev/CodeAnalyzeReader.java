@@ -237,7 +237,7 @@ public final class CodeAnalyzeReader {
 
                     // 循环读取方法信息
                     for (MethodDoc methodDoc : classDoc.methods()) {
-                        // 属于枚举的 values 、valueOf 不处理
+                        // 属于枚举的 values、valueOf 不处理
                         if (methodDoc.name().equals("values") ||
                                 methodDoc.name().equals("valueOf")) {
                             continue;

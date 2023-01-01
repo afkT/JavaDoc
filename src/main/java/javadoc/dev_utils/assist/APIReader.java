@@ -160,7 +160,7 @@ public final class APIReader
         for (ClassDoc classDoc : classDocs) {
             // 循环 Method Doc 信息
             for (MethodDoc method : classDoc.methods()) {
-                // 属于枚举的 values 、valueOf 不处理
+                // 属于枚举的 values、valueOf 不处理
                 if (method.name().equals("values") ||
                         method.name().equals("valueOf")) {
                     continue;

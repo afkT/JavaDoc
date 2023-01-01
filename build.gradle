@@ -11,7 +11,7 @@ dependencies {
     // 加载 libs 文件夹全部 jar
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // Gson 解析
-    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.google.code.gson:gson:2.10'
     // DevJava
     implementation 'io.github.afkt:DevJava:1.4.8'
 
