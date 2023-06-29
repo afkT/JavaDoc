@@ -47,7 +47,7 @@ public final class ApiConfig {
     // ============
 
     // DevUtils Readme 文件保存路径
-    public static final String DEV_UTILS_README_FILE_SAVE_PATH = API_FILE_SAVE_PATH;
+    public static final String DEV_UTILS_README_FILE_SAVE_PATH = API_FILE_SAVE_PATH + File.separator;
     // DevUtils Readme
     public static final String DEV_UTILS_README                = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
     // DevUtils 完整 API Readme
