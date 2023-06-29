@@ -10,9 +10,9 @@ import javadoc.dev_utils.ApiConfig;
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class Dev_READMEMain {
+final class Dev_READMEMain_Original {
 
-    private Dev_READMEMain() {
+    private Dev_READMEMain_Original() {
     }
 
     /**
@@ -22,7 +22,7 @@ final class Dev_READMEMain {
     public static String createREADME() {
         StringBuilder builder = new StringBuilder();
         // template readme content
-        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README);
+        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_ORIGINAL);
         String templateContent = new String(bytes);
 
         // 保存 README 内容
@@ -52,7 +52,7 @@ final class Dev_READMEMain {
         FileUtils.saveFile(
                 new File(
                         ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH,
-                        ApiConfig.README_FILE_NAME
+                        ApiConfig.README_FILE_NAME_ORIGINAL
                 ).getAbsolutePath(), builder.toString().getBytes()
         );
 
@@ -63,12 +63,12 @@ final class Dev_READMEMain {
         resultBuilder.append("\n==================");
         resultBuilder.append("\n");
         resultBuilder.append("\n");
-        resultBuilder.append("保存地址: " + ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME_ORIGINAL);
         resultBuilder.append("\n");
         return resultBuilder.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(Dev_READMEMain.createREADME());
+        System.out.println(Dev_READMEMain_Original.createREADME());
     }
 }

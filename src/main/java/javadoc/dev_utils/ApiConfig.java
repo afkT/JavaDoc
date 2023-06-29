@@ -48,8 +48,17 @@ public final class ApiConfig {
 
     // DevUtils Readme 文件保存路径
     public static final String DEV_UTILS_README_FILE_SAVE_PATH = API_FILE_SAVE_PATH;
-    // DevUtils Template Readme
-    public static final String DEV_UTILS_TEMPLATE              = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
+    // DevUtils Readme
+    public static final String DEV_UTILS_README                = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
+    // DevUtils 完整 API Readme
+    public static final String DEV_UTILS_README_API            = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_API.md";
+    // DevUtils 原始 Readme
+    public static final String DEV_UTILS_README_ORIGINAL       = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_ORIGINAL.md";
+
+    // DevUtils 完整 API fileName
+    public static final String README_FILE_NAME_API      = "README_API.md";
+    // DevUtils 原始 Readme fileName
+    public static final String README_FILE_NAME_ORIGINAL = "README_ORIGINAL.md";
 
     // ==========
     // = DevApp =
