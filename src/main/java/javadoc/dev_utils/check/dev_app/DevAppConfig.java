@@ -488,7 +488,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("CalendarUtils.SolarLunar", ArrayUtils.asListArgs("getLunarYearDays","getLunarLeapDays","getLunarLeapMonth","getLunarMonthDays","getLunarGanZhi","getLunarMonthChinese","getLunarDayChinese","getSolarTermsIndex","getSolarTerms","getSolarTermsDate"));
         ignoreStaticMap.put("CameraAssist", ArrayUtils.asListArgs("openDriver","closeDriver","startPreview","stopPreview","freeCameraResource","getCameraResolution","getPreviewSize","getCameraSizeAssist","getCamera","setCamera","setPreviewNotify","setAutoFocus","isPreviewing","setAutoInterval","setFlashlightOn","setFlashlightOff","isFlashlightOn"));
         ignoreStaticMap.put("CameraSizeAssist", ArrayUtils.asListArgs("getCamera","setPreviewSize","setPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","setPictureSize","setPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","calcPreviewSize","calcPictureSize","calcVideoSize"));
-        ignoreStaticMap.put("ClickUtils.ClickAssist", ArrayUtils.asListArgs("isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","initConfig","putConfig","removeConfig","getConfigTime","removeRecord","clearRecord","setIntervalTime","reset"));
+        ignoreStaticMap.put("ClickUtils.ClickAssist", ArrayUtils.asListArgs("isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","isFastDoubleClick","initConfig","putConfig","removeConfig","getConfigTime","removeRecord","clearRecord","getIntervalTime","setIntervalTime","reset"));
         ignoreStaticMap.put("CollectionUtils.ArrayWithTypeToken", ArrayUtils.asListArgs("put","get","create","newInstance","newInstance"));
         ignoreStaticMap.put("ColorUtils.ColorInfo", ArrayUtils.asListArgs("getKey","getValue","getValueParser","getValueColor","getAlpha","getRed","getGreen","getBlue","getGrayLevel","getHue","getSaturation","getBrightness","toString","innerConvert"));
         ignoreStaticMap.put("ColorUtils.ColorInfo.ColorParser", ArrayUtils.asListArgs("handleColor"));
@@ -1116,6 +1116,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ForUtils.ByteConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.CharConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.Consumer", ArrayUtils.asListArgs("accept"));
+        ignoreUnPublicMap.put("ForUtils.ConsumerIterator", ArrayUtils.asListArgs("accept"));
+        ignoreUnPublicMap.put("ForUtils.ConsumerMap", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.ConsumerSimple", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.DoubleConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.FloatConsumer", ArrayUtils.asListArgs("accept"));
@@ -1435,6 +1437,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ForUtils.ByteConsumer", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.CharConsumer", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.Consumer", ArrayUtils.asListArgs("accept - void"));
+        ignoreReturnVoidMap.put("ForUtils.ConsumerIterator", ArrayUtils.asListArgs("accept - void"));
+        ignoreReturnVoidMap.put("ForUtils.ConsumerMap", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.ConsumerSimple", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.DoubleConsumer", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.FloatConsumer", ArrayUtils.asListArgs("accept - void"));
