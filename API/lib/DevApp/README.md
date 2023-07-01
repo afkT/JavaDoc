@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.4.2'
+implementation 'io.github.afkt:DevAppX:2.4.3'
 ```
 
 ## 目录结构
@@ -412,8 +412,11 @@ DevUtils.openDebug();
 | uninstallApp | 卸载应用 |
 | uninstallAppSilent | 静默卸载应用 |
 | launchApp | 打开 APP |
+| launchApp2 | 打开 APP |
 | launchAppDetailsSettings | 跳转到 APP 设置详情页面 |
 | launchAppDetails | 跳转到 APP 应用商城详情页面 |
+| launchAppInstallPermissionSettings | 跳转设置页面, 开启安装未知应用权限 |
+| launchManageAppAllFilesAccessPermission | 跳转设置页面, 开启 APP 授予所有文件管理权限 |
 | openFile | 打开文件 |
 | openFileByApp | 打开文件 ( 指定应用 ) |
 | openPDFFile | 打开 PDF 文件 |
@@ -557,6 +560,7 @@ DevUtils.openDebug();
 | :- | :- |
 | addTouchArea | 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域 |
 | setCheckViewId | 设置全局是否校验 viewId |
+| getGlobalIntervalTime | 获取全局双击间隔时间 |
 | setGlobalIntervalTime | 设置全局双击间隔时间 |
 | get | 获取对应功能模块点击辅助类 |
 | remove | 移除对应功能模块点击辅助类 |
@@ -567,6 +571,7 @@ DevUtils.openDebug();
 | getConfigTime | 获取配置时间 |
 | removeRecord | 移除点击记录 |
 | clearRecord | 清空全部点击记录 |
+| getIntervalTime | 获取默认点击时间间隔 |
 | setIntervalTime | 设置默认点击时间间隔 |
 | reset | 重置处理 |
 | setOnClick | 设置点击事件 |
@@ -990,6 +995,8 @@ DevUtils.openDebug();
 | :- | :- |
 | isGpsEnabled | 判断 GPS 是否可用 |
 | isLocationEnabled | 判断定位是否可用 |
+| isLocationEnabled2 | 判断定位是否可用 |
+| isPassiveEnable | 判断定位是否可用 |
 | openGpsSettings | 打开 GPS 设置界面 |
 | register | 注册 |
 | unregister | 注销监听 |
@@ -1906,6 +1913,8 @@ DevUtils.openDebug();
 | isQ | 是否在 10.0 版本及以上 |
 | isR | 是否在 11.0 版本及以上 |
 | isS | 是否在 12.0 版本及以上 |
+| isSV2 | 是否在 12.0 L 版本及以上 |
+| isTiramisu | 是否在 13.0 版本及以上 |
 | convertSDKVersion | 转换 SDK 版本 convertSDKVersion(31) = Android 12.0 |
 | convertSDKVersionName | 转换 SDK 版本名字 convertSDKVersionName(31) = Android S |
 
@@ -4337,6 +4346,8 @@ DevUtils.openDebug();
 | getAppPermissionToSet | 获取 APP 注册的权限 |
 | getAppPermission | 获取 APP 注册的权限 |
 | printAppPermission | 打印 APP 注册的权限 |
+| getAllLauncherIconPackages | 获取所有能够显示在桌面上的应用 |
+| getAllLauncherIconPackageNames | 获取所有能够显示在桌面上的应用包名 |
 
 
 * **键对值实体类 ->** [KeyValue.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/info/KeyValue.java)
@@ -5299,6 +5310,10 @@ DevUtils.openDebug();
 | :- | :- |
 | forArgs | 循环可变数组 |
 | forSimpleArgs | 循环可变数组 |
+| forList | 循环集合 |
+| forListIterator | 循环集合 |
+| forSet | 循环集合 |
+| forMap | 循环集合 |
 | forInts | 循环可变数组 |
 | forDoubles | 循环可变数组 |
 | forFloats | 循环可变数组 |

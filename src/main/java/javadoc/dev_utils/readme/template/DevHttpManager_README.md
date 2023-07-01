@@ -403,7 +403,7 @@ private fun buildRetrofit(httpUrl: HttpUrl? = null): RetrofitOperation {
             RetrofitManager.getRetrofitResetListener()?.onResetBefore(
                 key, mRetrofit
             )
-        } catch (e: Exception) {
+        } catch (ignored: Exception) {
         }
         builder.onResetBefore(key, mRetrofit)
     }
@@ -411,7 +411,7 @@ private fun buildRetrofit(httpUrl: HttpUrl? = null): RetrofitOperation {
     // 获取全局 OkHttp Builder
     val okHttpBuilder = try {
         RetrofitManager.getOkHttpBuilder()?.createOkHttpBuilder(key)
-    } catch (e: Exception) {
+    } catch (ignored: Exception) {
         null
     }
     // 可以通过 mRetrofit?.baseUrl() 获取之前的配置
@@ -425,7 +425,7 @@ private fun buildRetrofit(httpUrl: HttpUrl? = null): RetrofitOperation {
             RetrofitManager.getRetrofitResetListener()?.onReset(
                 key, mRetrofit
             )
-        } catch (e: Exception) {
+        } catch (ignored: Exception) {
         }
     }
     // 首次为初始化, 后续操作为重置操作
