@@ -1,0 +1,91 @@
+apply from: rootProject.file("versions.gradle")
+
+// 是否升级版本
+def upgradeVersion = false
+
+// 生成 versions.gradle
+tasks.register('generateVersionsGradle') {
+    // 是否全部版本进行升级
+    if (upgradeVersion) {
+        def templateFile = new File(rootDir, "file/versions_template.txt")
+        def content = new String(templateFile.readBytes())
+
+        // ===========
+        // = Dev Lib =
+        // ===========
+
+        // DevApp - Android 工具类库
+        content = formatVersion(content, "DevApp", versions.dev_app_versionCode)
+
+        // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
+        content = formatVersion(content, "DevAssist", versions.dev_assist_versionCode)
+
+        // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+        content = formatVersion(content, "DevBase", versions.dev_base_versionCode)
+
+        // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
+        content = formatVersion(content, "DevBaseMVVM", versions.dev_base_mvvm_versionCode)
+
+        // DevMVVM - DataBinding 工具类库
+        content = formatVersion(content, "DevMVVM", versions.dev_mvvm_versionCode)
+
+        // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+        content = formatVersion(content, "DevEngine", versions.dev_engine_versionCode)
+
+        // DevHttpCapture - OkHttp 抓包工具库
+        content = formatVersion(content, "DevHttpCapture", versions.dev_http_capture_versionCode)
+
+        // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+        content = formatVersion(content, "DevHttpManager", versions.dev_http_manager_versionCode)
+
+        // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+        content = formatVersion(content, "DevRetrofit", versions.dev_retrofit_versionCode)
+
+        // DevWidget - 自定义 View UI 库
+        content = formatVersion(content, "DevWidget", versions.dev_widget_versionCode)
+
+        // DevEnvironment - Android 环境配置切换库
+        content = formatVersion(content, "DevEnvironment", versions.dev_environment_versionCode)
+
+        // DevJava - Java 工具类库 ( 不依赖 android api )
+        content = formatVersion(content, "DevJava", versions.dev_java_versionCode)
+
+        // ===========
+        // = Dev Lib =
+        // ===========
+
+        // 写入 versions.gradle
+        def versionsFile = new File(rootDir, "file/versions.txt")
+        versionsFile.withPrintWriter {
+            it.print(content)
+        }
+    }
+}
+
+/**
+ * versionCode to versionName
+ * 123 转换为 1.2.3
+ */
+private static def createVersionName(Object versionCode) {
+    def value = versionCode.toString().chars
+    def builder = new StringBuilder()
+    builder.append(value[0])
+    int len = value.length
+    for (int i = 1; i < len; i++) {
+        builder.append(".")
+        builder.append(value[i])
+    }
+    return builder.toString()
+}
+
+/**
+ * 格式化版本处理
+ */
+private static def formatVersion(String content, String tag, Object version) {
+    def vc = "【" + tag + "】"
+    def vn = "【" + tag + "-vn】"
+    def newVersion = version + 1
+    def versionName = createVersionName(newVersion)
+    return content.replaceAll(vc, newVersion.toString())
+            .replaceAll(vn, versionName)
+}

@@ -1,0 +1,61 @@
+ext {
+    versions = [
+
+            // ===========
+            // = Dev Lib =
+            // ===========
+
+            // DevApp - Android 工具类库
+            dev_app_versionCode                      : 【DevApp】,
+            dev_app_versionName                      : "【DevApp-vn】",
+
+            // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
+            dev_assist_versionCode                   : 【DevAssist】,
+            dev_assist_versionName                   : "【DevAssist-vn】",
+
+            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            dev_base_versionCode                     : 【DevBase】,
+            dev_base_versionName                     : "【DevBase-vn】",
+
+            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
+            dev_base_mvvm_versionCode                : 【DevBaseMVVM】,
+            dev_base_mvvm_versionName                : "【DevBaseMVVM-vn】",
+
+            // DevMVVM - DataBinding 工具类库
+            dev_mvvm_versionCode                     : 【DevMVVM】,
+            dev_mvvm_versionName                     : "【DevMVVM-vn】",
+
+            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+            dev_engine_versionCode                   : 【DevEngine】,
+            dev_engine_versionName                   : "【DevEngine-vn】",
+
+            // DevHttpCapture - OkHttp 抓包工具库
+            dev_http_capture_versionCode             : 【DevHttpCapture】,
+            dev_http_capture_versionName             : "【DevHttpCapture-vn】",
+            dev_http_capture_compiler_version        : "【DevHttpCapture-vn】",
+            dev_http_capture_compiler_release_version: "【DevHttpCapture-vn】",
+
+            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+            dev_http_manager_versionCode             : 【DevHttpManager】,
+            dev_http_manager_versionName             : "【DevHttpManager-vn】",
+
+            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+            dev_retrofit_versionCode                 : 【DevRetrofit】,
+            dev_retrofit_versionName                 : "【DevRetrofit-vn】",
+
+            // DevWidget - 自定义 View UI 库
+            dev_widget_versionCode                   : 【DevWidget】,
+            dev_widget_versionName                   : "【DevWidget-vn】",
+
+            // DevEnvironment - Android 环境配置切换库
+            dev_environment_versionCode              : 【DevEnvironment】,
+            dev_environment_version                  : "【DevEnvironment-vn】",
+            dev_environment_base_version             : "【DevEnvironment-vn】",
+            dev_environment_compiler_version         : "【DevEnvironment-vn】",
+            dev_environment_compiler_release_version : "【DevEnvironment-vn】",
+
+            // DevJava - Java 工具类库 ( 不依赖 android api )
+            dev_java_versionCode                     : 【DevJava】,
+            dev_java_version                         : "【DevJava-vn】",
+    ]
+}

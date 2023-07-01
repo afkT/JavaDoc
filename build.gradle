@@ -2,6 +2,7 @@ group 'pro'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply from: rootProject.file("file/task_generate_version_file.gradle")
 
 repositories {
     mavenCentral()
@@ -39,6 +40,6 @@ dependencies {
 }
 
 // 全局编码设置
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8"
 }
