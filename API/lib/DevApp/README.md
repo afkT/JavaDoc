@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.4.3'
+implementation 'io.github.afkt:DevAppX:2.4.4'
 ```
 
 ## 目录结构
@@ -1915,6 +1915,7 @@ DevUtils.openDebug();
 | isS | 是否在 12.0 版本及以上 |
 | isSV2 | 是否在 12.0 L 版本及以上 |
 | isTiramisu | 是否在 13.0 版本及以上 |
+| isUpsideDownCake | 是否在 14.0 版本及以上 |
 | convertSDKVersion | 转换 SDK 版本 convertSDKVersion(31) = Android 12.0 |
 | convertSDKVersionName | 转换 SDK 版本名字 convertSDKVersionName(31) = Android S |
 
