@@ -184,7 +184,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("IOable.IOByParam3", ArrayUtils.asListArgs("io"));
         ignoreAnnotateMap.put("IOable.IOByParamArgs", ArrayUtils.asListArgs("io"));
         ignoreAnnotateMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreAnnotateMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreAnnotateMap.put("Inputable.Input", ArrayUtils.asListArgs("input"));
         ignoreAnnotateMap.put("Inputable.InputByParam", ArrayUtils.asListArgs("input"));
         ignoreAnnotateMap.put("Inputable.InputByParam2", ArrayUtils.asListArgs("input"));
@@ -414,7 +413,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("FlowHelper", ArrayUtils.asListArgs("flow","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable"));
         ignoreFinalMap.put("IToastImpl", ArrayUtils.asListArgs("filter","handlerContent"));
         ignoreFinalMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreFinalMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreFinalMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
@@ -481,6 +479,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("Base64.Decoder", ArrayUtils.asListArgs("maxOutputSize","process"));
         ignoreStaticMap.put("Base64.Encoder", ArrayUtils.asListArgs("maxOutputSize","process"));
         ignoreStaticMap.put("Base64Cipher", ArrayUtils.asListArgs("decrypt","encrypt"));
+        ignoreStaticMap.put("BatteryUtils.Info", ArrayUtils.asListArgs("isRefreshEnabled","setRefreshEnabled","setRefreshDisabled","refreshBatteryStatus","batteryStatus","batteryStatus","isPresent","isBatteryLow","isBatteryLow20","isBatteryLow","isBatteryHigh","isBatteryHigh","getLevelPercent","getLevel","getScale","getCycleCount","getTemperature","getVoltage","getTechnology","getChargePlug","isCharge","isPluggedAC","isPluggedUSB","isPluggedWireless","isPluggedDock","getChargeStatus","isChargingStatus","isDisChargingStatus","isFullStatus","isNotChargingStatus","isUnknownStatus","getHealth","isHealthGood","isHealthOverheat","isHealthCold","isHealthDead","isHealthOverVoltage","isHealthUnspecifiedFailure","isHealthUnknown"));
         ignoreStaticMap.put("BeepVibrateAssist", ArrayUtils.asListArgs("shouldBeep","streamUpdate","isPlayBeep","isVibrate","setVibrate","setVibrate","setMediaPlayer","playBeepSoundAndVibrate","close"));
         ignoreStaticMap.put("BigDecimalUtils.Config", ArrayUtils.asListArgs("getScale","getRoundingMode"));
         ignoreStaticMap.put("BigDecimalUtils.Operation", ArrayUtils.asListArgs("requireNonNull","throwException","getBigDecimal","setBigDecimal","getConfig","setConfig","setConfig","removeConfig","setScale","setScale","setScaleByConfig","isThrowError","setThrowError","clone","toString","toPlainString","toEngineeringString","intValue","floatValue","longValue","doubleValue","add","subtract","multiply","divide","divide","divide","remainder","round","round","round","compareTo","formatMoney","formatMoney","formatMoney","formatMoney","formatMoney"));
@@ -546,7 +545,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("ImageUtils.ImageType", ArrayUtils.asListArgs("getValue"));
         ignoreStaticMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("onPause","onResume","onDestroy","start","cancel"));
         ignoreStaticMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreStaticMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreStaticMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("KeyValue", ArrayUtils.asListArgs("getKey","getValue","toString"));
@@ -778,7 +776,6 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("IOable.IOByParamArgs", ArrayUtils.asListArgs("io"));
         ignoreParamMap.put("ImageViewUtils", ArrayUtils.asListArgs("setImageTintList","setImageTintMode","getImageTintList","getImageTintMode"));
         ignoreParamMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreParamMap.put("InactivityTimerAssist.PowerStateReceiver", ArrayUtils.asListArgs("onReceive"));
         ignoreParamMap.put("Inputable.InputByParam", ArrayUtils.asListArgs("input"));
         ignoreParamMap.put("Inputable.InputByParam2", ArrayUtils.asListArgs("input"));
         ignoreParamMap.put("Inputable.InputByParam3", ArrayUtils.asListArgs("input"));
@@ -1237,7 +1234,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("Queryable.QueryByParam2", ArrayUtils.asListArgs("query"));
         ignoreUnPublicMap.put("Queryable.QueryByParam3", ArrayUtils.asListArgs("query"));
         ignoreUnPublicMap.put("Queryable.QueryByParamArgs", ArrayUtils.asListArgs("query"));
-        ignoreUnPublicMap.put("ROMUtils", ArrayUtils.asListArgs("isRightRom","getManufacturer","getBrand","getRomVersion","getSystemProperty","getSystemPropertyByShell","getSystemPropertyByStream","getSystemPropertyByReflect","innerGetRomInfo"));
+        ignoreUnPublicMap.put("ROMUtils", ArrayUtils.asListArgs("isRightRom","checkHarmonyOS","getManufacturer","getBrand","getRomVersion","getSystemProperty","getSystemPropertyByShell","getSystemPropertyByStream","getSystemPropertyByReflect","innerGetRomInfo"));
         ignoreUnPublicMap.put("Readable.Read", ArrayUtils.asListArgs("read"));
         ignoreUnPublicMap.put("Readable.ReadByParam", ArrayUtils.asListArgs("read"));
         ignoreUnPublicMap.put("Readable.ReadByParam2", ArrayUtils.asListArgs("read"));
