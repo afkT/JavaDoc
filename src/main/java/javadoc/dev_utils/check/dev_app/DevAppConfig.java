@@ -168,6 +168,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Flowable.FlowByParam2", ArrayUtils.asListArgs("flow"));
         ignoreAnnotateMap.put("Flowable.FlowByParam3", ArrayUtils.asListArgs("flow"));
         ignoreAnnotateMap.put("Flowable.FlowByParamArgs", ArrayUtils.asListArgs("flow"));
+        ignoreAnnotateMap.put("FragmentUtils.FragmentNode", ArrayUtils.asListArgs("getFragment","getNext","toString"));
         ignoreAnnotateMap.put("Functionable.Function", ArrayUtils.asListArgs("apply"));
         ignoreAnnotateMap.put("Functionable.FunctionByParam", ArrayUtils.asListArgs("apply"));
         ignoreAnnotateMap.put("Functionable.FunctionByParam2", ArrayUtils.asListArgs("apply"));
@@ -541,6 +542,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("FloatingWindowManagerAssist.DevAssistIMPL", ArrayUtils.asListArgs("getWindowManager","getLayoutParams"));
         ignoreStaticMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("removeFloatingView","addFloatingView","removeAllFloatingView","updateViewLayout","isNeedsAdd","setNeedsAdd","getAttachActivity","getMapFloatingKey","getMapFloatingView","getMapFloatingViewLayoutParams"));
         ignoreStaticMap.put("FlowHelper", ArrayUtils.asListArgs("flow","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable"));
+        ignoreStaticMap.put("FragmentUtils.FragmentNode", ArrayUtils.asListArgs("getFragment","getNext","toString"));
         ignoreStaticMap.put("IToastImpl", ArrayUtils.asListArgs("reset","setUseHandler","setNullText","setTextLength","initialize","style","defaultStyle","getToastStyle","initStyle","initToastFilter","setView","show","show","show","show","cancel","filter","handlerContent","getThreadToastStyle","createView","innerShowToastText","newToastText","innerShowToastView","newToastView"));
         ignoreStaticMap.put("ImageUtils.ImageType", ArrayUtils.asListArgs("getValue"));
         ignoreStaticMap.put("InactivityTimerAssist", ArrayUtils.asListArgs("onPause","onResume","onDestroy","start","cancel"));
@@ -1121,6 +1123,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ForUtils.IntConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.LongConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.ShortConsumer", ArrayUtils.asListArgs("accept"));
+        ignoreUnPublicMap.put("FragmentUtils", ArrayUtils.asListArgs("getTopIsInStack","getTopShowIsInStack","getAllFragments","getAllFragmentsInStack","putArgs","putArgs","getArgs","operateNoAnim","operate","addAnim","addSharedElement"));
+        ignoreUnPublicMap.put("FragmentUtils.OnBackClickListener", ArrayUtils.asListArgs("onBackClick"));
         ignoreUnPublicMap.put("Functionable.Function", ArrayUtils.asListArgs("apply"));
         ignoreUnPublicMap.put("Functionable.FunctionByParam", ArrayUtils.asListArgs("apply"));
         ignoreUnPublicMap.put("Functionable.FunctionByParam2", ArrayUtils.asListArgs("apply"));
@@ -1442,6 +1446,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("ForUtils.IntConsumer", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.LongConsumer", ArrayUtils.asListArgs("accept - void"));
         ignoreReturnVoidMap.put("ForUtils.ShortConsumer", ArrayUtils.asListArgs("accept - void"));
+        ignoreReturnVoidMap.put("FragmentUtils", ArrayUtils.asListArgs("putArgs - void","putArgs - void","addAnim - void","addSharedElement - void"));
         ignoreReturnVoidMap.put("HandlerUtils", ArrayUtils.asListArgs("postRunnable - void","postRunnable - void","postRunnable - void","postRunnable - void","removeRunnable - void","clearRunnableMaps - void","postRunnable - void","removeRunnable - void"));
         ignoreReturnVoidMap.put("HandlerUtils.OnEndListener", ArrayUtils.asListArgs("onEnd - void"));
         ignoreReturnVoidMap.put("HttpURLConnectionUtils", ArrayUtils.asListArgs("doGetAsync - void","doPostAsync - void","request - void","getNetTime - void","getNetTime - void","reqNetTime - void"));
@@ -1465,6 +1470,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("LogPrintUtils", ArrayUtils.asListArgs("setPrintLog - void","printLog - void","setPrint - void"));
         ignoreReturnVoidMap.put("LogPrintUtils.Print", ArrayUtils.asListArgs("printLog - void"));
         ignoreReturnVoidMap.put("LoggerPrinter", ArrayUtils.asListArgs("initialize - void","d - void","e - void","e - void","e - void","w - void","i - void","v - void","wtf - void","json - void","xml - void","dTag - void","eTag - void","eTag - void","eTag - void","wTag - void","iTag - void","vTag - void","wtfTag - void","jsonTag - void","xmlTag - void","finalLogPrinter - void","logHandle - void","logHandle - void","logHandle - void","logHeaderContent - void","logTopBorder - void","logBottomBorder - void","logDivider - void","logContent - void"));
+        ignoreReturnVoidMap.put("ObjectUtils", ArrayUtils.asListArgs("requireNonNullArgs - void"));
         ignoreReturnVoidMap.put("OnActivityDestroyedListener", ArrayUtils.asListArgs("onActivityDestroyed - void"));
         ignoreReturnVoidMap.put("OnAppStatusChangedListener", ArrayUtils.asListArgs("onForeground - void","onBackground - void"));
         ignoreReturnVoidMap.put("OnSPOperateListener", ArrayUtils.asListArgs("onPut - void","onPutByMap - void","onRemove - void","onRemoveByList - void","clear - void","onGet - void"));

@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.4.4'
+implementation 'io.github.afkt:DevAppX:2.4.5'
 ```
 
 ## 目录结构
@@ -364,6 +364,7 @@ DevUtils.openDebug();
 | getShortcutManager | 获取 ShortcutManager |
 | getActivityManager | 获取 ActivityManager |
 | getPowerManager | 获取 PowerManager |
+| getBatteryManager | 获取 BatteryManager |
 | getKeyguardManager | 获取 KeyguardManager |
 | getInputMethodManager | 获取 InputMethodManager |
 | getClipboardManager | 获取 ClipboardManager |
@@ -401,6 +402,7 @@ DevUtils.openDebug();
 | startActivity | Activity 跳转 |
 | startActivityForResult | Activity 跳转回传 |
 | startIntentSenderForResult | Activity 请求权限跳转回传 |
+| registerReceiverBool | 注册广播监听 |
 | registerReceiver | 注册广播监听 |
 | unregisterReceiver | 注销广播监听 |
 | sendBroadcast | 发送广播 ( 无序 ) |
@@ -502,6 +504,50 @@ DevUtils.openDebug();
 | getNavBarColor | 获取 Navigation Bar 颜色 |
 | setNavBarLightMode | 设置 Navigation Bar 是否高亮模式 |
 | isNavBarLightMode | 获取 Navigation Bar 是否高亮模式 |
+
+
+* **电量管理工具类 ->** [BatteryUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/BatteryUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isPowerSaveMode | 是否省电模式 |
+| getInfo | 获取电池信息获取包装类 |
+| refreshBatteryStatus | 刷新电池信息粘性 Intent |
+| isPresent | 是否存在电池 |
+| isBatteryLow | 是否低电量 |
+| isBatteryLow20 | 是否低电量 |
+| isBatteryHigh | 是否高电量 |
+| getLevelPercent | 获取当前电量百分比 |
+| getLevel | 获取当前电量 |
+| getScale | 获取电池最大电量 |
+| getCycleCount | 获取电池充电周期 |
+| getTemperature | 获取电池温度 |
+| getVoltage | 获取电池电压 |
+| getTechnology | 获取电池技术 |
+| getChargePlug | 获取充电方式 |
+| isCharge | 是否充电中 |
+| isPluggedAC | 是否 AC 充电方式 |
+| isPluggedUSB | 是否 USB 充电方式 |
+| isPluggedWireless | 是否无线充电方式 |
+| isPluggedDock | 是否 DOCK 充电方式 |
+| getChargeStatus | 获取充电状态 |
+| isChargingStatus | 是否充电状态 |
+| isDisChargingStatus | 是否放电状态 |
+| isFullStatus | 是否充满电状态 |
+| isNotChargingStatus | 是否不在充电状态 |
+| isUnknownStatus | 是否未知充电状态 |
+| getHealth | 获取电池健康状况 |
+| isHealthGood | 是否电池状况良好 |
+| isHealthOverheat | 是否电池状况过热 |
+| isHealthCold | 是否电池状况低温 |
+| isHealthDead | 是否电池状况死机 |
+| isHealthOverVoltage | 是否电池状况电压过载 |
+| isHealthUnspecifiedFailure | 是否电池状况不明故障 |
+| isHealthUnknown | 是否电池状况未知 |
+| isRefreshEnabled | 是否启用 Intent 每次刷新 |
+| setRefreshEnabled | 启用 Intent 每次刷新 |
+| setRefreshDisabled | 禁用 Intent 每次刷新 |
+| batteryStatus | 获取电池信息粘性 Intent |
 
 
 * **亮度相关工具类 ->** [BrightnessUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/BrightnessUtils.java)
@@ -788,6 +834,41 @@ DevUtils.openDebug();
 | getNumberAndLettersKeyListener | 获取 DigitsKeyListener ( 限制只能输入字母和数字, 默认弹出英文软键盘 ) |
 | getNumberKeyListener | 获取 DigitsKeyListener ( 限制只能输入数字, 默认弹出数字列表 ) |
 | createDigitsKeyListener | 创建 DigitsKeyListener |
+
+
+* **Fragment 工具类 ->** [FragmentUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/FragmentUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| add | 添加 Fragment |
+| show | 显示 Fragment |
+| hide | Hide fragment |
+| showHide | 显示 Fragment 并隐藏其他 Fragment |
+| replace | 替换 Fragment |
+| pop | 回退 Fragment |
+| popTo | 回退到指定 Fragment |
+| popAll | 回退所有 Fragment |
+| remove | 移除 Fragment |
+| removeTo | 移除 Fragment |
+| removeAll | 移除全部 Fragment |
+| findFragment | 查找 Fragment |
+| getTop | 获取顶部 Fragment |
+| getTopInStack | 获取栈顶 Fragment |
+| getTopShow | 获取顶部显示的 Fragment |
+| getTopShowInStack | 获取栈顶显示的 Fragment |
+| getFragments | 获取 FragmentManager 全部 Fragment |
+| getFragmentsInStack | 获取 FragmentManager 全部栈顶 Fragment |
+| getAllFragments | 获取 FragmentManager 全部 Fragment |
+| getAllFragmentsInStack | 获取 FragmentManager 全部栈顶 Fragment |
+| getSimpleName | 获取 Fragment SimpleName |
+| dispatchBackPress | 调用 Fragment OnBackClickListener 校验是否进行消费 |
+| setBackgroundColor | 设置 Fragment View 背景 |
+| setBackgroundResource | 设置 Fragment View 背景 |
+| setBackground | 设置 Fragment View 背景 |
+| getFragment | getFragment |
+| getNext | getNext |
+| toString | toString |
+| onBackClick | 是否允许处理返回键 |
 
 
 * **Handler 工具类 ->** [HandlerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/HandlerUtils.java)
@@ -1482,6 +1563,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isHuawei | 判断 ROM 是否 Huawei ( 华为 ) |
+| isHarmonyOS | 判断 ROM 是否 HarmonyOS ( 鸿蒙 ) |
+| isHonor | 判断 ROM 是否 Honor ( 荣耀 ) |
 | isVivo | 判断 ROM 是否 Vivo ( VIVO ) |
 | isXiaomi | 判断 ROM 是否 Xiaomi ( 小米 ) |
 | isOppo | 判断 ROM 是否 Oppo ( OPPO ) |
@@ -5459,11 +5542,14 @@ DevUtils.openDebug();
 | isEmpty | 判断对象是否为空 |
 | isNotEmpty | 判断对象是否非空 |
 | equals | 判断两个值是否一样 |
-| requireNonNull | 检查对象是否为 null, 为 null 则抛出异常, 不为 null 则返回该对象 |
 | getOrDefault | 获取非空或默认对象 |
 | hashCode | 获取对象哈希值 |
 | getObjectTag | 获取一个对象的独一无二的标记 |
 | convert | Object 转换所需类型对象 |
+| requireNonNull | 检查对象是否为 null, 为 null 则抛出异常, 不为 null 则返回该对象 |
+| requireNonNullArgs | 检查对象是否为 null, 为 null 则抛出异常 |
+| requireNonNullBool | 检查对象是否非 null |
+| requireNonNullBoolArgs | 检查对象是否非 null |
 
 
 * **随机工具类 ->** [RandomUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/RandomUtils.java)
