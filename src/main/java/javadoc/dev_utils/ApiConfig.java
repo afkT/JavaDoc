@@ -1,8 +1,10 @@
 package javadoc.dev_utils;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * detail: 配置信息
@@ -127,6 +129,24 @@ public final class ApiConfig {
     public static final String DEV_BASE_MVVM_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevBaseMVVM/";
     // DevBaseMVVM Template Readme
     public static final String DEV_BASE_MVVM_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevBaseMVVM_README.md";
+
+    // ===========
+    // = DevMVVM =
+    // ===========
+
+    // DevMVVM 版本号
+    public static final String DEV_MVVM_VERSION = DevVersion.DEV_MVVM_VERSION;
+    // 包目录名
+    public static final String DEV_MVVM_PACKAGE = "dev.mvvm";
+
+    // =============
+    // = DevSimple =
+    // =============
+
+    // DevSimple 版本号
+    public static final String DEV_SIMPLE_VERSION = DevVersion.DEV_SIMPLE_VERSION;
+    // 包目录名
+    public static final String DEV_SIMPLE_PACKAGE = "dev.simple";
 
     // =============
     // = DevEngine =
@@ -423,6 +443,8 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.assist.exif", "图片 EXIF 读写辅助类");
         sCatalogMap_APP.put(".app.assist.floating", "悬浮窗实现方案辅助类");
         sCatalogMap_APP.put(".app.assist.lifecycle", "Activity 生命周期监听辅助类");
+        sCatalogMap_APP.put(".app.assist.lifecycle.current", "当前 Activity、Fragment 生命周期辅助类");
+        sCatalogMap_APP.put(".app.assist.lifecycle.fragment", "Fragment 生命周期辅助类");
         sCatalogMap_APP.put(".app.assist.record", "文件记录分析类");
         sCatalogMap_APP.put(".app.assist.url", "Url 携带信息解析");
 
@@ -828,5 +850,117 @@ public final class ApiConfig {
 //        sMethodNameRegex = "[A-Za-z]+[2][A-Za-z0-9]+";
 //        // 属于 xxx2x xx数字
 //        sMethodNameRegex = "[A-Za-z]+[2][A-Za-z][A-Za-z0-9]+";
+    }
+
+    // ============
+    // = 版本格式化 =
+    // ============
+
+    // 所有库名
+    private static final List<String> sAllLibName = Arrays.asList(
+            // DevApp - Android 工具类库
+            "DevApp",
+            // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
+            "DevAssist",
+            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            "DevBase",
+            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
+            "DevBaseMVVM",
+            // DevMVVM - DataBinding 工具类库
+            "DevMVVM",
+            // DevSimple - DataBinding 工具类库
+            "DevSimple",
+            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+            "DevEngine",
+            // DevHttpCapture - OkHttp 抓包工具库
+            "DevHttpCapture",
+            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+            "DevHttpManager",
+            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+            "DevRetrofit",
+            // DevWidget - 自定义 View UI 库
+            "DevWidget",
+            // DevEnvironment - Android 环境配置切换库
+            "DevEnvironment",
+            // DevJava - Java 工具类库 ( 不依赖 android api )
+            "DevJava"
+    );
+
+    /**
+     * 格式化全部版本处理
+     * @param content 待格式化内容
+     * @return 格式化后内容
+     */
+    public static String formatAllVersion(final String content) {
+        String result = content;
+        for (String value : sAllLibName) {
+            result = formatVersion(result, value);
+        }
+        return result;
+    }
+
+    /**
+     * 格式化版本处理
+     * @param content 待格式化内容
+     * @param tag     库名 Tag
+     * @return 格式化后内容
+     */
+    private static String formatVersion(
+            final String content,
+            final String tag
+    ) {
+        String vn          = "【" + tag + "-vn】";
+        String versionName = returnVersionName(tag);
+        return content.replaceAll(vn, versionName);
+    }
+
+    /**
+     * 返回库名对应库版本
+     * @param tag 库名 Tag
+     * @return 库名对应库版本
+     */
+    private static String returnVersionName(final String tag) {
+        switch (tag) {
+            // DevApp - Android 工具类库
+            case "DevApp":
+                return ApiConfig.DEV_APP_VERSION;
+            // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
+            case "DevAssist":
+                return ApiConfig.DEV_ASSIST_VERSION;
+            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            case "DevBase":
+                return ApiConfig.DEV_BASE_VERSION;
+            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
+            case "DevBaseMVVM":
+                return ApiConfig.DEV_BASE_MVVM_VERSION;
+            // DevMVVM - DataBinding 工具类库
+            case "DevMVVM":
+                return ApiConfig.DEV_MVVM_VERSION;
+            // DevSimple - DataBinding 工具类库
+            case "DevSimple":
+                return ApiConfig.DEV_SIMPLE_VERSION;
+            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+            case "DevEngine":
+                return ApiConfig.DEV_ENGINE_VERSION;
+            // DevHttpCapture - OkHttp 抓包工具库
+            case "DevHttpCapture":
+                return ApiConfig.DEV_HTTP_CAPTURE_VERSION;
+            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+            case "DevHttpManager":
+                return ApiConfig.DEV_HTTP_MANAGER_VERSION;
+            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+            case "DevRetrofit":
+                return ApiConfig.DEV_RETROFIT_VERSION;
+            // DevWidget - 自定义 View UI 库
+            case "DevWidget":
+                return ApiConfig.DEV_WIDGET_VERSION;
+            // DevEnvironment - Android 环境配置切换库
+            case "DevEnvironment":
+                return ApiConfig.DEV_ENVIRONMENT_VERSION;
+            // DevJava - Java 工具类库 ( 不依赖 android api )
+            case "DevJava":
+                return ApiConfig.DEV_JAVA_VERSION;
+        }
+        return null;
     }
 }

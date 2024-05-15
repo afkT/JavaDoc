@@ -25,6 +25,10 @@ ext {
             dev_mvvm_versionCode                     : 【DevMVVM】,
             dev_mvvm_versionName                     : "【DevMVVM-vn】",
 
+            // DevSimple - 简单敏捷开发库
+            dev_simple_versionCode                   : 【DevSimple】,
+            dev_simple_versionName                   : "【DevSimple-vn】",
+
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             dev_engine_versionCode                   : 【DevEngine】,
             dev_engine_versionName                   : "【DevEngine-vn】",
