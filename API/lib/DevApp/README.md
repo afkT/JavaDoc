@@ -6,7 +6,7 @@
 //implementation 'com.afkt:DevApp:1.9.4'
 
 // AndroidX ( Maven Central ) 
-implementation 'io.github.afkt:DevAppX:2.4.5'
+implementation 'io.github.afkt:DevAppX:2.4.6'
 ```
 
 ## 目录结构
@@ -20,6 +20,8 @@ implementation 'io.github.afkt:DevAppX:2.4.5'
          - exif                 | 图片 EXIF 读写辅助类
          - floating             | 悬浮窗实现方案辅助类
          - lifecycle            | Activity 生命周期监听辅助类
+            - current           | 当前 Activity、Fragment 生命周期辅助类
+            - fragment          | Fragment 生命周期辅助类
          - record               | 文件记录分析类
          - url                  | Url 携带信息解析
       - cache                   | 缓存工具类
@@ -111,6 +113,8 @@ DevUtils.openDebug();
          - [exif](#devutilsappassistexif)                                  | 图片 EXIF 读写辅助类
          - [floating](#devutilsappassistfloating)                          | 悬浮窗实现方案辅助类
          - [lifecycle](#devutilsappassistlifecycle)                        | Activity 生命周期监听辅助类
+            - [current](#devutilsappassistlifecyclecurrent)                | 当前 Activity、Fragment 生命周期辅助类
+            - [fragment](#devutilsappassistlifecyclefragment)              | Fragment 生命周期辅助类
          - [record](#devutilsappassistrecord)                              | 文件记录分析类
          - [url](#devutilsappassisturl)                                    | Url 携带信息解析
       - [cache](#devutilsappcache)                                         | 缓存工具类
@@ -2765,7 +2769,7 @@ DevUtils.openDebug();
 ## <span id="devutilsappassistlifecycle">**`dev.utils.app.assist.lifecycle`**</span>
 
 
-* **ActivityLifecycleCallbacks 抽象类 ->** [AbstractActivityLifecycle.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/lifecycle/AbstractActivityLifecycle.java)
+* **Activity LifecycleCallbacks 抽象类 ->** [AbstractActivityLifecycle.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/lifecycle/AbstractActivityLifecycle.java)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -2833,6 +2837,41 @@ DevUtils.openDebug();
 | :- | :- |
 | onForeground | 切换到前台 |
 | onBackground | 切换到后台 |
+
+
+## <span id="devutilsappassistlifecyclecurrent">**`dev.utils.app.assist.lifecycle.current`**</span>
+
+
+* **当前 Activity 生命周期辅助类 ->** [ThisActivityLifecycleAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/lifecycle/current/ThisActivityLifecycleAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| ofListener | 获取 Activity 生命周期通知事件 |
+| addListener | 添加 Activity 生命周期通知事件 |
+| removeListener | 移除 Activity 生命周期通知事件 |
+| removeAllListener | 移除全部 Activity 生命周期通知事件 |
+| registerActivityLifecycleCallbacks | 注册绑定 Activity 生命周期事件处理 |
+| unregisterActivityLifecycleCallbacks | 解除注册 Activity 生命周期事件处理 |
+
+
+## <span id="devutilsappassistlifecyclefragment">**`dev.utils.app.assist.lifecycle.fragment`**</span>
+
+
+* **Fragment 生命周期辅助类 ->** [FragmentLifecycleAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/lifecycle/fragment/FragmentLifecycleAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| setFragmentLifecycleFilter | 设置 Fragment 生命周期 过滤判断接口 |
+| setAbstractFragmentLifecycle | 设置 FragmentLifecycle 监听回调 |
+| registerFragmentLifecycleCallbacks | 注册绑定 Fragment 生命周期事件处理 |
+| unregisterFragmentLifecycleCallbacks | 解除注册 Fragment 生命周期事件处理 |
+
+
+* **Fragment 生命周期 过滤判断接口 ->** [FragmentLifecycleFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/lifecycle/fragment/FragmentLifecycleFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 判断是否过滤该类 ( 不进行添加等操作 ) |
 
 
 ## <span id="devutilsappassistrecord">**`dev.utils.app.assist.record`**</span>
@@ -5809,6 +5848,19 @@ DevUtils.openDebug();
 | clearFlags | 移除 flags value |
 | hasFlags | 是否存在 flags value |
 | notHasFlags | 是否不存在 flags value |
+
+
+* **键值对 Assist ->** [KeyValueAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/KeyValueAssist.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getValue | 获取 Value |
+| setValue | 设置 Value |
+| removeValue | 移除 Value |
+| getKeyValueMaps | 获取 Key Value Map |
+| containsKey | 是否存在 Key |
+| containsValue | 是否存在 Value |
+| isEmpty | 判断 Value 是否为 null |
 
 
 * **时间均值计算辅助类 ->** [TimeAverager.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/TimeAverager.java)

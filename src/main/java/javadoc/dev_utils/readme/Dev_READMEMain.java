@@ -1,7 +1,6 @@
 package javadoc.dev_utils.readme;
 
 import java.io.File;
-import java.text.MessageFormat;
 
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;

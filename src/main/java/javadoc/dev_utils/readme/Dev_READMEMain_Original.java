@@ -1,10 +1,9 @@
 package javadoc.dev_utils.readme;
 
-import java.io.File;
-import java.text.MessageFormat;
-
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
+
+import java.io.File;
 
 /**
  * detail: 创建 README Main 方法
@@ -25,28 +24,8 @@ final class Dev_READMEMain_Original {
         byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_ORIGINAL);
         String templateContent = new String(bytes);
 
-        // 保存 README 内容
-        builder.append(MessageFormat.format(
-                // MessageFormat 会移除单引号, 所以需要加上双引号处理
-                templateContent.replaceAll("'", "''"),
-                ApiConfig.DEV_APP_VERSION,
-                ApiConfig.DEV_APP_VERSION,
-                ApiConfig.DEV_ASSIST_VERSION,
-                ApiConfig.DEV_BASE_VERSION,
-                ApiConfig.DEV_BASE_MVVM_VERSION,
-                ApiConfig.DEV_ENGINE_VERSION,
-                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
-                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
-                ApiConfig.DEV_HTTP_CAPTURE_VERSION,
-                ApiConfig.DEV_HTTP_MANAGER_VERSION,
-                ApiConfig.DEV_RETROFIT_VERSION,
-                ApiConfig.DEV_WIDGET_VERSION,
-                ApiConfig.DEV_ENVIRONMENT_VERSION,
-                ApiConfig.DEV_ENVIRONMENT_VERSION,
-                ApiConfig.DEV_ENVIRONMENT_VERSION,
-                ApiConfig.DEV_ENVIRONMENT_VERSION,
-                ApiConfig.DEV_JAVA_VERSION
-        ));
+        // 格式化 README 全部版本内容
+        builder.append(ApiConfig.formatAllVersion(templateContent));
 
         // 保存 README
         FileUtils.saveFile(
