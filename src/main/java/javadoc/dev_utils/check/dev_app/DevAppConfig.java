@@ -168,6 +168,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Flowable.FlowByParam2", ArrayUtils.asListArgs("flow"));
         ignoreAnnotateMap.put("Flowable.FlowByParam3", ArrayUtils.asListArgs("flow"));
         ignoreAnnotateMap.put("Flowable.FlowByParamArgs", ArrayUtils.asListArgs("flow"));
+        ignoreAnnotateMap.put("FragmentLifecycleAssist.FragmentLifecycleImpl", ArrayUtils.asListArgs("onFragmentPreAttached","onFragmentAttached","onFragmentPreCreated","onFragmentCreated","onFragmentActivityCreated","onFragmentViewCreated","onFragmentStarted","onFragmentResumed","onFragmentPaused","onFragmentStopped","onFragmentSaveInstanceState","onFragmentViewDestroyed","onFragmentDestroyed","onFragmentDetached"));
         ignoreAnnotateMap.put("FragmentUtils.FragmentNode", ArrayUtils.asListArgs("getFragment","getNext","toString"));
         ignoreAnnotateMap.put("Functionable.Function", ArrayUtils.asListArgs("apply"));
         ignoreAnnotateMap.put("Functionable.FunctionByParam", ArrayUtils.asListArgs("apply"));
@@ -324,6 +325,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreAnnotateMap.put("Taskable.TaskByParam2", ArrayUtils.asListArgs("result"));
         ignoreAnnotateMap.put("Taskable.TaskByParam3", ArrayUtils.asListArgs("result"));
         ignoreAnnotateMap.put("Taskable.TaskByParamArgs", ArrayUtils.asListArgs("result"));
+        ignoreAnnotateMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed","onActivityPreCreated","onActivityPostCreated","onActivityPreStarted","onActivityPostStarted","onActivityPreResumed","onActivityPostResumed","onActivityPrePaused","onActivityPostPaused","onActivityPreStopped","onActivityPostStopped","onActivityPreSaveInstanceState","onActivityPostSaveInstanceState","onActivityPreDestroyed","onActivityPostDestroyed"));
         ignoreAnnotateMap.put("Threadable.Thread", ArrayUtils.asListArgs("execute"));
         ignoreAnnotateMap.put("Threadable.ThreadByParam", ArrayUtils.asListArgs("execute"));
         ignoreAnnotateMap.put("Threadable.ThreadByParam2", ArrayUtils.asListArgs("execute"));
@@ -412,6 +414,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("FloatSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("updateViewLayout"));
         ignoreFinalMap.put("FlowHelper", ArrayUtils.asListArgs("flow","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable"));
+        ignoreFinalMap.put("FragmentLifecycleAssist.FragmentLifecycleImpl", ArrayUtils.asListArgs("onFragmentPreAttached","onFragmentAttached","onFragmentPreCreated","onFragmentCreated","onFragmentActivityCreated","onFragmentViewCreated","onFragmentStarted","onFragmentResumed","onFragmentPaused","onFragmentStopped","onFragmentSaveInstanceState","onFragmentViewDestroyed","onFragmentDestroyed","onFragmentDetached"));
         ignoreFinalMap.put("IToastImpl", ArrayUtils.asListArgs("filter","handlerContent"));
         ignoreFinalMap.put("InactivityTimerAssist.InactivityAsyncTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreFinalMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
@@ -436,6 +439,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreFinalMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
         ignoreFinalMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
+        ignoreFinalMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed","onActivityPreCreated","onActivityPostCreated","onActivityPreStarted","onActivityPostStarted","onActivityPreResumed","onActivityPostResumed","onActivityPrePaused","onActivityPostPaused","onActivityPreStopped","onActivityPostStopped","onActivityPreSaveInstanceState","onActivityPostSaveInstanceState","onActivityPreDestroyed","onActivityPostDestroyed"));
         ignoreFinalMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreFinalMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreFinalMap.put("ToastFactory.ToastHelper", ArrayUtils.asListArgs("handleMessage"));
@@ -542,6 +546,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("FloatingWindowManagerAssist.DevAssistIMPL", ArrayUtils.asListArgs("getWindowManager","getLayoutParams"));
         ignoreStaticMap.put("FloatingWindowManagerAssist2", ArrayUtils.asListArgs("removeFloatingView","addFloatingView","removeAllFloatingView","updateViewLayout","isNeedsAdd","setNeedsAdd","getAttachActivity","getMapFloatingKey","getMapFloatingView","getMapFloatingViewLayoutParams"));
         ignoreStaticMap.put("FlowHelper", ArrayUtils.asListArgs("flow","postRunnable","postRunnable","postRunnable","postRunnable","removeRunnable"));
+        ignoreStaticMap.put("FragmentLifecycleAssist", ArrayUtils.asListArgs("setFragmentLifecycleFilter","setAbstractFragmentLifecycle","registerFragmentLifecycleCallbacks","registerFragmentLifecycleCallbacks","unregisterFragmentLifecycleCallbacks"));
+        ignoreStaticMap.put("FragmentLifecycleAssist.FragmentLifecycleImpl", ArrayUtils.asListArgs("onFragmentPreAttached","onFragmentAttached","onFragmentPreCreated","onFragmentCreated","onFragmentActivityCreated","onFragmentViewCreated","onFragmentStarted","onFragmentResumed","onFragmentPaused","onFragmentStopped","onFragmentSaveInstanceState","onFragmentViewDestroyed","onFragmentDestroyed","onFragmentDetached"));
         ignoreStaticMap.put("FragmentUtils.FragmentNode", ArrayUtils.asListArgs("getFragment","getNext","toString"));
         ignoreStaticMap.put("IToastImpl", ArrayUtils.asListArgs("reset","setUseHandler","setNullText","setTextLength","initialize","style","defaultStyle","getToastStyle","initStyle","initToastFilter","setView","show","show","show","show","cancel","filter","handlerContent","getThreadToastStyle","createView","innerShowToastText","newToastText","innerShowToastView","newToastView"));
         ignoreStaticMap.put("ImageUtils.ImageType", ArrayUtils.asListArgs("getValue"));
@@ -550,6 +556,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("IntSortAsc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("IntSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("KeyValue", ArrayUtils.asListArgs("getKey","getValue","toString"));
+        ignoreStaticMap.put("KeyValueAssist", ArrayUtils.asListArgs("getValue","setValue","removeValue","getKeyValueMaps","containsKey","containsValue","isEmpty"));
         ignoreStaticMap.put("KeyguardUtils", ArrayUtils.asListArgs("isKeyguardLocked","isKeyguardSecure","inKeyguardRestrictedInputMode","getKeyguardManager","setKeyguardManager","disableKeyguard","reenableKeyguard","release","getKeyguardLock","setKeyguardLock"));
         ignoreStaticMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged","onStatusChanged","onProviderEnabled","onProviderDisabled"));
         ignoreStaticMap.put("LogConfig", ArrayUtils.asListArgs("methodCount","methodOffset","outputMethodAll","displayThreadInfo","sortLog","logLevel","tag"));
@@ -598,6 +605,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreStaticMap.put("StringSortDesc", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("StringSortWindowsSimple", ArrayUtils.asListArgs("compare"));
         ignoreStaticMap.put("StringSortWindowsSimple2", ArrayUtils.asListArgs("compare"));
+        ignoreStaticMap.put("ThisActivityLifecycleAssist", ArrayUtils.asListArgs("ofListener","addListener","removeListener","removeAllListener","registerActivityLifecycleCallbacks","unregisterActivityLifecycleCallbacks"));
+        ignoreStaticMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed","onActivityPreCreated","onActivityPostCreated","onActivityPreStarted","onActivityPostStarted","onActivityPreResumed","onActivityPostResumed","onActivityPrePaused","onActivityPostPaused","onActivityPreStopped","onActivityPostStopped","onActivityPreSaveInstanceState","onActivityPostSaveInstanceState","onActivityPreDestroyed","onActivityPostDestroyed","_of","ofListener","addListener","removeListener","removeAllListener"));
         ignoreStaticMap.put("TimeAverager", ArrayUtils.asListArgs("start","end","endAndRestart","average","print","clear"));
         ignoreStaticMap.put("TimeCounter", ArrayUtils.asListArgs("start","durationRestart","duration","getStartTime"));
         ignoreStaticMap.put("TimeKeeper", ArrayUtils.asListArgs("waitForEndAsync","waitForEnd"));
@@ -764,6 +773,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Flowable.FlowByParam2", ArrayUtils.asListArgs("flow"));
         ignoreParamMap.put("Flowable.FlowByParam3", ArrayUtils.asListArgs("flow"));
         ignoreParamMap.put("Flowable.FlowByParamArgs", ArrayUtils.asListArgs("flow"));
+        ignoreParamMap.put("FragmentLifecycleAssist.FragmentLifecycleImpl", ArrayUtils.asListArgs("onFragmentPreAttached","onFragmentAttached","onFragmentPreCreated","onFragmentCreated","onFragmentActivityCreated","onFragmentViewCreated","onFragmentStarted","onFragmentResumed","onFragmentPaused","onFragmentStopped","onFragmentSaveInstanceState","onFragmentViewDestroyed","onFragmentDestroyed","onFragmentDetached"));
         ignoreParamMap.put("Functionable.FunctionByParam", ArrayUtils.asListArgs("apply"));
         ignoreParamMap.put("Functionable.FunctionByParam2", ArrayUtils.asListArgs("apply"));
         ignoreParamMap.put("Functionable.FunctionByParam3", ArrayUtils.asListArgs("apply"));
@@ -893,6 +903,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreParamMap.put("Taskable.TaskByParam3", ArrayUtils.asListArgs("result"));
         ignoreParamMap.put("Taskable.TaskByParamArgs", ArrayUtils.asListArgs("result"));
         ignoreParamMap.put("TextViewUtils", ArrayUtils.asListArgs("getLetterSpacing","setLetterSpacing","getLineSpacingExtra","getLineSpacingMultiplier","getIncludeFontPadding","getMaxLines","getMinLines","getMaxEms","getMinEms"));
+        ignoreParamMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("onActivityCreated","onActivityStarted","onActivityResumed","onActivityPaused","onActivityStopped","onActivitySaveInstanceState","onActivityDestroyed","onActivityPreCreated","onActivityPostCreated","onActivityPreStarted","onActivityPostStarted","onActivityPreResumed","onActivityPostResumed","onActivityPrePaused","onActivityPostPaused","onActivityPreStopped","onActivityPostStopped","onActivityPreSaveInstanceState","onActivityPostSaveInstanceState","onActivityPreDestroyed","onActivityPostDestroyed"));
         ignoreParamMap.put("Threadable.ThreadByParam", ArrayUtils.asListArgs("execute"));
         ignoreParamMap.put("Threadable.ThreadByParam2", ArrayUtils.asListArgs("execute"));
         ignoreParamMap.put("Threadable.ThreadByParam3", ArrayUtils.asListArgs("execute"));
@@ -948,7 +959,6 @@ final class DevAppConfig implements ICheckConfig {
         Map<String, List<String>> ignoreUnPublicMap = new HashMap<>();
         ignoreUnPublicMap.put("AccessibilityUtils.Node", ArrayUtils.asListArgs("performAction","performAction","performClick","performClick","performLongClick","performLongClick","recursiveNodeChild"));
         ignoreUnPublicMap.put("AccessibilityUtils.NodeFilter", ArrayUtils.asListArgs("accept"));
-        ignoreUnPublicMap.put("ActivityLifecycleAssist", ArrayUtils.asListArgs("getApplication"));
         ignoreUnPublicMap.put("ActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("setTopActivity","getTopActivityByReflect","postStatus","consumeOnActivityDestroyedListener"));
         ignoreUnPublicMap.put("ActivityLifecycleFilter", ArrayUtils.asListArgs("filter"));
         ignoreUnPublicMap.put("ActivityLifecycleGet", ArrayUtils.asListArgs("getTopActivity","isTopActivity","isTopActivity","isBackground","getActivityCount"));
@@ -1123,6 +1133,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("ForUtils.IntConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.LongConsumer", ArrayUtils.asListArgs("accept"));
         ignoreUnPublicMap.put("ForUtils.ShortConsumer", ArrayUtils.asListArgs("accept"));
+        ignoreUnPublicMap.put("FragmentLifecycleFilter", ArrayUtils.asListArgs("filter"));
         ignoreUnPublicMap.put("FragmentUtils", ArrayUtils.asListArgs("getTopIsInStack","getTopShowIsInStack","getAllFragments","getAllFragmentsInStack","putArgs","putArgs","getArgs","operateNoAnim","operate","addAnim","addSharedElement"));
         ignoreUnPublicMap.put("FragmentUtils.OnBackClickListener", ArrayUtils.asListArgs("onBackClick"));
         ignoreUnPublicMap.put("Functionable.Function", ArrayUtils.asListArgs("apply"));
@@ -1305,6 +1316,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("Taskable.TaskByParam2", ArrayUtils.asListArgs("result"));
         ignoreUnPublicMap.put("Taskable.TaskByParam3", ArrayUtils.asListArgs("result"));
         ignoreUnPublicMap.put("Taskable.TaskByParamArgs", ArrayUtils.asListArgs("result"));
+        ignoreUnPublicMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("_of"));
         ignoreUnPublicMap.put("Threadable.Thread", ArrayUtils.asListArgs("execute"));
         ignoreUnPublicMap.put("Threadable.ThreadByParam", ArrayUtils.asListArgs("execute"));
         ignoreUnPublicMap.put("Threadable.ThreadByParam2", ArrayUtils.asListArgs("execute"));
@@ -1464,6 +1476,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("JCLogUtils.Print", ArrayUtils.asListArgs("printLog - void"));
         ignoreReturnVoidMap.put("KeyBoardUtils", ArrayUtils.asListArgs("setDelayMillis - void","judgeView - void","fixSoftInputLeaks - void"));
         ignoreReturnVoidMap.put("KeyBoardUtils.OnSoftInputChangedListener", ArrayUtils.asListArgs("onSoftInputChanged - void"));
+        ignoreReturnVoidMap.put("KeyValueAssist", ArrayUtils.asListArgs("removeValue - void"));
         ignoreReturnVoidMap.put("LanguageUtils", ArrayUtils.asListArgs("putSupportLanguage - void","removeSupportLanguage - void"));
         ignoreReturnVoidMap.put("LocationUtils.CustomLocationListener", ArrayUtils.asListArgs("onLocationChanged - void","onStatusChanged - void","onProviderEnabled - void","onProviderDisabled - void"));
         ignoreReturnVoidMap.put("LocationUtils.OnLocationChangeListener", ArrayUtils.asListArgs("getLastKnownLocation - void","onLocationChanged - void","onStatusChanged - void"));
@@ -1488,6 +1501,8 @@ final class DevAppConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("SizeUtils.OnGetSizeListener", ArrayUtils.asListArgs("onGetSize - void"));
         ignoreReturnVoidMap.put("SnackbarUtils", ArrayUtils.asListArgs("dismiss - void","dismiss - void","showShort - void","showLong - void","showIndefinite - void","showShort - void","showLong - void","showIndefinite - void","innerShow - void","clearLocations - void","setSnackbarLocation - void"));
         ignoreReturnVoidMap.put("SpanUtils", ArrayUtils.asListArgs("apply - void","applyLast - void","updateCharCharSequence - void","updateImage - void","updateSpace - void","setDefault - void"));
+        ignoreReturnVoidMap.put("ThisActivityLifecycleAssist", ArrayUtils.asListArgs("addListener - void","removeListener - void","removeAllListener - void"));
+        ignoreReturnVoidMap.put("ThisActivityLifecycleAssist.ActivityLifecycleImpl", ArrayUtils.asListArgs("addListener - void","removeListener - void","removeAllListener - void"));
         ignoreReturnVoidMap.put("TimeKeeper", ArrayUtils.asListArgs("waitForEndAsync - void","waitForEnd - void"));
         ignoreReturnVoidMap.put("TimeKeeper.OnEndCallback", ArrayUtils.asListArgs("onEnd - void"));
         ignoreReturnVoidMap.put("TimerManager", ArrayUtils.asListArgs("addContainsChecker - void","recycle - void","closeAll - void","closeAllNotRunning - void","closeAllInfinite - void","closeAllTag - void","closeAllUUID - void","startTimer - void","stopTimer - void"));
