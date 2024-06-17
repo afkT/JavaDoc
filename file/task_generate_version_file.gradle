@@ -29,8 +29,11 @@ tasks.register('generateVersionsGradle') {
         // DevMVVM - DataBinding 工具类库
         content = formatVersion(content, "DevMVVM", versions.dev_mvvm_versionCode)
 
-        // DevSimple - DataBinding 工具类库
+        // DevSimple - 简单敏捷开发库
         content = formatVersion(content, "DevSimple", versions.dev_simple_versionCode)
+
+        // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
+        content = formatVersion(content, "DevAgile", versions.dev_agile_versionCode)
 
         // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
         content = formatVersion(content, "DevEngine", versions.dev_engine_versionCode)

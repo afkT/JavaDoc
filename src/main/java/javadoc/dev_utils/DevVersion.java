@@ -31,6 +31,8 @@ final class DevVersion {
     static final String DEV_MVVM_VERSION;
     // DevSimple 版本号
     static final String DEV_SIMPLE_VERSION;
+    // DevAgile 版本号
+    static final String DEV_AGILE_VERSION;
     // DevEngine 版本号
     static final String DEV_ENGINE_VERSION;
     // DevHttpCapture 版本号
@@ -92,6 +94,10 @@ final class DevVersion {
         // DevSimple 版本号
         DEV_SIMPLE_VERSION = getProperty(
                 prop, "dev_simple_versionName"
+        );
+        // DevAgile 版本号
+        DEV_AGILE_VERSION = getProperty(
+                prop, "dev_agile_versionName"
         );
         // DevEngine 版本号
         DEV_ENGINE_VERSION = getProperty(

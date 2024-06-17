@@ -148,6 +148,15 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_SIMPLE_PACKAGE = "dev.simple";
 
+    // ============
+    // = DevAgile =
+    // ============
+
+    // DevAgile 版本号
+    public static final String DEV_AGILE_VERSION = DevVersion.DEV_AGILE_VERSION;
+    // 包目录名
+    public static final String DEV_AGILE_PACKAGE = "dev.agile";
+
     // =============
     // = DevEngine =
     // =============
@@ -868,8 +877,10 @@ public final class ApiConfig {
             "DevBaseMVVM",
             // DevMVVM - DataBinding 工具类库
             "DevMVVM",
-            // DevSimple - DataBinding 工具类库
+            // DevSimple - 简单敏捷开发库
             "DevSimple",
+            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
+            "DevAgile",
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             "DevEngine",
             // DevHttpCapture - OkHttp 抓包工具库
@@ -936,9 +947,12 @@ public final class ApiConfig {
             // DevMVVM - DataBinding 工具类库
             case "DevMVVM":
                 return ApiConfig.DEV_MVVM_VERSION;
-            // DevSimple - DataBinding 工具类库
+            // DevSimple - 简单敏捷开发库
             case "DevSimple":
                 return ApiConfig.DEV_SIMPLE_VERSION;
+            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
+            case "DevAgile":
+                return ApiConfig.DEV_AGILE_VERSION;
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             case "DevEngine":
                 return ApiConfig.DEV_ENGINE_VERSION;
