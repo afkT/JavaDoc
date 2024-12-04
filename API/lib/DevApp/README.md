@@ -377,6 +377,7 @@ DevUtils.openDebug();
 | getLocationManager | 获取 LocationManager |
 | getVibrator | 获取 Vibrator |
 | getDevicePolicyManager | 获取 DevicePolicyManager |
+| getDownloadManager | 获取 DownloadManager |
 | getSensorPrivacyManager | 获取 SensorPrivacyManager |
 | getWallpaperManager | 获取 WallpaperManager |
 | getPackageManager | 获取 PackageManager |
