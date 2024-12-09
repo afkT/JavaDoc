@@ -909,6 +909,8 @@ DevUtils.openDebug();
 | setImageMatrix | 设置 ImageView Matrix |
 | setImageTintList | 设置 ImageView 着色颜色 |
 | setImageTintMode | 设置 ImageView 着色模式 |
+| removeImageBitmap | 移除 ImageView Bitmap |
+| removeImageDrawable | 移除 ImageView Drawable |
 | setScaleType | 设置 ImageView 缩放类型 |
 | getImageMatrix | 获取 ImageView Matrix |
 | getImageTintList | 获取 ImageView 着色颜色 |
@@ -919,6 +921,8 @@ DevUtils.openDebug();
 | setImageResources | 设置 View 图片资源 |
 | setImageBitmaps | 设置 View Bitmap |
 | setImageDrawables | 设置 View Drawable |
+| removeImageBitmaps | 移除 View Bitmap |
+| removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | getImageViewSize | 根据 ImageView 获适当的宽高 |
 
@@ -2079,6 +2083,11 @@ DevUtils.openDebug();
 | setVerticalScrollBarEnabled | 设置是否绘制垂直滚动条 |
 | isScrollContainer | 获取 View 是否需要滚动效应 |
 | setScrollContainer | 设置 View 滚动效应 |
+| getClipToOutline | 获取 View 是否使用 Outline 来裁剪 |
+| setClipToOutline | 设置 View 是否使用 Outline 来裁剪 |
+| getOutlineProvider | 获取 View 轮廓裁剪、绘制 |
+| setOutlineProvider | 设置 View 轮廓裁剪、绘制 |
+| setOutlineProviderClip | 设置 View 轮廓裁剪、绘制并进行裁剪 |
 | getNextFocusForwardId | 下一个获取焦点的 View id |
 | setNextFocusForwardId | 设置下一个获取焦点的 View id |
 | getNextFocusDownId | 向下移动焦点时, 下一个获取焦点的 View id |
@@ -2213,6 +2222,9 @@ DevUtils.openDebug();
 | getForegroundGravity | 获取 View 前景重心 |
 | getForegroundTintList | 获取 View 前景着色颜色 |
 | getForegroundTintMode | 获取 View 前景着色模式 |
+| removeBackground | 移除背景图片 |
+| removeAllBackground | 移除背景图片 ( background、imageDrawable ) |
+| removeForeground | 移除前景图片 |
 | setColorFilter | View 着色处理 |
 | setProgressDrawable | 设置 ProgressBar 进度条样式 |
 | setBarProgress | 设置 ProgressBar 进度值 |
@@ -3358,6 +3370,9 @@ DevUtils.openDebug();
 | setHorizontalScrollBarEnabled | 设置是否绘制横向滚动条 |
 | setVerticalScrollBarEnabled | 设置是否绘制垂直滚动条 |
 | setScrollContainer | 设置 View 滚动效应 |
+| setClipToOutline | 设置 View 是否使用 Outline 来裁剪 |
+| setOutlineProvider | 设置 View 轮廓裁剪、绘制 |
+| setOutlineProviderClip | 设置 View 轮廓裁剪、绘制并进行裁剪 |
 | setNextFocusForwardId | 设置下一个获取焦点的 View id |
 | setNextFocusDownId | 设置向下移动焦点时, 下一个获取焦点的 View id |
 | setNextFocusLeftId | 设置向左移动焦点时, 下一个获取焦点的 View id |
@@ -3425,6 +3440,9 @@ DevUtils.openDebug();
 | setForegroundGravity | 设置前景重心 |
 | setForegroundTintList | 设置前景着色颜色 |
 | setForegroundTintMode | 设置前景着色模式 |
+| removeBackground | 移除背景图片 |
+| removeAllBackground | 移除背景图片 ( background、imageDrawable ) |
+| removeForeground | 移除前景图片 |
 | setColorFilter | View 着色处理 |
 | setProgressDrawable | 设置 ProgressBar 进度条样式 |
 | setBarProgress | 设置 ProgressBar 进度值 |
@@ -3451,11 +3469,15 @@ DevUtils.openDebug();
 | setImageMatrix | 设置 ImageView Matrix |
 | setImageTintList | 设置 ImageView 着色颜色 |
 | setImageTintMode | 设置 ImageView 着色模式 |
+| removeImageBitmap | 移除 ImageView Bitmap |
+| removeImageDrawable | 移除 ImageView Drawable |
 | setScaleType | 设置 ImageView 缩放类型 |
 | setBackgroundResources | 设置 View 图片资源 |
 | setImageResources | 设置 View 图片资源 |
 | setImageBitmaps | 设置 View Bitmap |
 | setImageDrawables | 设置 View Drawable |
+| removeImageBitmaps | 移除 View Bitmap |
+| removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
@@ -3578,6 +3600,9 @@ DevUtils.openDebug();
 | setHorizontalScrollBarEnabled | 设置是否绘制横向滚动条 |
 | setVerticalScrollBarEnabled | 设置是否绘制垂直滚动条 |
 | setScrollContainer | 设置 View 滚动效应 |
+| setClipToOutline | 设置 View 是否使用 Outline 来裁剪 |
+| setOutlineProvider | 设置 View 轮廓裁剪、绘制 |
+| setOutlineProviderClip | 设置 View 轮廓裁剪、绘制并进行裁剪 |
 | setNextFocusForwardId | 设置下一个获取焦点的 View id |
 | setNextFocusDownId | 设置向下移动焦点时, 下一个获取焦点的 View id |
 | setNextFocusLeftId | 设置向左移动焦点时, 下一个获取焦点的 View id |
@@ -3645,6 +3670,9 @@ DevUtils.openDebug();
 | setForegroundGravity | 设置前景重心 |
 | setForegroundTintList | 设置前景着色颜色 |
 | setForegroundTintMode | 设置前景着色模式 |
+| removeBackground | 移除背景图片 |
+| removeAllBackground | 移除背景图片 ( background、imageDrawable ) |
+| removeForeground | 移除前景图片 |
 | setColorFilter | View 着色处理 |
 | setProgressDrawable | 设置 ProgressBar 进度条样式 |
 | setBarProgress | 设置 ProgressBar 进度值 |
@@ -3671,11 +3699,15 @@ DevUtils.openDebug();
 | setImageMatrix | 设置 ImageView Matrix |
 | setImageTintList | 设置 ImageView 着色颜色 |
 | setImageTintMode | 设置 ImageView 着色模式 |
+| removeImageBitmap | 移除 ImageView Bitmap |
+| removeImageDrawable | 移除 ImageView Drawable |
 | setScaleType | 设置 ImageView 缩放类型 |
 | setBackgroundResources | 设置 View 图片资源 |
 | setImageResources | 设置 View 图片资源 |
 | setImageBitmaps | 设置 View Bitmap |
 | setImageDrawables | 设置 View Drawable |
+| removeImageBitmaps | 移除 View Bitmap |
+| removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
@@ -3868,6 +3900,9 @@ DevUtils.openDebug();
 | setHorizontalScrollBarEnabled | 设置是否绘制横向滚动条 |
 | setVerticalScrollBarEnabled | 设置是否绘制垂直滚动条 |
 | setScrollContainer | 设置 View 滚动效应 |
+| setClipToOutline | 设置 View 是否使用 Outline 来裁剪 |
+| setOutlineProvider | 设置 View 轮廓裁剪、绘制 |
+| setOutlineProviderClip | 设置 View 轮廓裁剪、绘制并进行裁剪 |
 | setNextFocusForwardId | 设置下一个获取焦点的 View id |
 | setNextFocusDownId | 设置向下移动焦点时, 下一个获取焦点的 View id |
 | setNextFocusLeftId | 设置向左移动焦点时, 下一个获取焦点的 View id |
@@ -3935,6 +3970,9 @@ DevUtils.openDebug();
 | setForegroundGravity | 设置前景重心 |
 | setForegroundTintList | 设置前景着色颜色 |
 | setForegroundTintMode | 设置前景着色模式 |
+| removeBackground | 移除背景图片 |
+| removeAllBackground | 移除背景图片 ( background、imageDrawable ) |
+| removeForeground | 移除前景图片 |
 | setColorFilter | View 着色处理 |
 | setProgressDrawable | 设置 ProgressBar 进度条样式 |
 | setBarProgress | 设置 ProgressBar 进度值 |
@@ -3961,11 +3999,15 @@ DevUtils.openDebug();
 | setImageMatrix | 设置 ImageView Matrix |
 | setImageTintList | 设置 ImageView 着色颜色 |
 | setImageTintMode | 设置 ImageView 着色模式 |
+| removeImageBitmap | 移除 ImageView Bitmap |
+| removeImageDrawable | 移除 ImageView Drawable |
 | setScaleType | 设置 ImageView 缩放类型 |
 | setBackgroundResources | 设置 View 图片资源 |
 | setImageResources | 设置 View 图片资源 |
 | setImageBitmaps | 设置 View Bitmap |
 | setImageDrawables | 设置 View Drawable |
+| removeImageBitmaps | 移除 View Bitmap |
+| removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
@@ -4081,6 +4123,9 @@ DevUtils.openDebug();
 | setHorizontalScrollBarEnabled | 设置是否绘制横向滚动条 |
 | setVerticalScrollBarEnabled | 设置是否绘制垂直滚动条 |
 | setScrollContainer | 设置 View 滚动效应 |
+| setClipToOutline | 设置 View 是否使用 Outline 来裁剪 |
+| setOutlineProvider | 设置 View 轮廓裁剪、绘制 |
+| setOutlineProviderClip | 设置 View 轮廓裁剪、绘制并进行裁剪 |
 | setNextFocusForwardId | 设置下一个获取焦点的 View id |
 | setNextFocusDownId | 设置向下移动焦点时, 下一个获取焦点的 View id |
 | setNextFocusLeftId | 设置向左移动焦点时, 下一个获取焦点的 View id |
@@ -4148,6 +4193,9 @@ DevUtils.openDebug();
 | setForegroundGravity | 设置前景重心 |
 | setForegroundTintList | 设置前景着色颜色 |
 | setForegroundTintMode | 设置前景着色模式 |
+| removeBackground | 移除背景图片 |
+| removeAllBackground | 移除背景图片 ( background、imageDrawable ) |
+| removeForeground | 移除前景图片 |
 | setColorFilter | View 着色处理 |
 | setProgressDrawable | 设置 ProgressBar 进度条样式 |
 | setBarProgress | 设置 ProgressBar 进度值 |
@@ -4174,11 +4222,15 @@ DevUtils.openDebug();
 | setImageMatrix | 设置 ImageView Matrix |
 | setImageTintList | 设置 ImageView 着色颜色 |
 | setImageTintMode | 设置 ImageView 着色模式 |
+| removeImageBitmap | 移除 ImageView Bitmap |
+| removeImageDrawable | 移除 ImageView Drawable |
 | setScaleType | 设置 ImageView 缩放类型 |
 | setBackgroundResources | 设置 View 图片资源 |
 | setImageResources | 设置 View 图片资源 |
 | setImageBitmaps | 设置 View Bitmap |
 | setImageDrawables | 设置 View Drawable |
+| removeImageBitmaps | 移除 View Bitmap |
+| removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |

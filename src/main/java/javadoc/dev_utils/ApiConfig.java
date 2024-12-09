@@ -634,6 +634,8 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.decoration.linear", "Linear ItemDecoration");
         sCatalogMap_Widget.put(".widget.function", "需求功能 View");
         sCatalogMap_Widget.put(".widget.ui", "UI View");
+        sCatalogMap_Widget.put(".widget.ui.radius", "圆角相关 View");
+        sCatalogMap_Widget.put(".widget.ui.resize", "自适应高度 ImageView");
         sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
         sCatalogMap_Widget.put(".widget.utils", "工具类目录");
 
