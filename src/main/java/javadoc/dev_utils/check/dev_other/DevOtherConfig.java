@@ -58,7 +58,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreAnnotateMap.put("MMKVKeyValueEngineImpl", ArrayUtils.asListArgs("setJSONEngine","getConfig","remove","removeForKeys","contains","clear","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreAnnotateMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreAnnotateMap.put("MediaConfig.MimeType", ArrayUtils.asListArgs("ofAll","ofImage","ofVideo","ofAudio"));
-        ignoreAnnotateMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreAnnotateMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("getConfig","setConfig","openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","openPreview","openPreview","openPreview","openPreview","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorUris","getSingleSelector","getSingleSelectorUri"));
         ignoreAnnotateMap.put("RetrofitManager", ArrayUtils.asListArgs("getInstance"));
         ignoreAnnotateMap.put("RxJavaManager", ArrayUtils.asListArgs("getInstance"));
@@ -109,9 +108,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreFinalMap.put("LuckSandboxFileEngineImpl", ArrayUtils.asListArgs("onUriToFileAsyncTransform"));
         ignoreFinalMap.put("MMKVKeyValueEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreFinalMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("containsKey","removeValueForKey","removeValuesForKeys","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
-        ignoreFinalMap.put("OkGoDemo", ArrayUtils.asListArgs("getUserInfo","getUserList","uploadImage","uploadImages"));
-        ignoreFinalMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
-        ignoreFinalMap.put("OkGoUtils", ArrayUtils.asListArgs("initOkGo","execute","execute"));
         ignoreFinalMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("setConfig","openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","openPreview","openPreview","openPreview","openPreview","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorUris","getSingleSelector","getSingleSelectorUri"));
         ignoreFinalMap.put("PictureSelectorUtils", ArrayUtils.asListArgs("setConfig","openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","openPreview","openPreview","openPreview","openPreview","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorUris","getSingleSelector","getSingleSelectorUri"));
         ignoreFinalMap.put("SPKeyValueEngineImpl", ArrayUtils.asListArgs("remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
@@ -169,8 +165,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreStaticMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("getMMKV","mmapID","isMMKVEmpty","isMMKVNotEmpty","containsKey","removeValueForKey","removeValuesForKeys","sync","async","clear","encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
         ignoreStaticMap.put("MediaConfig", ArrayUtils.asListArgs("convertLibCustomConfig","getLibCustomConfig","setLibCustomConfig","getMimeType","setMimeType","getSelectionMode","setSelectionMode","getCustomData","setCustomData","getMediaDatas","setMediaDatas","clone","set"));
         ignoreStaticMap.put("MediaData", ArrayUtils.asListArgs("convertLibOriginalData","getLibOriginalData","setLibOriginalData","getAvailableUri","isExistOriginalUri","isExistSandboxUri","isExistThumbnailUri","isExistWatermarkUri","isExistCompressUri","isExistCropUri","clone","set","getUUID","getCustomData","setCustomData","getOriginalUri","setOriginalUri","getSandboxUri","setSandboxUri","getCompressUri","setCompressUri","getThumbnailUri","setThumbnailUri","getWatermarkUri","setWatermarkUri","getCropUri","setCropUri","getMimeType","setMimeType","getDuration","setDuration","getWidth","setWidth","getHeight","setHeight","getCropImageWidth","setCropImageWidth","getCropImageHeight","setCropImageHeight","getCropOffsetX","setCropOffsetX","getCropOffsetY","setCropOffsetY","getCropAspectRatio","setCropAspectRatio","isCropState","setCropState","isCompressState","setCompressState"));
-        ignoreStaticMap.put("OkGoResponse", ArrayUtils.asListArgs("getDataString"));
-        ignoreStaticMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("build","setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreStaticMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("getConfig","setConfig","openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","openPreview","openPreview","openPreview","openPreview","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorUris","getSingleSelector","getSingleSelectorUri","convertList","createMediaData","startCameraModel","startGalleryModel","startPreviewModel"));
         ignoreStaticMap.put("RetrofitManager", ArrayUtils.asListArgs("get","put","remove","contains","getRetrofitMap","create"));
         ignoreStaticMap.put("RxJavaManager", ArrayUtils.asListArgs("add","remove","contains","getManagerMap","io_main"));
@@ -225,8 +219,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreParamMap.put("LuckSandboxFileEngineImpl", ArrayUtils.asListArgs("onUriToFileAsyncTransform"));
         ignoreParamMap.put("MMKVKeyValueEngineImpl", ArrayUtils.asListArgs("setJSONEngine","remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreParamMap.put("MMKVUtils.Holder", ArrayUtils.asListArgs("encode","encode","encode","encode","encode","encode","encode","encode","encode","decodeBool","decodeBool","decodeInt","decodeInt","decodeLong","decodeLong","decodeFloat","decodeFloat","decodeDouble","decodeDouble","decodeString","decodeString","decodeStringSet","decodeStringSet","decodeStringSet","decodeBytes","decodeBytes","decodeParcelable","decodeParcelable"));
-        ignoreParamMap.put("OkGoCallback", ArrayUtils.asListArgs("onStart","uploadProgress","downloadProgress","onCacheSuccess","onError","onSuccess","convertResponse"));
-        ignoreParamMap.put("OkGoResponse.Builder", ArrayUtils.asListArgs("setData","setMessage","setCode","setToast","setResult","setOriginal","setException"));
         ignoreParamMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("setConfig","openCamera","openCamera","openCamera","openCamera","openGallery","openGallery","openGallery","openGallery","openPreview","openPreview","openPreview","openPreview","deleteCacheDirFile","deleteAllCacheDirFile","isMediaSelectorResult","getSelectors","getSelectorUris","getSingleSelector","getSingleSelectorUri"));
         ignoreParamMap.put("SPKeyValueEngineImpl", ArrayUtils.asListArgs("setJSONEngine","remove","removeForKeys","contains","putInt","putLong","putFloat","putDouble","putBoolean","putString","putEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity","getInt","getLong","getFloat","getDouble","getBoolean","getString","getEntity"));
         ignoreParamMap.put("StorageItem", ArrayUtils.asListArgs("setFormat","setQuality","setOutputUri","setFileName","setFilePath","setFolder","setMimeType"));
@@ -246,7 +238,6 @@ final class DevOtherConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreReturnMap() {
         Map<String, List<String>> ignoreReturnMap = new HashMap<>();
         ignoreReturnMap.put("ImageConfig", ArrayUtils.asListArgs("setScaleType","setTransform"));
-        ignoreReturnMap.put("OkGoCallback", ArrayUtils.asListArgs("convertResponse"));
 
         return ignoreReturnMap;
     }
@@ -274,8 +265,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreUnPublicMap.put("LubanUtils.OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
         ignoreUnPublicMap.put("LuckCompressFileEngineImpl", ArrayUtils.asListArgs("toInputStreamList","toUriPath"));
         ignoreUnPublicMap.put("LuckRecordAudioInterceptListener", ArrayUtils.asListArgs("startRecordSoundAction"));
-        ignoreUnPublicMap.put("OkGoCallback", ArrayUtils.asListArgs("innerResponse","isSuccess"));
-        ignoreUnPublicMap.put("OkGoDemo", ArrayUtils.asListArgs("demo"));
         ignoreUnPublicMap.put("PictureSelectorEngineImpl", ArrayUtils.asListArgs("convertList","createMediaData","startCameraModel","startGalleryModel","startPreviewModel"));
         ignoreUnPublicMap.put("StorageItem", ArrayUtils.asListArgs("setOutputUri","setFileName","setFilePath","setFolder","setMimeType"));
         ignoreUnPublicMap.put("StorageResult", ArrayUtils.asListArgs("setUri","setFile","setError","setType","setExternal"));
@@ -318,9 +307,6 @@ final class DevOtherConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("LuckImageEngineImpl", ArrayUtils.asListArgs("loadImage - void","loadAlbumCover - void","loadGridImage - void"));
         ignoreReturnVoidMap.put("LuckRecordAudioInterceptListener", ArrayUtils.asListArgs("startRecordSoundAction - void"));
         ignoreReturnVoidMap.put("MMKVUtils", ArrayUtils.asListArgs("initialize - void"));
-        ignoreReturnVoidMap.put("OkGoCallback", ArrayUtils.asListArgs("onStart - void","onFinish - void","uploadProgress - void","downloadProgress - void","onCacheSuccess - void","onError - void","onSuccess - void","onSuccessResponse - void","onErrorResponse - void","innerResponse - void"));
-        ignoreReturnVoidMap.put("OkGoDemo", ArrayUtils.asListArgs("getUserInfo - void","getUserList - void","uploadImage - void","uploadImages - void","demo - void"));
-        ignoreReturnVoidMap.put("OkGoUtils", ArrayUtils.asListArgs("initOkGo - void","execute - void","execute - void"));
         ignoreReturnVoidMap.put("PictureSelectorUtils", ArrayUtils.asListArgs("setConfig - void","deleteCacheDirFile - void","deleteAllCacheDirFile - void"));
         ignoreReturnVoidMap.put("RxJavaManager", ArrayUtils.asListArgs("add - void","remove - void"));
         ignoreReturnVoidMap.put("WebViewAssist", ArrayUtils.asListArgs("setGlobalBuilder - void","removeCookie - void"));
