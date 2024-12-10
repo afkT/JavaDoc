@@ -355,6 +355,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getSystemService | 获取 SystemService |
+| getLocalBroadcastManager | 获取 LocalBroadcastManager |
 | getWindowManager | 获取 WindowManager |
 | getAudioManager | 获取 AudioManager |
 | getStatusBarManager | 获取 StatusBarManager |
@@ -1371,6 +1372,22 @@ DevUtils.openDebug();
 | getAllBackgroundProcesses | 获取后台服务进程 |
 | killAllBackgroundProcesses | 杀死所有的后台服务进程 |
 | killBackgroundProcesses | 杀死后台服务进程 |
+
+
+* **广播相关工具类 ->** [ReceiverUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ReceiverUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getLocalBroadcastManager | 获取 LocalBroadcastManager |
+| local_registerReceiver | 注册广播监听 ( 应用内广播 ) |
+| local_unregisterReceiver | 注销广播监听 ( 应用内广播 ) |
+| local_sendBroadcast | 发送广播 ( 应用内广播 ) |
+| local_sendBroadcastSync | 发送广播 ( 同步 ) ( 应用内广播 ) |
+| registerReceiverBool | 注册广播监听 |
+| registerReceiver | 注册广播监听 |
+| unregisterReceiver | 注销广播监听 |
+| sendBroadcast | 发送广播 ( 无序 ) |
+| sendOrderedBroadcast | 发送广播 ( 有序 ) |
 
 
 * **RecyclerView 工具类 ->** [RecyclerViewUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/RecyclerViewUtils.java)
