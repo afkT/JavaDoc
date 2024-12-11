@@ -55,7 +55,7 @@ public final class ApiConfig {
     // DevUtils 完整 API Readme
     public static final String DEV_UTILS_README_API            = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_API.md";
     // DevUtils 原始 Readme
-    public static final String DEV_UTILS_README_ORIGINAL       = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_ORIGINAL.md";
+    public static final String DEV_UTILS_README_PROJECT        = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_PROJECT.md";
 
     // DevUtils 完整 API fileName
     public static final String README_FILE_NAME_API      = "README_API.md";

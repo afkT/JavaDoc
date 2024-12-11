@@ -1,17 +1,17 @@
 package javadoc.dev_utils.readme;
 
+import java.io.File;
+
 import dev.utils.common.FileUtils;
 import javadoc.dev_utils.ApiConfig;
-
-import java.io.File;
 
 /**
  * detail: 创建 README Main 方法
  * @author Ttt
  */
-final class Dev_READMEMain_Original {
+final class Dev_READMEMain_PROJECT {
 
-    private Dev_READMEMain_Original() {
+    private Dev_READMEMain_PROJECT() {
     }
 
     /**
@@ -21,7 +21,7 @@ final class Dev_READMEMain_Original {
     public static String createREADME() {
         StringBuilder builder = new StringBuilder();
         // template readme content
-        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_ORIGINAL);
+        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_PROJECT);
         String templateContent = new String(bytes);
 
         // 格式化 README 全部版本内容
@@ -48,6 +48,6 @@ final class Dev_READMEMain_Original {
     }
 
     public static void main(String[] args) {
-        System.out.println(Dev_READMEMain_Original.createREADME());
+        System.out.println(Dev_READMEMain_PROJECT.createREADME());
     }
 }
