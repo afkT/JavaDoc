@@ -49,18 +49,32 @@ public final class ApiConfig {
     // ============
 
     // DevUtils Readme 文件保存路径
-    public static final String DEV_UTILS_README_FILE_SAVE_PATH = API_FILE_SAVE_PATH + File.separator;
-    // DevUtils Readme
-    public static final String DEV_UTILS_README                = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
-    // DevUtils 完整 API Readme
-    public static final String DEV_UTILS_README_API            = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_API.md";
-    // DevUtils 原始 Readme
-    public static final String DEV_UTILS_README_PROJECT        = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_PROJECT.md";
+    public static final String DEV_UTILS_README_FILE_SAVE_PATH   = API_FILE_SAVE_PATH + File.separator;
+    // DevUtils Template Readme
+    public static final String DEV_UTILS_README_TEMPLATE         = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
+    // DevUtils 完整 API Template Readme
+    public static final String DEV_UTILS_README_API_TEMPLATE     = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_API.md";
+    // DevUtils 项目详情 Template Readme
+    public static final String DEV_UTILS_README_PROJECT_TEMPLATE = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_PROJECT.md";
 
     // DevUtils 完整 API fileName
-    public static final String README_FILE_NAME_API      = "README_API.md";
-    // DevUtils 原始 Readme fileName
-    public static final String README_FILE_NAME_ORIGINAL = "README_ORIGINAL.md";
+    public static final String README_API_FILE_NAME     = "README_API.md";
+    // DevUtils 项目详情 Readme fileName
+    public static final String README_PROJECT_FILE_NAME = "README_PROJECT.md";
+
+    // ====================
+    // = DevApp lib 文件夹 =
+    // ====================
+
+    // DevUtils Lib Publish Template Readme
+    public static final String DEV_UTILS_LIB_PUBLISH_TEMPLATE = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_LIB_PUBLISH.md";
+    // DevUtils Lib Template Readme
+    public static final String DEV_UTILS_LIB_TEMPLATE         = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_LIB_README.md";
+
+    // DevUtils Lib Publish fileName
+    public static final String README_LIB_PUBLISH_FILE_NAME = "/lib/publish.md";
+    // DevUtils Lib Readme fileName
+    public static final String README_LIB_FILE_NAME         = "/lib/README.md";
 
     // ==========
     // = DevApp =

@@ -11,6 +11,8 @@ final class READMEMain {
 
     public static void main(String[] args) {
         StringBuilder builder = new StringBuilder();
+        builder.append(Dev_LIB_PUBLISH_READMEMain.createREADME());
+        builder.append(Dev_LIB_READMEMain.createREADME());
         builder.append(Dev_READMEMain.createREADME());
         builder.append(Dev_READMEMain_API.createREADME());
         builder.append(Dev_READMEMain_PROJECT.createREADME());

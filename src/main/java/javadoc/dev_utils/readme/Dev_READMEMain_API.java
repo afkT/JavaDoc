@@ -21,7 +21,7 @@ final class Dev_READMEMain_API {
     public static String createREADME() {
         StringBuilder builder = new StringBuilder();
         // template readme content
-        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_API);
+        byte[] bytes           = FileUtils.readFileBytes(ApiConfig.DEV_UTILS_README_API_TEMPLATE);
         String templateContent = new String(bytes);
 
         // 格式化 README 全部版本内容
@@ -31,7 +31,7 @@ final class Dev_READMEMain_API {
         FileUtils.saveFile(
                 new File(
                         ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH,
-                        ApiConfig.README_FILE_NAME_API
+                        ApiConfig.README_API_FILE_NAME
                 ).getAbsolutePath(), builder.toString().getBytes()
         );
 
@@ -42,7 +42,7 @@ final class Dev_READMEMain_API {
         resultBuilder.append("\n==================");
         resultBuilder.append("\n");
         resultBuilder.append("\n");
-        resultBuilder.append("保存地址: " + ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME_API);
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_UTILS_README_FILE_SAVE_PATH + ApiConfig.README_API_FILE_NAME);
         resultBuilder.append("\n");
         return resultBuilder.toString();
     }
