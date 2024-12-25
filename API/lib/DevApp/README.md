@@ -2025,6 +2025,7 @@ DevUtils.openDebug();
 | isSV2 | 是否在 12.0 L 版本及以上 |
 | isTiramisu | 是否在 13.0 版本及以上 |
 | isUpsideDownCake | 是否在 14.0 版本及以上 |
+| isVanillaIceCream | 是否在 15.0 版本及以上 |
 | convertSDKVersion | 转换 SDK 版本 convertSDKVersion(31) = Android 12.0 |
 | convertSDKVersionName | 转换 SDK 版本名字 convertSDKVersionName(31) = Android S |
 
