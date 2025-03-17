@@ -92,19 +92,7 @@ final class DevDeprecated_READMEMain {
                 methodNotAnnotateBuilder, notMethodBuilder
         );
 
-        // 生成 API 目录
-        String commonAPI = APIGenerate.apiGenerate(
-                "common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_Deprecated,
-                ApiConfig.sFilterMethodMap_Deprecated,
-                ApiConfig.sMethodNameRegex,
-                methodNameMatchesMap, methodRepeatBuilder,
-                methodNotAnnotateBuilder, notMethodBuilder
-        );
-
         builder.append(appAPI);
-        builder.append("\n\n");
-        builder.append(commonAPI);
 
         // 保存合成后的 API README
         FileUtils.saveFile(

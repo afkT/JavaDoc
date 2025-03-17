@@ -666,6 +666,7 @@ public final class ApiConfig {
         // =================
 
         sCatalogMap_Deprecated.put("dev.utils", "根目录");
+        sCatalogMap_Deprecated.put(".app", "APP 相关工具类");
         sCatalogMap_Deprecated.put(".app.activity_result", "Activity Result API");
         sCatalogMap_Deprecated.put(".app.camera", "摄像头相关");
         sCatalogMap_Deprecated.put(".app.camera.camera1", "android.hardware.Camera ( Camera1 相关 )");
