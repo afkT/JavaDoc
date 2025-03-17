@@ -21,6 +21,7 @@ version | [![][maven_svg]][maven] | [![][maven_svg]][maven] | [![][maven_svg]][m
 
 ```groovy
 dependencies {
+    // DevHttpCaptureCompiler - OkHttp 抓包工具库 ( 可视化功能 )
     debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:DEVersion'
     releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:DEVersion'
 }

@@ -2,6 +2,7 @@
 ## Gradle
 
 ```gradle
+// DevJava - Java 工具类库 ( 不依赖 android api )
 implementation 'io.github.afkt:DevJava:%s'
 ```
 

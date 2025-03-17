@@ -58,6 +58,7 @@ version | [![][maven_svg]][maven] | [![][maven_svg]][maven] | [![][maven_svg]][m
 ```groovy
 dependencies {
     // Java
+    // DevEnvironment - Android 环境配置切换库
     implementation 'io.github.afkt:DevEnvironment:DEVersion'
     debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:DEVersion'
     releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:DEVersion'
@@ -65,6 +66,7 @@ dependencies {
     // annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:DEVersion'
 
     // Kotlin
+    // DevEnvironment - Android 环境配置切换库
     implementation 'io.github.afkt:DevEnvironment:DEVersion'
     kaptDebug 'io.github.afkt:DevEnvironmentCompiler:DEVersion'
     kaptRelease 'io.github.afkt:DevEnvironmentCompilerRelease:DEVersion'
