@@ -154,6 +154,23 @@ public final class ApiConfig {
     public static final String DEV_MVVM_PACKAGE = "dev.mvvm";
 
     // =============
+    // = DevEngine =
+    // =============
+
+    // DevEngine 版本号
+    public static final String DEV_ENGINE_VERSION            = DevVersion.DEV_ENGINE_VERSION;
+    // 包目录名
+    public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
+    // DevEngine 文件路径
+    public static final String DEV_ENGINE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevEngine/src/main/java/dev/engine/";
+    // DevEngine GitHub 项目文件路径
+    public static final String DEV_ENGINE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevEngine/src/main/java/dev/engine";
+    // DevEngine API 文件保存路径
+    public static final String DEV_ENGINE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevEngine/";
+    // DevEngine Template Readme
+    public static final String DEV_ENGINE_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevEngine_README.md";
+
+    // =============
     // = DevSimple =
     // =============
 
@@ -172,21 +189,55 @@ public final class ApiConfig {
     public static final String DEV_AGILE_PACKAGE = "dev.agile";
 
     // =============
-    // = DevEngine =
+    // = DevWidget =
     // =============
 
-    // DevEngine 版本号
-    public static final String DEV_ENGINE_VERSION            = DevVersion.DEV_ENGINE_VERSION;
+    // DevWidget 版本号
+    public static final String DEV_WIDGET_VERSION            = DevVersion.DEV_WIDGET_VERSION;
     // 包目录名
-    public static final String DEV_ENGINE_PACKAGE            = "dev.engine";
-    // DevEngine 文件路径
-    public static final String DEV_ENGINE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevEngine/src/main/java/dev/engine/";
-    // DevEngine GitHub 项目文件路径
-    public static final String DEV_ENGINE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevEngine/src/main/java/dev/engine";
-    // DevEngine API 文件保存路径
-    public static final String DEV_ENGINE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevEngine/";
-    // DevEngine Template Readme
-    public static final String DEV_ENGINE_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevEngine_README.md";
+    public static final String DEV_WIDGET_PACKAGE            = "dev";
+    // DevWidget 文件路径
+    public static final String DEV_WIDGET_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
+    // DevWidget GitHub 项目文件路径
+    public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
+    // DevWidget API 文件保存路径
+    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevWidget/";
+    // DevWidget Template Readme
+    public static final String DEV_WIDGET_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
+
+    // ===============
+    // = DevRetrofit =
+    // ===============
+
+    // DevRetrofit 版本号
+    public static final String DEV_RETROFIT_VERSION            = DevVersion.DEV_RETROFIT_VERSION;
+    // 包目录名
+    public static final String DEV_RETROFIT_PACKAGE            = "dev";
+    // DevRetrofit 文件路径
+    public static final String DEV_RETROFIT_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevRetrofit/src/main/java/dev/";
+    // DevRetrofit GitHub 项目文件路径
+    public static final String DEV_RETROFIT_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev";
+    // DevRetrofit API 文件保存路径
+    public static final String DEV_RETROFIT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevRetrofit/";
+    // DevRetrofit Template Readme
+    public static final String DEV_RETROFIT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevRetrofit_README.md";
+
+    // ==================
+    // = DevHttpManager =
+    // ==================
+
+    // DevHttpManager 版本号
+    public static final String DEV_HTTP_MANAGER_VERSION            = DevVersion.DEV_HTTP_MANAGER_VERSION;
+    // 包目录名
+    public static final String DEV_HTTP_MANAGER_PACKAGE            = "dev";
+    // DevHttpManager 文件路径
+    public static final String DEV_HTTP_MANAGER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevHttpManager/src/main/java/dev/";
+    // DevHttpManager GitHub 项目文件路径
+    public static final String DEV_HTTP_MANAGER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev";
+    // DevHttpManager API 文件保存路径
+    public static final String DEV_HTTP_MANAGER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevHttpManager/";
+    // DevHttpManager Template Readme
+    public static final String DEV_HTTP_MANAGER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpManager_README.md";
 
     // ==================
     // = DevHttpCapture =
@@ -223,57 +274,6 @@ public final class ApiConfig {
     public static final String DEV_HTTP_CAPTURE_COMPILER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpCaptureCompiler_README.md";
 
     // ==================
-    // = DevHttpManager =
-    // ==================
-
-    // DevHttpManager 版本号
-    public static final String DEV_HTTP_MANAGER_VERSION            = DevVersion.DEV_HTTP_MANAGER_VERSION;
-    // 包目录名
-    public static final String DEV_HTTP_MANAGER_PACKAGE            = "dev";
-    // DevHttpManager 文件路径
-    public static final String DEV_HTTP_MANAGER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevHttpManager/src/main/java/dev/";
-    // DevHttpManager GitHub 项目文件路径
-    public static final String DEV_HTTP_MANAGER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpManager/src/main/java/dev";
-    // DevHttpManager API 文件保存路径
-    public static final String DEV_HTTP_MANAGER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevHttpManager/";
-    // DevHttpManager Template Readme
-    public static final String DEV_HTTP_MANAGER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpManager_README.md";
-
-    // ===============
-    // = DevRetrofit =
-    // ===============
-
-    // DevRetrofit 版本号
-    public static final String DEV_RETROFIT_VERSION            = DevVersion.DEV_RETROFIT_VERSION;
-    // 包目录名
-    public static final String DEV_RETROFIT_PACKAGE            = "dev";
-    // DevRetrofit 文件路径
-    public static final String DEV_RETROFIT_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevRetrofit/src/main/java/dev/";
-    // DevRetrofit GitHub 项目文件路径
-    public static final String DEV_RETROFIT_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev";
-    // DevRetrofit API 文件保存路径
-    public static final String DEV_RETROFIT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevRetrofit/";
-    // DevRetrofit Template Readme
-    public static final String DEV_RETROFIT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevRetrofit_README.md";
-
-    // =============
-    // = DevWidget =
-    // =============
-
-    // DevWidget 版本号
-    public static final String DEV_WIDGET_VERSION            = DevVersion.DEV_WIDGET_VERSION;
-    // 包目录名
-    public static final String DEV_WIDGET_PACKAGE            = "dev";
-    // DevWidget 文件路径
-    public static final String DEV_WIDGET_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevWidget/src/main/java/dev/";
-    // DevWidget GitHub 项目文件路径
-    public static final String DEV_WIDGET_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevWidget/src/main/java/dev";
-    // DevWidget API 文件保存路径
-    public static final String DEV_WIDGET_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevWidget/";
-    // DevWidget Template Readme
-    public static final String DEV_WIDGET_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevWidget_README.md";
-
-    // ==================
     // = DevEnvironment =
     // ==================
 
@@ -283,6 +283,23 @@ public final class ApiConfig {
     public static final String DEV_ENVIRONMENT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/Environment/";
     // DevEnvironment Template Readme
     public static final String DEV_ENVIRONMENT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevEnvironment_README.md";
+
+    // =================
+    // = DevDeprecated =
+    // =================
+
+    // DevDeprecated 版本号
+    public static final String DEV_DEPRECATED_VERSION            = DevVersion.DEV_DEPRECATED_VERSION;
+    // DevDeprecated 文件路径
+    public static final String DEV_DEPRECATED_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevDeprecated/src/main/java/dev";
+    // DevDeprecated Utils 文件路径
+    public static final String DEV_DEPRECATED_UTILS_PATH         = DEV_DEPRECATED_PATH + "/utils/";
+    // DevDeprecated GitHub 项目文件路径
+    public static final String DEV_DEPRECATED_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevDeprecated/src/main/java/dev/utils/";
+    // DevDeprecated API 文件保存路径
+    public static final String DEV_DEPRECATED_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevDeprecated/";
+    // DevDeprecated Template Readme
+    public static final String DEV_DEPRECATED_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevDeprecated_README.md";
 
     // ===========
     // = DevJava =
@@ -893,22 +910,24 @@ public final class ApiConfig {
             "DevBaseMVVM",
             // DevMVVM - DataBinding 工具类库
             "DevMVVM",
+            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+            "DevEngine",
             // DevSimple - 简单敏捷开发库
             "DevSimple",
             // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
             "DevAgile",
-            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-            "DevEngine",
-            // DevHttpCapture - OkHttp 抓包工具库
-            "DevHttpCapture",
-            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-            "DevHttpManager",
-            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
-            "DevRetrofit",
             // DevWidget - 自定义 View UI 库
             "DevWidget",
+            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+            "DevRetrofit",
+            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+            "DevHttpManager",
+            // DevHttpCapture - OkHttp 抓包工具库
+            "DevHttpCapture",
             // DevEnvironment - Android 环境配置切换库
             "DevEnvironment",
+            // DevDeprecated - Dev 系列库弃用代码统一存储库
+            "DevDeprecated",
             // DevJava - Java 工具类库 ( 不依赖 android api )
             "DevJava"
     );
@@ -963,30 +982,33 @@ public final class ApiConfig {
             // DevMVVM - DataBinding 工具类库
             case "DevMVVM":
                 return ApiConfig.DEV_MVVM_VERSION;
+            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+            case "DevEngine":
+                return ApiConfig.DEV_ENGINE_VERSION;
             // DevSimple - 简单敏捷开发库
             case "DevSimple":
                 return ApiConfig.DEV_SIMPLE_VERSION;
             // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
             case "DevAgile":
                 return ApiConfig.DEV_AGILE_VERSION;
-            // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-            case "DevEngine":
-                return ApiConfig.DEV_ENGINE_VERSION;
-            // DevHttpCapture - OkHttp 抓包工具库
-            case "DevHttpCapture":
-                return ApiConfig.DEV_HTTP_CAPTURE_VERSION;
-            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-            case "DevHttpManager":
-                return ApiConfig.DEV_HTTP_MANAGER_VERSION;
-            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
-            case "DevRetrofit":
-                return ApiConfig.DEV_RETROFIT_VERSION;
             // DevWidget - 自定义 View UI 库
             case "DevWidget":
                 return ApiConfig.DEV_WIDGET_VERSION;
+            // DevRetrofit - Retrofit + Kotlin Coroutines 封装
+            case "DevRetrofit":
+                return ApiConfig.DEV_RETROFIT_VERSION;
+            // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+            case "DevHttpManager":
+                return ApiConfig.DEV_HTTP_MANAGER_VERSION;
+            // DevHttpCapture - OkHttp 抓包工具库
+            case "DevHttpCapture":
+                return ApiConfig.DEV_HTTP_CAPTURE_VERSION;
             // DevEnvironment - Android 环境配置切换库
             case "DevEnvironment":
                 return ApiConfig.DEV_ENVIRONMENT_VERSION;
+            // DevDeprecated - Dev 系列库弃用代码统一存储库
+            case "DevDeprecated":
+                return ApiConfig.DEV_DEPRECATED_VERSION;
             // DevJava - Java 工具类库 ( 不依赖 android api )
             case "DevJava":
                 return ApiConfig.DEV_JAVA_VERSION;

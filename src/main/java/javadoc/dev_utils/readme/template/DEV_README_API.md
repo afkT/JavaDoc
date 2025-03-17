@@ -77,24 +77,25 @@
    - DevAssist                                   | 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
    - DevBase                                     | Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
    - DevBaseMVVM                                 | MVVM ( ViewDataBinding + ViewModel ) 基类库
-   - DevEngine                                   | 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-   - DevHttpCapture                              | OkHttp 抓包工具库
-   - DevHttpManager                              | OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-   - DevJava                                     | Java 工具类库 ( 不依赖 android api )
    - DevMVVM                                     | DataBinding 工具类库
-   - DevRetrofit                                 | Retrofit + Kotlin Coroutines 封装
+   - DevEngine                                   | 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
    - DevSimple                                   | 简单敏捷开发库集合
       - DevAgile                                 | 简单敏捷开发库 ( 常用、零散代码 )
       - DevSimple                                | 简单敏捷开发库
    - DevWidget                                   | 自定义 View UI 库
+   - DevRetrofit                                 | Retrofit + Kotlin Coroutines 封装
+   - DevHttpManager                              | OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+   - DevHttpCapture                              | OkHttp 抓包工具库
+   - HttpCapture                                 | OkHttp 抓包工具库 ( 可视化功能 )
+      - DevHttpCaptureCompiler                   | Debug ( 打包 / 编译 ) 实现代码
+      - DevHttpCaptureCompilerRelease            | Release ( 打包 / 编译 ) 实现代码
    - Environment                                 | Android 环境配置切换库
       - DevEnvironment                           | 环境切换可视化 UI 操作
       - DevEnvironmentBase                       | 注解类、实体类、监听事件等通用基础
       - DevEnvironmentCompiler                   | Debug ( 打包 / 编译 ) 生成实现代码
       - DevEnvironmentCompilerRelease            | Release ( 打包 / 编译 ) 生成实现代码
-   - HttpCapture                                 | OkHttp 抓包工具库 ( 可视化功能 )
-      - DevHttpCaptureCompiler                   | Debug ( 打包 / 编译 ) 实现代码
-      - DevHttpCaptureCompilerRelease            | Release ( 打包 / 编译 ) 实现代码
+   - DevDeprecated                               | Dev 系列库弃用代码统一存储库
+   - DevJava                                     | Java 工具类库 ( 不依赖 android api )
    - LocalModules                                | 本地 Module lib ( 非发布库 )
       - DevBaseView                              | 通用基础 View 封装 ( 非基类库 )
       - DevOther                                 | 功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】
@@ -109,15 +110,16 @@
 - [DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库][DevBase API]
 - [DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库][DevBaseMVVM API]
 - [DevMVVM - DataBinding 工具类库][DevMVVM API]
-- [DevAgile - 简单敏捷开发库 ( 常用、零散代码 )][DevAgile API]
-- [DevSimple - 简单敏捷开发库][DevSimple API]
 - [DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用][DevEngine API]
+- [DevSimple - 简单敏捷开发库][DevSimple API]
+- [DevAgile - 简单敏捷开发库 ( 常用、零散代码 )][DevAgile API]
+- [DevWidget - 自定义 View UI 库][DevWidget API]
+- [DevRetrofit - Retrofit + Kotlin Coroutines 封装][DevRetrofit API]
+- [DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )][DevHttpManager API]
 - [DevHttpCapture - OkHttp 抓包工具库][DevHttpCapture API]
 - [DevHttpCaptureCompiler - OkHttp 抓包工具库 ( 可视化功能 )][DevHttpCaptureCompiler API]
-- [DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )][DevHttpManager API]
-- [DevRetrofit - Retrofit + Kotlin Coroutines 封装][DevRetrofit API]
-- [DevWidget - 自定义 View UI 库][DevWidget API]
 - [DevEnvironment - Android 环境配置切换库][DevEnvironment API]
+- [DevDeprecated - Dev 系列库弃用代码统一存储库][DevDeprecated API]
 - [DevJava - Java 工具类库 ( 不依赖 android api )][DevJava API]
 
 
@@ -128,15 +130,16 @@
 - [DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库][DevBase ChangeLog]
 - [DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库][DevBaseMVVM ChangeLog]
 - [DevMVVM - DataBinding 工具类库][DevMVVM ChangeLog]
-- [DevAgile - 简单敏捷开发库 ( 常用、零散代码 )][DevAgile ChangeLog]
-- [DevSimple - 简单敏捷开发库][DevSimple ChangeLog]
 - [DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用][DevEngine ChangeLog]
+- [DevSimple - 简单敏捷开发库][DevSimple ChangeLog]
+- [DevAgile - 简单敏捷开发库 ( 常用、零散代码 )][DevAgile ChangeLog]
+- [DevWidget - 自定义 View UI 库][DevWidget ChangeLog]
+- [DevRetrofit - Retrofit + Kotlin Coroutines 封装][DevRetrofit ChangeLog]
+- [DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )][DevHttpManager ChangeLog]
 - [DevHttpCapture - OkHttp 抓包工具库][DevHttpCapture ChangeLog]
 - [DevHttpCaptureCompiler - OkHttp 抓包工具库 ( 可视化功能 )][DevHttpCaptureCompiler ChangeLog]
-- [DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )][DevHttpManager ChangeLog]
-- [DevRetrofit - Retrofit + Kotlin Coroutines 封装][DevRetrofit ChangeLog]
-- [DevWidget - 自定义 View UI 库][DevWidget ChangeLog]
 - [DevEnvironment - Android 环境配置切换库][DevEnvironment ChangeLog]
+- [DevDeprecated - Dev 系列库弃用代码统一存储库][DevDeprecated ChangeLog]
 - [DevJava - Java 工具类库 ( 不依赖 android api )][DevJava ChangeLog]
 
 
@@ -184,14 +187,23 @@ implementation 'io.github.afkt:DevBaseMVVM:【DevBaseMVVM-vn】'
 // DevMVVM - DataBinding 工具类库
 implementation 'io.github.afkt:DevMVVM:【DevMVVM-vn】'
 
+// DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+implementation 'io.github.afkt:DevEngine:【DevEngine-vn】'
+
 // DevSimple - 简单敏捷开发库
 implementation 'io.github.afkt:DevSimple:【DevSimple-vn】'
 
 // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
 implementation 'io.github.afkt:DevAgile:【DevAgile-vn】'
 
-// DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-implementation 'io.github.afkt:DevEngine:【DevEngine-vn】'
+// DevWidget - 自定义 View UI 库
+implementation 'io.github.afkt:DevWidgetX:【DevWidget-vn】'
+
+// DevRetrofit - Retrofit + Kotlin Coroutines 封装
+implementation 'io.github.afkt:DevRetrofit:【DevRetrofit-vn】'
+
+// DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+implementation 'io.github.afkt:DevHttpManager:【DevHttpManager-vn】'
 
 // DevHttpCapture - OkHttp 抓包工具库
 implementation 'io.github.afkt:DevHttpCapture:【DevHttpCapture-vn】'
@@ -200,20 +212,14 @@ implementation 'io.github.afkt:DevHttpCapture:【DevHttpCapture-vn】'
 debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:【DevHttpCapture-vn】'
 releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:【DevHttpCapture-vn】'
 
-// DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-implementation 'io.github.afkt:DevHttpManager:【DevHttpManager-vn】'
-
-// DevRetrofit - Retrofit + Kotlin Coroutines 封装
-implementation 'io.github.afkt:DevRetrofit:【DevRetrofit-vn】'
-
-// DevWidget - 自定义 View UI 库
-implementation 'io.github.afkt:DevWidgetX:【DevWidget-vn】'
-
 // DevEnvironment - Android 环境配置切换库
 implementation 'io.github.afkt:DevEnvironment:【DevEnvironment-vn】'
 debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:【DevEnvironment-vn】' // kaptDebug
 releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:【DevEnvironment-vn】' // kaptRelease
 //annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:【DevEnvironment-vn】' // kapt
+
+// DevDeprecated - Dev 系列库弃用代码统一存储库
+implementation 'io.github.afkt:DevDeprecated:【DevDeprecated-vn】'
 
 // DevJava - Java 工具类库 ( 不依赖 android api )
 implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
@@ -241,25 +247,27 @@ implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开�
 [DevBaseMVVM ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/CHANGELOG.md
 [DevMVVM API]: https://github.com/afkT/DevUtils/blob/master/lib/DevMVVM/README.md
 [DevMVVM ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevMVVM/CHANGELOG.md
-[DevAgile API]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevAgile/README.md
-[DevAgile ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevAgile/CHANGELOG.md
-[DevSimple API]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevSimple/README.md
-[DevSimple ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevSimple/CHANGELOG.md
 [DevEngine API]: https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md
 [DevEngine ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/CHANGELOG.md
+[DevSimple API]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevSimple/README.md
+[DevSimple ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevSimple/CHANGELOG.md
+[DevAgile API]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevAgile/README.md
+[DevAgile ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/DevAgile/CHANGELOG.md
+[DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md
+[DevWidget ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/CHANGELOG.md
+[DevWidget Preview]: https://github.com/afkT/DevUtils-repo/blob/main/lib/DevWidget_Preview.md
+[DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
+[DevRetrofit ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/CHANGELOG.md
+[DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
+[DevHttpManager ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/CHANGELOG.md
 [DevHttpCapture API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md
 [DevHttpCapture ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md
 [DevHttpCaptureCompiler API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md
 [DevHttpCaptureCompiler ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/CHANGELOG.md
-[DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
-[DevHttpManager ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/CHANGELOG.md
-[DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
-[DevRetrofit ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/CHANGELOG.md
-[DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md
-[DevWidget ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/CHANGELOG.md
-[DevWidget Preview]: https://github.com/afkT/DevUtils-repo/blob/main/lib/DevWidget_Preview.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
 [DevEnvironment ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/Environment/DevEnvironment/CHANGELOG.md
+[DevDeprecated API]: https://github.com/afkT/DevUtils/blob/master/lib/DevDeprecated/README.md
+[DevDeprecated ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevDeprecated/CHANGELOG.md
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
 [DevJava ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/CHANGELOG.md
 

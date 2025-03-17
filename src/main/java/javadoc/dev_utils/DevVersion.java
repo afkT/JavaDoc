@@ -29,24 +29,26 @@ final class DevVersion {
     static final String DEV_BASE_MVVM_VERSION;
     // DevMVVM 版本号
     static final String DEV_MVVM_VERSION;
+    // DevEngine 版本号
+    static final String DEV_ENGINE_VERSION;
     // DevSimple 版本号
     static final String DEV_SIMPLE_VERSION;
     // DevAgile 版本号
     static final String DEV_AGILE_VERSION;
-    // DevEngine 版本号
-    static final String DEV_ENGINE_VERSION;
+    // DevWidget 版本号
+    static final String DEV_WIDGET_VERSION;
+    // DevRetrofit 版本号
+    static final String DEV_RETROFIT_VERSION;
+    // DevHttpManager 版本号
+    static final String DEV_HTTP_MANAGER_VERSION;
     // DevHttpCapture 版本号
     static final String DEV_HTTP_CAPTURE_VERSION;
     // DevHttpCaptureCompiler 版本号
     static final String DEV_HTTP_CAPTURE_COMPILER_VERSION;
-    // DevHttpManager 版本号
-    static final String DEV_HTTP_MANAGER_VERSION;
-    // DevRetrofit 版本号
-    static final String DEV_RETROFIT_VERSION;
-    // DevWidget 版本号
-    static final String DEV_WIDGET_VERSION;
     // DevEnvironment 版本号
     static final String DEV_ENVIRONMENT_VERSION;
+    // DevDeprecated 版本号
+    static final String DEV_DEPRECATED_VERSION;
     // DevJava 版本号
     static final String DEV_JAVA_VERSION;
 
@@ -91,6 +93,10 @@ final class DevVersion {
         DEV_MVVM_VERSION = getProperty(
                 prop, "dev_mvvm_versionName"
         );
+        // DevEngine 版本号
+        DEV_ENGINE_VERSION = getProperty(
+                prop, "dev_engine_versionName"
+        );
         // DevSimple 版本号
         DEV_SIMPLE_VERSION = getProperty(
                 prop, "dev_simple_versionName"
@@ -99,9 +105,17 @@ final class DevVersion {
         DEV_AGILE_VERSION = getProperty(
                 prop, "dev_agile_versionName"
         );
-        // DevEngine 版本号
-        DEV_ENGINE_VERSION = getProperty(
-                prop, "dev_engine_versionName"
+        // DevWidget 版本号
+        DEV_WIDGET_VERSION = getProperty(
+                prop, "dev_widget_versionName"
+        );
+        // DevRetrofit 版本号
+        DEV_RETROFIT_VERSION = getProperty(
+                prop, "dev_retrofit_versionName"
+        );
+        // DevHttpManager 版本号
+        DEV_HTTP_MANAGER_VERSION = getProperty(
+                prop, "dev_http_manager_versionName"
         );
         // DevHttpCapture 版本号
         DEV_HTTP_CAPTURE_VERSION = getProperty(
@@ -109,23 +123,15 @@ final class DevVersion {
         );
         // DevHttpCaptureCompiler 版本号
         DEV_HTTP_CAPTURE_COMPILER_VERSION = getProperty(
-                prop, "dev_http_capture_compiler_version"
-        );
-        // DevHttpManager 版本号
-        DEV_HTTP_MANAGER_VERSION = getProperty(
-                prop, "dev_http_manager_versionName"
-        );
-        // DevRetrofit 版本号
-        DEV_RETROFIT_VERSION = getProperty(
-                prop, "dev_retrofit_versionName"
-        );
-        // DevWidget 版本号
-        DEV_WIDGET_VERSION = getProperty(
-                prop, "dev_widget_versionName"
+                prop, "dev_http_capture_versionName"
         );
         // DevEnvironment 版本号
         DEV_ENVIRONMENT_VERSION = getProperty(
                 prop, "dev_environment_version"
+        );
+        // DevDeprecated 版本号
+        DEV_DEPRECATED_VERSION = getProperty(
+                prop, "dev_deprecated_versionName"
         );
         // DevJava 版本号
         DEV_JAVA_VERSION = getProperty(

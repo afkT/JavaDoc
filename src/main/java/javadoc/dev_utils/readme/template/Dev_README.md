@@ -68,14 +68,23 @@ implementation 'io.github.afkt:DevBaseMVVM:【DevBaseMVVM-vn】'
 // DevMVVM - DataBinding 工具类库
 implementation 'io.github.afkt:DevMVVM:【DevMVVM-vn】'
 
+// DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+implementation 'io.github.afkt:DevEngine:【DevEngine-vn】'
+
 // DevSimple - 简单敏捷开发库
 implementation 'io.github.afkt:DevSimple:【DevSimple-vn】'
 
 // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
 implementation 'io.github.afkt:DevAgile:【DevAgile-vn】'
 
-// DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-implementation 'io.github.afkt:DevEngine:【DevEngine-vn】'
+// DevWidget - 自定义 View UI 库
+implementation 'io.github.afkt:DevWidgetX:【DevWidget-vn】'
+
+// DevRetrofit - Retrofit + Kotlin Coroutines 封装
+implementation 'io.github.afkt:DevRetrofit:【DevRetrofit-vn】'
+
+// DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+implementation 'io.github.afkt:DevHttpManager:【DevHttpManager-vn】'
 
 // DevHttpCapture - OkHttp 抓包工具库
 implementation 'io.github.afkt:DevHttpCapture:【DevHttpCapture-vn】'
@@ -84,20 +93,14 @@ implementation 'io.github.afkt:DevHttpCapture:【DevHttpCapture-vn】'
 debugImplementation 'io.github.afkt:DevHttpCaptureCompiler:【DevHttpCapture-vn】'
 releaseImplementation 'io.github.afkt:DevHttpCaptureCompilerRelease:【DevHttpCapture-vn】'
 
-// DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-implementation 'io.github.afkt:DevHttpManager:【DevHttpManager-vn】'
-
-// DevRetrofit - Retrofit + Kotlin Coroutines 封装
-implementation 'io.github.afkt:DevRetrofit:【DevRetrofit-vn】'
-
-// DevWidget - 自定义 View UI 库
-implementation 'io.github.afkt:DevWidgetX:【DevWidget-vn】'
-
 // DevEnvironment - Android 环境配置切换库
 implementation 'io.github.afkt:DevEnvironment:【DevEnvironment-vn】'
 debugAnnotationProcessor 'io.github.afkt:DevEnvironmentCompiler:【DevEnvironment-vn】' // kaptDebug
 releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:【DevEnvironment-vn】' // kaptRelease
 //annotationProcessor 'io.github.afkt:DevEnvironmentCompiler:【DevEnvironment-vn】' // kapt
+
+// DevDeprecated - Dev 系列库弃用代码统一存储库
+implementation 'io.github.afkt:DevDeprecated:【DevDeprecated-vn】'
 
 // DevJava - Java 工具类库 ( 不依赖 android api )
 implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
