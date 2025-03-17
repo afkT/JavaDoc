@@ -88,6 +88,7 @@ final class DevDeprecatedConfig
         ignoreStaticMap.put("ToastTintUtils.SuccessStyle", ArrayUtils.asListArgs("getBackgroundTintColor", "isTintIcon"));
         ignoreStaticMap.put("ToastTintUtils.WarningStyle", ArrayUtils.asListArgs("getBackgroundTintColor", "isTintIcon"));
         ignoreStaticMap.put("ToastUtils.SafeHandler", ArrayUtils.asListArgs("handleMessage", "dispatchMessage"));
+        ignoreStaticMap.put("WidgetAttrs", ArrayUtils.asListArgs("getMaxWidth", "setMaxWidth", "getMaxHeight", "setMaxHeight", "isSlide", "setSlide", "toggleSlide", "getMaxWidth", "setMaxWidth", "getMaxHeight", "setMaxHeight", "isSlide", "setSlide", "toggleSlide"));
         ignoreStaticMap.put("WifiHotUtils", ArrayUtils.asListArgs("startWifiAp", "closeWifiAp", "getWifiApState", "getWifiApConfiguration", "setWifiApConfiguration", "isOpenWifiAp", "closeWifiApCheck", "isConnectHot", "getHotspotServiceIp", "getHotspotAllotIp", "getConnectHotspotMsg", "getHotspotSplitIpMask", "intToString", "getApWifiSSID", "getApWifiPwd", "setOnWifiAPListener"));
         ignoreStaticMap.put("WifiVo", ArrayUtils.asListArgs("describeContents", "writeToParcel"));
 
@@ -120,7 +121,7 @@ final class DevDeprecatedConfig
     @Override
     public Map<String, List<String>> getIgnoreReturnMap() {
         Map<String, List<String>> ignoreReturnMap = new HashMap<>();
-        
+
         return ignoreReturnMap;
     }
 
