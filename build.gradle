@@ -11,9 +11,9 @@ repositories {
 dependencies {
     // 加载 libs 文件夹全部 jar
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    // Gson 解析
+    // Gson https://github.com/google/gson
     implementation 'com.google.code.gson:gson:2.11.0'
-    // DevJava
+    // DevJava - Java 工具类库 ( 不依赖 android api )
     implementation 'io.github.afkt:DevJava:1.5.2'
 
 //    // tools.jar 的依赖

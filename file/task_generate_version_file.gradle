@@ -29,29 +29,32 @@ tasks.register('generateVersionsGradle') {
         // DevMVVM - DataBinding 工具类库
         content = formatVersion(content, "DevMVVM", versions.dev_mvvm_versionCode)
 
+        // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
+        content = formatVersion(content, "DevEngine", versions.dev_engine_versionCode)
+
         // DevSimple - 简单敏捷开发库
         content = formatVersion(content, "DevSimple", versions.dev_simple_versionCode)
 
         // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
         content = formatVersion(content, "DevAgile", versions.dev_agile_versionCode)
 
-        // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
-        content = formatVersion(content, "DevEngine", versions.dev_engine_versionCode)
-
-        // DevHttpCapture - OkHttp 抓包工具库
-        content = formatVersion(content, "DevHttpCapture", versions.dev_http_capture_versionCode)
-
-        // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
-        content = formatVersion(content, "DevHttpManager", versions.dev_http_manager_versionCode)
+        // DevWidget - 自定义 View UI 库
+        content = formatVersion(content, "DevWidget", versions.dev_widget_versionCode)
 
         // DevRetrofit - Retrofit + Kotlin Coroutines 封装
         content = formatVersion(content, "DevRetrofit", versions.dev_retrofit_versionCode)
 
-        // DevWidget - 自定义 View UI 库
-        content = formatVersion(content, "DevWidget", versions.dev_widget_versionCode)
+        // DevHttpManager - OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )
+        content = formatVersion(content, "DevHttpManager", versions.dev_http_manager_versionCode)
+
+        // DevHttpCapture - OkHttp 抓包工具库
+        content = formatVersion(content, "DevHttpCapture", versions.dev_http_capture_versionCode)
 
         // DevEnvironment - Android 环境配置切换库
         content = formatVersion(content, "DevEnvironment", versions.dev_environment_versionCode)
+
+        // DevDeprecated - Dev 系列库弃用代码统一存储库
+        content = formatVersion(content, "DevDeprecated", versions.dev_deprecated_versionCode)
 
         // DevJava - Java 工具类库 ( 不依赖 android api )
         content = formatVersion(content, "DevJava", versions.dev_java_versionCode)
