@@ -390,39 +390,6 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String> sCatalogMap_Engine = new HashMap<>();
 
-    // ==================
-    // = DevHttpCapture =
-    // ==================
-
-    // 包名目录注释
-    public static final HashMap<String, String>   sCatalogMap_HttpCapture      = new HashMap<>();
-    // 忽略不保存的类
-    public static final HashSet<String>           sFilterClassSet_HttpCapture  = new HashSet<>();
-    // 忽略不保存的方法
-    public static final HashMap<String, String[]> sFilterMethodMap_HttpCapture = new HashMap<>();
-
-    // ==================
-    // = DevHttpManager =
-    // ==================
-
-    // 包名目录注释
-    public static final HashMap<String, String>   sCatalogMap_HttpManager      = new HashMap<>();
-    // 忽略不保存的类
-    public static final HashSet<String>           sFilterClassSet_HttpManager  = new HashSet<>();
-    // 忽略不保存的方法
-    public static final HashMap<String, String[]> sFilterMethodMap_HttpManager = new HashMap<>();
-
-    // ===============
-    // = DevRetrofit =
-    // ===============
-
-    // 包名目录注释
-    public static final HashMap<String, String>   sCatalogMap_Retrofit      = new HashMap<>();
-    // 忽略不保存的类
-    public static final HashSet<String>           sFilterClassSet_Retrofit  = new HashSet<>();
-    // 忽略不保存的方法
-    public static final HashMap<String, String[]> sFilterMethodMap_Retrofit = new HashMap<>();
-
     // =============
     // = DevWidget =
     // =============
@@ -433,6 +400,38 @@ public final class ApiConfig {
     public static final HashSet<String>           sFilterClassSet_Widget  = new HashSet<>();
     // 忽略不保存的方法
     public static final HashMap<String, String[]> sFilterMethodMap_Widget = new HashMap<>();
+
+    // ===============
+    // = DevRetrofit =
+    // ===============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_Retrofit = new HashMap<>();
+
+    // ==================
+    // = DevHttpManager =
+    // ==================
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_HttpManager = new HashMap<>();
+
+    // ==================
+    // = DevHttpCapture =
+    // ==================
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_HttpCapture = new HashMap<>();
+
+    // =================
+    // = DevDeprecated =
+    // =================
+
+    // 包名目录注释
+    public static final HashMap<String, String>   sCatalogMap_Deprecated      = new HashMap<>();
+    // 忽略不保存的类
+    public static final HashSet<String>           sFilterClassSet_Deprecated  = new HashSet<>();
+    // 忽略不保存的方法
+    public static final HashMap<String, String[]> sFilterMethodMap_Deprecated = new HashMap<>();
 
     // ============
     // = DevOther =
@@ -489,8 +488,6 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.assist.url", "Url 携带信息解析");
 
         sCatalogMap_APP.put(".app.cache", "缓存工具类");
-        sCatalogMap_APP.put(".app.camera", "摄像头相关");
-        sCatalogMap_APP.put(".app.camera.camera1", "android.hardware.Camera ( Camera1 相关 )");
         sCatalogMap_APP.put(".app.helper", "功能 Helper 辅助类");
         sCatalogMap_APP.put(".app.helper.dev", "Dev 工具类链式调用 Helper 类");
         sCatalogMap_APP.put(".app.helper.flow", "流式 ( 链式 ) 连接 Helper 类");
@@ -500,15 +497,9 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.image", "图片相关处理");
         sCatalogMap_APP.put(".app.info", "APP 信息、PackageInfo 等");
         sCatalogMap_APP.put(".app.logger", "日志库 DevLogger");
-        sCatalogMap_APP.put(".app.permission", "权限工具类");
         sCatalogMap_APP.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
         sCatalogMap_APP.put(".app.timer", "定时器");
         sCatalogMap_APP.put(".app.share", "SharedPreferences 封装");
-
-        sCatalogMap_APP.put(".app.toast", "Toast");
-        sCatalogMap_APP.put(".app.toast.toaster", "Toaster 处理无通知权限");
-
-        sCatalogMap_APP.put(".app.wifi", "Wifi、热点工具类");
 
         // ==============
         // = Common 目录 =
@@ -622,35 +613,6 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Engine.put(".storage.listener", "Storage 存储结果事件");
 
-        // ==================
-        // = DevHttpCapture =
-        // ==================
-
-        sCatalogMap_HttpCapture.put("dev", "根目录");
-        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
-        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
-        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
-        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
-        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
-
-        // ==================
-        // = DevHttpManager =
-        // ==================
-
-        sCatalogMap_HttpManager.put("dev", "根目录");
-        sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
-        sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
-        sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
-        sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
-
-        // ===============
-        // = DevRetrofit =
-        // ===============
-
-        sCatalogMap_Retrofit.put("dev", "根目录");
-        sCatalogMap_Retrofit.put(".http", "基于 OkHttp 管理实现代码");
-        sCatalogMap_Retrofit.put(".http.manager", "Retrofit 多 BaseUrl 管理");
-
         // =============
         // = DevWidget =
         // =============
@@ -669,6 +631,49 @@ public final class ApiConfig {
         sCatalogMap_Widget.put(".widget.ui.resize", "自适应高度 ImageView");
         sCatalogMap_Widget.put(".widget.ui.round", "圆角相关 View");
         sCatalogMap_Widget.put(".widget.utils", "工具类目录");
+
+        // ===============
+        // = DevRetrofit =
+        // ===============
+
+        sCatalogMap_Retrofit.put("dev", "根目录");
+        sCatalogMap_Retrofit.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_Retrofit.put(".http.manager", "Retrofit 多 BaseUrl 管理");
+
+        // ==================
+        // = DevHttpManager =
+        // ==================
+
+        sCatalogMap_HttpManager.put("dev", "根目录");
+        sCatalogMap_HttpManager.put(".http", "基于 OkHttp 管理实现代码");
+        sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
+        sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
+        sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
+
+        // ==================
+        // = DevHttpCapture =
+        // ==================
+
+        sCatalogMap_HttpCapture.put("dev", "根目录");
+        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
+        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
+        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
+        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
+        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
+
+        // =================
+        // = DevDeprecated =
+        // =================
+
+        sCatalogMap_Deprecated.put("dev.utils", "根目录");
+        sCatalogMap_Deprecated.put(".app.activity_result", "Activity Result API");
+        sCatalogMap_Deprecated.put(".app.camera", "摄像头相关");
+        sCatalogMap_Deprecated.put(".app.camera.camera1", "android.hardware.Camera ( Camera1 相关 )");
+        sCatalogMap_Deprecated.put(".app.image", "图片相关处理");
+        sCatalogMap_Deprecated.put(".app.permission", "权限工具类");
+        sCatalogMap_Deprecated.put(".app.toast", "Toast");
+        sCatalogMap_Deprecated.put(".app.toast.toaster", "Toaster 处理无通知权限");
+        sCatalogMap_Deprecated.put(".app.wifi", "Wifi、热点工具类");
 
         // ============
         // = DevOther =
@@ -741,9 +746,6 @@ public final class ApiConfig {
 
         sFilterClassSet_APP.add("IPrinter.java");
         sFilterClassSet_APP.add("IPreference.java");
-        sFilterClassSet_APP.add("IToast.java");
-        sFilterClassSet_APP.add("DefaultToastStyle.java");
-        sFilterClassSet_APP.add("WifiVo.java");
 
         // ==========
         // = Common =
@@ -802,6 +804,14 @@ public final class ApiConfig {
         sFilterClassSet_APP.add("Supplierable.java");
         sFilterClassSet_APP.add("Ofable.java");
 
+        // =================
+        // = DevDeprecated =
+        // =================
+
+        sFilterClassSet_Deprecated.add("IToast.java");
+        sFilterClassSet_Deprecated.add("DefaultToastStyle.java");
+        sFilterClassSet_Deprecated.add("WifiVo.java");
+
         // ============
         // = DevOther =
         // ============
@@ -824,22 +834,16 @@ public final class ApiConfig {
         // =======
 
         sFilterMethodMap_APP.put("ActivityUtils.java", new String[]{"onStartActivityForResult", "onActivityResult", "start", "onCreate", "onDestroy"});
-        sFilterMethodMap_APP.put("PermissionUtils.java", new String[]{"start", "onCreate", "onGranted", "onDenied"});
-        sFilterMethodMap_APP.put("WifiHotUtils.java", new String[]{"onStarted", "onStopped", "onFailed"});
         sFilterMethodMap_APP.put("HandlerUtils.java", new String[]{"onEnd"});
         sFilterMethodMap_APP.put("OnLocationChangeListener.java", new String[]{"getLastKnownLocation", "onLocationChanged", "onStatusChanged"});
         sFilterMethodMap_APP.put("SizeUtils.java", new String[]{"onGetSize"});
         sFilterMethodMap_APP.put("KeyBoardUtils.java", new String[]{"onSoftInputChanged"});
         sFilterMethodMap_APP.put("DevMediaManager.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig"});
         sFilterMethodMap_APP.put("DevVideoPlayerControl.java", new String[]{"onPrepared", "onCompletion", "onBufferingUpdate", "onSeekComplete", "onError", "onVideoSizeChanged", "isLooping", "setMediaConfig", "surfaceChanged", "surfaceCreated", "surfaceDestroyed"});
-        sFilterMethodMap_APP.put("CameraAssist.java", new String[]{"stopPreviewNotify", "startPreviewNotify"});
         sFilterMethodMap_APP.put("ImageUtils.java", new String[]{"getValue"});
-        sFilterMethodMap_APP.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
         sFilterMethodMap_APP.put("AnalysisRecordUtils.java", new String[]{"callback"});
         sFilterMethodMap_APP.put("AsyncExecutor.java", new String[]{"doInBackground", "onPostExecute", "onCanceled", "abort"});
-        sFilterMethodMap_APP.put("ToastTintUtils.java", new String[]{"getTextColor", "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines", "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon", "filter", "handlerContent"});
         sFilterMethodMap_APP.put("EditTextUtils.java", new String[]{"getMarkId", "isOperate", "setOperate", "getOperateState", "setOperateState", "getType", "setType", "beforeTextChanged", "onTextChanged", "afterTextChanged"});
-        sFilterMethodMap_APP.put("AutoFocusAssist.java", new String[]{"onAutoFocus"});
         sFilterMethodMap_APP.put("PhoneUtils.java", new String[]{"printInfo"});
         sFilterMethodMap_APP.put("ROMUtils.java", new String[]{"getName", "getVersion", "toString"});
         sFilterMethodMap_APP.put("DialogUtils.java", new String[]{"onLeftButton", "onRightButton", "onDismiss", "onSingleChoiceItems", "onPositiveButton", "onCancel", "onMultiChoiceItems"});
@@ -878,6 +882,17 @@ public final class ApiConfig {
 
         sFilterMethodMap_Widget.put("ViewAssist.java", new String[]{"onRemove", "onNotFound", "onChange", "onCreateView", "onBindView"});
         sFilterMethodMap_Widget.put("StateLayout.java", new String[]{"onRemove", "onNotFound", "onChange", "onCreateView", "onBindView"});
+
+        // =================
+        // = DevDeprecated =
+        // =================
+
+        sFilterMethodMap_Deprecated.put("AutoFocusAssist.java", new String[]{"onAutoFocus"});
+        sFilterMethodMap_Deprecated.put("CameraAssist.java", new String[]{"stopPreviewNotify", "startPreviewNotify"});
+        sFilterMethodMap_Deprecated.put("PermissionUtils.java", new String[]{"start", "onCreate", "onGranted", "onDenied"});
+        sFilterMethodMap_Deprecated.put("ToastUtils.java", new String[]{"filter", "handlerContent"});
+        sFilterMethodMap_Deprecated.put("ToastTintUtils.java", new String[]{"getTextColor", "getTextSize", "getBackgroundTintColor", "getBackground", "getMaxLines", "getEllipsize", "getTypeface", "getTintIconColor", "isTintIcon", "filter", "handlerContent"});
+        sFilterMethodMap_Deprecated.put("WifiHotUtils.java", new String[]{"onStarted", "onStopped", "onFailed"});
     }
 
     /**

@@ -19,7 +19,7 @@ final class DevDeprecated_READMEMain {
     }
 
     /**
-     * 创建 DevApp - README 头部前缀
+     * 创建 DevDeprecated - README 头部前缀
      * @param builder      拼接 Builder
      * @param path         文件路径
      * @param packageName  包名
@@ -44,7 +44,7 @@ final class DevDeprecated_READMEMain {
 
         // 保存 README 内容
         builder.append(String.format(
-                templateContent, ApiConfig.DEV_APP_VERSION,
+                templateContent, ApiConfig.DEV_DEPRECATED_VERSION,
                 catalog, apiCatalog
         ));
     }
@@ -57,9 +57,9 @@ final class DevDeprecated_READMEMain {
         // 包名
         final String packageName = ApiConfig.DEV_PACKAGE;
         // 本地文件路径
-        final String path = ApiConfig.DEV_APP_UTILS_PATH;
+        final String path = ApiConfig.DEV_DEPRECATED_UTILS_PATH;
         // Github 链接地址
-        final String githubUrl = ApiConfig.DEV_APP_GITHUB_URL;
+        final String githubUrl = ApiConfig.DEV_DEPRECATED_GITHUB_URL;
 
         // 方法名匹配存储 Map<类名, List<方法名>>
         final HashMap<String, List<String>> methodNameMatchesMap = new HashMap<>();
@@ -78,15 +78,15 @@ final class DevDeprecated_READMEMain {
         StringBuilder builder = new StringBuilder();
         // 添加头部信息
         createREADMEHead(
-                builder, path, packageName, ApiConfig.sCatalogMap_APP,
-                ApiConfig.DEV_APP_TEMPLATE
+                builder, path, packageName, ApiConfig.sCatalogMap_Deprecated,
+                ApiConfig.DEV_DEPRECATED_TEMPLATE
         );
 
         // 生成 API 目录
         String appAPI = APIGenerate.apiGenerate(
                 "app", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_APP,
-                ApiConfig.sFilterMethodMap_APP,
+                ApiConfig.sFilterClassSet_Deprecated,
+                ApiConfig.sFilterMethodMap_Deprecated,
                 ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuilder,
                 methodNotAnnotateBuilder, notMethodBuilder
@@ -95,8 +95,8 @@ final class DevDeprecated_READMEMain {
         // 生成 API 目录
         String commonAPI = APIGenerate.apiGenerate(
                 "common", path, packageName, githubUrl,
-                ApiConfig.sFilterClassSet_APP,
-                ApiConfig.sFilterMethodMap_APP,
+                ApiConfig.sFilterClassSet_Deprecated,
+                ApiConfig.sFilterMethodMap_Deprecated,
                 ApiConfig.sMethodNameRegex,
                 methodNameMatchesMap, methodRepeatBuilder,
                 methodNotAnnotateBuilder, notMethodBuilder
@@ -109,17 +109,17 @@ final class DevDeprecated_READMEMain {
         // 保存合成后的 API README
         FileUtils.saveFile(
                 new File(
-                        ApiConfig.DEV_APP_API_FILE_SAVE_PATH,
+                        ApiConfig.DEV_DEPRECATED_API_FILE_SAVE_PATH,
                         ApiConfig.README_FILE_NAME
                 ).getAbsolutePath(), builder.toString().getBytes()
         );
 
 //        // 方法名重复记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuilder.toString());
+//        Utils.saveFile(ApiConfig.DEV_DEPRECATED_API_FILE_SAVE_PATH, "readme_method_repeat_api.md", methodRepeatBuilder.toString());
 //        // 方法没有注释记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuilder.toString());
+//        Utils.saveFile(ApiConfig.DEV_DEPRECATED_API_FILE_SAVE_PATH, "readme_method_not_annotate_api.md", methodNotAnnotateBuilder.toString());
 //        // 类不存在方法记录存储
-//        Utils.saveFile(ApiConfig.DEV_APP_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuilder.toString());
+//        Utils.saveFile(ApiConfig.DEV_DEPRECATED_API_FILE_SAVE_PATH, "readme_not_method_api.md", notMethodBuilder.toString());
 
         StringBuilder resultBuilder = new StringBuilder();
         resultBuilder.append("\n");
@@ -128,7 +128,7 @@ final class DevDeprecated_READMEMain {
         resultBuilder.append("\n===================");
         resultBuilder.append("\n");
         resultBuilder.append("\n");
-        resultBuilder.append("保存地址: " + ApiConfig.DEV_APP_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
+        resultBuilder.append("保存地址: " + ApiConfig.DEV_DEPRECATED_API_FILE_SAVE_PATH + ApiConfig.README_FILE_NAME);
         resultBuilder.append("\n");
         return resultBuilder.toString();
     }
