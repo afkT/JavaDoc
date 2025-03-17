@@ -1070,6 +1070,7 @@ final class DevAppConfig implements ICheckConfig {
         ignoreUnPublicMap.put("DevVideoPlayerControl", ArrayUtils.asListArgs("resetOperate"));
         ignoreUnPublicMap.put("DeviceUtils", ArrayUtils.asListArgs("getMacAddressByWifiInfo","getMacAddressByNetworkInterface","getMacAddressByInetAddress","getInetAddress","getMacAddressByFile"));
         ignoreUnPublicMap.put("DoubleSort", ArrayUtils.asListArgs("getDoubleSortValue"));
+        ignoreUnPublicMap.put("DownloadUtils", ArrayUtils.asListArgs("_queryCursorSingle"));
         ignoreUnPublicMap.put("DownloadUtils.OnCursorInterceptor", ArrayUtils.asListArgs("intercept"));
         ignoreUnPublicMap.put("Editorable.Editor", ArrayUtils.asListArgs("edit"));
         ignoreUnPublicMap.put("Editorable.EditorByParam", ArrayUtils.asListArgs("edit"));

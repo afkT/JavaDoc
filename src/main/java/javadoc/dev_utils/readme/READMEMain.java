@@ -24,11 +24,12 @@ final class READMEMain {
         builder.append(DevHttpCapture_READMEMain.createREADME());
         builder.append(DevHttpCaptureCompiler_READMEMain.createREADME());
         builder.append(DevHttpManager_READMEMain.createREADME());
-        builder.append(DevJava_READMEMain.createREADME());
-        builder.append(DevOther_READMEMain.createREADME());
         builder.append(DevRetrofit_READMEMain.createREADME());
         builder.append(DevWidget_READMEMain.createREADME());
         builder.append(DevEnvironment_READMEMain.createREADME());
+        builder.append(DevDeprecated_READMEMain.createREADME());
+        builder.append(DevJava_READMEMain.createREADME());
+        builder.append(DevOther_READMEMain.createREADME());
         print(builder.toString());
     }
 

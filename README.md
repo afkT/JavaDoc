@@ -93,6 +93,8 @@
 
 - [DevEnvironment API Generate Main][DevEnvironment API Generate Main]
 
+- [DevDeprecated API Generate Main][DevDeprecated API Generate Main]
+
 - [DevJava API Generate Main][DevJava API Generate Main]
 
 - [DevOther API Generate Main][DevOther API Generate Main]
@@ -121,6 +123,8 @@
 - [DevWidget API][DevWidget API] 自定义 View UI 库
 
 - [DevEnvironment API][DevEnvironment API] Android 环境配置切换库
+
+- [DevDeprecated API][DevDeprecated API] Dev 系列库弃用代码统一存储库
 
 - [DevJava API][DevJava API] Java 工具类库 ( 不依赖 android api )
 
@@ -167,6 +171,7 @@
 [DevRetrofit API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevRetrofit_READMEMain.java
 [DevWidget API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevWidget_READMEMain.java
 [DevEnvironment API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevEnvironment_READMEMain.java
+[DevDeprecated API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevDeprecated_READMEMain.java
 [DevJava API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevJava_READMEMain.java
 [DevOther API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevOther_READMEMain.java
 [DevApp API]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md
@@ -180,5 +185,6 @@
 [DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
 [DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
+[DevDeprecated API]: https://github.com/afkT/DevUtils/blob/master/lib/DevDeprecated/README.md
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
 [DevOther API]: https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther
