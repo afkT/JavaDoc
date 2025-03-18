@@ -13,9 +13,6 @@ import dev.utils.common.ArrayUtils;
  */
 public final class CheckInfo {
 
-    // 是否覆盖文件内容 ( 默认配置 )
-    public static final boolean COVER_TEXT = false;
-
     // 检测路径
     public       String       mPath;
     // 代码检测分析配置接口

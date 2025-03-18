@@ -10,7 +10,7 @@ import dev.utils.common.MapUtils;
 import javadoc.Utils;
 
 /**
- * detail: 代码读取检测分析入口方法
+ * detail: 代码读取检测分析入口方法 
  * @author Ttt
  */
 public final class CheckMain {
@@ -19,12 +19,12 @@ public final class CheckMain {
     }
 
     /**
-     * 执行检测方法
+     * 执行检测方法 
      * @param clazz     执法该方法的类 ( 用于生成 xxxConfig )
      * @param checkInfo 检测信息实体类
-     * @return 检测结果 JSON String
+     * @return 检测结果 HashMap
      */
-    public static String execute(
+    public static LinkedHashMap<String, HashMap<String, List<String>>> execute(
             final Class<?> clazz,
             final CheckInfo checkInfo
     ) {
@@ -197,10 +197,6 @@ public final class CheckMain {
             printMap.put("10.方法返回值 void 记录", sMethodReturnVoidMap);
         }
 
-        // 转换 JSON 数据
-        String mapJSON = Utils.toJsonFormat(printMap, true);
-        System.out.println(mapJSON);
-
         // 判断是否需要生成 Config 文件
         if (checkInfo.isGenerateConfig) {
             CheckConfigGenerate.format(clazz, new String[]{
@@ -214,6 +210,6 @@ public final class CheckMain {
                     methodReturnVoidGenerateMapString,
             }, checkInfo.ignoreAnnotationSpaceSet);
         }
-        return mapJSON;
+        return printMap;
     }
 }
