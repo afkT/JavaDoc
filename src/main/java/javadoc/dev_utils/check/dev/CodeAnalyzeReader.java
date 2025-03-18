@@ -183,6 +183,10 @@ final class CodeAnalyzeReader {
                 ClassDoc[] classDocs
         ) {
             if (classDocs != null) {
+                // 避免重复读取生成代码
+                if (!path.endsWith(".java")) {
+                    return null;
+                }
                 // 循环 Class Doc 信息
                 for (ClassDoc classDoc : classDocs) {
                     // 保存新的类名

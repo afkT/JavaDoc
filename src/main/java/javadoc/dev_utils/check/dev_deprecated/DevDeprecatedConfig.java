@@ -21,7 +21,7 @@ final class DevDeprecatedConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreAnnotateMap() {
         Map<String, List<String>> ignoreAnnotateMap = new HashMap<>();
         ignoreAnnotateMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreAnnotateMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy","onCreate","onActivityResult","onDestroy"));
+        ignoreAnnotateMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
         ignoreAnnotateMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreAnnotateMap.put("ToastFactory.NotificationToast", ArrayUtils.asListArgs("show","cancel"));
         ignoreAnnotateMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
@@ -44,7 +44,7 @@ final class DevDeprecatedConfig implements ICheckConfig {
         ignoreFinalMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreFinalMap.put("CameraSizeAssist", ArrayUtils.asListArgs("setPreviewSize","setPictureSize","calcPreviewSize","calcPictureSize","calcVideoSize"));
         ignoreFinalMap.put("CameraUtils", ArrayUtils.asListArgs("initCamera","open"));
-        ignoreFinalMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onCreate","onActivityResult"));
+        ignoreFinalMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
         ignoreFinalMap.put("IToastImpl", ArrayUtils.asListArgs("filter","handlerContent"));
         ignoreFinalMap.put("PermissionUtils.PermissionActivity", ArrayUtils.asListArgs("onCreate","onRequestPermissionsResult"));
         ignoreFinalMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
@@ -69,8 +69,8 @@ final class DevDeprecatedConfig implements ICheckConfig {
         ignoreStaticMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
         ignoreStaticMap.put("CameraAssist", ArrayUtils.asListArgs("openDriver","closeDriver","startPreview","stopPreview","freeCameraResource","getCameraResolution","getPreviewSize","getCameraSizeAssist","getCamera","setCamera","setPreviewNotify","setAutoFocus","isPreviewing","setAutoInterval","setFlashlightOn","setFlashlightOff","isFlashlightOn"));
         ignoreStaticMap.put("CameraSizeAssist", ArrayUtils.asListArgs("getCamera","setPreviewSize","setPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","getPreviewSize","setPictureSize","setPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getPictureSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","getVideoSize","calcPreviewSize","calcPictureSize","calcVideoSize"));
-        ignoreStaticMap.put("DefaultActivityResult", ArrayUtils.asListArgs("startActivityForResult","startActivityForResult"));
-        ignoreStaticMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy","onCreate","onActivityResult","onDestroy"));
+        ignoreStaticMap.put("DefaultActivityResult", ArrayUtils.asListArgs("startActivityForResult"));
+        ignoreStaticMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onDestroy"));
         ignoreStaticMap.put("DefaultToastStyle", ArrayUtils.asListArgs("getGravity","getXOffset","getYOffset","getHorizontalMargin","getVerticalMargin","getZ","getCornerRadius","getBackgroundTintColor","getBackground","getTextColor","getTextSize","getMaxLines","getEllipsize","getTypeface","getPadding"));
         ignoreStaticMap.put("IToastImpl", ArrayUtils.asListArgs("reset","setUseHandler","setNullText","setTextLength","initialize","style","defaultStyle","getToastStyle","initStyle","initToastFilter","setView","show","show","show","show","cancel","filter","handlerContent","getThreadToastStyle","createView","innerShowToastText","newToastText","innerShowToastView","newToastView"));
         ignoreStaticMap.put("PermissionUtils", ArrayUtils.asListArgs("callback","setRequestPermissionsResult","request","request","onRequestPermissionsResultCommon","checkPermissions","requestCallback","getPermissionsStatus"));
@@ -87,7 +87,6 @@ final class DevDeprecatedConfig implements ICheckConfig {
         ignoreStaticMap.put("ToastTintUtils.SuccessStyle", ArrayUtils.asListArgs("getBackgroundTintColor","isTintIcon"));
         ignoreStaticMap.put("ToastTintUtils.WarningStyle", ArrayUtils.asListArgs("getBackgroundTintColor","isTintIcon"));
         ignoreStaticMap.put("ToastUtils.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
-        ignoreStaticMap.put("WidgetAttrs", ArrayUtils.asListArgs("getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide","getMaxWidth","setMaxWidth","getMaxHeight","setMaxHeight","isSlide","setSlide","toggleSlide"));
         ignoreStaticMap.put("WifiHotUtils", ArrayUtils.asListArgs("startWifiAp","closeWifiAp","getWifiApState","getWifiApConfiguration","setWifiApConfiguration","isOpenWifiAp","closeWifiApCheck","isConnectHot","getHotspotServiceIp","getHotspotAllotIp","getConnectHotspotMsg","getHotspotSplitIpMask","intToString","getApWifiSSID","getApWifiPwd","setOnWifiAPListener"));
         ignoreStaticMap.put("WifiVo", ArrayUtils.asListArgs("describeContents","writeToParcel"));
 
@@ -102,7 +101,7 @@ final class DevDeprecatedConfig implements ICheckConfig {
     public Map<String, List<String>> getIgnoreParamMap() {
         Map<String, List<String>> ignoreParamMap = new HashMap<>();
         ignoreParamMap.put("AutoFocusAssist.AutoFocusTask", ArrayUtils.asListArgs("doInBackground"));
-        ignoreParamMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult","onCreate","onActivityResult"));
+        ignoreParamMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("onCreate","onActivityResult"));
         ignoreParamMap.put("ToastFactory.BaseToast", ArrayUtils.asListArgs("setView","setText"));
         ignoreParamMap.put("ToastFactory.SafeToast.SafeHandler", ArrayUtils.asListArgs("handleMessage","dispatchMessage"));
         ignoreParamMap.put("ToastFactory.ToastHelper", ArrayUtils.asListArgs("handleMessage"));
@@ -136,8 +135,8 @@ final class DevDeprecatedConfig implements ICheckConfig {
         ignoreUnPublicMap.put("CameraAssist", ArrayUtils.asListArgs("freeCameraResource"));
         ignoreUnPublicMap.put("CameraAssist.PreviewNotify", ArrayUtils.asListArgs("stopPreviewNotify","startPreviewNotify"));
         ignoreUnPublicMap.put("CameraSizeAssist", ArrayUtils.asListArgs("calcPreviewSize","calcPictureSize","calcVideoSize"));
-        ignoreUnPublicMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("start","onCreate","onActivityResult","onDestroy","start","onCreate","onActivityResult","onDestroy"));
-        ignoreUnPublicMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onStartActivityForResult","onActivityResult","onStartActivityForResult","onActivityResult"));
+        ignoreUnPublicMap.put("DefaultActivityResult.ResultActivity", ArrayUtils.asListArgs("start","onCreate","onActivityResult","onDestroy"));
+        ignoreUnPublicMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onStartActivityForResult","onActivityResult"));
         ignoreUnPublicMap.put("IToast.Filter", ArrayUtils.asListArgs("filter","handlerContent"));
         ignoreUnPublicMap.put("IToast.Operate", ArrayUtils.asListArgs("reset","setUseHandler","setNullText","setTextLength","initialize","style","defaultStyle","getToastStyle","initStyle","initToastFilter","setView","show","show","show","show","cancel"));
         ignoreUnPublicMap.put("IToast.Style", ArrayUtils.asListArgs("getGravity","getXOffset","getYOffset","getHorizontalMargin","getVerticalMargin","getZ","getCornerRadius","getBackgroundTintColor","getBackground","getTextColor","getTextSize","getMaxLines","getEllipsize","getTypeface","getPadding"));
@@ -183,7 +182,7 @@ final class DevDeprecatedConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("CameraAssist", ArrayUtils.asListArgs("closeDriver - void","startPreview - void","stopPreview - void","freeCameraResource - void"));
         ignoreReturnVoidMap.put("CameraAssist.PreviewNotify", ArrayUtils.asListArgs("stopPreviewNotify - void","startPreviewNotify - void"));
         ignoreReturnVoidMap.put("CameraUtils", ArrayUtils.asListArgs("freeCameraResource - void"));
-        ignoreReturnVoidMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onActivityResult - void","onActivityResult - void"));
+        ignoreReturnVoidMap.put("DefaultActivityResult.ResultCallback", ArrayUtils.asListArgs("onActivityResult - void"));
         ignoreReturnVoidMap.put("DevToast", ArrayUtils.asListArgs("reset - void","setUseHandler - void","setNullText - void","setTextLength - void","initialize - void","initStyle - void","initToastFilter - void","setView - void","show - void","show - void","show - void","show - void","cancel - void"));
         ignoreReturnVoidMap.put("IToast.Operate", ArrayUtils.asListArgs("reset - void","setUseHandler - void","setNullText - void","setTextLength - void","initialize - void","initStyle - void","initToastFilter - void","setView - void","show - void","show - void","show - void","show - void","cancel - void"));
         ignoreReturnVoidMap.put("IToastImpl", ArrayUtils.asListArgs("reset - void","setUseHandler - void","setNullText - void","setTextLength - void","initialize - void","initStyle - void","initToastFilter - void","setView - void","show - void","show - void","show - void","show - void","cancel - void","innerShowToastText - void","innerShowToastView - void"));
