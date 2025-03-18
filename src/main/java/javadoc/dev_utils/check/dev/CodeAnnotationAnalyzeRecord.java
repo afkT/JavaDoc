@@ -18,23 +18,20 @@ import other.Pangu;
  */
 public final class CodeAnnotationAnalyzeRecord {
 
-    private CodeAnnotationAnalyzeRecord() {
-    }
-
     // 代码间距等规范处理
-    private static final Pangu   sPangu = new Pangu();
+    private final Pangu   sPangu = new Pangu();
     // 判断是否覆盖文件内容
-    private static       boolean sCoverText;
+    private       boolean sCoverText;
 
     // ===================
     // = Map<类名, 类代码> =
     // ===================
 
     // 代码注释空格间距异常记录
-    private static final HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
+    private final HashMap<String, String> sAnnotationSpaceMap = new HashMap<>();
 
     // 代码注释重复换行记录
-    private static final HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
+    private final HashMap<String, List<String>> sAnnotationRepeatLineMap = new HashMap<>();
 
     /**
      * 代码分析检测
@@ -42,7 +39,7 @@ public final class CodeAnnotationAnalyzeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalyze(
+    public HashMap<String, String> codeAnalyze(
             final String path,
             final boolean coverText
     ) {
@@ -55,7 +52,7 @@ public final class CodeAnnotationAnalyzeRecord {
      * @param coverText 是否覆盖内容
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static HashMap<String, String> codeAnalyze(
+    public HashMap<String, String> codeAnalyze(
             final List<File> listFiles,
             final boolean coverText
     ) {
@@ -72,7 +69,7 @@ public final class CodeAnnotationAnalyzeRecord {
      * 循环读取处理
      * @param lists 文件列表
      */
-    private static void forReader(final List<File> lists) {
+    private void forReader(final List<File> lists) {
         // 循环子文件
         for (File file : lists) {
             if (file.isDirectory()) {
@@ -102,7 +99,7 @@ public final class CodeAnnotationAnalyzeRecord {
      * 读取文件
      * @param file 文件
      */
-    private static void readFile(final File file) {
+    private void readFile(final File file) {
         // 读取文件内容
         List<String> lists = FileIOUtils.readFileToList(file, 0, Integer.MAX_VALUE);
 
@@ -135,7 +132,7 @@ public final class CodeAnnotationAnalyzeRecord {
      * 代码注释重复换行记录
      * @return {@link HashMap}
      */
-    public static HashMap<String, List<String>> getAnnotationRepeatLineMap() {
+    public HashMap<String, List<String>> getAnnotationRepeatLineMap() {
         return sAnnotationRepeatLineMap;
     }
 }

@@ -23,10 +23,7 @@ import javadoc.api.JavaDocReader;
  * detail: 代码读取检测分析
  * @author Ttt
  */
-public final class CodeAnalyzeReader {
-
-    private CodeAnalyzeReader() {
-    }
+final class CodeAnalyzeReader {
 
     // =========================
     // = Map<类名, List<方法名>> =
@@ -36,7 +33,7 @@ public final class CodeAnalyzeReader {
      * detail: Map 配置
      * @author Ttt
      */
-    public static class MapConfig {
+    public final class MapConfig {
 
         // 方法注释缺少注释记录
         public final HashMap<String, List<String>> sMethodUnAnnotateMap = new HashMap<>();
@@ -78,7 +75,7 @@ public final class CodeAnalyzeReader {
      * @param path 文件夹路径
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static List<HashMap<String, List<String>>> codeAnalyze(final String path) {
+    public List<HashMap<String, List<String>>> codeAnalyze(final String path) {
         return codeAnalyze(Utils.getFileCatalogLists(path));
     }
 
@@ -87,7 +84,7 @@ public final class CodeAnalyzeReader {
      * @param listFiles 文件集合
      * @return 返回分析检测后的记录 Map 集合
      */
-    public static List<HashMap<String, List<String>>> codeAnalyze(final List<File> listFiles) {
+    public List<HashMap<String, List<String>>> codeAnalyze(final List<File> listFiles) {
         MapConfig mapConfig = new MapConfig();
         // 循环读取
         forReader(listFiles, mapConfig);
@@ -115,7 +112,7 @@ public final class CodeAnalyzeReader {
      * @param lists     文件列表
      * @param mapConfig Map 配置
      */
-    private static void forReader(
+    private void forReader(
             final List<File> lists,
             final MapConfig mapConfig
     ) {
@@ -124,7 +121,7 @@ public final class CodeAnalyzeReader {
             if (file.isDirectory()) {
                 forReader(Utils.getFileCatalogLists(file.getAbsolutePath() + "/"), mapConfig);
             } else {
-                CodeReader.readDoc(file.getAbsolutePath(), "", mapConfig);
+                new CodeReader(mapConfig).readDoc(file.getAbsolutePath(), "");
             }
         }
     }
@@ -137,7 +134,7 @@ public final class CodeAnalyzeReader {
      * detail: 代码读取
      * @author Ttt
      */
-    private static class CodeReader
+    private class CodeReader
             implements JavaDocReader.Callback {
 
         final MapConfig mapConfig;
@@ -154,18 +151,16 @@ public final class CodeAnalyzeReader {
          * 读取文档处理
          * @param path      文件路径
          * @param className 文件名 ( 类名 )
-         * @param mapConfig Map 配置
          * @return 处理后的文档信息
          */
-        public static String readDoc(
+        public String readDoc(
                 final String path,
-                final String className,
-                final MapConfig mapConfig
+                final String className
         ) {
             // 执行参数, 生成 API readAll 设置为 false, 不读取 private、protected 等修饰符方法
             String[] executeParams = JavaDocReader.getExecuteParams(true, path, className);
             // 读取 class javaDoc 并返回文档信息
-            return JavaDocReader.readDoc(new CodeReader(mapConfig), path, className, executeParams);
+            return JavaDocReader.readDoc(this, path, className, executeParams);
         }
 
         // ==========================
@@ -448,7 +443,7 @@ public final class CodeAnalyzeReader {
      * @param listJCVariableDecl  方法参数 List
      * @param mapConfig           Map 配置
      */
-    private static void paramCheckHandler(
+    private void paramCheckHandler(
             final HashMap<String, List<String>> map,
             final String methodDocumentation,
             final String className,
@@ -593,7 +588,7 @@ public final class CodeAnalyzeReader {
      * @param documentation 注释内容
      * @return 返回裁剪字符串
      */
-    private static String subParam(final String documentation) {
+    private String subParam(final String documentation) {
         StringBuilder builder = new StringBuilder();
         // 进行拆分处理
         String[] splits = documentation.split(" ");
@@ -619,7 +614,7 @@ public final class CodeAnalyzeReader {
      * @param documentation 注释内容
      * @return {@code true} yes, {@code false} no
      */
-    private static boolean subParamToCheckAnnotate(String documentation) {
+    private boolean subParamToCheckAnnotate(String documentation) {
         StringBuilder builder = new StringBuilder();
         // 判断是否存在 返回值
         int index = documentation.indexOf("@return ");

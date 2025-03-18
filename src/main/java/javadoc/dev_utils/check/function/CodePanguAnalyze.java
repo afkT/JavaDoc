@@ -36,7 +36,7 @@ public final class CodePanguAnalyze {
             }
         }, true);
         // 代码分析检测
-        CodeAnnotationAnalyzeRecord.codeAnalyze(lists, true);
+        new CodeAnnotationAnalyzeRecord().codeAnalyze(lists, true);
         System.out.println("代码分析结束");
     }
 }

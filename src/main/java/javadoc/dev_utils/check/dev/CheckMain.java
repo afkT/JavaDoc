@@ -37,6 +37,11 @@ public final class CheckMain {
         // 代码注释间距检测
         final HashMap<String, String> sAnnotationSpaceMap;
 
+        // 代码读取检测分析
+        final CodeAnalyzeReader codeAnalyzeReader = new CodeAnalyzeReader();
+        // 代码注释读取检测分析
+        final CodeAnnotationAnalyzeRecord codeAnnotationAnalyzeRecord = new CodeAnnotationAnalyzeRecord();
+
         if (checkInfo.mIsLists) {
             final List<File> listFiles = new ArrayList<>();
             // 保存指定文件集合
@@ -44,14 +49,14 @@ public final class CheckMain {
                 listFiles.addAll(checkInfo.mListFiles);
             }
             // 检测代码规范
-            lists = CodeAnalyzeReader.codeAnalyze(listFiles);
+            lists = codeAnalyzeReader.codeAnalyze(listFiles);
             // 代码注释间距检测记录
-            sAnnotationSpaceMap = CodeAnnotationAnalyzeRecord.codeAnalyze(listFiles, checkInfo.mCoverText);
+            sAnnotationSpaceMap = codeAnnotationAnalyzeRecord.codeAnalyze(listFiles, checkInfo.mCoverText);
         } else {
             // 检测代码规范
-            lists = CodeAnalyzeReader.codeAnalyze(path);
+            lists = codeAnalyzeReader.codeAnalyze(path);
             // 代码注释间距检测
-            sAnnotationSpaceMap = CodeAnnotationAnalyzeRecord.codeAnalyze(path, checkInfo.mCoverText);
+            sAnnotationSpaceMap = codeAnnotationAnalyzeRecord.codeAnalyze(path, checkInfo.mCoverText);
         }
 
         // ==========
@@ -59,7 +64,7 @@ public final class CheckMain {
         // ==========
 
         // 代码注释重复换行记录
-        final HashMap<String, List<String>> sAnnotationRepeatLineMap = CodeAnnotationAnalyzeRecord.getAnnotationRepeatLineMap();
+        final HashMap<String, List<String>> sAnnotationRepeatLineMap = codeAnnotationAnalyzeRecord.getAnnotationRepeatLineMap();
 
         // 忽略处理
         checkConfig.ignoreAnnotationSpaceMap(sAnnotationSpaceMap);
