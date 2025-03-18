@@ -7,7 +7,7 @@
 
 // AndroidX ( Maven Central ) 
 // DevApp - Android 工具类库
-implementation 'io.github.afkt:DevAppX:2.4.7'
+implementation 'io.github.afkt:DevAppX:2.4.8'
 ```
 
 ## 目录结构
@@ -63,6 +63,8 @@ implementation 'io.github.afkt:DevAppX:2.4.7'
 > 视情况决定是否主动调用 `DevUtils.init()` 方法 ( 可自行查阅 FileProvider onCreate() 方法什么时候被调用及 Application 初始化顺序 )
 
 ## 事项
+
+- **`Permission`、`Toast`、`Wifi`、`Camera`** 相关代码迁移至 [DevDeprecated](https://github.com/afkT/DevUtils/blob/master/lib/DevDeprecated/README.md)，如需使用依赖该库即可，无需做任何变更。
 
 - 部分 API 更新不及时或有遗漏等，`具体以对应的工具类为准`
 
