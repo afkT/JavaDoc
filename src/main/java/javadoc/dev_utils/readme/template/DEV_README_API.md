@@ -51,7 +51,8 @@
 
 ## Android 版本适配信息
 
-- [ ] 适配 Android 15 ( VanillaIceCream ) ???
+- [ ] 适配 Android 16 ( ??? ) ???
+- [x] 适配 Android 15 ( VanillaIceCream ) [DevApp v2.4.8+][DevApp v2.4.8+]
 - [x] 适配 Android 14 ( UpsideDownCake ) [DevApp v2.4.4+][DevApp v2.4.4+]
 - [x] 适配 Android 13 ( Tiramisu ) [DevApp v2.4.3+][DevApp v2.4.3+]
 - [x] 适配 Android 11 ( R ) [DevApp v2.0.8+][DevApp v2.0.8+]
@@ -66,7 +67,7 @@
 | 7.0.2 - 7.3.0 | 2.2.9 - 2.4.2 | 14            | 30 - 32           | 1.5.20 - 1.7.10 |
 | 8.0.2 - 8.2.1 | 2.4.3 - 2.4.4 | 14            | 33 - 34           | 1.7.10 - 1.9.22 |
 | 8.4.0         | 2.4.5 - 2.4.6 | 19            | 34                | 1.9.23          |
-| 8.7.3         | 2.4.7         | 21            | 35                | 2.1.0           |
+| 8.7.3         | 2.4.7 - 2.4.8 | 21            | 35                | 2.1.0           |
 
 
 ## 项目目录结构（ 全部已迁移至 Maven Central ）
@@ -157,8 +158,6 @@
 
 ## Download 预览
 
-下载 DevUtils 系列开发库演示应用 [APK][Preview APK]
-
 [DevWidget - 自定义 View UI 库部分效果预览][DevWidget Preview]
 
 
@@ -216,7 +215,7 @@ releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:【DevE
 implementation 'io.github.afkt:DevDeprecated:【DevDeprecated-vn】'
 
 // DevJava - Java 工具类库 ( 不依赖 android api )
-implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
+implementation 'io.github.afkt:DevJava:【DevJava-vn】'
 ```
 
 
@@ -280,12 +279,12 @@ implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开�
 
 [Project Details README]: https://github.com/afkT/DevUtils/blob/master/README_PROJECT.md
 [dev_module_img]: https://github.com/afkT/DevUtils/raw/master/art/module.png
-[Preview APK]: https://github.com/afkT/Resources/blob/main/APK
 
 <!-- ====== -->
 <!-- 版本信息 -->
 <!-- ====== -->
 
+[DevApp v2.4.8+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-248-2025-03-21
 [DevApp v2.4.4+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-244-2024-01-18
 [DevApp v2.4.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-243-2023-07-01
 [DevApp v2.0.8+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-208-2020-10-29

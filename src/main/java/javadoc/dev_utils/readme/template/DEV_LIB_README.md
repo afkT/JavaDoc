@@ -87,5 +87,5 @@ releaseAnnotationProcessor 'io.github.afkt:DevEnvironmentCompilerRelease:【DevE
 implementation 'io.github.afkt:DevDeprecated:【DevDeprecated-vn】'
 
 // DevJava - Java 工具类库 ( 不依赖 android api )
-implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开发，如果依赖了 DevApp 则不需要依赖 DevJava
+implementation 'io.github.afkt:DevJava:【DevJava-vn】'
 ```
