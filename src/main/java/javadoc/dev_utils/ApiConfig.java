@@ -555,6 +555,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
         sCatalogMap_Assist.put(".engine.storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Assist.put(".engine.storage.listener", "Storage 存储结果事件");
+        sCatalogMap_Assist.put(".engine.toast", "Toast Engine 吐司提示");
         sCatalogMap_Assist.put(".function", "快捷方法执行相关");
 
         // ===========
@@ -612,6 +613,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".share.listener", "分享回调事件");
         sCatalogMap_Engine.put(".storage", "Storage Engine 外部、内部文件存储");
         sCatalogMap_Engine.put(".storage.listener", "Storage 存储结果事件");
+        sCatalogMap_Engine.put(".toast", "Toast Engine 吐司提示");
 
         // =============
         // = DevWidget =

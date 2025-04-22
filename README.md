@@ -128,7 +128,7 @@
 
 - [DevJava API][DevJava API] **Java 工具类库 ( 不依赖 android api )**
 
-- [DevOther API][DevOther API] **功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】**
+- [DevOther API][DevOther API] **功能、工具类二次封装, 直接 copy 使用**
 
 
 ## License

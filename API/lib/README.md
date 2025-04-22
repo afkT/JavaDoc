@@ -30,10 +30,6 @@ Engine 兼容框架等
       - DevEnvironmentCompilerRelease            | Release ( 打包 / 编译 ) 生成实现代码
    - DevDeprecated                               | Dev 系列库弃用代码统一存储库
    - DevJava                                     | Java 工具类库 ( 不依赖 android api )
-   - LocalModules                                | 本地 Module lib ( 非发布库 )
-      - DevBaseView                              | 通用基础 View 封装 ( 非基类库 )
-      - DevOther                                 | 功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】
-      - DevSKU                                   | 商品 SKU 组合封装实现
 ```
 
 

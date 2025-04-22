@@ -96,10 +96,6 @@
       - DevEnvironmentCompilerRelease            | Release ( 打包 / 编译 ) 生成实现代码
    - DevDeprecated                               | Dev 系列库弃用代码统一存储库
    - DevJava                                     | Java 工具类库 ( 不依赖 android api )
-   - LocalModules                                | 本地 Module lib ( 非发布库 )
-      - DevBaseView                              | 通用基础 View 封装 ( 非基类库 )
-      - DevOther                                 | 功能、工具类二次封装, 直接 copy 使用【 大部分迁移至 DevUtils-repo 】
-      - DevSKU                                   | 商品 SKU 组合封装实现
 ```
 
 
@@ -156,9 +152,7 @@
 - **[JavaDoc API Generate][JavaDoc]** 该工具类 (DevUtils) API 文档，是通过 JavaDoc 项目读取 class 信息生成，
   并且进行代码、注释间距规范检测，生成效果示范 [DevApp API 文档][DevApp API]
 
-- **[DevOther][DevOther]** 功能、工具类二次封装，直接 copy 使用【 大部分迁移至 DevUtils-repo 】
-
-- **[DevSKU][DevSKU]** 商品 SKU 组合封装实现 ( 如何使用搜索 DevSKUActivity )
+- **[DevOther][DevOther]** 功能、工具类二次封装，直接 copy 使用
 
 
 ## Download 预览
@@ -278,7 +272,6 @@ implementation 'io.github.afkt:DevJava:【DevJava-vn】' // 用于纯 Java 开�
 [JavaDoc]: https://github.com/afkT/JavaDoc
 [DevComponent]: https://github.com/afkT/DevComponent
 [DevUtils-repo]: https://github.com/afkT/DevUtils-repo
-[DevSKU]: https://github.com/afkT/DevUtils/blob/master/lib/LocalModules/DevSKU/src/main/java/dev/sku/SKU.kt
 [DevOther]: https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther
 
 <!-- ======= -->
