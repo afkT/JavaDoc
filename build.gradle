@@ -9,12 +9,10 @@ repositories {
 }
 
 dependencies {
-    // 加载 libs 文件夹全部 jar
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     // Gson https://github.com/google/gson
     implementation 'com.google.code.gson:gson:2.11.0'
     // DevJava - Java 工具类库 ( 不依赖 android api )
-    implementation 'io.github.afkt:DevJava:1.5.2'
+    implementation 'io.github.afkt:DevJava:1.5.3'
 
 //    // tools.jar 的依赖
 //    implementation files(org.gradle.internal.jvm.Jvm.current().toolsJar)
