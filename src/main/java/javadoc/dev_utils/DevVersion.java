@@ -43,8 +43,6 @@ final class DevVersion {
     static final String DEV_HTTP_MANAGER_VERSION;
     // DevHttpCapture 版本号
     static final String DEV_HTTP_CAPTURE_VERSION;
-    // DevHttpCaptureCompiler 版本号
-    static final String DEV_HTTP_CAPTURE_COMPILER_VERSION;
     // DevEnvironment 版本号
     static final String DEV_ENVIRONMENT_VERSION;
     // DevDeprecated 版本号
@@ -119,10 +117,6 @@ final class DevVersion {
         );
         // DevHttpCapture 版本号
         DEV_HTTP_CAPTURE_VERSION = getProperty(
-                prop, "dev_http_capture_versionName"
-        );
-        // DevHttpCaptureCompiler 版本号
-        DEV_HTTP_CAPTURE_COMPILER_VERSION = getProperty(
                 prop, "dev_http_capture_versionName"
         );
         // DevEnvironment 版本号

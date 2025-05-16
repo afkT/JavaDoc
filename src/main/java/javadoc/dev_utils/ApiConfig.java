@@ -248,30 +248,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
     // DevHttpCapture 文件路径
-    public static final String DEV_HTTP_CAPTURE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevHttpCapture/src/main/java/dev/";
+    public static final String DEV_HTTP_CAPTURE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCapture/src/main/java/dev/";
     // DevHttpCapture GitHub 项目文件路径
-    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev";
+    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev";
     // DevHttpCapture API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevHttpCapture/";
+    public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/HttpCapture/";
     // DevHttpCapture Template Readme
     public static final String DEV_HTTP_CAPTURE_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpCapture_README.md";
-
-    // ==========================
-    // = DevHttpCaptureCompiler =
-    // ==========================
-
-    // DevHttpCaptureCompiler 版本号
-    public static final String DEV_HTTP_CAPTURE_COMPILER_VERSION            = DevVersion.DEV_HTTP_CAPTURE_COMPILER_VERSION;
-    // 包目录名
-    public static final String DEV_HTTP_CAPTURE_COMPILER_PACKAGE            = "dev";
-    // DevHttpCaptureCompiler 文件路径
-    public static final String DEV_HTTP_CAPTURE_COMPILER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev/";
-    // DevHttpCaptureCompiler GitHub 项目文件路径
-    public static final String DEV_HTTP_CAPTURE_COMPILER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpCapture/DevHttpCaptureCompiler/src/main/java/dev";
-    // DevHttpCaptureCompiler API 文件保存路径
-    public static final String DEV_HTTP_CAPTURE_COMPILER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/HttpCapture/";
-    // DevHttpCaptureCompiler Template Readme
-    public static final String DEV_HTTP_CAPTURE_COMPILER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpCaptureCompiler_README.md";
 
     // ==================
     // = DevEnvironment =
