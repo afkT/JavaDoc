@@ -218,7 +218,7 @@ public final class ApiConfig {
     // DevRetrofit GitHub 项目文件路径
     public static final String DEV_RETROFIT_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpRequest/DevRetrofit/src/main/java/dev";
     // DevRetrofit API 文件保存路径
-    public static final String DEV_RETROFIT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevRetrofit/";
+    public static final String DEV_RETROFIT_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/HttpRequest/DevRetrofit/";
     // DevRetrofit Template Readme
     public static final String DEV_RETROFIT_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevRetrofit_README.md";
 
@@ -235,7 +235,7 @@ public final class ApiConfig {
     // DevHttpManager GitHub 项目文件路径
     public static final String DEV_HTTP_MANAGER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpRequest/DevHttpManager/src/main/java/dev";
     // DevHttpManager API 文件保存路径
-    public static final String DEV_HTTP_MANAGER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevHttpManager/";
+    public static final String DEV_HTTP_MANAGER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/HttpRequest/DevHttpManager/";
     // DevHttpManager Template Readme
     public static final String DEV_HTTP_MANAGER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevHttpManager_README.md";
 
