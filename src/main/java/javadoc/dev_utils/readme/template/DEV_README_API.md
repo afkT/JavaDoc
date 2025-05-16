@@ -248,10 +248,10 @@ implementation 'io.github.afkt:DevJava:【DevJava-vn】'
 [DevWidget API]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README.md
 [DevWidget ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/CHANGELOG.md
 [DevWidget Preview]: https://github.com/afkT/DevUtils-repo/blob/main/lib/DevWidget_Preview.md
-[DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/README.md
-[DevRetrofit ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/CHANGELOG.md
-[DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
-[DevHttpManager ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/CHANGELOG.md
+[DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevRetrofit/README.md
+[DevRetrofit ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevRetrofit/CHANGELOG.md
+[DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevHttpManager/README.md
+[DevHttpManager ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevHttpManager/CHANGELOG.md
 [DevHttpCapture API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md
 [DevHttpCapture ChangeLog]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/CHANGELOG.md
 [DevEnvironment API]: https://github.com/afkT/DevUtils/blob/master/lib/Environment
