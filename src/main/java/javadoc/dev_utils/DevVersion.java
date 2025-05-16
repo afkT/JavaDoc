@@ -27,14 +27,10 @@ final class DevVersion {
     static final String DEV_BASE_VERSION;
     // DevBaseMVVM 版本号
     static final String DEV_BASE_MVVM_VERSION;
-    // DevMVVM 版本号
-    static final String DEV_MVVM_VERSION;
     // DevEngine 版本号
     static final String DEV_ENGINE_VERSION;
     // DevSimple 版本号
     static final String DEV_SIMPLE_VERSION;
-    // DevAgile 版本号
-    static final String DEV_AGILE_VERSION;
     // DevWidget 版本号
     static final String DEV_WIDGET_VERSION;
     // DevRetrofit 版本号
@@ -87,10 +83,6 @@ final class DevVersion {
         DEV_BASE_MVVM_VERSION = getProperty(
                 prop, "dev_base_mvvm_versionName"
         );
-        // DevMVVM 版本号
-        DEV_MVVM_VERSION = getProperty(
-                prop, "dev_mvvm_versionName"
-        );
         // DevEngine 版本号
         DEV_ENGINE_VERSION = getProperty(
                 prop, "dev_engine_versionName"
@@ -98,10 +90,6 @@ final class DevVersion {
         // DevSimple 版本号
         DEV_SIMPLE_VERSION = getProperty(
                 prop, "dev_simple_versionName"
-        );
-        // DevAgile 版本号
-        DEV_AGILE_VERSION = getProperty(
-                prop, "dev_agile_versionName"
         );
         // DevWidget 版本号
         DEV_WIDGET_VERSION = getProperty(

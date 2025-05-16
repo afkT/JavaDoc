@@ -21,10 +21,6 @@ ext {
             dev_base_mvvm_versionCode                : 118,
             dev_base_mvvm_versionName                : "1.1.8",
 
-            // DevMVVM - DataBinding 工具类库
-            dev_mvvm_versionCode                     : 106,
-            dev_mvvm_versionName                     : "1.0.6",
-
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             dev_engine_versionCode                   : 115,
             dev_engine_versionName                   : "1.1.5",
@@ -32,10 +28,6 @@ ext {
             // DevSimple - 简单敏捷开发库
             dev_simple_versionCode                   : 103,
             dev_simple_versionName                   : "1.0.3",
-
-            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
-            dev_agile_versionCode                    : 102,
-            dev_agile_versionName                    : "1.0.2",
 
             // DevWidget - 自定义 View UI 库
             dev_widget_versionCode                   : 125,

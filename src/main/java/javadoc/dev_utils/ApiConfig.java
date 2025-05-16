@@ -144,15 +144,6 @@ public final class ApiConfig {
     // DevBaseMVVM Template Readme
     public static final String DEV_BASE_MVVM_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevBaseMVVM_README.md";
 
-    // ===========
-    // = DevMVVM =
-    // ===========
-
-    // DevMVVM 版本号
-    public static final String DEV_MVVM_VERSION = DevVersion.DEV_MVVM_VERSION;
-    // 包目录名
-    public static final String DEV_MVVM_PACKAGE = "dev.mvvm";
-
     // =============
     // = DevEngine =
     // =============
@@ -178,15 +169,6 @@ public final class ApiConfig {
     public static final String DEV_SIMPLE_VERSION = DevVersion.DEV_SIMPLE_VERSION;
     // 包目录名
     public static final String DEV_SIMPLE_PACKAGE = "dev.simple";
-
-    // ============
-    // = DevAgile =
-    // ============
-
-    // DevAgile 版本号
-    public static final String DEV_AGILE_VERSION = DevVersion.DEV_AGILE_VERSION;
-    // 包目录名
-    public static final String DEV_AGILE_PACKAGE = "dev.agile";
 
     // =============
     // = DevWidget =
@@ -909,14 +891,10 @@ public final class ApiConfig {
             "DevBase",
             // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
             "DevBaseMVVM",
-            // DevMVVM - DataBinding 工具类库
-            "DevMVVM",
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             "DevEngine",
             // DevSimple - 简单敏捷开发库
             "DevSimple",
-            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
-            "DevAgile",
             // DevWidget - 自定义 View UI 库
             "DevWidget",
             // DevRetrofit - Retrofit + Kotlin Coroutines 封装
@@ -980,18 +958,12 @@ public final class ApiConfig {
             // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
             case "DevBaseMVVM":
                 return ApiConfig.DEV_BASE_MVVM_VERSION;
-            // DevMVVM - DataBinding 工具类库
-            case "DevMVVM":
-                return ApiConfig.DEV_MVVM_VERSION;
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             case "DevEngine":
                 return ApiConfig.DEV_ENGINE_VERSION;
             // DevSimple - 简单敏捷开发库
             case "DevSimple":
                 return ApiConfig.DEV_SIMPLE_VERSION;
-            // DevAgile - 简单敏捷开发库 ( 常用、零散代码 )
-            case "DevAgile":
-                return ApiConfig.DEV_AGILE_VERSION;
             // DevWidget - 自定义 View UI 库
             case "DevWidget":
                 return ApiConfig.DEV_WIDGET_VERSION;
