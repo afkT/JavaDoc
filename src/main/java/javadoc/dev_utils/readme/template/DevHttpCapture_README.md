@@ -39,7 +39,7 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 
 - [检测代码规范、注释内容排版，API 文档生成](https://github.com/afkT/JavaDoc)
 
-- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/CHANGELOG.md)
+- [Change Log](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/CHANGELOG.md)
 
 ## API
 
@@ -51,7 +51,7 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 ## <span id="dev">**`dev`**</span>
 
 
-* **OkHttp 抓包工具库 ->** [DevHttpCapture.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/DevHttpCapture.kt)
+* **OkHttp 抓包工具库 ->** [DevHttpCapture.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/DevHttpCapture.kt)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -71,11 +71,11 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 ## <span id="devcapture">**`dev.capture`**</span>
 
 
-* **Http 抓包拦截器 ( 无存储逻辑, 进行回调通知 ) ->** [CallbackInterceptor.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/CallbackInterceptor.kt)
-* **Http 抓包拦截器 ( 存在存储抓包数据逻辑 ) ->** [HttpCaptureInterceptor.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/HttpCaptureInterceptor.kt)
+* **Http 抓包拦截器 ( 无存储逻辑, 进行回调通知 ) ->** [CallbackInterceptor.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/CallbackInterceptor.kt)
+* **Http 抓包拦截器 ( 存在存储抓包数据逻辑 ) ->** [HttpCaptureInterceptor.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/HttpCaptureInterceptor.kt)
 
 
-* **对外公开快捷方法 ->** [UtilsPublic.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Utils.kt)
+* **对外公开快捷方法 ->** [UtilsPublic.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Utils.kt)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -91,7 +91,7 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 | getAllModuleFileLength | 获取全部模块抓包文件大小 |
 
 
-* **抓包存储文件 ->** [CaptureFile.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Model.kt#L103)
+* **抓包存储文件 ->** [CaptureFile.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Model.kt#L103)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -109,7 +109,7 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 | getDataFile | 获取该对象抓包数据存储文件 |
 
 
-* **抓包信息封装类 ->** [CaptureInfo.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Model.kt#L67)
+* **抓包信息封装类 ->** [CaptureInfo.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Model.kt#L67)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -123,14 +123,14 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 | toJson | 将对象转换为 JSON String |
 
 
-* **Http 拦截过滤器 ->** [IHttpFilter.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Interface.kt)
+* **Http 拦截过滤器 ->** [IHttpFilter.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Interface.kt)
 
 | 方法 | 注释 |
 | :- | :- |
 | filter | 是否过滤该 Http 请求不进行抓包存储 |
 
 
-* **Http 抓包接口信息获取 ->** [IHttpCapture.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Interface.kt#L31)
+* **Http 抓包接口信息获取 ->** [IHttpCapture.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Interface.kt#L31)
 
 | 方法 | 注释 |
 | :- | :- |
@@ -144,7 +144,7 @@ DevHttpCapture.updateInterceptor(moduleName, capture)
 | getModuleHttpCaptures | 获取模块所有抓包数据 |
 
 
-* **Http 抓包事件回调 ->** [IHttpCaptureEvent.kt](https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/src/main/java/dev/capture/Interface.kt#L94)
+* **Http 抓包事件回调 ->** [IHttpCaptureEvent.kt](https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev/capture/Interface.kt#L94)
 
 | 方法 | 注释 |
 | :- | :- |

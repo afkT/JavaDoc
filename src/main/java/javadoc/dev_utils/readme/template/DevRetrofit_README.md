@@ -470,5 +470,5 @@ class TestActivity : AppCompatActivity() {
 [Notify.ResultCallback]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev/retrofit/model.kt#L230
 [Notify.GlobalCallback]: https://github.com/afkT/DevUtils/blob/master/lib/DevRetrofit/src/main/java/dev/retrofit/model.kt#L280
 [DevRetrofitCoroutinesDemo]: https://github.com/afkT/DevUtils/blob/master/application/DevUtilsApp/src/main/java/afkt/project/use_demo/DevRetrofitCoroutinesDemo.kt
-[DevHttpCapture]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md
+[DevHttpCapture]: https://github.com/afkT/DevUtils/blob/master/lib/HttpCapture/README.md
 [DevHttpManager]: https://github.com/afkT/DevUtils/blob/master/lib/DevHttpManager/README.md
