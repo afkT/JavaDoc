@@ -31,6 +31,15 @@ dependencies {
 ```
 
 
+### 示例项目
+
+直接运行、查看使用示例项目代码！！！
+
+[DevHttpCaptureUse][DevHttpCaptureUse]！！！
+[DevHttpCaptureUse][DevHttpCaptureUse]！！！
+[DevHttpCaptureUse][DevHttpCaptureUse]！！！
+
+
 ### 使用示例
 
 ```kotlin
@@ -209,3 +218,4 @@ DevHttpCaptureCompiler.removeUrlFunction(moduleName)
 
 [maven_svg]: https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg
 [maven]: https://search.maven.org/search?q=io.github.afkt
+[DevHttpCaptureUse]: https://github.com/afkT/DevUtils/blob/master/application/DevHttpCaptureUse/src/main/java/afkt/httpcapture/use
