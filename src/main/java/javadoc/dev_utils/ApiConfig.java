@@ -167,8 +167,6 @@ public final class ApiConfig {
 
     // DevSimple 版本号
     public static final String DEV_SIMPLE_VERSION = DevVersion.DEV_SIMPLE_VERSION;
-    // 包目录名
-    public static final String DEV_SIMPLE_PACKAGE = "dev.simple";
 
     // =============
     // = DevWidget =
@@ -227,12 +225,6 @@ public final class ApiConfig {
 
     // DevHttpCapture 版本号
     public static final String DEV_HTTP_CAPTURE_VERSION            = DevVersion.DEV_HTTP_CAPTURE_VERSION;
-    // 包目录名
-    public static final String DEV_HTTP_CAPTURE_PACKAGE            = "dev";
-    // DevHttpCapture 文件路径
-    public static final String DEV_HTTP_CAPTURE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/HttpCapture/DevHttpCapture/src/main/java/dev/";
-    // DevHttpCapture GitHub 项目文件路径
-    public static final String DEV_HTTP_CAPTURE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/HttpCapture/DevHttpCapture/src/main/java/dev";
     // DevHttpCapture API 文件保存路径
     public static final String DEV_HTTP_CAPTURE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/HttpCapture/";
     // DevHttpCapture Template Readme
@@ -379,13 +371,6 @@ public final class ApiConfig {
 
     // 包名目录注释
     public static final HashMap<String, String> sCatalogMap_HttpManager = new HashMap<>();
-
-    // ==================
-    // = DevHttpCapture =
-    // ==================
-
-    // 包名目录注释
-    public static final HashMap<String, String> sCatalogMap_HttpCapture = new HashMap<>();
 
     // =================
     // = DevDeprecated =
@@ -616,17 +601,6 @@ public final class ApiConfig {
         sCatalogMap_HttpManager.put(".http.manager", "Retrofit 多 BaseUrl 管理");
         sCatalogMap_HttpManager.put(".http.progress", "OkHttp 上传、下载进度监听");
         sCatalogMap_HttpManager.put(".http.progress.operation", "监听通知不同方式实现");
-
-        // ==================
-        // = DevHttpCapture =
-        // ==================
-
-        sCatalogMap_HttpCapture.put("dev", "根目录");
-        sCatalogMap_HttpCapture.put(".capture", "Http 抓包实现代码");
-        sCatalogMap_HttpCapture.put(".capture.activity", "可视化页面");
-        sCatalogMap_HttpCapture.put(".capture.adapter", "适配器");
-        sCatalogMap_HttpCapture.put(".capture.base", "基础相关");
-        sCatalogMap_HttpCapture.put(".capture.model", "数据模型");
 
         // =================
         // = DevDeprecated =
