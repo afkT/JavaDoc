@@ -37,12 +37,12 @@ final class DevHttpCapture_READMEMain {
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
         String templateContent = new String(bytes);
-
         // 保存 README 内容
-        builder.append(String.format(
-                templateContent, ApiConfig.DEV_HTTP_CAPTURE_VERSION,
-                catalog
-        ));
+        templateContent = templateContent.replaceAll(
+                "DEVersion", ApiConfig.DEV_ENVIRONMENT_VERSION
+        );
+        // 保存 README 内容
+        builder.append(templateContent);
     }
 
     /**
