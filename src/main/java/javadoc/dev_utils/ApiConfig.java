@@ -807,6 +807,7 @@ public final class ApiConfig {
         sFilterMethodMap_APP.put("TypeUtils.java", new String[]{"getActualTypeArguments", "getOwnerType", "getRawType", "equals", "hashCode"});
         sFilterMethodMap_APP.put("CollectionUtils.java", new String[]{"put", "create"});
         sFilterMethodMap_APP.put("ScaleUtils.java", new String[]{"getXYx", "getXY", "compareTo"});
+        sFilterMethodMap_APP.put("StreamUtils.java", new String[]{"onStart", "onProgress", "onError", "onFinish", "onEnd"});
         sFilterMethodMap_APP.put("ColorUtils.java", new String[]{"toString"});
         sFilterMethodMap_APP.put("KeyValue.java", new String[]{"toString"});
         sFilterMethodMap_APP.put("CalendarUtils.java", new String[]{"compareTo", "toString", "hook"});

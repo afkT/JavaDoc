@@ -178,6 +178,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreUnPublicMap.put("IPushEngine", ArrayUtils.asListArgs("initialize","register","unregister","onReceiveServicePid","onReceiveClientId","onReceiveDeviceToken","onReceiveOnlineState","onReceiveCommandResult","onNotificationMessageArrived","onNotificationMessageClicked","onReceiveMessageData","convertMessage"));
         ignoreUnPublicMap.put("IShareEngine", ArrayUtils.asListArgs("initialize","openMinApp","shareMinApp","shareUrl","shareImage","shareImageList","shareText","shareVideo","shareMusic","shareEmoji","shareFile","share","onActivityResult"));
         ignoreUnPublicMap.put("IStorageEngine", ArrayUtils.asListArgs("insertImageToExternal","insertVideoToExternal","insertAudioToExternal","insertDownloadToExternal","insertMediaToExternal","insertImageToInternal","insertVideoToInternal","insertAudioToInternal","insertDownloadToInternal","insertMediaToInternal"));
+        ignoreUnPublicMap.put("IToastEngine", ArrayUtils.asListArgs("initialize","isInit","setDebugMode","setConfig","getConfig","cancel","delayedShow","delayedShow","delayedShow","debugShow","debugShow","debugShow","showShort","showShort","showShort","showLong","showLong","showLong","show","show","show","show","setView","setGravity","setGravity","setGravity"));
         ignoreUnPublicMap.put("LoadListener", ArrayUtils.asListArgs("getTranscodeType","onStart","onResponse","onFailure"));
         ignoreUnPublicMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
         ignoreUnPublicMap.put("OnConvertListener", ArrayUtils.asListArgs("onStart","onSuccess","onError","onComplete"));
@@ -236,6 +237,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("DevShareEngine", ArrayUtils.asListArgs("removeEngine - void","removeEngine - void"));
         ignoreReturnVoidMap.put("DevStorageEngine", ArrayUtils.asListArgs("removeEngine - void","removeEngine - void"));
         ignoreReturnVoidMap.put("DevTimerAssist.Callback", ArrayUtils.asListArgs("callback - void"));
+        ignoreReturnVoidMap.put("DevToastEngine", ArrayUtils.asListArgs("removeEngine - void","removeEngine - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist", ArrayUtils.asListArgs("remove - void","post - void"));
         ignoreReturnVoidMap.put("EditTextSearchAssist.SearchCallback", ArrayUtils.asListArgs("callback - void"));
         ignoreReturnVoidMap.put("EditTextWatcherAssist", ArrayUtils.asListArgs("bindListener - void","bindListener - void","focusChange - void"));
@@ -256,6 +258,7 @@ final class DevAssistConfig implements ICheckConfig {
         ignoreReturnVoidMap.put("IPushEngine", ArrayUtils.asListArgs("initialize - void","register - void","unregister - void","onReceiveServicePid - void","onReceiveClientId - void","onReceiveDeviceToken - void","onReceiveOnlineState - void","onReceiveCommandResult - void","onNotificationMessageArrived - void","onNotificationMessageClicked - void","onReceiveMessageData - void"));
         ignoreReturnVoidMap.put("IShareEngine", ArrayUtils.asListArgs("initialize - void","onActivityResult - void"));
         ignoreReturnVoidMap.put("IStorageEngine", ArrayUtils.asListArgs("insertImageToExternal - void","insertVideoToExternal - void","insertAudioToExternal - void","insertDownloadToExternal - void","insertMediaToExternal - void","insertImageToInternal - void","insertVideoToInternal - void","insertAudioToInternal - void","insertDownloadToInternal - void","insertMediaToInternal - void"));
+        ignoreReturnVoidMap.put("IToastEngine", ArrayUtils.asListArgs("initialize - void","setDebugMode - void","setConfig - void","cancel - void","delayedShow - void","delayedShow - void","delayedShow - void","debugShow - void","debugShow - void","debugShow - void","showShort - void","showShort - void","showShort - void","showLong - void","showLong - void","showLong - void","show - void","show - void","show - void","show - void","setView - void","setGravity - void","setGravity - void","setGravity - void"));
         ignoreReturnVoidMap.put("LoadListener", ArrayUtils.asListArgs("onStart - void","onResponse - void","onFailure - void"));
         ignoreReturnVoidMap.put("OnCompressListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
         ignoreReturnVoidMap.put("OnConvertListener", ArrayUtils.asListArgs("onStart - void","onSuccess - void","onError - void","onComplete - void"));
