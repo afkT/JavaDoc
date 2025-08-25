@@ -2,7 +2,7 @@
 ## Gradle
 
 ```gradle
-// DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+// DevBase - Base ( Activity、Fragment ) MVP、MVVM 基类库
 implementation 'io.github.afkt:DevBase:%s'
 ```
 
@@ -60,7 +60,7 @@ implementation 'io.github.afkt:DevBase:%s'
 
 * 为什么没添加 MVVM 架构基类
 
-> 因 MVVM 需要依赖较多库，可能部分项目并不使用 MVVM 作为基础架构，为此新增 [DevBaseMVVM][DevBaseMVVM] 库进行区分，减少库依赖数量，以及 MVVM 架构代码实现设计理解
+> 因 MVVM 需要依赖较多库，可能部分项目并不使用 MVVM 作为基础架构，为此新增 库进行区分，减少库依赖数量，以及 MVVM 架构代码实现设计理解
 
 架构只是一种思维方式，不管是 MVC、MVP 还是 MVVM，都只是一种思考问题、解决问题的思维
 
@@ -90,5 +90,4 @@ implementation 'io.github.afkt:DevBase:%s'
 [Butter Knife]: https://github.com/JakeWharton/butterknife
 [view binding]: https://developer.android.com/topic/libraries/view-binding
 [Lifecycle]: https://developer.android.com/topic/libraries/architecture/lifecycle
-[DevBaseMVVM]: https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/README.md
 [ViewBindingUtils]: https://github.com/afkT/DevUtils/blob/master/lib/DevBase/src/main/java/dev/base/utils/ViewBindingUtils.kt

@@ -19,7 +19,6 @@ final class READMEMain {
         builder.append(DevApp_READMEMain.createREADME());
         builder.append(DevAssist_READMEMain.createREADME());
         builder.append(DevBase_READMEMain.createREADME());
-        builder.append(DevBaseMVVM_READMEMain.createREADME());
         builder.append(DevEngine_READMEMain.createREADME());
         builder.append(DevWidget_READMEMain.createREADME());
         builder.append(DevRetrofit_READMEMain.createREADME());

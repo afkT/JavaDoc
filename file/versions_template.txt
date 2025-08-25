@@ -13,13 +13,9 @@ ext {
             dev_assist_versionCode                   : 【DevAssist】,
             dev_assist_versionName                   : "【DevAssist-vn】",
 
-            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            // DevBase - Base ( Activity、Fragment ) MVP、MVVM 基类库
             dev_base_versionCode                     : 【DevBase】,
             dev_base_versionName                     : "【DevBase-vn】",
-
-            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
-            dev_base_mvvm_versionCode                : 【DevBaseMVVM】,
-            dev_base_mvvm_versionName                : "【DevBaseMVVM-vn】",
 
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             dev_engine_versionCode                   : 【DevEngine】,

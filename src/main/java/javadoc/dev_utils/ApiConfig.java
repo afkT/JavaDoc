@@ -127,23 +127,6 @@ public final class ApiConfig {
     // DevBase Template Readme
     public static final String DEV_BASE_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevBase_README.md";
 
-    // ===============
-    // = DevBaseMVVM =
-    // ===============
-
-    // DevBaseMVVM 版本号
-    public static final String DEV_BASE_MVVM_VERSION            = DevVersion.DEV_BASE_MVVM_VERSION;
-    // 包目录名
-    public static final String DEV_BASE_MVVM_PACKAGE            = "dev.base";
-    // DevBaseMVVM 文件路径
-    public static final String DEV_BASE_MVVM_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevBaseMVVM/src/main/java/dev/base/";
-    // DevBaseMVVM GitHub 项目文件路径
-    public static final String DEV_BASE_MVVM_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevBaseMVVM/src/main/java/dev/base";
-    // DevBaseMVVM API 文件保存路径
-    public static final String DEV_BASE_MVVM_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevBaseMVVM/";
-    // DevBaseMVVM Template Readme
-    public static final String DEV_BASE_MVVM_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevBaseMVVM_README.md";
-
     // =============
     // = DevEngine =
     // =============
@@ -333,13 +316,6 @@ public final class ApiConfig {
     // 包名目录注释
     public static final HashMap<String, String> sCatalogMap_Base = new HashMap<>();
 
-    // ===============
-    // = DevBaseMVVM =
-    // ===============
-
-    // 包名目录注释
-    public static final HashMap<String, String> sCatalogMap_BaseMVVM = new HashMap<>();
-
     // =============
     // = DevEngine =
     // =============
@@ -523,21 +499,6 @@ public final class ApiConfig {
         sCatalogMap_Base.put(".fragment", "核心 Base Fragment 代码");
         sCatalogMap_Base.put(".utils", "依赖工具包");
         sCatalogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
-
-        // ===============
-        // = DevBaseMVVM =
-        // ===============
-
-        sCatalogMap_BaseMVVM.put("dev.base", "根目录");
-        sCatalogMap_BaseMVVM.put(".able", "基类库接口相关");
-        sCatalogMap_BaseMVVM.put(".adapter", "RecyclerView ViewDataBinding ViewHolder");
-        sCatalogMap_BaseMVVM.put(".expand", "基于 Base Activity、Fragment 扩展包");
-        sCatalogMap_BaseMVVM.put(".expand.content", "Content Layout MVVM 基类");
-        sCatalogMap_BaseMVVM.put(".expand.mvvm", "MVVM 架构基类");
-        sCatalogMap_BaseMVVM.put(".expand.viewdata", "ViewDataBinding 基类");
-        sCatalogMap_BaseMVVM.put(".expand.viewmodel", "ViewModel 基类");
-        sCatalogMap_BaseMVVM.put(".utils", "依赖工具包");
-        sCatalogMap_BaseMVVM.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
 
         // =============
         // = DevEngine =
@@ -862,10 +823,8 @@ public final class ApiConfig {
             "DevApp",
             // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
             "DevAssist",
-            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            // DevBase - Base ( Activity、Fragment ) MVP、MVVM 基类库
             "DevBase",
-            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
-            "DevBaseMVVM",
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             "DevEngine",
             // DevSimple - 简单敏捷开发库
@@ -927,12 +886,9 @@ public final class ApiConfig {
             // DevAssist - 封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等
             case "DevAssist":
                 return ApiConfig.DEV_ASSIST_VERSION;
-            // DevBase - Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库
+            // DevBase - Base ( Activity、Fragment ) MVP、MVVM 基类库
             case "DevBase":
                 return ApiConfig.DEV_BASE_VERSION;
-            // DevBaseMVVM - MVVM ( ViewDataBinding + ViewModel ) 基类库
-            case "DevBaseMVVM":
-                return ApiConfig.DEV_BASE_MVVM_VERSION;
             // DevEngine - 第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用
             case "DevEngine":
                 return ApiConfig.DEV_ENGINE_VERSION;

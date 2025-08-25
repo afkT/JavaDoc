@@ -77,8 +77,6 @@
 
 - [DevBase API Generate Main][DevBase API Generate Main]
 
-- [DevBaseMVVM API Generate Main][DevBaseMVVM API Generate Main]
-
 - [DevEngine API Generate Main][DevEngine API Generate Main]
 
 - [DevWidget API Generate Main][DevWidget API Generate Main]
@@ -105,8 +103,6 @@
 - [DevAssist API][DevAssist API] **封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等**
 
 - [DevBase API][DevBase API] **Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库**
-
-- [DevBaseMVVM API][DevBaseMVVM API] **MVVM ( ViewDataBinding + ViewModel ) 基类库**
 
 - [DevEngine API][DevEngine API] **第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用**
 
@@ -165,9 +161,6 @@
 
 [DevBase API]: https://github.com/afkT/DevUtils/blob/master/lib/DevBase/README.md
 [DevBase API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevBase_READMEMain.java
-
-[DevBaseMVVM API]: https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/README.md
-[DevBaseMVVM API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevBaseMVVM_READMEMain.java
 
 [DevEngine API]: https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md
 [DevEngine API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevEngine_READMEMain.java

@@ -25,8 +25,6 @@ final class DevVersion {
     static final String DEV_ASSIST_VERSION;
     // DevBase 版本号
     static final String DEV_BASE_VERSION;
-    // DevBaseMVVM 版本号
-    static final String DEV_BASE_MVVM_VERSION;
     // DevEngine 版本号
     static final String DEV_ENGINE_VERSION;
     // DevSimple 版本号
@@ -78,10 +76,6 @@ final class DevVersion {
         // DevBase 版本号
         DEV_BASE_VERSION = getProperty(
                 prop, "dev_base_versionName"
-        );
-        // DevBaseMVVM 版本号
-        DEV_BASE_MVVM_VERSION = getProperty(
-                prop, "dev_base_mvvm_versionName"
         );
         // DevEngine 版本号
         DEV_ENGINE_VERSION = getProperty(
