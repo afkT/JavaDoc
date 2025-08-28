@@ -485,15 +485,22 @@ public final class ApiConfig {
         // ===========
 
         sCatalogMap_Base.put("dev.base", "根目录");
-        sCatalogMap_Base.put(".able", "基类库接口相关");
-        sCatalogMap_Base.put(".activity", "核心 Base Activity 代码");
-        sCatalogMap_Base.put(".adapter", "RecyclerView ViewBinding ViewHolder");
-        sCatalogMap_Base.put(".expand", "基于 Base Activity、Fragment 扩展包");
-        sCatalogMap_Base.put(".expand.content", "Content Layout 基类");
-        sCatalogMap_Base.put(".expand.mvp", "MVP 架构基类");
-        sCatalogMap_Base.put(".expand.viewbinding", "ViewBinding 基类");
-        sCatalogMap_Base.put(".fragment", "核心 Base Fragment 代码");
+        sCatalogMap_Base.put(".core", "核心实现代码");
+        sCatalogMap_Base.put(".core.arch", "架构封装");
+        sCatalogMap_Base.put(".core.arch.databinding", "ViewDataBinding 基类");
+        sCatalogMap_Base.put(".core.arch.mvp", "MVP 基类");
+        sCatalogMap_Base.put(".core.arch.mvvm", "MVVM 基类");
+        sCatalogMap_Base.put(".core.interfaces", "基类开放接口包");
+        sCatalogMap_Base.put(".simple", "简化敏捷开发基类");
+        sCatalogMap_Base.put(".simple.contracts", "专属契约层");
+        sCatalogMap_Base.put(".simple.contracts.binding", "Binding 相关代码");
+        sCatalogMap_Base.put(".simple.contracts.factory", "Simple 简化开发工厂代码");
+        sCatalogMap_Base.put(".simple.contracts.lifecycle", "生命周期监听管理");
+        sCatalogMap_Base.put(".simple.contracts.viewmodel", "ViewModel 代码");
+        sCatalogMap_Base.put(".simple.extensions", "扩展实现代码");
+        sCatalogMap_Base.put(".simple.mvvm", "MVVM 简化开发封装");
         sCatalogMap_Base.put(".utils", "依赖工具包");
+        sCatalogMap_Base.put(".utils.adapter", "RecyclerView Binding ViewHolder");
         sCatalogMap_Base.put(".utils.assist", "功能辅助类 ( 抽取通用代码 )");
 
         // =============
@@ -501,26 +508,48 @@ public final class ApiConfig {
         // =============
 
         sCatalogMap_Engine.put("dev.engine", "根目录");
-        sCatalogMap_Engine.put(".analytics", "Analytics Engine 数据统计 ( 埋点 )");
-        sCatalogMap_Engine.put(".barcode", "BarCode Engine 条形码、二维码处理");
-        sCatalogMap_Engine.put(".barcode.listener", "条形码、二维码操作回调事件");
-        sCatalogMap_Engine.put(".cache", "Cache Engine 有效期键值对缓存");
-        sCatalogMap_Engine.put(".compress", "Image Compress Engine 图片压缩");
-        sCatalogMap_Engine.put(".compress.listener", "图片压缩回调事件");
-        sCatalogMap_Engine.put(".http", "Http Engine 网络请求");
-        sCatalogMap_Engine.put(".image", "Image Engine 图片加载、下载、转格式等");
-        sCatalogMap_Engine.put(".image.listener", "图片加载监听事件");
-        sCatalogMap_Engine.put(".json", "JSON Engine 映射");
-        sCatalogMap_Engine.put(".keyvalue", "KeyValue Engine 键值对存储");
-        sCatalogMap_Engine.put(".log", "Log Engine 日志打印");
-        sCatalogMap_Engine.put(".media", "Media Selector Engine 多媒体资源选择");
-        sCatalogMap_Engine.put(".permission", "Permission Engine 权限申请");
-        sCatalogMap_Engine.put(".push", "Push Engine 推送平台处理");
-        sCatalogMap_Engine.put(".share", "Share Engine 分享平台处理");
-        sCatalogMap_Engine.put(".share.listener", "分享回调事件");
-        sCatalogMap_Engine.put(".storage", "Storage Engine 外部、内部文件存储");
-        sCatalogMap_Engine.put(".storage.listener", "Storage 存储结果事件");
-        sCatalogMap_Engine.put(".toast", "Toast Engine 吐司提示");
+        sCatalogMap_Engine.put(".core", "核心实现代码");
+        sCatalogMap_Engine.put(".core.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Engine.put(".core.barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Engine.put(".core.barcode.listener", "条形码、二维码操作回调事件");
+        sCatalogMap_Engine.put(".core.cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Engine.put(".core.compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Engine.put(".core.compress.listener", "图片压缩回调事件");
+        sCatalogMap_Engine.put(".core.http", "Http Engine 网络请求");
+        sCatalogMap_Engine.put(".core.image", "Image Engine 图片加载、下载、转格式等");
+        sCatalogMap_Engine.put(".core.image.listener", "图片加载监听事件");
+        sCatalogMap_Engine.put(".core.json", "JSON Engine 映射");
+        sCatalogMap_Engine.put(".core.keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Engine.put(".core.log", "Log Engine 日志打印");
+        sCatalogMap_Engine.put(".core.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Engine.put(".core.permission", "Permission Engine 权限申请");
+        sCatalogMap_Engine.put(".core.push", "Push Engine 推送平台处理");
+        sCatalogMap_Engine.put(".core.share", "Share Engine 分享平台处理");
+        sCatalogMap_Engine.put(".core.share.listener", "分享回调事件");
+        sCatalogMap_Engine.put(".core.storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Engine.put(".core.storage.listener", "Storage 存储结果事件");
+        sCatalogMap_Engine.put(".core.toast", "Toast Engine 吐司提示");
+        sCatalogMap_Engine.put(".extensions", "Kotlin 扩展代码、函数实现");
+        sCatalogMap_Engine.put(".extensions.analytics", "Analytics Engine 数据统计 ( 埋点 )");
+        sCatalogMap_Engine.put(".extensions.barcode", "BarCode Engine 条形码、二维码处理");
+        sCatalogMap_Engine.put(".extensions.barcode.listener", "条形码、二维码操作回调事件");
+        sCatalogMap_Engine.put(".extensions.cache", "Cache Engine 有效期键值对缓存");
+        sCatalogMap_Engine.put(".extensions.compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Engine.put(".extensions.compress.listener", "图片压缩回调事件");
+        sCatalogMap_Engine.put(".extensions.http", "Http Engine 网络请求");
+        sCatalogMap_Engine.put(".extensions.image", "Image Engine 图片加载、下载、转格式等");
+        sCatalogMap_Engine.put(".extensions.image.listener", "图片加载监听事件");
+        sCatalogMap_Engine.put(".extensions.json", "JSON Engine 映射");
+        sCatalogMap_Engine.put(".extensions.keyvalue", "KeyValue Engine 键值对存储");
+        sCatalogMap_Engine.put(".extensions.log", "Log Engine 日志打印");
+        sCatalogMap_Engine.put(".extensions.media", "Media Selector Engine 多媒体资源选择");
+        sCatalogMap_Engine.put(".extensions.permission", "Permission Engine 权限申请");
+        sCatalogMap_Engine.put(".extensions.push", "Push Engine 推送平台处理");
+        sCatalogMap_Engine.put(".extensions.share", "Share Engine 分享平台处理");
+        sCatalogMap_Engine.put(".extensions.share.listener", "分享回调事件");
+        sCatalogMap_Engine.put(".extensions.storage", "Storage Engine 外部、内部文件存储");
+        sCatalogMap_Engine.put(".extensions.storage.listener", "Storage 存储结果事件");
+        sCatalogMap_Engine.put(".extensions.toast", "Toast Engine 吐司提示");
 
         // =============
         // = DevWidget =
