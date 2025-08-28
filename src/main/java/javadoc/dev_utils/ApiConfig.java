@@ -52,13 +52,9 @@ public final class ApiConfig {
     public static final String DEV_UTILS_README_FILE_SAVE_PATH   = API_FILE_SAVE_PATH + File.separator;
     // DevUtils Template Readme
     public static final String DEV_UTILS_README_TEMPLATE         = JAVADOC_TEMPLATE_PACKAGE_PATH + "/Dev_README.md";
-    // DevUtils 完整 API Template Readme
-    public static final String DEV_UTILS_README_API_TEMPLATE     = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_API.md";
     // DevUtils 项目详情 Template Readme
     public static final String DEV_UTILS_README_PROJECT_TEMPLATE = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DEV_README_PROJECT.md";
 
-    // DevUtils 完整 API fileName
-    public static final String README_API_FILE_NAME     = "README_API.md";
     // DevUtils 项目详情 Readme fileName
     public static final String README_PROJECT_FILE_NAME = "README_PROJECT.md";
 
