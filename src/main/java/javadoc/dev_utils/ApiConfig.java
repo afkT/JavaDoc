@@ -683,55 +683,6 @@ public final class ApiConfig {
         sFilterClassSet_APP.add("Decrypt.java");
         sFilterClassSet_APP.add("Encrypt.java");
 
-        sFilterClassSet_APP.add("Getable.java");
-        sFilterClassSet_APP.add("Byable.java");
-        sFilterClassSet_APP.add("Toable.java");
-        sFilterClassSet_APP.add("Flowable.java");
-        sFilterClassSet_APP.add("Sortable.java");
-        sFilterClassSet_APP.add("Calculateable.java");
-        sFilterClassSet_APP.add("Callable.java");
-        sFilterClassSet_APP.add("Methodable.java");
-        sFilterClassSet_APP.add("Cloneable.java");
-        sFilterClassSet_APP.add("Closeable.java");
-        sFilterClassSet_APP.add("Convertable.java");
-        sFilterClassSet_APP.add("Correctable.java");
-        sFilterClassSet_APP.add("Decodeable.java");
-        sFilterClassSet_APP.add("Encodeable.java");
-        sFilterClassSet_APP.add("Decryptable.java");
-        sFilterClassSet_APP.add("Encryptable.java");
-        sFilterClassSet_APP.add("Filterable.java");
-        sFilterClassSet_APP.add("Interceptable.java");
-        sFilterClassSet_APP.add("IOable.java");
-        sFilterClassSet_APP.add("Notifyable.java");
-        sFilterClassSet_APP.add("Operatorable.java");
-        sFilterClassSet_APP.add("Inputable.java");
-        sFilterClassSet_APP.add("Outputable.java");
-        sFilterClassSet_APP.add("Readable.java");
-        sFilterClassSet_APP.add("Writeable.java");
-        sFilterClassSet_APP.add("Refreshable.java");
-        sFilterClassSet_APP.add("Replaceable.java");
-        sFilterClassSet_APP.add("Searchable.java");
-        sFilterClassSet_APP.add("Queryable.java");
-        sFilterClassSet_APP.add("Findable.java");
-        sFilterClassSet_APP.add("Splitable.java");
-        sFilterClassSet_APP.add("Taskable.java");
-        sFilterClassSet_APP.add("Routerable.java");
-        sFilterClassSet_APP.add("Errorable.java");
-        sFilterClassSet_APP.add("Threadable.java");
-        sFilterClassSet_APP.add("Editorable.java");
-        sFilterClassSet_APP.add("Copyable.java");
-        sFilterClassSet_APP.add("Pasteable.java");
-        sFilterClassSet_APP.add("Modifyable.java");
-        sFilterClassSet_APP.add("Parseable.java");
-        sFilterClassSet_APP.add("Sendable.java");
-        sFilterClassSet_APP.add("Functionable.java");
-        sFilterClassSet_APP.add("Bindingable.java");
-        sFilterClassSet_APP.add("UnBinderable.java");
-        sFilterClassSet_APP.add("Commandable.java");
-        sFilterClassSet_APP.add("Consumerable.java");
-        sFilterClassSet_APP.add("Supplierable.java");
-        sFilterClassSet_APP.add("Ofable.java");
-
         // =================
         // = DevDeprecated =
         // =================
