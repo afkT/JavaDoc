@@ -464,6 +464,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.cache", "Cache Engine 有效期键值对缓存");
         sCatalogMap_Assist.put(".engine.compress", "Image Compress Engine 图片压缩");
         sCatalogMap_Assist.put(".engine.compress.listener", "图片压缩回调事件");
+        sCatalogMap_Assist.put(".engine.debug", "Debug 编译辅助开发 Engine");
         sCatalogMap_Assist.put(".engine.http", "Http Engine 网络请求");
         sCatalogMap_Assist.put(".engine.image", "Image Engine 图片加载、下载、转格式等");
         sCatalogMap_Assist.put(".engine.image.listener", "图片加载监听事件");
