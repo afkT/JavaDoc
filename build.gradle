@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     // Gson https://github.com/google/gson
-    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.13.1'
     // DevJava - Java 工具类库 ( 不依赖 android api )
     implementation 'io.github.afkt:DevJava:1.5.3'
 
