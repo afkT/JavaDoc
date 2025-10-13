@@ -536,6 +536,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".extensions.barcode.listener", "条形码、二维码操作回调事件");
         sCatalogMap_Engine.put(".extensions.cache", "Cache Engine 有效期键值对缓存");
         sCatalogMap_Engine.put(".extensions.compress", "Image Compress Engine 图片压缩");
+        sCatalogMap_Engine.put(".extensions.debug", "Debug 编译辅助开发 Engine");
         sCatalogMap_Engine.put(".extensions.compress.listener", "图片压缩回调事件");
         sCatalogMap_Engine.put(".extensions.http", "Http Engine 网络请求");
         sCatalogMap_Engine.put(".extensions.image", "Image Engine 图片加载、下载、转格式等");
