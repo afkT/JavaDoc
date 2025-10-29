@@ -186,5 +186,5 @@
 [DevJava API]: https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md
 [DevJava API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevJava_READMEMain.java
 
-[DevOther API]: https://github.com/afkT/DevUtils-repo/blob/main/lib/LocalModules/DevOther
+[DevOther API]: https://github.com/afkT/DevUtils-repo/blob/main/local_dev/DevOther
 [DevOther API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevOther_READMEMain.java

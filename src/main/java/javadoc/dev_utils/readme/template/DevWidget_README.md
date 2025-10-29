@@ -24,7 +24,7 @@ implementation 'io.github.afkt:DevWidgetX:%s'
 
 - 该库依赖 [DevApp](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md) 开发，需引用 DevApp 库
 
-- [Preview README](https://github.com/afkT/DevUtils-repo/blob/main/lib/DevWidget_Preview.md)
+- [Preview README](https://github.com/afkT/DevUtils-repo/blob/main/local_dev/DevWidget_Preview.md)
 
 
 ## API

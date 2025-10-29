@@ -9,7 +9,6 @@ import javadoc.dev_utils.check.dev_app.DevAppMain;
 import javadoc.dev_utils.check.dev_assist.DevAssistMain;
 import javadoc.dev_utils.check.dev_deprecated.DevDeprecatedMain;
 import javadoc.dev_utils.check.dev_other.DevOtherMain;
-import javadoc.dev_utils.check.dev_standard.DevStandardMain;
 import javadoc.dev_utils.check.dev_widget.DevWidgetMain;
 
 /**
@@ -30,7 +29,6 @@ public class DevMain {
         maps.put("DevWidgetMain", DevWidgetMain.checker(coverText, generateConfig));
         maps.put("DevDeprecatedMain", DevDeprecatedMain.checker(coverText, generateConfig));
         maps.put("DevOtherMain", DevOtherMain.checker(coverText, generateConfig));
-        maps.put("DevStandardMain", DevStandardMain.checker(coverText, generateConfig));
 
         // 转换 JSON 数据
         String mapJSON = Utils.toJsonFormat(maps, true);

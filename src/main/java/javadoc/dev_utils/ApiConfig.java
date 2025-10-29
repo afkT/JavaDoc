@@ -261,20 +261,13 @@ public final class ApiConfig {
     // 包目录名
     public static final String DEV_OTHER_PACKAGE            = "";
     // DevOther 文件路径
-    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/lib/LocalModules/DevOther/src/main/java/";
+    public static final String DEV_OTHER_PATH               = PROJECT_LOCAL_PATH + "/DevUtils-repo/local_dev/DevOther/src/main/java/";
     // DevOther GitHub 项目文件路径
-    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils-repo/blob/main/lib/LocalModules/DevOther/src/main/java/";
+    public static final String DEV_OTHER_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils-repo/blob/main/local_dev/DevOther/src/main/java/";
     // DevOther API 文件保存路径
-    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/LocalModules/DevOther/";
+    public static final String DEV_OTHER_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/local_dev/DevOther/";
     // DevOther Template Readme
     public static final String DEV_OTHER_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevOther_README.md";
-
-    // ===============
-    // = DevStandard =
-    // ===============
-
-    // DevStandard 文件路径
-    public static final String DEV_STANDARD_PATH = PROJECT_LOCAL_PATH + "/DevUtils-repo/interesting/DevStandard/src/main/java/dev/";
 
     // =======
     // = 其他 =
