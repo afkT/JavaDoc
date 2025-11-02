@@ -102,7 +102,7 @@
 
 - [DevAssist API][DevAssist API] **封装逻辑代码, 实现多个快捷功能辅助类、以及 Engine 兼容框架等**
 
-- [DevBase API][DevBase API] **Base ( Activity、Fragment )、MVP、ViewBinding、ContentLayout 基类库**
+- [DevBase API][DevBase API] **Base ( Activity、Fragment ) MVP、MVVM 基类库**
 
 - [DevEngine API][DevEngine API] **第三方框架解耦、一键替换第三方库、同类库多 Engine 组件化混合使用**
 
