@@ -34,7 +34,7 @@ public class IntentDataKotlinGenerateMain {
         builder.append("\n     * @param value 保存的 value");
         builder.append("\n     * @return IntentData");
         builder.append("\n     */");
-        builder.append("\n    fun setLOWERCASE_KEY(value : String?): IntentData {");
+        builder.append("\n    fun setLOWERCASE_KEY(value: String?): IntentData {");
         builder.append("\n        return put(INTENT_KEY.UPPERCASE_KEY, value)");
         builder.append("\n    }");
         builder.append("\n");
