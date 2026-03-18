@@ -2,17 +2,13 @@
 <h1 align="center">JavaDoc</h1>
 
 
-<p align="center">
-	<a href="https://github.com/afkT">
-		<img alt="Profile" src="https://img.shields.io/badge/GitHub-afkT-orange.svg" />
-	</a>
-	<a href="https://github.com/afkT/JavaDoc/blob/master/LICENSE">
-		<img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" />
-	</a>
-	<a href="https://search.maven.org/search?q=io.github.afkt">
-		<img alt="Version" src="https://img.shields.io/badge/Maven-Dev-5776E0.svg" />
-	</a>
-</p>
+<div align="center">
+
+[![GitHub Profile](https://img.shields.io/badge/GitHub-afkT-orange.svg?style=for-the-badge)](https://github.com/afkT)
+[![GitHub License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](https://github.com/afkT/JavaDoc/blob/master/LICENSE)
+[![Maven](https://img.shields.io/badge/Maven-Dev-5776E0.svg?style=for-the-badge)](https://search.maven.org/search?q=io.github.afkt)
+
+</div>
 
 
 <p align="center">

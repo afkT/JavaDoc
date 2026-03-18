@@ -6,9 +6,9 @@
 
 [![GitHub Profile](https://img.shields.io/badge/GitHub-afkT-orange.svg?style=for-the-badge)](https://github.com/afkT)
 [![GitHub License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](https://github.com/afkT/DevUtils/blob/master/LICENSE)
-[![Version](https://img.shields.io/badge/Maven-Dev-5776E0.svg?style=for-the-badge)](https://search.maven.org/search?q=io.github.afkt)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=for-the-badge)](https://android-arsenal.com/api?level=21)
-[![Version](https://img.shields.io/badge/DevUtils-【DevApp-vn】-yellow.svg?style=for-the-badge)](https://github.com/afkT/DevUtils/releases)
+[![Maven](https://img.shields.io/badge/Maven-Dev-5776E0.svg?style=for-the-badge)](https://search.maven.org/search?q=io.github.afkt)
+[![Android API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=for-the-badge)](https://developer.android.com/about/versions)
+[![DevUtils Version](https://img.shields.io/badge/DevUtils-【DevApp-vn】-yellow.svg?style=for-the-badge)](https://github.com/afkT/DevUtils/releases)
 [![Utils](https://img.shields.io/badge/Utils-300+-critical.svg?style=for-the-badge)](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md)
 
 </div>
