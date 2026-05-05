@@ -8,6 +8,11 @@ repositories {
     mavenCentral()
 }
 
+// 全局编码设置
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
 dependencies {
     // Gson https://github.com/google/gson
     implementation 'com.google.code.gson:gson:2.13.2'
@@ -35,9 +40,4 @@ dependencies {
     println("tools.jar file exists => " + file(toolsJARPath).exists())
     println("====================")
     println()
-}
-
-// 全局编码设置
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = "UTF-8"
 }
