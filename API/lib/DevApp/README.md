@@ -246,9 +246,9 @@ DevUtils.openDebug();
 | uninstallApp | 卸载应用 |
 | uninstallAppSilent | 静默卸载应用 |
 | getActivityToLauncher | 获取对应包名应用启动的 Activity |
-| getWindowCurrent | 获取当前显示的 Window |
-| getWindowCurrent2 | 获取当前显示的 Window |
-| getWindowCurrentToPackage | 获取对应包名显示的 Window |
+| getCurrentWindowViaWindowWDumpsys | 获取当前显示的 Window |
+| getCurrentWindowViaWindowsDumpsys | 获取当前显示的 Window |
+| getCurrentWindowForPackageViaDumpsys | 获取对应包名显示的 Window |
 | getActivityCurrent | 获取当前显示的 Activity |
 | getActivitys | 获取 Activity 栈 |
 | getActivitysToPackage | 获取对应包名的 Activity 栈 |
@@ -264,6 +264,7 @@ DevUtils.openDebug();
 | sendBroadcast | 发送广播 |
 | kill | 销毁进程 |
 | sendTrimMemory | 收紧内存 |
+| tapTouchScreen | 在触摸屏上点击指定坐标 ( {@code input touchscreen tap} ) |
 | tap | 点击某个区域 |
 | swipeClick | 按压某个区域 ( 点击 ) |
 | swipe | 滑动到某个区域 |
@@ -274,7 +275,8 @@ DevUtils.openDebug();
 | wifiConf | 查看连接过的 Wifi 密码 |
 | wifiSwitch | 开启 / 关闭 Wifi |
 | setSystemTime | 设置系统时间 |
-| setSystemTime2 | 设置系统时间 |
+| setSystemTimeByMMddHHmmyyyyss | 设置系统时间 |
+| setSystemTimeByMillis | 设置系统时间 |
 | shutdown | 关机 ( 需要 root 权限 ) |
 | reboot | 重启设备 ( 需要 root 权限 ) |
 | rebootToRecovery | 重启引导到 recovery ( 需要 root 权限 ) |
@@ -388,7 +390,8 @@ DevUtils.openDebug();
 | isAppSystem | 判断 APP 是否系统 app |
 | isAppForeground | 判断 APP 是否在前台 |
 | isInstalledApp | 判断是否安装了 APP |
-| isInstalledApp2 | 判断是否安装了 APP |
+| isInstalledAppByInfo | 判断是否安装了 APP |
+| isInstalledAppByLaunchable | 判断是否安装了 APP |
 | startActivity | Activity 跳转 |
 | startActivityForResult | Activity 跳转回传 |
 | startIntentSenderForResult | Activity 请求权限跳转回传 |
@@ -404,7 +407,7 @@ DevUtils.openDebug();
 | uninstallApp | 卸载应用 |
 | uninstallAppSilent | 静默卸载应用 |
 | launchApp | 打开 APP |
-| launchApp2 | 打开 APP |
+| launchAppWithClassName | 打开 APP |
 | launchAppDetailsSettings | 跳转到 APP 设置详情页面 |
 | launchAppDetails | 跳转到 APP 应用商城详情页面 |
 | launchAppInstallPermissionSettings | 跳转设置页面, 开启安装未知应用权限 |
@@ -473,7 +476,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getStatusBarHeight | 获取 StatusBar 高度 |
-| getStatusBarHeight2 | 获取 StatusBar 高度 |
+| getStatusBarHeightFromInsetsOrFallback | 获取 StatusBar 高度（优先 Android R+ WindowInsets，否则回退 {@link #getStatusBarHeight()}） |
 | isStatusBarVisible | 判断 StatusBar 是否显示 |
 | setStatusBarVisibility | 设置 StatusBar 是否显示 |
 | setStatusBarLightMode | 设置 StatusBar 是否高亮模式 |
@@ -669,7 +672,7 @@ DevUtils.openDebug();
 | getInstance | 获取 CrashUtils 实例 |
 | initialize | 初始化方法 |
 | uncaughtException | 当 UncaughtException 发生时会转入该函数来处理 |
-| handleException | 处理异常 |
+| onThrowableCaptured | 异常已被捕获（可在此收集错误信息、上报等） |
 
 
 * **Cursor 游标工具类 ->** [CursorUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/CursorUtils.java)
@@ -1070,10 +1073,10 @@ DevUtils.openDebug();
 | :- | :- |
 | setDelayMillis | 设置延迟时间 |
 | setSoftInputMode | 设置 Window 软键盘是否显示 |
-| judgeView | 设置某个 View 内所有非 EditText 的子 View OnTouchListener 事件 |
+| attachHideKeyboardOnOutsideEditTouch | 为指定 View 树中非 EditText 的节点设置触摸监听：点击时收起软键盘（递归子 View） |
 | isSoftInputVisible | 判断软键盘是否可见 |
-| registerSoftInputChangedListener | 注册软键盘改变监听 |
-| registerSoftInputChangedListener2 | 注册软键盘改变监听 |
+| registerSoftInputListenerViaContentView | 注册软键盘显示/隐藏监听（基于 content 根布局与 {@link #getContentViewInvisibleHeight(Activity)}） |
+| registerSoftInputListenerViaDecorView | 注册软键盘显示/隐藏监听（基于 Window decorView 与 {@link View#getWindowVisibleDisplayFrame(Rect)}） |
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示则隐藏反之显示 |
 | openKeyboard | 打开软键盘 |
@@ -1166,8 +1169,8 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isGpsEnabled | 判断 GPS 是否可用 |
-| isLocationEnabled | 判断定位是否可用 |
-| isLocationEnabled2 | 判断定位是否可用 |
+| isLocationEnabledGpsOrNetwork | 判断定位是否可用 |
+| isLocationEnabledGpsNetworkOrPassive | 判断定位是否可用 |
 | isPassiveEnable | 判断定位是否可用 |
 | openGpsSettings | 打开 GPS 设置界面 |
 | register | 注册 |
@@ -1238,8 +1241,8 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| printMemoryInfo | 获取内存信息 |
-| printMemoryInfo2 | 获取内存信息 |
+| printMemoryInfoFromProc | 获取内存信息 |
+| printMemoryInfoFromActivityManager | 获取内存信息 |
 | getMemoryInfo | 获取内存信息 |
 | getAvailMemory | 获取可用内存信息 |
 | getAvailMemoryFormat | 获取可用内存信息 ( 格式化 ) |
@@ -1254,7 +1257,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getMobileDataEnabled | 获取移动网络打开状态 ( 默认属于未打开 ) |
+| isMobileDataEnabled | 获取移动网络打开状态 ( 默认属于未打开 ) |
 | setMobileDataEnabled | 设置移动网络开关 ( 无判断是否已开启移动网络 ) |
 | isConnect | 判断是否连接了网络 |
 | getConnectType | 获取连接的网络类型 |
@@ -1265,7 +1268,7 @@ DevUtils.openDebug();
 | getActiveNetworkInfo | 获取活动网络信息 |
 | getActiveNetwork | 获取活动网络 |
 | is4G | 判断是否 4G 网络 |
-| getWifiEnabled | 判断 Wifi 是否打开 |
+| isWifiEnabled | 判断 Wifi 是否打开 |
 | isWifiAvailable | 判断 Wifi 数据是否可用 |
 | getNetworkOperatorName | 获取网络运营商名称 ( 中国移动、如中国联通、中国电信 ) |
 | getNetworkType | 获取当前网络类型 |
@@ -1289,7 +1292,7 @@ DevUtils.openDebug();
 | startNotificationListenSettings | 跳转到设置页面, 开启获取通知栏信息权限 |
 | cancelAll | 移除通知 ( 移除所有通知 ) |
 | cancel | 移除通知 ( 移除标记为 id 的通知 ) |
-| notify | 进行通知 |
+| postNotification | 发布系统通知（封装 {@link NotificationManager#notify(int, Notification)}） |
 | getNotificationChannel | 获取 NotificationChannel |
 | createNotificationChannel | 创建 NotificationChannel |
 | createPendingIntent | 获取 PendingIntent |
@@ -1297,6 +1300,7 @@ DevUtils.openDebug();
 | createNotificationBuilder | 创建通知栏 Builder 对象 |
 | get | 获取 Led 配置参数 |
 | isEmpty | 判断是否为 null |
+| customizeNotification | 在构建前对 {@link Notification.Builder} 做额外定制 |
 
 
 * **路径相关工具类 ->** [PathUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PathUtils.java)
@@ -1415,7 +1419,7 @@ DevUtils.openDebug();
 | call | 拨打电话 |
 | sendSms | 跳至发送短信界面 |
 | sendSmsSilent | 发送短信 |
-| getContactNum | 打开手机联系人界面点击联系人后便获取该号码 |
+| launchPickContactPhoneIntent | 打开系统联系人电话选择界面（需在 {@link Activity#onActivityResult} 中解析号码） |
 
 
 * **电源管理工具类 ->** [PowerManagerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PowerManagerUtils.java)
@@ -1456,10 +1460,10 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getLocalBroadcastManager | 获取 LocalBroadcastManager |
-| local_registerReceiver | 注册广播监听 ( 应用内广播 ) |
-| local_unregisterReceiver | 注销广播监听 ( 应用内广播 ) |
-| local_sendBroadcast | 发送广播 ( 应用内广播 ) |
-| local_sendBroadcastSync | 发送广播 ( 同步 ) ( 应用内广播 ) |
+| localRegisterReceiver | 注册广播监听 ( 应用内广播 ) |
+| localUnregisterReceiver | 注销广播监听 ( 应用内广播 ) |
+| localSendBroadcast | 发送广播 ( 应用内广播 ) |
+| localSendBroadcastSync | 发送广播 ( 同步 ) ( 应用内广播 ) |
 | registerReceiverBool | 注册广播监听 |
 | registerReceiver | 注册广播监听 |
 | unregisterReceiver | 注销广播监听 |
@@ -1711,8 +1715,8 @@ DevUtils.openDebug();
 | setListener | 设置截图校验成功回调接口 |
 | startListener | 启动截图监听 |
 | stopListener | 停止截图监听 |
-| handleMediaContentChange | 内容变更处理 |
-| handleMediaChecker | 内容校验处理 |
+| dispatchLatestMediaChangeToChecker | 查询媒体库最新一行并将结果交给 {@link ScreenshotChecker#onChecker} |
+| validateScreenshotCandidate | 按时间与路径前缀等规则校验是否为当前监听关心的截图并回调 |
 
 
 * **屏幕相关工具类 ->** [ScreenUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ScreenUtils.java)
@@ -1747,7 +1751,7 @@ DevUtils.openDebug();
 | isScreenLock | 判断是否锁屏 |
 | isTablet | 判断是否是平板 |
 | getStatusBarHeight | 获取 StatusBar 高度 |
-| getStatusBarHeight2 | 获取 StatusBar 高度 |
+| getStatusBarHeightFromInsetsOrFallback | 获取 StatusBar 高度 |
 | setSleepDuration | 设置进入休眠时长 |
 | getSleepDuration | 获取进入休眠时长 |
 | getNavigationBarHeight | 获取底部导航栏高度 |
@@ -1821,9 +1825,9 @@ DevUtils.openDebug();
 | :- | :- |
 | execCmd | 执行 shell 命令 |
 | isSuccess | 判断是否执行成功 |
-| isSuccess2 | 判断是否执行成功 ( 判断 errorMsg ) |
-| isSuccess3 | 判断是否执行成功 ( 判断 successMsg ) |
-| isSuccess4 | 判断是否执行成功 ( 判断 successMsg ) , 并且 successMsg 是否包含某个字符串 |
+| isSuccessWithoutErrorOutput | 是否成功且 errorMsg 为空 |
+| isSuccessWithSuccessOutput | 是否成功且 successMsg 非空 |
+| isSuccessOutputContaining | 是否成功、successMsg 非空且包含指定子串（忽略大小写） |
 
 
 * **快捷方式工具类 ->** [ShortCutUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ShortCutUtils.java)
@@ -1896,7 +1900,7 @@ DevUtils.openDebug();
 | isAutoCalc | 判断是否自动计算边距 ( 如: 显示在 View 下面, 但是下方距离不够, 自动设置为在 View 上方显示 ) |
 | setAutoCalc | 设置是否自动计算边距 ( 如: 显示在 View 下面, 但是下方距离不够, 自动设置为在 View 上方显示 ) |
 | above | 设置 Snackbar 显示在指定 View 的上方 |
-| bellow | 设置 Snackbar 显示在指定 View 的下方 |
+| below | 设置 Snackbar 显示在指定 View 的下方 |
 
 
 * **SpannableString 工具类 ->** [SpanUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/SpanUtils.java)
@@ -2152,8 +2156,8 @@ DevUtils.openDebug();
 | getWidthHeight | 获取 View 宽高 |
 | setWidthHeight | 设置 View 宽度、高度 |
 | setWeight | 设置 View weight 权重 |
-| getWidthHeightExact | 获取 View 宽高 ( 准确 ) |
-| getWidthHeightExact2 | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnPost | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnGlobalLayout | 获取 View 宽高 ( 准确 ) |
 | getLocationOnScreen | 获取 View 在屏幕中坐标区域 |
 | getLocationInWindow | 获取 View 在父窗口中坐标区域 |
 | getGlobalVisibleRect | 获取 View 在屏幕中可见的坐标区域 |
@@ -2365,7 +2369,7 @@ DevUtils.openDebug();
 | setResource | 通过 res 设置壁纸 |
 | setStream | 通过 InputStream 设置壁纸 |
 | setUri | 通过 Uri 设置壁纸 ( 跳转到设置页 ) |
-| callback | 非适配 ROM 则触发回调 |
+| trySetWallpaper | 未命中已知 ROM 分支时的壁纸设置策略（例如走默认流式设置） |
 
 
 * **控件工具类 ->** [WidgetUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/WidgetUtils.java)
@@ -2487,7 +2491,7 @@ DevUtils.openDebug();
 | post | 发送消息 ( 功能由该方法实现 ) |
 | setDelayMillis | 设置搜索延迟时间 |
 | setCallback | 设置搜索回调接口 |
-| callback | 回调方法 |
+| onDelayed | 延迟时间到达后的回调 |
 
 
 * **Activity 无操作定时辅助类 ->** [InactivityTimerAssist.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/InactivityTimerAssist.java)
@@ -2753,7 +2757,7 @@ DevUtils.openDebug();
 | isValidEvent | 是否有效事件 ( 是否在小范围内移动 ) |
 | isTouchInView | 判断触点是否落在该 View 上 |
 | postLongClick | 开始校验长按 |
-| callback | callback |
+| onDelayed | onDelayed |
 
 
 * **DevApp 悬浮窗边缘检测辅助类实现 ->** [DevFloatingEdgeImpl.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/assist/floating/DevFloatingEdgeImpl.java)
@@ -2906,7 +2910,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
-| getActivityLifecycleGet | 获取 Activity 生命周期 相关信息获取接口类 |
+| getActivityLifecycle | 获取 Activity 生命周期相关信息获取接口 |
 | getActivityLifecycleNotify | 获取 Activity 生命周期 事件监听接口类 |
 | getTopActivity | 获取 Top Activity |
 | setActivityLifecycleFilter | 设置 Activity 生命周期 过滤判断接口 |
@@ -3150,9 +3154,9 @@ DevUtils.openDebug();
 | autoCloseDialog | 自动关闭 dialog |
 | autoClosePopupWindow | 自动关闭 PopupWindow |
 | setSoftInputMode | 设置 Window 软键盘是否显示 |
-| judgeView | 设置某个 View 内所有非 EditText 的子 View OnTouchListener 事件 |
-| registerSoftInputChangedListener | 注册软键盘改变监听 |
-| registerSoftInputChangedListener2 | 注册软键盘改变监听 |
+| attachHideKeyboardOnOutsideEditTouch | 为非 EditText 子 View 设置触摸监听，点击时收起软键盘（递归子节点） |
+| registerSoftInputListenerViaContentView | 注册软键盘改变监听（content 根布局方案） |
+| registerSoftInputListenerViaDecorView | 注册软键盘改变监听（decorView + 可见区域方案） |
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示则隐藏反之显示 |
 | openKeyboard | 打开软键盘 |
@@ -3182,8 +3186,8 @@ DevUtils.openDebug();
 | forceGetViewSize | 在 onCreate 中获取视图的尺寸 ( 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 ) |
 | vibrate | 震动 |
 | cancelVibrate | 取消震动 |
-| getWidthHeightExact | 获取 View 宽高 ( 准确 ) |
-| getWidthHeightExact2 | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnPost | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnGlobalLayout | 获取 View 宽高 ( 准确 ) |
 | measureView | 测量 View |
 | closeIO | 关闭 IO |
 | closeIOQuietly | 安静关闭 IO |
@@ -3274,9 +3278,9 @@ DevUtils.openDebug();
 | autoCloseDialog | 自动关闭 dialog |
 | autoClosePopupWindow | 自动关闭 PopupWindow |
 | setSoftInputMode | 设置 Window 软键盘是否显示 |
-| judgeView | 设置某个 View 内所有非 EditText 的子 View OnTouchListener 事件 |
-| registerSoftInputChangedListener | 注册软键盘改变监听 |
-| registerSoftInputChangedListener2 | 注册软键盘改变监听 |
+| attachHideKeyboardOnOutsideEditTouch | 为非 EditText 子 View 设置触摸监听，点击时收起软键盘（递归子节点） |
+| registerSoftInputListenerViaContentView | 注册软键盘改变监听（content 根布局方案） |
+| registerSoftInputListenerViaDecorView | 注册软键盘改变监听（decorView + 可见区域方案） |
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示则隐藏反之显示 |
 | openKeyboard | 打开软键盘 |
@@ -3306,8 +3310,8 @@ DevUtils.openDebug();
 | forceGetViewSize | 在 onCreate 中获取视图的尺寸 ( 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 ) |
 | vibrate | 震动 |
 | cancelVibrate | 取消震动 |
-| getWidthHeightExact | 获取 View 宽高 ( 准确 ) |
-| getWidthHeightExact2 | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnPost | 获取 View 宽高 ( 准确 ) |
+| getWidthHeightExactOnGlobalLayout | 获取 View 宽高 ( 准确 ) |
 | measureView | 测量 View |
 | closeIO | 关闭 IO |
 | closeIOQuietly | 安静关闭 IO |
@@ -4745,7 +4749,7 @@ DevUtils.openDebug();
 | getLimit | getLimit |
 | setLimit | setLimit |
 | build | build |
-| callback | 触发回调方法 |
+| onTick | 定时触发通知（每次计时触发一次） |
 
 
 * **定时器管理类 ->** [TimerManager.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/timer/TimerManager.java)
@@ -5026,7 +5030,7 @@ DevUtils.openDebug();
 | intToArgbString | 颜色值 转换 ARGB 颜色字符串 |
 | getRandomColor | 获取随机颜色值 |
 | getRandomColorString | 获取随机颜色值字符串 |
-| judgeColorString | 判断是否为 ARGB 格式的十六进制颜色, 例如: FF990587 |
+| looksLikeArgbHexPrefix | 宽松判断：长度为 8 且首字符为十六进制字符时返回 true（非完整 ARGB 校验） |
 | setDark | 颜色加深 ( 单独修改 RGB 值, 不变动透明度 ) |
 | setLight | 颜色变浅, 变亮 ( 单独修改 RGB 值, 不变动透明度 ) |
 | setAlphaDark | 设置透明度加深 |
@@ -5051,7 +5055,7 @@ DevUtils.openDebug();
 | getHue | 获取颜色色调 |
 | getSaturation | 获取颜色饱和度 |
 | getBrightness | 获取颜色亮度 |
-| handleColor | 处理 color |
+| normalizeColorInput | 规范化颜色字符串（如 #RGB 扩展为 #RRGGBB） |
 
 
 * **转换工具类 ( Byte、Hex 等 ) ->** [ConvertUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/ConvertUtils.java)
@@ -5300,7 +5304,7 @@ DevUtils.openDebug();
 | isFile | 判断是否文件 |
 | isDirectory | 判断是否文件夹 |
 | isHidden | 判断是否隐藏文件 |
-| isHidden2 | 判断是否隐藏文件 |
+| isHiddenByDottedNameInPath | 判断是否隐藏文件 |
 | isBuild | 是否 Build 文件、文件夹判断 |
 | canRead | 文件是否可读 |
 | canWrite | 文件是否可写 |
@@ -5542,7 +5546,7 @@ DevUtils.openDebug();
 | getRandomNumbersAndLetters | 获取数字、大小写字母自定义长度的随机数 |
 | getRandom | 获取自定义数据自定义长度的随机数 |
 | shuffle | 洗牌算法 ( 第一种 ) 随机置换指定的数组使用的默认源的随机性 ( 随机数据源小于三个, 则无效 ) |
-| shuffle2 | 洗牌算法 ( 第二种 ) 随机置换指定的数组使用的默认源的随机性 |
+| shuffleObjectsFisherYates | 洗牌算法 ( 第二种 ) 随机置换指定的数组使用的默认源的随机性 |
 | nextIntRange | 获取指定范围 int 值 |
 | nextLongRange | 获取指定范围 long 值 |
 | nextDoubleRange | 获取指定范围 double 值 |
@@ -5661,17 +5665,19 @@ DevUtils.openDebug();
 | clearSpace | 清空字符串全部空格 |
 | clearTab | 清空字符串全部 Tab |
 | clearLine | 清空字符串全部换行符 |
-| clearLine2 | 清空字符串全部换行符 |
+| clearLineByNewLine | 清空字符串全部换行符 |
+| clearLineByNL | 清空字符串全部换行符 |
 | clearSpaceTrim | 清空字符串前后全部空格 |
 | clearTabTrim | 清空字符串前后全部 Tab |
 | clearLineTrim | 清空字符串前后全部换行符 |
-| clearLineTrim2 | 清空字符串前后全部换行符 |
+| clearLineTrimByNewLine | 清空字符串前后全部换行符 |
+| clearLineTrimByNL | 清空字符串前后全部换行符 |
 | clearSpaceTabLine | 清空字符串全部空格、Tab、换行符 |
 | clearSpaceTabLineTrim | 清空字符串前后全部空格、Tab、换行符 |
 | appendSpace | 追加空格 |
 | appendTab | 追加 Tab |
-| appendLine | 追加换行 |
-| appendLine2 | 追加换行 |
+| appendNewLine | 追加换行 |
+| appendNL | 追加换行 |
 | forString | 循环指定数量字符串 |
 | joinArgs | 循环拼接 |
 | join | 循环拼接 |
@@ -5848,13 +5854,14 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | isSuccessful | 校验记录方法返回字符串是否成功 |
-| isHandler | 是否处理记录 |
-| setHandler | 设置是否处理记录 |
+| isRecordingEnabled | 全局是否启用文件日志记录 |
+| setRecordingEnabled | 设置全局是否启用文件日志记录 |
 | getRecordInsert | 获取日志记录插入信息 |
 | setRecordInsert | 设置日志记录插入信息 |
 | setCallback | 设置文件记录回调 |
 | getLogContent | 获取日志内容 |
 | record | 记录方法 |
+| onRecordCompleted | 日志写入文件后的结果回调 |
 
 
 * **日志记录配置信息 ->** [RecordConfig.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/record/RecordConfig.java)
@@ -5866,8 +5873,8 @@ DevUtils.openDebug();
 | getFileName | 获取文件名 ( 固定 ) |
 | getFolderName | 获取文件夹名 ( 模块名 ) |
 | getFileIntervalTime | 获取文件记录间隔时间 |
-| isHandler | 是否处理记录 |
-| setHandler | 设置是否处理记录 |
+| isRecordingEnabled | 是否启用文件日志记录 |
+| setRecordingEnabled | 设置是否启用文件日志记录 |
 | isInsertHeaderData | 是否插入头数据 |
 | setInsertHeaderData | 设置是否插入头数据 |
 | getRecordInsert | 获取日志记录插入信息 |
@@ -5905,6 +5912,9 @@ DevUtils.openDebug();
 | getDelayTime | 获取延迟校验时间 ( 毫秒 ) |
 | setDelayTime | 设置延迟校验时间 ( 毫秒 ) |
 | query | 搜索目录 |
+| shouldVisitFile | 是否遍历该文件节点（目录会继续向下，文件则参与后续逻辑） |
+| shouldCollectFile | 是否添加到集合 |
+| onSearchComplete | 搜索完成回调 |
 
 
 * **文件深度优先搜索算法 ( 递归搜索某个目录下的全部文件 ) ->** [FileDepthFirstSearchUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/common/assist/search/FileDepthFirstSearchUtils.java)
@@ -5918,6 +5928,9 @@ DevUtils.openDebug();
 | getStartTime | 获取开始搜索时间 ( 毫秒 ) |
 | getEndTime | 获取结束搜索时间 ( 毫秒 ) |
 | query | 搜索目录 |
+| shouldVisitFile | 是否遍历该文件节点（目录会继续向下，文件则参与后续逻辑） |
+| shouldCollectFile | 是否添加到集合 |
+| onSearchComplete | 搜索完成回调 |
 
 
 ## <span id="devutilscommonassisturl">**`dev.utils.common.assist.url`**</span>
