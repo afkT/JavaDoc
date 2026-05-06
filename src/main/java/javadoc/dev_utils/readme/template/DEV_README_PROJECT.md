@@ -121,14 +121,11 @@
 - [DevJava - Java 工具类库 ( 不依赖 android api )][DevJava ChangeLog]
 
 
-## DevAICode-Android
-
-**[DevAICode-Android][DevAICode-Android]** 面向深度 AI 编程工作流的 Android 模板项目
-  ，以 **DevUtils** 系列库为底座，内置模块化 AI 角色配置（AGENTS + AI_CONTEXT + 任务型 Prompts） 
-  ，覆盖 30+ Android 开发场景，提供从研究、规划到实现的全流程 AI 辅助开发体验
-
-
 ## 其他
+
+- **[DevAICode-Android][DevAICode-Android]** 面向深度 AI 编程工作流的 Android 模板项目
+  ，以 **DevUtils** 系列库为底座，内置模块化 AI 角色配置（AGENTS + AI_CONTEXT + 任务型 Prompts）
+  ，覆盖 30+ Android 开发场景，提供从研究、规划到实现的全流程 AI 辅助开发体验
 
 - **[DevComponent][DevComponent]** 【100% Kotlin 实现 Android 项目组件化示例代码】
   基于 Android JetPack + Kotlin + Coroutines + MVVM 架构（DataBinding、ViewModel、Lifecycle）
