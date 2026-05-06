@@ -36,12 +36,10 @@
 </p>
 
 
-![module][dev_module_img]
-
-
 ## Android 版本适配信息
 
-- [ ] 适配 Android 16 ( ??? ) ???
+- [ ] 适配 Android 17 ( CinnamonBun ) ???
+- [x] 适配 Android 16 ( BAKLAVA ) [DevApp v2.5.3+][DevApp v2.5.3+]
 - [x] 适配 Android 15 ( VanillaIceCream ) [DevApp v2.4.8+][DevApp v2.4.8+]
 - [x] 适配 Android 14 ( UpsideDownCake ) [DevApp v2.4.4+][DevApp v2.4.4+]
 - [x] 适配 Android 13 ( Tiramisu ) [DevApp v2.4.3+][DevApp v2.4.3+]
@@ -61,7 +59,7 @@
 | 8.11.1        | 2.4.9 - 2.5.0 | 23            | 36                | 2.2.10          |
 | 8.13.2        | 2.5.1         | 23            | 36                | 2.3.0           |
 | 9.1.0         | 2.5.2         | 23            | 36                | 2.3.10          |
-| 9.2.1         | 2.5.3         | 23            | 36                | 2.4.0-Beta2     |
+| 9.2.1         | 2.5.3         | 23            | 37                | 2.4.0-Beta2     |
 
 
 ## 项目目录结构（ 全部已迁移至 Maven Central ）
@@ -244,12 +242,12 @@ implementation 'io.github.afkt:DevJava:1.5.5'
 <!-- ======= -->
 
 [Project Details README]: https://github.com/afkT/DevUtils/blob/master/README_PROJECT.md
-[dev_module_img]: https://github.com/afkT/DevUtils/raw/master/art/module.png
 
 <!-- ====== -->
 <!-- 版本信息 -->
 <!-- ====== -->
 
+[DevApp v2.5.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-253-2026-05-07
 [DevApp v2.4.8+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-248-2025-03-21
 [DevApp v2.4.4+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-244-2024-01-18
 [DevApp v2.4.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-243-2023-07-01

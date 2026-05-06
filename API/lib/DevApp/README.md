@@ -264,7 +264,7 @@ DevUtils.openDebug();
 | sendBroadcast | 发送广播 |
 | kill | 销毁进程 |
 | sendTrimMemory | 收紧内存 |
-| tapTouchScreen | 在触摸屏上点击指定坐标 ( {@code input touchscreen tap} ) |
+| tapTouchScreen | 在触摸屏上点击指定坐标 |
 | tap | 点击某个区域 |
 | swipeClick | 按压某个区域 ( 点击 ) |
 | swipe | 滑动到某个区域 |
@@ -401,6 +401,7 @@ DevUtils.openDebug();
 | sendBroadcast | 发送广播 ( 无序 ) |
 | sendOrderedBroadcast | 发送广播 ( 有序 ) |
 | startService | 启动服务 |
+| startForegroundService | 启动前台服务 |
 | stopService | 停止服务 |
 | installApp | 安装 APP ( 支持 8.0 ) 的意图 |
 | installAppSilent | 静默安装应用 |
@@ -476,7 +477,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getStatusBarHeight | 获取 StatusBar 高度 |
-| getStatusBarHeightFromInsetsOrFallback | 获取 StatusBar 高度（优先 Android R+ WindowInsets，否则回退 {@link #getStatusBarHeight()}） |
+| getStatusBarHeightFromInsetsOrFallback | 获取 StatusBar 高度 |
 | isStatusBarVisible | 判断 StatusBar 是否显示 |
 | setStatusBarVisibility | 设置 StatusBar 是否显示 |
 | setStatusBarLightMode | 设置 StatusBar 是否高亮模式 |
@@ -1075,8 +1076,8 @@ DevUtils.openDebug();
 | setSoftInputMode | 设置 Window 软键盘是否显示 |
 | attachHideKeyboardOnOutsideEditTouch | 为指定 View 树中非 EditText 的节点设置触摸监听：点击时收起软键盘（递归子 View） |
 | isSoftInputVisible | 判断软键盘是否可见 |
-| registerSoftInputListenerViaContentView | 注册软键盘显示/隐藏监听（基于 content 根布局与 {@link #getContentViewInvisibleHeight(Activity)}） |
-| registerSoftInputListenerViaDecorView | 注册软键盘显示/隐藏监听（基于 Window decorView 与 {@link View#getWindowVisibleDisplayFrame(Rect)}） |
+| registerSoftInputListenerViaContentView | 注册软键盘显示、隐藏监听 ( 基于 content 根布局 ) |
+| registerSoftInputListenerViaDecorView | 注册软键盘显示、隐藏监听 ( 基于 Window decorView ) |
 | fixSoftInputLeaks | 修复软键盘内存泄漏 在 Activity.onDestroy() 中使用 |
 | toggleKeyboard | 自动切换键盘状态, 如果键盘显示则隐藏反之显示 |
 | openKeyboard | 打开软键盘 |
@@ -1292,7 +1293,7 @@ DevUtils.openDebug();
 | startNotificationListenSettings | 跳转到设置页面, 开启获取通知栏信息权限 |
 | cancelAll | 移除通知 ( 移除所有通知 ) |
 | cancel | 移除通知 ( 移除标记为 id 的通知 ) |
-| postNotification | 发布系统通知（封装 {@link NotificationManager#notify(int, Notification)}） |
+| postNotification | 发布系统通知 |
 | getNotificationChannel | 获取 NotificationChannel |
 | createNotificationChannel | 创建 NotificationChannel |
 | createPendingIntent | 获取 PendingIntent |
@@ -1390,6 +1391,22 @@ DevUtils.openDebug();
 | getAppNoBackupFilesDir | 获取应用内部存储未备份文件路径 ( path /data/data/package/no_backup ) |
 
 
+* **PendingIntent 工具类 ->** [PendingIntentUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PendingIntentUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| flagsDefaultImmutable | 默认用于闹钟、通知点击等「模板不变」场景的 PendingIntent flags |
+| flagsDefaultMutable | 用于短信发送结果等框架可能回填 extras 场景的 PendingIntent flags |
+| getActivity | 获取指向 Activity 的 PendingIntent |
+| getActivityMutable | 获取指向 Activity 的 PendingIntent（默认可变 flags） |
+| getBroadcast | 获取 BroadcastReceiver 用的 PendingIntent |
+| getBroadcastMutable | 获取 BroadcastReceiver 用的 PendingIntent（默认可变 flags） |
+| getService | 获取指向 Service 的 PendingIntent |
+| getServiceMutable | 获取指向 Service 的 PendingIntent（默认可变 flags） |
+| getForegroundService | 获取指向前台 Service 的 PendingIntent |
+| getForegroundServiceMutable | 获取指向前台 Service 的 PendingIntent（默认可变 flags） |
+
+
 * **手机相关工具类 ->** [PhoneUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PhoneUtils.java)
 
 | 方法 | 注释 |
@@ -1419,7 +1436,7 @@ DevUtils.openDebug();
 | call | 拨打电话 |
 | sendSms | 跳至发送短信界面 |
 | sendSmsSilent | 发送短信 |
-| launchPickContactPhoneIntent | 打开系统联系人电话选择界面（需在 {@link Activity#onActivityResult} 中解析号码） |
+| launchPickContactPhoneIntent | 打开系统联系人电话选择界面 |
 
 
 * **电源管理工具类 ->** [PowerManagerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PowerManagerUtils.java)
@@ -1783,6 +1800,7 @@ DevUtils.openDebug();
 | isServiceRunning | 判断服务是否运行 |
 | getAllRunningService | 获取所有运行的服务 |
 | startService | 启动服务 |
+| startForegroundService | 启动前台服务 |
 | stopService | 停止服务 |
 | bindService | 绑定服务 |
 | unbindService | 解绑服务 |
@@ -1844,6 +1862,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| getSignaturesFromPackageInfo | 从 PackageInfo 读取签名数组 |
 | getAppSignature | 获取 APP Signature |
 | signatureMD5 | 获取 MD5 签名 |
 | signatureSHA1 | 获取签名 SHA1 加密字符串 |
@@ -2114,6 +2133,7 @@ DevUtils.openDebug();
 | isUpsideDownCake | 是否在 14.0 版本及以上 |
 | isVanillaIceCream | 是否在 15.0 版本及以上 |
 | isBaklava | 是否在 16.0 版本及以上 |
+| isCinnamonBun | 是否在 17.0 版本及以上 |
 | convertSDKVersion | 转换 SDK 版本 convertSDKVersion(31) = Android 12.0 |
 | convertSDKVersionName | 转换 SDK 版本名字 convertSDKVersionName(31) = Android S |
 
