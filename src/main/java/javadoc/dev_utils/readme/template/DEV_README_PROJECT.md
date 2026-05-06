@@ -120,6 +120,18 @@
 - [DevDeprecated - Dev 系列库弃用代码统一存储库][DevDeprecated ChangeLog]
 - [DevJava - Java 工具类库 ( 不依赖 android api )][DevJava ChangeLog]
 
+## DevAICode-Android
+
+<h2 align="center"><a href="https://github.com/afkT/DevAICode-Android">DevAICode-Android</a></h2>
+
+<p align="center">
+	面向深度 AI 编程工作流的 Android 模板项目
+	<br>
+	以 <b>DevUtils</b> 系列库为底座，内置模块化 AI 角色配置（AGENTS + AI_CONTEXT + 任务型 Prompts）
+	<br>
+	覆盖 30+ Android 开发场景，提供从研究、规划到实现的全流程 AI 辅助开发体验
+</p>
+
 
 ## 其他
 
