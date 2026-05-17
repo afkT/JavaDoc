@@ -38,7 +38,8 @@
 
 ## Android 版本适配信息
 
-- [ ] 适配 Android 17 ( CinnamonBun ) ???
+- [ ] 适配 Android 18 ( ??? ) ???
+- [x] 适配 Android 17 ( CinnamonBun ) [DevApp v2.5.3+][DevApp v2.5.3+]
 - [x] 适配 Android 16 ( BAKLAVA ) [DevApp v2.5.3+][DevApp v2.5.3+]
 - [x] 适配 Android 15 ( VanillaIceCream ) [DevApp v2.4.8+][DevApp v2.4.8+]
 - [x] 适配 Android 14 ( UpsideDownCake ) [DevApp v2.4.4+][DevApp v2.4.4+]
@@ -252,7 +253,7 @@ implementation 'io.github.afkt:DevJava:1.5.6'
 <!-- 版本信息 -->
 <!-- ====== -->
 
-[DevApp v2.5.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-253-2026-05-07
+[DevApp v2.5.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-253-2026-05-17
 [DevApp v2.4.8+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-248-2025-03-21
 [DevApp v2.4.4+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-244-2024-01-18
 [DevApp v2.4.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-243-2023-07-01

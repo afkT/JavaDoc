@@ -218,6 +218,9 @@ DevUtils.openDebug();
 | getLauncherCategoryHomeToActivityName | 获取系统桌面信息 ( activityName ) |
 | getLauncherCategoryHomeToPackageAndName | 获取系统桌面信息 ( package/activityName ) |
 | getOptionsBundle | 设置跳转动画 |
+| isHandoffSupported | 是否支持跨设备 Handoff |
+| setHandoffEnabled | 为 Activity 启用或关闭 Handoff |
+| isHandoffEnabled | Activity 是否已启用 Handoff |
 | getManager | 获取 ActivityManagerAssist 管理实例 |
 
 
@@ -325,6 +328,10 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | startAlarmIntent | 开启一次性闹钟 |
+| startExactAlarmListener | 安排一次性精确闹钟（Doze / 低电下仍尽量触发），回调 OnAlarmListener |
+| cancelExactAlarmListener | 取消 OnAlarmListener 精确闹钟 |
+| canScheduleExactAlarms | 当前应用是否允许使用精确闹钟（API 31 以下恒为 true） |
+| startScheduleExactAlarmSettings | 跳转系统「闹钟和提醒」精确闹钟授权页（API 31+） |
 | stopAlarmIntent | 关闭闹钟 |
 | startAlarmService | 开启 Service 闹钟 |
 | stopAlarmService | 关闭 Service 闹钟 |
@@ -466,6 +473,10 @@ DevUtils.openDebug();
 | loadSoundEffects | 加载音效 |
 | unloadSoundEffects | 卸载音效 |
 | playSoundEffect | 播放音效 |
+| getStreamAssistant | 获取 Assistant 专用音量流类型 |
+| setModeAssistantConversation | 设置音频模式为 Assistant 会话 |
+| isModeAssistantConversation | 当前是否为 Assistant 会话模式 |
+| getAssistantStreamVolume | 获取 Assistant 音量流当前音量 |
 | abandonAudioFocus | 放弃音频焦点, 使上一个焦点所有者 ( 如果有 ) 接收焦点 |
 | adjustSuggestedStreamVolume | 调整最相关的流的音量, 或者给定的回退流 |
 | getParameters | 获取音频硬件指定 key 的参数值 |
@@ -509,7 +520,7 @@ DevUtils.openDebug();
 | refreshBatteryStatus | 刷新电池信息粘性 Intent |
 | isPresent | 是否存在电池 |
 | isBatteryLow | 是否低电量 |
-| isBatteryLow20 | 是否低电量 |
+| isBatteryLow20 | 当前电量是否不高于约 20% 阈值（自定义百分比判断） |
 | isBatteryHigh | 是否高电量 |
 | getLevelPercent | 获取当前电量百分比 |
 | getLevel | 获取当前电量 |
@@ -631,6 +642,15 @@ DevUtils.openDebug();
 | getIntent | 获取剪贴板意图 |
 
 
+* **Android 17 系统联系人选择器工具类 ->** [ContactPickerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ContactPickerUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isContactPickerSupported | 是否支持系统联系人选择器 |
+| getPickContactsIntent | 获取选择联系人 Intent（默认请求电话 + 邮箱，单选） |
+| getSessionContentUri | 获取联系人选择器会话 Content Uri |
+
+
 * **ContentResolver 工具类 ->** [ContentResolverUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ContentResolverUtils.java)
 
 | 方法 | 注释 |
@@ -671,7 +691,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | getInstance | 获取 CrashUtils 实例 |
-| initialize | 初始化方法 |
+| initialize | 注册全局未捕获异常处理器并绑定回调 |
 | uncaughtException | 当 UncaughtException 发生时会转入该函数来处理 |
 | onThrowableCaptured | 异常已被捕获（可在此收集错误信息、上报等） |
 
@@ -929,6 +949,13 @@ DevUtils.openDebug();
 | isFlashlightOn | 是否打开闪光灯 |
 
 
+* **前台 Service 工具类 ->** [ForegroundServiceUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ForegroundServiceUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| startForeground | 将当前 Service 提升为前台 |
+
+
 * **Fragment 工具类 ->** [FragmentUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/FragmentUtils.java)
 
 | 方法 | 注释 |
@@ -1029,6 +1056,7 @@ DevUtils.openDebug();
 | getLaunchAppInstallPermissionSettingsIntent | 获取 APP 安装权限设置的意图 |
 | getLaunchAppNotificationSettingsIntent | 获取 APP 通知权限设置的意图 |
 | getLaunchAppNotificationListenSettingsIntent | 获取 APP 通知使用权页面 |
+| getRequestScheduleExactAlarmSettingsIntent | 获取「闹钟和提醒 / 精确闹钟」系统授权页意图（API 31+） |
 | getManageOverlayPermissionIntent | 获取悬浮窗口权限列表的意图 |
 | getManageAppAllFilesAccessPermissionIntent | 获取 APP 授予所有文件管理权限的意图 |
 | getManageAllFilesAccessPermissionIntent | 获取授予所有文件管理权限列表的意图 |
@@ -1047,6 +1075,37 @@ DevUtils.openDebug();
 | getCreateDocumentIntent | 获取创建文件的意图 |
 | getOpenBrowserIntent | 获取打开浏览器的意图 |
 | getOpenAndroidBrowserIntent | 获取打开 Android 浏览器的意图 |
+| removeLaunchSecurityProtection | Android 16+：关闭系统对 Intent 重定向的启动侧加固 |
+| getPickImagesIntent | 获取系统 Photo Picker 选择图片 Intent |
+
+
+* **JobScheduler 工具类 ->** [JobSchedulerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/JobSchedulerUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getJobScheduler | 获取系统 JobScheduler |
+| getJobSchedulerForNamespace | Android 14 (API 34)+：获取指定命名空间下的 JobScheduler 实例 |
+| isScheduleSuccess | 判断调度结果是否成功 |
+| newJobBuilder | 创建 JobInfo.Builder ( 仅绑定 jobId 与 JobService 组件，其余约束请自行链式设置 ) |
+| schedule | 提交或更新 Job ( 默认命名空间 ) |
+| scheduleOnceWithDeadline | 一次性 Job：仅设置最晚执行时间 ( 系统在此时间前择机执行 ) |
+| scheduleOnceWithLatencyAndDeadline | 一次性 Job：最小延迟 + 最晚执行时间 |
+| schedulePeriodic | 周期 Job ( 固定间隔 ) |
+| scheduleWithExpeditedFlag | Android 12 (API 31)+：在已配置的 JobInfo.Builder 上设置是否加急并提交调度 |
+| enqueue | Android 8.0 (API 26)+：向已调度或运行中的 Job 投递 JobWorkItem |
+| enqueueWithIntent | Android 8.0+：用 Intent 快速构造 JobWorkItem 并入队 |
+| cancel | 取消指定 Job ( 默认命名空间 ) |
+| cancelAll | 取消当前命名空间下本应用已调度的全部 Job ( API 34+ 仅当前 namespace；更早版本为应用全部任务 ) |
+| cancelInAllNamespaces | Android 14+：取消 所有命名空间 下本应用已调度的 Job |
+| getAllPendingJobs | 当前命名空间下所有待处理 ( 含已启动 ) 的 Job 列表 |
+| getPendingJobsInAllNamespaces | Android 14+：按命名空间返回待处理 Job ( 多 namespace 一张图 ) |
+| getPendingJob | 查询指定 id 的 Job 描述；未找到返回 null |
+| hasPendingJob | 是否已存在指定 id 的待调度 / 运行中 Job |
+| getPendingJobReason | Android 14+：返回某 Job 当前未执行的一个 pending 原因 ( 多原因时仅其一 ) |
+| canRunUserInitiatedJobs | Android 14+：当前应用是否持有运行 user-initiated jobs 所需权限 |
+| getPendingJobReasons | Android 16+：返回某 Job 当前处于 pending 的多个原因 |
+| getPendingJobReasonsHistory | Android 16+：返回某 Job 最近约束变化导致 pending 的历史记录，便于排查 Job 未执行问题 |
+| getPendingJobReasonStats | Android 17+：返回某 Job 各 pending 原因及其累计 pending 时长 ( 毫秒 ) |
 
 
 * **Android 原生 JSONObject 工具类 ->** [JSONObjectUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/JSONObjectUtils.java)
@@ -1207,6 +1266,7 @@ DevUtils.openDebug();
 | 方法 | 注释 |
 | :- | :- |
 | notifyMediaStore | 通知刷新本地资源 |
+| getMediaStoreVersion | 获取 MediaStore 版本字符串（主外部卷） |
 | getDisplayName | 获取待显示名 |
 | getImageDisplayName | 获取 Image 显示名 |
 | getVideoDisplayName | 获取 Video 显示名 |
@@ -1236,6 +1296,8 @@ DevUtils.openDebug();
 | getFileExtensionFromUrl | 通过 Url 获取文件后缀 |
 | hasMimeType | 判断 MimeMap 是否存在指定的 MimeType |
 | hasExtension | 判断是否支持的 MimeType 后缀 |
+| createPhotoPickerUiSquare | 创建 Photo Picker 默认 1:1 网格 UI 参数 |
+| createPhotoPickerUiPortrait916 | 创建 Photo Picker 9:16 竖屏网格 UI 参数 |
 
 
 * **内存信息工具类 ->** [MemoryUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/MemoryUtils.java)
@@ -1281,18 +1343,31 @@ DevUtils.openDebug();
 | getGatewayByWifi | 根据 Wifi 获取网关 IP 地址 |
 | getNetMaskByWifi | 根据 Wifi 获取子网掩码 IP 地址 |
 | getServerAddressByWifi | 根据 Wifi 获取服务端 IP 地址 |
+| isLocalNetworkPermissionRequired | 当前环境下访问局域网是否需声明并申请本地网络权限 |
+| isLocalNetworkPermissionGranted | 是否已授予本地网络权限 |
 
 
 * **通知栏管理工具类 ->** [NotificationUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/NotificationUtils.java)
 
 | 方法 | 注释 |
 | :- | :- |
+| getSemanticStyleUnspecified | 获取未指定语义样式常量 |
+| getSemanticStyleInfo | 获取信息语义样式常量 |
+| getSemanticStyleSafe | 获取安全语义样式常量 |
+| getSemanticStyleCaution | 获取谨慎语义样式常量 |
+| getSemanticStyleDanger | 获取危险语义样式常量 |
+| createSemanticStyleAnnotation | 创建 Live Update 语义样式 Annotation |
+| appendSemanticText | 向 SpannableStringBuilder 追加带语义色的文本 |
 | isNotificationEnabled | 检查通知栏权限是否开启 |
+| isPostNotificationsPermissionGranted | Android 13+ 是否已授予权限 |
+| canPostNotifications | 是否允许弹出通知（Android 13+ 需运行时权限且系统通知总开关为开） |
+| startAppNotificationSettings | 跳转当前应用的通知设置（API 26+） |
 | checkAndIntentSetting | 检查是否有获取通知栏信息权限并跳转设置页面 |
 | isNotificationListenerEnabled | 判断是否有获取通知栏信息权限 |
 | startNotificationListenSettings | 跳转到设置页面, 开启获取通知栏信息权限 |
 | cancelAll | 移除通知 ( 移除所有通知 ) |
 | cancel | 移除通知 ( 移除标记为 id 的通知 ) |
+| postNotificationIfAllowed | 发布系统通知 |
 | postNotification | 发布系统通知 |
 | getNotificationChannel | 获取 NotificationChannel |
 | createNotificationChannel | 创建 NotificationChannel |
@@ -1301,7 +1376,18 @@ DevUtils.openDebug();
 | createNotificationBuilder | 创建通知栏 Builder 对象 |
 | get | 获取 Led 配置参数 |
 | isEmpty | 判断是否为 null |
-| customizeNotification | 在构建前对 {@link Notification.Builder} 做额外定制 |
+| customizeNotification | 在构建前对通知 Builder 做额外定制 |
+
+
+* **PackageManager 查询相关工具类 ->** [PackageManagerUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PackageManagerUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| flagsMatchDefaultOnly | 解析 Activity 的常用 flags：默认匹配 |
+| flagsMatchAll | 解析 Activity 的常用 flags：完整枚举 |
+| getPackageManager | 获取 PackageManager |
+| queryIntentActivitiesCompat | 查询匹配 Intent 的 Activity 列表（兼容封装） |
+| resolveActivityCompat | 解析匹配 Intent 的 Activity（兼容封装） |
 
 
 * **路径相关工具类 ->** [PathUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/PathUtils.java)
@@ -1470,6 +1556,22 @@ DevUtils.openDebug();
 | getAllBackgroundProcesses | 获取后台服务进程 |
 | killAllBackgroundProcesses | 杀死所有的后台服务进程 |
 | killBackgroundProcesses | 杀死后台服务进程 |
+| getHistoricalProcessExitReasons | Android 11+：查询历史进程退出原因 |
+| getLatestHistoricalProcessExitReason | Android 11+：查询当前应用最近一条历史退出原因 |
+| isMemoryLimiterExit | 是否为 Android 17 内存上限导致的退出 |
+| wasLatestExitMemoryLimiter | 当前应用最近一次退出是否因 MemoryLimiter（Android 17 内存上限） |
+
+
+* **触发式性能采集工具类 ->** [ProfilingUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ProfilingUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isProfilingManagerSupported | 是否支持 Profiling 管理器 |
+| getProfilingManager | 获取 Profiling 管理器 |
+| registerAnomalyProfiling | 注册 Profiling 结果回调并添加异常检测触发器 |
+| registerProfiling | 注册 Profiling 结果回调并添加指定类型触发器 |
+| unregisterProfilingCallback | 注销 Profiling 结果回调 |
+| clearProfilingTriggers | 清除已注册的全部 Profiling 触发器 |
 
 
 * **广播相关工具类 ->** [ReceiverUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ReceiverUtils.java)
@@ -1481,6 +1583,7 @@ DevUtils.openDebug();
 | localUnregisterReceiver | 注销广播监听 ( 应用内广播 ) |
 | localSendBroadcast | 发送广播 ( 应用内广播 ) |
 | localSendBroadcastSync | 发送广播 ( 同步 ) ( 应用内广播 ) |
+| clampBroadcastIntentFilterPriorityCompat | Android 16+：将 IntentFilter 的优先级裁剪到系统允许的范围 |
 | registerReceiverBool | 注册广播监听 |
 | registerReceiver | 注册广播监听 |
 | unregisterReceiver | 注销广播监听 |
@@ -1537,9 +1640,15 @@ DevUtils.openDebug();
 | removeOnScrollListener | 移除 RecyclerView ScrollListener |
 | clearOnScrollListeners | 清空 RecyclerView ScrollListener |
 | getScrollState | 获取 RecyclerView 滑动状态 |
+| startSmoothScrollSnapStart | 平滑滑动到首项，目标项垂直方向与列表顶部对齐 |
+| startSmoothScrollSnapEnd | 平滑滑动到底部附近，以末项与列表底部对齐方式滚动 |
+| scrollToPositionWithOffset | 将指定索引滚动到可见区域，并附加像素偏移 |
+| stopSmoothScroller | 停止当前平滑滚动与用户拖动、惯性滚动 |
 | isNestedScrollingEnabled | 获取 RecyclerView 嵌套滚动开关 |
 | setNestedScrollingEnabled | 设置 RecyclerView 嵌套滚动开关 |
 | requestChildRectangleOnScreen | requestChildRectangleOnScreen |
+| getVerticalSnapPreference | 垂直方向与父 RecyclerView 对齐时优先贴合子项顶部。 |
+| calculateDyToMakeVisible | 计算使目标子项完全可见所需的垂直滚动量，并按顶部对齐。 |
 
 
 * **APK Resource 工具类 ->** [ResourcePluginUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ResourcePluginUtils.java)
@@ -1732,7 +1841,7 @@ DevUtils.openDebug();
 | setListener | 设置截图校验成功回调接口 |
 | startListener | 启动截图监听 |
 | stopListener | 停止截图监听 |
-| dispatchLatestMediaChangeToChecker | 查询媒体库最新一行并将结果交给 {@link ScreenshotChecker#onChecker} |
+| dispatchLatestMediaChangeToChecker | 查询媒体库最新一行并将结果分发给检查器 |
 | validateScreenshotCandidate | 按时间与路径前缀等规则校验是否为当前监听关心的截图并回调 |
 
 
@@ -1740,6 +1849,7 @@ DevUtils.openDebug();
 
 | 方法 | 注释 |
 | :- | :- |
+| isActivityPortraitLandscapeIgnoredOnLargeScreen | 是否对大屏场景下忽略屏幕方向、尺寸可调整性和宽高比限制 |
 | getDisplayMetrics | 获取 DisplayMetrics |
 | getScreenWidth | 获取屏幕宽度 |
 | getScreenHeight | 获取屏幕高度 |
@@ -1791,6 +1901,17 @@ DevUtils.openDebug();
 | getUsedBlocks | 获取内置 SDCard 已使用空间大小 |
 | getUsedBlocksFormat | 获取内置 SDCard 已使用空间大小 |
 | getBlockSizeInfos | 返回内置 SDCard 空间大小信息 |
+
+
+* **安全相关工具类（高级保护模式等） ->** [SecurityUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/SecurityUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isAdvancedProtectionSupported | 是否支持高级保护模式管理器 |
+| getAdvancedProtectionManager | 获取高级保护模式管理器 |
+| isAdvancedProtectionEnabled | 用户是否已开启高级保护模式 |
+| registerAdvancedProtectionCallback | 注册高级保护模式状态回调 |
+| unregisterAdvancedProtectionCallback | 注销高级保护模式状态回调 |
 
 
 * **服务相关工具类 ->** [ServiceUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/ServiceUtils.java)
@@ -2005,7 +2126,9 @@ DevUtils.openDebug();
 | setAntiAliasFlag | 设置 TextView 抗锯齿 flags |
 | setBold | 设置 TextView 是否加粗 |
 | setUnderlineText | 设置下划线 |
+| removeUnderlineText | 移除下划线 |
 | setStrikeThruText | 设置中划线 |
+| removeStrikeThruText | 移除中划线 |
 | getLetterSpacing | 获取文字水平间距 |
 | setLetterSpacing | 设置文字水平间距 |
 | getLineSpacingExtra | 获取文字行间距 ( 行高 ) |
@@ -2134,8 +2257,12 @@ DevUtils.openDebug();
 | isVanillaIceCream | 是否在 15.0 版本及以上 |
 | isBaklava | 是否在 16.0 版本及以上 |
 | isCinnamonBun | 是否在 17.0 版本及以上 |
-| convertSDKVersion | 转换 SDK 版本 convertSDKVersion(31) = Android 12.0 |
-| convertSDKVersionName | 转换 SDK 版本名字 convertSDKVersionName(31) = Android S |
+| convertSDKVersion | 将当前设备 SDK 整型版本号转换为可读版本名 |
+| convertSDKVersionName | 将当前设备 SDK 整型版本号转换为代号名 |
+| getTargetSdkVersion | 获取宿主应用的 targetSdkVersion |
+| isTargetSdkCinnamonBunOrHigher | 宿主 targetSdk 是否 &gt;= Android 17 ( API 37 ) |
+| getSdkIntFullOrSdkInt | Android 16+ 主/次版本合并值 |
+| getMinorSdkVersionFromSdkIntFullSafe | Android 16+：次版本号 |
 
 
 * **震动相关工具类 ->** [VibrationUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/VibrationUtils.java)
@@ -2276,6 +2403,15 @@ DevUtils.openDebug();
 | isLongClickable | 获取 View 是否可以长按 |
 | setLongClickable | 设置 View 是否可以长按 |
 | toggleLongClickable | 切换 View 是否可以长按状态 |
+| isActivated | 获取 View 是否处于 Activated 激活状态 |
+| setActivated | 设置 View Activated 激活状态（配合 selector / StateListDrawable 等） |
+| toggleActivated | 切换 View Activated 激活状态 |
+| isPressed | 获取 View 是否处于 Pressed 按下状态 |
+| setPressed | 设置 View Pressed 按下状态（一般用于代码层模拟按下视觉，触摸时系统也会维护该状态） |
+| togglePressed | 切换 View Pressed 按下状态 |
+| isChecked | 获取 View 是否选中 checked |
+| setChecked | 设置 View 是否选中 checked |
+| toggleChecked | 切换 View 是否选中 checked 状态 |
 | isShown | 判断 View 是否显示 ( 如果存在父级则判断父级 ) |
 | isShowns | 判断 View 是否都显示 ( 如果存在父级则判断父级 ) |
 | isVisibility | 判断 View 是否显示 |
@@ -3458,6 +3594,12 @@ DevUtils.openDebug();
 | toggleClickable | 切换 View 是否可以点击状态 |
 | setLongClickable | 设置 View 是否可以长按 |
 | toggleLongClickable | 切换 View 是否可以长按状态 |
+| setChecked | 设置 View 是否选中 checked |
+| toggleChecked | 切换 View 是否选中 checked 状态 |
+| setActivated | 设置 View Activated 激活状态 |
+| toggleActivated | 切换 View Activated 激活状态 |
+| setPressed | 设置 View Pressed 按下状态 |
+| togglePressed | 切换 View Pressed 按下状态 |
 | setVisibilitys | 设置 View 显示的状态 |
 | setVisibilityINs | 设置 View 显示的状态 |
 | toggleVisibilitys | 切换 View 显示的状态 |
@@ -3694,6 +3836,12 @@ DevUtils.openDebug();
 | toggleClickable | 切换 View 是否可以点击状态 |
 | setLongClickable | 设置 View 是否可以长按 |
 | toggleLongClickable | 切换 View 是否可以长按状态 |
+| setChecked | 设置 View 是否选中 checked |
+| toggleChecked | 切换 View 是否选中 checked 状态 |
+| setActivated | 设置 View Activated 激活状态 |
+| toggleActivated | 切换 View Activated 激活状态 |
+| setPressed | 设置 View Pressed 按下状态 |
+| togglePressed | 切换 View Pressed 按下状态 |
 | setVisibilitys | 设置 View 显示的状态 |
 | setVisibilityINs | 设置 View 显示的状态 |
 | toggleVisibilitys | 切换 View 显示的状态 |
@@ -4000,6 +4148,12 @@ DevUtils.openDebug();
 | toggleClickable | 切换 View 是否可以点击状态 |
 | setLongClickable | 设置 View 是否可以长按 |
 | toggleLongClickable | 切换 View 是否可以长按状态 |
+| setChecked | 设置 View 是否选中 checked |
+| toggleChecked | 切换 View 是否选中 checked 状态 |
+| setActivated | 设置 View Activated 激活状态 |
+| toggleActivated | 切换 View Activated 激活状态 |
+| setPressed | 设置 View Pressed 按下状态 |
+| togglePressed | 切换 View Pressed 按下状态 |
 | setVisibilitys | 设置 View 显示的状态 |
 | setVisibilityINs | 设置 View 显示的状态 |
 | toggleVisibilitys | 切换 View 显示的状态 |
@@ -4229,6 +4383,12 @@ DevUtils.openDebug();
 | toggleClickable | 切换 View 是否可以点击状态 |
 | setLongClickable | 设置 View 是否可以长按 |
 | toggleLongClickable | 切换 View 是否可以长按状态 |
+| setChecked | 设置 View 是否选中 checked |
+| toggleChecked | 切换 View 是否选中 checked 状态 |
+| setActivated | 设置 View Activated 激活状态 |
+| toggleActivated | 切换 View Activated 激活状态 |
+| setPressed | 设置 View Pressed 按下状态 |
+| togglePressed | 切换 View Pressed 按下状态 |
 | setVisibilitys | 设置 View 显示的状态 |
 | setVisibilityINs | 设置 View 显示的状态 |
 | toggleVisibilitys | 切换 View 显示的状态 |
