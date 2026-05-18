@@ -33,6 +33,8 @@ implementation 'io.github.afkt:DevAppX:2.5.3'
       - logger                  | 日志库 DevLogger
       - player                  | 多媒体 ( 视频、音频 ) 播放封装
       - share                   | SharedPreferences 封装
+      - text                    | Text 相关处理汇总
+         - input_filter         | InputFilter 实现汇总
       - timer                   | 定时器
    - common                     | Java 工具类, 不依赖 android api
       - assist                  | 各种快捷辅助类
@@ -121,6 +123,8 @@ DevUtils.openDebug();
       - [logger](#devutilsapplogger)                                       | 日志库 DevLogger
       - [player](#devutilsappplayer)                                       | 多媒体 ( 视频、音频 ) 播放封装
       - [share](#devutilsappshare)                                         | SharedPreferences 封装
+      - [text](#devutilsapptext)                                           | Text 相关处理汇总
+         - [input_filter](#devutilsapptextinput_filter)                    | InputFilter 实现汇总
       - [timer](#devutilsapptimer)                                         | 定时器
    - [common](#devutilscommon)                                             | Java 工具类, 不依赖 android api
       - [assist](#devutilscommonassist)                                    | 各种快捷辅助类
@@ -914,6 +918,10 @@ DevUtils.openDebug();
 | insert | 追加内容 ( 当前光标位置追加 ) |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | isCursorVisible | 是否显示光标 |
 | setCursorVisible | 设置是否显示光标 |
 | setTextCursorDrawable | 设置光标 |
@@ -1040,6 +1048,49 @@ DevUtils.openDebug();
 | removeImageDrawables | 移除 View Drawable |
 | setScaleTypes | 设置 View 缩放模式 |
 | getImageViewSize | 根据 ImageView 获适当的宽高 |
+
+
+* **InputFilter 字符判断辅助类 ->** [InputFilterCharUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/InputFilterCharUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| isEnglish | 判断字符是否为英文字母 |
+| isDigit | 判断字符是否为数字 |
+| isChinese | 判断字符是否为中文或 CJK 相关字符 |
+| isHex | 判断字符是否为十六进制字符 |
+| isEmailChar | 判断字符是否为邮箱常用字符 |
+| isPrintableAscii | 判断字符是否为可打印 ASCII |
+| isDateChar | 判断字符是否为日期输入常用字符 |
+| isMacAddressChar | 判断字符是否为 MAC 地址输入常用字符 |
+| isPlateLetter | 判断字符是否为车牌字母 ( 不含 I、O ) |
+| isPlateSerialChar | 判断字符是否为车牌序号字符 ( 数字或车牌字母 ) |
+| isChineseNameChar | 判断字符是否为中文姓名常用字符 |
+| isChineseAddressChar | 判断字符是否为国内地址常用字符 |
+| isVinChar | 判断字符是否为 VIN 字符 ( 不含 I、O、Q ) |
+| filterByPosition | 按位规则过滤输入 ( 常用于证件号、车牌等固定位数场景 ) |
+| mergeInput | 合并本次输入与已有文本 |
+| containsEmoji | 判断文本是否包含 Emoji |
+| getByteLength | 计算字符串显示字节长度 |
+| filterByPredicate | 按谓词过滤指定区间字符 |
+| isAllowedAt | 判断字符在指定下标是否允许 |
+| test | 测试字符是否满足条件 |
+
+
+* **InputFilter 组合与快捷设置工具类 ->** [InputFilterUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/InputFilterUtils.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| getTextView | 获取 TextView |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
+| distinctFilters | 合并多个 InputFilter 并去重 |
+| append | 在已有 filters 后追加（忽略 null，同一引用不重复追加） |
+| mergeByClass | 按运行时 Class 合并 InputFilter |
+| singleLineWithMaxLength | 单行输入常用组合：禁止回车、禁止首空格、最大长度 |
+| multiLineWithMaxLength | 多行输入常用组合：禁止首空格、最大长度 ( 允许换行 ) |
+| singleLineDefault | 单行输入：禁止回车、禁止首空格 ( 无长度限制 ) |
 
 
 * **Intent 相关工具类 ->** [IntentUtils.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/IntentUtils.java)
@@ -2155,6 +2206,10 @@ DevUtils.openDebug();
 | setEms | 设置指定字符宽度 |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | getEllipsize | 获取 Ellipsize 效果 |
 | setEllipsize | 设置 Ellipsize 效果 |
 | getAutoLinkMask | 获取自动识别文本类型 |
@@ -3682,6 +3737,10 @@ DevUtils.openDebug();
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | setInputType | 设置输入类型 |
 | setImeOptions | 设置软键盘右下角按钮类型 |
 | setTransformationMethod | 设置文本视图显示转换 |
@@ -3924,6 +3983,10 @@ DevUtils.openDebug();
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | setInputType | 设置输入类型 |
 | setImeOptions | 设置软键盘右下角按钮类型 |
 | setTransformationMethod | 设置文本视图显示转换 |
@@ -4236,6 +4299,10 @@ DevUtils.openDebug();
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | setInputType | 设置输入类型 |
 | setImeOptions | 设置软键盘右下角按钮类型 |
 | setTransformationMethod | 设置文本视图显示转换 |
@@ -4471,6 +4538,10 @@ DevUtils.openDebug();
 | setText | 设置文本 |
 | setMaxLength | 设置长度限制 |
 | setMaxLengthAndText | 设置长度限制, 并且设置内容 |
+| setFilters | 设置 InputFilter ( 覆盖原有 ) |
+| appendFilters | 追加 InputFilter ( 保留原有并在末尾追加 ) |
+| clearFilters | 清空 InputFilter |
+| mergeFilters | 按 Class 合并并设置 InputFilter ( 保留原有，同类型替换 ) |
 | setInputType | 设置输入类型 |
 | setImeOptions | 设置软键盘右下角按钮类型 |
 | setTransformationMethod | 设置文本视图显示转换 |
@@ -4900,6 +4971,362 @@ DevUtils.openDebug();
 | getBoolean | 获取 boolean 类型的数据 |
 | getString | 获取 String 类型的数据 |
 | getSet | 获取 Set 类型的数据 |
+
+
+## <span id="devutilsapptext">**`dev.utils.app.text`**</span>
+
+
+## <span id="devutilsapptextinput_filter">**`dev.utils.app.text.input_filter`**</span>
+
+
+* **仅允许输入指定字符 ( 白名单 ) ->** [AllowCharsInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/AllowCharsInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许输入英文字母与数字 ->** [AlphanumericInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/AlphanumericInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许可打印 ASCII 字符 ( 32-126 ) ->** [AsciiPrintableInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/AsciiPrintableInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **按字节长度限制，常用于短信、昵称等场景 ->** [ByteLengthInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ByteLengthInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **国内地址输入：中文、数字及常见地址符号 ->** [ChineseAddressInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ChineseAddressInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **中文姓名输入：汉字与间隔号 ->** [ChineseNameInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ChineseNameInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许输入中文 ( 含中文标点等 CJK 字符 ) ->** [ChineseOnlyInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ChineseOnlyInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **日期输入：数字与常见分隔符，常用于 yyyy-MM-dd 等格式 ->** [DateInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/DateInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **小数输入：数字加一个小数点，可限制整数位与小数位长度 ->** [DecimalInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/DecimalInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许输入数字 0-9 ->** [DigitsOnlyInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/DigitsOnlyInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **邮箱输入：仅保留邮箱常用字符 ->** [EmailInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/EmailInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止输入 Emoji 表情 ->** [EmojiInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/EmojiInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **机动车发动机号输入 ->** [EngineNoInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/EngineNoInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许输入英文字母 a-z、A-Z ->** [EnglishOnlyInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/EnglishOnlyInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **快递运单号输入 ->** [ExpressTrackingInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ExpressTrackingInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止首个字符为空格 ( 首部空白 ) ->** [FrontSpaceInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/FrontSpaceInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **身高 ( cm ) 输入，默认范围 50-250 ->** [HeightCmInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/HeightCmInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **仅允许输入十六进制字符 0-9、a-f、A-F ->** [HexInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/HexInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **身份证号输入：最多 18 位，前 17 位为数字，末位可为数字或 X ->** [IdCardInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/IdCardInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **身份证末位小写 x 自动转大写 X ->** [IdCardUpperCaseXInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/IdCardUpperCaseXInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **正整数输入：仅数字，可限制最大位数 ->** [IntegerInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/IntegerInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **IP 地址输入：仅数字与英文句点 ->** [IpInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/IpInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **固定电话输入：数字与分隔符 ->** [LandlineInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/LandlineInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **中国大陆民用车牌号输入 ->** [LicensePlateInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/LicensePlateInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **输入自动转小写 ->** [LowerCaseInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/LowerCaseInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **MAC 地址输入：十六进制与分隔符，默认最大 17 字符 ->** [MacAddressInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/MacAddressInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **限制最大行数 ( 换行符个数不超过 maxLines - 1 ) ->** [MaxLinesInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/MaxLinesInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **数值上限：解析后不得超过指定最大值 ->** [MaxValueInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/MaxValueInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **数值下限：解析后不得低于指定最小值 ->** [MinValueInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/MinValueInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **昵称输入：中文、英文字母、数字 ->** [NicknameInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NicknameInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止输入中文 ( 含 CJK 字符 ) ->** [NoChineseInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoChineseInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止连续空格 ( 不允许在已有空格后再输入空格 ) ->** [NoConsecutiveSpaceInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoConsecutiveSpaceInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止回车、换行输入 ->** [NoEnterInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoEnterInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止正整数前导零 ->** [NoLeadingZeroInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoLeadingZeroInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止输入任何空白字符 ( 空格、制表符等 ) ->** [NoSpaceInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoSpaceInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止尾部空白：合并后文本不得以空白字符结尾 ->** [NoTrailingSpaceInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/NoTrailingSpaceInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **百分比输入：0-100，可限制小数位，默认最多两位小数 ->** [PercentInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/PercentInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **手机号输入：仅数字，可限制最大位数 ->** [PhoneInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/PhoneInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **端口号输入：1-65535 的正整数 ->** [PortInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/PortInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **禁止输入指定字符 ( 黑名单 ) ->** [ProhibitCharsInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/ProhibitCharsInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **数值区间：解析后须在 [minValue, maxValue] 内 ->** [RangeValueInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/RangeValueInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **正则匹配输入，仅保留匹配规则的字符 ->** [RegexInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/RegexInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **楼栋 / 单元 / 房号输入 ->** [RoomNoInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/RoomNoInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **有符号小数输入：可选首位负号，数字与一个小数点，可限制整数位与小数位 ->** [SignedDecimalInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/SignedDecimalInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **有符号整数输入：可选首位负号，其余为数字，可限制最大位数 ->** [SignedIntegerInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/SignedIntegerInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **URL 输入：字母、数字及常见 URL 符号 ->** [UrlInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/UrlInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **用户名输入：英文字母、数字、下划线 ->** [UsernameInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/UsernameInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **车辆识别代号 ( VIN ) 输入 ->** [VinInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/VinInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **微信号输入 ->** [WeChatIdInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/WeChatIdInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
+
+
+* **体重 ( kg ) 输入，默认范围 1-500，最多一位小数 ->** [WeightKgInputFilter.java](https://github.com/afkT/DevUtils/blob/master/lib/DevApp/src/main/java/dev/utils/app/text/input_filter/WeightKgInputFilter.java)
+
+| 方法 | 注释 |
+| :- | :- |
+| filter | 过滤本次输入片段 |
 
 
 ## <span id="devutilsapptimer">**`dev.utils.app.timer`**</span>

@@ -146,6 +146,16 @@ public final class ApiConfig {
 
     // DevSimple 版本号
     public static final String DEV_SIMPLE_VERSION = DevVersion.DEV_SIMPLE_VERSION;
+    // 包目录名
+    public static final String DEV_SIMPLE_PACKAGE            = "dev.simple";
+    // DevSimple 文件路径
+    public static final String DEV_SIMPLE_PATH               = PROJECT_LOCAL_PATH + "/DevUtils/lib/DevSimple/src/main/java/dev/simple/";
+    // DevSimple GitHub 项目文件路径
+    public static final String DEV_SIMPLE_GITHUB_URL         = GITHUB_AUTHOR_URL + "/DevUtils/blob/master/lib/DevSimple/src/main/java/dev/simple";
+    // DevSimple API 文件保存路径
+    public static final String DEV_SIMPLE_API_FILE_SAVE_PATH = API_LIB_FILE_SAVE_PATH + "/DevSimple/";
+    // DevSimple Template Readme
+    public static final String DEV_SIMPLE_TEMPLATE           = JAVADOC_TEMPLATE_PACKAGE_PATH + "/DevSimple_README.md";
 
     // =============
     // = DevWidget =
@@ -313,6 +323,13 @@ public final class ApiConfig {
     public static final HashMap<String, String> sCatalogMap_Engine = new HashMap<>();
 
     // =============
+    // = DevSimple =
+    // =============
+
+    // 包名目录注释
+    public static final HashMap<String, String> sCatalogMap_Simple = new HashMap<>();
+
+    // =============
     // = DevWidget =
     // =============
 
@@ -415,6 +432,8 @@ public final class ApiConfig {
         sCatalogMap_APP.put(".app.player", "多媒体 ( 视频、音频 ) 播放封装");
         sCatalogMap_APP.put(".app.timer", "定时器");
         sCatalogMap_APP.put(".app.share", "SharedPreferences 封装");
+        sCatalogMap_APP.put(".app.text", "Text 相关处理汇总");
+        sCatalogMap_APP.put(".app.text.input_filter", "InputFilter 实现汇总");
 
         // ==============
         // = Common 目录 =
