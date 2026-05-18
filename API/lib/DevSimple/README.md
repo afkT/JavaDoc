@@ -50,7 +50,7 @@ DevSimple 是 DevUtils 系列中的 **简单敏捷开发库**，面向 **Data Bi
 ```groovy
 dependencies {
     // DevSimple - 简单敏捷开发库 ( Data Binding + MVVM 敏捷层 )
-    implementation 'io.github.afkt:DevSimple:DEVersion'
+    implementation 'io.github.afkt:DevSimple:1.0.7'
 }
 ```
 
@@ -404,7 +404,7 @@ BindingAdapter 统一 `binding_` 前缀并委托 DevApp 工具类，避免在 XM
 
 
 
-[maven_svg]: https://img.shields.io/badge/Maven-DEVersion-brightgreen.svg?style=for-the-badge
+[maven_svg]: https://img.shields.io/badge/Maven-1.0.7-brightgreen.svg?style=for-the-badge
 [maven]: https://search.maven.org/search?q=io.github.afkt
 [包目录]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/src/main/java/dev/simple
 [bindingadapters]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/src/main/java/dev/simple/bindingadapters

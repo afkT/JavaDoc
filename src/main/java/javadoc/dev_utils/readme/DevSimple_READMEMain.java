@@ -37,11 +37,13 @@ final class DevSimple_READMEMain {
         // template readme content
         byte[] bytes           = FileUtils.readFileBytes(templatePath);
         String templateContent = new String(bytes);
+        // 保存 README 内容
+        templateContent = templateContent.replaceAll(
+                "DEVersion", ApiConfig.DEV_SIMPLE_VERSION
+        );
 
         // 保存 README 内容
-        builder.append(String.format(
-                templateContent, ApiConfig.DEV_SIMPLE_VERSION, catalog
-        ));
+        builder.append(templateContent);
     }
 
     /**
