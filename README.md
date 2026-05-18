@@ -79,6 +79,8 @@
 
 - [DevRetrofit API Generate Main][DevRetrofit API Generate Main]
 
+- [DevSimple API Generate Main][DevSimple API Generate Main]
+
 - [DevHttpManager API Generate Main][DevHttpManager API Generate Main]
 
 - [DevHttpCapture API Generate Main][DevHttpCapture API Generate Main]
@@ -105,6 +107,8 @@
 - [DevWidget API][DevWidget API] **自定义 View UI 库**
 
 - [DevRetrofit API][DevRetrofit API] **Retrofit + Kotlin Coroutines 封装**
+
+- [DevSimple API][DevSimple API] **简单敏捷开发库**
 
 - [DevHttpManager API][DevHttpManager API] **OkHttp 管理库 ( Retrofit 多 BaseUrl 管理、Progress 监听 )**
 
@@ -166,6 +170,9 @@
 
 [DevRetrofit API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevRetrofit/README.md
 [DevRetrofit API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevRetrofit_READMEMain.java
+
+[DevSimple API]: https://github.com/afkT/DevUtils/blob/master/lib/DevSimple/README.md
+[DevSimple API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevSimple_READMEMain.java
 
 [DevHttpManager API]: https://github.com/afkT/DevUtils/blob/master/lib/HttpRequest/DevHttpManager/README.md
 [DevHttpManager API Generate Main]: https://github.com/afkT/JavaDoc/blob/master/src/main/java/javadoc/dev_utils/readme/DevHttpManager_READMEMain.java
