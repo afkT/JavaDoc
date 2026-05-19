@@ -253,7 +253,7 @@ implementation 'io.github.afkt:DevJava:【DevJava-vn】'
 <!-- 版本信息 -->
 <!-- ====== -->
 
-[DevApp v2.5.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-253-2026-05-17
+[DevApp v2.5.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-253-2026-05-20
 [DevApp v2.4.8+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-248-2025-03-21
 [DevApp v2.4.4+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-244-2024-01-18
 [DevApp v2.4.3+]: https://github.com/afkT/DevUtils/blob/master/lib/DevApp/CHANGELOG.md#version-243-2023-07-01
