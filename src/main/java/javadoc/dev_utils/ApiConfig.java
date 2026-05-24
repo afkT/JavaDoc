@@ -486,6 +486,7 @@ public final class ApiConfig {
         sCatalogMap_Assist.put(".engine.media", "Media Selector Engine 多媒体资源选择");
         sCatalogMap_Assist.put(".engine.permission", "Permission Engine 权限申请");
         sCatalogMap_Assist.put(".engine.push", "Push Engine 推送平台处理");
+        sCatalogMap_Assist.put(".engine.refresh", "Refresh Engine 下拉刷新、上拉加载 View");
         sCatalogMap_Assist.put(".engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Assist.put(".engine.share.listener", "分享回调事件");
         sCatalogMap_Assist.put(".engine.storage", "Storage Engine 外部、内部文件存储");
@@ -537,6 +538,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".core.media", "Media Selector Engine 多媒体资源选择");
         sCatalogMap_Engine.put(".core.permission", "Permission Engine 权限申请");
         sCatalogMap_Engine.put(".core.push", "Push Engine 推送平台处理");
+        sCatalogMap_Engine.put(".core.refresh", "Refresh Engine 下拉刷新、上拉加载 View");
         sCatalogMap_Engine.put(".core.share", "Share Engine 分享平台处理");
         sCatalogMap_Engine.put(".core.share.listener", "分享回调事件");
         sCatalogMap_Engine.put(".core.storage", "Storage Engine 外部、内部文件存储");
@@ -559,6 +561,7 @@ public final class ApiConfig {
         sCatalogMap_Engine.put(".extensions.media", "Media Selector Engine 多媒体资源选择");
         sCatalogMap_Engine.put(".extensions.permission", "Permission Engine 权限申请");
         sCatalogMap_Engine.put(".extensions.push", "Push Engine 推送平台处理");
+        sCatalogMap_Engine.put(".extensions.refresh", "Refresh Engine 下拉刷新、上拉加载 View");
         sCatalogMap_Engine.put(".extensions.share", "Share Engine 分享平台处理");
         sCatalogMap_Engine.put(".extensions.share.listener", "分享回调事件");
         sCatalogMap_Engine.put(".extensions.storage", "Storage Engine 外部、内部文件存储");
@@ -645,6 +648,7 @@ public final class ApiConfig {
         sCatalogMap_Other.put(".java.dev.engine.media.luck_siege_lib.listener", "LuckSiege PictureSelector Listener 实现");
         sCatalogMap_Other.put(".java.dev.engine.permission", "Permission Engine 权限申请");
         sCatalogMap_Other.put(".java.dev.engine.push", "Push Engine 推送平台处理");
+        sCatalogMap_Other.put(".java.dev.engine.refresh", "Refresh Engine 下拉刷新、上拉加载 View");
         sCatalogMap_Other.put(".java.dev.engine.share", "Share Engine 分享平台处理");
         sCatalogMap_Other.put(".java.dev.engine.share.listener", "分享回调事件");
         sCatalogMap_Other.put(".java.dev.engine.storage", "Storage Engine 外部、内部文件存储");
